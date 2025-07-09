@@ -89,6 +89,9 @@ cd build
 
 rems --zebu.work zcui.work/zebu.work/ --host_os RH8 --timeout=7000& --wait
 
+> 📌 Note: The `zebu.work` folder was previously a symbolic link to `backend_default`. It has now been replaced with a real folder containing the actual files to ensure compatibility with GitHub and version control.
+
+
 5. **Run in ZeBu server terminal:**
 
 zebu_mdb your_app.out --xargs '--postconnect "command source init_mem.cmd"'
@@ -164,7 +167,7 @@ This data includes the PAR netlist, mapping file, SDC constraints, SPEF file and
 This data can be found in [Post_Emulation_Power/data.](Post_Emulation_Power/data.)
 The libraries can't be accessed by us in Egypt, so The first step in power_calculation which depends on it is done by some one else who have access to and the sessions saved and used after that in next steps in power_calculation, These sessions are in [Post_Emulation_Power/empower_trial/archipelago.sess/wsh_session.wddb](Post_Emulation_Power/empower_trial/archipelago.sess/wsh_session.wddb) and [Post_Emulation_Power/empower_trial/archipelago.sess/wsh_session.wcdb](Post_Emulation_Power/empower_trial/archipelago.sess/wsh_session.wcdb)
 2. **Compiling RMX_100 Processor again with zCui version compatible with empower tool:**
-The zCui version used before to compile RMX_100 Processor was "S-2021.09-T-20240508", This info can be found in [build/zcui.work/zebu.work/zTopBuild.log](build/zcui.work/zebu.work/zTopBuild.log)
+The zCui version used before to compile RMX_100 Processor was "S-2021.09-T-20240508", This info can be found in [build/zcui.work/zebu.work/zTopBuild.log](build/zcui.work/backend_default/zTopBuild.log)
 This version is not compatible with empower tool used "empower/2025.06".
 The RMX_100 need to be compiled again with one of supported version by empower tool, so it is compiled using this supported version "S-2021.09-2".
 The compiled RMX_100 using this version "S-2021.09-2" and used in power calculation is found in [Post_Emulation_Power/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work](Post_Emulation_Power/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work) and the version is defined in [Post_Emulation_Power/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/zTopBuild.log](Post_Emulation_Power/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/zTopBuild.log)
