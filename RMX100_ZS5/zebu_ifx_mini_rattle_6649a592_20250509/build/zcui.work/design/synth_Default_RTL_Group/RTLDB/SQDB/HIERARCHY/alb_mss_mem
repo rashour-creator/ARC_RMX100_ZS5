@@ -1,0 +1,10 @@
+alb_mss_mem
+u_cg_inst -> u_cg_inst -> alb_mss_mem_clkgate
+u_rgon0_mem_inst -> u_rgon0_mem_inst -> alb_mss_mem_model
+u_rgon0_ctrl_inst -> u_rgon0_ctrl_inst -> alb_mss_mem_ctrl
+u_rgon0_ibp_cwbind -> u_rgon0_ibp_cwbind -> alb_mss_mem_ibp_cwbind_0000
+u_rgon0_ibp_bypbuf -> u_rgon0_ibp_bypbuf -> alb_mss_mem_ibp_bypbuf_0000
+u_rgon0_ibp2single -> u_rgon0_ibp2single -> alb_mss_mem_ibp2single_0000
+u_rgon0_lat_inst -> u_rgon0_lat_inst -> alb_mss_mem_ibp_lat
+u_mem_exclusive_monitor -> u_mem_exclusive_monitor -> alb_mss_mem_ibp_excl_0000
+u_ibp_buf_inst -> u_ibp_buf_inst -> alb_mss_mem_ibp_buf

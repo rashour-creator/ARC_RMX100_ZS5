@@ -1,0 +1,357 @@
+Module archipelago{
+P zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core_VCSXMR_u_main_rl_cpu_top_VCSXMR_icpu_top_safety_controller->zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core_VCSXMR_u_main_rl_cpu_top_VCSXMR_icpu_top_safety_controller
+}
+Module arcv_dm_top{
+}
+Module dw_dbp{
+}
+Module cpu_top_safety_controller{
+}
+Module cpu_safety_monitor{
+}
+Module rl_srams{
+}
+
+EdfPortBounds iccm0_ram{
+18 2 addr
+39 0 din
+39 0 dout
+4 0 wem
+}
+EdfPortBounds mss_bus_switch_ibpw2ibpn_0002{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds rl_ecc_cnt{
+31 0 aux_rdata
+31 0 cmd_addr_r
+1 0 dccm_ecc_scrub_err
+19 3 dccm_even_ecc_addr
+6 0 dccm_even_ecc_syndrome
+19 3 dccm_odd_ecc_addr
+6 0 dccm_odd_ecc_syndrome
+12 2 ic_data_ecc_addr
+38 32 ic_data_ecc_syndrome
+12 5 ic_tag_ecc_addr
+26 21 ic_tag_ecc_syndrome
+18 2 iccm0_ecc_addr
+6 0 iccm0_ecc_syndrome
+}
+EdfPortBounds axi_dummy_slave{
+23 0 araddr
+1 0 arburst
+15 0 arid
+3 0 arlen
+2 0 arsize
+23 0 awaddr
+1 0 awburst
+15 0 awid
+3 0 awlen
+2 0 awsize
+15 0 bid
+1 0 bresp
+63 0 rdata
+15 0 rid
+1 0 rresp
+63 0 wdata
+7 0 wstrb
+}
+EdfPortBounds rl_ibp_target_wrapper{
+31 0 aux_rdata_r
+31 0 cmd_addr_r
+31 0 ibp_mmio_cmd_addr
+5 0 ibp_mmio_cmd_atomic
+3 0 ibp_mmio_cmd_cache
+2 0 ibp_mmio_cmd_data_size
+1 0 ibp_mmio_cmd_prot
+31 0 ibp_mmio_rd_data
+31 0 ibp_mmio_wr_data
+3 0 ibp_mmio_wr_mask
+}
+EdfPortBounds ic_tag_ram{
+12 5 addr
+55 0 din
+55 0 dout
+55 0 wem
+}
+EdfPortBounds dccm_ram{
+19 3 addr
+39 0 din
+39 0 dout
+4 0 wem
+}
+EdfPortBounds rl_srams{
+19 3 dccm_addr_even
+19 3 dccm_addr_odd
+39 0 dccm_din_even
+39 0 dccm_din_odd
+39 0 dccm_dout_even
+39 0 dccm_dout_odd
+4 0 dccm_wem_even
+4 0 dccm_wem_odd
+12 2 ic_data_mem_addr
+79 0 ic_data_mem_din
+79 0 ic_data_mem_dout
+79 0 ic_data_mem_wem
+12 5 ic_tag_mem_addr
+55 0 ic_tag_mem_din
+55 0 ic_tag_mem_dout
+55 0 ic_tag_mem_wem
+18 2 iccm0_addr
+39 0 iccm0_din
+39 0 iccm0_dout
+4 0 iccm0_wem
+}
+EdfPortBounds arcv_dm_top{
+31 2 dbg_apb_paddr
+31 0 dbg_apb_prdata
+31 0 dbg_apb_pwdata
+31 0 dbg_ibp_cmd_addr
+3 0 dbg_ibp_cmd_space
+31 0 dbg_ibp_rd_data
+31 0 dbg_ibp_wr_data
+3 0 dbg_ibp_wr_mask
+1 0 dbg_unlock
+1 0 safety_iso_enb
+1 0 safety_isol_change
+}
+EdfPortBounds ic_data_ram{
+12 2 addr
+79 0 din
+79 0 dout
+79 0 wem
+}
+EdfPortBounds alb_mss_fab_ibp2ahbl{
+32 0 ahb_haddr
+2 0 ahb_hburst
+3 0 ahb_hprot
+31 0 ahb_hrdata
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+32 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds cpu_top_safety_controller{
+31 0 ahb_haddr
+3 0 ahb_haddrchk
+7 0 ahb_hauser
+0 0 ahb_hauserchk
+2 0 ahb_hburst
+3 0 ahb_hmaster
+6 0 ahb_hprot
+31 0 ahb_hrdata
+3 0 ahb_hrdatachk
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+3 0 ahb_hwdatachk
+3 0 ahb_hwstrb
+7 0 arcnum
+1 0 cpu_dr_mask_pty_err
+1 0 cpu_dr_mismatch_r
+1 0 cpu_dr_sfty_ctrl_parity_error
+1 0 cpu_dr_sfty_diag_inj_end
+1 0 cpu_dr_sfty_diag_mode_sc
+1 0 cpu_lsAsafety_comparator_enabled
+1 0 cpu_lsBsafety_comparator_enabled
+31 0 dbg_ibp_cmd_addr
+3 0 dbg_ibp_cmd_space
+31 0 dbg_ibp_rd_data
+31 0 dbg_ibp_wr_data
+3 0 dbg_ibp_wr_mask
+31 0 dbu_per_ahb_haddr
+3 0 dbu_per_ahb_haddrchk
+7 0 dbu_per_ahb_hauser
+0 0 dbu_per_ahb_hauserchk
+2 0 dbu_per_ahb_hburst
+3 0 dbu_per_ahb_hmaster
+6 0 dbu_per_ahb_hprot
+31 0 dbu_per_ahb_hrdata
+3 0 dbu_per_ahb_hrdatachk
+2 0 dbu_per_ahb_hsize
+1 0 dbu_per_ahb_htrans
+31 0 dbu_per_ahb_hwdata
+3 0 dbu_per_ahb_hwdatachk
+3 0 dbu_per_ahb_hwstrb
+31 0 dccm_ahb_haddr
+3 0 dccm_ahb_haddrchk
+2 0 dccm_ahb_hburst
+3 0 dccm_ahb_hmaster
+6 0 dccm_ahb_hprot
+31 0 dccm_ahb_hrdata
+3 0 dccm_ahb_hrdatachk
+0 0 dccm_ahb_hsel
+2 0 dccm_ahb_hsize
+1 0 dccm_ahb_htrans
+31 0 dccm_ahb_hwdata
+3 0 dccm_ahb_hwdatachk
+3 0 dccm_ahb_hwstrb
+0 0 dmsi_context
+5 0 dmsi_data_edc
+5 0 dmsi_eiid
+1 0 dr_bus_fatal_err
+1 0 dr_lsc_stl_ctrl_aux_r
+1 0 dr_safety_comparator_enabled
+1 0 dr_safety_iso_err
+1 0 dr_secure_trig_iso_err
+1 0 dr_sfty_aux_parity_err_r
+1 0 dr_sfty_eic
+19 3 esrams_dccm_addr_even
+19 3 esrams_dccm_addr_odd
+39 0 esrams_dccm_din_even
+39 0 esrams_dccm_din_odd
+39 0 esrams_dccm_dout_even
+39 0 esrams_dccm_dout_odd
+4 0 esrams_dccm_wem_even
+4 0 esrams_dccm_wem_odd
+12 2 esrams_ic_data_mem_addr
+79 0 esrams_ic_data_mem_din
+79 0 esrams_ic_data_mem_dout
+79 0 esrams_ic_data_mem_wem
+12 5 esrams_ic_tag_mem_addr
+55 0 esrams_ic_tag_mem_din
+55 0 esrams_ic_tag_mem_dout
+55 0 esrams_ic_tag_mem_wem
+18 2 esrams_iccm0_addr
+39 0 esrams_iccm0_din
+39 0 esrams_iccm0_dout
+4 0 esrams_iccm0_wem
+15 0 ext_trig_in
+1 0 ext_trig_output_accept
+1 0 ext_trig_output_valid
+31 0 iccm_ahb_haddr
+3 0 iccm_ahb_haddrchk
+2 0 iccm_ahb_hburst
+3 0 iccm_ahb_hmaster
+6 0 iccm_ahb_hprot
+31 0 iccm_ahb_hrdata
+3 0 iccm_ahb_hrdatachk
+0 0 iccm_ahb_hsel
+2 0 iccm_ahb_hsize
+1 0 iccm_ahb_htrans
+31 0 iccm_ahb_hwdata
+3 0 iccm_ahb_hwdatachk
+3 0 iccm_ahb_hwstrb
+15 0 lsc_diag_aux_r
+13 0 lsc_err_stat_aux
+31 0 mmio_ahb_haddr
+3 0 mmio_ahb_haddrchk
+2 0 mmio_ahb_hburst
+3 0 mmio_ahb_hmaster
+6 0 mmio_ahb_hprot
+31 0 mmio_ahb_hrdata
+3 0 mmio_ahb_hrdatachk
+2 0 mmio_ahb_hsize
+1 0 mmio_ahb_htrans
+31 0 mmio_ahb_hwdata
+3 0 mmio_ahb_hwdatachk
+3 0 mmio_ahb_hwstrb
+11 0 mmio_base_in
+21 0 reset_pc_in
+7 0 sfty_ibp_mmio_cmd_addr
+5 0 sfty_ibp_mmio_cmd_atomic
+3 0 sfty_ibp_mmio_cmd_cache
+3 0 sfty_ibp_mmio_cmd_ctrl_pty
+2 0 sfty_ibp_mmio_cmd_data_size
+1 0 sfty_ibp_mmio_cmd_prot
+31 0 sfty_ibp_mmio_rd_data
+3 0 sfty_ibp_mmio_rd_data_pty
+31 0 sfty_ibp_mmio_wr_data
+3 0 sfty_ibp_mmio_wr_mask
+2 0 sys_sleep_mode_r
+4 0 wid_rlwid
+63 0 wid_rwiddeleg
+30 0 zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core_VCSXMR_u_main_rl_cpu_top
+}
+EdfPortBounds cpu_safety_monitor{
+1 0 cpu_dr_mask_pty_err
+1 0 cpu_dr_mismatch_r
+1 0 cpu_dr_sfty_ctrl_parity_error
+1 0 cpu_dr_sfty_diag_inj_end
+1 0 cpu_dr_sfty_diag_mode_sc
+1 0 cpu_lsAsafety_comparator_enabled
+1 0 cpu_lsBsafety_comparator_enabled
+1 0 dr_bus_fatal_err
+1 0 dr_lsc_stl_ctrl_aux_r
+1 0 dr_safety_comparator_enabled
+1 0 dr_safety_iso_err
+1 0 dr_secure_trig_iso_err
+1 0 dr_sfty_aux_parity_err_r
+1 0 dr_sfty_eic
+15 0 lsc_diag_aux_r
+13 0 lsc_err_stat_aux
+1 0 safety_enabled
+1 0 safety_error
+1 0 safety_mem_dbe
+1 0 safety_mem_sbe
+7 0 sfty_ibp_mmio_cmd_addr
+5 0 sfty_ibp_mmio_cmd_atomic
+3 0 sfty_ibp_mmio_cmd_cache
+3 0 sfty_ibp_mmio_cmd_ctrl_pty
+2 0 sfty_ibp_mmio_cmd_data_size
+1 0 sfty_ibp_mmio_cmd_prot
+31 0 sfty_ibp_mmio_rd_data
+3 0 sfty_ibp_mmio_rd_data_pty
+31 0 sfty_ibp_mmio_wr_data
+3 0 sfty_ibp_mmio_wr_mask
+}
+EdfPortBounds mss_bus_switch_ibpw2ibpn_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds dw_dbp{
+31 0 bri_araddr
+1 0 bri_arburst
+3 0 bri_arcache
+3 0 bri_arid
+3 0 bri_arlen
+2 0 bri_arprot
+2 0 bri_arsize
+31 0 bri_awaddr
+1 0 bri_awburst
+3 0 bri_awcache
+3 0 bri_awid
+3 0 bri_awlen
+2 0 bri_awprot
+2 0 bri_awsize
+3 0 bri_bid
+1 0 bri_bresp
+31 0 bri_rdata
+3 0 bri_rid
+1 0 bri_rresp
+31 0 bri_wdata
+3 0 bri_wid
+3 0 bri_wstrb
+31 2 dbg_apb_paddr
+31 0 dbg_apb_prdata
+31 0 dbg_apb_pwdata
+}
+NonAliasNets archipelago{
+}

@@ -1,0 +1,22 @@
+memory set_global_debug_mode true
+mem new fpga_sram_0000_ZMEM_mem_r auto
+#
+# Inferred from /remote/us01sgnfs00727/arc_fpga/moyanz/Ratter3/template/dw_dbp/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpga_sram.v, line 71
+# Variable is mem_r
+#
+mem depth 256
+mem width 56
+mem add_port w0 w
+mem set_port_access w0 sync
+mem_port w0 clk w0clk 
+mem_port w0 addr w0addr 
+mem_port w0 di w0di 
+mem_port w0 we w0we 
+mem_port w0 bie w0bie 
+mem add_port r1 r
+mem set_port_access r1 async
+mem_port r1 addr r1addr 
+mem_port r1 do r1do 
+mem optimize_capacity true
+    mem set_word_length 1
+mem generate

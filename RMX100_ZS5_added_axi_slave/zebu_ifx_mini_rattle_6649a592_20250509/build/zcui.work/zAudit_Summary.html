@@ -1,0 +1,75 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <title>Summary Report</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            }
+        th {
+            background-color: yellow;
+        }
+    </style>
+    </head>
+
+    <body>
+    <h1>Summary Report</h1>
+    
+         <br><br>
+         <h2>Basic info</h2>
+         <div id="Basic Info">
+         <table style="border-style: solid">
+         <tr>
+         <th>Keyword</th>
+         <th>Description</th>
+         </tr>
+
+         <tr>
+         <td>zAudit</td>
+         <td>ZeBu Compile Analysis, Diagnostics, and Recommendations</td>
+         </tr>
+
+         <tr>
+         <td>zcui_work</td> <td>/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work</td>
+         </tr>
+
+         <tr>
+         <td>zebu_work</td>
+         <td><zcui_work>/backend_default</td>
+         </tr>
+
+         <tr>	
+         <td>zAudit db</td> 
+         <td><zcui_work>/zAudit.db</td>
+         </tr>
+
+         <tr>	
+         <td>Global Compile Log</td> 
+         <td><a href ="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zCui/backup/latest/backend_default_globalLog.html">Path to Global Log</a></td>
+         </tr>
+
+         <tr>	
+         <td>Stage</td>
+         <td>Completed</td>
+         </tr>
+         </table>
+         </div>
+         
+
+    <br><br>
+    <h2>Summary</h2>
+
+    <div id="summary">
+    <table>
+    <tr>
+        <th>Category</th>
+        <th>Details</th>
+        <th>Log file Path</th>
+    </tr>
+    <tr><td>General</td><td>Platform: ZS5, ZeBu Release: S-2021.09-2-TZ-20240507_Full64, Vivado Release: 2022.1_AR76726</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zCui/log/zCui.log">zCui.log</a></td></tr><tr><td>Memories</td><td>Total: 13, By Type: {BRAM: 9, URAM: 3, ZRM: 1}, With # Ports: {1-3: 13, 4-7: 0, 8-15: 0, 16-31: 0, 32+: 0}</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/zmem/">Path to zMem dir</a></td></tr><tr><td>Clocks</td><td>Fetch Mode: yes, Excalibur: no, RTL Clocks: yes, RLC Strategy: {zTopBuild: N/A, zCores: {FULL: 0}}</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zTime.log">zTime.log</a></td></tr><tr><td>Size</td><td>REG: 381,377, LUT: 398,499, LUT6: 109,130 (27% of LUT), BRAM: 141, RAMLUT: 46,176, DSP: 0, MUXCY: 18</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/">Bundle_*.log</a></td></tr><tr><td>Mapping</td><td>Units: 1, Modules: 1, FPGAs: 2<br>Avg Fill: {REG: 0%, LUT: 0%, BRAM: 0%, URAM: 2%}<br>Max FPGA Fill: {REG: 3%, LUT: 9%, BRAM: 4%, URAM: 30%}<br>Avg CUT: {FPGA: 40}, Max CUT: {FPGA: 40}</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zTopBuild.log">zTopBuild.log</a></td></tr><tr><td>Routing</td><td>routerType: EZCR, routing Effort: default, pinAssignmentEffort: zap, SocketMode: native, SAG: disabled</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zPar.log">zPar.log</a></td></tr><tr><td>Timing</td><td>driverClk: 5555 kHz (180 ns)<br>Pre-Post delta before rounding: {driverClk: 5428 -> 6219 (14%)}<br>bottleneck: routing data paths : 161ns, Longest Delays: {data: 161 ns, memory: 164 ns}, #MGT in top path: {data: 0, filter: 0}</td><td><a href="/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zTime_fpga.log">zTime_fpga.log</a></td></tr><tr><td>FPGA</td><td>Total Num. of completed FPGAs: 2<br>Original Winners: 2<br>Fractal Winners: 0<br>Original FPGAlet winners: 0<br>PARFF FPGAlet winners: 0<br>PARFF Winners: 0	PARFF Winning FPGAs: None<br>PARFF Winning FPGAs Strategy: {}<br>Num of Failed FPGAs: 0, Failed FPGAs: []<br>Num FPGA compile ongoing: 0, FPGA compile ongoing: []<br>Long Pole FPGA Compile Times: {U0_M0_F01: 139, U0_M0_F00: 42}<br><br>FPGA compile status: PASS</td><td></td></tr><tr><td>Compile Time</td><td>Front-End: 01m:08s<br>Back-End: 02m:47s<br>FPGA-Compile: 00m:36s<br>Total: 04m:31s</td><td></td></tr>
+    </table>
+    </body>
+    </html>
+
+    

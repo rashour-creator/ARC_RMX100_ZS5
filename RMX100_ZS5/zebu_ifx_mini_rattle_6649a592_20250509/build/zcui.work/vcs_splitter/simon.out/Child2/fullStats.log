@@ -1,0 +1,2964 @@
+
+Processing xtor_amba_master_axi3_svs
+before buildCfgFromIStructural: 0.01u 0.01s 31e 874296kB
+Before processing instances: 0.01u 0.01s 727e 874296kB
+After processing instances: 0.02u 0.01s 1001e 874296kB
+before processing cont assigns: 0.02u 0.01s 1001e 874296kB
+after processing cont assigns: 0.04u 0.01s 1416e 874296kB
+before processing processes: 0.04u 0.01s 1416e 874296kB
+after processing processes: 0.13u 0.02s 4142e 874560kB
+after buildCfgFromIStructural: 0.13u 0.02s 4168e 874560kB
+before ns->mergeSimpleProcesses: 0.13u 0.02s 4168e 874560kB
+after ns->mergeSimpleProcesses: 0.13u 0.02s 4217e 874560kB
+before ns->splitPartialWrites: 0.14u 0.02s 4217e 874560kB
+after ns->splitPartialWrites: 0.16u 0.02s 4257e 874560kB
+before removeUnneededLatches: 0.16u 0.02s 4257e 874560kB
+after removeUnneededLatches: 0.16u 0.02s 4257e 874560kB
+before printMsgForBothBAandNBAAccrossProcess: 0.16u 0.02s 4257e 874560kB
+after printMsgForBothBAandNBAAccrossProcess: 0.16u 0.02s 4257e 874560kB
+after other NameScope processing: 0.19u 0.02s 4977e 877464kB
+before rebuildInstGraph: 0.21u 0.02s 5159e 879708kB
+  before addAllInScope: 0.21u 0.02s 5159e 879708kB
+  after addAllInScope: 0.21u 0.03s 5159e 879860kB
+after rebuildInstGraph: 0.21u 0.03s 5159e 879860kB
+before markTristateCones : 0.22u 0.03s 5162e 879860kB
+after markTristateCones : 0.22u 0.03s 5162e 879860kB
+after scheduling: 0.26u 0.03s 7446e 879860kB
+after model->finalize: 0.31u 0.03s 8561e 879860kB
+before attribute propagation: 0.4u 0.03s 10396e 879860kB
+after attribute propagation: 0.4u 0.03s 10396e 879860kB
+before constantPropagate: 0.4u 0.03s 10396e 879860kB
+after constantPropagate: 0.41u 0.03s 10276e 879860kB
+before removeUnusedSignals circuit: 0.41u 0.03s 10276e 879860kB
+after removeUnusedSignals circuit: 0.41u 0.03s 10276e 879860kB
+before optimize latch enable: 0.41u 0.03s 10276e 879860kB
+after optimize latch enable: 0.41u 0.03s 10276e 879860kB
+after circuit->load: 0.41u 0.03s 10276e 879860kB
+
+Processing zz_Encrypt_4
+before buildCfgFromIStructural: 0.42u 0.03s 5052e 879860kB
+Before processing instances: 0.42u 0.03s 5302e 879860kB
+After processing instances: 0.42u 0.03s 5415e 879860kB
+before processing cont assigns: 0.42u 0.03s 5415e 879860kB
+after processing cont assigns: 0.42u 0.03s 5468e 879860kB
+before processing processes: 0.42u 0.03s 5468e 879860kB
+after processing processes: 0.47u 0.03s 6737e 879860kB
+after buildCfgFromIStructural: 0.47u 0.03s 6741e 879860kB
+before ns->mergeSimpleProcesses: 0.47u 0.03s 6741e 879860kB
+after ns->mergeSimpleProcesses: 0.47u 0.03s 6745e 879860kB
+before ns->splitPartialWrites: 0.47u 0.03s 6745e 879860kB
+after ns->splitPartialWrites: 0.48u 0.03s 6758e 879860kB
+before removeUnneededLatches: 0.48u 0.03s 6758e 879860kB
+after removeUnneededLatches: 0.48u 0.03s 6758e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.48u 0.03s 6758e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.48u 0.03s 6758e 879860kB
+after other NameScope processing: 0.49u 0.03s 7197e 879860kB
+before rebuildInstGraph: 0.5u 0.03s 7290e 879860kB
+  before addAllInScope: 0.5u 0.03s 7290e 879860kB
+  after addAllInScope: 0.5u 0.03s 7290e 879860kB
+after rebuildInstGraph: 0.51u 0.03s 7290e 879860kB
+before makeSequentialsCuttable: 0.51u 0.03s 7290e 879860kB
+after makeSequentialsCuttable: 0.51u 0.03s 7309e 879860kB
+before markTristateCones : 0.51u 0.03s 7309e 879860kB
+after markTristateCones : 0.51u 0.03s 7309e 879860kB
+after scheduling: 0.53u 0.03s 8317e 879860kB
+after model->finalize: 0.55u 0.03s 8363e 879860kB
+before attribute propagation: 0.58u 0.03s 9243e 879860kB
+after attribute propagation: 0.58u 0.03s 9243e 879860kB
+before constantPropagate: 0.58u 0.03s 9243e 879860kB
+after constantPropagate: 0.59u 0.03s 9210e 879860kB
+before removeUnusedSignals circuit: 0.59u 0.03s 9210e 879860kB
+after removeUnusedSignals circuit: 0.59u 0.03s 9210e 879860kB
+before optimize latch enable: 0.59u 0.03s 9210e 879860kB
+after optimize latch enable: 0.59u 0.03s 9210e 879860kB
+after circuit->load: 0.59u 0.03s 9210e 879860kB
+
+Processing zebu_axi_xtor
+before buildCfgFromIStructural: 0.59u 0.03s 6993e 879860kB
+Before processing instances: 0.59u 0.03s 7046e 879860kB
+After processing instances: 0.59u 0.03s 7085e 879860kB
+before processing cont assigns: 0.59u 0.03s 7085e 879860kB
+after processing cont assigns: 0.59u 0.03s 7085e 879860kB
+before processing processes: 0.59u 0.03s 7085e 879860kB
+after processing processes: 0.59u 0.03s 7085e 879860kB
+after buildCfgFromIStructural: 0.59u 0.03s 7092e 879860kB
+before ns->mergeSimpleProcesses: 0.59u 0.03s 7092e 879860kB
+after ns->mergeSimpleProcesses: 0.59u 0.03s 7092e 879860kB
+before ns->splitPartialWrites: 0.59u 0.03s 7092e 879860kB
+after ns->splitPartialWrites: 0.59u 0.03s 7092e 879860kB
+before removeUnneededLatches: 0.59u 0.03s 7092e 879860kB
+after removeUnneededLatches: 0.59u 0.03s 7092e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.59u 0.03s 7092e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.59u 0.03s 7092e 879860kB
+after other NameScope processing: 0.59u 0.03s 7092e 879860kB
+before rebuildInstGraph: 0.59u 0.03s 7092e 879860kB
+  before addAllInScope: 0.59u 0.03s 7092e 879860kB
+  after addAllInScope: 0.59u 0.03s 7092e 879860kB
+after rebuildInstGraph: 0.59u 0.03s 7092e 879860kB
+before markTristateCones : 0.59u 0.03s 7093e 879860kB
+after markTristateCones : 0.59u 0.03s 7093e 879860kB
+after scheduling: 0.59u 0.03s 7237e 879860kB
+after model->finalize: 0.59u 0.03s 7290e 879860kB
+before attribute propagation: 0.59u 0.03s 7277e 879860kB
+after attribute propagation: 0.59u 0.03s 7277e 879860kB
+before constantPropagate: 0.59u 0.03s 7277e 879860kB
+after constantPropagate: 0.59u 0.03s 7277e 879860kB
+before removeUnusedSignals circuit: 0.59u 0.03s 7277e 879860kB
+after removeUnusedSignals circuit: 0.59u 0.03s 7277e 879860kB
+before optimize latch enable: 0.6u 0.03s 7277e 879860kB
+after optimize latch enable: 0.6u 0.03s 7277e 879860kB
+after circuit->load: 0.6u 0.03s 7277e 879860kB
+
+Processing rl_dispatch
+before buildCfgFromIStructural: 0.6u 0.03s 7085e 879860kB
+Before processing instances: 0.6u 0.03s 7215e 879860kB
+After processing instances: 0.6u 0.03s 7300e 879860kB
+before processing cont assigns: 0.6u 0.03s 7300e 879860kB
+after processing cont assigns: 0.6u 0.03s 7313e 879860kB
+before processing processes: 0.6u 0.03s 7313e 879860kB
+after processing processes: 0.6u 0.03s 7647e 879860kB
+after buildCfgFromIStructural: 0.61u 0.03s 7659e 879860kB
+before ns->mergeSimpleProcesses: 0.61u 0.03s 7659e 879860kB
+after ns->mergeSimpleProcesses: 0.61u 0.03s 7659e 879860kB
+before ns->splitPartialWrites: 0.61u 0.03s 7659e 879860kB
+after ns->splitPartialWrites: 0.61u 0.03s 7659e 879860kB
+before removeUnneededLatches: 0.61u 0.03s 7659e 879860kB
+after removeUnneededLatches: 0.61u 0.03s 7659e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.61u 0.03s 7659e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.61u 0.03s 7659e 879860kB
+after other NameScope processing: 0.61u 0.03s 7659e 879860kB
+before rebuildInstGraph: 0.61u 0.03s 7665e 879860kB
+  before addAllInScope: 0.61u 0.03s 7665e 879860kB
+  after addAllInScope: 0.61u 0.03s 7665e 879860kB
+after rebuildInstGraph: 0.61u 0.03s 7665e 879860kB
+before markTristateCones : 0.61u 0.03s 7665e 879860kB
+after markTristateCones : 0.61u 0.03s 7665e 879860kB
+after scheduling: 0.61u 0.03s 8178e 879860kB
+after model->finalize: 0.62u 0.03s 8540e 879860kB
+before attribute propagation: 0.62u 0.03s 8706e 879860kB
+after attribute propagation: 0.62u 0.03s 8706e 879860kB
+before constantPropagate: 0.62u 0.03s 8706e 879860kB
+after constantPropagate: 0.62u 0.03s 8682e 879860kB
+before removeUnusedSignals circuit: 0.62u 0.03s 8682e 879860kB
+after removeUnusedSignals circuit: 0.62u 0.03s 8682e 879860kB
+before optimize latch enable: 0.62u 0.03s 8682e 879860kB
+after optimize latch enable: 0.62u 0.03s 8682e 879860kB
+after circuit->load: 0.62u 0.03s 8682e 879860kB
+
+Processing rl_dmp_lsq
+before buildCfgFromIStructural: 0.62u 0.03s 7669e 879860kB
+Before processing instances: 0.62u 0.03s 7871e 879860kB
+After processing instances: 0.62u 0.03s 7966e 879860kB
+before processing cont assigns: 0.62u 0.03s 7966e 879860kB
+after processing cont assigns: 0.62u 0.03s 7966e 879860kB
+before processing processes: 0.62u 0.03s 7966e 879860kB
+after processing processes: 0.64u 0.03s 8641e 879860kB
+after buildCfgFromIStructural: 0.64u 0.03s 8649e 879860kB
+before ns->mergeSimpleProcesses: 0.64u 0.03s 8649e 879860kB
+after ns->mergeSimpleProcesses: 0.64u 0.03s 8649e 879860kB
+before ns->splitPartialWrites: 0.64u 0.03s 8649e 879860kB
+after ns->splitPartialWrites: 0.64u 0.03s 8649e 879860kB
+before removeUnneededLatches: 0.64u 0.03s 8649e 879860kB
+after removeUnneededLatches: 0.64u 0.03s 8649e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.64u 0.03s 8649e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.64u 0.03s 8649e 879860kB
+after other NameScope processing: 0.64u 0.03s 8649e 879860kB
+before rebuildInstGraph: 0.64u 0.03s 8649e 879860kB
+  before addAllInScope: 0.64u 0.03s 8649e 879860kB
+  after addAllInScope: 0.64u 0.03s 8649e 879860kB
+after rebuildInstGraph: 0.64u 0.03s 8649e 879860kB
+before markTristateCones : 0.64u 0.03s 8649e 879860kB
+after markTristateCones : 0.64u 0.03s 8649e 879860kB
+after scheduling: 0.65u 0.03s 9290e 879860kB
+after model->finalize: 0.65u 0.03s 9746e 879860kB
+before attribute propagation: 0.66u 0.03s 10096e 879860kB
+after attribute propagation: 0.66u 0.03s 10096e 879860kB
+before constantPropagate: 0.66u 0.03s 10096e 879860kB
+after constantPropagate: 0.66u 0.03s 9972e 879860kB
+before removeUnusedSignals circuit: 0.66u 0.03s 9972e 879860kB
+after removeUnusedSignals circuit: 0.66u 0.03s 9972e 879860kB
+before optimize latch enable: 0.66u 0.03s 9972e 879860kB
+after optimize latch enable: 0.66u 0.03s 9972e 879860kB
+after circuit->load: 0.66u 0.03s 9972e 879860kB
+
+Processing alb_mss_mem_ibp2single_0000
+before buildCfgFromIStructural: 0.66u 0.03s 8708e 879860kB
+Before processing instances: 0.66u 0.03s 8871e 879860kB
+After processing instances: 0.66u 0.03s 8895e 879860kB
+before processing cont assigns: 0.66u 0.03s 8895e 879860kB
+after processing cont assigns: 0.67u 0.03s 9203e 879860kB
+before processing processes: 0.67u 0.03s 9203e 879860kB
+after processing processes: 0.67u 0.03s 9301e 879860kB
+after buildCfgFromIStructural: 0.67u 0.03s 9308e 879860kB
+before ns->mergeSimpleProcesses: 0.67u 0.03s 9308e 879860kB
+after ns->mergeSimpleProcesses: 0.67u 0.03s 9308e 879860kB
+before ns->splitPartialWrites: 0.67u 0.03s 9308e 879860kB
+after ns->splitPartialWrites: 0.67u 0.03s 9308e 879860kB
+before removeUnneededLatches: 0.67u 0.03s 9308e 879860kB
+after removeUnneededLatches: 0.67u 0.03s 9308e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.67u 0.03s 9308e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.67u 0.03s 9308e 879860kB
+after other NameScope processing: 0.67u 0.03s 9308e 879860kB
+before rebuildInstGraph: 0.67u 0.03s 9402e 879860kB
+  before addAllInScope: 0.67u 0.03s 9402e 879860kB
+  after addAllInScope: 0.68u 0.03s 9402e 879860kB
+after rebuildInstGraph: 0.68u 0.03s 9402e 879860kB
+before markTristateCones : 0.68u 0.03s 9403e 879860kB
+after markTristateCones : 0.68u 0.03s 9403e 879860kB
+after scheduling: 0.68u 0.03s 9900e 879860kB
+after model->finalize: 0.69u 0.03s 10310e 879860kB
+before attribute propagation: 0.69u 0.03s 10547e 879860kB
+after attribute propagation: 0.69u 0.03s 10547e 879860kB
+before constantPropagate: 0.7u 0.03s 10547e 879860kB
+after constantPropagate: 0.7u 0.03s 10547e 879860kB
+before removeUnusedSignals circuit: 0.7u 0.03s 10547e 879860kB
+after removeUnusedSignals circuit: 0.7u 0.03s 10547e 879860kB
+before optimize latch enable: 0.7u 0.03s 10547e 879860kB
+after optimize latch enable: 0.7u 0.03s 10547e 879860kB
+after circuit->load: 0.7u 0.03s 10547e 879860kB
+
+Processing alb_mss_fab_fifo_0001_0004
+before buildCfgFromIStructural: 0.7u 0.03s 9384e 879860kB
+Before processing instances: 0.7u 0.03s 9404e 879860kB
+After processing instances: 0.7u 0.03s 9404e 879860kB
+before processing cont assigns: 0.7u 0.03s 9404e 879860kB
+after processing cont assigns: 0.7u 0.03s 9411e 879860kB
+before processing processes: 0.7u 0.03s 9411e 879860kB
+after processing processes: 0.7u 0.03s 9411e 879860kB
+after buildCfgFromIStructural: 0.7u 0.03s 9413e 879860kB
+before ns->mergeSimpleProcesses: 0.7u 0.03s 9413e 879860kB
+after ns->mergeSimpleProcesses: 0.7u 0.03s 9413e 879860kB
+before ns->splitPartialWrites: 0.7u 0.03s 9413e 879860kB
+after ns->splitPartialWrites: 0.7u 0.03s 9413e 879860kB
+before removeUnneededLatches: 0.7u 0.03s 9413e 879860kB
+after removeUnneededLatches: 0.7u 0.03s 9413e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.7u 0.03s 9413e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.7u 0.03s 9413e 879860kB
+after other NameScope processing: 0.7u 0.03s 9413e 879860kB
+before rebuildInstGraph: 0.7u 0.03s 9416e 879860kB
+  before addAllInScope: 0.7u 0.03s 9416e 879860kB
+  after addAllInScope: 0.7u 0.03s 9416e 879860kB
+after rebuildInstGraph: 0.7u 0.03s 9416e 879860kB
+before markTristateCones : 0.7u 0.03s 9416e 879860kB
+after markTristateCones : 0.7u 0.03s 9416e 879860kB
+after scheduling: 0.7u 0.03s 9464e 879860kB
+after model->finalize: 0.7u 0.03s 9493e 879860kB
+before attribute propagation: 0.7u 0.04s 9498e 879860kB
+after attribute propagation: 0.7u 0.04s 9498e 879860kB
+before constantPropagate: 0.7u 0.04s 9498e 879860kB
+after constantPropagate: 0.7u 0.04s 9496e 879860kB
+before removeUnusedSignals circuit: 0.7u 0.04s 9496e 879860kB
+after removeUnusedSignals circuit: 0.7u 0.04s 9496e 879860kB
+before optimize latch enable: 0.7u 0.04s 9496e 879860kB
+after optimize latch enable: 0.7u 0.04s 9496e 879860kB
+after circuit->load: 0.7u 0.04s 9496e 879860kB
+
+Processing alb_mss_fab_ahbl2ibp_0000
+before buildCfgFromIStructural: 0.7u 0.04s 9399e 879860kB
+Before processing instances: 0.7u 0.04s 9602e 879860kB
+After processing instances: 0.7u 0.04s 9644e 879860kB
+before processing cont assigns: 0.7u 0.04s 9644e 879860kB
+after processing cont assigns: 0.71u 0.04s 9931e 879860kB
+before processing processes: 0.71u 0.04s 9931e 879860kB
+after processing processes: 0.72u 0.04s 10318e 879860kB
+after buildCfgFromIStructural: 0.72u 0.04s 10327e 879860kB
+before ns->mergeSimpleProcesses: 0.72u 0.04s 10327e 879860kB
+after ns->mergeSimpleProcesses: 0.72u 0.04s 10327e 879860kB
+before ns->splitPartialWrites: 0.72u 0.04s 10327e 879860kB
+after ns->splitPartialWrites: 0.73u 0.04s 10327e 879860kB
+before removeUnneededLatches: 0.73u 0.04s 10327e 879860kB
+after removeUnneededLatches: 0.73u 0.04s 10325e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.73u 0.04s 10325e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.73u 0.04s 10325e 879860kB
+after other NameScope processing: 0.73u 0.04s 10337e 879860kB
+before rebuildInstGraph: 0.73u 0.04s 10442e 879860kB
+  before addAllInScope: 0.73u 0.04s 10442e 879860kB
+  after addAllInScope: 0.74u 0.04s 10442e 879860kB
+after rebuildInstGraph: 0.74u 0.04s 10442e 879860kB
+before markTristateCones : 0.74u 0.04s 10442e 879860kB
+after markTristateCones : 0.74u 0.04s 10442e 879860kB
+after scheduling: 0.75u 0.04s 10920e 879860kB
+after model->finalize: 0.76u 0.04s 11286e 879860kB
+before attribute propagation: 0.76u 0.04s 11563e 879860kB
+after attribute propagation: 0.76u 0.04s 11563e 879860kB
+before constantPropagate: 0.76u 0.04s 11563e 879860kB
+after constantPropagate: 0.76u 0.04s 11534e 879860kB
+before removeUnusedSignals circuit: 0.76u 0.04s 11534e 879860kB
+after removeUnusedSignals circuit: 0.76u 0.04s 11534e 879860kB
+before optimize latch enable: 0.76u 0.04s 11534e 879860kB
+after optimize latch enable: 0.76u 0.04s 11534e 879860kB
+after circuit->load: 0.76u 0.04s 11534e 879860kB
+
+Processing mss_bus_switch_fifo_0001_0003
+before buildCfgFromIStructural: 0.77u 0.04s 10301e 879860kB
+Before processing instances: 0.77u 0.04s 10338e 879860kB
+After processing instances: 0.77u 0.04s 10338e 879860kB
+before processing cont assigns: 0.77u 0.04s 10338e 879860kB
+after processing cont assigns: 0.78u 0.04s 10663e 879860kB
+before processing processes: 0.78u 0.04s 10663e 879860kB
+after processing processes: 0.82u 0.04s 11434e 879860kB
+after buildCfgFromIStructural: 0.82u 0.04s 11440e 879860kB
+before ns->mergeSimpleProcesses: 0.82u 0.04s 11440e 879860kB
+after ns->mergeSimpleProcesses: 0.82u 0.04s 11534e 879860kB
+before ns->splitPartialWrites: 0.82u 0.04s 11534e 879860kB
+after ns->splitPartialWrites: 0.84u 0.04s 11724e 879860kB
+before removeUnneededLatches: 0.84u 0.04s 11724e 879860kB
+after removeUnneededLatches: 0.84u 0.04s 11724e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.84u 0.04s 11724e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.84u 0.04s 11724e 879860kB
+after other NameScope processing: 0.84u 0.04s 11724e 879860kB
+before rebuildInstGraph: 0.84u 0.04s 12064e 879860kB
+  before addAllInScope: 0.84u 0.04s 12064e 879860kB
+  after addAllInScope: 0.85u 0.04s 12064e 879860kB
+after rebuildInstGraph: 0.85u 0.04s 12064e 879860kB
+before markTristateCones : 0.85u 0.04s 12064e 879860kB
+after markTristateCones : 0.85u 0.04s 12064e 879860kB
+after scheduling: 0.86u 0.04s 12214e 879860kB
+after model->finalize: 0.86u 0.04s 12399e 879860kB
+before attribute propagation: 0.87u 0.04s 12961e 879860kB
+after attribute propagation: 0.87u 0.04s 12961e 879860kB
+before constantPropagate: 0.87u 0.04s 12961e 879860kB
+after constantPropagate: 0.87u 0.04s 12956e 879860kB
+before removeUnusedSignals circuit: 0.87u 0.04s 12956e 879860kB
+after removeUnusedSignals circuit: 0.87u 0.04s 12956e 879860kB
+before optimize latch enable: 0.87u 0.04s 12956e 879860kB
+after optimize latch enable: 0.87u 0.04s 12956e 879860kB
+after circuit->load: 0.87u 0.04s 12956e 879860kB
+
+Processing alb_mss_mem_ibp_buf
+before buildCfgFromIStructural: 0.87u 0.04s 11833e 879860kB
+Before processing instances: 0.87u 0.04s 11894e 879860kB
+After processing instances: 0.87u 0.04s 11911e 879860kB
+before processing cont assigns: 0.87u 0.04s 11911e 879860kB
+after processing cont assigns: 0.88u 0.04s 11990e 879860kB
+before processing processes: 0.88u 0.04s 11990e 879860kB
+after processing processes: 0.88u 0.04s 12005e 879860kB
+after buildCfgFromIStructural: 0.88u 0.04s 12014e 879860kB
+before ns->mergeSimpleProcesses: 0.88u 0.04s 12014e 879860kB
+after ns->mergeSimpleProcesses: 0.88u 0.04s 12014e 879860kB
+before ns->splitPartialWrites: 0.88u 0.04s 12014e 879860kB
+after ns->splitPartialWrites: 0.88u 0.04s 12014e 879860kB
+before removeUnneededLatches: 0.88u 0.04s 12014e 879860kB
+after removeUnneededLatches: 0.88u 0.04s 12014e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.88u 0.04s 12014e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.88u 0.04s 12014e 879860kB
+after other NameScope processing: 0.88u 0.04s 12014e 879860kB
+before rebuildInstGraph: 0.88u 0.04s 12056e 879860kB
+  before addAllInScope: 0.88u 0.04s 12056e 879860kB
+  after addAllInScope: 0.88u 0.04s 12056e 879860kB
+after rebuildInstGraph: 0.88u 0.04s 12056e 879860kB
+before markTristateCones : 0.88u 0.04s 12056e 879860kB
+after markTristateCones : 0.88u 0.04s 12056e 879860kB
+after scheduling: 0.88u 0.04s 12242e 879860kB
+after model->finalize: 0.88u 0.04s 12330e 879860kB
+before attribute propagation: 0.88u 0.04s 12371e 879860kB
+after attribute propagation: 0.88u 0.04s 12371e 879860kB
+before constantPropagate: 0.88u 0.04s 12371e 879860kB
+after constantPropagate: 0.88u 0.04s 12371e 879860kB
+before removeUnusedSignals circuit: 0.88u 0.04s 12371e 879860kB
+after removeUnusedSignals circuit: 0.88u 0.04s 12371e 879860kB
+before optimize latch enable: 0.88u 0.04s 12371e 879860kB
+after optimize latch enable: 0.88u 0.04s 12371e 879860kB
+after circuit->load: 0.88u 0.04s 12371e 879860kB
+
+Processing mss_bus_switch_ibp2pack_0002
+before buildCfgFromIStructural: 0.88u 0.04s 12001e 879860kB
+Before processing instances: 0.88u 0.04s 12096e 879860kB
+After processing instances: 0.88u 0.04s 12096e 879860kB
+before processing cont assigns: 0.88u 0.04s 12096e 879860kB
+after processing cont assigns: 0.88u 0.04s 12148e 879860kB
+before processing processes: 0.88u 0.04s 12148e 879860kB
+after processing processes: 0.88u 0.04s 12148e 879860kB
+after buildCfgFromIStructural: 0.88u 0.04s 12158e 879860kB
+before ns->mergeSimpleProcesses: 0.88u 0.04s 12158e 879860kB
+after ns->mergeSimpleProcesses: 0.89u 0.04s 12158e 879860kB
+before ns->splitPartialWrites: 0.89u 0.04s 12158e 879860kB
+after ns->splitPartialWrites: 0.89u 0.04s 12158e 879860kB
+before removeUnneededLatches: 0.89u 0.04s 12158e 879860kB
+after removeUnneededLatches: 0.89u 0.04s 12158e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.89u 0.04s 12158e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.89u 0.04s 12158e 879860kB
+after other NameScope processing: 0.89u 0.04s 12158e 879860kB
+before rebuildInstGraph: 0.89u 0.04s 12192e 879860kB
+  before addAllInScope: 0.89u 0.04s 12192e 879860kB
+  after addAllInScope: 0.89u 0.04s 12192e 879860kB
+after rebuildInstGraph: 0.89u 0.04s 12192e 879860kB
+before markTristateCones : 0.89u 0.04s 12192e 879860kB
+after markTristateCones : 0.89u 0.04s 12192e 879860kB
+after scheduling: 0.89u 0.04s 12355e 879860kB
+after model->finalize: 0.89u 0.04s 12523e 879860kB
+before attribute propagation: 0.89u 0.04s 12561e 879860kB
+after attribute propagation: 0.89u 0.04s 12561e 879860kB
+before constantPropagate: 0.89u 0.04s 12561e 879860kB
+after constantPropagate: 0.89u 0.04s 12561e 879860kB
+before removeUnusedSignals circuit: 0.89u 0.04s 12561e 879860kB
+after removeUnusedSignals circuit: 0.89u 0.04s 12561e 879860kB
+before optimize latch enable: 0.89u 0.04s 12561e 879860kB
+after optimize latch enable: 0.89u 0.04s 12561e 879860kB
+after circuit->load: 0.89u 0.04s 12561e 879860kB
+
+Processing alb_mss_fab_ibp2ahbl
+before buildCfgFromIStructural: 0.89u 0.04s 12087e 879860kB
+Before processing instances: 0.89u 0.04s 12224e 879860kB
+After processing instances: 0.89u 0.04s 12401e 879860kB
+before processing cont assigns: 0.89u 0.04s 12401e 879860kB
+after processing cont assigns: 0.89u 0.04s 12474e 879860kB
+before processing processes: 0.89u 0.04s 12474e 879860kB
+after processing processes: 0.9u 0.04s 12488e 879860kB
+after buildCfgFromIStructural: 0.9u 0.04s 12494e 879860kB
+before ns->mergeSimpleProcesses: 0.9u 0.04s 12494e 879860kB
+after ns->mergeSimpleProcesses: 0.9u 0.04s 12494e 879860kB
+before ns->splitPartialWrites: 0.9u 0.04s 12494e 879860kB
+after ns->splitPartialWrites: 0.9u 0.04s 12494e 879860kB
+before removeUnneededLatches: 0.9u 0.04s 12494e 879860kB
+after removeUnneededLatches: 0.9u 0.04s 12494e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.9u 0.04s 12494e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.9u 0.04s 12494e 879860kB
+after other NameScope processing: 0.9u 0.04s 12494e 879860kB
+before rebuildInstGraph: 0.9u 0.04s 12531e 879860kB
+  before addAllInScope: 0.9u 0.04s 12531e 879860kB
+  after addAllInScope: 0.9u 0.04s 12531e 879860kB
+after rebuildInstGraph: 0.9u 0.04s 12531e 879860kB
+before markTristateCones : 0.9u 0.04s 12532e 879860kB
+after markTristateCones : 0.9u 0.04s 12532e 879860kB
+after scheduling: 0.9u 0.04s 12942e 879860kB
+after model->finalize: 0.9u 0.04s 13079e 879860kB
+before attribute propagation: 0.9u 0.04s 13008e 879860kB
+after attribute propagation: 0.9u 0.04s 13008e 879860kB
+before constantPropagate: 0.9u 0.04s 13008e 879860kB
+after constantPropagate: 0.9u 0.04s 13008e 879860kB
+before removeUnusedSignals circuit: 0.9u 0.04s 13008e 879860kB
+after removeUnusedSignals circuit: 0.9u 0.04s 13008e 879860kB
+before optimize latch enable: 0.9u 0.04s 13008e 879860kB
+after optimize latch enable: 0.9u 0.04s 13008e 879860kB
+after circuit->load: 0.9u 0.04s 13008e 879860kB
+
+Processing alb_mss_mem_ibp_lat
+before buildCfgFromIStructural: 0.9u 0.04s 12442e 879860kB
+Before processing instances: 0.91u 0.04s 12524e 879860kB
+After processing instances: 0.91u 0.04s 12587e 879860kB
+before processing cont assigns: 0.91u 0.04s 12587e 879860kB
+after processing cont assigns: 0.91u 0.04s 12625e 879860kB
+before processing processes: 0.91u 0.04s 12625e 879860kB
+after processing processes: 0.91u 0.04s 12625e 879860kB
+after buildCfgFromIStructural: 0.91u 0.04s 12632e 879860kB
+before ns->mergeSimpleProcesses: 0.91u 0.04s 12632e 879860kB
+after ns->mergeSimpleProcesses: 0.91u 0.04s 12632e 879860kB
+before ns->splitPartialWrites: 0.91u 0.04s 12632e 879860kB
+after ns->splitPartialWrites: 0.91u 0.04s 12632e 879860kB
+before removeUnneededLatches: 0.91u 0.04s 12632e 879860kB
+after removeUnneededLatches: 0.91u 0.04s 12632e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.91u 0.04s 12632e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.91u 0.04s 12632e 879860kB
+after other NameScope processing: 0.91u 0.04s 12632e 879860kB
+before rebuildInstGraph: 0.91u 0.04s 12652e 879860kB
+  before addAllInScope: 0.91u 0.04s 12652e 879860kB
+  after addAllInScope: 0.91u 0.04s 12652e 879860kB
+after rebuildInstGraph: 0.91u 0.04s 12652e 879860kB
+before markTristateCones : 0.91u 0.04s 12652e 879860kB
+after markTristateCones : 0.91u 0.04s 12652e 879860kB
+after scheduling: 0.91u 0.04s 12940e 879860kB
+after model->finalize: 0.91u 0.04s 13046e 879860kB
+before attribute propagation: 0.91u 0.04s 13076e 879860kB
+after attribute propagation: 0.91u 0.04s 13076e 879860kB
+before constantPropagate: 0.91u 0.04s 13076e 879860kB
+after constantPropagate: 0.91u 0.04s 13076e 879860kB
+before removeUnusedSignals circuit: 0.91u 0.04s 13076e 879860kB
+after removeUnusedSignals circuit: 0.91u 0.04s 13076e 879860kB
+before optimize latch enable: 0.91u 0.04s 13076e 879860kB
+after optimize latch enable: 0.91u 0.04s 13076e 879860kB
+after circuit->load: 0.91u 0.04s 13076e 879860kB
+
+Processing rl_srams
+before buildCfgFromIStructural: 0.91u 0.04s 12607e 879860kB
+Before processing instances: 0.91u 0.04s 12647e 879860kB
+After processing instances: 0.91u 0.04s 12679e 879860kB
+before processing cont assigns: 0.91u 0.04s 12679e 879860kB
+after processing cont assigns: 0.91u 0.04s 12679e 879860kB
+before processing processes: 0.91u 0.04s 12679e 879860kB
+after processing processes: 0.91u 0.04s 12679e 879860kB
+after buildCfgFromIStructural: 0.91u 0.04s 12686e 879860kB
+before ns->mergeSimpleProcesses: 0.91u 0.04s 12686e 879860kB
+after ns->mergeSimpleProcesses: 0.91u 0.04s 12686e 879860kB
+before ns->splitPartialWrites: 0.91u 0.04s 12686e 879860kB
+after ns->splitPartialWrites: 0.91u 0.04s 12686e 879860kB
+before removeUnneededLatches: 0.91u 0.04s 12686e 879860kB
+after removeUnneededLatches: 0.91u 0.04s 12686e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.91u 0.04s 12686e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.91u 0.04s 12686e 879860kB
+after other NameScope processing: 0.91u 0.04s 12686e 879860kB
+before markTristateCones : 0.91u 0.04s 12686e 879860kB
+after markTristateCones : 0.91u 0.04s 12686e 879860kB
+after scheduling: 0.91u 0.04s 12866e 879860kB
+after model->finalize: 0.91u 0.04s 12936e 879860kB
+before attribute propagation: 0.91u 0.04s 12951e 879860kB
+after attribute propagation: 0.91u 0.04s 12951e 879860kB
+before constantPropagate: 0.91u 0.04s 12951e 879860kB
+after constantPropagate: 0.91u 0.04s 12951e 879860kB
+before removeUnusedSignals circuit: 0.91u 0.04s 12951e 879860kB
+after removeUnusedSignals circuit: 0.91u 0.04s 12951e 879860kB
+before optimize latch enable: 0.91u 0.04s 12951e 879860kB
+after optimize latch enable: 0.91u 0.04s 12951e 879860kB
+after circuit->load: 0.91u 0.04s 12951e 879860kB
+
+Processing mss_bus_switch_slv_ibp_buffer_0000
+before buildCfgFromIStructural: 0.91u 0.04s 12698e 879860kB
+Before processing instances: 0.91u 0.04s 12842e 879860kB
+After processing instances: 0.91u 0.04s 12892e 879860kB
+before processing cont assigns: 0.91u 0.04s 12892e 879860kB
+after processing cont assigns: 0.92u 0.04s 13054e 879860kB
+before processing processes: 0.92u 0.04s 13054e 879860kB
+after processing processes: 0.92u 0.04s 13102e 879860kB
+after buildCfgFromIStructural: 0.92u 0.04s 13110e 879860kB
+before ns->mergeSimpleProcesses: 0.92u 0.04s 13110e 879860kB
+after ns->mergeSimpleProcesses: 0.92u 0.04s 13110e 879860kB
+before ns->splitPartialWrites: 0.92u 0.04s 13110e 879860kB
+after ns->splitPartialWrites: 0.92u 0.04s 13110e 879860kB
+before removeUnneededLatches: 0.92u 0.04s 13110e 879860kB
+after removeUnneededLatches: 0.92u 0.04s 13110e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.92u 0.04s 13110e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.92u 0.04s 13110e 879860kB
+after other NameScope processing: 0.92u 0.04s 13110e 879860kB
+before rebuildInstGraph: 0.92u 0.04s 13178e 879860kB
+  before addAllInScope: 0.92u 0.04s 13178e 879860kB
+  after addAllInScope: 0.92u 0.04s 13178e 879860kB
+after rebuildInstGraph: 0.92u 0.04s 13178e 879860kB
+before markTristateCones : 0.92u 0.04s 13178e 879860kB
+after markTristateCones : 0.92u 0.04s 13178e 879860kB
+after scheduling: 0.92u 0.04s 13444e 879860kB
+after model->finalize: 0.92u 0.04s 13596e 879860kB
+before attribute propagation: 0.93u 0.04s 13645e 879860kB
+after attribute propagation: 0.93u 0.04s 13645e 879860kB
+before constantPropagate: 0.93u 0.04s 13645e 879860kB
+after constantPropagate: 0.93u 0.04s 13645e 879860kB
+before removeUnusedSignals circuit: 0.93u 0.04s 13645e 879860kB
+after removeUnusedSignals circuit: 0.93u 0.04s 13645e 879860kB
+before optimize latch enable: 0.93u 0.04s 13645e 879860kB
+after optimize latch enable: 0.93u 0.04s 13645e 879860kB
+after circuit->load: 0.93u 0.04s 13645e 879860kB
+
+Processing alb_mss_fab_ibp_buffer_0000_0000
+before buildCfgFromIStructural: 0.93u 0.04s 13053e 879860kB
+Before processing instances: 0.93u 0.04s 13132e 879860kB
+After processing instances: 0.93u 0.04s 13180e 879860kB
+before processing cont assigns: 0.93u 0.04s 13180e 879860kB
+after processing cont assigns: 0.93u 0.04s 13338e 879860kB
+before processing processes: 0.93u 0.04s 13338e 879860kB
+after processing processes: 0.93u 0.04s 13381e 879860kB
+after buildCfgFromIStructural: 0.93u 0.04s 13389e 879860kB
+before ns->mergeSimpleProcesses: 0.93u 0.04s 13389e 879860kB
+after ns->mergeSimpleProcesses: 0.93u 0.04s 13389e 879860kB
+before ns->splitPartialWrites: 0.93u 0.04s 13389e 879860kB
+after ns->splitPartialWrites: 0.93u 0.04s 13389e 879860kB
+before removeUnneededLatches: 0.93u 0.04s 13389e 879860kB
+after removeUnneededLatches: 0.93u 0.04s 13389e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.93u 0.04s 13389e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.93u 0.04s 13389e 879860kB
+after other NameScope processing: 0.93u 0.04s 13389e 879860kB
+before rebuildInstGraph: 0.93u 0.04s 13457e 879860kB
+  before addAllInScope: 0.93u 0.04s 13457e 879860kB
+  after addAllInScope: 0.94u 0.04s 13457e 879860kB
+after rebuildInstGraph: 0.94u 0.04s 13457e 879860kB
+before markTristateCones : 0.94u 0.04s 13457e 879860kB
+after markTristateCones : 0.94u 0.04s 13457e 879860kB
+after scheduling: 0.94u 0.04s 13721e 879860kB
+after model->finalize: 0.94u 0.04s 13705e 879860kB
+before attribute propagation: 0.94u 0.04s 13662e 879860kB
+after attribute propagation: 0.94u 0.04s 13662e 879860kB
+before constantPropagate: 0.94u 0.04s 13662e 879860kB
+after constantPropagate: 0.94u 0.04s 13662e 879860kB
+before removeUnusedSignals circuit: 0.94u 0.04s 13662e 879860kB
+after removeUnusedSignals circuit: 0.94u 0.04s 13662e 879860kB
+before optimize latch enable: 0.94u 0.04s 13662e 879860kB
+after optimize latch enable: 0.94u 0.04s 13662e 879860kB
+after circuit->load: 0.94u 0.04s 13662e 879860kB
+
+Processing alb_mss_mem_pack2ibp
+before buildCfgFromIStructural: 0.94u 0.04s 13072e 879860kB
+Before processing instances: 0.94u 0.04s 13161e 879860kB
+After processing instances: 0.94u 0.04s 13161e 879860kB
+before processing cont assigns: 0.94u 0.04s 13161e 879860kB
+after processing cont assigns: 0.94u 0.04s 13211e 879860kB
+before processing processes: 0.94u 0.04s 13211e 879860kB
+after processing processes: 0.94u 0.04s 13211e 879860kB
+after buildCfgFromIStructural: 0.94u 0.04s 13220e 879860kB
+before ns->mergeSimpleProcesses: 0.94u 0.04s 13220e 879860kB
+after ns->mergeSimpleProcesses: 0.94u 0.04s 13233e 879860kB
+before ns->splitPartialWrites: 0.94u 0.04s 13233e 879860kB
+after ns->splitPartialWrites: 0.94u 0.04s 13233e 879860kB
+before removeUnneededLatches: 0.94u 0.04s 13233e 879860kB
+after removeUnneededLatches: 0.94u 0.04s 13233e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.94u 0.04s 13233e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.94u 0.04s 13233e 879860kB
+after other NameScope processing: 0.94u 0.04s 13233e 879860kB
+before rebuildInstGraph: 0.95u 0.04s 13263e 879860kB
+  before addAllInScope: 0.95u 0.04s 13263e 879860kB
+  after addAllInScope: 0.95u 0.04s 13263e 879860kB
+after rebuildInstGraph: 0.95u 0.04s 13263e 879860kB
+before markTristateCones : 0.95u 0.04s 13263e 879860kB
+after markTristateCones : 0.95u 0.04s 13263e 879860kB
+after scheduling: 0.95u 0.05s 13409e 879860kB
+after model->finalize: 0.95u 0.05s 13562e 879860kB
+before attribute propagation: 0.95u 0.05s 13597e 879860kB
+after attribute propagation: 0.95u 0.05s 13597e 879860kB
+before constantPropagate: 0.95u 0.05s 13597e 879860kB
+after constantPropagate: 0.95u 0.05s 13597e 879860kB
+before removeUnusedSignals circuit: 0.95u 0.05s 13597e 879860kB
+after removeUnusedSignals circuit: 0.95u 0.05s 13597e 879860kB
+before optimize latch enable: 0.95u 0.05s 13597e 879860kB
+after optimize latch enable: 0.95u 0.05s 13597e 879860kB
+after circuit->load: 0.95u 0.05s 13597e 879860kB
+
+Processing alb_mss_mem_ibp_split_0000
+before buildCfgFromIStructural: 0.95u 0.05s 13141e 879860kB
+Before processing instances: 0.95u 0.05s 13216e 879860kB
+After processing instances: 0.95u 0.05s 13216e 879860kB
+before processing cont assigns: 0.95u 0.05s 13216e 879860kB
+after processing cont assigns: 0.95u 0.05s 13237e 879860kB
+before processing processes: 0.95u 0.05s 13237e 879860kB
+after processing processes: 0.95u 0.05s 13237e 879860kB
+after buildCfgFromIStructural: 0.95u 0.05s 13243e 879860kB
+before ns->mergeSimpleProcesses: 0.95u 0.05s 13243e 879860kB
+after ns->mergeSimpleProcesses: 0.95u 0.05s 13243e 879860kB
+before ns->splitPartialWrites: 0.95u 0.05s 13243e 879860kB
+after ns->splitPartialWrites: 0.95u 0.05s 13243e 879860kB
+before removeUnneededLatches: 0.95u 0.05s 13243e 879860kB
+after removeUnneededLatches: 0.95u 0.05s 13243e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.95u 0.05s 13243e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.95u 0.05s 13243e 879860kB
+after other NameScope processing: 0.95u 0.05s 13243e 879860kB
+before rebuildInstGraph: 0.95u 0.05s 13260e 879860kB
+  before addAllInScope: 0.95u 0.05s 13260e 879860kB
+  after addAllInScope: 0.95u 0.05s 13260e 879860kB
+after rebuildInstGraph: 0.95u 0.05s 13260e 879860kB
+before markTristateCones : 0.95u 0.05s 13260e 879860kB
+after markTristateCones : 0.95u 0.05s 13260e 879860kB
+after scheduling: 0.95u 0.05s 13365e 879860kB
+after model->finalize: 0.95u 0.05s 13461e 879860kB
+before attribute propagation: 0.95u 0.05s 13475e 879860kB
+after attribute propagation: 0.95u 0.05s 13475e 879860kB
+before constantPropagate: 0.96u 0.05s 13475e 879860kB
+after constantPropagate: 0.96u 0.05s 13475e 879860kB
+before removeUnusedSignals circuit: 0.96u 0.05s 13475e 879860kB
+after removeUnusedSignals circuit: 0.96u 0.05s 13475e 879860kB
+before optimize latch enable: 0.96u 0.05s 13475e 879860kB
+after optimize latch enable: 0.96u 0.05s 13475e 879860kB
+after circuit->load: 0.96u 0.05s 13475e 879860kB
+
+Processing apb_master_ap0
+before buildCfgFromIStructural: 0.96u 0.05s 13182e 879860kB
+Before processing instances: 0.96u 0.05s 13283e 879860kB
+After processing instances: 0.96u 0.05s 13283e 879860kB
+before processing cont assigns: 0.96u 0.05s 13283e 879860kB
+after processing cont assigns: 0.96u 0.05s 13364e 879860kB
+before processing processes: 0.96u 0.05s 13364e 879860kB
+after processing processes: 0.97u 0.05s 13997e 879860kB
+after buildCfgFromIStructural: 0.97u 0.05s 14002e 879860kB
+before ns->mergeSimpleProcesses: 0.97u 0.05s 14002e 879860kB
+after ns->mergeSimpleProcesses: 0.97u 0.05s 14002e 879860kB
+before ns->splitPartialWrites: 0.97u 0.05s 14002e 879860kB
+after ns->splitPartialWrites: 0.97u 0.05s 14002e 879860kB
+before removeUnneededLatches: 0.97u 0.05s 14002e 879860kB
+after removeUnneededLatches: 0.97u 0.05s 14002e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 0.97u 0.05s 14002e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 0.97u 0.05s 14002e 879860kB
+after other NameScope processing: 0.97u 0.05s 14002e 879860kB
+before rebuildInstGraph: 0.97u 0.05s 14013e 879860kB
+  before addAllInScope: 0.97u 0.05s 14013e 879860kB
+  after addAllInScope: 0.97u 0.05s 14013e 879860kB
+after rebuildInstGraph: 0.97u 0.05s 14013e 879860kB
+before markTristateCones : 0.97u 0.05s 14013e 879860kB
+after markTristateCones : 0.97u 0.05s 14013e 879860kB
+after scheduling: 0.98u 0.05s 14264e 879860kB
+after model->finalize: 0.98u 0.05s 14511e 879860kB
+before attribute propagation: 0.98u 0.05s 14836e 879860kB
+after attribute propagation: 0.98u 0.05s 14836e 879860kB
+before constantPropagate: 0.98u 0.05s 14836e 879860kB
+after constantPropagate: 0.99u 0.05s 14743e 879860kB
+before removeUnusedSignals circuit: 0.99u 0.05s 14743e 879860kB
+after removeUnusedSignals circuit: 0.99u 0.05s 14743e 879860kB
+before optimize latch enable: 0.99u 0.05s 14743e 879860kB
+after optimize latch enable: 0.99u 0.05s 14743e 879860kB
+after circuit->load: 0.99u 0.05s 14743e 879860kB
+
+Processing rl_per_ibp2ahb
+before buildCfgFromIStructural: 0.99u 0.05s 13856e 879860kB
+Before processing instances: 0.99u 0.05s 14001e 879860kB
+After processing instances: 0.99u 0.05s 14055e 879860kB
+before processing cont assigns: 0.99u 0.05s 14055e 879860kB
+after processing cont assigns: 0.99u 0.05s 14108e 879860kB
+before processing processes: 0.99u 0.05s 14108e 879860kB
+after processing processes: 1.01u 0.05s 15012e 879860kB
+after buildCfgFromIStructural: 1.01u 0.05s 15021e 879860kB
+before ns->mergeSimpleProcesses: 1.01u 0.05s 15021e 879860kB
+after ns->mergeSimpleProcesses: 1.01u 0.05s 15021e 879860kB
+before ns->splitPartialWrites: 1.01u 0.05s 15021e 879860kB
+after ns->splitPartialWrites: 1.01u 0.06s 15038e 879860kB
+before removeUnneededLatches: 1.01u 0.06s 15038e 879860kB
+after removeUnneededLatches: 1.01u 0.06s 15038e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.01u 0.06s 15038e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.02u 0.06s 15038e 879860kB
+after other NameScope processing: 1.02u 0.06s 15038e 879860kB
+before rebuildInstGraph: 1.02u 0.06s 15096e 879860kB
+  before addAllInScope: 1.02u 0.06s 15096e 879860kB
+  after addAllInScope: 1.02u 0.06s 15096e 879860kB
+after rebuildInstGraph: 1.02u 0.06s 15096e 879860kB
+before markTristateCones : 1.02u 0.06s 15096e 879860kB
+after markTristateCones : 1.02u 0.06s 15096e 879860kB
+after scheduling: 1.03u 0.06s 15578e 879860kB
+after model->finalize: 1.04u 0.06s 16101e 879860kB
+before attribute propagation: 1.05u 0.06s 16667e 879860kB
+after attribute propagation: 1.05u 0.06s 16667e 879860kB
+before constantPropagate: 1.05u 0.06s 16667e 879860kB
+after constantPropagate: 1.05u 0.06s 16577e 879860kB
+before removeUnusedSignals circuit: 1.05u 0.06s 16577e 879860kB
+after removeUnusedSignals circuit: 1.05u 0.06s 16577e 879860kB
+before optimize latch enable: 1.05u 0.06s 16577e 879860kB
+after optimize latch enable: 1.05u 0.06s 16577e 879860kB
+after circuit->load: 1.05u 0.06s 16577e 879860kB
+
+Processing rl_ahb2ibp_0001
+before buildCfgFromIStructural: 1.06u 0.06s 15003e 879860kB
+Before processing instances: 1.06u 0.06s 15151e 879860kB
+After processing instances: 1.06u 0.06s 15220e 879860kB
+before processing cont assigns: 1.06u 0.06s 15220e 879860kB
+after processing cont assigns: 1.06u 0.06s 15287e 879860kB
+before processing processes: 1.06u 0.06s 15287e 879860kB
+after processing processes: 1.08u 0.06s 15917e 879860kB
+after buildCfgFromIStructural: 1.08u 0.06s 15923e 879860kB
+before ns->mergeSimpleProcesses: 1.08u 0.06s 15923e 879860kB
+after ns->mergeSimpleProcesses: 1.08u 0.06s 15923e 879860kB
+before ns->splitPartialWrites: 1.08u 0.06s 15923e 879860kB
+after ns->splitPartialWrites: 1.08u 0.06s 15942e 879860kB
+before removeUnneededLatches: 1.08u 0.06s 15942e 879860kB
+after removeUnneededLatches: 1.08u 0.06s 15942e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.08u 0.06s 15942e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.08u 0.06s 15942e 879860kB
+after other NameScope processing: 1.08u 0.06s 15942e 879860kB
+before rebuildInstGraph: 1.08u 0.06s 15998e 879860kB
+  before addAllInScope: 1.08u 0.06s 15998e 879860kB
+  after addAllInScope: 1.08u 0.06s 15998e 879860kB
+after rebuildInstGraph: 1.08u 0.06s 15998e 879860kB
+before markTristateCones : 1.08u 0.06s 15998e 879860kB
+after markTristateCones : 1.08u 0.06s 15998e 879860kB
+after scheduling: 1.09u 0.06s 16424e 879860kB
+after model->finalize: 1.1u 0.06s 16735e 879860kB
+before attribute propagation: 1.1u 0.06s 17069e 879860kB
+after attribute propagation: 1.1u 0.06s 17069e 879860kB
+before constantPropagate: 1.1u 0.06s 17069e 879860kB
+after constantPropagate: 1.1u 0.06s 16969e 879860kB
+before removeUnusedSignals circuit: 1.1u 0.06s 16969e 879860kB
+after removeUnusedSignals circuit: 1.1u 0.06s 16969e 879860kB
+before optimize latch enable: 1.1u 0.06s 16969e 879860kB
+after optimize latch enable: 1.1u 0.06s 16969e 879860kB
+after circuit->load: 1.1u 0.06s 16969e 879860kB
+
+Processing rl_complete
+before buildCfgFromIStructural: 1.1u 0.06s 15801e 879860kB
+Before processing instances: 1.1u 0.06s 15865e 879860kB
+After processing instances: 1.1u 0.06s 15865e 879860kB
+before processing cont assigns: 1.1u 0.06s 15865e 879860kB
+after processing cont assigns: 1.1u 0.06s 15878e 879860kB
+before processing processes: 1.1u 0.06s 15878e 879860kB
+after processing processes: 1.11u 0.06s 16164e 879860kB
+after buildCfgFromIStructural: 1.11u 0.06s 16170e 879860kB
+before ns->mergeSimpleProcesses: 1.11u 0.06s 16170e 879860kB
+after ns->mergeSimpleProcesses: 1.11u 0.06s 16170e 879860kB
+before ns->splitPartialWrites: 1.11u 0.06s 16170e 879860kB
+after ns->splitPartialWrites: 1.11u 0.06s 16170e 879860kB
+before removeUnneededLatches: 1.11u 0.06s 16170e 879860kB
+after removeUnneededLatches: 1.11u 0.06s 16170e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.11u 0.06s 16170e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.11u 0.06s 16170e 879860kB
+after other NameScope processing: 1.11u 0.06s 16170e 879860kB
+before rebuildInstGraph: 1.11u 0.06s 16176e 879860kB
+  before addAllInScope: 1.11u 0.06s 16176e 879860kB
+  after addAllInScope: 1.11u 0.06s 16176e 879860kB
+after rebuildInstGraph: 1.11u 0.06s 16176e 879860kB
+before markTristateCones : 1.12u 0.06s 16176e 879860kB
+after markTristateCones : 1.12u 0.06s 16176e 879860kB
+after scheduling: 1.12u 0.06s 16420e 879860kB
+after model->finalize: 1.12u 0.06s 16626e 879860kB
+before attribute propagation: 1.12u 0.06s 16721e 879860kB
+after attribute propagation: 1.12u 0.06s 16721e 879860kB
+before constantPropagate: 1.12u 0.06s 16721e 879860kB
+after constantPropagate: 1.13u 0.06s 16709e 879860kB
+before removeUnusedSignals circuit: 1.13u 0.06s 16709e 879860kB
+after removeUnusedSignals circuit: 1.13u 0.06s 16709e 879860kB
+before optimize latch enable: 1.13u 0.06s 16709e 879860kB
+after optimize latch enable: 1.13u 0.06s 16709e 879860kB
+after circuit->load: 1.13u 0.06s 16709e 879860kB
+
+Processing arcv_watchdog_ctrl
+before buildCfgFromIStructural: 1.13u 0.06s 16122e 879860kB
+Before processing instances: 1.13u 0.06s 16196e 879860kB
+After processing instances: 1.13u 0.06s 16212e 879860kB
+before processing cont assigns: 1.13u 0.06s 16212e 879860kB
+after processing cont assigns: 1.13u 0.06s 16307e 879860kB
+before processing processes: 1.13u 0.06s 16307e 879860kB
+after processing processes: 1.14u 0.06s 16786e 879860kB
+after buildCfgFromIStructural: 1.14u 0.06s 16793e 879860kB
+before ns->mergeSimpleProcesses: 1.14u 0.06s 16793e 879860kB
+after ns->mergeSimpleProcesses: 1.14u 0.06s 16801e 879860kB
+before ns->splitPartialWrites: 1.14u 0.06s 16801e 879860kB
+after ns->splitPartialWrites: 1.14u 0.06s 16801e 879860kB
+before removeUnneededLatches: 1.14u 0.06s 16801e 879860kB
+after removeUnneededLatches: 1.14u 0.06s 16801e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.14u 0.06s 16801e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.14u 0.06s 16801e 879860kB
+after other NameScope processing: 1.14u 0.06s 16801e 879860kB
+before rebuildInstGraph: 1.15u 0.06s 16837e 879860kB
+  before addAllInScope: 1.15u 0.06s 16837e 879860kB
+  after addAllInScope: 1.15u 0.06s 16837e 879860kB
+after rebuildInstGraph: 1.15u 0.06s 16837e 879860kB
+before markTristateCones : 1.15u 0.06s 16837e 879860kB
+after markTristateCones : 1.15u 0.06s 16837e 879860kB
+after scheduling: 1.15u 0.06s 17090e 879860kB
+after model->finalize: 1.16u 0.06s 17306e 879860kB
+before attribute propagation: 1.16u 0.06s 17483e 879860kB
+after attribute propagation: 1.16u 0.06s 17483e 879860kB
+before constantPropagate: 1.16u 0.06s 17483e 879860kB
+after constantPropagate: 1.16u 0.06s 17453e 879860kB
+before removeUnusedSignals circuit: 1.16u 0.06s 17453e 879860kB
+after removeUnusedSignals circuit: 1.16u 0.06s 17453e 879860kB
+before optimize latch enable: 1.16u 0.06s 17453e 879860kB
+after optimize latch enable: 1.16u 0.06s 17453e 879860kB
+after circuit->load: 1.16u 0.06s 17453e 879860kB
+
+Processing rl_uop_seq
+before buildCfgFromIStructural: 1.16u 0.06s 16783e 879860kB
+Before processing instances: 1.16u 0.06s 16843e 879860kB
+After processing instances: 1.16u 0.06s 16843e 879860kB
+before processing cont assigns: 1.16u 0.06s 16843e 879860kB
+after processing cont assigns: 1.17u 0.06s 16951e 879860kB
+before processing processes: 1.17u 0.06s 16951e 879860kB
+after processing processes: 1.18u 0.06s 17426e 879860kB
+after buildCfgFromIStructural: 1.18u 0.06s 17431e 879860kB
+before ns->mergeSimpleProcesses: 1.18u 0.06s 17431e 879860kB
+after ns->mergeSimpleProcesses: 1.18u 0.06s 17431e 879860kB
+before ns->splitPartialWrites: 1.18u 0.06s 17431e 879860kB
+after ns->splitPartialWrites: 1.18u 0.06s 17431e 879860kB
+before removeUnneededLatches: 1.18u 0.06s 17431e 879860kB
+after removeUnneededLatches: 1.18u 0.06s 17431e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.18u 0.06s 17431e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.18u 0.06s 17431e 879860kB
+after other NameScope processing: 1.18u 0.06s 17431e 879860kB
+before rebuildInstGraph: 1.18u 0.06s 17447e 879860kB
+  before addAllInScope: 1.18u 0.06s 17447e 879860kB
+  after addAllInScope: 1.18u 0.06s 17447e 879860kB
+after rebuildInstGraph: 1.18u 0.06s 17447e 879860kB
+before markTristateCones : 1.18u 0.06s 17448e 879860kB
+after markTristateCones : 1.18u 0.06s 17448e 879860kB
+after scheduling: 1.19u 0.06s 17599e 879860kB
+after model->finalize: 1.19u 0.06s 17780e 879860kB
+before attribute propagation: 1.19u 0.06s 17968e 879860kB
+after attribute propagation: 1.19u 0.06s 17968e 879860kB
+before constantPropagate: 1.19u 0.06s 17968e 879860kB
+after constantPropagate: 1.2u 0.06s 17928e 879860kB
+before removeUnusedSignals circuit: 1.2u 0.06s 17928e 879860kB
+after removeUnusedSignals circuit: 1.2u 0.06s 17928e 879860kB
+before optimize latch enable: 1.2u 0.06s 17928e 879860kB
+after optimize latch enable: 1.2u 0.06s 17928e 879860kB
+after circuit->load: 1.2u 0.06s 17928e 879860kB
+
+Processing rl_sfty_ibp_tgt_e2e_wrap_0000
+before buildCfgFromIStructural: 1.2u 0.06s 17352e 879860kB
+Before processing instances: 1.2u 0.06s 17473e 879860kB
+After processing instances: 1.2u 0.06s 17552e 879860kB
+before processing cont assigns: 1.2u 0.06s 17552e 879860kB
+after processing cont assigns: 1.2u 0.06s 17632e 879860kB
+before processing processes: 1.2u 0.06s 17632e 879860kB
+after processing processes: 1.2u 0.06s 17675e 879860kB
+after buildCfgFromIStructural: 1.2u 0.06s 17675e 879860kB
+before ns->mergeSimpleProcesses: 1.2u 0.06s 17675e 879860kB
+after ns->mergeSimpleProcesses: 1.2u 0.06s 17675e 879860kB
+before ns->splitPartialWrites: 1.2u 0.06s 17675e 879860kB
+after ns->splitPartialWrites: 1.2u 0.06s 17682e 879860kB
+before removeUnneededLatches: 1.2u 0.06s 17682e 879860kB
+after removeUnneededLatches: 1.2u 0.06s 17682e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.2u 0.06s 17682e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.2u 0.06s 17682e 879860kB
+after other NameScope processing: 1.2u 0.06s 17682e 879860kB
+before rebuildInstGraph: 1.21u 0.06s 17730e 879860kB
+  before addAllInScope: 1.21u 0.06s 17730e 879860kB
+  after addAllInScope: 1.21u 0.06s 17730e 879860kB
+after rebuildInstGraph: 1.21u 0.06s 17730e 879860kB
+before markTristateCones : 1.21u 0.06s 17739e 879860kB
+after markTristateCones : 1.21u 0.06s 17739e 879860kB
+after scheduling: 1.21u 0.06s 18068e 879860kB
+after model->finalize: 1.21u 0.06s 18238e 879860kB
+before attribute propagation: 1.21u 0.06s 18290e 879860kB
+after attribute propagation: 1.21u 0.06s 18290e 879860kB
+before constantPropagate: 1.21u 0.06s 18290e 879860kB
+after constantPropagate: 1.21u 0.06s 18286e 879860kB
+before removeUnusedSignals circuit: 1.21u 0.06s 18286e 879860kB
+after removeUnusedSignals circuit: 1.21u 0.06s 18286e 879860kB
+before optimize latch enable: 1.21u 0.06s 18286e 879860kB
+after optimize latch enable: 1.21u 0.06s 18286e 879860kB
+after circuit->load: 1.21u 0.06s 18286e 879860kB
+
+Processing alb_mss_fab_ibp2pack_0001
+before buildCfgFromIStructural: 1.21u 0.06s 17677e 879860kB
+Before processing instances: 1.22u 0.06s 17764e 879860kB
+After processing instances: 1.22u 0.06s 17764e 879860kB
+before processing cont assigns: 1.22u 0.06s 17764e 879860kB
+after processing cont assigns: 1.22u 0.06s 17816e 879860kB
+before processing processes: 1.22u 0.06s 17816e 879860kB
+after processing processes: 1.22u 0.06s 17816e 879860kB
+after buildCfgFromIStructural: 1.22u 0.06s 17824e 879860kB
+before ns->mergeSimpleProcesses: 1.22u 0.06s 17824e 879860kB
+after ns->mergeSimpleProcesses: 1.22u 0.06s 17824e 879860kB
+before ns->splitPartialWrites: 1.22u 0.06s 17824e 879860kB
+after ns->splitPartialWrites: 1.22u 0.06s 17824e 879860kB
+before removeUnneededLatches: 1.22u 0.06s 17824e 879860kB
+after removeUnneededLatches: 1.22u 0.06s 17824e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.22u 0.06s 17824e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.22u 0.06s 17824e 879860kB
+after other NameScope processing: 1.22u 0.06s 17824e 879860kB
+before rebuildInstGraph: 1.22u 0.06s 17858e 879860kB
+  before addAllInScope: 1.22u 0.06s 17858e 879860kB
+  after addAllInScope: 1.22u 0.06s 17858e 879860kB
+after rebuildInstGraph: 1.22u 0.06s 17858e 879860kB
+before markTristateCones : 1.22u 0.06s 17858e 879860kB
+after markTristateCones : 1.22u 0.06s 17858e 879860kB
+after scheduling: 1.22u 0.06s 18023e 879860kB
+after model->finalize: 1.22u 0.06s 18157e 879860kB
+before attribute propagation: 1.22u 0.06s 18167e 879860kB
+after attribute propagation: 1.22u 0.06s 18167e 879860kB
+before constantPropagate: 1.22u 0.06s 18167e 879860kB
+after constantPropagate: 1.22u 0.06s 18167e 879860kB
+before removeUnusedSignals circuit: 1.22u 0.06s 18167e 879860kB
+after removeUnusedSignals circuit: 1.22u 0.06s 18167e 879860kB
+before optimize latch enable: 1.22u 0.06s 18167e 879860kB
+after optimize latch enable: 1.22u 0.06s 18167e 879860kB
+after circuit->load: 1.22u 0.06s 18167e 879860kB
+
+Processing mss_bus_switch_ibpx2ibpy_0000_0001
+before buildCfgFromIStructural: 1.22u 0.06s 17701e 879860kB
+Before processing instances: 1.23u 0.06s 17813e 879860kB
+After processing instances: 1.23u 0.06s 17813e 879860kB
+before processing cont assigns: 1.23u 0.06s 17813e 879860kB
+after processing cont assigns: 1.23u 0.06s 17827e 879860kB
+before processing processes: 1.23u 0.06s 17827e 879860kB
+after processing processes: 1.23u 0.06s 17827e 879860kB
+after buildCfgFromIStructural: 1.23u 0.06s 17832e 879860kB
+before ns->mergeSimpleProcesses: 1.23u 0.06s 17832e 879860kB
+after ns->mergeSimpleProcesses: 1.23u 0.06s 17832e 879860kB
+before ns->splitPartialWrites: 1.23u 0.06s 17832e 879860kB
+after ns->splitPartialWrites: 1.23u 0.06s 17832e 879860kB
+before removeUnneededLatches: 1.23u 0.06s 17832e 879860kB
+after removeUnneededLatches: 1.23u 0.06s 17832e 879860kB
+before printMsgForBothBAandNBAAccrossProcess: 1.23u 0.06s 17832e 879860kB
+after printMsgForBothBAandNBAAccrossProcess: 1.23u 0.06s 17832e 879860kB
+after other NameScope processing: 1.23u 0.06s 17832e 879860kB
+before rebuildInstGraph: 1.23u 0.06s 17846e 879860kB
+  before addAllInScope: 1.23u 0.06s 17846e 879860kB
+  after addAllInScope: 1.23u 0.06s 17846e 879860kB
+after rebuildInstGraph: 1.23u 0.06s 17846e 879860kB
+before markTristateCones : 1.23u 0.06s 17846e 879860kB
+after markTristateCones : 1.23u 0.06s 17846e 879860kB
+after scheduling: 1.23u 0.06s 17959e 879860kB
+after model->finalize: 1.23u 0.06s 18035e 879860kB
+before attribute propagation: 1.23u 0.06s 18048e 879860kB
+after attribute propagation: 1.23u 0.06s 18048e 879860kB
+before constantPropagate: 1.23u 0.06s 18048e 879860kB
+after constantPropagate: 1.23u 0.06s 18048e 879860kB
+before removeUnusedSignals circuit: 1.23u 0.06s 18048e 879860kB
+after removeUnusedSignals circuit: 1.23u 0.06s 18048e 879860kB
+before optimize latch enable: 1.23u 0.06s 18048e 879860kB
+after optimize latch enable: 1.23u 0.06s 18048e 879860kB
+after circuit->load: 1.23u 0.06s 18048e 879860kB
+
+Processing fpga_sram_0002_0000
+before buildCfgFromIStructural: 1.23u 0.06s 17723e 879860kB
+Before processing instances: 1.23u 0.06s 17751e 879860kB
+After processing instances: 1.23u 0.06s 17751e 879860kB
+before processing cont assigns: 1.23u 0.06s 17751e 879860kB
+after processing cont assigns: 1.23u 0.06s 17754e 879860kB
+before processing processes: 1.23u 0.06s 17754e 879860kB
+after processing processes: 1.25u 0.06s 18164e 880520kB
+after buildCfgFromIStructural: 1.25u 0.06s 18169e 880520kB
+before ns->mergeSimpleProcesses: 1.25u 0.06s 18169e 880520kB
+after ns->mergeSimpleProcesses: 1.25u 0.06s 18169e 880520kB
+before ns->splitPartialWrites: 1.25u 0.06s 18169e 880520kB
+after ns->splitPartialWrites: 1.25u 0.06s 18169e 880520kB
+before removeUnneededLatches: 1.25u 0.06s 18169e 880520kB
+after removeUnneededLatches: 1.25u 0.06s 18169e 880520kB
+before printMsgForBothBAandNBAAccrossProcess: 1.25u 0.06s 18169e 880520kB
+after printMsgForBothBAandNBAAccrossProcess: 1.25u 0.06s 18169e 880520kB
+after other NameScope processing: 1.26u 0.06s 18290e 880652kB
+before rebuildInstGraph: 1.26u 0.06s 18292e 880652kB
+  before addAllInScope: 1.26u 0.06s 18292e 880652kB
+  after addAllInScope: 1.26u 0.07s 18292e 880784kB
+after rebuildInstGraph: 1.26u 0.07s 18292e 880784kB
+before markTristateCones : 1.26u 0.07s 18292e 880784kB
+after markTristateCones : 1.26u 0.07s 18292e 880784kB
+after scheduling: 1.26u 0.07s 18574e 880784kB
+after model->finalize: 1.28u 0.07s 18590e 880784kB
+before attribute propagation: 1.28u 0.07s 18876e 880784kB
+after attribute propagation: 1.28u 0.07s 18876e 880784kB
+before constantPropagate: 1.28u 0.07s 18876e 880784kB
+after constantPropagate: 1.28u 0.07s 18876e 880784kB
+before removeUnusedSignals circuit: 1.28u 0.07s 18876e 880784kB
+after removeUnusedSignals circuit: 1.28u 0.07s 18876e 880784kB
+before optimize latch enable: 1.28u 0.07s 18876e 880784kB
+after optimize latch enable: 1.28u 0.07s 18876e 880784kB
+after circuit->load: 1.28u 0.07s 18876e 880784kB
+
+Processing mss_bus_switch_fifo_0000_0007
+before buildCfgFromIStructural: 1.28u 0.07s 18360e 880784kB
+Before processing instances: 1.28u 0.07s 18374e 880784kB
+After processing instances: 1.28u 0.07s 18374e 880784kB
+before processing cont assigns: 1.28u 0.07s 18374e 880784kB
+after processing cont assigns: 1.28u 0.07s 18381e 880784kB
+before processing processes: 1.28u 0.07s 18381e 880784kB
+after processing processes: 1.28u 0.07s 18381e 880784kB
+after buildCfgFromIStructural: 1.28u 0.07s 18383e 880784kB
+before ns->mergeSimpleProcesses: 1.28u 0.07s 18383e 880784kB
+after ns->mergeSimpleProcesses: 1.28u 0.07s 18383e 880784kB
+before ns->splitPartialWrites: 1.28u 0.07s 18383e 880784kB
+after ns->splitPartialWrites: 1.28u 0.07s 18383e 880784kB
+before removeUnneededLatches: 1.28u 0.07s 18383e 880784kB
+after removeUnneededLatches: 1.28u 0.07s 18383e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.28u 0.07s 18383e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.28u 0.07s 18383e 880784kB
+after other NameScope processing: 1.28u 0.07s 18383e 880784kB
+before rebuildInstGraph: 1.28u 0.07s 18386e 880784kB
+  before addAllInScope: 1.28u 0.07s 18386e 880784kB
+  after addAllInScope: 1.28u 0.07s 18386e 880784kB
+after rebuildInstGraph: 1.28u 0.07s 18386e 880784kB
+before markTristateCones : 1.28u 0.07s 18386e 880784kB
+after markTristateCones : 1.28u 0.07s 18386e 880784kB
+after scheduling: 1.28u 0.07s 18434e 880784kB
+after model->finalize: 1.28u 0.07s 18455e 880784kB
+before attribute propagation: 1.28u 0.07s 18458e 880784kB
+after attribute propagation: 1.28u 0.07s 18458e 880784kB
+before constantPropagate: 1.28u 0.07s 18458e 880784kB
+after constantPropagate: 1.28u 0.07s 18456e 880784kB
+before removeUnusedSignals circuit: 1.28u 0.07s 18456e 880784kB
+after removeUnusedSignals circuit: 1.28u 0.07s 18456e 880784kB
+before optimize latch enable: 1.28u 0.07s 18456e 880784kB
+after optimize latch enable: 1.28u 0.07s 18456e 880784kB
+after circuit->load: 1.28u 0.07s 18456e 880784kB
+
+Processing sfty_ibp_ini_e2e_wrap_0000
+before buildCfgFromIStructural: 1.28u 0.07s 18363e 880784kB
+Before processing instances: 1.28u 0.07s 18459e 880784kB
+After processing instances: 1.29u 0.07s 18517e 880784kB
+before processing cont assigns: 1.29u 0.07s 18517e 880784kB
+after processing cont assigns: 1.29u 0.07s 18571e 880784kB
+before processing processes: 1.29u 0.07s 18571e 880784kB
+after processing processes: 1.29u 0.07s 18571e 880784kB
+after buildCfgFromIStructural: 1.29u 0.07s 18571e 880784kB
+before ns->mergeSimpleProcesses: 1.29u 0.07s 18571e 880784kB
+after ns->mergeSimpleProcesses: 1.29u 0.07s 18571e 880784kB
+before ns->splitPartialWrites: 1.29u 0.07s 18571e 880784kB
+after ns->splitPartialWrites: 1.29u 0.07s 18588e 880784kB
+before removeUnneededLatches: 1.29u 0.07s 18588e 880784kB
+after removeUnneededLatches: 1.29u 0.07s 18588e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.29u 0.07s 18588e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.29u 0.07s 18588e 880784kB
+after other NameScope processing: 1.29u 0.07s 18588e 880784kB
+before rebuildInstGraph: 1.29u 0.07s 18643e 880784kB
+  before addAllInScope: 1.29u 0.07s 18643e 880784kB
+  after addAllInScope: 1.29u 0.07s 18643e 880784kB
+after rebuildInstGraph: 1.29u 0.07s 18643e 880784kB
+before markTristateCones : 1.29u 0.07s 18651e 880784kB
+after markTristateCones : 1.29u 0.07s 18651e 880784kB
+after scheduling: 1.29u 0.07s 18918e 880784kB
+after model->finalize: 1.29u 0.07s 19016e 880784kB
+before attribute propagation: 1.3u 0.07s 19001e 880784kB
+after attribute propagation: 1.3u 0.07s 19001e 880784kB
+before constantPropagate: 1.3u 0.07s 19001e 880784kB
+after constantPropagate: 1.3u 0.07s 19000e 880784kB
+before removeUnusedSignals circuit: 1.3u 0.07s 19000e 880784kB
+after removeUnusedSignals circuit: 1.3u 0.07s 19000e 880784kB
+before optimize latch enable: 1.3u 0.07s 19000e 880784kB
+after optimize latch enable: 1.3u 0.07s 19000e 880784kB
+after circuit->load: 1.3u 0.07s 19000e 880784kB
+
+Processing ls_compare_unit_000C
+before buildCfgFromIStructural: 1.3u 0.07s 18489e 880784kB
+Before processing instances: 1.3u 0.07s 18515e 880784kB
+After processing instances: 1.3u 0.07s 18519e 880784kB
+before processing cont assigns: 1.3u 0.07s 18519e 880784kB
+after processing cont assigns: 1.3u 0.07s 18539e 880784kB
+before processing processes: 1.3u 0.07s 18539e 880784kB
+after processing processes: 1.3u 0.07s 18539e 880784kB
+after buildCfgFromIStructural: 1.3u 0.07s 18542e 880784kB
+before ns->mergeSimpleProcesses: 1.3u 0.07s 18542e 880784kB
+after ns->mergeSimpleProcesses: 1.3u 0.07s 18542e 880784kB
+before ns->splitPartialWrites: 1.3u 0.07s 18542e 880784kB
+after ns->splitPartialWrites: 1.3u 0.07s 18542e 880784kB
+before removeUnneededLatches: 1.3u 0.07s 18542e 880784kB
+after removeUnneededLatches: 1.3u 0.07s 18542e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.3u 0.07s 18542e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.3u 0.07s 18542e 880784kB
+after other NameScope processing: 1.3u 0.07s 18542e 880784kB
+before rebuildInstGraph: 1.3u 0.07s 18553e 880784kB
+  before addAllInScope: 1.3u 0.07s 18553e 880784kB
+  after addAllInScope: 1.3u 0.07s 18553e 880784kB
+after rebuildInstGraph: 1.3u 0.07s 18553e 880784kB
+before markTristateCones : 1.3u 0.07s 18553e 880784kB
+after markTristateCones : 1.3u 0.07s 18553e 880784kB
+after scheduling: 1.3u 0.07s 18594e 880784kB
+after model->finalize: 1.3u 0.07s 18627e 880784kB
+before attribute propagation: 1.3u 0.07s 18636e 880784kB
+after attribute propagation: 1.3u 0.07s 18636e 880784kB
+before constantPropagate: 1.3u 0.07s 18636e 880784kB
+after constantPropagate: 1.3u 0.07s 18636e 880784kB
+before removeUnusedSignals circuit: 1.3u 0.07s 18636e 880784kB
+after removeUnusedSignals circuit: 1.3u 0.07s 18636e 880784kB
+before optimize latch enable: 1.3u 0.07s 18636e 880784kB
+after optimize latch enable: 1.3u 0.07s 18636e 880784kB
+after circuit->load: 1.3u 0.07s 18636e 880784kB
+
+Processing alb_mss_mem_fifo_0000_0001
+before buildCfgFromIStructural: 1.3u 0.07s 18534e 880784kB
+Before processing instances: 1.3u 0.07s 18560e 880784kB
+After processing instances: 1.3u 0.07s 18560e 880784kB
+before processing cont assigns: 1.3u 0.07s 18560e 880784kB
+after processing cont assigns: 1.3u 0.07s 18607e 880784kB
+before processing processes: 1.3u 0.07s 18607e 880784kB
+after processing processes: 1.31u 0.07s 18673e 880784kB
+after buildCfgFromIStructural: 1.31u 0.07s 18678e 880784kB
+before ns->mergeSimpleProcesses: 1.31u 0.07s 18678e 880784kB
+after ns->mergeSimpleProcesses: 1.31u 0.07s 18678e 880784kB
+before ns->splitPartialWrites: 1.31u 0.07s 18678e 880784kB
+after ns->splitPartialWrites: 1.31u 0.07s 18678e 880784kB
+before removeUnneededLatches: 1.31u 0.07s 18678e 880784kB
+after removeUnneededLatches: 1.31u 0.07s 18678e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.31u 0.07s 18678e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.31u 0.07s 18678e 880784kB
+after other NameScope processing: 1.31u 0.07s 18678e 880784kB
+before rebuildInstGraph: 1.31u 0.07s 18702e 880784kB
+  before addAllInScope: 1.31u 0.07s 18702e 880784kB
+  after addAllInScope: 1.31u 0.07s 18702e 880784kB
+after rebuildInstGraph: 1.31u 0.07s 18702e 880784kB
+before markTristateCones : 1.31u 0.07s 18702e 880784kB
+after markTristateCones : 1.31u 0.07s 18702e 880784kB
+after scheduling: 1.31u 0.07s 18788e 880784kB
+after model->finalize: 1.31u 0.07s 18824e 880784kB
+before attribute propagation: 1.31u 0.07s 18851e 880784kB
+after attribute propagation: 1.31u 0.07s 18851e 880784kB
+before constantPropagate: 1.31u 0.07s 18851e 880784kB
+after constantPropagate: 1.32u 0.07s 18845e 880784kB
+before removeUnusedSignals circuit: 1.32u 0.07s 18845e 880784kB
+after removeUnusedSignals circuit: 1.32u 0.07s 18845e 880784kB
+before optimize latch enable: 1.32u 0.07s 18845e 880784kB
+after optimize latch enable: 1.32u 0.07s 18845e 880784kB
+after circuit->load: 1.32u 0.07s 18845e 880784kB
+
+Processing ls_compare_unit_000B
+before buildCfgFromIStructural: 1.32u 0.07s 18627e 880784kB
+Before processing instances: 1.32u 0.07s 18645e 880784kB
+After processing instances: 1.32u 0.07s 18649e 880784kB
+before processing cont assigns: 1.32u 0.07s 18649e 880784kB
+after processing cont assigns: 1.32u 0.07s 18670e 880784kB
+before processing processes: 1.32u 0.07s 18670e 880784kB
+after processing processes: 1.32u 0.07s 18670e 880784kB
+after buildCfgFromIStructural: 1.32u 0.07s 18673e 880784kB
+before ns->mergeSimpleProcesses: 1.32u 0.07s 18673e 880784kB
+after ns->mergeSimpleProcesses: 1.32u 0.07s 18673e 880784kB
+before ns->splitPartialWrites: 1.32u 0.07s 18673e 880784kB
+after ns->splitPartialWrites: 1.32u 0.07s 18673e 880784kB
+before removeUnneededLatches: 1.32u 0.07s 18673e 880784kB
+after removeUnneededLatches: 1.32u 0.07s 18673e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.32u 0.07s 18673e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.32u 0.07s 18673e 880784kB
+after other NameScope processing: 1.32u 0.07s 18673e 880784kB
+before rebuildInstGraph: 1.32u 0.07s 18684e 880784kB
+  before addAllInScope: 1.32u 0.07s 18684e 880784kB
+  after addAllInScope: 1.32u 0.07s 18684e 880784kB
+after rebuildInstGraph: 1.32u 0.07s 18684e 880784kB
+before markTristateCones : 1.32u 0.07s 18684e 880784kB
+after markTristateCones : 1.32u 0.07s 18684e 880784kB
+after scheduling: 1.32u 0.07s 18725e 880784kB
+after model->finalize: 1.32u 0.07s 18736e 880784kB
+before attribute propagation: 1.32u 0.07s 18736e 880784kB
+after attribute propagation: 1.32u 0.07s 18736e 880784kB
+before constantPropagate: 1.32u 0.07s 18736e 880784kB
+after constantPropagate: 1.32u 0.07s 18736e 880784kB
+before removeUnusedSignals circuit: 1.32u 0.07s 18736e 880784kB
+after removeUnusedSignals circuit: 1.32u 0.07s 18736e 880784kB
+before optimize latch enable: 1.32u 0.07s 18736e 880784kB
+after optimize latch enable: 1.32u 0.07s 18736e 880784kB
+after circuit->load: 1.32u 0.07s 18736e 880784kB
+
+Processing alb_mss_fab_bypbuf_0000_0000
+before buildCfgFromIStructural: 1.32u 0.07s 18634e 880784kB
+Before processing instances: 1.32u 0.07s 18651e 880784kB
+After processing instances: 1.32u 0.07s 18665e 880784kB
+before processing cont assigns: 1.32u 0.07s 18665e 880784kB
+after processing cont assigns: 1.32u 0.07s 18680e 880784kB
+before processing processes: 1.32u 0.07s 18680e 880784kB
+after processing processes: 1.32u 0.07s 18680e 880784kB
+after buildCfgFromIStructural: 1.32u 0.07s 18681e 880784kB
+before ns->mergeSimpleProcesses: 1.32u 0.07s 18681e 880784kB
+after ns->mergeSimpleProcesses: 1.32u 0.07s 18681e 880784kB
+before ns->splitPartialWrites: 1.32u 0.07s 18681e 880784kB
+after ns->splitPartialWrites: 1.32u 0.07s 18681e 880784kB
+before removeUnneededLatches: 1.32u 0.07s 18681e 880784kB
+after removeUnneededLatches: 1.32u 0.07s 18681e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.32u 0.07s 18681e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.32u 0.07s 18681e 880784kB
+after other NameScope processing: 1.32u 0.07s 18681e 880784kB
+before rebuildInstGraph: 1.32u 0.07s 18688e 880784kB
+  before addAllInScope: 1.32u 0.07s 18688e 880784kB
+  after addAllInScope: 1.32u 0.07s 18688e 880784kB
+after rebuildInstGraph: 1.32u 0.07s 18688e 880784kB
+before markTristateCones : 1.32u 0.07s 18689e 880784kB
+after markTristateCones : 1.32u 0.07s 18689e 880784kB
+after scheduling: 1.32u 0.07s 18746e 880784kB
+after model->finalize: 1.32u 0.07s 18775e 880784kB
+before attribute propagation: 1.32u 0.07s 18776e 880784kB
+after attribute propagation: 1.32u 0.07s 18776e 880784kB
+before constantPropagate: 1.32u 0.07s 18776e 880784kB
+after constantPropagate: 1.32u 0.07s 18776e 880784kB
+before removeUnusedSignals circuit: 1.32u 0.07s 18776e 880784kB
+after removeUnusedSignals circuit: 1.32u 0.07s 18776e 880784kB
+before optimize latch enable: 1.32u 0.07s 18776e 880784kB
+after optimize latch enable: 1.32u 0.07s 18776e 880784kB
+after circuit->load: 1.32u 0.07s 18776e 880784kB
+
+Processing alb_mss_fab_fifo_0000_000D
+before buildCfgFromIStructural: 1.32u 0.07s 18672e 880784kB
+Before processing instances: 1.32u 0.07s 18700e 880784kB
+After processing instances: 1.32u 0.07s 18700e 880784kB
+before processing cont assigns: 1.32u 0.07s 18700e 880784kB
+after processing cont assigns: 1.32u 0.07s 18745e 880784kB
+before processing processes: 1.32u 0.07s 18745e 880784kB
+after processing processes: 1.33u 0.07s 18801e 880784kB
+after buildCfgFromIStructural: 1.33u 0.07s 18805e 880784kB
+before ns->mergeSimpleProcesses: 1.33u 0.07s 18805e 880784kB
+after ns->mergeSimpleProcesses: 1.33u 0.07s 18805e 880784kB
+before ns->splitPartialWrites: 1.33u 0.07s 18805e 880784kB
+after ns->splitPartialWrites: 1.33u 0.07s 18810e 880784kB
+before removeUnneededLatches: 1.33u 0.07s 18810e 880784kB
+after removeUnneededLatches: 1.33u 0.07s 18810e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.33u 0.07s 18810e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.33u 0.07s 18810e 880784kB
+after other NameScope processing: 1.33u 0.07s 18810e 880784kB
+before rebuildInstGraph: 1.33u 0.07s 18835e 880784kB
+  before addAllInScope: 1.33u 0.07s 18835e 880784kB
+  after addAllInScope: 1.33u 0.07s 18835e 880784kB
+after rebuildInstGraph: 1.33u 0.07s 18835e 880784kB
+before markTristateCones : 1.33u 0.07s 18835e 880784kB
+after markTristateCones : 1.33u 0.07s 18835e 880784kB
+after scheduling: 1.33u 0.07s 18917e 880784kB
+after model->finalize: 1.33u 0.07s 18959e 880784kB
+before attribute propagation: 1.33u 0.07s 18997e 880784kB
+after attribute propagation: 1.33u 0.07s 18997e 880784kB
+before constantPropagate: 1.33u 0.07s 18997e 880784kB
+after constantPropagate: 1.33u 0.07s 18995e 880784kB
+before removeUnusedSignals circuit: 1.33u 0.07s 18995e 880784kB
+after removeUnusedSignals circuit: 1.33u 0.07s 18995e 880784kB
+before optimize latch enable: 1.33u 0.07s 18995e 880784kB
+after optimize latch enable: 1.33u 0.07s 18995e 880784kB
+after circuit->load: 1.33u 0.07s 18995e 880784kB
+
+Processing rl_special
+before buildCfgFromIStructural: 1.33u 0.07s 18793e 880784kB
+Before processing instances: 1.33u 0.07s 18842e 880784kB
+After processing instances: 1.33u 0.07s 18842e 880784kB
+before processing cont assigns: 1.33u 0.07s 18842e 880784kB
+after processing cont assigns: 1.33u 0.07s 18889e 880784kB
+before processing processes: 1.33u 0.07s 18889e 880784kB
+after processing processes: 1.34u 0.07s 19109e 880784kB
+after buildCfgFromIStructural: 1.34u 0.07s 19111e 880784kB
+before ns->mergeSimpleProcesses: 1.34u 0.07s 19111e 880784kB
+after ns->mergeSimpleProcesses: 1.34u 0.07s 19111e 880784kB
+before ns->splitPartialWrites: 1.34u 0.07s 19111e 880784kB
+after ns->splitPartialWrites: 1.34u 0.07s 19111e 880784kB
+before removeUnneededLatches: 1.34u 0.07s 19111e 880784kB
+after removeUnneededLatches: 1.34u 0.07s 19111e 880784kB
+before printMsgForBothBAandNBAAccrossProcess: 1.34u 0.07s 19111e 880784kB
+after printMsgForBothBAandNBAAccrossProcess: 1.34u 0.07s 19111e 880784kB
+after other NameScope processing: 1.34u 0.07s 19111e 880784kB
+before rebuildInstGraph: 1.34u 0.07s 19125e 880784kB
+  before addAllInScope: 1.34u 0.07s 19125e 880784kB
+  after addAllInScope: 1.34u 0.07s 19125e 880784kB
+after rebuildInstGraph: 1.34u 0.07s 19125e 880784kB
+before markTristateCones : 1.34u 0.07s 19125e 880784kB
+after markTristateCones : 1.34u 0.07s 19125e 880784kB
+after scheduling: 1.35u 0.07s 19323e 880784kB
+after model->finalize: 1.35u 0.07s 19476e 880784kB
+before attribute propagation: 1.35u 0.07s 19586e 880784kB
+after attribute propagation: 1.35u 0.07s 19586e 880784kB
+before constantPropagate: 1.35u 0.07s 19586e 880784kB
+after constantPropagate: 1.35u 0.07s 19554e 880784kB
+before removeUnusedSignals circuit: 1.35u 0.07s 19554e 880784kB
+after removeUnusedSignals circuit: 1.35u 0.07s 19554e 880784kB
+before optimize latch enable: 1.35u 0.07s 19554e 880784kB
+after optimize latch enable: 1.35u 0.07s 19554e 880784kB
+after circuit->load: 1.35u 0.07s 19554e 880784kB
+
+Processing zceiMessageInPort_160
+before attribute propagation: 1.35u 0.07s 19076e 880784kB
+after attribute propagation: 1.35u 0.07s 19076e 880784kB
+before constantPropagate: 1.35u 0.07s 19076e 880784kB
+after constantPropagate: 1.35u 0.07s 19076e 880784kB
+before removeUnusedSignals circuit: 1.35u 0.07s 19076e 880784kB
+after removeUnusedSignals circuit: 1.35u 0.07s 19076e 880784kB
+before optimize latch enable: 1.35u 0.07s 19076e 880784kB
+after optimize latch enable: 1.35u 0.07s 19076e 880784kB
+before removeReadAfterMissingWrite: 1.35u 0.07s 19076e 880784kB
+after removeReadAfterMissingWrite: 1.35u 0.07s 19076e 880784kB
+before undoDimensionalSplitOfMemories: 1.35u 0.07s 19076e 880784kB
+after undoDimensionalSplitOfMemories: 1.35u 0.07s 19076e 880784kB
+before extractMemories: 1.35u 0.07s 19076e 880784kB
+after extractMemories: 1.35u 0.07s 19076e 880784kB
+before extractHolds: 1.35u 0.07s 19076e 880784kB
+after extractHolds: 1.35u 0.07s 19076e 880784kB
+before simplifyAdders: 1.35u 0.07s 19076e 880784kB
+after simplifyAdders: 1.35u 0.07s 19076e 880784kB
+before optimizeLessThan: 1.35u 0.07s 19076e 880784kB
+after optimizeLessThan: 1.35u 0.07s 19076e 880784kB
+before reportUnresolvedType: 1.35u 0.07s 19076e 880784kB
+after reportUnresolvedType: 1.35u 0.07s 19076e 880784kB
+
+Processing ls_multi_bit_comparator_0000
+before buildCfgFromIStructural: 1.35u 0.07s 19070e 880784kB
+Before processing instances: 1.35u 0.07s 19079e 880784kB
+After processing instances: 1.35u 0.07s 19079e 880784kB
+before processing cont assigns: 1.35u 0.07s 19079e 880784kB
+after processing cont assigns: 1.39u 0.07s 20452e 881048kB
+before processing processes: 1.39u 0.07s 20452e 881048kB
+after processing processes: 1.39u 0.07s 20452e 881048kB
+after buildCfgFromIStructural: 1.39u 0.07s 20453e 881048kB
+before ns->mergeSimpleProcesses: 1.39u 0.07s 20453e 881048kB
+after ns->mergeSimpleProcesses: 1.39u 0.07s 20453e 881048kB
+before ns->splitPartialWrites: 1.39u 0.07s 20453e 881048kB
+after ns->splitPartialWrites: 1.43u 0.07s 20757e 881048kB
+before removeUnneededLatches: 1.43u 0.07s 20757e 881048kB
+after removeUnneededLatches: 1.43u 0.07s 20757e 881048kB
+before printMsgForBothBAandNBAAccrossProcess: 1.43u 0.07s 20757e 881048kB
+after printMsgForBothBAandNBAAccrossProcess: 1.43u 0.07s 20757e 881048kB
+after other NameScope processing: 1.43u 0.07s 20757e 881048kB
+before rebuildInstGraph: 1.43u 0.07s 20945e 881180kB
+  before addAllInScope: 1.43u 0.07s 20945e 881180kB
+  after addAllInScope: 1.44u 0.07s 20945e 881180kB
+after rebuildInstGraph: 1.44u 0.07s 20945e 881180kB
+before markTristateCones : 1.44u 0.07s 20945e 881180kB
+after markTristateCones : 1.44u 0.07s 20945e 881180kB
+after scheduling: 1.44u 0.07s 20520e 881180kB
+after model->finalize: 1.45u 0.07s 20966e 881180kB
+before attribute propagation: 1.45u 0.07s 21154e 881180kB
+after attribute propagation: 1.45u 0.07s 21154e 881180kB
+before constantPropagate: 1.45u 0.07s 21154e 881180kB
+after constantPropagate: 1.45u 0.07s 21154e 881180kB
+before removeUnusedSignals circuit: 1.45u 0.07s 21154e 881180kB
+after removeUnusedSignals circuit: 1.45u 0.07s 21154e 881180kB
+before optimize latch enable: 1.45u 0.07s 21154e 881180kB
+after optimize latch enable: 1.45u 0.07s 21154e 881180kB
+after circuit->load: 1.45u 0.07s 21154e 881180kB
+
+Processing sfty_dmsi_down_tgt_e2e_wrap_0000
+before buildCfgFromIStructural: 1.45u 0.07s 20563e 881180kB
+Before processing instances: 1.45u 0.07s 20587e 881180kB
+After processing instances: 1.45u 0.07s 20602e 881180kB
+before processing cont assigns: 1.45u 0.07s 20602e 881180kB
+after processing cont assigns: 1.45u 0.07s 20619e 881180kB
+before processing processes: 1.45u 0.07s 20619e 881180kB
+after processing processes: 1.45u 0.07s 20619e 881180kB
+after buildCfgFromIStructural: 1.45u 0.07s 20619e 881180kB
+before ns->mergeSimpleProcesses: 1.45u 0.07s 20619e 881180kB
+after ns->mergeSimpleProcesses: 1.45u 0.07s 20619e 881180kB
+before ns->splitPartialWrites: 1.45u 0.07s 20619e 881180kB
+after ns->splitPartialWrites: 1.45u 0.07s 20619e 881180kB
+before removeUnneededLatches: 1.45u 0.07s 20619e 881180kB
+after removeUnneededLatches: 1.45u 0.07s 20619e 881180kB
+before printMsgForBothBAandNBAAccrossProcess: 1.45u 0.07s 20619e 881180kB
+after printMsgForBothBAandNBAAccrossProcess: 1.45u 0.07s 20619e 881180kB
+after other NameScope processing: 1.45u 0.07s 20619e 881180kB
+before rebuildInstGraph: 1.45u 0.07s 20628e 881180kB
+  before addAllInScope: 1.45u 0.07s 20628e 881180kB
+  after addAllInScope: 1.45u 0.07s 20628e 881180kB
+after rebuildInstGraph: 1.45u 0.07s 20628e 881180kB
+before markTristateCones : 1.45u 0.07s 20633e 881180kB
+after markTristateCones : 1.45u 0.07s 20633e 881180kB
+after scheduling: 1.45u 0.07s 20695e 881180kB
+after model->finalize: 1.45u 0.07s 20734e 881180kB
+before attribute propagation: 1.45u 0.07s 20740e 881180kB
+after attribute propagation: 1.45u 0.07s 20740e 881180kB
+before constantPropagate: 1.45u 0.07s 20740e 881180kB
+after constantPropagate: 1.45u 0.07s 20740e 881180kB
+before removeUnusedSignals circuit: 1.45u 0.07s 20740e 881180kB
+after removeUnusedSignals circuit: 1.45u 0.07s 20740e 881180kB
+before optimize latch enable: 1.45u 0.07s 20740e 881180kB
+after optimize latch enable: 1.45u 0.07s 20740e 881180kB
+after circuit->load: 1.45u 0.07s 20740e 881180kB
+
+Processing rl_maskgen
+before buildCfgFromIStructural: 1.45u 0.07s 20614e 881180kB
+Before processing instances: 1.45u 0.07s 20621e 881180kB
+After processing instances: 1.45u 0.07s 20621e 881180kB
+before processing cont assigns: 1.45u 0.07s 20621e 881180kB
+after processing cont assigns: 1.46u 0.07s 20621e 881180kB
+before processing processes: 1.46u 0.07s 20621e 881180kB
+after processing processes: 1.46u 0.07s 20910e 881312kB
+after buildCfgFromIStructural: 1.46u 0.07s 20911e 881312kB
+before ns->mergeSimpleProcesses: 1.46u 0.07s 20911e 881312kB
+after ns->mergeSimpleProcesses: 1.46u 0.07s 20911e 881312kB
+before ns->splitPartialWrites: 1.46u 0.07s 20911e 881312kB
+after ns->splitPartialWrites: 1.46u 0.07s 20911e 881312kB
+before removeUnneededLatches: 1.46u 0.07s 20911e 881312kB
+after removeUnneededLatches: 1.46u 0.07s 20911e 881312kB
+before printMsgForBothBAandNBAAccrossProcess: 1.46u 0.07s 20911e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.46u 0.07s 20911e 881736kB
+after other NameScope processing: 1.46u 0.07s 20911e 881736kB
+before rebuildInstGraph: 1.46u 0.07s 20911e 881736kB
+  before addAllInScope: 1.46u 0.07s 20911e 881736kB
+  after addAllInScope: 1.46u 0.07s 20911e 881736kB
+after rebuildInstGraph: 1.46u 0.07s 20911e 881736kB
+before markTristateCones : 1.46u 0.07s 20911e 881736kB
+after markTristateCones : 1.46u 0.07s 20911e 881736kB
+after scheduling: 1.46u 0.07s 20927e 881736kB
+after model->finalize: 1.46u 0.07s 20954e 881736kB
+before attribute propagation: 1.47u 0.07s 21088e 881736kB
+after attribute propagation: 1.47u 0.07s 21088e 881736kB
+before constantPropagate: 1.47u 0.07s 21088e 881736kB
+after constantPropagate: 1.47u 0.07s 21087e 881736kB
+before removeUnusedSignals circuit: 1.47u 0.07s 21087e 881736kB
+after removeUnusedSignals circuit: 1.47u 0.07s 21087e 881736kB
+before optimize latch enable: 1.47u 0.07s 21087e 881736kB
+after optimize latch enable: 1.47u 0.07s 21087e 881736kB
+after circuit->load: 1.47u 0.07s 21087e 881736kB
+
+Processing alb_mss_fab_fifo_0001_0006
+before buildCfgFromIStructural: 1.47u 0.07s 20854e 881736kB
+Before processing instances: 1.47u 0.07s 20868e 881736kB
+After processing instances: 1.47u 0.07s 20868e 881736kB
+before processing cont assigns: 1.47u 0.07s 20868e 881736kB
+after processing cont assigns: 1.47u 0.07s 20875e 881736kB
+before processing processes: 1.47u 0.07s 20875e 881736kB
+after processing processes: 1.47u 0.07s 20875e 881736kB
+after buildCfgFromIStructural: 1.47u 0.07s 20877e 881736kB
+before ns->mergeSimpleProcesses: 1.47u 0.07s 20877e 881736kB
+after ns->mergeSimpleProcesses: 1.47u 0.07s 20877e 881736kB
+before ns->splitPartialWrites: 1.47u 0.07s 20877e 881736kB
+after ns->splitPartialWrites: 1.47u 0.07s 20877e 881736kB
+before removeUnneededLatches: 1.47u 0.07s 20877e 881736kB
+after removeUnneededLatches: 1.47u 0.07s 20877e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.47u 0.07s 20877e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.47u 0.07s 20877e 881736kB
+after other NameScope processing: 1.47u 0.07s 20877e 881736kB
+before rebuildInstGraph: 1.47u 0.07s 20880e 881736kB
+  before addAllInScope: 1.47u 0.07s 20880e 881736kB
+  after addAllInScope: 1.47u 0.07s 20880e 881736kB
+after rebuildInstGraph: 1.47u 0.07s 20880e 881736kB
+before markTristateCones : 1.47u 0.07s 20880e 881736kB
+after markTristateCones : 1.47u 0.07s 20880e 881736kB
+after scheduling: 1.47u 0.07s 20928e 881736kB
+after model->finalize: 1.47u 0.07s 20948e 881736kB
+before attribute propagation: 1.47u 0.07s 20951e 881736kB
+after attribute propagation: 1.47u 0.07s 20951e 881736kB
+before constantPropagate: 1.47u 0.07s 20951e 881736kB
+after constantPropagate: 1.47u 0.07s 20949e 881736kB
+before removeUnusedSignals circuit: 1.47u 0.07s 20949e 881736kB
+after removeUnusedSignals circuit: 1.47u 0.07s 20949e 881736kB
+before optimize latch enable: 1.47u 0.07s 20949e 881736kB
+after optimize latch enable: 1.47u 0.07s 20949e 881736kB
+after circuit->load: 1.47u 0.07s 20949e 881736kB
+
+Processing mss_bus_switch_fifo_0000_0001
+before buildCfgFromIStructural: 1.47u 0.07s 20857e 881736kB
+Before processing instances: 1.47u 0.07s 20871e 881736kB
+After processing instances: 1.47u 0.07s 20871e 881736kB
+before processing cont assigns: 1.47u 0.07s 20871e 881736kB
+after processing cont assigns: 1.47u 0.07s 20878e 881736kB
+before processing processes: 1.47u 0.07s 20878e 881736kB
+after processing processes: 1.47u 0.07s 20878e 881736kB
+after buildCfgFromIStructural: 1.47u 0.07s 20880e 881736kB
+before ns->mergeSimpleProcesses: 1.47u 0.07s 20880e 881736kB
+after ns->mergeSimpleProcesses: 1.47u 0.07s 20880e 881736kB
+before ns->splitPartialWrites: 1.47u 0.07s 20880e 881736kB
+after ns->splitPartialWrites: 1.47u 0.07s 20880e 881736kB
+before removeUnneededLatches: 1.47u 0.07s 20880e 881736kB
+after removeUnneededLatches: 1.47u 0.07s 20880e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.47u 0.07s 20880e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.47u 0.07s 20880e 881736kB
+after other NameScope processing: 1.47u 0.07s 20880e 881736kB
+before rebuildInstGraph: 1.47u 0.07s 20883e 881736kB
+  before addAllInScope: 1.47u 0.07s 20883e 881736kB
+  after addAllInScope: 1.47u 0.07s 20883e 881736kB
+after rebuildInstGraph: 1.47u 0.07s 20883e 881736kB
+before markTristateCones : 1.47u 0.07s 20883e 881736kB
+after markTristateCones : 1.47u 0.07s 20883e 881736kB
+after scheduling: 1.47u 0.07s 20931e 881736kB
+after model->finalize: 1.47u 0.07s 20951e 881736kB
+before attribute propagation: 1.47u 0.07s 20954e 881736kB
+after attribute propagation: 1.47u 0.07s 20954e 881736kB
+before constantPropagate: 1.47u 0.07s 20954e 881736kB
+after constantPropagate: 1.47u 0.07s 20952e 881736kB
+before removeUnusedSignals circuit: 1.47u 0.07s 20952e 881736kB
+after removeUnusedSignals circuit: 1.47u 0.07s 20952e 881736kB
+before optimize latch enable: 1.47u 0.07s 20952e 881736kB
+after optimize latch enable: 1.47u 0.07s 20952e 881736kB
+after circuit->load: 1.47u 0.07s 20952e 881736kB
+
+Processing ls_error_register_0000
+before buildCfgFromIStructural: 1.47u 0.07s 20860e 881736kB
+Before processing instances: 1.47u 0.07s 20908e 881736kB
+After processing instances: 1.47u 0.07s 20920e 881736kB
+before processing cont assigns: 1.47u 0.07s 20920e 881736kB
+after processing cont assigns: 1.47u 0.07s 20957e 881736kB
+before processing processes: 1.47u 0.07s 20957e 881736kB
+after processing processes: 1.48u 0.07s 21147e 881736kB
+after buildCfgFromIStructural: 1.48u 0.07s 21148e 881736kB
+before ns->mergeSimpleProcesses: 1.48u 0.07s 21148e 881736kB
+after ns->mergeSimpleProcesses: 1.48u 0.07s 21148e 881736kB
+before ns->splitPartialWrites: 1.48u 0.07s 21148e 881736kB
+after ns->splitPartialWrites: 1.48u 0.07s 21148e 881736kB
+before removeUnneededLatches: 1.48u 0.07s 21148e 881736kB
+after removeUnneededLatches: 1.48u 0.07s 21148e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.48u 0.07s 21148e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.48u 0.07s 21148e 881736kB
+after other NameScope processing: 1.48u 0.07s 21148e 881736kB
+before rebuildInstGraph: 1.48u 0.07s 21166e 881736kB
+  before addAllInScope: 1.48u 0.07s 21166e 881736kB
+  after addAllInScope: 1.48u 0.07s 21166e 881736kB
+after rebuildInstGraph: 1.48u 0.07s 21166e 881736kB
+before markTristateCones : 1.48u 0.07s 21166e 881736kB
+after markTristateCones : 1.48u 0.07s 21166e 881736kB
+after scheduling: 1.48u 0.07s 21282e 881736kB
+after model->finalize: 1.49u 0.07s 21374e 881736kB
+before attribute propagation: 1.49u 0.07s 21447e 881736kB
+after attribute propagation: 1.49u 0.07s 21447e 881736kB
+before constantPropagate: 1.49u 0.07s 21447e 881736kB
+after constantPropagate: 1.49u 0.08s 21423e 881736kB
+before removeUnusedSignals circuit: 1.49u 0.08s 21423e 881736kB
+after removeUnusedSignals circuit: 1.49u 0.08s 21423e 881736kB
+before optimize latch enable: 1.49u 0.08s 21423e 881736kB
+after optimize latch enable: 1.49u 0.08s 21423e 881736kB
+after circuit->load: 1.49u 0.08s 21423e 881736kB
+
+Processing rl_pipe_ctrl
+before buildCfgFromIStructural: 1.49u 0.08s 21128e 881736kB
+Before processing instances: 1.49u 0.08s 21164e 881736kB
+After processing instances: 1.49u 0.08s 21164e 881736kB
+before processing cont assigns: 1.49u 0.08s 21164e 881736kB
+after processing cont assigns: 1.49u 0.08s 21164e 881736kB
+before processing processes: 1.49u 0.08s 21164e 881736kB
+after processing processes: 1.49u 0.08s 21331e 881736kB
+after buildCfgFromIStructural: 1.49u 0.08s 21332e 881736kB
+before ns->mergeSimpleProcesses: 1.49u 0.08s 21332e 881736kB
+after ns->mergeSimpleProcesses: 1.49u 0.08s 21332e 881736kB
+before ns->splitPartialWrites: 1.49u 0.08s 21332e 881736kB
+after ns->splitPartialWrites: 1.49u 0.08s 21332e 881736kB
+before removeUnneededLatches: 1.49u 0.08s 21332e 881736kB
+after removeUnneededLatches: 1.49u 0.08s 21332e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.49u 0.08s 21332e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.49u 0.08s 21332e 881736kB
+after other NameScope processing: 1.49u 0.08s 21332e 881736kB
+before rebuildInstGraph: 1.49u 0.08s 21332e 881736kB
+  before addAllInScope: 1.49u 0.08s 21332e 881736kB
+  after addAllInScope: 1.49u 0.08s 21332e 881736kB
+after rebuildInstGraph: 1.49u 0.08s 21332e 881736kB
+before markTristateCones : 1.49u 0.08s 21332e 881736kB
+after markTristateCones : 1.49u 0.08s 21332e 881736kB
+after scheduling: 1.49u 0.08s 21504e 881736kB
+after model->finalize: 1.49u 0.08s 21640e 881736kB
+before attribute propagation: 1.5u 0.08s 21689e 881736kB
+after attribute propagation: 1.5u 0.08s 21689e 881736kB
+before constantPropagate: 1.5u 0.08s 21689e 881736kB
+after constantPropagate: 1.5u 0.08s 21688e 881736kB
+before removeUnusedSignals circuit: 1.5u 0.08s 21688e 881736kB
+after removeUnusedSignals circuit: 1.5u 0.08s 21688e 881736kB
+before optimize latch enable: 1.5u 0.08s 21688e 881736kB
+after optimize latch enable: 1.5u 0.08s 21688e 881736kB
+after circuit->load: 1.5u 0.08s 21688e 881736kB
+
+Processing iccm_ecc_encoder
+before buildCfgFromIStructural: 1.5u 0.08s 21314e 881736kB
+Before processing instances: 1.5u 0.08s 21317e 881736kB
+After processing instances: 1.5u 0.08s 21317e 881736kB
+before processing cont assigns: 1.5u 0.08s 21317e 881736kB
+after processing cont assigns: 1.5u 0.08s 21550e 881736kB
+before processing processes: 1.5u 0.08s 21550e 881736kB
+after processing processes: 1.5u 0.08s 21550e 881736kB
+after buildCfgFromIStructural: 1.5u 0.08s 21552e 881736kB
+before ns->mergeSimpleProcesses: 1.5u 0.08s 21552e 881736kB
+after ns->mergeSimpleProcesses: 1.5u 0.08s 21552e 881736kB
+before ns->splitPartialWrites: 1.5u 0.08s 21552e 881736kB
+after ns->splitPartialWrites: 1.5u 0.08s 21552e 881736kB
+before removeUnneededLatches: 1.5u 0.08s 21552e 881736kB
+after removeUnneededLatches: 1.5u 0.08s 21552e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.5u 0.08s 21552e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.5u 0.08s 21552e 881736kB
+after other NameScope processing: 1.5u 0.08s 21552e 881736kB
+before rebuildInstGraph: 1.5u 0.08s 21554e 881736kB
+  before addAllInScope: 1.5u 0.08s 21554e 881736kB
+  after addAllInScope: 1.5u 0.08s 21554e 881736kB
+after rebuildInstGraph: 1.5u 0.08s 21554e 881736kB
+before markTristateCones : 1.5u 0.08s 21554e 881736kB
+after markTristateCones : 1.5u 0.08s 21554e 881736kB
+after scheduling: 1.5u 0.08s 21565e 881736kB
+after model->finalize: 1.51u 0.08s 21691e 881736kB
+before attribute propagation: 1.51u 0.08s 21706e 881736kB
+after attribute propagation: 1.51u 0.08s 21706e 881736kB
+before constantPropagate: 1.51u 0.08s 21706e 881736kB
+after constantPropagate: 1.51u 0.08s 21706e 881736kB
+before removeUnusedSignals circuit: 1.51u 0.08s 21706e 881736kB
+after removeUnusedSignals circuit: 1.51u 0.08s 21706e 881736kB
+before optimize latch enable: 1.51u 0.08s 21706e 881736kB
+after optimize latch enable: 1.51u 0.08s 21706e 881736kB
+after circuit->load: 1.51u 0.08s 21706e 881736kB
+
+Processing rl_reset_ctrl_synch
+before buildCfgFromIStructural: 1.51u 0.08s 21549e 881736kB
+Before processing instances: 1.51u 0.08s 21575e 881736kB
+After processing instances: 1.51u 0.08s 21584e 881736kB
+before processing cont assigns: 1.51u 0.08s 21584e 881736kB
+after processing cont assigns: 1.51u 0.08s 21590e 881736kB
+before processing processes: 1.51u 0.08s 21590e 881736kB
+after processing processes: 1.51u 0.08s 21590e 881736kB
+after buildCfgFromIStructural: 1.51u 0.08s 21590e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21590e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21590e 881736kB
+after other NameScope processing: 1.51u 0.08s 21595e 881736kB
+before markTristateCones : 1.51u 0.08s 21595e 881736kB
+after markTristateCones : 1.51u 0.08s 21595e 881736kB
+after scheduling: 1.51u 0.08s 21680e 881736kB
+after model->finalize: 1.51u 0.08s 21712e 881736kB
+before attribute propagation: 1.51u 0.08s 21712e 881736kB
+after attribute propagation: 1.51u 0.08s 21712e 881736kB
+before constantPropagate: 1.51u 0.08s 21712e 881736kB
+after constantPropagate: 1.51u 0.08s 21712e 881736kB
+before removeUnusedSignals circuit: 1.51u 0.08s 21712e 881736kB
+after removeUnusedSignals circuit: 1.51u 0.08s 21712e 881736kB
+before optimize latch enable: 1.51u 0.08s 21712e 881736kB
+after optimize latch enable: 1.51u 0.08s 21712e 881736kB
+after circuit->load: 1.51u 0.08s 21712e 881736kB
+
+Processing core_chip
+before buildCfgFromIStructural: 1.51u 0.08s 21589e 881736kB
+Before processing instances: 1.51u 0.08s 21621e 881736kB
+After processing instances: 1.51u 0.08s 21668e 881736kB
+before processing cont assigns: 1.51u 0.08s 21668e 881736kB
+after processing cont assigns: 1.51u 0.08s 21671e 881736kB
+before processing processes: 1.51u 0.08s 21671e 881736kB
+after processing processes: 1.51u 0.08s 21671e 881736kB
+after buildCfgFromIStructural: 1.51u 0.08s 21673e 881736kB
+before ns->mergeSimpleProcesses: 1.51u 0.08s 21673e 881736kB
+after ns->mergeSimpleProcesses: 1.51u 0.08s 21673e 881736kB
+before ns->splitPartialWrites: 1.51u 0.08s 21673e 881736kB
+after ns->splitPartialWrites: 1.51u 0.08s 21673e 881736kB
+before removeUnneededLatches: 1.51u 0.08s 21673e 881736kB
+after removeUnneededLatches: 1.51u 0.08s 21673e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21673e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21673e 881736kB
+after other NameScope processing: 1.51u 0.08s 21673e 881736kB
+before rebuildInstGraph: 1.51u 0.08s 21676e 881736kB
+  before addAllInScope: 1.51u 0.08s 21676e 881736kB
+  after addAllInScope: 1.51u 0.08s 21676e 881736kB
+after rebuildInstGraph: 1.51u 0.08s 21676e 881736kB
+before markTristateCones : 1.51u 0.08s 21676e 881736kB
+after markTristateCones : 1.51u 0.08s 21676e 881736kB
+after scheduling: 1.51u 0.08s 21784e 881736kB
+after model->finalize: 1.51u 0.08s 21823e 881736kB
+before attribute propagation: 1.51u 0.08s 21805e 881736kB
+after attribute propagation: 1.51u 0.08s 21805e 881736kB
+before constantPropagate: 1.51u 0.08s 21805e 881736kB
+after constantPropagate: 1.51u 0.08s 21805e 881736kB
+before removeUnusedSignals circuit: 1.51u 0.08s 21805e 881736kB
+after removeUnusedSignals circuit: 1.51u 0.08s 21805e 881736kB
+before optimize latch enable: 1.51u 0.08s 21805e 881736kB
+after optimize latch enable: 1.51u 0.08s 21805e 881736kB
+after circuit->load: 1.51u 0.08s 21805e 881736kB
+
+Processing ls_compare_unit_000F
+before buildCfgFromIStructural: 1.51u 0.08s 21671e 881736kB
+Before processing instances: 1.51u 0.08s 21690e 881736kB
+After processing instances: 1.51u 0.08s 21694e 881736kB
+before processing cont assigns: 1.51u 0.08s 21694e 881736kB
+after processing cont assigns: 1.51u 0.08s 21713e 881736kB
+before processing processes: 1.51u 0.08s 21713e 881736kB
+after processing processes: 1.51u 0.08s 21713e 881736kB
+after buildCfgFromIStructural: 1.51u 0.08s 21715e 881736kB
+before ns->mergeSimpleProcesses: 1.51u 0.08s 21715e 881736kB
+after ns->mergeSimpleProcesses: 1.51u 0.08s 21715e 881736kB
+before ns->splitPartialWrites: 1.51u 0.08s 21715e 881736kB
+after ns->splitPartialWrites: 1.51u 0.08s 21715e 881736kB
+before removeUnneededLatches: 1.51u 0.08s 21715e 881736kB
+after removeUnneededLatches: 1.51u 0.08s 21715e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21715e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.51u 0.08s 21715e 881736kB
+after other NameScope processing: 1.51u 0.08s 21715e 881736kB
+before rebuildInstGraph: 1.51u 0.08s 21726e 881736kB
+  before addAllInScope: 1.51u 0.08s 21726e 881736kB
+  after addAllInScope: 1.51u 0.08s 21726e 881736kB
+after rebuildInstGraph: 1.51u 0.08s 21726e 881736kB
+before markTristateCones : 1.51u 0.08s 21726e 881736kB
+after markTristateCones : 1.51u 0.08s 21726e 881736kB
+after scheduling: 1.52u 0.08s 21768e 881736kB
+after model->finalize: 1.52u 0.08s 21781e 881736kB
+before attribute propagation: 1.52u 0.08s 21786e 881736kB
+after attribute propagation: 1.52u 0.08s 21786e 881736kB
+before constantPropagate: 1.52u 0.08s 21786e 881736kB
+after constantPropagate: 1.52u 0.08s 21786e 881736kB
+before removeUnusedSignals circuit: 1.52u 0.08s 21786e 881736kB
+after removeUnusedSignals circuit: 1.52u 0.08s 21786e 881736kB
+before optimize latch enable: 1.52u 0.08s 21786e 881736kB
+after optimize latch enable: 1.52u 0.08s 21786e 881736kB
+after circuit->load: 1.52u 0.08s 21786e 881736kB
+
+Processing e2e_edc32_1stg_qual_chk_wrap_0000
+before buildCfgFromIStructural: 1.52u 0.08s 21687e 881736kB
+Before processing instances: 1.52u 0.08s 21693e 881736kB
+After processing instances: 1.52u 0.08s 21696e 881736kB
+before processing cont assigns: 1.52u 0.08s 21696e 881736kB
+after processing cont assigns: 1.52u 0.08s 21699e 881736kB
+before processing processes: 1.52u 0.08s 21699e 881736kB
+after processing processes: 1.52u 0.08s 21699e 881736kB
+after buildCfgFromIStructural: 1.52u 0.08s 21700e 881736kB
+before ns->mergeSimpleProcesses: 1.52u 0.08s 21700e 881736kB
+after ns->mergeSimpleProcesses: 1.52u 0.08s 21700e 881736kB
+before ns->splitPartialWrites: 1.52u 0.08s 21700e 881736kB
+after ns->splitPartialWrites: 1.52u 0.08s 21700e 881736kB
+before removeUnneededLatches: 1.52u 0.08s 21700e 881736kB
+after removeUnneededLatches: 1.52u 0.08s 21700e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21700e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21700e 881736kB
+after other NameScope processing: 1.52u 0.08s 21700e 881736kB
+before rebuildInstGraph: 1.52u 0.08s 21702e 881736kB
+  before addAllInScope: 1.52u 0.08s 21702e 881736kB
+  after addAllInScope: 1.52u 0.08s 21702e 881736kB
+after rebuildInstGraph: 1.52u 0.08s 21702e 881736kB
+before markTristateCones : 1.52u 0.08s 21702e 881736kB
+after markTristateCones : 1.52u 0.08s 21702e 881736kB
+after scheduling: 1.52u 0.08s 21724e 881736kB
+after model->finalize: 1.52u 0.08s 21735e 881736kB
+before attribute propagation: 1.52u 0.08s 21737e 881736kB
+after attribute propagation: 1.52u 0.08s 21737e 881736kB
+before constantPropagate: 1.52u 0.08s 21737e 881736kB
+after constantPropagate: 1.52u 0.08s 21737e 881736kB
+before removeUnusedSignals circuit: 1.52u 0.08s 21737e 881736kB
+after removeUnusedSignals circuit: 1.52u 0.08s 21737e 881736kB
+before optimize latch enable: 1.52u 0.08s 21737e 881736kB
+after optimize latch enable: 1.52u 0.08s 21737e 881736kB
+after circuit->load: 1.52u 0.08s 21737e 881736kB
+
+Processing rl_parity_chk_0001
+before buildCfgFromIStructural: 1.52u 0.08s 21696e 881736kB
+Before processing instances: 1.52u 0.08s 21705e 881736kB
+After processing instances: 1.52u 0.08s 21705e 881736kB
+before processing cont assigns: 1.52u 0.08s 21705e 881736kB
+after processing cont assigns: 1.52u 0.08s 21709e 881736kB
+before processing processes: 1.52u 0.08s 21709e 881736kB
+after processing processes: 1.52u 0.08s 21714e 881736kB
+after buildCfgFromIStructural: 1.52u 0.08s 21714e 881736kB
+before ns->mergeSimpleProcesses: 1.52u 0.08s 21714e 881736kB
+after ns->mergeSimpleProcesses: 1.52u 0.08s 21714e 881736kB
+before ns->splitPartialWrites: 1.52u 0.08s 21714e 881736kB
+after ns->splitPartialWrites: 1.52u 0.08s 21714e 881736kB
+before removeUnneededLatches: 1.52u 0.08s 21714e 881736kB
+after removeUnneededLatches: 1.52u 0.08s 21714e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21714e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21714e 881736kB
+after other NameScope processing: 1.52u 0.08s 21714e 881736kB
+before rebuildInstGraph: 1.52u 0.08s 21718e 881736kB
+  before addAllInScope: 1.52u 0.08s 21718e 881736kB
+  after addAllInScope: 1.52u 0.08s 21718e 881736kB
+after rebuildInstGraph: 1.52u 0.08s 21718e 881736kB
+before markTristateCones : 1.52u 0.08s 21718e 881736kB
+after markTristateCones : 1.52u 0.08s 21718e 881736kB
+after scheduling: 1.52u 0.08s 21741e 881736kB
+after model->finalize: 1.52u 0.08s 21762e 881736kB
+before attribute propagation: 1.52u 0.08s 21765e 881736kB
+after attribute propagation: 1.52u 0.08s 21765e 881736kB
+before constantPropagate: 1.52u 0.08s 21765e 881736kB
+after constantPropagate: 1.52u 0.08s 21765e 881736kB
+before removeUnusedSignals circuit: 1.52u 0.08s 21765e 881736kB
+after removeUnusedSignals circuit: 1.52u 0.08s 21765e 881736kB
+before optimize latch enable: 1.52u 0.08s 21765e 881736kB
+after optimize latch enable: 1.52u 0.08s 21765e 881736kB
+after circuit->load: 1.52u 0.08s 21765e 881736kB
+
+Processing ls_compare_unit_000E
+before buildCfgFromIStructural: 1.52u 0.08s 21715e 881736kB
+Before processing instances: 1.52u 0.08s 21734e 881736kB
+After processing instances: 1.52u 0.08s 21738e 881736kB
+before processing cont assigns: 1.52u 0.08s 21738e 881736kB
+after processing cont assigns: 1.52u 0.08s 21755e 881736kB
+before processing processes: 1.52u 0.08s 21755e 881736kB
+after processing processes: 1.52u 0.08s 21755e 881736kB
+after buildCfgFromIStructural: 1.52u 0.08s 21756e 881736kB
+before ns->mergeSimpleProcesses: 1.52u 0.08s 21756e 881736kB
+after ns->mergeSimpleProcesses: 1.52u 0.08s 21756e 881736kB
+before ns->splitPartialWrites: 1.52u 0.08s 21756e 881736kB
+after ns->splitPartialWrites: 1.52u 0.08s 21756e 881736kB
+before removeUnneededLatches: 1.52u 0.08s 21756e 881736kB
+after removeUnneededLatches: 1.52u 0.08s 21756e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21756e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.52u 0.08s 21756e 881736kB
+after other NameScope processing: 1.52u 0.08s 21756e 881736kB
+before rebuildInstGraph: 1.52u 0.08s 21767e 881736kB
+  before addAllInScope: 1.53u 0.08s 21767e 881736kB
+  after addAllInScope: 1.53u 0.08s 21767e 881736kB
+after rebuildInstGraph: 1.53u 0.08s 21767e 881736kB
+before markTristateCones : 1.53u 0.08s 21767e 881736kB
+after markTristateCones : 1.53u 0.08s 21767e 881736kB
+after scheduling: 1.53u 0.08s 21810e 881736kB
+after model->finalize: 1.53u 0.08s 21823e 881736kB
+before attribute propagation: 1.53u 0.08s 21825e 881736kB
+after attribute propagation: 1.53u 0.08s 21825e 881736kB
+before constantPropagate: 1.53u 0.08s 21825e 881736kB
+after constantPropagate: 1.53u 0.08s 21825e 881736kB
+before removeUnusedSignals circuit: 1.53u 0.08s 21825e 881736kB
+after removeUnusedSignals circuit: 1.53u 0.08s 21825e 881736kB
+before optimize latch enable: 1.53u 0.08s 21825e 881736kB
+after optimize latch enable: 1.53u 0.08s 21825e 881736kB
+after circuit->load: 1.53u 0.08s 21825e 881736kB
+
+Processing alb_mss_clkctrl_clkgen
+before buildCfgFromIStructural: 1.53u 0.08s 21728e 881736kB
+Before processing instances: 1.53u 0.08s 21740e 881736kB
+After processing instances: 1.53u 0.08s 21745e 881736kB
+before processing cont assigns: 1.53u 0.08s 21745e 881736kB
+after processing cont assigns: 1.53u 0.08s 21759e 881736kB
+before processing processes: 1.53u 0.08s 21759e 881736kB
+after processing processes: 1.53u 0.08s 21804e 881736kB
+after buildCfgFromIStructural: 1.53u 0.08s 21805e 881736kB
+before ns->mergeSimpleProcesses: 1.53u 0.08s 21805e 881736kB
+after ns->mergeSimpleProcesses: 1.53u 0.08s 21805e 881736kB
+before ns->splitPartialWrites: 1.53u 0.08s 21805e 881736kB
+after ns->splitPartialWrites: 1.53u 0.08s 21805e 881736kB
+before removeUnneededLatches: 1.53u 0.08s 21805e 881736kB
+after removeUnneededLatches: 1.53u 0.08s 21805e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.53u 0.08s 21805e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.53u 0.08s 21805e 881736kB
+after other NameScope processing: 1.53u 0.08s 21805e 881736kB
+before rebuildInstGraph: 1.53u 0.08s 21806e 881736kB
+  before addAllInScope: 1.53u 0.08s 21806e 881736kB
+  after addAllInScope: 1.53u 0.08s 21806e 881736kB
+after rebuildInstGraph: 1.53u 0.08s 21806e 881736kB
+before markTristateCones : 1.53u 0.08s 21806e 881736kB
+after markTristateCones : 1.53u 0.08s 21806e 881736kB
+after scheduling: 1.53u 0.08s 21858e 881736kB
+after model->finalize: 1.53u 0.08s 21901e 881736kB
+before attribute propagation: 1.53u 0.08s 21919e 881736kB
+after attribute propagation: 1.53u 0.08s 21919e 881736kB
+before constantPropagate: 1.53u 0.08s 21919e 881736kB
+after constantPropagate: 1.53u 0.08s 21915e 881736kB
+before removeUnusedSignals circuit: 1.53u 0.08s 21915e 881736kB
+after removeUnusedSignals circuit: 1.53u 0.08s 21915e 881736kB
+before optimize latch enable: 1.53u 0.08s 21915e 881736kB
+after optimize latch enable: 1.53u 0.08s 21915e 881736kB
+after circuit->load: 1.53u 0.08s 21915e 881736kB
+
+Processing rl_parity_gen_0002
+before buildCfgFromIStructural: 1.53u 0.08s 21798e 881736kB
+Before processing instances: 1.53u 0.08s 21804e 881736kB
+After processing instances: 1.53u 0.08s 21804e 881736kB
+before processing cont assigns: 1.53u 0.08s 21804e 881736kB
+after processing cont assigns: 1.53u 0.08s 21806e 881736kB
+before processing processes: 1.53u 0.08s 21806e 881736kB
+after processing processes: 1.53u 0.08s 21811e 881736kB
+after buildCfgFromIStructural: 1.53u 0.08s 21812e 881736kB
+before ns->mergeSimpleProcesses: 1.53u 0.08s 21812e 881736kB
+after ns->mergeSimpleProcesses: 1.53u 0.08s 21812e 881736kB
+before ns->splitPartialWrites: 1.53u 0.08s 21812e 881736kB
+after ns->splitPartialWrites: 1.53u 0.08s 21812e 881736kB
+before removeUnneededLatches: 1.53u 0.08s 21812e 881736kB
+after removeUnneededLatches: 1.53u 0.08s 21812e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.53u 0.08s 21812e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.53u 0.08s 21812e 881736kB
+after other NameScope processing: 1.53u 0.08s 21812e 881736kB
+before rebuildInstGraph: 1.53u 0.08s 21813e 881736kB
+  before addAllInScope: 1.53u 0.08s 21813e 881736kB
+  after addAllInScope: 1.53u 0.08s 21813e 881736kB
+after rebuildInstGraph: 1.53u 0.08s 21813e 881736kB
+before markTristateCones : 1.53u 0.08s 21813e 881736kB
+after markTristateCones : 1.53u 0.08s 21813e 881736kB
+after scheduling: 1.53u 0.08s 21826e 881736kB
+after model->finalize: 1.53u 0.08s 21838e 881736kB
+before attribute propagation: 1.53u 0.08s 21840e 881736kB
+after attribute propagation: 1.54u 0.08s 21840e 881736kB
+before constantPropagate: 1.54u 0.08s 21840e 881736kB
+after constantPropagate: 1.54u 0.08s 21840e 881736kB
+before removeUnusedSignals circuit: 1.54u 0.08s 21840e 881736kB
+after removeUnusedSignals circuit: 1.54u 0.08s 21840e 881736kB
+before optimize latch enable: 1.54u 0.08s 21840e 881736kB
+after optimize latch enable: 1.54u 0.08s 21840e 881736kB
+after circuit->load: 1.54u 0.08s 21840e 881736kB
+
+Processing rl_bitscan_16b
+before buildCfgFromIStructural: 1.54u 0.08s 21810e 881736kB
+Before processing instances: 1.54u 0.08s 21817e 881736kB
+After processing instances: 1.54u 0.08s 21822e 881736kB
+before processing cont assigns: 1.54u 0.08s 21822e 881736kB
+after processing cont assigns: 1.54u 0.08s 21839e 881736kB
+before processing processes: 1.54u 0.08s 21839e 881736kB
+after processing processes: 1.54u 0.08s 21839e 881736kB
+after buildCfgFromIStructural: 1.54u 0.08s 21842e 881736kB
+before ns->mergeSimpleProcesses: 1.54u 0.08s 21842e 881736kB
+after ns->mergeSimpleProcesses: 1.54u 0.08s 21845e 881736kB
+before ns->splitPartialWrites: 1.54u 0.08s 21845e 881736kB
+after ns->splitPartialWrites: 1.54u 0.08s 21845e 881736kB
+before removeUnneededLatches: 1.54u 0.08s 21845e 881736kB
+after removeUnneededLatches: 1.54u 0.08s 21845e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.54u 0.08s 21845e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.54u 0.08s 21845e 881736kB
+after other NameScope processing: 1.54u 0.08s 21845e 881736kB
+before rebuildInstGraph: 1.54u 0.08s 21861e 881736kB
+  before addAllInScope: 1.54u 0.08s 21861e 881736kB
+  after addAllInScope: 1.54u 0.08s 21861e 881736kB
+after rebuildInstGraph: 1.54u 0.08s 21861e 881736kB
+before markTristateCones : 1.54u 0.08s 21861e 881736kB
+after markTristateCones : 1.54u 0.08s 21861e 881736kB
+after scheduling: 1.54u 0.08s 21880e 881736kB
+after model->finalize: 1.54u 0.08s 21908e 881736kB
+before attribute propagation: 1.54u 0.08s 21914e 881736kB
+after attribute propagation: 1.54u 0.08s 21914e 881736kB
+before constantPropagate: 1.54u 0.08s 21914e 881736kB
+after constantPropagate: 1.54u 0.08s 21914e 881736kB
+before removeUnusedSignals circuit: 1.54u 0.08s 21914e 881736kB
+after removeUnusedSignals circuit: 1.54u 0.08s 21914e 881736kB
+before optimize latch enable: 1.54u 0.08s 21914e 881736kB
+after optimize latch enable: 1.54u 0.08s 21914e 881736kB
+after circuit->load: 1.54u 0.08s 21914e 881736kB
+
+Processing mss_bus_switch_fifo_0000_0002
+before buildCfgFromIStructural: 1.54u 0.08s 21861e 881736kB
+Before processing instances: 1.54u 0.08s 21874e 881736kB
+After processing instances: 1.54u 0.08s 21874e 881736kB
+before processing cont assigns: 1.54u 0.08s 21874e 881736kB
+after processing cont assigns: 1.54u 0.08s 21881e 881736kB
+before processing processes: 1.54u 0.08s 21881e 881736kB
+after processing processes: 1.54u 0.08s 21881e 881736kB
+after buildCfgFromIStructural: 1.54u 0.08s 21883e 881736kB
+before ns->mergeSimpleProcesses: 1.54u 0.08s 21883e 881736kB
+after ns->mergeSimpleProcesses: 1.54u 0.08s 21883e 881736kB
+before ns->splitPartialWrites: 1.54u 0.08s 21883e 881736kB
+after ns->splitPartialWrites: 1.54u 0.08s 21883e 881736kB
+before removeUnneededLatches: 1.54u 0.08s 21883e 881736kB
+after removeUnneededLatches: 1.54u 0.08s 21883e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.54u 0.08s 21883e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.54u 0.08s 21883e 881736kB
+after other NameScope processing: 1.54u 0.08s 21883e 881736kB
+before rebuildInstGraph: 1.54u 0.08s 21886e 881736kB
+  before addAllInScope: 1.54u 0.08s 21886e 881736kB
+  after addAllInScope: 1.54u 0.08s 21886e 881736kB
+after rebuildInstGraph: 1.54u 0.08s 21886e 881736kB
+before markTristateCones : 1.54u 0.08s 21886e 881736kB
+after markTristateCones : 1.54u 0.08s 21886e 881736kB
+after scheduling: 1.54u 0.08s 21935e 881736kB
+after model->finalize: 1.54u 0.08s 21955e 881736kB
+before attribute propagation: 1.54u 0.08s 21958e 881736kB
+after attribute propagation: 1.54u 0.08s 21958e 881736kB
+before constantPropagate: 1.54u 0.08s 21958e 881736kB
+after constantPropagate: 1.54u 0.08s 21956e 881736kB
+before removeUnusedSignals circuit: 1.54u 0.08s 21956e 881736kB
+after removeUnusedSignals circuit: 1.54u 0.08s 21956e 881736kB
+before optimize latch enable: 1.54u 0.08s 21956e 881736kB
+after optimize latch enable: 1.54u 0.08s 21956e 881736kB
+after circuit->load: 1.54u 0.08s 21956e 881736kB
+
+Processing zebu_bb_sample_clk_uncond_24_1
+before attribute propagation: 1.54u 0.08s 21867e 881736kB
+after attribute propagation: 1.54u 0.08s 21867e 881736kB
+before constantPropagate: 1.54u 0.08s 21867e 881736kB
+after constantPropagate: 1.54u 0.08s 21867e 881736kB
+before removeUnusedSignals circuit: 1.54u 0.08s 21867e 881736kB
+after removeUnusedSignals circuit: 1.54u 0.08s 21867e 881736kB
+before optimize latch enable: 1.54u 0.08s 21867e 881736kB
+after optimize latch enable: 1.54u 0.08s 21867e 881736kB
+before removeReadAfterMissingWrite: 1.54u 0.08s 21867e 881736kB
+after removeReadAfterMissingWrite: 1.54u 0.08s 21867e 881736kB
+before undoDimensionalSplitOfMemories: 1.54u 0.08s 21867e 881736kB
+after undoDimensionalSplitOfMemories: 1.54u 0.08s 21867e 881736kB
+before extractMemories: 1.54u 0.08s 21867e 881736kB
+after extractMemories: 1.54u 0.08s 21867e 881736kB
+before extractHolds: 1.54u 0.08s 21867e 881736kB
+after extractHolds: 1.54u 0.08s 21867e 881736kB
+before simplifyAdders: 1.54u 0.08s 21867e 881736kB
+after simplifyAdders: 1.54u 0.08s 21867e 881736kB
+before optimizeLessThan: 1.54u 0.08s 21867e 881736kB
+after optimizeLessThan: 1.54u 0.08s 21867e 881736kB
+before reportUnresolvedType: 1.54u 0.08s 21867e 881736kB
+after reportUnresolvedType: 1.54u 0.08s 21867e 881736kB
+
+Processing sr_err_aggr_0000
+before buildCfgFromIStructural: 1.54u 0.08s 21865e 881736kB
+Before processing instances: 1.54u 0.08s 21879e 881736kB
+After processing instances: 1.54u 0.08s 21879e 881736kB
+before processing cont assigns: 1.54u 0.08s 21879e 881736kB
+after processing cont assigns: 1.54u 0.08s 21884e 881736kB
+before processing processes: 1.54u 0.08s 21884e 881736kB
+after processing processes: 1.55u 0.08s 21895e 881736kB
+after buildCfgFromIStructural: 1.55u 0.08s 21896e 881736kB
+before ns->mergeSimpleProcesses: 1.55u 0.08s 21896e 881736kB
+after ns->mergeSimpleProcesses: 1.55u 0.08s 21896e 881736kB
+before ns->splitPartialWrites: 1.55u 0.08s 21896e 881736kB
+after ns->splitPartialWrites: 1.55u 0.08s 21896e 881736kB
+before removeUnneededLatches: 1.55u 0.08s 21896e 881736kB
+after removeUnneededLatches: 1.55u 0.08s 21896e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.55u 0.08s 21896e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.55u 0.08s 21896e 881736kB
+after other NameScope processing: 1.55u 0.08s 21896e 881736kB
+before rebuildInstGraph: 1.55u 0.08s 21900e 881736kB
+  before addAllInScope: 1.55u 0.08s 21900e 881736kB
+  after addAllInScope: 1.55u 0.08s 21900e 881736kB
+after rebuildInstGraph: 1.55u 0.08s 21900e 881736kB
+before markTristateCones : 1.55u 0.08s 21900e 881736kB
+after markTristateCones : 1.55u 0.08s 21900e 881736kB
+after scheduling: 1.55u 0.08s 21926e 881736kB
+after model->finalize: 1.55u 0.08s 21952e 881736kB
+before attribute propagation: 1.55u 0.08s 21957e 881736kB
+after attribute propagation: 1.55u 0.08s 21957e 881736kB
+before constantPropagate: 1.55u 0.08s 21957e 881736kB
+after constantPropagate: 1.55u 0.08s 21957e 881736kB
+before removeUnusedSignals circuit: 1.55u 0.08s 21957e 881736kB
+after removeUnusedSignals circuit: 1.55u 0.08s 21957e 881736kB
+before optimize latch enable: 1.55u 0.08s 21957e 881736kB
+after optimize latch enable: 1.55u 0.08s 21957e 881736kB
+after circuit->load: 1.55u 0.08s 21957e 881736kB
+
+Processing zebu_bb_gdelay
+before attribute propagation: 1.55u 0.08s 21885e 881736kB
+after attribute propagation: 1.55u 0.08s 21885e 881736kB
+before constantPropagate: 1.55u 0.08s 21885e 881736kB
+after constantPropagate: 1.55u 0.08s 21885e 881736kB
+before removeUnusedSignals circuit: 1.55u 0.08s 21885e 881736kB
+after removeUnusedSignals circuit: 1.55u 0.08s 21885e 881736kB
+before optimize latch enable: 1.55u 0.08s 21885e 881736kB
+after optimize latch enable: 1.55u 0.08s 21885e 881736kB
+before removeReadAfterMissingWrite: 1.55u 0.08s 21885e 881736kB
+after removeReadAfterMissingWrite: 1.55u 0.08s 21885e 881736kB
+before undoDimensionalSplitOfMemories: 1.55u 0.08s 21885e 881736kB
+after undoDimensionalSplitOfMemories: 1.55u 0.08s 21885e 881736kB
+before extractMemories: 1.55u 0.08s 21885e 881736kB
+after extractMemories: 1.55u 0.08s 21885e 881736kB
+before extractHolds: 1.55u 0.08s 21885e 881736kB
+after extractHolds: 1.55u 0.08s 21885e 881736kB
+before simplifyAdders: 1.55u 0.08s 21885e 881736kB
+after simplifyAdders: 1.55u 0.08s 21885e 881736kB
+before optimizeLessThan: 1.55u 0.08s 21885e 881736kB
+after optimizeLessThan: 1.55u 0.08s 21885e 881736kB
+before reportUnresolvedType: 1.55u 0.08s 21885e 881736kB
+after reportUnresolvedType: 1.55u 0.08s 21885e 881736kB
+
+Processing ls_multi_bit_comparator_0001
+before buildCfgFromIStructural: 1.55u 0.08s 21883e 881736kB
+Before processing instances: 1.55u 0.09s 21890e 881736kB
+After processing instances: 1.55u 0.09s 21890e 881736kB
+before processing cont assigns: 1.55u 0.09s 21890e 881736kB
+after processing cont assigns: 1.55u 0.09s 22028e 881736kB
+before processing processes: 1.55u 0.09s 22028e 881736kB
+after processing processes: 1.55u 0.09s 22028e 881736kB
+after buildCfgFromIStructural: 1.55u 0.09s 22030e 881736kB
+before ns->mergeSimpleProcesses: 1.55u 0.09s 22030e 881736kB
+after ns->mergeSimpleProcesses: 1.55u 0.09s 22030e 881736kB
+before ns->splitPartialWrites: 1.55u 0.09s 22030e 881736kB
+after ns->splitPartialWrites: 1.55u 0.09s 22048e 881736kB
+before removeUnneededLatches: 1.55u 0.09s 22048e 881736kB
+after removeUnneededLatches: 1.55u 0.09s 22048e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.55u 0.09s 22048e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.55u 0.09s 22048e 881736kB
+after other NameScope processing: 1.55u 0.09s 22048e 881736kB
+before rebuildInstGraph: 1.55u 0.09s 22068e 881736kB
+  before addAllInScope: 1.55u 0.09s 22068e 881736kB
+  after addAllInScope: 1.55u 0.09s 22068e 881736kB
+after rebuildInstGraph: 1.56u 0.09s 22068e 881736kB
+before markTristateCones : 1.56u 0.09s 22068e 881736kB
+after markTristateCones : 1.56u 0.09s 22068e 881736kB
+after scheduling: 1.56u 0.09s 22049e 881736kB
+after model->finalize: 1.56u 0.09s 22073e 881736kB
+before attribute propagation: 1.56u 0.09s 22085e 881736kB
+after attribute propagation: 1.56u 0.09s 22085e 881736kB
+before constantPropagate: 1.56u 0.09s 22085e 881736kB
+after constantPropagate: 1.56u 0.09s 22085e 881736kB
+before removeUnusedSignals circuit: 1.56u 0.09s 22085e 881736kB
+after removeUnusedSignals circuit: 1.56u 0.09s 22085e 881736kB
+before optimize latch enable: 1.56u 0.09s 22085e 881736kB
+after optimize latch enable: 1.56u 0.09s 22085e 881736kB
+after circuit->load: 1.56u 0.09s 22085e 881736kB
+
+Processing arcv_wd_parity_0000
+before buildCfgFromIStructural: 1.56u 0.09s 21997e 881736kB
+Before processing instances: 1.56u 0.09s 22003e 881736kB
+After processing instances: 1.56u 0.09s 22003e 881736kB
+before processing cont assigns: 1.56u 0.09s 22003e 881736kB
+after processing cont assigns: 1.56u 0.09s 22003e 881736kB
+before processing processes: 1.56u 0.09s 22003e 881736kB
+after processing processes: 1.56u 0.09s 22012e 881736kB
+after buildCfgFromIStructural: 1.56u 0.09s 22014e 881736kB
+before ns->mergeSimpleProcesses: 1.56u 0.09s 22014e 881736kB
+after ns->mergeSimpleProcesses: 1.56u 0.09s 22014e 881736kB
+before ns->splitPartialWrites: 1.56u 0.09s 22014e 881736kB
+after ns->splitPartialWrites: 1.56u 0.09s 22014e 881736kB
+before removeUnneededLatches: 1.56u 0.09s 22014e 881736kB
+after removeUnneededLatches: 1.56u 0.09s 22014e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22014e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22014e 881736kB
+after other NameScope processing: 1.56u 0.09s 22014e 881736kB
+before rebuildInstGraph: 1.56u 0.09s 22014e 881736kB
+  before addAllInScope: 1.56u 0.09s 22014e 881736kB
+  after addAllInScope: 1.56u 0.09s 22014e 881736kB
+after rebuildInstGraph: 1.56u 0.09s 22014e 881736kB
+before markTristateCones : 1.56u 0.09s 22014e 881736kB
+after markTristateCones : 1.56u 0.09s 22014e 881736kB
+after scheduling: 1.56u 0.09s 22034e 881736kB
+after model->finalize: 1.56u 0.09s 22043e 881736kB
+before attribute propagation: 1.56u 0.09s 22045e 881736kB
+after attribute propagation: 1.56u 0.09s 22045e 881736kB
+before constantPropagate: 1.56u 0.09s 22045e 881736kB
+after constantPropagate: 1.56u 0.09s 22045e 881736kB
+before removeUnusedSignals circuit: 1.56u 0.09s 22045e 881736kB
+after removeUnusedSignals circuit: 1.56u 0.09s 22045e 881736kB
+before optimize latch enable: 1.56u 0.09s 22045e 881736kB
+after optimize latch enable: 1.56u 0.09s 22045e 881736kB
+after circuit->load: 1.56u 0.09s 22045e 881736kB
+
+Processing dwt_reset_ctrl_0000
+before buildCfgFromIStructural: 1.56u 0.09s 22005e 881736kB
+Before processing instances: 1.56u 0.09s 22015e 881736kB
+After processing instances: 1.56u 0.09s 22019e 881736kB
+before processing cont assigns: 1.56u 0.09s 22019e 881736kB
+after processing cont assigns: 1.56u 0.09s 22027e 881736kB
+before processing processes: 1.56u 0.09s 22027e 881736kB
+after processing processes: 1.56u 0.09s 22027e 881736kB
+after buildCfgFromIStructural: 1.56u 0.09s 22027e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22027e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22027e 881736kB
+after other NameScope processing: 1.56u 0.09s 22032e 881736kB
+before markTristateCones : 1.56u 0.09s 22032e 881736kB
+after markTristateCones : 1.56u 0.09s 22032e 881736kB
+after scheduling: 1.56u 0.09s 22049e 881736kB
+after model->finalize: 1.56u 0.09s 22052e 881736kB
+before attribute propagation: 1.56u 0.09s 22045e 881736kB
+after attribute propagation: 1.56u 0.09s 22045e 881736kB
+before constantPropagate: 1.56u 0.09s 22045e 881736kB
+after constantPropagate: 1.56u 0.09s 22045e 881736kB
+before removeUnusedSignals circuit: 1.56u 0.09s 22045e 881736kB
+after removeUnusedSignals circuit: 1.56u 0.09s 22045e 881736kB
+before optimize latch enable: 1.56u 0.09s 22045e 881736kB
+after optimize latch enable: 1.56u 0.09s 22045e 881736kB
+after circuit->load: 1.56u 0.09s 22045e 881736kB
+
+Processing odd_pty_qual_dec_wrap_0000_0000
+before buildCfgFromIStructural: 1.56u 0.09s 22019e 881736kB
+Before processing instances: 1.56u 0.09s 22026e 881736kB
+After processing instances: 1.56u 0.09s 22029e 881736kB
+before processing cont assigns: 1.56u 0.09s 22029e 881736kB
+after processing cont assigns: 1.56u 0.09s 22032e 881736kB
+before processing processes: 1.56u 0.09s 22032e 881736kB
+after processing processes: 1.56u 0.09s 22032e 881736kB
+after buildCfgFromIStructural: 1.56u 0.09s 22033e 881736kB
+before ns->mergeSimpleProcesses: 1.56u 0.09s 22033e 881736kB
+after ns->mergeSimpleProcesses: 1.56u 0.09s 22033e 881736kB
+before ns->splitPartialWrites: 1.56u 0.09s 22033e 881736kB
+after ns->splitPartialWrites: 1.56u 0.09s 22033e 881736kB
+before removeUnneededLatches: 1.56u 0.09s 22033e 881736kB
+after removeUnneededLatches: 1.56u 0.09s 22033e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22033e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22033e 881736kB
+after other NameScope processing: 1.56u 0.09s 22033e 881736kB
+before rebuildInstGraph: 1.56u 0.09s 22035e 881736kB
+  before addAllInScope: 1.56u 0.09s 22035e 881736kB
+  after addAllInScope: 1.56u 0.09s 22035e 881736kB
+after rebuildInstGraph: 1.56u 0.09s 22035e 881736kB
+before markTristateCones : 1.56u 0.09s 22035e 881736kB
+after markTristateCones : 1.56u 0.09s 22035e 881736kB
+after scheduling: 1.56u 0.09s 22057e 881736kB
+after model->finalize: 1.56u 0.09s 22068e 881736kB
+before attribute propagation: 1.56u 0.09s 22070e 881736kB
+after attribute propagation: 1.56u 0.09s 22070e 881736kB
+before constantPropagate: 1.56u 0.09s 22070e 881736kB
+after constantPropagate: 1.56u 0.09s 22070e 881736kB
+before removeUnusedSignals circuit: 1.56u 0.09s 22070e 881736kB
+after removeUnusedSignals circuit: 1.56u 0.09s 22070e 881736kB
+before optimize latch enable: 1.56u 0.09s 22070e 881736kB
+after optimize latch enable: 1.56u 0.09s 22070e 881736kB
+after circuit->load: 1.56u 0.09s 22070e 881736kB
+
+Processing rl_wtree_comp402
+before buildCfgFromIStructural: 1.56u 0.09s 22028e 881736kB
+Before processing instances: 1.56u 0.09s 22036e 881736kB
+After processing instances: 1.56u 0.09s 22036e 881736kB
+before processing cont assigns: 1.56u 0.09s 22036e 881736kB
+after processing cont assigns: 1.56u 0.09s 22054e 881736kB
+before processing processes: 1.56u 0.09s 22054e 881736kB
+after processing processes: 1.56u 0.09s 22054e 881736kB
+after buildCfgFromIStructural: 1.56u 0.09s 22054e 881736kB
+before ns->mergeSimpleProcesses: 1.56u 0.09s 22054e 881736kB
+after ns->mergeSimpleProcesses: 1.56u 0.09s 22054e 881736kB
+before ns->splitPartialWrites: 1.56u 0.09s 22054e 881736kB
+after ns->splitPartialWrites: 1.56u 0.09s 22054e 881736kB
+before removeUnneededLatches: 1.56u 0.09s 22054e 881736kB
+after removeUnneededLatches: 1.56u 0.09s 22054e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22054e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.56u 0.09s 22054e 881736kB
+after other NameScope processing: 1.56u 0.09s 22054e 881736kB
+before rebuildInstGraph: 1.57u 0.09s 22077e 881736kB
+  before addAllInScope: 1.57u 0.09s 22077e 881736kB
+  after addAllInScope: 1.57u 0.09s 22077e 881736kB
+after rebuildInstGraph: 1.57u 0.09s 22077e 881736kB
+before markTristateCones : 1.57u 0.09s 22077e 881736kB
+after markTristateCones : 1.57u 0.09s 22077e 881736kB
+after scheduling: 1.57u 0.09s 22110e 881736kB
+after model->finalize: 1.57u 0.09s 22151e 881736kB
+before attribute propagation: 1.57u 0.09s 22169e 881736kB
+after attribute propagation: 1.57u 0.09s 22169e 881736kB
+before constantPropagate: 1.57u 0.09s 22169e 881736kB
+after constantPropagate: 1.57u 0.09s 22169e 881736kB
+before removeUnusedSignals circuit: 1.57u 0.09s 22169e 881736kB
+after removeUnusedSignals circuit: 1.57u 0.09s 22169e 881736kB
+before optimize latch enable: 1.57u 0.09s 22169e 881736kB
+after optimize latch enable: 1.57u 0.09s 22169e 881736kB
+after circuit->load: 1.57u 0.09s 22169e 881736kB
+
+Processing ZebuClockDetectFront_60
+before buildCfgFromIStructural: 1.57u 0.09s 22080e 881736kB
+Before processing instances: 1.57u 0.09s 22086e 881736kB
+After processing instances: 1.57u 0.09s 22091e 881736kB
+before processing cont assigns: 1.57u 0.09s 22091e 881736kB
+after processing cont assigns: 1.57u 0.09s 22093e 881736kB
+before processing processes: 1.57u 0.09s 22093e 881736kB
+after processing processes: 1.57u 0.09s 22095e 881736kB
+after buildCfgFromIStructural: 1.57u 0.09s 22095e 881736kB
+before ns->mergeSimpleProcesses: 1.57u 0.09s 22095e 881736kB
+after ns->mergeSimpleProcesses: 1.57u 0.09s 22095e 881736kB
+before ns->splitPartialWrites: 1.57u 0.09s 22095e 881736kB
+after ns->splitPartialWrites: 1.57u 0.09s 22095e 881736kB
+before removeUnneededLatches: 1.57u 0.09s 22095e 881736kB
+after removeUnneededLatches: 1.57u 0.09s 22095e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22095e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22095e 881736kB
+after other NameScope processing: 1.57u 0.09s 22095e 881736kB
+before rebuildInstGraph: 1.57u 0.09s 22098e 881736kB
+  before addAllInScope: 1.57u 0.09s 22098e 881736kB
+  after addAllInScope: 1.57u 0.09s 22098e 881736kB
+after rebuildInstGraph: 1.57u 0.09s 22098e 881736kB
+before markTristateCones : 1.57u 0.09s 22098e 881736kB
+after markTristateCones : 1.57u 0.09s 22098e 881736kB
+after scheduling: 1.57u 0.09s 22117e 881736kB
+after model->finalize: 1.57u 0.09s 22125e 881736kB
+before attribute propagation: 1.57u 0.09s 22122e 881736kB
+after attribute propagation: 1.57u 0.09s 22122e 881736kB
+before constantPropagate: 1.57u 0.09s 22122e 881736kB
+after constantPropagate: 1.57u 0.09s 22122e 881736kB
+before removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+after removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+before optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after circuit->load: 1.57u 0.09s 22122e 881736kB
+
+Processing ZebuClockDetectFront_62
+before buildCfgFromIStructural: 1.57u 0.09s 22094e 881736kB
+Before processing instances: 1.57u 0.09s 22096e 881736kB
+After processing instances: 1.57u 0.09s 22101e 881736kB
+before processing cont assigns: 1.57u 0.09s 22101e 881736kB
+after processing cont assigns: 1.57u 0.09s 22103e 881736kB
+before processing processes: 1.57u 0.09s 22103e 881736kB
+after processing processes: 1.57u 0.09s 22105e 881736kB
+after buildCfgFromIStructural: 1.57u 0.09s 22105e 881736kB
+before ns->mergeSimpleProcesses: 1.57u 0.09s 22105e 881736kB
+after ns->mergeSimpleProcesses: 1.57u 0.09s 22105e 881736kB
+before ns->splitPartialWrites: 1.57u 0.09s 22105e 881736kB
+after ns->splitPartialWrites: 1.57u 0.09s 22105e 881736kB
+before removeUnneededLatches: 1.57u 0.09s 22105e 881736kB
+after removeUnneededLatches: 1.57u 0.09s 22105e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22105e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22105e 881736kB
+after other NameScope processing: 1.57u 0.09s 22105e 881736kB
+before rebuildInstGraph: 1.57u 0.09s 22108e 881736kB
+  before addAllInScope: 1.57u 0.09s 22108e 881736kB
+  after addAllInScope: 1.57u 0.09s 22108e 881736kB
+after rebuildInstGraph: 1.57u 0.09s 22108e 881736kB
+before markTristateCones : 1.57u 0.09s 22108e 881736kB
+after markTristateCones : 1.57u 0.09s 22108e 881736kB
+after scheduling: 1.57u 0.09s 22127e 881736kB
+after model->finalize: 1.57u 0.09s 22127e 881736kB
+before attribute propagation: 1.57u 0.09s 22122e 881736kB
+after attribute propagation: 1.57u 0.09s 22122e 881736kB
+before constantPropagate: 1.57u 0.09s 22122e 881736kB
+after constantPropagate: 1.57u 0.09s 22122e 881736kB
+before removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+after removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+before optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after circuit->load: 1.57u 0.09s 22122e 881736kB
+
+Processing ZebuClockDetectFront_8
+before buildCfgFromIStructural: 1.57u 0.09s 22094e 881736kB
+Before processing instances: 1.57u 0.09s 22096e 881736kB
+After processing instances: 1.57u 0.09s 22101e 881736kB
+before processing cont assigns: 1.57u 0.09s 22101e 881736kB
+after processing cont assigns: 1.57u 0.09s 22103e 881736kB
+before processing processes: 1.57u 0.09s 22103e 881736kB
+after processing processes: 1.57u 0.09s 22105e 881736kB
+after buildCfgFromIStructural: 1.57u 0.09s 22105e 881736kB
+before ns->mergeSimpleProcesses: 1.57u 0.09s 22105e 881736kB
+after ns->mergeSimpleProcesses: 1.57u 0.09s 22105e 881736kB
+before ns->splitPartialWrites: 1.57u 0.09s 22105e 881736kB
+after ns->splitPartialWrites: 1.57u 0.09s 22105e 881736kB
+before removeUnneededLatches: 1.57u 0.09s 22105e 881736kB
+after removeUnneededLatches: 1.57u 0.09s 22105e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22105e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.57u 0.09s 22105e 881736kB
+after other NameScope processing: 1.57u 0.09s 22105e 881736kB
+before rebuildInstGraph: 1.57u 0.09s 22108e 881736kB
+  before addAllInScope: 1.57u 0.09s 22108e 881736kB
+  after addAllInScope: 1.57u 0.09s 22108e 881736kB
+after rebuildInstGraph: 1.57u 0.09s 22108e 881736kB
+before markTristateCones : 1.57u 0.09s 22108e 881736kB
+after markTristateCones : 1.57u 0.09s 22108e 881736kB
+after scheduling: 1.57u 0.09s 22127e 881736kB
+after model->finalize: 1.57u 0.09s 22127e 881736kB
+before attribute propagation: 1.57u 0.09s 22122e 881736kB
+after attribute propagation: 1.57u 0.09s 22122e 881736kB
+before constantPropagate: 1.57u 0.09s 22122e 881736kB
+after constantPropagate: 1.57u 0.09s 22122e 881736kB
+before removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+after removeUnusedSignals circuit: 1.57u 0.09s 22122e 881736kB
+before optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after optimize latch enable: 1.57u 0.09s 22122e 881736kB
+after circuit->load: 1.57u 0.09s 22122e 881736kB
+
+Processing ZebuClockDetectFront_11
+before buildCfgFromIStructural: 1.57u 0.09s 22094e 881736kB
+Before processing instances: 1.58u 0.09s 22096e 881736kB
+After processing instances: 1.58u 0.09s 22101e 881736kB
+before processing cont assigns: 1.58u 0.09s 22101e 881736kB
+after processing cont assigns: 1.58u 0.09s 22103e 881736kB
+before processing processes: 1.58u 0.09s 22103e 881736kB
+after processing processes: 1.58u 0.09s 22105e 881736kB
+after buildCfgFromIStructural: 1.58u 0.09s 22105e 881736kB
+before ns->mergeSimpleProcesses: 1.58u 0.09s 22105e 881736kB
+after ns->mergeSimpleProcesses: 1.58u 0.09s 22105e 881736kB
+before ns->splitPartialWrites: 1.58u 0.09s 22105e 881736kB
+after ns->splitPartialWrites: 1.58u 0.09s 22105e 881736kB
+before removeUnneededLatches: 1.58u 0.09s 22105e 881736kB
+after removeUnneededLatches: 1.58u 0.09s 22105e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22105e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22105e 881736kB
+after other NameScope processing: 1.58u 0.09s 22105e 881736kB
+before rebuildInstGraph: 1.58u 0.09s 22108e 881736kB
+  before addAllInScope: 1.58u 0.09s 22108e 881736kB
+  after addAllInScope: 1.58u 0.09s 22108e 881736kB
+after rebuildInstGraph: 1.58u 0.09s 22108e 881736kB
+before markTristateCones : 1.58u 0.09s 22108e 881736kB
+after markTristateCones : 1.58u 0.09s 22108e 881736kB
+after scheduling: 1.58u 0.09s 22127e 881736kB
+after model->finalize: 1.58u 0.09s 22127e 881736kB
+before attribute propagation: 1.58u 0.09s 22122e 881736kB
+after attribute propagation: 1.58u 0.09s 22122e 881736kB
+before constantPropagate: 1.58u 0.09s 22122e 881736kB
+after constantPropagate: 1.58u 0.09s 22122e 881736kB
+before removeUnusedSignals circuit: 1.58u 0.09s 22122e 881736kB
+after removeUnusedSignals circuit: 1.58u 0.09s 22122e 881736kB
+before optimize latch enable: 1.58u 0.09s 22122e 881736kB
+after optimize latch enable: 1.58u 0.09s 22122e 881736kB
+after circuit->load: 1.58u 0.09s 22122e 881736kB
+
+Processing ZebuClockDetectFront_19
+before buildCfgFromIStructural: 1.58u 0.09s 22094e 881736kB
+Before processing instances: 1.58u 0.09s 22099e 881736kB
+After processing instances: 1.58u 0.09s 22104e 881736kB
+before processing cont assigns: 1.58u 0.09s 22104e 881736kB
+after processing cont assigns: 1.58u 0.09s 22106e 881736kB
+before processing processes: 1.58u 0.09s 22106e 881736kB
+after processing processes: 1.58u 0.09s 22108e 881736kB
+after buildCfgFromIStructural: 1.58u 0.09s 22108e 881736kB
+before ns->mergeSimpleProcesses: 1.58u 0.09s 22108e 881736kB
+after ns->mergeSimpleProcesses: 1.58u 0.09s 22108e 881736kB
+before ns->splitPartialWrites: 1.58u 0.09s 22108e 881736kB
+after ns->splitPartialWrites: 1.58u 0.09s 22108e 881736kB
+before removeUnneededLatches: 1.58u 0.09s 22108e 881736kB
+after removeUnneededLatches: 1.58u 0.09s 22108e 881736kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22108e 881736kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22108e 881736kB
+after other NameScope processing: 1.58u 0.09s 22108e 881736kB
+before rebuildInstGraph: 1.58u 0.09s 22111e 881736kB
+  before addAllInScope: 1.58u 0.09s 22111e 881868kB
+  after addAllInScope: 1.58u 0.09s 22111e 881868kB
+after rebuildInstGraph: 1.58u 0.09s 22111e 881868kB
+before markTristateCones : 1.58u 0.09s 22111e 881868kB
+after markTristateCones : 1.58u 0.09s 22111e 881868kB
+after scheduling: 1.58u 0.09s 22130e 881868kB
+after model->finalize: 1.58u 0.09s 22137e 881868kB
+before attribute propagation: 1.58u 0.09s 22133e 881868kB
+after attribute propagation: 1.58u 0.09s 22133e 881868kB
+before constantPropagate: 1.58u 0.09s 22133e 881868kB
+after constantPropagate: 1.58u 0.09s 22133e 881868kB
+before removeUnusedSignals circuit: 1.58u 0.09s 22133e 881868kB
+after removeUnusedSignals circuit: 1.58u 0.09s 22133e 881868kB
+before optimize latch enable: 1.58u 0.09s 22133e 881868kB
+after optimize latch enable: 1.58u 0.09s 22133e 881868kB
+after circuit->load: 1.58u 0.09s 22133e 881868kB
+
+Processing ZebuClockDetectFront_24
+before buildCfgFromIStructural: 1.58u 0.09s 22105e 881868kB
+Before processing instances: 1.58u 0.09s 22107e 881868kB
+After processing instances: 1.58u 0.09s 22112e 881868kB
+before processing cont assigns: 1.58u 0.09s 22112e 881868kB
+after processing cont assigns: 1.58u 0.09s 22114e 881868kB
+before processing processes: 1.58u 0.09s 22114e 881868kB
+after processing processes: 1.58u 0.09s 22116e 881868kB
+after buildCfgFromIStructural: 1.58u 0.09s 22116e 881868kB
+before ns->mergeSimpleProcesses: 1.58u 0.09s 22116e 881868kB
+after ns->mergeSimpleProcesses: 1.58u 0.09s 22116e 881868kB
+before ns->splitPartialWrites: 1.58u 0.09s 22116e 881868kB
+after ns->splitPartialWrites: 1.58u 0.09s 22116e 881868kB
+before removeUnneededLatches: 1.58u 0.09s 22116e 881868kB
+after removeUnneededLatches: 1.58u 0.09s 22116e 881868kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22116e 881868kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22116e 881868kB
+after other NameScope processing: 1.58u 0.09s 22116e 881868kB
+before rebuildInstGraph: 1.58u 0.09s 22119e 881868kB
+  before addAllInScope: 1.58u 0.09s 22119e 881868kB
+  after addAllInScope: 1.58u 0.09s 22119e 881868kB
+after rebuildInstGraph: 1.58u 0.09s 22119e 881868kB
+before markTristateCones : 1.58u 0.09s 22119e 881868kB
+after markTristateCones : 1.58u 0.09s 22119e 881868kB
+after scheduling: 1.58u 0.09s 22138e 881868kB
+after model->finalize: 1.58u 0.09s 22138e 881868kB
+before attribute propagation: 1.58u 0.09s 22133e 881868kB
+after attribute propagation: 1.58u 0.09s 22133e 881868kB
+before constantPropagate: 1.58u 0.09s 22133e 881868kB
+after constantPropagate: 1.58u 0.09s 22133e 881868kB
+before removeUnusedSignals circuit: 1.58u 0.09s 22133e 881868kB
+after removeUnusedSignals circuit: 1.58u 0.09s 22133e 881868kB
+before optimize latch enable: 1.58u 0.09s 22133e 881868kB
+after optimize latch enable: 1.58u 0.09s 22133e 881868kB
+after circuit->load: 1.58u 0.09s 22133e 881868kB
+
+Processing ZebuClockDetectFront_29
+before buildCfgFromIStructural: 1.58u 0.09s 22105e 881868kB
+Before processing instances: 1.58u 0.09s 22107e 881868kB
+After processing instances: 1.58u 0.09s 22112e 881868kB
+before processing cont assigns: 1.58u 0.09s 22112e 881868kB
+after processing cont assigns: 1.58u 0.09s 22114e 881868kB
+before processing processes: 1.58u 0.09s 22114e 881868kB
+after processing processes: 1.58u 0.09s 22116e 881868kB
+after buildCfgFromIStructural: 1.58u 0.09s 22116e 881868kB
+before ns->mergeSimpleProcesses: 1.58u 0.09s 22116e 881868kB
+after ns->mergeSimpleProcesses: 1.58u 0.09s 22116e 881868kB
+before ns->splitPartialWrites: 1.58u 0.09s 22116e 881868kB
+after ns->splitPartialWrites: 1.58u 0.09s 22116e 881868kB
+before removeUnneededLatches: 1.58u 0.09s 22116e 881868kB
+after removeUnneededLatches: 1.58u 0.09s 22116e 881868kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22116e 881868kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.09s 22116e 881868kB
+after other NameScope processing: 1.58u 0.09s 22116e 881868kB
+before rebuildInstGraph: 1.58u 0.09s 22119e 881868kB
+  before addAllInScope: 1.58u 0.09s 22119e 881868kB
+  after addAllInScope: 1.58u 0.09s 22119e 881868kB
+after rebuildInstGraph: 1.58u 0.09s 22119e 881868kB
+before markTristateCones : 1.58u 0.09s 22119e 881868kB
+after markTristateCones : 1.58u 0.09s 22119e 881868kB
+after scheduling: 1.58u 0.09s 22138e 881868kB
+after model->finalize: 1.58u 0.1s 22138e 881868kB
+before attribute propagation: 1.58u 0.1s 22133e 881868kB
+after attribute propagation: 1.58u 0.1s 22133e 881868kB
+before constantPropagate: 1.58u 0.1s 22133e 881868kB
+after constantPropagate: 1.58u 0.1s 22133e 881868kB
+before removeUnusedSignals circuit: 1.58u 0.1s 22133e 881868kB
+after removeUnusedSignals circuit: 1.58u 0.1s 22133e 881868kB
+before optimize latch enable: 1.58u 0.1s 22133e 881868kB
+after optimize latch enable: 1.58u 0.1s 22133e 881868kB
+after circuit->load: 1.58u 0.1s 22133e 881868kB
+
+Processing ZebuClockDetectFront_34
+before buildCfgFromIStructural: 1.58u 0.1s 22105e 881868kB
+Before processing instances: 1.58u 0.1s 22107e 881868kB
+After processing instances: 1.58u 0.1s 22112e 881868kB
+before processing cont assigns: 1.58u 0.1s 22112e 881868kB
+after processing cont assigns: 1.58u 0.1s 22114e 881868kB
+before processing processes: 1.58u 0.1s 22114e 881868kB
+after processing processes: 1.58u 0.1s 22116e 881868kB
+after buildCfgFromIStructural: 1.58u 0.1s 22116e 881868kB
+before ns->mergeSimpleProcesses: 1.58u 0.1s 22116e 881868kB
+after ns->mergeSimpleProcesses: 1.58u 0.1s 22116e 881868kB
+before ns->splitPartialWrites: 1.58u 0.1s 22116e 881868kB
+after ns->splitPartialWrites: 1.58u 0.1s 22116e 881868kB
+before removeUnneededLatches: 1.58u 0.1s 22116e 881868kB
+after removeUnneededLatches: 1.58u 0.1s 22116e 881868kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.1s 22116e 881868kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.1s 22116e 881868kB
+after other NameScope processing: 1.58u 0.1s 22116e 881868kB
+before rebuildInstGraph: 1.58u 0.1s 22119e 881868kB
+  before addAllInScope: 1.58u 0.1s 22119e 881868kB
+  after addAllInScope: 1.58u 0.1s 22119e 881868kB
+after rebuildInstGraph: 1.58u 0.1s 22119e 881868kB
+before markTristateCones : 1.58u 0.1s 22119e 881868kB
+after markTristateCones : 1.58u 0.1s 22119e 881868kB
+after scheduling: 1.58u 0.1s 22138e 881868kB
+after model->finalize: 1.58u 0.1s 22138e 881868kB
+before attribute propagation: 1.58u 0.1s 22133e 881868kB
+after attribute propagation: 1.58u 0.1s 22133e 881868kB
+before constantPropagate: 1.58u 0.1s 22133e 881868kB
+after constantPropagate: 1.58u 0.1s 22133e 881868kB
+before removeUnusedSignals circuit: 1.58u 0.1s 22133e 881868kB
+after removeUnusedSignals circuit: 1.58u 0.1s 22133e 881868kB
+before optimize latch enable: 1.58u 0.1s 22133e 881868kB
+after optimize latch enable: 1.58u 0.1s 22133e 881868kB
+after circuit->load: 1.58u 0.1s 22133e 881868kB
+
+Processing ZebuClockDetectFront_47
+before buildCfgFromIStructural: 1.58u 0.1s 22105e 881868kB
+Before processing instances: 1.58u 0.1s 22107e 881868kB
+After processing instances: 1.58u 0.1s 22112e 881868kB
+before processing cont assigns: 1.58u 0.1s 22112e 881868kB
+after processing cont assigns: 1.58u 0.1s 22114e 881868kB
+before processing processes: 1.58u 0.1s 22114e 881868kB
+after processing processes: 1.58u 0.1s 22116e 881868kB
+after buildCfgFromIStructural: 1.58u 0.1s 22116e 881868kB
+before ns->mergeSimpleProcesses: 1.58u 0.1s 22116e 881868kB
+after ns->mergeSimpleProcesses: 1.58u 0.1s 22116e 881868kB
+before ns->splitPartialWrites: 1.58u 0.1s 22116e 881868kB
+after ns->splitPartialWrites: 1.58u 0.1s 22116e 881868kB
+before removeUnneededLatches: 1.58u 0.1s 22116e 881868kB
+after removeUnneededLatches: 1.58u 0.1s 22116e 881868kB
+before printMsgForBothBAandNBAAccrossProcess: 1.58u 0.1s 22116e 881868kB
+after printMsgForBothBAandNBAAccrossProcess: 1.58u 0.1s 22116e 881868kB
+after other NameScope processing: 1.58u 0.1s 22116e 881868kB
+before rebuildInstGraph: 1.59u 0.1s 22119e 881868kB
+  before addAllInScope: 1.59u 0.1s 22119e 881868kB
+  after addAllInScope: 1.59u 0.1s 22119e 881868kB
+after rebuildInstGraph: 1.59u 0.1s 22119e 881868kB
+before markTristateCones : 1.59u 0.1s 22119e 881868kB
+after markTristateCones : 1.59u 0.1s 22119e 881868kB
+after scheduling: 1.59u 0.1s 22138e 881868kB
+after model->finalize: 1.59u 0.1s 22138e 881868kB
+before attribute propagation: 1.59u 0.1s 22133e 881868kB
+after attribute propagation: 1.59u 0.1s 22133e 881868kB
+before constantPropagate: 1.59u 0.1s 22133e 881868kB
+after constantPropagate: 1.59u 0.1s 22133e 881868kB
+before removeUnusedSignals circuit: 1.59u 0.1s 22133e 881868kB
+after removeUnusedSignals circuit: 1.59u 0.1s 22133e 881868kB
+before optimize latch enable: 1.59u 0.1s 22133e 881868kB
+after optimize latch enable: 1.59u 0.1s 22133e 881868kB
+after circuit->load: 1.59u 0.1s 22133e 881868kB
+
+Processing ZebuClockDetectFront_50
+before buildCfgFromIStructural: 1.59u 0.1s 22105e 881868kB
+Before processing instances: 1.59u 0.1s 22107e 881868kB
+After processing instances: 1.59u 0.1s 22112e 881868kB
+before processing cont assigns: 1.59u 0.1s 22112e 881868kB
+after processing cont assigns: 1.59u 0.1s 22114e 881868kB
+before processing processes: 1.59u 0.1s 22114e 881868kB
+after processing processes: 1.59u 0.1s 22116e 881868kB
+after buildCfgFromIStructural: 1.59u 0.1s 22116e 881868kB
+before ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 881868kB
+after ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 881868kB
+before ns->splitPartialWrites: 1.59u 0.1s 22116e 881868kB
+after ns->splitPartialWrites: 1.59u 0.1s 22116e 881868kB
+before removeUnneededLatches: 1.59u 0.1s 22116e 881868kB
+after removeUnneededLatches: 1.59u 0.1s 22116e 881868kB
+before printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 881868kB
+after printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 881868kB
+after other NameScope processing: 1.59u 0.1s 22116e 881868kB
+before rebuildInstGraph: 1.59u 0.1s 22119e 881868kB
+  before addAllInScope: 1.59u 0.1s 22119e 882004kB
+  after addAllInScope: 1.59u 0.1s 22119e 882004kB
+after rebuildInstGraph: 1.59u 0.1s 22119e 882004kB
+before markTristateCones : 1.59u 0.1s 22119e 882004kB
+after markTristateCones : 1.59u 0.1s 22119e 882004kB
+after scheduling: 1.59u 0.1s 22138e 882004kB
+after model->finalize: 1.59u 0.1s 22138e 882004kB
+before attribute propagation: 1.59u 0.1s 22133e 882004kB
+after attribute propagation: 1.59u 0.1s 22133e 882004kB
+before constantPropagate: 1.59u 0.1s 22133e 882004kB
+after constantPropagate: 1.59u 0.1s 22133e 882004kB
+before removeUnusedSignals circuit: 1.59u 0.1s 22133e 882004kB
+after removeUnusedSignals circuit: 1.59u 0.1s 22133e 882004kB
+before optimize latch enable: 1.59u 0.1s 22133e 882004kB
+after optimize latch enable: 1.59u 0.1s 22133e 882004kB
+after circuit->load: 1.59u 0.1s 22133e 882004kB
+
+Processing ZebuClockDetectFront_56
+before buildCfgFromIStructural: 1.59u 0.1s 22105e 882004kB
+Before processing instances: 1.59u 0.1s 22107e 882004kB
+After processing instances: 1.59u 0.1s 22112e 882004kB
+before processing cont assigns: 1.59u 0.1s 22112e 882004kB
+after processing cont assigns: 1.59u 0.1s 22114e 882004kB
+before processing processes: 1.59u 0.1s 22114e 882004kB
+after processing processes: 1.59u 0.1s 22116e 882004kB
+after buildCfgFromIStructural: 1.59u 0.1s 22116e 882004kB
+before ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 882004kB
+after ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 882004kB
+before ns->splitPartialWrites: 1.59u 0.1s 22116e 882004kB
+after ns->splitPartialWrites: 1.59u 0.1s 22116e 882004kB
+before removeUnneededLatches: 1.59u 0.1s 22116e 882004kB
+after removeUnneededLatches: 1.59u 0.1s 22116e 882004kB
+before printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 882004kB
+after printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 882004kB
+after other NameScope processing: 1.59u 0.1s 22116e 882004kB
+before rebuildInstGraph: 1.59u 0.1s 22119e 882004kB
+  before addAllInScope: 1.59u 0.1s 22119e 882004kB
+  after addAllInScope: 1.59u 0.1s 22119e 882004kB
+after rebuildInstGraph: 1.59u 0.1s 22119e 882004kB
+before markTristateCones : 1.59u 0.1s 22119e 882004kB
+after markTristateCones : 1.59u 0.1s 22119e 882004kB
+after scheduling: 1.59u 0.1s 22138e 882004kB
+after model->finalize: 1.59u 0.1s 22138e 882004kB
+before attribute propagation: 1.59u 0.1s 22133e 882004kB
+after attribute propagation: 1.59u 0.1s 22133e 882004kB
+before constantPropagate: 1.59u 0.1s 22133e 882004kB
+after constantPropagate: 1.59u 0.1s 22133e 882004kB
+before removeUnusedSignals circuit: 1.59u 0.1s 22133e 882004kB
+after removeUnusedSignals circuit: 1.59u 0.1s 22133e 882004kB
+before optimize latch enable: 1.59u 0.1s 22133e 882004kB
+after optimize latch enable: 1.59u 0.1s 22133e 882004kB
+after circuit->load: 1.59u 0.1s 22133e 882004kB
+
+Processing ZebuClockDetectFront_0
+before buildCfgFromIStructural: 1.59u 0.1s 22105e 882004kB
+Before processing instances: 1.59u 0.1s 22107e 882004kB
+After processing instances: 1.59u 0.1s 22112e 882004kB
+before processing cont assigns: 1.59u 0.1s 22112e 882004kB
+after processing cont assigns: 1.59u 0.1s 22114e 882004kB
+before processing processes: 1.59u 0.1s 22114e 882004kB
+after processing processes: 1.59u 0.1s 22116e 882004kB
+after buildCfgFromIStructural: 1.59u 0.1s 22116e 882004kB
+before ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 882004kB
+after ns->mergeSimpleProcesses: 1.59u 0.1s 22116e 882004kB
+before ns->splitPartialWrites: 1.59u 0.1s 22116e 882004kB
+after ns->splitPartialWrites: 1.59u 0.1s 22116e 882004kB
+before removeUnneededLatches: 1.59u 0.1s 22116e 882004kB
+after removeUnneededLatches: 1.59u 0.1s 22116e 882004kB
+before printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 882004kB
+after printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22116e 882004kB
+after other NameScope processing: 1.59u 0.1s 22116e 882004kB
+before rebuildInstGraph: 1.59u 0.1s 22119e 882004kB
+  before addAllInScope: 1.59u 0.1s 22119e 882004kB
+  after addAllInScope: 1.59u 0.1s 22119e 882004kB
+after rebuildInstGraph: 1.59u 0.1s 22119e 882004kB
+before markTristateCones : 1.59u 0.1s 22119e 882004kB
+after markTristateCones : 1.59u 0.1s 22119e 882004kB
+after scheduling: 1.59u 0.1s 22138e 882004kB
+after model->finalize: 1.59u 0.1s 22138e 882004kB
+before attribute propagation: 1.59u 0.1s 22134e 882004kB
+after attribute propagation: 1.59u 0.1s 22134e 882004kB
+before constantPropagate: 1.59u 0.1s 22134e 882004kB
+after constantPropagate: 1.59u 0.1s 22134e 882004kB
+before removeUnusedSignals circuit: 1.59u 0.1s 22134e 882004kB
+after removeUnusedSignals circuit: 1.59u 0.1s 22134e 882004kB
+before optimize latch enable: 1.59u 0.1s 22134e 882004kB
+after optimize latch enable: 1.59u 0.1s 22134e 882004kB
+after circuit->load: 1.59u 0.1s 22134e 882004kB
+
+Processing ZebuClockDetectFront_7
+before buildCfgFromIStructural: 1.59u 0.1s 22106e 882004kB
+Before processing instances: 1.59u 0.1s 22108e 882004kB
+After processing instances: 1.59u 0.1s 22113e 882004kB
+before processing cont assigns: 1.59u 0.1s 22113e 882004kB
+after processing cont assigns: 1.59u 0.1s 22115e 882004kB
+before processing processes: 1.59u 0.1s 22115e 882004kB
+after processing processes: 1.59u 0.1s 22117e 882004kB
+after buildCfgFromIStructural: 1.59u 0.1s 22117e 882004kB
+before ns->mergeSimpleProcesses: 1.59u 0.1s 22117e 882004kB
+after ns->mergeSimpleProcesses: 1.59u 0.1s 22117e 882004kB
+before ns->splitPartialWrites: 1.59u 0.1s 22117e 882004kB
+after ns->splitPartialWrites: 1.59u 0.1s 22117e 882004kB
+before removeUnneededLatches: 1.59u 0.1s 22117e 882004kB
+after removeUnneededLatches: 1.59u 0.1s 22117e 882004kB
+before printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22117e 882004kB
+after printMsgForBothBAandNBAAccrossProcess: 1.59u 0.1s 22117e 882004kB
+after other NameScope processing: 1.59u 0.1s 22117e 882004kB
+before rebuildInstGraph: 1.59u 0.1s 22120e 882004kB
+  before addAllInScope: 1.59u 0.1s 22120e 882004kB
+  after addAllInScope: 1.59u 0.1s 22120e 882004kB
+after rebuildInstGraph: 1.59u 0.1s 22120e 882004kB
+before markTristateCones : 1.59u 0.1s 22120e 882004kB
+after markTristateCones : 1.59u 0.1s 22120e 882004kB
+after scheduling: 1.59u 0.1s 22139e 882004kB
+after model->finalize: 1.59u 0.1s 22139e 882004kB
+before attribute propagation: 1.59u 0.1s 22135e 882004kB
+after attribute propagation: 1.59u 0.1s 22135e 882004kB
+before constantPropagate: 1.59u 0.1s 22135e 882004kB
+after constantPropagate: 1.59u 0.1s 22135e 882004kB
+before removeUnusedSignals circuit: 1.59u 0.1s 22135e 882004kB
+after removeUnusedSignals circuit: 1.59u 0.1s 22135e 882004kB
+before optimize latch enable: 1.59u 0.1s 22135e 882004kB
+after optimize latch enable: 1.59u 0.1s 22135e 882004kB
+after circuit->load: 1.59u 0.1s 22135e 882004kB
+
+Processing zceiMessageInPort_6
+before attribute propagation: 1.59u 0.1s 22112e 882004kB
+after attribute propagation: 1.59u 0.1s 22112e 882004kB
+before constantPropagate: 1.59u 0.1s 22112e 882004kB
+after constantPropagate: 1.59u 0.1s 22112e 882004kB
+before removeUnusedSignals circuit: 1.6u 0.1s 22112e 882004kB
+after removeUnusedSignals circuit: 1.6u 0.1s 22112e 882004kB
+before optimize latch enable: 1.6u 0.1s 22112e 882004kB
+after optimize latch enable: 1.6u 0.1s 22112e 882004kB
+before removeReadAfterMissingWrite: 1.6u 0.1s 22112e 882004kB
+after removeReadAfterMissingWrite: 1.6u 0.1s 22112e 882004kB
+before undoDimensionalSplitOfMemories: 1.6u 0.1s 22112e 882004kB
+after undoDimensionalSplitOfMemories: 1.6u 0.1s 22112e 882004kB
+before extractMemories: 1.6u 0.1s 22112e 882004kB
+after extractMemories: 1.6u 0.1s 22112e 882004kB
+before extractHolds: 1.6u 0.1s 22112e 882004kB
+after extractHolds: 1.6u 0.1s 22112e 882004kB
+before simplifyAdders: 1.6u 0.1s 22112e 882004kB
+after simplifyAdders: 1.6u 0.1s 22112e 882004kB
+before optimizeLessThan: 1.6u 0.1s 22112e 882004kB
+after optimizeLessThan: 1.6u 0.1s 22112e 882004kB
+before reportUnresolvedType: 1.6u 0.1s 22112e 882004kB
+after reportUnresolvedType: 1.6u 0.1s 22112e 882004kB
+
+Processing alb_mss_clkctrl_clkgate
+before buildCfgFromIStructural: 1.6u 0.1s 22107e 882004kB
+Before processing instances: 1.6u 0.1s 22110e 882004kB
+After processing instances: 1.6u 0.1s 22110e 882004kB
+before processing cont assigns: 1.6u 0.1s 22110e 882004kB
+after processing cont assigns: 1.6u 0.1s 22112e 882004kB
+before processing processes: 1.6u 0.1s 22112e 882004kB
+after processing processes: 1.6u 0.1s 22125e 882004kB
+after buildCfgFromIStructural: 1.6u 0.1s 22125e 882004kB
+before ns->mergeSimpleProcesses: 1.6u 0.1s 22125e 882004kB
+after ns->mergeSimpleProcesses: 1.6u 0.1s 22125e 882004kB
+before ns->splitPartialWrites: 1.6u 0.1s 22125e 882004kB
+after ns->splitPartialWrites: 1.6u 0.1s 22125e 882004kB
+before removeUnneededLatches: 1.6u 0.1s 22125e 882004kB
+after removeUnneededLatches: 1.6u 0.1s 22125e 882004kB
+before printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22125e 882004kB
+after printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22125e 882004kB
+after other NameScope processing: 1.6u 0.1s 22125e 882004kB
+before rebuildInstGraph: 1.6u 0.1s 22125e 882004kB
+  before addAllInScope: 1.6u 0.1s 22125e 882004kB
+  after addAllInScope: 1.6u 0.1s 22125e 882004kB
+after rebuildInstGraph: 1.6u 0.1s 22125e 882004kB
+before markTristateCones : 1.6u 0.1s 22125e 882004kB
+after markTristateCones : 1.6u 0.1s 22125e 882004kB
+after scheduling: 1.6u 0.1s 22144e 882004kB
+after model->finalize: 1.6u 0.1s 22156e 882004kB
+before attribute propagation: 1.6u 0.1s 22161e 882004kB
+after attribute propagation: 1.6u 0.1s 22161e 882004kB
+before constantPropagate: 1.6u 0.1s 22161e 882004kB
+after constantPropagate: 1.6u 0.1s 22161e 882004kB
+before removeUnusedSignals circuit: 1.6u 0.1s 22161e 882004kB
+after removeUnusedSignals circuit: 1.6u 0.1s 22161e 882004kB
+before optimize latch enable: 1.6u 0.1s 22161e 882004kB
+after optimize latch enable: 1.6u 0.1s 22161e 882004kB
+after circuit->load: 1.6u 0.1s 22161e 882004kB
+
+Processing rl_bitscan_4b
+before buildCfgFromIStructural: 1.6u 0.1s 22123e 882004kB
+Before processing instances: 1.6u 0.1s 22126e 882004kB
+After processing instances: 1.6u 0.1s 22126e 882004kB
+before processing cont assigns: 1.6u 0.1s 22126e 882004kB
+after processing cont assigns: 1.6u 0.1s 22128e 882004kB
+before processing processes: 1.6u 0.1s 22128e 882004kB
+after processing processes: 1.6u 0.1s 22150e 882136kB
+after buildCfgFromIStructural: 1.6u 0.1s 22151e 882136kB
+before ns->mergeSimpleProcesses: 1.6u 0.1s 22151e 882136kB
+after ns->mergeSimpleProcesses: 1.6u 0.1s 22151e 882136kB
+before ns->splitPartialWrites: 1.6u 0.1s 22151e 882136kB
+after ns->splitPartialWrites: 1.6u 0.1s 22151e 882136kB
+before removeUnneededLatches: 1.6u 0.1s 22151e 882136kB
+after removeUnneededLatches: 1.6u 0.1s 22151e 882136kB
+before printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22151e 882136kB
+after printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22151e 882136kB
+after other NameScope processing: 1.6u 0.1s 22151e 882136kB
+before rebuildInstGraph: 1.6u 0.1s 22151e 882136kB
+  before addAllInScope: 1.6u 0.1s 22151e 882136kB
+  after addAllInScope: 1.6u 0.1s 22151e 882136kB
+after rebuildInstGraph: 1.6u 0.1s 22151e 882136kB
+before markTristateCones : 1.6u 0.1s 22151e 882136kB
+after markTristateCones : 1.6u 0.1s 22151e 882136kB
+after scheduling: 1.6u 0.1s 22162e 882136kB
+after model->finalize: 1.6u 0.1s 22182e 882136kB
+before attribute propagation: 1.6u 0.1s 22194e 882136kB
+after attribute propagation: 1.6u 0.1s 22194e 882136kB
+before constantPropagate: 1.6u 0.1s 22194e 882136kB
+after constantPropagate: 1.6u 0.1s 22190e 882136kB
+before removeUnusedSignals circuit: 1.6u 0.1s 22190e 882136kB
+after removeUnusedSignals circuit: 1.6u 0.1s 22190e 882136kB
+before optimize latch enable: 1.6u 0.1s 22190e 882136kB
+after optimize latch enable: 1.6u 0.1s 22190e 882136kB
+after circuit->load: 1.6u 0.1s 22190e 882136kB
+
+Processing dw_dbp_cdc_sync
+before buildCfgFromIStructural: 1.6u 0.1s 22143e 882136kB
+Before processing instances: 1.6u 0.1s 22146e 882136kB
+After processing instances: 1.6u 0.1s 22153e 882136kB
+before processing cont assigns: 1.6u 0.1s 22153e 882136kB
+after processing cont assigns: 1.6u 0.1s 22153e 882136kB
+before processing processes: 1.6u 0.1s 22153e 882136kB
+after processing processes: 1.6u 0.1s 22153e 882136kB
+after buildCfgFromIStructural: 1.6u 0.1s 22153e 882136kB
+before printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22153e 882136kB
+after printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22153e 882136kB
+after other NameScope processing: 1.6u 0.1s 22153e 882136kB
+before markTristateCones : 1.6u 0.1s 22153e 882136kB
+after markTristateCones : 1.6u 0.1s 22153e 882136kB
+after scheduling: 1.6u 0.1s 22170e 882136kB
+after model->finalize: 1.6u 0.1s 22174e 882136kB
+before attribute propagation: 1.6u 0.1s 22173e 882136kB
+after attribute propagation: 1.6u 0.1s 22173e 882136kB
+before constantPropagate: 1.6u 0.1s 22173e 882136kB
+after constantPropagate: 1.6u 0.1s 22173e 882136kB
+before removeUnusedSignals circuit: 1.6u 0.1s 22173e 882136kB
+after removeUnusedSignals circuit: 1.6u 0.1s 22173e 882136kB
+before optimize latch enable: 1.6u 0.1s 22173e 882136kB
+after optimize latch enable: 1.6u 0.1s 22173e 882136kB
+after circuit->load: 1.6u 0.1s 22173e 882136kB
+
+Processing DWbb_bcm00_maj
+before buildCfgFromIStructural: 1.6u 0.1s 22150e 882136kB
+Before processing instances: 1.6u 0.1s 22155e 882136kB
+After processing instances: 1.6u 0.1s 22155e 882136kB
+before processing cont assigns: 1.6u 0.1s 22155e 882136kB
+after processing cont assigns: 1.6u 0.1s 22160e 882136kB
+before processing processes: 1.6u 0.1s 22160e 882136kB
+after processing processes: 1.6u 0.1s 22160e 882136kB
+after buildCfgFromIStructural: 1.6u 0.1s 22161e 882136kB
+before ns->mergeSimpleProcesses: 1.6u 0.1s 22161e 882136kB
+after ns->mergeSimpleProcesses: 1.6u 0.1s 22161e 882136kB
+before ns->splitPartialWrites: 1.6u 0.1s 22161e 882136kB
+after ns->splitPartialWrites: 1.6u 0.1s 22161e 882136kB
+before removeUnneededLatches: 1.6u 0.1s 22161e 882136kB
+after removeUnneededLatches: 1.6u 0.1s 22161e 882136kB
+before printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22161e 882136kB
+after printMsgForBothBAandNBAAccrossProcess: 1.6u 0.1s 22161e 882136kB
+after other NameScope processing: 1.61u 0.1s 22161e 882136kB
+before rebuildInstGraph: 1.61u 0.1s 22164e 882136kB
+  before addAllInScope: 1.61u 0.1s 22164e 882136kB
+  after addAllInScope: 1.61u 0.1s 22164e 882136kB
+after rebuildInstGraph: 1.61u 0.1s 22164e 882136kB
+before markTristateCones : 1.61u 0.1s 22164e 882136kB
+after markTristateCones : 1.61u 0.1s 22164e 882136kB
+after scheduling: 1.61u 0.1s 22180e 882136kB
+after model->finalize: 1.61u 0.1s 22195e 882136kB
+before attribute propagation: 1.61u 0.1s 22196e 882136kB
+after attribute propagation: 1.61u 0.1s 22196e 882136kB
+before constantPropagate: 1.61u 0.1s 22196e 882136kB
+after constantPropagate: 1.61u 0.1s 22196e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22196e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22196e 882136kB
+before optimize latch enable: 1.61u 0.1s 22196e 882136kB
+after optimize latch enable: 1.61u 0.1s 22196e 882136kB
+after circuit->load: 1.61u 0.1s 22196e 882136kB
+
+Processing zebu_bb_mem_sco
+before attribute propagation: 1.61u 0.1s 22167e 882136kB
+after attribute propagation: 1.61u 0.1s 22167e 882136kB
+before constantPropagate: 1.61u 0.1s 22167e 882136kB
+after constantPropagate: 1.61u 0.1s 22167e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+before optimize latch enable: 1.61u 0.1s 22167e 882136kB
+after optimize latch enable: 1.61u 0.1s 22167e 882136kB
+before removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+after removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+before undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+after undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+before extractMemories: 1.61u 0.1s 22167e 882136kB
+after extractMemories: 1.61u 0.1s 22167e 882136kB
+before extractHolds: 1.61u 0.1s 22167e 882136kB
+after extractHolds: 1.61u 0.1s 22167e 882136kB
+before simplifyAdders: 1.61u 0.1s 22167e 882136kB
+after simplifyAdders: 1.61u 0.1s 22167e 882136kB
+before optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+after optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+before reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+after reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+
+Processing odd_pty_dec_wrap_0000
+before buildCfgFromIStructural: 1.61u 0.1s 22163e 882136kB
+Before processing instances: 1.61u 0.1s 22168e 882136kB
+After processing instances: 1.61u 0.1s 22171e 882136kB
+before processing cont assigns: 1.61u 0.1s 22171e 882136kB
+after processing cont assigns: 1.61u 0.1s 22171e 882136kB
+before processing processes: 1.61u 0.1s 22171e 882136kB
+after processing processes: 1.61u 0.1s 22171e 882136kB
+after buildCfgFromIStructural: 1.61u 0.1s 22172e 882136kB
+before ns->mergeSimpleProcesses: 1.61u 0.1s 22172e 882136kB
+after ns->mergeSimpleProcesses: 1.61u 0.1s 22172e 882136kB
+before ns->splitPartialWrites: 1.61u 0.1s 22172e 882136kB
+after ns->splitPartialWrites: 1.61u 0.1s 22172e 882136kB
+before removeUnneededLatches: 1.61u 0.1s 22172e 882136kB
+after removeUnneededLatches: 1.61u 0.1s 22172e 882136kB
+before printMsgForBothBAandNBAAccrossProcess: 1.61u 0.1s 22172e 882136kB
+after printMsgForBothBAandNBAAccrossProcess: 1.61u 0.1s 22172e 882136kB
+after other NameScope processing: 1.61u 0.1s 22172e 882136kB
+before markTristateCones : 1.61u 0.1s 22172e 882136kB
+after markTristateCones : 1.61u 0.1s 22172e 882136kB
+after scheduling: 1.61u 0.1s 22185e 882136kB
+after model->finalize: 1.61u 0.1s 22188e 882136kB
+before attribute propagation: 1.61u 0.1s 22186e 882136kB
+after attribute propagation: 1.61u 0.1s 22186e 882136kB
+before constantPropagate: 1.61u 0.1s 22186e 882136kB
+after constantPropagate: 1.61u 0.1s 22186e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22186e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22186e 882136kB
+before optimize latch enable: 1.61u 0.1s 22186e 882136kB
+after optimize latch enable: 1.61u 0.1s 22186e 882136kB
+after circuit->load: 1.61u 0.1s 22186e 882136kB
+
+Processing zebu_bb_sample_clk_uncond_1_1
+before attribute propagation: 1.61u 0.1s 22167e 882136kB
+after attribute propagation: 1.61u 0.1s 22167e 882136kB
+before constantPropagate: 1.61u 0.1s 22167e 882136kB
+after constantPropagate: 1.61u 0.1s 22167e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+before optimize latch enable: 1.61u 0.1s 22167e 882136kB
+after optimize latch enable: 1.61u 0.1s 22167e 882136kB
+before removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+after removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+before undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+after undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+before extractMemories: 1.61u 0.1s 22167e 882136kB
+after extractMemories: 1.61u 0.1s 22167e 882136kB
+before extractHolds: 1.61u 0.1s 22167e 882136kB
+after extractHolds: 1.61u 0.1s 22167e 882136kB
+before simplifyAdders: 1.61u 0.1s 22167e 882136kB
+after simplifyAdders: 1.61u 0.1s 22167e 882136kB
+before optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+after optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+before reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+after reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+
+Processing zebu_reqsig_clock_driverclock
+before attribute propagation: 1.61u 0.1s 22167e 882136kB
+after attribute propagation: 1.61u 0.1s 22167e 882136kB
+before constantPropagate: 1.61u 0.1s 22167e 882136kB
+after constantPropagate: 1.61u 0.1s 22167e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+before optimize latch enable: 1.61u 0.1s 22167e 882136kB
+after optimize latch enable: 1.61u 0.1s 22167e 882136kB
+before removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+after removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+before undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+after undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+before extractMemories: 1.61u 0.1s 22167e 882136kB
+after extractMemories: 1.61u 0.1s 22167e 882136kB
+before extractHolds: 1.61u 0.1s 22167e 882136kB
+after extractHolds: 1.61u 0.1s 22167e 882136kB
+before simplifyAdders: 1.61u 0.1s 22167e 882136kB
+after simplifyAdders: 1.61u 0.1s 22167e 882136kB
+before optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+after optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+before reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+after reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+
+Processing arcv_dm_top_stubs
+before attribute propagation: 1.61u 0.1s 22167e 882136kB
+after attribute propagation: 1.61u 0.1s 22167e 882136kB
+before constantPropagate: 1.61u 0.1s 22167e 882136kB
+after constantPropagate: 1.61u 0.1s 22167e 882136kB
+before removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+after removeUnusedSignals circuit: 1.61u 0.1s 22167e 882136kB
+before optimize latch enable: 1.61u 0.1s 22167e 882136kB
+after optimize latch enable: 1.61u 0.1s 22167e 882136kB
+before removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+after removeReadAfterMissingWrite: 1.61u 0.1s 22167e 882136kB
+before undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+after undoDimensionalSplitOfMemories: 1.61u 0.1s 22167e 882136kB
+before extractMemories: 1.61u 0.1s 22167e 882136kB
+after extractMemories: 1.61u 0.1s 22167e 882136kB
+before extractHolds: 1.61u 0.1s 22167e 882136kB
+after extractHolds: 1.61u 0.1s 22167e 882136kB
+before simplifyAdders: 1.61u 0.1s 22167e 882136kB
+after simplifyAdders: 1.61u 0.1s 22167e 882136kB
+before optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+after optimizeLessThan: 1.61u 0.1s 22167e 882136kB
+before reportUnresolvedType: 1.61u 0.1s 22167e 882136kB
+after reportUnresolvedType: 1.61u 0.1s 22167e 882136kB

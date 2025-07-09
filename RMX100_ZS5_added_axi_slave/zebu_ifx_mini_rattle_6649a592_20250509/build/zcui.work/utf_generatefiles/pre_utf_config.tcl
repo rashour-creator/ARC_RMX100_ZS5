@@ -1,0 +1,5 @@
+set UTF_SYMBOLS_DB(UTF__ZCUI_CWD) /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build 
+set UTF__GENERATED_CMDS [list]
+set UTF_SYMBOLS_DB(FETCH_MODE_ENABLED) -1 
+set UTF_SYMBOLS_DB(ZEMI3_FM_OPT_ENABLED) -1 
+set UTF_SYMBOLS_DB(CLOCK_CONE_MCP_ENABLED) -1 

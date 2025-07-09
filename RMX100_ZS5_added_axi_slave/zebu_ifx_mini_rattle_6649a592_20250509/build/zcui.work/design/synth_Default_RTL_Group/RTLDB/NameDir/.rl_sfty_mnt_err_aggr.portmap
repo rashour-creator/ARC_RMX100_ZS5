@@ -1,0 +1,87 @@
+Module rl_sfty_mnt_err_aggr{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0000_0004{
+34 0 i_data
+0 0 i_occp
+34 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0002{
+60 0 i_data
+0 0 i_occp
+60 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0009{
+2 0 i_data
+0 0 i_occp
+2 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_mem_fifo_0000_0002{
+130 0 i_data
+1 0 i_occp
+130 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0005{
+2 0 i_data
+0 0 i_occp
+2 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0006{
+60 0 i_data
+0 0 i_occp
+60 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_mem_fifo_0000_0000{
+144 0 i_data
+1 0 i_occp
+144 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0003{
+36 0 i_data
+0 0 i_occp
+36 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0007{
+36 0 i_data
+0 0 i_occp
+36 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0008{
+34 0 i_data
+0 0 i_occp
+34 0 o_data
+0 0 o_occp
+}
+NonAliasNets rl_sfty_mnt_err_aggr{
+smi_check_error_r[0]    f   246
+smi_check_error_r[1]    f   245
+sfty_parity_err_r[0]    f   244
+sfty_parity_err_r[1]    f   243
+sfty_mem_dbe_err_r[0]    f   242
+sfty_mem_dbe_err_r[1]    f   241
+sfty_mem_adr_err_r[0]    f   240
+sfty_mem_adr_err_r[1]    f   239
+sfty_mask_pty_err_r[0]    f   238
+sfty_mask_pty_err_r[1]    f   237
+sfty_e2e_err_r[0]    f   236
+sfty_e2e_err_r[1]    f   235
+sfty_diag_mode_pty_err_r[0]    f   234
+sfty_diag_mode_pty_err_r[1]    f   233
+sc_check_error_r[0]    f   232
+sc_check_error_r[1]    f   231
+safety_iso_agg_err_r[0]    f   226
+lsc_stl_ctrl_aux_r_r[0]    f   224
+lsc_stl_ctrl_aux_r_r[1]    f   223
+bus_fatal_err_r[0]    f   217
+bus_fatal_err_r[1]    f   216
+safety_iso_agg_err_r[1]    f   225
+}

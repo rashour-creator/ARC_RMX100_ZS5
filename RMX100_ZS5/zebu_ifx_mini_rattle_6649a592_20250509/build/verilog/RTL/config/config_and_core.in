@@ -1,0 +1,7 @@
+
+`include "config.in"                // configuration parameter file
+`if `CORE_TYPE == 0
+`include "mini_rattler.in"
+`else
+`include "rattler.in"
+`endif

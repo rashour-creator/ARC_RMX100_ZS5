@@ -1,0 +1,19 @@
+   elapsed:0.37 s   user:0.32 s    system:0.2 s      %cpu:92.44       load:3.50       fm:201266 m      vm:607 m      vm:+92 m      um:229 m     um:+100 m -- Loading netlist
+      elapsed:0 s    user:0.4 s      system:0 s    %cpu:1422.22       load:3.50       fm:200510 m      vm:766 m      vm:+82 m      um:279 m       um:+2 m -- timing analysis initialisation/Compute hier wires upfront
+   elapsed:0.54 s   user:0.36 s    system:0.3 s      %cpu:72.85       load:3.50       fm:200509 m      vm:690 m      vm:+82 m      um:279 m      um:+49 m -- timing analysis initialisation
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.50       fm:200358 m      vm:714 m       vm:+0 m      um:308 m       um:+0 m -- timing analysis build nodes and arcs/apply false path
+   elapsed:0.32 s   user:0.98 s      system:3 s    %cpu:1337.41       load:3.50       fm:200128 m      vm:816 m     vm:+130 m      um:319 m      um:+40 m -- timing analysis build nodes and arcs
+    elapsed:0.7 s    user:0.7 s      system:0 s     %cpu:100.45       load:3.50       fm:200055 m      vm:818 m       vm:+2 m      um:321 m       um:+2 m -- clock domains resolution/composite info cache
+      elapsed:0 s    user:0.7 s    system:0.2 s    %cpu:2880.00       load:3.50       fm:200023 m      vm:833 m      vm:+11 m      um:336 m      um:+11 m -- clock domains resolution/direct clock resolution
+    elapsed:0.1 s    user:0.1 s    system:0.1 s     %cpu:355.56       load:3.50       fm:199990 m      vm:844 m       vm:+5 m      um:345 m       um:+3 m -- clock domains resolution/clock propagation
+      elapsed:0 s    user:0.7 s    system:0.2 s    %cpu:2057.14       load:3.50       fm:199970 m      vm:862 m      vm:+18 m      um:364 m      um:+19 m -- clock domains resolution/clock resolution after clock backward
+   elapsed:0.19 s   user:0.32 s    system:0.5 s     %cpu:198.32       load:3.50       fm:199886 m      vm:871 m      vm:+55 m      um:373 m      um:+54 m -- clock domains resolution
+    elapsed:0.5 s    user:0.5 s      system:0 s     %cpu:101.27       load:3.50       fm:199834 m      vm:877 m       vm:+6 m      um:377 m       um:+4 m -- topological order
+    elapsed:0.3 s   user:0.16 s   system:0.70 s    %cpu:2332.20       load:3.50       fm:199793 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- delay propagation
+    elapsed:0.6 s   user:0.21 s      system:1 s    %cpu:2314.12       load:3.50       fm:199746 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- build forward backward domains
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.50       fm:199745 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- get output nodes
+    elapsed:0.2 s    user:0.3 s      system:0 s     %cpu:234.15       load:3.50       fm:199732 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- get worst end points
+      elapsed:0 s    user:0.1 s      system:0 s     %cpu:640.00       load:3.50       fm:199731 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- get hyper arcs
+      elapsed:0 s    user:0.2 s      system:0 s    %cpu:1600.00       load:3.50       fm:199730 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- gatesNumberAnalysis
+    elapsed:0.1 s    user:0.1 s      system:0 s      %cpu:84.21       load:3.50       fm:199722 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- generate zTime commands
+    elapsed:0.5 s    user:0.5 s      system:0 s     %cpu:111.89       load:3.50       fm:199686 m      vm:877 m       vm:+0 m      um:377 m       um:+0 m -- add filter domains

@@ -1,0 +1,10 @@
+
+// ARGS: -pset=1 -psetname=pset1 -off=cr_for_more -nogoifmain --postconnect command source init_mem.cmd -on=verify_download -zebu -prop=zebu_cpuclk_tck_ratio=5 -prop=retry_jtag=1000 -prop=zebu_timeout=9600000 hello.out
+macro multi_pset1
+     nocomment prop DLL)=^/global/apps/mwdt_2025.03/MetaWare/arc/bin32/libapizebu.so^
+     nocomment prop cpunum=$cid arcver=33 cloneable=1 semint)=^/global/apps/mwdt_2025.03/MetaWare/arc/bin32/libarchw^ semint)=^/global/apps/mwdt_2025.03/MetaWare/arc/bin32/libprof.so^ zebu_cpuclk_tck_ratio=5 retry_jtag=1000 zebu_timeout=9600000 port=0x378 include_local_symbols=1 verify_download=1 prefer_soft_bp=0 cr_for_more=0 prompt=mdb dname=MetaWare bin=bin32 sys_cmpd=1
+endm
+defclass name=class_multi_pset1 newsys=multi_pset1 clone_noprops=1 system1=ARC_DLL system2=BRC_DLL
+defset pset1 [1]
+newcmd [pset1] class_multi_pset1
+[pset1] defargs --postconnect command source init_mem.cmd hello.out

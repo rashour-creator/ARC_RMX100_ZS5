@@ -1,0 +1,56 @@
+#  RASCAL RAM map file
+#
+#  The entries in this file are of the following three forms:
+#
+#   # comment
+#   + model_num start end
+#   - model_num start end
+#
+#  + means to include the range start..end in your memory map; start and
+#  end are specified in bytes.  - means to exclude that range from your map.
+#  These ranges are in addition to the base_addr and size you have already
+#  specified.  start and end may have underscores in them for readability,
+#  and are otherwise parsed as C integers (so can be preceded by 0x for
+#  hexadecimal interpretation, or 0 for octal).
+#
+#  The model_num must match your memory_model_num parameter exactly
+#  for the range to be relevant to the model.
+#  In this example, two models are involved:
+#
+#   +  3   0x10_0000   0x1f_ffff
+#   -  3   0x10_0100   0x10_01ff
+#   + 15   0x2000_0000 0x2fff_ffff
+#
+#  You can use the map file instead of the priority-request feature to split
+#  up memory ranges.
+#
+#  If an ARC build contains a Closely Coupled Memory (CCM) and a main memory
+#  then there will be an overlap between these memory models. The CCM memory
+#  models override the main memory models. Memory model no 0-3 (plus offset
+#  for CPU number) are used for the main memory. The CCM address ranges
+#  are excluded from the main memory models below:
+#  
+
+# Exclusion from main memory for the ICCM in CPUisle
+# ICCM ends after 0x7ffff but wraps throughout the 0x100000-sized region.
+- 0 0x0 0xfffff
+- 1 0x0 0xfffff
+- 2 0x0 0xfffff
+- 3 0x0 0xfffff
+# ICCM DMI exclusion.
+- 0 0x40000000 0x4007ffff
+- 1 0x40000000 0x4007ffff
+- 2 0x40000000 0x4007ffff
+- 3 0x40000000 0x4007ffff
+# Exclusion from main memory for the DCCM in CPUisle
+# DCCM ends after 0x800fffff
+- 0 0x80000000 0x800fffff
+- 1 0x80000000 0x800fffff
+- 2 0x80000000 0x800fffff
+- 3 0x80000000 0x800fffff
+# DCCM DMI exclusion.
+- 0 0x40100000 0x401fffff
+- 1 0x40100000 0x401fffff
+- 2 0x40100000 0x401fffff
+- 3 0x40100000 0x401fffff
+

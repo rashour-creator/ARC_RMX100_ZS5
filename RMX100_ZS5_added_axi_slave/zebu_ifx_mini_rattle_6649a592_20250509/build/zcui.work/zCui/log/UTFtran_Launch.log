@@ -1,0 +1,143 @@
+	grid_cmd -local t -njobs 1 -queue DEFAULT_QUEUE
+	grid_cmd -local t -njobs 0 -queue Zebu
+	grid_cmd -local t -njobs 20 -queue ZebuIse
+	grid_cmd -local t -njobs 7 -queue ZebuSynthesis
+	fpga -inter_die_tdm f -inter_die_tdm_params {strategy=Pdm_Direct}
+	timing_analysis -advanced_async_set_reset_analysis f -delay_min_zfilter_skew 40000 -pre_fpga CONSTANTS_BASE_DELAY_MODEL -use_hdl_names f
+	zpar -effort Medium
+	eco -enable f -reserve_force 32 -reserve_fwc 1152 -reserve_monitor 0 -reserve_qiwc 2048
+	coverage -auto_bin_max 64
+	memories -zrm_latency_encoding ONEHOT
+	nfs_settings -access_level 5 -delay 1000 -max_retries 120
+	fpga -parff t -parff_multi_stage t
+	timing_analysis -post_fpga BACK_ANNOTATED
+	ztopbuild -advanced_command enable advanced_incremental_mode
+	compile -hydra t
+	debug -waveform_reconstruction_params {csa=f,simzilla=t,simzilla_distributed_build=f,swave=disabled}
+	debug -waveform_reconstruction f
+	design -convert_strength t
+	set_perf_flow -patch 2021.09
+	set_perf_flow -patch_list {2020.03-LCA 2020.03-SP1-1-LCA 2021.09 2021.09-LCA}
+	set_perf_flow mode flow1
+	architecture_file -filename /remote/sdgzebu_system_dir/CONFIG/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl
+	vcs_exec_command script {/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui_vcs_cmd.csh}
+	set_hwtop -module zebu_top
+	zforce -hier_sep . -mode dynamic -object_not_found fatal -rtlname {zebu_top.rst_a} -sync t
+	zforce -hier_sep . -mode dynamic -object_not_found warning -rtlname {zebu_top.core_chip_dut.i_ext_personality_mode} -sync t
+	zforce -hier_sep . -mode dynamic -object_not_found warning -rtlname {zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode} -sync t
+	probe_signals -rtlname {zebu_top.rst_a}
+	xtors -add_xtor_path /global/apps/zebu_vs_2023.03-SP1//drivers
+	xtors -use_zebu_ip_root t
+	fpga -inter_die_tdm t -inter_die_tdm_params {strategy=Pdm_Direct}
+	zpar -advanced_command System dapEngine rdp
+	clock_delay -auto_tolerance t -debug t -module {zebu_top}
+	run_manager -number_of_instances 3
+	fpga -parff_multi_stage t
+	synthesis_preferences -enable_wls t
+	cluster_constraint -set_max_fill {lut=30}
+	reg_init -default_value 0 -value 0
+	timing_analysis -post_fpga BACK_ANNOTATED
+	timing_analysis -advanced_command set_performance_report true
+	ztopbuild -advanced_command set_fast_waveform_capture -relocate yes
+	ztopbuild -advanced_command dump_stats -logic_optimization
+	ztopbuild -advanced_command enable zrm_performance_mode
+	timing_analysis -fpga_advanced_command data_path_analysis mcp
+	set_app_var name zopt value post_routing_basic
+	compile -objective Performance
+	grid_cmd -delete kill -9 %p -njobs 100 -queue Zebu -submit bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]"      -R "rusage[mem=50G]"  -M 50G 
+	grid_cmd -delete kill -9 %p -njobs 25 -queue ZebuHeavy -submit bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 4 -R "rusage[mem=100G]" -M 100G
+	grid_cmd -delete kill -9 %p -njobs 10 -queue ZebuSuperHeavy -submit bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 8 -R "rusage[mem=150G]" -M 150G
+	grid_cmd -delete kill -9 %p -njobs 50 -queue ZebuIse -submit bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 4 -R "rusage[mem=100G]" -M 100G
+	grid_cmd -delete kill -9 %p -njobs 100 -queue ZebuSynthesis -submit bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]"      -R "rusage[mem=50G]"  -M 50G 
+	grid_cmd -njobs 100 -submit bsub -Is -app comp_zebucae -Jd zebu_compile
+	debug -enable_hwtop_ports_access all -set_dyn_probes_on_dut_ios t -set_dyn_probes_on_memory_ios t
+	debug -waveform_reconstruction t
+	debug -offline_debug t -verdi_db true -waveform_reconstruction t
+	debug -all t
+	debug -offline_debug t
+	environment -generate_wrapper CPP
+
+Note-[OPTDB_INFO] 
+  Info received while optionsdb processing: Default value() overwritten with 
+  post_routing_basic for zopt
+
+==============
+UTF Translator
+==============
+ZCUI Lib TCL: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/etc/unizfe/utf/lib_zCui.tcl
+ZCUI Post-process TCL: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/etc/unizfe/utf/post_zCui.tcl
+ZCUI_lib.tcl: Processing UTF command 'clocks'
+ZCUI_lib.tcl: Processing UTF command 'synthesis'
+ZCUI_lib.tcl: Processing UTF command 'synthesis'
+add_xtor_path: Appending...
+xtors: Processing option '-use_zebu_ip_root'
+ZCUI_lib.tcl: Processing UTF command 'memory_preferences'
+================================================
+ZCUI_post.ucf: Checking ZCUI mandatory commands
+================================================
+========================================================
+post_zCui.tcl: Dumping ZCUI commands. Total commands: 47.
+========================================================
+ZCUI {UNIFIED_COMPILE} {1.0}
+ZCUI_set AutoCoreDefinition f
+ZCUI_set TopReuseExistingMapping f
+ZCUI_set CorePartitioningMode Dop
+ZCUI_set DopCoreAdaptativeFR t
+ZCUI_set CoreReuseExistingMapping f
+ZCUI_set GlobalSkewOffset t
+ZCUI_set FilterGlitches On
+ZCUI_set ClockCounterFlag t
+ZCUI_set ZparIncrementalMode f
+ZCUI_set ZparRoutingEffortMode Medium
+ZCUI_set UseFpgaLocalDiskCompilation f
+ZCUI_set UseFpgaMultiLaunch f
+ZCUI_set UseParffMultiStage f
+ZCUI_set ISEFirstPARPolicy Original
+ZCUI_set ISEFilePolicy Compress
+ZCUI_set ISEDebugPolicy Disabled
+ZCUI_set GlobalBramRWFlag f
+ZCUI_set TopDebugFlag t
+ZCUI_set DiskAccesOptimizerMethod {1}
+ZCUI_set MaximumNumberOfExistPRetry {30}
+ZCUI_set ExistPRetryDelay {1000}
+ZCUI_set MemoryIOAccessibilityFlag t
+ZCUI_set UseOfflineDebugFlag f
+ZCUI_set UseCSAFlag f
+ZCUI_set UseZebuIpRoot t
+ZCUI_set AutoCoreTimingOptimizationMode {No}
+ZCUI_set ZTopBuildCommandFilename {utf_generatefiles/zTopBuild_config.tcl}
+ZCUI_set ZTopBuildNetlistFinalizationFileName {utf_generatefiles/zTopBuild_netlist_config.tcl}
+ZCUI_set ZParCommandFilename {utf_generatefiles/zPar_config.tcl}
+ZCUI_set ZTimeInputCommandFilename {utf_generatefiles/zTime_config.tcl}
+ZCUI_set PBuildCommandFileName {utf_generatefiles/pBuild_config.tcl}
+ZCUI_set OptionsDbConfigFileName {utf_generatefiles/optionsdb_config.tcl}
+ZCUI_set SkewOffsetSynchronous t
+ZCUI_set SkewOffsetDelay 1
+ZCUI_set FilterGlitchDetectClockDelay f
+ZCUI_set DirectRouteClock f
+ZCUI_set MemoryRamlutToBramThreshold {11}
+ZCUI_set MemoryMaximumNumberOfRamlutBlocks {32000}
+ZCUI_set MemoryMaximumNumberOfBramBlocks {300}
+ZCUI_set ClockCounterFlag f
+ZCUI_set MemoryUserFile {utf_generatefiles/zMem_config.tcl}
+ZCUI_set ProfiledCompilation t
+ZCUI_set ZMemLatencyFlag f
+ZCUI_set ClockPathLocalization FPGALevel
+ZCUI_set EnableVFS f
+ZCUI_add -driver_path {/global/apps/zebu_vs_2023.03-SP1//drivers}
+lib_zfast.tcl: Processing UTF command 'synthesis'
+lib_zfast.tcl: Processing UTF command 'synthesis'
+lib_zfast.tcl: Processing UTF command 'optimization'
+lib_zfast.tcl: Processing UTF command 'optimization'
+lib_zfast.tcl: Processing UTF command 'optimization'
+lib_zfast.tcl: Processing UTF command 'optimization'
+lib_zfast.tcl: Processing UTF command 'dpi_synthesis'
+========================================================
+post_zTopClustering.tcl: Dumping zTopClustering commands. Total commands: 0.
+========================================================
+Ignore output extra files: 0
+
+
+Note-[OPTDB_INFO] 
+  Info received while optionsdb processing: Default value() overwritten with 
+  post_routing_basic for zoptInfo: Tcl files parsed successfully

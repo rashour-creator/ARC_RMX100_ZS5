@@ -1,0 +1,811 @@
+
+
+
+
+
+
+
+                                    ZeBu (R)
+                                   zCoreBuild
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zCoreBuild zCoreBuild_ztb.tcl 
+
+# start time is Tue May 13 18:33:15 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:48
+# ---------------------------System Context--------------------------- 
+# Cpu        20 x bogomips - 4805.95 Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+#            Load: 8.78 5.32 5.24 4/653 374639
+#            Hostname: odcphy-vg-1162   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 257566 MB Free: 187818 MB
+#            Swap space: 262143 MB Free Swap space: 257547 MB
+#            VmSize: 286 MB VmPeak: 286 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11763349
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+
+Table of content:
+-----------------
+
+
+ 1.Automatic clustering report
+    1.1.Defaults (debugging)
+    1.2.Design analysis
+    1.3.Optimization
+    1.4.Clock evaluation
+    1.5.Single FPGA constraints *** read ./zCoreBuild_AC_report_log_large_sections.dir/_SEC_1_5_Single_FPG.log
+ 2.hMetis partitioning
+    2.1.Block connectivity
+
+
+======================================================================================================
+
+
+
+
+
+ 1.Automatic clustering report
+ =============================
+
+
+    1.1.Defaults (debugging)
+    ------------------------
+
+INITIAL_DEFAULT_BEGIN
+Defaults:
+int interco_main_gran_block_factor=15 : granularity factor (number of block per fpga), this does not include the clock constraint.
+bool compute_interco_main_gran_block_factor=true : compute granularity factor if not provided (number of block per fpga).
+int gran_block_factor_max_nb_block=150 : if compute granularity factor, do a max_nb_block/max_fpga to obtain gran factor.
+int interco_secondary_gran_block_factor=8 : not used yet
+bool an_enable_localize_glue=false : not used yet
+bool an_debug_localize_glue=false : not used yet
+long an_localize_glue_max_trace_storage=1024 : not used yet
+long an_localize_glue_max_trace_display=100 : not used yet
+long an_localize_glue_max_size_block=50 : max size of an instance to be considered as glue
+bool an_drive_post_analysis=false : not used yet
+bool an_enable_dump_clock_tree=false : not used yet
+bool an_enable_dump_clock_sizes=false : not used yet
+bool an_disable_constraint_errors=true : not used yet
+bool opt_disable_constraint_errors=true : not used yet
+int blk_min_reg=2 : Minimum block size in reg
+int blk_min_lut=15 : Minimum block size in lut
+int blk_min_bram=1 : Minimum block size in bram
+int blk_min_uram=1 : Minimum block size in uram
+int blk_min_mult=1 : Minimum block size in mult
+int blk_min_bram_mult=2 : Minimum block size in bram mult
+int blk_min_dsp_mult=2 : Minimum block size in dsp/mult
+bool ac_an_default_flag_max_group_limit=true : Taille max du modele -1 (feature desactivee)
+int ac_an_default_max_group_limit=1500 : Taille max du modele -1 (feature desactivee)
+int ac_an_max_group_limit=1500 : Taille max du modele -1 (feature desactivee)
+int ac_an_default_max_try_reduce_group_limit=20 : Nombre max d'essais
+int ac_an_max_try_reduce_group_limit=20 : Nombre max d'essais
+int blk_min_fwc_ip=5 : Minimum block size in fwc_ip
+bool flat_block_overflow_check=true : Check les gros block --> erreur
+bool try_partition_init=true : Try partitionning initial solution
+bool accept_zrm_in_core=true : Support clustering with zrm and cores
+bool bandwidth_model2=true : New algo to compute bandwidth matrix
+bool compute_freq=false : router evaluate freq
+bool partition_includes_tristate_buses=true : bus are in the partitionner
+bool default_map_IF_uniq=true : Consider only IF module 0, unit 0
+bool default_enable_multi_bank_zrm_DRAM=true : multi bank mapping DRAM
+bool default_enable_multi_bank_zrm_RLDRAM=false : multi bank mapping RLDRAM
+bool default_enable_multi_bank_zrm_SSRAM=false : multi bank mapping SSRAM
+bool default_allow_routing_through_IF=true : Allow routing of nets through IF
+bool allow_routing_through_IF=true : Allow routing of nets through IF
+const int default_clock_coverage_latch=100 : clocks covering this percentage of the design will be included in the FK mapping
+const int default_fpga_max_cut=0x7fffffff : fpga max cut that makes a solution non acceptable
+const int default_maxwire=8500 : max wire between 2 fpga that makes a solution non acceptable
+const int default_max_phase=3000 : maximum number of phases in the simulated annealing (for fpga cut)
+const int default_max_phase_combo_cut=1000 : maximum number of phases in the simulated annealing (for combo cut)
+const int default_max_phase_mb_cut=1000 : maximum number of phases in the simulated annealing (for board cut)
+const int default_max_reheat=2 : maximum number of reheating
+const float default_T_DEC=0.9 : Beta value (temperature decrement factor).
+const int max_fill_reglut=100 : %filling using average of lut+reg
+bool max_fill_constraint_adjustement_by_usage=false : only to be activated in zCoreBuild
+int user_max_fill_reglut=100 : %filling using average of lut+reg
+float overflow_factor=1. : weight of overflow.
+const int default_maxtime=0 : in minutes, max time for fpga cut.
+const int fpga_iter_init_solution=2500 : search for the initial solution and SA parameter setting, number of iterations (fpga cut)
+const int module_iter_init_solution=1000 : search for the initial solution and SA parameter setting, number of iterations (board cut)
+const int combo_iter_init_solution=1000 : search for the initial solution and SA parameter setting, number of iterations (combo cut)
+bool debug_start_eval_using_hier=true : tries using hierarchy to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_random=false : tries using random to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_partition=false : tries using partitionning to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_defmapping=false : tries using defmaps to build an initial solution, not necessary acceptable.
+bool default_do_map_fk_src=false : maps cone logic from clocks to FK
+bool FK_AC_feature=false : feature that allows AC to map design on FK
+int combo_cut_counter_max=200 : max iteration in a phase (combo cut).
+int board_cut_counter_max=200 : max iteration in a phase (board cut).
+int max_clock_threshold_xxl=9 : XXL max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_xl=6 : XL max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_uf=16 : UF max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_server=9 : UF max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int weight_clock_threshold=100 : weight of exceeding clock for an fpga.(cluster debug set)
+bool start_from_user_defmapping=false : Accept user defmaps as starting point
+bool lock_fpga_num=false : Keep constant the number of fpgas.
+bool combo_module_cut=false : Call the SA for combo and module remapping
+bool show_matrix=false : show interco on screen
+bool add_primary_clk_to_interco=true : Bring in primary clocks from fk
+bool remove_driver_from_primary_clk=false : pb when find drivers on primary clock
+bool error_when_driver_on_primary_clk=false : pb when find drivers on primary clock
+bool ignore_black_or_wire_boxes=false : when loading interco, ignore empty groups (black boxes or wire boxes)
+int normalized_payload=0 : maximum value in the payload matrix
+double normalized_payload_stretch=1. : Some rescaling  applied to the payload matrices
+int fm_0_wire=10 : Additionnal factor to disconnected (external mem -- fpga)
+bool default_do_adjust_target_interco=false : approximates bandwidth between FPGA's like in zxlPar
+bool no_zeroes_payload=true : remove 0 in weight matrix
+int def_cm_cfg_max_hop_cpt=2 : max depth of fpga interco exploration, beyond this depth all fpga are equivalent
+int def_cm_cfg_step_hop=1 : weight given to each hop
+int def_cm_cfg_last_hop=1 : weight given to the last hop to the far fpga
+int default_algo_cost=33 : merge small fpga
+int default_algo_cost_die=35 : 33 for die=> 35 LVDS, 37=LVDS+SLL
+int default_algo_cost_sll_alloc=36 : for only sll alloc
+int init_swap_nb_phase=50 : Nb phases SA init hierarchy
+int init_swap_nb_cycle=1000 : Nb cycles SA init hierarchy
+bool default_multiplex_clock_inter_fpga=true : Multiplexing of inter fpga clocks
+bool default_init_defmap_adjust_fpga_constraint=true : Adjust overflowed fpga constraints when using defmapping init 
+bool default_use_ice_module=true : In server Ice fpga are true design FPGA
+bool default_use_mem_module=false : Mem fpga not used (valid only UF4 and XXL)
+bool default_use_ice_module_at_init=true : In server Ice fpga are true design FPGA
+bool default_use_mem_module_for_core_init=false : Use FM when init mapping logic from cores.
+bool default_use_ice_module_for_core_init=true : In server Ice fpga are true design FPGA.
+double default_additionnal_cost_ddr_mapping=1. : Default Additional factor to push zrms to RLDRAM
+double additionnal_cost_ddr_mapping=1. : Additional factor to push zrms to RLDRAM
+int delta_design=20 : percentage of the design added to its size in order to evaluate maxfpga
+int nb_phases_no_gain=30 : Will interrupt after this number of phases if no gain has been found (-1 is no interrupt)
+int default_opt_level=0 : Only basic optimization (initial solution)
+int init_hier_nb_phase=100 : Nb phases SA init hierarchy
+int init_hier_nb_cycle=1000 : Nb cycles SA init hierarchy
+bool init_hier_maximize_unallocated_combos=false : use cost_algo_swap_heur cost function to maximize unallocated combos
+bool init_hier_lock_unallocated_fpga=false : lock unallocated fpga(s) during init_hier when guessing the number of fpga to use
+bool reverse_cost=false : processing on payload matrix
+double default_inter_module_fact=1.0 : additionnal factor for inter-module weight
+bool debug_fwc_ip=false : debug fast waveform capture ip
+bool ac_opt_enable_fwc_ip=true : optimizer uses fast waveform capture ip
+bool ac_ana_enable_fwc_ip=true : analyzer includes fast waveform capture ip
+int ac_max_fwc_ip_fpga_fwc_ip=64 : 64 FWC_IP (s) per fpga
+int ac_max_bit_per_fwc_ip=480 : 480 bits per FWC_IP (s)
+int ac_min_fwc_ip_bit_cost_fwc_ip=1 : 1 bit min cost per FWC_IP
+int ac_default_fill_rate_fwc_ip_fpga_fwc_ip=100 : 100%% 64 FWC_IP (s) per fpga
+int ac_default_fill_rate_qiwc_bits_fpga=100 : 100%% QIWC bits (s) per fpga
+int ac_adjusted_fill_rate_fwc_ip_fpga_fwc_ip=100 : 100%% 64 FWC_IP (s) per fpga
+int ac_adjusted_fill_rate_qiwc_bits_fpga=100 : 100%% QIWC bits (s) per fpga
+int ac_adjusted_max_fwc_ip_fpga_fwc_ip=64 : 64 FWC_IP (s) per fpga
+int ac_adjusted_max_qiwc_bits_fpga=-1 : 512 000 QIWC bits per fpga
+int ac_raw_max_qiwc_bits_fpga=-1 : 512 000 QIWC bits per fpga
+bool debug_qiwc_ip=false : debug qiwc ip
+int ac_default_fill_rate_wap_crit_sig_fpga=100 : 100%% Critical wap signals (s) per fpga
+int ac_adjusted_fill_rate_wap_crit_sig_fpga=100 : 100%% Critical Wap signals (s) per fpga
+int ac_adjusted_max_wap_crit_sig_fpga=-1 : 512 000 Critical WAP signals per fpga
+int ac_raw_max_wap_crit_sig_fpga=-1 : 512 000 Critical WAP signals per fpga
+int ac_max_bit_per_v5_fpga_fwc_ip=61440 : 60k FWC_IP bits per V5 fpga
+int ac_max_bit_per_v6_fpga_fwc_ip=122880 : 120k FWC_IP bits per V6 fpga
+int ac_max_bit_per_v7_fpga_fwc_ip=380928 : no max FWC_IP bits per V7 fpga
+int ac_max_ips_per_v5_fpga_fwc_ip=15 : 60k FWC_IP ips per V5 fpga
+int ac_max_ips_per_v6_fpga_fwc_ip=31 : 120k FWC_IP ips per V6 fpga
+int ac_max_ips_per_v7_fpga_fwc_ip=100 : no max FWC_IP ips per V7 fpga
+int ac_max_read_port_bits_fpga=8192 : 8192 read port bits per fpga
+int ac_max_read_port_ips_fpga=256 : 256 read port ips per fpga
+int ac_adjusted_max_read_port_bits_fpga=8192 : 8192 read port bits per fpga
+int ac_adjusted_max_read_port_ips_fpga=256 : 256 read port ips per fpga
+int ac_adjusted_fill_rate_read_port_bits_fpga=100 : 100%% read port bits (s) per fpga
+int ac_adjusted_fill_rate_read_port_ips_fpga=100 : 100%% read port ips (s) per fpga
+int ac_default_fill_rate_read_port_ips_fpga=100 : 100%% read port ips (s) per fpga
+int ac_default_fill_rate_read_port_bits_fpga=100 : 100%% read port bits (s) per fpga
+int ac_max_write_port_bits_fpga=8192 : 8192 write port bits per fpga
+int ac_max_write_port_ips_fpga=256 : 256 write port ips per fpga
+int ac_adjusted_max_write_port_bits_fpga=8192 : 8192 write port bits per fpga
+int ac_adjusted_max_write_port_ips_fpga=256 : 256 write port ips per fpga
+int ac_adjusted_fill_rate_write_port_bits_fpga=100 : 100%% write port bits (s) per fpga
+int ac_adjusted_fill_rate_write_port_ips_fpga=100 : 100%% write port ips (s) per fpga
+int ac_default_fill_rate_write_port_ips_fpga=100 : 100%% write port ips (s) per fpga
+int ac_default_fill_rate_write_port_bits_fpga=100 : 100%% write port bits (s) per fpga
+bool ac_zcei_on_U0_M0_F0=false : Force zcei blocks on U0_M0_F0
+int ac_max_zc_trace_bits_fpga=65536 : 60k ZC_TRACE_BIT bits per fpga
+int ac_adjusted_fill_rate_zc_trace_bits_fpga=100 : 100%% ZC_TRACE_BIT bits per fpga
+int ac_adjusted_max_zc_trace_bits_fpga=65536 : 6ok ZC_TRACE_BIT bits per fpga
+int ac_max_static_force_fpga=8000 : 8k static force per fpga
+int ac_adjusted_fill_rate_static_force_fpga=100 :  (100%) of 8k static force per fpga
+int ac_adjusted_max_static_force_fpga=8000 : 8k static force per fpga
+unsigned ac_max_zforce_fpga=(std::numeric_limits<unsigned>::max()/4096) : no limit
+unsigned ac_adjusted_fill_rate_zforce_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_zforce_fpga=(std::numeric_limits<unsigned>::max()/4096) : no limit
+unsigned ac_max_sabre_ff_fpga=(8*1280*128) : no limit
+unsigned ac_adjusted_fill_rate_sabre_ff_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_sabre_ff_fpga=(8*1280*128) : no limit
+unsigned ac_max_sabre_pi_fpga=(8*256*128) : no limit
+unsigned ac_adjusted_fill_rate_sabre_pi_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_sabre_pi_fpga=(8*256*128) : no limit
+int ac_default_fill_rate_lanceBB_fpga=100 : 100%% Lance BB(s) per fpga
+int ac_adjusted_fill_rate_lanceBB_fpga=100 : 100%% Lance BB (s) per fpga
+int ac_adjusted_max_lanceBB_fpga=-1 : 1024 Lance BB per fpga
+int ac_raw_max_lanceBB_fpga=-1 : 1024 Lance BB per fpga
+int ac_adjusted_fill_rate_zcei_bits_fpga=32 : 32%% zcei bits per fpga
+int ac_adjusted_max_zcei_bits_fpga=-1 : 32k zcei bits per fpga
+int ac_raw_max_zcei_bits_fpga=-1 : 100k zcei bits per fpga
+int ac_max_zcei_mess_in_fpga=512 : 512 zcei message inputs bits per fpga
+int ac_adjusted_fill_rate_zcei_mess_in_fpga=95 : 95%% zcei message inputs bits per fpga
+int ac_default_fill_rate_zcei_mess_in_fpga=95 : 95%% zcei message input(s) per fpga
+int ac_adjusted_max_zcei_mess_in_fpga=512 : 512 zcei message inputs bits per fpga
+int ac_max_zcei_mess_out_fpga=512 : 512 zcei message outputs bits per fpga
+int ac_adjusted_fill_rate_zcei_mess_out_fpga=95 : 95%% zcei message outputs bits per fpga
+int ac_default_fill_rate_zcei_mess_out_fpga=95 : 95%% zcei message output(s) per fpga
+int ac_adjusted_max_zcei_mess_out_fpga=512 : 512 zcei message outputs bits per fpga
+int ac_max_zprd_fpga=8000 : 8000 zPrd blackboxes per fpga
+int ac_adjusted_fill_rate_zprd_fpga=100 : 100%% zPrd blackboxesper fpga
+int ac_default_fill_rate_zprd_fpga=100 : 100%% zPrd blackboxes per fpga
+int ac_adjusted_max_zprd_fpga=8000 : 8000 zPrd blackboxes per fpga
+const char virtual_block_sep[]="%%" : virtual block: top.a.b.%%fname%%
+const char virtual_block_name_sep[]="#vb_lib#" : separate mod name from lib name.
+const char interco_file_version[]="AC_INTERCO_142_2016_03_04" : file version for interco file.
+const char interco_file_clock_sep[]="ZZ_clock_list_140_2007_24_01" : separator clock section.
+const char interco_file_domain_sep[]="ZZ_domain_list_140_2007_24_01" : separator domain section.
+const char interco_file_link_sep[]="ZZ_link_sep_140_2007_24_01" : separator link section.
+const char interco_file_defmap_sep[]="ZZ_defmap_sep_140_2007_24_01" : separator defmap section.
+const char interco_file_memory_defmap_sep[]="ZZ_defmap_memory_sep_140_2007_24_01" : separator direct defmap section.
+const char interco_file_system_defmap_sep[]="ZZ_defmap_system_sep_140_2007_24_01" : separator macro defmap section.
+const char interco_file_fwc_sep[]="ZZ_fwc_sep_140_2007_24_01" : separator fast waveform capture ip section.
+const char interco_file_fw_resources_sep[]="ZZ_fw_resources_sep_140_2007_24_01" : separator fw resources placement constraints section.
+const char interco_file_clock_cone_sep[]="ZZ_clock_cone_sep_140_2007_24_01" : separator clock cone placement constraints section.
+const char interco_file_zcore_def_sep[]="ZZ_ztopbuild_zcore_def_150_2009_22_04" : Ztopbuild core def section.
+const char interco_file_top_io_sep[]="ZZ_top_io_151_2009_01_12" : interco file top io section
+const char interco_file_cluster_cmd_sep_0[]="ZZ_cluster_cmd_151_2012_05_09" : interco file internal cluster commands section
+const char interco_file_cluster_cmd_sep[]="ZZ_cluster_cmd_151_2017_10_03" : interco file internal cluster commands section
+const char interco_file_time_sep[]="ZZ_timing_sep_2014" : interco file timing section
+const char interco_file_zdelay_sep[]="ZZ_zdelay_juil_2015" : interco file zdelay section
+const char interco_file_intradomain_sep[]="ZZ_intra_domain_db_nov_2017" : interco file zdelay section
+const char interco_file_block_part_property_0[]="ZZ_block_part_prop_19juil_2016_0" : block prop
+const char interco_file_block_part_property[]="ZZ_block_part_prop_19juil_2016" : Additional block property section (includes ZMEM)
+const char interco_file_block_part_property_ext[]="ZZ_block_part_prop_21fev_2017" : extended Additional block property section (includes ZMEM)
+const char interco_file_zrm_sep[]="ZZ_zrm_1dec_2016" : interco file additional block zrms section
+const char interco_file_module_sep[]="ZZ_module_11jan_2019" : modular information section
+bool debug_try_suggestion=false : For debugging purpose, allow def mapping definition in the interco file
+bool debug=false : Debug flag
+bool debug_1=false : Debug more flag
+bool debug_clk=false : Debug clk flag
+bool debug_sa=false : Debug flag SA
+bool debug_pre=false : Debug flag pre-analysis
+bool debug_build_group=false : Debug flag pre-analysis
+bool debug_post=false : Debug flag clustering (optimization)
+bool debug_hallocate=false : Debug initial hier alloc (sugg v1)
+bool debug_hallocate2=false : Debug initial hier alloc more detailed(sugg v1)
+bool debug_move=false : Debug flag clustering (moving blocks optimization)
+bool debug_aggregate=false : Debug data assembling
+bool debug_constraint=false : Debug constraint processing
+bool debug_allocation=false : Debug allocation during optimization
+bool debug_defmapping=false : Debug allocation during optimization
+bool debug_imatrix=false : Payload matrix
+bool debug_cost=false : debug cost function
+bool debug_interco=false : Payload matrix
+bool debug_interco_build=false : Payload matrix
+bool debug_merge_blocks=false : block merge
+bool debug_merge_groups=false : group merge
+bool debug_core_blocks=false : block core
+bool debug_block_traction=false : detailed block attractions
+bool debug_defmap_optimizer=false : defmap generator
+bool debug_clock_domain=false : clock_domain clustering
+bool debug_clock_domain_db=false : clock_domain DB
+bool debug_init_hier=false : Debug flag clustering (init)
+bool debug_node=false : Debug flag clustering (init) target node creation
+bool debug_target=false : Debug target
+bool debug_acceptable_weight=false : Debug acceptable solution
+bool debug_acceptable_zrm=false : Debug acceptable solution
+bool debug_log_phase=false : Log stat at each end of phase
+bool debug_compute_freq=false : dump files for debugggin mini router
+bool debug_clustering_mode=false : debug_clustering_mode
+bool debug_pre_merge_blocks=false : debug_pre_merge_blocks
+bool limit_display=true : Avoid huge matrix in the report.
+int sa_limit_display_nb_node=20 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+int sol_eval_limit_display_nb_node=64 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+int sol_eval_limit_display_col=12 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+bool drive_dummy_nl=false : drive a dummy netlist to allow a zPar
+bool zpar_direct=false : generate a place direct for zPar
+bool drive_design_stat=false : regenerate the stat on design just before analysis
+bool drive_hmetis_design=false : generate an hmetis graph from the design model
+const char gpe_path_sep='|' : Separator used between instances in the interco file
+bool default_create_defmap_best_freq=true : generates defmap of the best solution by mean of freq.
+bool default_use_router=true : Use router algo to estimate zPar freq.
+bool default_use_router_cost_eval=false : only accept solutions with better zpar freq. estimates.
+bool default_select_best_freq_sol_heuristic=false : at the end of an heuristic, select the best solution after evaluating frequency.
+bool default_select_best_freq_sol_global=false : at the end, select the best solution after evaluating frequency .
+bool warn_sec_clock_on_zrm=false : warn secondary clocks on zrms (deprecated).
+bool use_alias_first=false : use aliases of instance names when dumping paths in interco file.
+bool debug_disable_zrm_ac=false : Forget about zrm during optimization.
+bool select_node_to_refine=false : When optimizing, break only highest cut nodes.
+bool an_enable_optimization_V2=true : Use new optimization flow.
+bool enable_AC_AN_V2=true : Use new analysis flow.
+bool debug_AC_AN_V2=false : Use new analysis flow.
+int clock_domain_depth_default=21 : try to make it match with cklmindiv (1+)
+unsigned int default_clk_min_div=20 : Default maximum division of clocks in the model.
+bool default_aggregate_partition=false : Aggregate partitionning.
+bool default_optimize_partition=true : Optimize partitionning.
+bool default_debug_partition=false : Trace partitionning.
+bool error_if_inter_core_in_merge_blocks=false : generates an error when merging blocks.
+bool enable_mono_core_flow=true : no  core defined, will define a mono_core top.
+bool run_strategies_sequentially=false : Run the partitioning strategies sequentially.
+bool dump_fm_stats=false : Dump stats from FM when it is run.
+bool read_model_from_dumped_interco=false : Read the partitioning model from the interco file dumped by the block selection instead of taking it from the block selection data structures.
+bool dump_model_interconnections=false : Dump information related to the model interconnections.
+
+
+End defaults
+
+INITIAL_DEFAULT_END
+
+MODIFIED_DEFAULT_BEGIN
+Defaults:
+int interco_main_gran_block_factor=15 : granularity factor (number of block per fpga), this does not include the clock constraint.
+bool compute_interco_main_gran_block_factor=true : compute granularity factor if not provided (number of block per fpga).
+int gran_block_factor_max_nb_block=150 : if compute granularity factor, do a max_nb_block/max_fpga to obtain gran factor.
+int interco_secondary_gran_block_factor=8 : not used yet
+bool an_enable_localize_glue=false : not used yet
+bool an_debug_localize_glue=false : not used yet
+long an_localize_glue_max_trace_storage=1024 : not used yet
+long an_localize_glue_max_trace_display=100 : not used yet
+long an_localize_glue_max_size_block=50 : max size of an instance to be considered as glue
+bool an_drive_post_analysis=false : not used yet
+bool an_enable_dump_clock_tree=false : not used yet
+bool an_enable_dump_clock_sizes=false : not used yet
+bool an_disable_constraint_errors=true : not used yet
+bool opt_disable_constraint_errors=true : not used yet
+int blk_min_reg=2 : Minimum block size in reg
+int blk_min_lut=15 : Minimum block size in lut
+int blk_min_bram=1 : Minimum block size in bram
+int blk_min_uram=1 : Minimum block size in uram
+int blk_min_mult=1 : Minimum block size in mult
+int blk_min_bram_mult=2 : Minimum block size in bram mult
+int blk_min_dsp_mult=2 : Minimum block size in dsp/mult
+bool ac_an_default_flag_max_group_limit=true : Taille max du modele -1 (feature desactivee)
+int ac_an_default_max_group_limit=1500 : Taille max du modele -1 (feature desactivee)
+int ac_an_max_group_limit=1500 : Taille max du modele -1 (feature desactivee)
+int ac_an_default_max_try_reduce_group_limit=20 : Nombre max d'essais
+int ac_an_max_try_reduce_group_limit=20 : Nombre max d'essais
+int blk_min_fwc_ip=5 : Minimum block size in fwc_ip
+bool flat_block_overflow_check=true : Check les gros block --> erreur
+bool try_partition_init=true : Try partitionning initial solution
+bool accept_zrm_in_core=true : Support clustering with zrm and cores
+bool bandwidth_model2=true : New algo to compute bandwidth matrix
+bool compute_freq=false : router evaluate freq
+bool partition_includes_tristate_buses=true : bus are in the partitionner
+bool default_map_IF_uniq=true : Consider only IF module 0, unit 0
+bool default_enable_multi_bank_zrm_DRAM=true : multi bank mapping DRAM
+bool default_enable_multi_bank_zrm_RLDRAM=false : multi bank mapping RLDRAM
+bool default_enable_multi_bank_zrm_SSRAM=false : multi bank mapping SSRAM
+bool default_allow_routing_through_IF=true : Allow routing of nets through IF
+bool allow_routing_through_IF=true : Allow routing of nets through IF
+const int default_clock_coverage_latch=100 : clocks covering this percentage of the design will be included in the FK mapping
+const int default_fpga_max_cut=0x7fffffff : fpga max cut that makes a solution non acceptable
+const int default_maxwire=8500 : max wire between 2 fpga that makes a solution non acceptable
+const int default_max_phase=3000 : maximum number of phases in the simulated annealing (for fpga cut)
+const int default_max_phase_combo_cut=1000 : maximum number of phases in the simulated annealing (for combo cut)
+const int default_max_phase_mb_cut=1000 : maximum number of phases in the simulated annealing (for board cut)
+const int default_max_reheat=2 : maximum number of reheating
+const float default_T_DEC=0.9 : Beta value (temperature decrement factor).
+const int max_fill_reglut=100 : %filling using average of lut+reg
+bool max_fill_constraint_adjustement_by_usage=false : only to be activated in zCoreBuild
+int user_max_fill_reglut=100 : %filling using average of lut+reg
+float overflow_factor=1. : weight of overflow.
+const int default_maxtime=0 : in minutes, max time for fpga cut.
+const int fpga_iter_init_solution=2500 : search for the initial solution and SA parameter setting, number of iterations (fpga cut)
+const int module_iter_init_solution=1000 : search for the initial solution and SA parameter setting, number of iterations (board cut)
+const int combo_iter_init_solution=1000 : search for the initial solution and SA parameter setting, number of iterations (combo cut)
+bool debug_start_eval_using_hier=true : tries using hierarchy to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_random=false : tries using random to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_partition=false : tries using partitionning to build an initial solution, not necessary acceptable.
+bool debug_start_eval_using_defmapping=false : tries using defmaps to build an initial solution, not necessary acceptable.
+bool default_do_map_fk_src=false : maps cone logic from clocks to FK
+bool FK_AC_feature=false : feature that allows AC to map design on FK
+int combo_cut_counter_max=200 : max iteration in a phase (combo cut).
+int board_cut_counter_max=200 : max iteration in a phase (board cut).
+int max_clock_threshold_xxl=9 : XXL max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_xl=6 : XL max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_uf=16 : UF max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int max_clock_threshold_server=9 : UF max user clock for an fpga that doesn't affect the cost function. (cluster debug set)
+int weight_clock_threshold=100 : weight of exceeding clock for an fpga.(cluster debug set)
+bool start_from_user_defmapping=false : Accept user defmaps as starting point
+bool lock_fpga_num=false : Keep constant the number of fpgas.
+bool combo_module_cut=false : Call the SA for combo and module remapping
+bool show_matrix=false : show interco on screen
+bool add_primary_clk_to_interco=true : Bring in primary clocks from fk
+bool remove_driver_from_primary_clk=false : pb when find drivers on primary clock
+bool error_when_driver_on_primary_clk=false : pb when find drivers on primary clock
+bool ignore_black_or_wire_boxes=false : when loading interco, ignore empty groups (black boxes or wire boxes)
+int normalized_payload=0 : maximum value in the payload matrix
+double normalized_payload_stretch=1. : Some rescaling  applied to the payload matrices
+int fm_0_wire=10 : Additionnal factor to disconnected (external mem -- fpga)
+bool default_do_adjust_target_interco=false : approximates bandwidth between FPGA's like in zxlPar
+bool no_zeroes_payload=true : remove 0 in weight matrix
+int def_cm_cfg_max_hop_cpt=2 : max depth of fpga interco exploration, beyond this depth all fpga are equivalent
+int def_cm_cfg_step_hop=1 : weight given to each hop
+int def_cm_cfg_last_hop=1 : weight given to the last hop to the far fpga
+int default_algo_cost=33 : merge small fpga
+int default_algo_cost_die=35 : 33 for die=> 35 LVDS, 37=LVDS+SLL
+int default_algo_cost_sll_alloc=36 : for only sll alloc
+int init_swap_nb_phase=50 : Nb phases SA init hierarchy
+int init_swap_nb_cycle=1000 : Nb cycles SA init hierarchy
+bool default_multiplex_clock_inter_fpga=true : Multiplexing of inter fpga clocks
+bool default_init_defmap_adjust_fpga_constraint=true : Adjust overflowed fpga constraints when using defmapping init 
+bool default_use_ice_module=true : In server Ice fpga are true design FPGA
+bool default_use_mem_module=false : Mem fpga not used (valid only UF4 and XXL)
+bool default_use_ice_module_at_init=true : In server Ice fpga are true design FPGA
+bool default_use_mem_module_for_core_init=false : Use FM when init mapping logic from cores.
+bool default_use_ice_module_for_core_init=true : In server Ice fpga are true design FPGA.
+double default_additionnal_cost_ddr_mapping=1. : Default Additional factor to push zrms to RLDRAM
+double additionnal_cost_ddr_mapping=1. : Additional factor to push zrms to RLDRAM
+int delta_design=20 : percentage of the design added to its size in order to evaluate maxfpga
+int nb_phases_no_gain=30 : Will interrupt after this number of phases if no gain has been found (-1 is no interrupt)
+int default_opt_level=0 : Only basic optimization (initial solution)
+int init_hier_nb_phase=100 : Nb phases SA init hierarchy
+int init_hier_nb_cycle=1000 : Nb cycles SA init hierarchy
+bool init_hier_maximize_unallocated_combos=false : use cost_algo_swap_heur cost function to maximize unallocated combos
+bool init_hier_lock_unallocated_fpga=false : lock unallocated fpga(s) during init_hier when guessing the number of fpga to use
+bool reverse_cost=false : processing on payload matrix
+double default_inter_module_fact=1.0 : additionnal factor for inter-module weight
+bool debug_fwc_ip=false : debug fast waveform capture ip
+bool ac_opt_enable_fwc_ip=true : optimizer uses fast waveform capture ip
+bool ac_ana_enable_fwc_ip=true : analyzer includes fast waveform capture ip
+int ac_max_fwc_ip_fpga_fwc_ip=64 : 64 FWC_IP (s) per fpga
+int ac_max_bit_per_fwc_ip=480 : 480 bits per FWC_IP (s)
+int ac_min_fwc_ip_bit_cost_fwc_ip=1 : 1 bit min cost per FWC_IP
+int ac_default_fill_rate_fwc_ip_fpga_fwc_ip=100 : 100%% 64 FWC_IP (s) per fpga
+int ac_default_fill_rate_qiwc_bits_fpga=100 : 100%% QIWC bits (s) per fpga
+int ac_adjusted_fill_rate_fwc_ip_fpga_fwc_ip=100 : 100%% 64 FWC_IP (s) per fpga
+int ac_adjusted_fill_rate_qiwc_bits_fpga=100 : 100%% QIWC bits (s) per fpga
+int ac_adjusted_max_fwc_ip_fpga_fwc_ip=64 : 64 FWC_IP (s) per fpga
+int ac_adjusted_max_qiwc_bits_fpga=-1 : 512 000 QIWC bits per fpga
+int ac_raw_max_qiwc_bits_fpga=-1 : 512 000 QIWC bits per fpga
+bool debug_qiwc_ip=false : debug qiwc ip
+int ac_default_fill_rate_wap_crit_sig_fpga=100 : 100%% Critical wap signals (s) per fpga
+int ac_adjusted_fill_rate_wap_crit_sig_fpga=100 : 100%% Critical Wap signals (s) per fpga
+int ac_adjusted_max_wap_crit_sig_fpga=-1 : 512 000 Critical WAP signals per fpga
+int ac_raw_max_wap_crit_sig_fpga=-1 : 512 000 Critical WAP signals per fpga
+int ac_max_bit_per_v5_fpga_fwc_ip=61440 : 60k FWC_IP bits per V5 fpga
+int ac_max_bit_per_v6_fpga_fwc_ip=122880 : 120k FWC_IP bits per V6 fpga
+int ac_max_bit_per_v7_fpga_fwc_ip=380928 : no max FWC_IP bits per V7 fpga
+int ac_max_ips_per_v5_fpga_fwc_ip=15 : 60k FWC_IP ips per V5 fpga
+int ac_max_ips_per_v6_fpga_fwc_ip=31 : 120k FWC_IP ips per V6 fpga
+int ac_max_ips_per_v7_fpga_fwc_ip=100 : no max FWC_IP ips per V7 fpga
+int ac_max_read_port_bits_fpga=8192 : 8192 read port bits per fpga
+int ac_max_read_port_ips_fpga=256 : 256 read port ips per fpga
+int ac_adjusted_max_read_port_bits_fpga=8192 : 8192 read port bits per fpga
+int ac_adjusted_max_read_port_ips_fpga=256 : 256 read port ips per fpga
+int ac_adjusted_fill_rate_read_port_bits_fpga=100 : 100%% read port bits (s) per fpga
+int ac_adjusted_fill_rate_read_port_ips_fpga=100 : 100%% read port ips (s) per fpga
+int ac_default_fill_rate_read_port_ips_fpga=100 : 100%% read port ips (s) per fpga
+int ac_default_fill_rate_read_port_bits_fpga=100 : 100%% read port bits (s) per fpga
+int ac_max_write_port_bits_fpga=8192 : 8192 write port bits per fpga
+int ac_max_write_port_ips_fpga=256 : 256 write port ips per fpga
+int ac_adjusted_max_write_port_bits_fpga=8192 : 8192 write port bits per fpga
+int ac_adjusted_max_write_port_ips_fpga=256 : 256 write port ips per fpga
+int ac_adjusted_fill_rate_write_port_bits_fpga=100 : 100%% write port bits (s) per fpga
+int ac_adjusted_fill_rate_write_port_ips_fpga=100 : 100%% write port ips (s) per fpga
+int ac_default_fill_rate_write_port_ips_fpga=100 : 100%% write port ips (s) per fpga
+int ac_default_fill_rate_write_port_bits_fpga=100 : 100%% write port bits (s) per fpga
+bool ac_zcei_on_U0_M0_F0=false : Force zcei blocks on U0_M0_F0
+int ac_max_zc_trace_bits_fpga=65536 : 60k ZC_TRACE_BIT bits per fpga
+int ac_adjusted_fill_rate_zc_trace_bits_fpga=100 : 100%% ZC_TRACE_BIT bits per fpga
+int ac_adjusted_max_zc_trace_bits_fpga=65536 : 6ok ZC_TRACE_BIT bits per fpga
+int ac_max_static_force_fpga=8000 : 8k static force per fpga
+int ac_adjusted_fill_rate_static_force_fpga=100 :  (100%) of 8k static force per fpga
+int ac_adjusted_max_static_force_fpga=8000 : 8k static force per fpga
+unsigned ac_max_zforce_fpga=(std::numeric_limits<unsigned>::max()/4096) : no limit
+unsigned ac_adjusted_fill_rate_zforce_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_zforce_fpga=(std::numeric_limits<unsigned>::max()/4096) : no limit
+unsigned ac_max_sabre_ff_fpga=(8*1280*128) : no limit
+unsigned ac_adjusted_fill_rate_sabre_ff_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_sabre_ff_fpga=(8*1280*128) : no limit
+unsigned ac_max_sabre_pi_fpga=(8*256*128) : no limit
+unsigned ac_adjusted_fill_rate_sabre_pi_fpga=100 :  (100%) of 8k static force per fpga
+unsigned ac_adjusted_max_sabre_pi_fpga=(8*256*128) : no limit
+int ac_default_fill_rate_lanceBB_fpga=100 : 100%% Lance BB(s) per fpga
+int ac_adjusted_fill_rate_lanceBB_fpga=100 : 100%% Lance BB (s) per fpga
+int ac_adjusted_max_lanceBB_fpga=-1 : 1024 Lance BB per fpga
+int ac_raw_max_lanceBB_fpga=-1 : 1024 Lance BB per fpga
+int ac_adjusted_fill_rate_zcei_bits_fpga=32 : 32%% zcei bits per fpga
+int ac_adjusted_max_zcei_bits_fpga=-1 : 32k zcei bits per fpga
+int ac_raw_max_zcei_bits_fpga=-1 : 100k zcei bits per fpga
+int ac_max_zcei_mess_in_fpga=512 : 512 zcei message inputs bits per fpga
+int ac_adjusted_fill_rate_zcei_mess_in_fpga=95 : 95%% zcei message inputs bits per fpga
+int ac_default_fill_rate_zcei_mess_in_fpga=95 : 95%% zcei message input(s) per fpga
+int ac_adjusted_max_zcei_mess_in_fpga=512 : 512 zcei message inputs bits per fpga
+int ac_max_zcei_mess_out_fpga=512 : 512 zcei message outputs bits per fpga
+int ac_adjusted_fill_rate_zcei_mess_out_fpga=95 : 95%% zcei message outputs bits per fpga
+int ac_default_fill_rate_zcei_mess_out_fpga=95 : 95%% zcei message output(s) per fpga
+int ac_adjusted_max_zcei_mess_out_fpga=512 : 512 zcei message outputs bits per fpga
+int ac_max_zprd_fpga=8000 : 8000 zPrd blackboxes per fpga
+int ac_adjusted_fill_rate_zprd_fpga=100 : 100%% zPrd blackboxesper fpga
+int ac_default_fill_rate_zprd_fpga=100 : 100%% zPrd blackboxes per fpga
+int ac_adjusted_max_zprd_fpga=8000 : 8000 zPrd blackboxes per fpga
+const char virtual_block_sep[]="%%" : virtual block: top.a.b.%%fname%%
+const char virtual_block_name_sep[]="#vb_lib#" : separate mod name from lib name.
+const char interco_file_version[]="AC_INTERCO_142_2016_03_04" : file version for interco file.
+const char interco_file_clock_sep[]="ZZ_clock_list_140_2007_24_01" : separator clock section.
+const char interco_file_domain_sep[]="ZZ_domain_list_140_2007_24_01" : separator domain section.
+const char interco_file_link_sep[]="ZZ_link_sep_140_2007_24_01" : separator link section.
+const char interco_file_defmap_sep[]="ZZ_defmap_sep_140_2007_24_01" : separator defmap section.
+const char interco_file_memory_defmap_sep[]="ZZ_defmap_memory_sep_140_2007_24_01" : separator direct defmap section.
+const char interco_file_system_defmap_sep[]="ZZ_defmap_system_sep_140_2007_24_01" : separator macro defmap section.
+const char interco_file_fwc_sep[]="ZZ_fwc_sep_140_2007_24_01" : separator fast waveform capture ip section.
+const char interco_file_fw_resources_sep[]="ZZ_fw_resources_sep_140_2007_24_01" : separator fw resources placement constraints section.
+const char interco_file_clock_cone_sep[]="ZZ_clock_cone_sep_140_2007_24_01" : separator clock cone placement constraints section.
+const char interco_file_zcore_def_sep[]="ZZ_ztopbuild_zcore_def_150_2009_22_04" : Ztopbuild core def section.
+const char interco_file_top_io_sep[]="ZZ_top_io_151_2009_01_12" : interco file top io section
+const char interco_file_cluster_cmd_sep_0[]="ZZ_cluster_cmd_151_2012_05_09" : interco file internal cluster commands section
+const char interco_file_cluster_cmd_sep[]="ZZ_cluster_cmd_151_2017_10_03" : interco file internal cluster commands section
+const char interco_file_time_sep[]="ZZ_timing_sep_2014" : interco file timing section
+const char interco_file_zdelay_sep[]="ZZ_zdelay_juil_2015" : interco file zdelay section
+const char interco_file_intradomain_sep[]="ZZ_intra_domain_db_nov_2017" : interco file zdelay section
+const char interco_file_block_part_property_0[]="ZZ_block_part_prop_19juil_2016_0" : block prop
+const char interco_file_block_part_property[]="ZZ_block_part_prop_19juil_2016" : Additional block property section (includes ZMEM)
+const char interco_file_block_part_property_ext[]="ZZ_block_part_prop_21fev_2017" : extended Additional block property section (includes ZMEM)
+const char interco_file_zrm_sep[]="ZZ_zrm_1dec_2016" : interco file additional block zrms section
+const char interco_file_module_sep[]="ZZ_module_11jan_2019" : modular information section
+bool debug_try_suggestion=false : For debugging purpose, allow def mapping definition in the interco file
+bool debug=false : Debug flag
+bool debug_1=false : Debug more flag
+bool debug_clk=false : Debug clk flag
+bool debug_sa=false : Debug flag SA
+bool debug_pre=false : Debug flag pre-analysis
+bool debug_build_group=false : Debug flag pre-analysis
+bool debug_post=false : Debug flag clustering (optimization)
+bool debug_hallocate=false : Debug initial hier alloc (sugg v1)
+bool debug_hallocate2=false : Debug initial hier alloc more detailed(sugg v1)
+bool debug_move=false : Debug flag clustering (moving blocks optimization)
+bool debug_aggregate=false : Debug data assembling
+bool debug_constraint=false : Debug constraint processing
+bool debug_allocation=false : Debug allocation during optimization
+bool debug_defmapping=false : Debug allocation during optimization
+bool debug_imatrix=false : Payload matrix
+bool debug_cost=false : debug cost function
+bool debug_interco=false : Payload matrix
+bool debug_interco_build=false : Payload matrix
+bool debug_merge_blocks=false : block merge
+bool debug_merge_groups=false : group merge
+bool debug_core_blocks=false : block core
+bool debug_block_traction=false : detailed block attractions
+bool debug_defmap_optimizer=false : defmap generator
+bool debug_clock_domain=false : clock_domain clustering
+bool debug_clock_domain_db=false : clock_domain DB
+bool debug_init_hier=false : Debug flag clustering (init)
+bool debug_node=false : Debug flag clustering (init) target node creation
+bool debug_target=false : Debug target
+bool debug_acceptable_weight=false : Debug acceptable solution
+bool debug_acceptable_zrm=false : Debug acceptable solution
+bool debug_log_phase=false : Log stat at each end of phase
+bool debug_compute_freq=false : dump files for debugggin mini router
+bool debug_clustering_mode=false : debug_clustering_mode
+bool debug_pre_merge_blocks=false : debug_pre_merge_blocks
+bool limit_display=true : Avoid huge matrix in the report.
+int sa_limit_display_nb_node=20 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+int sol_eval_limit_display_nb_node=64 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+int sol_eval_limit_display_col=12 : (rapport ac) apres on n'affiche les matrices d'interco que sur demande
+bool drive_dummy_nl=false : drive a dummy netlist to allow a zPar
+bool zpar_direct=false : generate a place direct for zPar
+bool drive_design_stat=false : regenerate the stat on design just before analysis
+bool drive_hmetis_design=false : generate an hmetis graph from the design model
+const char gpe_path_sep='|' : Separator used between instances in the interco file
+bool default_create_defmap_best_freq=true : generates defmap of the best solution by mean of freq.
+bool default_use_router=true : Use router algo to estimate zPar freq.
+bool default_use_router_cost_eval=false : only accept solutions with better zpar freq. estimates.
+bool default_select_best_freq_sol_heuristic=false : at the end of an heuristic, select the best solution after evaluating frequency.
+bool default_select_best_freq_sol_global=false : at the end, select the best solution after evaluating frequency .
+bool warn_sec_clock_on_zrm=false : warn secondary clocks on zrms (deprecated).
+bool use_alias_first=false : use aliases of instance names when dumping paths in interco file.
+bool debug_disable_zrm_ac=false : Forget about zrm during optimization.
+bool select_node_to_refine=false : When optimizing, break only highest cut nodes.
+bool an_enable_optimization_V2=true : Use new optimization flow.
+bool enable_AC_AN_V2=true : Use new analysis flow.
+bool debug_AC_AN_V2=false : Use new analysis flow.
+int clock_domain_depth_default=21 : try to make it match with cklmindiv (1+)
+unsigned int default_clk_min_div=20 : Default maximum division of clocks in the model.
+bool default_aggregate_partition=false : Aggregate partitionning.
+bool default_optimize_partition=true : Optimize partitionning.
+bool default_debug_partition=false : Trace partitionning.
+bool error_if_inter_core_in_merge_blocks=false : generates an error when merging blocks.
+bool enable_mono_core_flow=true : no  core defined, will define a mono_core top.
+bool run_strategies_sequentially=false : Run the partitioning strategies sequentially.
+bool dump_fm_stats=false : Dump stats from FM when it is run.
+bool read_model_from_dumped_interco=false : Read the partitioning model from the interco file dumped by the block selection instead of taking it from the block selection data structures.
+bool dump_model_interconnections=false : Dump information related to the model interconnections.
+
+
+End defaults
+
+MODIFIED_DEFAULT_END
+
+
+
+2 predefined clustering modes: 
+	fast V8 :    REG=     25%   LUT=     50%RAMLUT=     60%  LUT6=     50% MUXCY=     30%BRAM=  80%URAM=  80% DSP_MULT=  80%  QIWC=     50% : ulimit    REG=     45%   LUT=     70%RAMLUT=     70%  LUT6=     70% MUXCY=     90%BRAM= 100%URAM= 100% DSP_MULT= 100%  QIWC=    100% OVF:    REG=      5%   LUT=     10%RAMLUT=     10%  LUT6=     10% MUXCY=     10%BRAM=   0%URAM=   0% DSP_MULT=   0%  QIWC=     10%(reserve_ovf) MIN_US:    REG=     60%   LUT=     60%RAMLUT=      0%  LUT6=      0% MUXCY=      0%BRAM=   0%URAM=   0% DSP_MULT=   0%  QIWC=     60% MAX_US:    REG=     96%   LUT=     96%RAMLUT=     90%  LUT6=     96% MUXCY=     90%BRAM= 100%URAM= 100% DSP_MULT= 100%  QIWC=     90% (default)
+	customized V8 :    REG=     25%   LUT=     50%RAMLUT=     60%  LUT6=     50% MUXCY=     30%BRAM=  80%URAM=  80% DSP_MULT=  80%  QIWC=     50% : ulimit    REG=     45%   LUT=     70%RAMLUT=     70%  LUT6=     70% MUXCY=     90%BRAM= 100%URAM= 100% DSP_MULT= 100%  QIWC=    100% OVF:    REG=      5%   LUT=     10%RAMLUT=     10%  LUT6=     10% MUXCY=     10%BRAM=   0%URAM=   0% DSP_MULT=   0%  QIWC=     10%(reserve_ovf) MIN_US:    REG=     60%   LUT=     60%RAMLUT=      0%  LUT6=      0% MUXCY=      0%BRAM=   0%URAM=   0% DSP_MULT=   0%  QIWC=     60% MAX_US:    REG=     96%   LUT=     96%RAMLUT=     90%  LUT6=     96% MUXCY=     90%BRAM= 100%URAM= 100% DSP_MULT= 100%  QIWC=     90% (active)
+
+
+
+    1.2.Design analysis
+    -------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.3.Optimization
+    ----------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.4.Clock evaluation
+    --------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.5.Single FPGA constraints
+    ---------------------------
+
+    
+	read *** ./zCoreBuild_AC_report_log_large_sections.dir/_SEC_1_5_Single_FPG.log ***
+
+
+
+ 2.hMetis partitioning
+ =====================
+
+
+    2.1.Block connectivity
+    ----------------------
+
+# The partition of the cell is marked by '*'.
+
+# The cell resource size which is larger than partition size * $ZEBU_CELL_REPORT_SIZE_THRES will be marked by '**'.
+
+### 1. Collect cells that have ratio of (internal-cuts/total cuts) < 768882400, the ratio is 0.5 by default, and can be set by env(ZEBU_CELL_REPORT_INCUT_THRES).
+
+### 2. Collect cells whose size are bigger than partition size * 768882400 (0.2 by default), and can be set by env(ZEBU_CELL_REPORT_SIZE_THRES).
+
+# Only print 101 cell instances based on above constraints.
+
+ 
++---------------------+---------+---------+------------------------------------------------------------------------------------------------------------+-----+-----+---+----+-----+------+----------+-----------+------------+--------------+---------------+------------------+-------------------+---------+---------+
+|Partition \ Partition|U0_M0_F00|U0_M0_F01|Cell instances                                                                                              |  LUT| LUT6|RAM|URAM|  REG|RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_BITS|WRITE_PORT_BITS|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|ZRM_SLOTS|ZRM_PORTS|
++---------------------+---------+---------+------------------------------------------------------------------------------------------------------------+-----+-----+---+----+-----+------+----------+-----------+------------+--------------+---------------+------------------+-------------------+---------+---------+
+|            U0_M0_F00|      *10|       13|zebu_top.zebuclk_ref_clk                                                                                    | 1144|  122|  0|   0|  871|   208|         1|          1|           2|             0|              0|                 1|                  1|        0|        0|
+|                     |       *9|       10|zebu_top.zebuclk_jtag_clk                                                                                   | 1144|  122|  0|   0|  871|   208|         0|          0|           2|             0|              0|                 1|                  1|        0|        0|
+|                     |       *9|        8|zebu_top.zebuclk_uart_sclk                                                                                  | 1144|  122|  0|   0|  871|   208|         0|          0|           2|             0|              0|                 1|                  1|        0|        0|
+|                     |      *33|        1|zebu_top.trigger_pc                                                                                         |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
++---------------------+---------+---------+------------------------------------------------------------------------------------------------------------+-----+-----+---+----+-----+------+----------+-----------+------------+--------------+---------------+------------------+-------------------+---------+---------+
+|            U0_M0_F01|     2383|    *6997|ZEBU_VIRTUAL_BLOCK__2                                                                                       | 4356| 4160|  1|   0| 2340|     0|         0|          0|        2324|             0|              0|                 0|                  0|        0|        0|
+|                     |      269|     *968|ZEBU_VIRTUAL_BLOCK__0                                                                                       |  276|  100|  0|   0|   56|     0|         0|          0|         291|             0|              0|                 0|                  0|        0|        0|
+|                     |      154|    *1044|ZEBU_VIRTUAL_BLOCK__1                                                                                       |  737|  183|  0|   0|  272|     0|         0|          0|         519|             0|              0|                 0|                  0|        0|        0|
+|                     |       39|    *1531|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top                  |34491|13917|  0|   0|11391|    32|         1|        325|        8127|             0|              0|                 0|                  0|        0|        0|
+|                     |       12|      *24|zebu_top.i_t32Jtag_driver                                                                                   | 7333| 1474|  0|   0| 7746|  1152|         1|          4|        3580|             0|              0|                14|                  9|        0|        0|
+|                     |       10|      *19|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.zfast_a8v3t3c093mq3|    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |       10|      *19|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.zfast_a8v3t3c093mq3   |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |       10|      *19|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.zfast_a8v3t3c093mq3  |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|    *1234|zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                               |24478| 6900| 24|   0|25196|  5736|         0|          0|        5395|             0|              0|                45|                 24|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_iqo8lutkc3jl                                                                                 |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_ie7calw5tbwk2                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_eor0cx8xjo1f1                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_dg5ei8xcp6ul2                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_8r5uvxuhxtxe3                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_69u5pmythfl5                                                                                 |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        9|      *27|zebu_top.zfast_0eyfli1baazu2                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        8|     *101|zebu_top.core_chip_dut.icore_sys.ialb_mss_clkctrl                                                           | 1506|  411|  0|   0|  847|     0|         1|          2|         785|             0|              0|                 0|                  0|        0|        0|
+|                     |        8|      *23|zebu_top.zfast_2qmqp6emsb073                                                                                |    0|    0|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        7|    *1241|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top                |31798|13838|  0|   0| 8609|     0|         0|          0|        7984|             0|              0|                 0|                  0|        0|        0|
+|                     |        6|      *40|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_rl_cpu_synch_wrap                |   66|   28|  0|   0|   93|     0|         1|          1|          78|             0|              0|                 0|                  0|        0|        0|
+|                     |        5|     *267|zebu_top.core_chip_dut.icore_sys.iarchipelago.idw_dbp                                                       | 2282|  913|  0|   0| 1464|     0|         1|        112|        1356|             0|              0|                 0|                  0|        0|        0|
+|                     |        5|     *237|zebu_top.core_chip_dut.icore_sys.iarchipelago.iarcv_dm_top                                                  |  689|  187|  0|   0|  360|     0|         1|          2|         334|             0|              0|                 0|                  0|        0|        0|
+|                     |        5|      *10|zebu_top.core_chip_dut.iio_pad_ring                                                                         |    2|    1|  0|   0|    3|     0|         1|          1|           1|             0|              0|                 0|                  0|        0|        0|
+|                     |        4|       *8|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_cg_inst                                                     |    2|    1|  0|   0|    2|     0|         0|          0|           2|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|     *109|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_tag_ram                                 |  268|   43|  1|   0|  216|     0|         0|          0|         129|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|     *151|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_data_ram                                | 1422|   61|  0|   2| 1439|     0|         0|          0|         183|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|      *77|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_err_inj_ctrl                     |  231|   33|  0|   0|   75|     0|         0|          0|          70|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1864|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5                                  |17179| 5740|  0|   0|12034|     0|         0|          0|       11246|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1474|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_4                                  | 8794| 4018|  0|   0| 6354|     0|         0|          0|        5938|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1470|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_3                                  | 8791| 4018|  0|   0| 6354|     0|         0|          0|        5938|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1534|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_2                                  | 8837| 4031|  0|   0| 6370|     0|         0|          0|        5953|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1534|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_1                                  | 8837| 4031|  0|   0| 6370|     0|         0|          0|        5953|             0|              0|                 0|                  0|        0|        0|
+|                     |        3|    *1534|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_0                                  | 8837| 4031|  0|   0| 6370|     0|         0|          0|        5953|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *285|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_rdel_mem                     |    0|    0|  4|   0|   10|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *15|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_error_register                   |   23|    6|  0|   0|   13|     0|         0|          0|          12|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *19|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_6                                  |  673|  216|  0|   0|  682|     0|         0|          0|         637|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *97|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_safety_monitor                                           |  313|   73|  0|   0|  134|     0|         1|          6|         124|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *123|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ibp2single                                            |  243|   82|  0|   0|  130|     0|         0|          0|         123|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *203|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_xtor_axi_prot_inst                                          | 1920|  951|  0|   0| 1669|     0|         0|          0|        1559|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *57|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_xtor_axi_ibp_lat_inst                                       |   69|   20|  0|   0|   23|     0|         0|          0|          21|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *182|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_perfctrl_prot_inst                                      |  284|   88|  0|   0|  201|     0|         0|          0|         187|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *187|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_clkctrl_prot_inst                                       |  277|   87|  0|   0|  198|     0|         0|          0|         185|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *240|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mmio_ahb_hprot_inst                                         | 1236|  397|  0|   0|  795|     0|         1|         74|         736|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *240|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_iccm_ahb_hprot_inst                                         | 1236|  397|  0|   0|  795|     0|         1|         74|         736|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *240|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dccm_ahb_hprot_inst                                         | 1236|  397|  0|   0|  795|     0|         1|         74|         736|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *233|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dbu_per_ahb_hprot_inst                                      |  347|  212|  0|   0|  320|     0|         1|         37|         295|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *55|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dbu_per_ahb_hibp_lat_inst                                   |   66|   16|  0|   0|   23|     0|         0|          0|          21|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *132|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_bri_prot_inst                                               | 1161|  543|  0|   0| 1101|     0|         1|         10|        1028|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *55|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_bri_ibp_lat_inst                                            |   66|   16|  0|   0|   23|     0|         0|          0|          21|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *237|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_ahb_hprot_inst                                              |  354|  220|  0|   0|  321|     0|         1|         37|         296|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|      *55|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_ahb_hibp_lat_inst                                           |   66|   16|  0|   0|   23|     0|         0|          0|          21|             0|              0|                 0|                  0|        0|        0|
+|                     |        2|     *220|zebu_top.core_chip_dut.icore_sys.ialb_mss_perfctrl                                                          | 7405| 1960|  0|   0| 4238|     0|         0|          0|        3960|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|    *3688|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_3                                  | 4528| 1489|  0|   0| 1715|     0|         0|          0|        1602|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *323|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_2                                  | 2603|  953|  0|   0| 1715|     0|         0|          0|        1602|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *323|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_1                                  | 2603|  953|  0|   0| 1715|     0|         0|          0|        1602|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *329|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_0                                  | 2646|  956|  0|   0| 1715|     0|         0|          0|        1602|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *11|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_default_slv                                   |   20|    8|  0|   0|   15|     0|         0|          0|          14|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *20|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ibp_cwbind                                            |   59|   21|  0|   0|   23|     0|         0|          0|          21|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *55|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_mem_exclusive_monitor                                       |  876|  260|  0|   0|  829|     0|         0|          0|         774|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *407|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_ibp_buf_inst                                                |  491|   73|  0|   0|  231|     0|         0|          0|         215|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *22|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_xtor_axi__ibp_buffer_inst                                   |   72|   31|  0|   0|   30|     0|         0|          0|          28|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *229|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_perfctrl__ibp_buffer_1_inst                             |  304|  206|  0|   0|  283|     0|         0|          0|         264|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *241|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_perfctrl__ibp_buffer_0_inst                             |  320|  219|  0|   0|  285|     0|         0|          0|         266|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *686|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_mem__ibp_buffer_1_inst                                  |  706|  586|  0|   0|  762|     0|         0|          0|         712|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *688|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_mem__ibp_buffer_0_inst                                  |  708|  589|  0|   0|  762|     0|         0|          0|         712|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *227|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_clkctrl__ibp_buffer_1_inst                              |  304|  204|  0|   0|  281|     0|         0|          0|         262|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *239|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mss_clkctrl__ibp_buffer_0_inst                              |  319|  216|  0|   0|  283|     0|         0|          0|         264|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *22|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_mmio_ahb_h_ibp_buffer_inst                                  |   73|   29|  0|   0|   30|     0|         0|          0|          28|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *22|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_iccm_ahb_h_ibp_buffer_inst                                  |   73|   29|  0|   0|   30|     0|         0|          0|          28|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *22|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dccm_ahb_h_ibp_buffer_inst                                  |   73|   29|  0|   0|   30|     0|         0|          0|          28|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *244|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dbu_per_ahb_h_ibp_buffer_1_inst                             |  321|  221|  0|   0|  287|     0|         0|          0|         268|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *241|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_dbu_per_ahb_h_ibp_buffer_0_inst                             |  319|  219|  0|   0|  287|     0|         0|          0|         268|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|      *22|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_bri__ibp_buffer_inst                                        |   73|   29|  0|   0|   30|     0|         0|          0|          28|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *251|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_ahb_h_ibp_buffer_1_inst                                     |  326|  226|  0|   0|  294|     0|         0|          0|         274|             0|              0|                 0|                  0|        0|        0|
+|                     |        1|     *247|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_ahb_h_ibp_buffer_0_inst                                     |  324|  224|  0|   0|  294|     0|         0|          0|         274|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|     *174|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.mem_r              |20168|  480|  0|**32|18458|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|     *174|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.mem_r                 |20168|  480|  0|**32|18458|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|     *174|zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.mem_r                |20168|  480|  0|**32|18458|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|     *416|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r                      |21318|    0| 31|   0|27012|     0|         0|          0|           0|             0|              0|                 0|                  0|  **32768|        1|
+|                     |        0|      *85|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_esrams_iccm0_din         |   56|   24|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *61|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_esrams_ic_tag_mem_din    |   76|   36|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *85|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_esrams_ic_data_mem_din   |  108|   52|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *85|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_esrams_dccm_din_odd      |   56|   24|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *85|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_esrams_dccm_din_even     |   56|   24|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *69|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_dbu_per_ahb_haddr        |   44|   20|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *69|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_ahb_haddr                |   44|   20|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *45|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_sfty_0               |   34|   14|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *39|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_lsc                  |   24|   10|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *39|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_esrams_4             |   24|   10|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *39|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_esrams_3             |   24|   10|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *39|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_esrams_2             |   24|   10|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *43|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_esrams_1             |   26|   12|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *55|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_esrams_0             |   36|   14|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *19|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_dbu_1                |   12|    2|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *45|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_dbu_0                |   28|   14|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *31|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_ahb_1                |   18|    8|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
+|                     |        0|      *51|zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_compare_agg_ahb_0                |   36|   12|  0|   0|    0|     0|         0|          0|           0|             0|              0|                 0|                  0|        0|        0|
++---------------------+---------+---------+------------------------------------------------------------------------------------------------------------+-----+-----+---+----+-----+------+----------+-----------+------------+--------------+---------------+------------------+-------------------+---------+---------+
+
+

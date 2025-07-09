@@ -1,0 +1,24 @@
+rc file Version 1.0
+
+[Design]
+COMPILE_PATH=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build
+VCS_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64
+VERDI_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VERDI/VERDI2021.09/ZEBU/08052024/INSTALL/VERDI/verdi/S-2021.09-SP2-10
+SystemC=FALSE
+UUM=TRUE
+KDB=TRUE
+USE_NOVAS_HOME=FALSE
+COSIM=FALSE
+SYNOPSYS_SIM_SETUP=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/synopsys_sim.setup 
+ENV="SYNOPSYS_SIM_SETUP=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/verdi_synopsys_sim.setup" 
+TOP=zebu_top 
+OPTION=-ssz -ssv -ssy 
+ELAB_OPTION=-ssz -ssv -ssy 
+ELAB=TRUE
+SIMV_WRAPPER=FALSE
+[vcs]
+RUN_ELABCOM=unset TURBO_LOG_DIR ;\rm -rf /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/elabcomLog ;/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/bin/elabcom -logdir /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/elabcomLog  -simvdaidir /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir  -saveLevel  -elab /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/kdb -zci_db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/zebu_cldb.db -simflow -use_old_scope_tree -topfile /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/.elabcomTopFile -ssz -ssv -ssy +disable_message+C00371 +disable_message+C00380+C00381 +disable_message+C00388+C00389  >& /dev/null  && echo Success >& /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/.elabcomReport || echo Fail >& /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/vcs_splitter/simv.daidir/.elabcomReport
+
+[Value]
+WREALX=ffff534e50535f58
+WREALZ=ffff534e50535f5a

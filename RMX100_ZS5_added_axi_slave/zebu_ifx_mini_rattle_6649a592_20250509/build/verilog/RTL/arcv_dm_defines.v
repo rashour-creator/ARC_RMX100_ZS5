@@ -1,0 +1,52 @@
+`define DM_MAKE_SYS                  0
+`define DM_SYNC_LEGACY_IMPL          0
+`define DM_SYNC_TMR_CDC              0
+`define DM_SYNC_VERIF_EN             0
+`define DM_SYNC_SVA_TYPE             0
+`define DM_SYNC_FF_LEVELS            2
+`define DM_SYNC_FF_WIDTH             32
+`define DM_ISOLATE_HAS_CDC           0
+`define DM_FOUND_DB_IBP_IF           1
+`define DM_FOUND_RV_SAFETY           1
+`define DM_FOUND_DWDBP               1
+`define DM_ABC_IBP_IF_SRCSYNC        0
+`define DM_DBG_SECURE_IDX	        2
+`define DM_SECUREIF_FULL	            0 
+`define DM_SECUREIF_UNLOCK	        1 
+`define DM_SECUREIF_NONE	            0 
+`define DM_DBG_APB_ASYNC             0
+`define DM_DBG_APB_FREQ              100
+`define DM_SYSTEM_BUS_ACCESS	        0
+`define DM_FOUND_MEM_BUS_OPTION      0
+`define DM_MEM_IF_AHB                1
+`define DM_MEM_IF_AXI                0
+`define DM_FOUND_MEM_BUS_WIDTH       32
+`define DM_ABC_IBP_D_W               32
+`define DM_ABC_IBP_A_W               32
+`define DM_NUMXHARTS                 0
+`define  RL                          1                 //00
+`define  DS                          0                 //00
+`define  NrHarts                     1      
+`define  StubNrHarts                 0
+`define  DATA_W           32                        //00
+`define  APB_ADDR_W       32                        //00
+`define  DBG_ADDR_W       12                     
+`define  HMIBP_ADDR_W     32
+`define  HMIBP_DATA_W     32   
+`define  HSIBP_ADDR_W     32
+`define  HSIBP_DATA_W     32
+`define  DataCount        2        
+`define  ProgBufSize      0          
+`define  LocalTest 0 
+`define  DM_SBA_DATA_W    32
+`define  DM_SBA_ADDR_W    32
+`define  DM_SBA_ID_W      4
+`define  DM_AXI_USER_W    4
+`define  DM_AXI_ID_W      4
+`define  DM_AXI_ADDR_W    32
+`define  DM_AXI_DATA_W    32
+`define  DM_AXI_LEN       4
+`define DM_CMD_BURST_SIZE 5
+`define  DM_AHB_ID_W      4
+`define  DM_AHB_A_W       32
+`define  DM_AHB_D_W       32

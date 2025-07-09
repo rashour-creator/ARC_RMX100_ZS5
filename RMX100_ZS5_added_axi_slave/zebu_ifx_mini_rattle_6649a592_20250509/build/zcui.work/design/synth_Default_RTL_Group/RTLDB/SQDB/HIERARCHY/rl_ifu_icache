@@ -1,0 +1,11 @@
+rl_ifu_icache
+u_rl_ifu_icache_ctl -> u_rl_ifu_icache_ctl -> rl_ifu_icache_ctl
+u_rl_ifu_icache_rf -> u_rl_ifu_icache_rf -> rl_ifu_icache_rf
+u_cg_ic_data_mem -> u_cg_ic_data_mem -> clkgate
+u_cg_ic_tag_mem -> u_cg_ic_tag_mem -> clkgate
+u_ic_data_ecc_decoder1 -> u_ic_data_ecc_decoder1 -> ic_data_ecc_decoder
+u_ic_data_ecc_decoder0 -> u_ic_data_ecc_decoder0 -> ic_data_ecc_decoder
+u_ic_tag_ecc_decoder1 -> u_ic_tag_ecc_decoder1 -> ic_tag_ecc_decoder
+u_ic_tag_ecc_decoder0 -> u_ic_tag_ecc_decoder0 -> ic_tag_ecc_decoder
+u_ic_tag_encoder -> u_ic_tag_encoder -> ic_tag_ecc_encoder
+u_ic_data_ecc_encoder -> u_ic_data_ecc_encoder -> ic_data_ecc_encoder

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="zTopBuild">
+
+<targets>
+
+<target type="DiskSpaceChecker">
+  <fpgacount>12</fpgacount>
+</target>
+
+<target type="zCoreBuild">
+  <label>Part_0</label>
+  <priority rank="0"></priority>
+  <repository>work.Part_0/</repository>
+  <script typeCrc="crcFile">zCoreBuild_ztb.tcl</script>
+  <input typeCrc="crcFile">zebu_top.hash</input>
+  <input typeCrc="crcFile">../zPar_target_conf.tcl</input>
+</target>
+
+<target type="pBuild">
+  <input typeCrc="crcFile">tools/pBuild/ztb_pBuild.tcl</input>
+</target>
+
+<target type="zPar">
+  <script typeCrc="crcFile">zPar_cmds.tcl</script>
+  <input typeCrc="dateFile">edif/zebu_top.edf.gz</input>
+  <input typeCrc="crcFile">zPar_target_conf.tcl</input>
+</target>
+
+<target type="zTime">
+  <script typeCrc="crcFile">tools/zTime/zTopBuild_timing.zti</script>
+  <script typeCrc="crcFile">tools/zTime/clock_dependencies.zti</script>
+  <input typeCrc="dateFile">tools/zTime/zTime_hierarchy.edf.gz</input>
+  <input typeCrc="dateFile">HydraDB/eid2names.bin</input>
+  <input typeCrc="dateFile">HydraDB/eid2label.bin</input>
+  <input typeCrc="dateFile">HydraDB/eid2master.bin</input>
+  <input typeCrc="dateFile">HydraDB/beEid2hierPath.bin</input>
+  <input typeCrc="dateFile">hierview.edf.gz</input>
+</target>
+
+<target type="zTime_fpga">
+  <script typeCrc="crcFile">tools/zTime/zTopBuild_timing.zti</script>
+  <script typeCrc="crcFile">tools/zTime/clock_dependencies.zti</script>
+  <input typeCrc="dateFile">tools/zTime/zTime_hierarchy.edf.gz</input>
+  <input typeCrc="dateFile">HydraDB/eid2names.bin</input>
+  <input typeCrc="dateFile">HydraDB/eid2label.bin</input>
+  <input typeCrc="dateFile">HydraDB/eid2master.bin</input>
+  <input typeCrc="dateFile">HydraDB/beEid2hierPath.bin</input>
+  <input typeCrc="dateFile">hierview.edf.gz</input>
+</target>
+
+<target type="zCoreBuild_zRDB">
+  <label>Part_0</label>
+  <repository>work.Part_0/</repository>
+  <input typeCrc="crcFile">zCoreBuild_equi.inf</input>
+</target>
+
+<target type="zRDB">
+  <script typeCrc="crcFile">tools/zDB/zRDB_buildEqui_ztb.tcl</script>
+  <input typeCrc="dateFile">tools/zDB/zTopBuild_equi.edf.gz</input>
+  <input typeCrc="crcFile">tools/zDB/zTopBuild_equi.inf</input>
+  <output typeCrc="dateFile">nofpga/zrdb/stamp.zrdb</output>
+</target>
+
+<target type="zDB_final">
+  <script typeCrc="crcFile">tools/zDB/zTopBuild.tcl</script>
+</target>
+
+<target type="hydra">
+</target>
+
+<target type="SVA">
+<output/>
+</target> 
+<target type="zRDB">
+  <input typeCrc="dateFile">tools/zTopBuild/power_defmappings.txt.gz</input>
+  <output typeCrc="dateFile">nofpga/zrdb/stamp.zrdb</output>
+</target>
+
+
+</targets>
+
+</ZeBuUiDoc>

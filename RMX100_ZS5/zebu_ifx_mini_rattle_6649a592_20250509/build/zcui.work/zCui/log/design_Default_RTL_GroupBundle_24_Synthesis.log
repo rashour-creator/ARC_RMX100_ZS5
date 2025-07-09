@@ -1,0 +1,699 @@
+Job <80639577> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on zebutrain-4763-002.static.us01-p08.synopsys.com>>
+
+
+                                    ZeBu (R)
+                                      zFe
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+
+#   info : #----------------------------------------------------------------
+#   info : Setup
+#   info : #----------------------------------------------------------------
+# command line is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zFe compile_hdr.tcl script/Bundle_24_synp.tcl -log Bundle_24.log -zlog 1 
+# start time is Tue May 13 18:29:50 EEST 2025
+#   step Setup : CVS $Revision: #4 $
+#   step Setup : CVS $Date: 2024/02/21 $
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc hcsrc.iba
+#   step Setup :         NEXT CALL to cmn::option phase synthesis
+#   info : #----------------------------------------------------------------
+#   info : Synth
+#   info : #----------------------------------------------------------------
+#   step Synth :         NEXT CALL to fs::simple_compile -technology vtx8 -mode block_based -version NewMixe ...
+#   step REPORT : Synthesizing module : rl_regfile
+#   step REPORT : Synthesizing module : zz_Encrypt_4
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_61
+#   step REPORT : Synthesizing module : apb_master_ap0
+#   step REPORT : Synthesizing module : mss_bus_switch_ibpw2ibpn_0001
+#   step REPORT : Synthesizing module : rl_ibp2ahb
+#   step REPORT : Synthesizing module : alb_mss_fab_fifo_0000_0011
+#   step REPORT : Synthesizing module : mss_bus_switch_ibp_split_0000_0000
+#   step REPORT : Synthesizing module : rl_iesb
+#   step REPORT : Synthesizing module : zz_Encrypt_1
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : rl_regfile
+#   step REPORT : [39.350] Instance count of module rl_regfile is 2
+#   step REPORT : [6.1691] Total net count: 5398
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 33 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 3
+#   step REPORT : [6.1695] 3-input LUTs: 960
+#   step REPORT : [6.1695] 5-input LUTs: 101
+#   step REPORT : [6.1695] 6-input LUTs: 633
+#   step REPORT : [6.1696] Total LUT area: 1697
+#   step REPORT : [6.1697] State    : 992
+#   step REPORT : [6.1697]   (FF)   : 992
+#   step REPORT : [6.1697] MUXFn    : 64
+#   step REPORT : [6.1697] +CSA LUTs: 62
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_regfile' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 992 |                1631 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 217 |                  64 |                   0 |                   0 |                   0 || rl_regfile
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_regfile' to 'edif/rl_regfile/rl_regfile.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_regfile/rl_regfile.edf.gz'
+#   step SERIALIZE : #bytes in: 106449, #bytes out: 36359, compression ratio: 2.927721
+#   step REPORT : [87.28] Resource usage for rl_regfile: 0.431s 112.2M
+#   step REPORT : [39.349] Optimizing module : zz_Encrypt_4
+#   step REPORT : [39.350] Instance count of module zz_Encrypt_4 is 1
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net N_0
+### warning in ZFAST : (INTERNAL) no module information for net N_2
+### warning in ZFAST : (INTERNAL) no module information for net N_4
+### warning in ZFAST : (INTERNAL) no module information for net N_7
+### warning in ZFAST : (INTERNAL) no module information for net N_9
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_arg_data_i___MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_arg_data_i___MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__BuildSerialNumber_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__clkTick_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__getClkCount_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_stop_driver_clock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_stop_driver_clock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__resetDetectEnable_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_assert_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__rst_deassert_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__runClk_sw_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_stop_driver_clock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_stop_driver_clock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setTickPeriod_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_stop_driver_clock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_stop_driver_clock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__unlockSw_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__waitResetComplete_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__waitResetComplete_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__waitResetComplete_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__waitResetComplete_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_0__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_0__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_1__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_1__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_2__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_2__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_4__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_6__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_6__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_7__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_7__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_8__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_8__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_9__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_9__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_a__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_a__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net reset_detect_en__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net reset_detect_en__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net reset_done_temp__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net reset_done_temp__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net tickPeriod__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net tickPeriod__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net unlockSwPeriod__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net unlockSwPeriod__MD_2
+#   step REPORT : [6.1691] Total net count: 4251
+#   step REPORT : [6.1690] There are 17 levels of combinational cells
+#   step REPORT : [6.1689] There are 35 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 19
+#   step REPORT : [6.1695] 3-input LUTs: 95
+#   step REPORT : [6.1695] 4-input LUTs: 71
+#   step REPORT : [6.1695] 5-input LUTs: 55
+#   step REPORT : [6.1695] 6-input LUTs: 103
+#   step REPORT : [6.1696] Total LUT area: 343
+#   step REPORT : [6.1697] State    : 1868
+#   step REPORT : [6.1697]   (FF)   : 1795
+#   step REPORT : [6.1697]   (Latch): 73
+#   step REPORT : [6.1697] CARRY    : 167
+#   step REPORT : [6.1697] +CSA LUTs: 27
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (73 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zz_Encrypt_4' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                1868 |                 370 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  73 |                  93 |                   0 |                   0 |                   0 || zz_Encrypt_4
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zz_Encrypt_4' to 'edif/zz_Encrypt_4/zz_Encrypt_4.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zz_Encrypt_4/zz_Encrypt_4.edf.gz'
+#   step SERIALIZE : #bytes in: 132939, #bytes out: 47606, compression ratio: 2.792484
+#   step REPORT : [87.28] Resource usage for zz_Encrypt_4: 0.330s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_61
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_61 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_61' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_61
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_61' to 'edif/ZebuClockDetectFront_61/ZebuClockDetectFront_61.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_61/ZebuClockDetectFront_61.edf.gz'
+#   step SERIALIZE : #bytes in: 531, #bytes out: 368, compression ratio: 1.442935
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_61: 0.040s 0.0M
+#   step REPORT : [39.349] Optimizing module : apb_master_ap0
+#   step REPORT : [39.350] Instance count of module apb_master_ap0 is 1
+#   step REPORT : [6.1691] Total net count: 830
+#   step REPORT : [6.1690] There are 11 levels of combinational cells
+#   step REPORT : [6.1689] There are 7 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 17
+#   step REPORT : [6.1695] 3-input LUTs: 15
+#   step REPORT : [6.1695] 4-input LUTs: 36
+#   step REPORT : [6.1695] 5-input LUTs: 38
+#   step REPORT : [6.1695] 6-input LUTs: 63
+#   step REPORT : [6.1696] Total LUT area: 169
+#   step REPORT : [6.1697] State    : 199
+#   step REPORT : [6.1697]   (FF)   : 199
+#   step REPORT : [6.1697] +CSA LUTs: 274
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'apb_master_ap0' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 199 |                 443 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 239 |                   0 |                   0 |                   0 |                   0 || apb_master_ap0
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'apb_master_ap0' to 'edif/apb_master_ap0/apb_master_ap0.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/apb_master_ap0/apb_master_ap0.edf.gz'
+#   step SERIALIZE : #bytes in: 30743, #bytes out: 13769, compression ratio: 2.232769
+#   step REPORT : [87.28] Resource usage for apb_master_ap0: 0.117s 0.0M
+#   step REPORT : [39.349] Optimizing module : mss_bus_switch_ibpw2ibpn_0001
+#   step REPORT : [39.350] Instance count of module mss_bus_switch_ibpw2ibpn_0001 is 1
+#   step REPORT : [6.1691] Total net count: 3312
+#   step REPORT : [6.1690] There are 10 levels of combinational cells
+#   step REPORT : [6.1689] There are 5 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 9
+#   step REPORT : [6.1695] 3-input LUTs: 32
+#   step REPORT : [6.1695] 4-input LUTs: 278
+#   step REPORT : [6.1695] 5-input LUTs: 155
+#   step REPORT : [6.1695] 6-input LUTs: 265
+#   step REPORT : [6.1696] Total LUT area: 739
+#   step REPORT : [6.1697] State    : 400
+#   step REPORT : [6.1697]   (FF)   : 400
+#   step REPORT : [6.1697] +CSA LUTs: 594
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'mss_bus_switch_ibpw2ibpn_0001' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 400 |                1333 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                1514 |                   2 |                   0 |                   0 |                   0 || mss_bus_switch_ibpw2ibpn_0001
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'mss_bus_switch_ibpw2ibpn_0001' to 'edif/mss_bus_switch_ibpw2ibpn_0001/mss_bus_switch_ibpw2ibpn_0001.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/mss_bus_switch_ibpw2ibpn_0001/mss_bus_switch_ibpw2ibpn_0001.edf.gz'
+#   step SERIALIZE : #bytes in: 133793, #bytes out: 37215, compression ratio: 3.595136
+#   step REPORT : [87.28] Resource usage for mss_bus_switch_ibpw2ibpn_0001: 0.281s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_ibp2ahb
+#   step REPORT : [39.350] Instance count of module rl_ibp2ahb is 2
+#   step REPORT : [6.1691] Total net count: 2169
+#   step REPORT : [6.1690] There are 36 levels of combinational cells
+#   step REPORT : [6.1689] There are 5 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 54
+#   step REPORT : [6.1695] 3-input LUTs: 148
+#   step REPORT : [6.1695] 4-input LUTs: 194
+#   step REPORT : [6.1695] 5-input LUTs: 124
+#   step REPORT : [6.1695] 6-input LUTs: 175
+#   step REPORT : [6.1696] Total LUT area: 695
+#   step REPORT : [6.1697] State    : 199
+#   step REPORT : [6.1697]   (FF)   : 199
+#   step REPORT : [6.1697] CARRY    : 10
+#   step REPORT : [6.1697] +CSA LUTs: 559
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_ibp2ahb' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 199 |                1254 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 390 |                  20 |                   0 |                   0 |                   0 || rl_ibp2ahb
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_ibp2ahb' to 'edif/rl_ibp2ahb/rl_ibp2ahb.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_ibp2ahb/rl_ibp2ahb.edf.gz'
+#   step SERIALIZE : #bytes in: 85857, #bytes out: 35727, compression ratio: 2.403141
+#   step REPORT : [87.28] Resource usage for rl_ibp2ahb: 0.284s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_fab_fifo_0000_0011
+#   step REPORT : [39.350] Instance count of module alb_mss_fab_fifo_0000_0011 is 1
+#   step REPORT : [6.1691] Total net count: 954
+#   step REPORT : [6.1690] There are 5 levels of combinational cells
+#   step REPORT : [6.1689] There are 4 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 6
+#   step REPORT : [6.1695] 4-input LUTs: 3
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1695] 6-input LUTs: 132
+#   step REPORT : [6.1696] Total LUT area: 142
+#   step REPORT : [6.1697] State    : 266
+#   step REPORT : [6.1697]   (FF)   : 266
+#   step REPORT : [6.1697] +CSA LUTs: 136
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_fab_fifo_0000_0011' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 266 |                 278 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 272 |                   0 |                   0 |                   0 |                   0 || alb_mss_fab_fifo_0000_0011
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_fab_fifo_0000_0011' to 'edif/alb_mss_fab_fifo_0000_0011/alb_mss_fab_fifo_0000_0011.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_fab_fifo_0000_0011/alb_mss_fab_fifo_0000_0011.edf.gz'
+#   step SERIALIZE : #bytes in: 39599, #bytes out: 8610, compression ratio: 4.599187
+#   step REPORT : [87.28] Resource usage for alb_mss_fab_fifo_0000_0011: 0.097s 0.0M
+#   step REPORT : [39.349] Optimizing module : mss_bus_switch_ibp_split_0000_0000
+#   step REPORT : [39.350] Instance count of module mss_bus_switch_ibp_split_0000_0000 is 1
+#   step REPORT : [6.1691] Total net count: 11089
+#   step REPORT : [6.1690] There are 14 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 24
+#   step REPORT : [6.1695] 3-input LUTs: 13
+#   step REPORT : [6.1695] 4-input LUTs: 367
+#   step REPORT : [6.1695] 5-input LUTs: 178
+#   step REPORT : [6.1695] 6-input LUTs: 1054
+#   step REPORT : [6.1696] Total LUT area: 1636
+#   step REPORT : [6.1697] +CSA LUTs: 73
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.005 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'mss_bus_switch_ibp_split_0000_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                1709 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                9313 |                   3 |                   0 |                   0 |                   0 || mss_bus_switch_ibp_split_0000_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'mss_bus_switch_ibp_split_0000_0000' to 'edif/mss_bus_switch_ibp_split_0000_0000/mss_bus_switch_ibp_split_0000_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/mss_bus_switch_ibp_split_0000_0000/mss_bus_switch_ibp_split_0000_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 521298, #bytes out: 134095, compression ratio: 3.887527
+#   step REPORT : [87.28] Resource usage for mss_bus_switch_ibp_split_0000_0000: 0.603s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_iesb
+#   step REPORT : [39.350] Instance count of module rl_iesb is 2
+#   step REPORT : [6.1691] Total net count: 65
+#   step REPORT : [6.1690] There are 5 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 3
+#   step REPORT : [6.1695] 3-input LUTs: 5
+#   step REPORT : [6.1695] 5-input LUTs: 2
+#   step REPORT : [6.1695] 6-input LUTs: 8
+#   step REPORT : [6.1696] Total LUT area: 18
+#   step REPORT : [6.1697] State    : 6
+#   step REPORT : [6.1697]   (FF)   : 6
+#   step REPORT : [6.1697] +CSA LUTs: 11
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_iesb' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   6 |                  29 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  19 |                   0 |                   0 |                   0 |                   0 || rl_iesb
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_iesb' to 'edif/rl_iesb/rl_iesb.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_iesb/rl_iesb.edf.gz'
+#   step SERIALIZE : #bytes in: 2293, #bytes out: 1355, compression ratio: 1.692251
+#   step REPORT : [87.28] Resource usage for rl_iesb: 0.046s 0.0M
+#   step REPORT : [39.349] Optimizing module : zz_Encrypt_1
+#   step REPORT : [39.350] Instance count of module zz_Encrypt_1 is 2
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_2
+#   step REPORT : [6.1691] Total net count: 1528
+#   step REPORT : [6.1690] There are 16 levels of combinational cells
+#   step REPORT : [6.1689] There are 10 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 62
+#   step REPORT : [6.1695] 3-input LUTs: 22
+#   step REPORT : [6.1695] 4-input LUTs: 54
+#   step REPORT : [6.1695] 5-input LUTs: 20
+#   step REPORT : [6.1695] 6-input LUTs: 310
+#   step REPORT : [6.1696] Total LUT area: 468
+#   step REPORT : [6.1697] State    : 423
+#   step REPORT : [6.1697]   (FF)   : 423
+#   step REPORT : [6.1697] CARRY    : 16
+#   step REPORT : [6.1697] +CSA LUTs: 15
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (97 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zz_Encrypt_1' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 423 |                 483 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  97 |                  21 |                   0 |                   0 |                   0 || zz_Encrypt_1
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zz_Encrypt_1' to 'edif/zz_Encrypt_1/zz_Encrypt_1.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zz_Encrypt_1/zz_Encrypt_1.edf.gz'
+#   step SERIALIZE : #bytes in: 51642, #bytes out: 21267, compression ratio: 2.428269
+#   step REPORT : [87.28] Resource usage for zz_Encrypt_1: 0.172s 0.0M
+
+                                    ZeBu (R)
+                                      zMem
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zMem -createList -addScript ../../../../additionalZmemCommandFile.tcl -addScript ../../../../utf_generatefiles/zMem_config.tcl -debug -newLatency ../zz_Encrypt_1.zmem 
+
+# start time is Tue May 13 18:29:55 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:25
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4500.00 AMD EPYC 9754 128-Core Processor
+#            Load: 6.02 5.17 5.64 36/784 169620
+#            Hostname: zebutrain-4763-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 202066 MB
+#            Swap space: 53247 MB Free Swap space: 51614 MB
+#            VmSize: 181 MB VmPeak: 181 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11767297
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step DEFINE : Latency is using 4-bits-16-values encoding
+#   step DEFINE : Evaluate additionnal script '../../../../additionalZmemCommandFile.tcl'.
+#   step DEFINE : Evaluate additionnal script '../../../../utf_generatefiles/zMem_config.tcl'.
+#   step DEFINE : Global debug mode is ON
+#   step DEFINE : New memory : zz_Encrypt_1_ZMEM_0
+#   step DEFINE : Set memory : zz_Encrypt_1_ZMEM_0 depth 1024
+#   step DEFINE : Set memory : zz_Encrypt_1_ZMEM_0 width    86
+#   step DEFINE : New port : 'w0' 'w' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Set port access 'sync' of port 'w0' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'w0'.
+#   step DEFINE : Set 'addr' pin name 'w0addr' for port 'w0'.
+#   step DEFINE : Set 'di' pin name 'w0di' for port 'w0'.
+#   step DEFINE : Set 'we' pin name 'w0we' for port 'w0'.
+#   step DEFINE : New port : 'r1' 'r' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Set port access 'sync' of port 'r1' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'r1'.
+#   step DEFINE : Set 'addr' pin name 'r1addr' for port 'r1'.
+#   step DEFINE : Set 'do' pin name 'r1do' for port 'r1'.
+#   step DEFINE : Set 're' pin name 'r1re' for port 'r1'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'bram' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Multiplexing forced on dual port BRAM.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'uram' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'ramlut' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'zrm' for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Type 'bram' has been chosen for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step DEFINE : Multiplexing forced on dual port BRAM.
+OptionsDB Info : DB ./options.db not available, loading the default values ..
+OptionsDB Warning : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info : Default value(false) overwritten with true for ztdb_rb_api
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step MEMORY CHECK : Fast clock used for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step MEMORY CHECK : Fast clock used for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step ZMEM : Non-Optimizable zview instances used in module 'zz_Encrypt_1_ZMEM_0'.
+#   step MULTI_PORT : Replicating 2 instances to reduce high fanout nets
+#   step MEMORY MAPPING :   RAMB36E1    3
+#   step RESOURCE CHECK :   REG   212
+#   step RESOURCE CHECK :   LUT   136 (RAMLUT: 0)
+#   step RESOURCE CHECK :   BRAM  3
+#   step RESOURCE CHECK :   URAM  0
+#   step FREQUENCY : Worst case frequency of the memory 'zz_Encrypt_1_ZMEM_0' would be 14285 kHz
+#   step ZMEM : Fast system clock 'clk_100' is used for memory 'zz_Encrypt_1_ZMEM_0'.
+#   step SERIALIZE : writing netlist 'zz_Encrypt_1_ZMEM_0' into znl file 'zz_Encrypt_1_ZMEM_0.edf.gz'
+#   step SERIALIZE : #bytes in: 41443, #bytes out: 12806, compression ratio: 3.236217
+#   step GENERATE : generating vhdl wrapper 'zz_Encrypt_1_ZMEM_0.vhd'
+#   step GENERATE : generating vhdl wrapper 'zz_Encrypt_1_ZMEM_0_bbx.vhd'
+#   step GENERATE : generating verilog wrapper 'zz_Encrypt_1_ZMEM_0.v'
+#   step GENERATE : generating verilog wrapper 'zz_Encrypt_1_ZMEM_0_bbx.v'
+#   step GENERATE : generating report file 'zz_Encrypt_1_ZMEM_0_report.log'
+
+#   exec summary :    0 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : user 0m0.123s, sys 0m0.40s
+#   exec summary : Total memory: 501572 kB - RSS memory: 135692 kB - Data memory: 122224 kB
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:29:55 2025
+#   step Synth : RhinoDB status is set by default value: rhino_default_status:1.
+#   step Synth : Using zCreateNameDB from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB for RhinoDB population.
+#   step Synth : Running RhinoDB gate population on 10 modules. To skip this step please set SNPS_RHINODB_INTERNAL_3STEP_DISABLE env var.
+Running in 3step flow - bundle population mode, for bundle,modules = Bundle_24,zz_Encrypt_1,rl_iesb,mss_bus_switch_ibp_split_0000_0000,alb_mss_fab_fifo_0000_0011,rl_ibp2ahb,mss_bus_switch_ibpw2ibpn_0001,apb_master_ap0,ZebuClockDetectFront_61,zz_Encrypt_4,rl_regfile,
+Got following -X option = show_times
+#     Tue May 13 18:29:55 2025 : zCreateNameDB Started
+#      : Reading the Serializing VCS Version
+[2025-05-13 18:29:55.709119] [0x000015555540d300] [info]    #      : Reading the Serializing VCS Version
+
+#      : Deserializing names dictionary
+[2025-05-13 18:29:55.709995] [0x000015555540d300] [info]    #      : Deserializing names dictionary
+
+#      : Deserializing libraries
+[2025-05-13 18:29:55.717689] [0x000015555540d300] [info]    #      : Deserializing libraries
+
+#      : Deserializing RTL
+[2025-05-13 18:29:55.719256] [0x000015555540d300] [info]    #      : Deserializing RTL
+
+#      : Deserializing Gate
+[2025-05-13 18:29:55.720785] [0x000015555540d300] [info]    #      : Deserializing Gate
+
+#      : Deserializing design object
+[2025-05-13 18:29:55.722629] [0x000015555540d300] [info]    #      : Deserializing design object
+
+#      : Populating Dfs Table
+[2025-05-13 18:29:55.724037] [0x000015555540d300] [info]    #      : Populating Dfs Table
+
+### Tue May 13 18:29:55 2025 : RTL Deserialized
+### Tue May 13 18:29:55 2025 : Starting CHUNK Population
+#     Tue May 13 18:29:55 2025 : Populating CHUNK zz_Encrypt_1
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module zz_Encrypt_1
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module zz_Encrypt_1
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_iesb
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_iesb
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_iesb
+#     Tue May 13 18:29:56 2025 : Populating CHUNK mss_bus_switch_ibp_split_0000_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module mss_bus_switch_ibp_split_0000_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module mss_bus_switch_ibp_split_0000_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK alb_mss_fab_fifo_0000_0011
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module alb_mss_fab_fifo_0000_0011
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module alb_mss_fab_fifo_0000_0011
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_ibp2ahb
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_ibp2ahb
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_ibp2ahb
+#     Tue May 13 18:29:56 2025 : Populating CHUNK mss_bus_switch_ibpw2ibpn_0001
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module mss_bus_switch_ibpw2ibpn_0001
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module mss_bus_switch_ibpw2ibpn_0001
+#     Tue May 13 18:29:56 2025 : Populating CHUNK apb_master_ap0
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module apb_master_ap0
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module apb_master_ap0
+#     Tue May 13 18:29:56 2025 : Populating CHUNK ZebuClockDetectFront_61
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module ZebuClockDetectFront_61
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_61
+#     Tue May 13 18:29:56 2025 : Populating CHUNK zz_Encrypt_4
+#     Tue May 13 18:29:59 2025 : Gate Building light signal container for module zz_Encrypt_4
+#     Tue May 13 18:29:59 2025 : End of Gate Building light signal container for module zz_Encrypt_4
+#     Tue May 13 18:29:59 2025 : Populating CHUNK rl_regfile
+#     Tue May 13 18:29:59 2025 : Gate Building light signal container for module rl_regfile
+#     Tue May 13 18:29:59 2025 : End of Gate Building light signal container for module rl_regfile
+### Tue May 13 18:29:59 2025(+4s) : CHUNK Population done
+zCreateNameDB finished without errors or warnings.
+#     Tue May 13 18:29:59 2025 : zCreateNameDB Ended
+#   step Synth : Synthesis called the following command: '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_24,zz_Encrypt_1,rl_iesb,mss_bus_switch_ibp_split_0000_0000,alb_mss_fab_fifo_0000_0011,rl_ibp2ahb,mss_bus_switch_ibpw2ibpn_0001,apb_master_ap0,ZebuClockDetectFront_61,zz_Encrypt_4,rl_regfile,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group'
+
+#   step exec summary : time 0m9.361s
+#   exec summary : Total memory: 147000 kB minimum 
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:29:59 EEST 2025
+zFe exit status: 0
+command exit code is '0'

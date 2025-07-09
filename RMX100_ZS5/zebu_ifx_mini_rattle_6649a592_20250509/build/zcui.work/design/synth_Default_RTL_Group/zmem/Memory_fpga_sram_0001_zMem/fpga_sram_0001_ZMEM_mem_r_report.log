@@ -1,0 +1,134 @@
+################################################################################
+# Fanout Report for memory: fpga_sram_0001_ZMEM_mem_r
+################################################################################
+
+
+#  GENERAL STATISTICS:  ########################################################
+# Number of Wires driving pure clock fanout:                                   3
+# Number of Wires driving pure data  fanout:                                 760
+# Number of Wires driving both clock and data fanout:                          0
+# Number of Wires without any load:                                           81
+
+###########################################################  FANOUT HISTOGRAM:  
+# Number of wires whose fanout is in [     1,       1] :                  560
+# Number of wires whose fanout is in [     2,       3] :                   94
+# Number of wires whose fanout is in [     4,       7] :                    3
+# Number of wires whose fanout is in [     8,      15] :                    1
+# Number of wires whose fanout is in [    16,      31] :                    2
+# Number of wires whose fanout is in [    32,      63] :                    4
+# Number of wires whose fanout is in [    64,     127] :                    1
+# Number of wires whose fanout is in [   128,     255] :                    1
+# Number of wires whose fanout is in [   256,     511] :                    0
+# Number of wires whose fanout is in [   512,    1023] :                    0
+# Number of wires whose fanout is in [  1024,    2047] :                   80
+# Number of wires whose fanout is in [  2048,    4095] :                   13
+# Number of wires whose fanout is in [  4096,    8191] :                    1
+# Number of wires whose fanout is in [  8192,   16383] :                    0
+# Number of wires whose fanout is in [ 16384,   32767] :                    1
+# Number of wires whose fanout is in [ 32768,   65535] :                    0
+# Number of wires whose fanout is in [ 65536,  131071] :                    0
+# Number of wires whose fanout is in [131072,  262143] :                    2
+# Number of wires whose fanout is in [262144,  524287] :                    0
+# Number of wires whose fanout is in [524288, 1048575] :                    0
+
+##########################################################  FANOUT TOP SCORES:  
+# Displaying all the wires whose fanout is greater than 128.
+#  216810  #  fpga_sram_0001_ZMEM_mem_r.memory_base.fpga_sram_0001_ZMEM_mem_r_base_add_gnd  #
+#  133591  #  fpga_sram_0001_ZMEM_mem_r.fpga_sram_0001_ZMEM_mem_r_add_gnd                   #
+#   19710  #  fpga_sram_0001_ZMEM_mem_r.we0Multiplex_out                                    #
+#    4380  #  fpga_sram_0001_ZMEM_mem_r.memory_base.fpga_sram_0001_ZMEM_mem_r_base_add_vcc  #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out0                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out1                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out2                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out3                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out4                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out5                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out6                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out7                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out8                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out9                                 #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.addr0Multiplex_out10                                #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.rw_sel0Multiplex_out                                #
+#    2190  #  fpga_sram_0001_ZMEM_mem_r.memory_base.wire_sysFreq                            #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out0                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out1                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out2                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out3                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out4                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out5                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out6                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out7                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out8                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out9                                   #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out10                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out11                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out12                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out13                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out14                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out15                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out16                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out17                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out18                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out19                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out20                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out21                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out22                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out23                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out24                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out25                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out26                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out27                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out28                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out29                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out30                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out31                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out32                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out33                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out34                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out35                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out36                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out37                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out38                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out39                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out40                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out41                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out42                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out43                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out44                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out45                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out46                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out47                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out48                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out49                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out50                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out51                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out52                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out53                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out54                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out55                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out56                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out57                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out58                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out59                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out60                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out61                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out62                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out63                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out64                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out65                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out66                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out67                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out68                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out69                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out70                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out71                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out72                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out73                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out74                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out75                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out76                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out77                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out78                                  #
+#    1095  #  fpga_sram_0001_ZMEM_mem_r.di0Multiplex_out79                                  #
+#     173  #  fpga_sram_0001_ZMEM_mem_r.w0clk_reg_in                                        #
+

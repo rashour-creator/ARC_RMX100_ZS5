@@ -1,0 +1,33 @@
+#   step REPORT : Synthesizing module : clockDelayPort_0000
+#   step REPORT : [39.349] Optimizing module : clockDelayPort_0000
+#   step REPORT : [39.350] Instance count of module clockDelayPort_0000 is 3
+#   step REPORT : [6.1691] Total net count: 632
+#   step REPORT : [6.1690] There are 10 levels of combinational cells
+#   step REPORT : [6.1689] There are 5 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 2
+#   step REPORT : [6.1695] 4-input LUTs: 2
+#   step REPORT : [6.1695] 5-input LUTs: 126
+#   step REPORT : [6.1696] Total LUT area: 130
+#   step REPORT : [6.1697] State    : 129
+#   step REPORT : [6.1697]   (FF)   : 129
+#   step REPORT : [6.1697]  V6 macro: 1
+#   step REPORT : [6.1697] CARRY    : 16
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'clockDelayPort_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 129 |                 130 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   2 |                   4 |                   0 |                   0 |                   0 || clockDelayPort_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'clockDelayPort_0000' to 'edif/clockDelayPort_0000/clockDelayPort_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/clockDelayPort_0000/clockDelayPort_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 32253, #bytes out: 6822, compression ratio: 4.727792
+#   step REPORT : [87.28] Resource usage for clockDelayPort_0000: 0.069s 0.0M

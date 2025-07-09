@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="glog">
+    <author>zTopBuild</author>
+    <date>Tue May 13 18:32:38 2025</date>
+    <views>
+        <view name="Warnings/Errors">
+            <h1>System Compilation</h1>
+                <h2>Warning</h2>
+                <p>[OPTDB01] Use of the environment variable &#39;ZEBU_ENABLE_NEW_ZTDB_RB&#39; will be deprecated in a future release, please use &#39;set_app_var public::ztdb_rb_api 1&#39; in your utf/tcl file.</p>
+                <p>[ZTCL0144W] Option &#39;html_report&#39; is registered several times in command &#39;data_localization&#39;</p>
+                <p>[ZTCL0144W] Option &#39;high_effort&#39; is registered several times in command &#39;data_localization&#39;</p>
+                <p>[ZTCL0144W] Option &#39;low_power&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;system_cell_localization&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;statistics&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;!dump_netlist&#39;</p>
+                <p>[ZTCL0144W] Option &#39;low_power&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;system_cell_localization&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;statistics&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sorting_cells&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;hydra_conversion&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;observerinserter_step&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;userip_insert_readback_probes&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;clockdeclaration_step&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTCL0144W] Option &#39;sdcconstraintreader_step&#39; is registered several times in command &#39;dump_checkpoint&#39;</p>
+                <p>[ZTB0410W] Param max_fill_fwc_ip already set, resetting it to 80</p>
+                <p>[ZTB1036W] The command &#39;disable ztime_uses_rtl_names&#39; is deprecated and will be removed in the next ZeBu software release.</p>
+                <p>[CTB0246W] the options -sync_enable and -sync_write are obsolete and they are turned on by default</p>
+                <p>[CTB0246W] the option -sync_enable or -sync is obsolete and it is turned on by default</p>
+                <p>[ZTB0410W] Param max_fill_lut already set, resetting it to 30</p>
+                <p>[TGT0145W] no binary identifier defined for module ID ZS5_VU19P_12C</p>
+                <p>[LST0478W] The leaf instance uniquification ratio is less then 4.00</p>
+                <p>[LST0479W] The hierarchical instance per module uniquification ratio is less then 4.00</p>
+                <p>[ZTB1062W] Signal zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable controls instance name zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i. To avoid possible critical log path, signal name zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable should be in module zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.xtor_amba_master_axi3_svs. </p>
+                <p>[ZTB1062W] Signal zebu_top.zebu_disable controls instance name zebu_top.i_t32Jtag_driver. To avoid possible critical log path, signal name zebu_top.zebu_disable should be in module zebu_top.i_t32Jtag_driver.xtor_t32Jtag_svs. </p>
+                <p>[ZTB1122W] Clock accuracy of 0 is not supported. It will be set to 24.</p>
+                <p>[ZTB0530W] Object not found within context : zebu_top.core_chip_dut.i_ext_personality_mode</p>
+                <p>[ZTB0532W] Command &#39;zforce -mode dynamic -rtlname { {zebu_top.core_chip_dut.i_ext_personality_mode} } -access all  -type global -object_not_found warning&#39; is not matching any edif element in design. This command will be ignored.</p>
+                <p>[ZTB0530W] Object not found within context : zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode</p>
+                <p>[ZTB0532W] Command &#39;zforce -mode dynamic -rtlname { {zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode} } -access all  -type global -object_not_found warning&#39; is not matching any edif element in design. This command will be ignored.</p>
+                <p>[PLU0610W] Attribute &#39;IS_NET_DRIVER&#39; is found in module &#39;ZXLSYS&#39; from library &#39;work&#39; but not in the gold macro &#39;ZXLSYS&#39; in library &#39;lib_zxlsys_macros&#39;. When replacing with gold macro &#39;ZXLSYS&#39;, this attribute will be ignored.</p>
+                <p>[PLU0610W] Attribute &#39;IS_NET_DRIVER&#39; is found in module &#39;ZXLSYS&#39; from library &#39;work&#39; but not in the gold macro &#39;ZXLSYS&#39; in library &#39;lib_zxlsys_macros&#39;. When replacing with gold macro &#39;ZXLSYS&#39;, this attribute will be ignored.</p>
+                <p>[TAM0018W] No Netlist available, disabling command generators for commands based on it</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core as indivisible as parent instance zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core as indivisible as parent instance zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core as indivisible as parent instance zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as parent instance zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as parent instance zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[BUP0022W] Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as parent instance zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.</p>
+                <p>[TAM0072W] General Firmware FPGA cost : bram = 31, dsp_mult = 2, nbdsp48 = 2, FW cost = [],   is considered via reducing the target capacity, rather than increasing the design cost</p>
+        </view>
+        <view name="Target">
+            <h1>System Compilation</h1>
+                <h2>Size</h2>
+                <p> MODE=virtex8</p>
+                <p> MODE=vu19</p>
+                <p> Chosen part reference for resource evaluation is Ultrascale+ xcvu19p-fsva3824-1-e .</p>
+                <p> System size : 48 FPGA</p>
+                <p> </p>
+                <p> +----------------------------+------+------+------+------+------+-----+----+-----+------+</p>
+                <p> |                            |   REG|   LUT|RAMLUT|  LUT6| MUXCY| BRAM|URAM|  DSP|  QIWC|</p>
+                <p> +----------------------------+------+------+------+------+------+-----+----+-----+------+</p>
+                <p> |VIRTEX8 UltraScale+ (FPGA)  |8,172K|4,086K|  645K|4,086K|4,086K|2,158| 320|3,840|1,049K|</p>
+                <p> |VIRTEX8 UltraScale+ (System)|  392M|  196M|   31M|  196M|  196M| 104K| 15K| 184K|   50M|</p>
+                <p> +----------------------------+------+------+------+------+------+-----+----+-----+------+</p>
+                <p> Number of hardware modules requested to map the design : 1.</p>
+                <h2>Hardware Configuration</h2>
+                <p>+-------+--------------------------+</p>
+                <p>| Name  | Module                   |</p>
+                <p>+-------+--------------------------+</p>
+                <p>| U0.M0 |        zs5_vup_12c_19_v2 |</p>
+                <p>+-------+--------------------------+</p>
+            <h1>System compilation</h1>
+                <h2>Design size estimation</h2>
+                <p>Design size estimation (only used resources are reported here)</p>
+                <p>+-----------------------------------+----+------+----+-----+----+------+-----------+------------+------------------+-------------------+---------+---------+</p>
+                <p>|Resource usage                     |LUT |LUT6  |RAM |URAM |REG |RAMLUT|FWC_IP_BITS|QIWC_IP_BITS|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|ZRM_SLOTS|ZRM_PORTS|</p>
+                <p>+-----------------------------------+----+------+----+-----+----+------+-----------+------------+------------------+-------------------+---------+---------+</p>
+                <p>|Estimated size of the design       |332K|86K   |84  |98   |264K|20K   |833        |95K         |82                |57                 |33K      |1        |</p>
+                <p>|Memory logic of the design         |84K |1,440 |66  |98   |87K |0     |0          |0           |0                 |0                  |33K      |1        |</p>
+                <p>|Board size with user fill-rates    |15M |9,806K|15K |1,536|22M |1,934K|1,371K     |7,550K      |5,832             |5,832              |655K     |96       |</p>
+                <p>+-----------------------------------+----+------+----+-----+----+------+-----------+------------+------------------+-------------------+---------+---------+</p>
+                <p>|Computed, Min fit   -&#62; For 1 boards|2.3%|0.9%  |0.6%|6.4% |1.2%|1.0%  |0.1%       |1.3%        |1.4%              |1.0%               |5.0%     |1.0%     |</p>
+                <p>|                    -&#62; For 2 boards|1.1%|0.4%  |0.3%|3.2% |0.6%|0.5%  |0.0%       |0.6%        |0.7%              |0.5%               |2.5%     |0.5%     |</p>
+                <p>|                    -&#62; For 3 boards|0.8%|0.3%  |0.2%|2.1% |0.4%|0.3%  |0.0%       |0.4%        |0.5%              |0.3%               |1.7%     |0.3%     |</p>
+                <p>|                    -&#62; For 4 boards|0.6%|0.2%  |0.1%|1.6% |0.3%|0.3%  |0.0%       |0.3%        |0.4%              |0.2%               |1.2%     |0.3%     |</p>
+                <p>|                    -&#62; For 5 boards|0.5%|0.2%  |0.1%|1.3% |0.2%|0.2%  |0.0%       |0.3%        |0.3%              |0.2%               |1.0%     |0.2%     |</p>
+                <p>+-----------------------------------+----+------+----+-----+----+------+-----------+------------+------------------+-------------------+---------+---------+</p>
+                <p></p>
+                <p>Design size estimation, utilization computed (with recommended filling rates)</p>
+                <p>+--------------------------------------------+----+----+-----+----+------+-----------+------------+</p>
+                <p>|Resource usage                              |LUT |RAM |URAM |REG |RAMLUT|FWC_IP_BITS|QIWC_IP_BITS|</p>
+                <p>+--------------------------------------------+----+----+-----+----+------+-----------+------------+</p>
+                <p>|Estimated size of the design                |332K|84  |98   |264K|20K   |833        |95K         |</p>
+                <p>|Memory logic of the design                  |84K |66  |98   |87K |0     |0          |0           |</p>
+                <p>|Board size with recommended fill rates      |25M |15K |1,536|22M |1,934K|1,371K     |7,550K      |</p>
+                <p>+--------------------------------------------+----+----+-----+----+------+-----------+------------+</p>
+                <p>|Computed, recommended min fit-&#62; For 1 boards|1.4%|0.6%|6.4% |1.2%|1.0%  |0.1%       |1.3%        |</p>
+                <p>|                    -&#62; For 2 boards         |0.7%|0.3%|3.2% |0.6%|0.5%  |0.0%       |0.6%        |</p>
+                <p>|                    -&#62; For 3 boards         |0.5%|0.2%|2.1% |0.4%|0.3%  |0.0%       |0.4%        |</p>
+                <p>|                    -&#62; For 4 boards         |0.3%|0.1%|1.6% |0.3%|0.3%  |0.0%       |0.3%        |</p>
+                <p>|                    -&#62; For 5 boards         |0.3%|0.1%|1.3% |0.2%|0.2%  |0.0%       |0.3%        |</p>
+                <p>+--------------------------------------------+----+----+-----+----+------+-----------+------------+</p>
+                <p></p>
+        </view>
+        <view name="Optimization">
+            <h1>System compilation</h1>
+                <h2>Global compilation options</h2>
+                <p>+----------------------------+-------+</p>
+                <p>|                     Process|   Mode|</p>
+                <p>+----------------------------+-------+</p>
+                <p>|                 Loop report|enabled|</p>
+                <p>|   Clock localization (core)|enabled|</p>
+                <p>|   Clock localization (fpga)|enabled|</p>
+                <p>|    Data localization (core)|enabled|</p>
+                <p>|    Data localization (fpga)|enabled|</p>
+                <p>|ac_annotate_neighbord_zcores|enabled|</p>
+                <p>|     ac_annotate_prob_routes|enabled|</p>
+                <p>|        ZRM performance mode|enabled|</p>
+                <p>|                  Fetch mode|enabled|</p>
+                <p>+----------------------------+-------+</p>
+                <p></p>
+                <h2>Logic optimization options</h2>
+                <p>Logic optimization is enabled (default).</p>
+                <p></p>
+                <p>+--------------------------------------------------+-----------------+</p>
+                <p>|                                           Process|             Mode|</p>
+                <p>+--------------------------------------------------+-----------------+</p>
+                <p>|                              Constant propagation|enabled (default)|</p>
+                <p>|Constant propagation (through low power instances)|          enabled|</p>
+                <p>|                              Unused logic removal|enabled (default)|</p>
+                <p>|                  Write-only memories optimization|enabled (default)|</p>
+                <p>|                Drop optimizable waveform captures|          enabled|</p>
+                <p>|                 List of kept up-instances modules|           &#60;none&#62;|</p>
+                <p>+--------------------------------------------------+-----------------+</p>
+                <p></p>
+                <h2>Target</h2>
+                <p>Use module</p>
+                <p>	U0.M0</p>
+        </view>
+        <view name="Clock">
+            <h1>System compilation</h1>
+                <h2>Clock path analysis</h2>
+                <p>For the clock path analysis in Verdi, please use the following command in the additional command file of zTopBuild :</p>
+                <p>- enable rtl_names_save_all</p>
+        </view>
+        <view name="Design">
+            <h1>System Compilation</h1>
+                <h2>Statistics</h2>
+                <p> 1 zviews, 0 sram_trace access, 0 read_port and 0 write_port were inserted, and 0 DVE XMRs were scheduled.</p>
+                <h2>Size</h2>
+                <p>More detailed information about design size can be found in ^LINK(zTopBuild_report.html#K5.4.)zTopBuild_report.log, 5.4.Detection of sub-system candidates^LINK-</p>
+                <p></p>
+        </view>
+    </views>
+</ZeBuUiDoc>

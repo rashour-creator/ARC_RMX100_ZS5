@@ -1,0 +1,8 @@
+xtor -name {clockDelayPort_0000} -rtlname {zebu_top.zebuclk_ref_clk} -type zcei
+xtor -name {clockDelayPort_0000} -rtlname {zebu_top.zebuclk_jtag_clk} -type zcei
+xtor -name {clockDelayPort_0000} -rtlname {zebu_top.zebuclk_uart_sclk} -type zcei
+xtor -name {rl_ifu_fetcher} -rtlname {zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher} -type zemi3
+xtor -name {rl_ifu_fetcher} -rtlname {zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher} -type zemi3
+xtor -name {xtor_amba_master_axi3_svs} -rtlname {zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i} -type zemi3
+xtor -name {xtor_t32Jtag_svs} -rtlname {zebu_top.i_t32Jtag_driver} -type zemi3
+xtor -name {zebu_time_capture} -rtlname {zebu_top.zebu_time_capture} -type zemi3

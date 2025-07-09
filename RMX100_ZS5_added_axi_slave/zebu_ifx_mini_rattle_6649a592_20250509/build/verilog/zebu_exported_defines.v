@@ -1,0 +1,9 @@
+`define ZEBU_HAS_JTAG2BVCI 0
+`define ZEBU_HAS_UART 0
+`define ZEBU_HAS_AXI_XTOR 1
+`define ZEBU_HAS_SRAM 1
+`define ZEBU_HAS_SEIF_FLOW 0
+`define ZEBU_HAS_DC_SYN_FLOW 0
+`define ZEBU_HAS_FC_SYN_FLOW 0
+`define ZEBU_DUT_NAME "archipelago"
+`define ZEBU_FULL_DUT_NAME "archipelago"

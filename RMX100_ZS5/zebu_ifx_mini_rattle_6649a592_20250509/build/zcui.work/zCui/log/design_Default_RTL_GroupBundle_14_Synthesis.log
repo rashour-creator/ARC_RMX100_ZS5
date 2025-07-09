@@ -1,0 +1,817 @@
+Job <80639655> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on odcbench-00003-0032.static.us01-p10.synopsys.com>>
+
+
+                                    ZeBu (R)
+                                      zFe
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+
+#   info : #----------------------------------------------------------------
+#   info : Setup
+#   info : #----------------------------------------------------------------
+# command line is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zFe compile_hdr.tcl script/Bundle_14_synp.tcl -log Bundle_14.log -zlog 1 
+# start time is Tue May 13 18:29:52 EEST 2025
+#   step Setup : CVS $Revision: #4 $
+#   step Setup : CVS $Date: 2024/02/21 $
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc hcsrc.iba
+#   step Setup :         NEXT CALL to cmn::option phase synthesis
+#   info : #----------------------------------------------------------------
+#   info : Synth
+#   info : #----------------------------------------------------------------
+#   step Synth :         NEXT CALL to fs::simple_compile -technology vtx8 -mode block_based -version NewMixe ...
+#   step REPORT : Synthesizing module : dm_cgm
+#   step REPORT : Synthesizing module : rl_parity_chk_0002_0002
+#   step REPORT : Synthesizing module : rl_parity_chk_0002
+#   step REPORT : Synthesizing module : rl_reset_ctrl
+#   step REPORT : Synthesizing module : rl_parity_chk_0002_0000
+#   step REPORT : Synthesizing module : simple_parity
+#   step REPORT : Synthesizing module : simple_parity_0000
+#   step REPORT : Synthesizing module : rl_byte_unit
+#   step REPORT : Synthesizing module : rl_reset_ctrl_synch
+#   step REPORT : Synthesizing module : rl_parity_gen_0000_0002
+#   step REPORT : Synthesizing module : arcv_dm_top
+#   step REPORT : Synthesizing module : rl_parity_chk_0002_0003
+#   step REPORT : Synthesizing module : rl_parity_gen_0000
+#   step REPORT : Synthesizing module : rl_core
+#   step REPORT : Synthesizing module : arcv_wd_parity
+#   step REPORT : Synthesizing module : arcv_wd_parity_0000
+#   step REPORT : Synthesizing module : rl_parity_gen_0000_0000
+#   step REPORT : Synthesizing module : rl_parity_chk_0002_0001
+#   step REPORT : Synthesizing module : zebu_ts_orion_tick_clk_mod
+#   step REPORT : Synthesizing module : io_pad_ring
+#   step REPORT : Synthesizing module : reset_handshake
+#   step REPORT : Synthesizing module : arcv_timer_synch
+#   step REPORT : Synthesizing module : rl_parity_gen_0000_0003
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : dm_cgm
+#   step REPORT : [39.350] Instance count of module dm_cgm is 1
+#   step REPORT : [6.1691] Total net count: 11
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 4
+#   step REPORT : [6.1697]   (FF)   : 4
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'dm_cgm' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   4 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   5 |                   1 |                   0 |                   0 |                   0 || dm_cgm
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'dm_cgm' to 'edif/dm_cgm/dm_cgm.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/dm_cgm/dm_cgm.edf.gz'
+#   step SERIALIZE : #bytes in: 568, #bytes out: 435, compression ratio: 1.305747
+#   step REPORT : [87.28] Resource usage for dm_cgm: 0.104s 112.2M
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002_0002
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002_0002 is 6
+#   step REPORT : [6.1691] Total net count: 11
+#   step REPORT : [6.1690] There are 1 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] +CSA LUTs: 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002_0002' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   7 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002_0002
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002_0002' to 'edif/rl_parity_chk_0002_0002/rl_parity_chk_0002_0002.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002_0002/rl_parity_chk_0002_0002.edf.gz'
+#   step SERIALIZE : #bytes in: 603, #bytes out: 444, compression ratio: 1.358108
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002_0002: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002 is 64
+#   step REPORT : [6.1691] Total net count: 17
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 3
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  11 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002' to 'edif/rl_parity_chk_0002/rl_parity_chk_0002.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002/rl_parity_chk_0002.edf.gz'
+#   step SERIALIZE : #bytes in: 761, #bytes out: 526, compression ratio: 1.446768
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_reset_ctrl
+#   step REPORT : [39.350] Instance count of module rl_reset_ctrl is 2
+#   step REPORT : [6.1691] Total net count: 28
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1695] 3-input LUTs: 4
+#   step REPORT : [6.1696] Total LUT area: 5
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_reset_ctrl' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  18 |                   7 |                   0 |                   0 |                   0 || rl_reset_ctrl
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_reset_ctrl' to 'edif/rl_reset_ctrl/rl_reset_ctrl.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_reset_ctrl/rl_reset_ctrl.edf.gz'
+#   step SERIALIZE : #bytes in: 1162, #bytes out: 726, compression ratio: 1.600551
+#   step REPORT : [87.28] Resource usage for rl_reset_ctrl: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002_0000
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002_0000 is 6
+#   step REPORT : [6.1691] Total net count: 18
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 2
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 3
+#   step REPORT : [6.1697] +CSA LUTs: 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  12 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002_0000' to 'edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 784, #bytes out: 533, compression ratio: 1.470919
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002_0000: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : simple_parity
+#   step REPORT : [39.350] Instance count of module simple_parity is 1
+#   step REPORT : [6.1691] Total net count: 7
+#   step REPORT : [6.1690] There are 1 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 2
+#   step REPORT : [6.1697]   (FF)   : 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'simple_parity' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   2 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 || simple_parity
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'simple_parity' to 'edif/simple_parity/simple_parity.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/simple_parity/simple_parity.edf.gz'
+#   step SERIALIZE : #bytes in: 366, #bytes out: 317, compression ratio: 1.154574
+#   step REPORT : [87.28] Resource usage for simple_parity: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : simple_parity_0000
+#   step REPORT : [39.350] Instance count of module simple_parity_0000 is 2
+#   step REPORT : [6.1691] Total net count: 14
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1695] 3-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] State    : 3
+#   step REPORT : [6.1697]   (FF)   : 3
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'simple_parity_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   3 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   7 |                   0 |                   0 |                   0 |                   0 || simple_parity_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'simple_parity_0000' to 'edif/simple_parity_0000/simple_parity_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/simple_parity_0000/simple_parity_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 528, #bytes out: 389, compression ratio: 1.357327
+#   step REPORT : [87.28] Resource usage for simple_parity_0000: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_byte_unit
+#   step REPORT : [39.350] Instance count of module rl_byte_unit is 2
+#   step REPORT : [6.1691] Total net count: 129
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 10
+#   step REPORT : [6.1695] 5-input LUTs: 2
+#   step REPORT : [6.1695] 6-input LUTs: 47
+#   step REPORT : [6.1696] Total LUT area: 59
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_byte_unit' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                  59 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  70 |                   0 |                   0 |                   0 |                   0 || rl_byte_unit
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_byte_unit' to 'edif/rl_byte_unit/rl_byte_unit.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_byte_unit/rl_byte_unit.edf.gz'
+#   step SERIALIZE : #bytes in: 3766, #bytes out: 1734, compression ratio: 2.171857
+#   step REPORT : [87.28] Resource usage for rl_byte_unit: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_reset_ctrl_synch
+#   step REPORT : [39.350] Instance count of module rl_reset_ctrl_synch is 1
+#   step REPORT : [6.1691] Total net count: 26
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_reset_ctrl_synch' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  23 |                  10 |                   0 |                   0 |                   0 || rl_reset_ctrl_synch
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_reset_ctrl_synch' to 'edif/rl_reset_ctrl_synch/rl_reset_ctrl_synch.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_reset_ctrl_synch/rl_reset_ctrl_synch.edf.gz'
+#   step SERIALIZE : #bytes in: 1437, #bytes out: 784, compression ratio: 1.832908
+#   step REPORT : [87.28] Resource usage for rl_reset_ctrl_synch: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_gen_0000_0002
+#   step REPORT : [39.350] Instance count of module rl_parity_gen_0000_0002 is 4
+#   step REPORT : [6.1691] Total net count: 13
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 2
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_gen_0000_0002' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   4 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   8 |                   0 |                   0 |                   0 |                   0 || rl_parity_gen_0000_0002
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_gen_0000_0002' to 'edif/rl_parity_gen_0000_0002/rl_parity_gen_0000_0002.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_gen_0000_0002/rl_parity_gen_0000_0002.edf.gz'
+#   step SERIALIZE : #bytes in: 551, #bytes out: 397, compression ratio: 1.387909
+#   step REPORT : [87.28] Resource usage for rl_parity_gen_0000_0002: 0.038s 0.0M
+#   step REPORT : [39.349] Optimizing module : arcv_dm_top
+#   step REPORT : [39.350] Instance count of module arcv_dm_top is 1
+#   step REPORT : [6.1691] Total net count: 488
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 4
+#   step REPORT : [6.1695] 3-input LUTs: 2
+#   step REPORT : [6.1696] Total LUT area: 6
+#   step REPORT : [6.1697] +CSA LUTs: 3
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'arcv_dm_top' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   9 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 242 |                  13 |                   0 |                   0 |                   0 || arcv_dm_top
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'arcv_dm_top' to 'edif/arcv_dm_top/arcv_dm_top.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/arcv_dm_top/arcv_dm_top.edf.gz'
+#   step SERIALIZE : #bytes in: 22499, #bytes out: 6518, compression ratio: 3.451826
+#   step REPORT : [87.28] Resource usage for arcv_dm_top: 0.046s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002_0003
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002_0003 is 6
+#   step REPORT : [6.1691] Total net count: 16
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 5-input LUTs: 2
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 3
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002_0003' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  10 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002_0003
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002_0003' to 'edif/rl_parity_chk_0002_0003/rl_parity_chk_0002_0003.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002_0003/rl_parity_chk_0002_0003.edf.gz'
+#   step SERIALIZE : #bytes in: 705, #bytes out: 497, compression ratio: 1.418511
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002_0003: 0.036s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_gen_0000
+#   step REPORT : [39.350] Instance count of module rl_parity_gen_0000 is 60
+#   step REPORT : [6.1691] Total net count: 13
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 1
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_gen_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   9 |                   0 |                   0 |                   0 |                   0 || rl_parity_gen_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_gen_0000' to 'edif/rl_parity_gen_0000/rl_parity_gen_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_gen_0000/rl_parity_gen_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 570, #bytes out: 417, compression ratio: 1.366907
+#   step REPORT : [87.28] Resource usage for rl_parity_gen_0000: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_core
+#   step REPORT : [39.350] Instance count of module rl_core is 2
+#   step REPORT : [6.1691] Total net count: 5776
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] State    : 5
+#   step REPORT : [6.1697]   (FF)   : 5
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_core' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   5 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                2500 |                  17 |                   0 |                   0 |                   0 || rl_core
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_core' to 'edif/rl_core/rl_core.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_core/rl_core.edf.gz'
+#   step SERIALIZE : #bytes in: 200243, #bytes out: 56900, compression ratio: 3.519209
+#   step REPORT : [87.28] Resource usage for rl_core: 0.193s 0.0M
+#   step REPORT : [39.349] Optimizing module : arcv_wd_parity
+#   step REPORT : [39.350] Instance count of module arcv_wd_parity is 2
+#   step REPORT : [6.1691] Total net count: 18
+#   step REPORT : [6.1690] There are 0 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1696] Total LUT area: 0
+#   step REPORT : [6.1697] State    : 8
+#   step REPORT : [6.1697]   (FF)   : 8
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'arcv_wd_parity' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   8 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  18 |                   0 |                   0 |                   0 |                   0 || arcv_wd_parity
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'arcv_wd_parity' to 'edif/arcv_wd_parity/arcv_wd_parity.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/arcv_wd_parity/arcv_wd_parity.edf.gz'
+#   step SERIALIZE : #bytes in: 535, #bytes out: 384, compression ratio: 1.393229
+#   step REPORT : [87.28] Resource usage for arcv_wd_parity: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : arcv_wd_parity_0000
+#   step REPORT : [39.350] Instance count of module arcv_wd_parity_0000 is 2
+#   step REPORT : [6.1691] Total net count: 14
+#   step REPORT : [6.1690] There are 0 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1696] Total LUT area: 0
+#   step REPORT : [6.1697] State    : 6
+#   step REPORT : [6.1697]   (FF)   : 6
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'arcv_wd_parity_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   6 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  14 |                   0 |                   0 |                   0 |                   0 || arcv_wd_parity_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'arcv_wd_parity_0000' to 'edif/arcv_wd_parity_0000/arcv_wd_parity_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/arcv_wd_parity_0000/arcv_wd_parity_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 451, #bytes out: 334, compression ratio: 1.350299
+#   step REPORT : [87.28] Resource usage for arcv_wd_parity_0000: 0.031s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_gen_0000_0000
+#   step REPORT : [39.350] Instance count of module rl_parity_gen_0000_0000 is 4
+#   step REPORT : [6.1691] Total net count: 14
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 1
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_gen_0000_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  10 |                   0 |                   0 |                   0 |                   0 || rl_parity_gen_0000_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_gen_0000_0000' to 'edif/rl_parity_gen_0000_0000/rl_parity_gen_0000_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_gen_0000_0000/rl_parity_gen_0000_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 625, #bytes out: 430, compression ratio: 1.453488
+#   step REPORT : [87.28] Resource usage for rl_parity_gen_0000_0000: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002_0001
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002_0001 is 6
+#   step REPORT : [6.1691] Total net count: 13
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 3-input LUTs: 1
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 2
+#   step REPORT : [6.1697] +CSA LUTs: 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002_0001' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   4 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   8 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002_0001
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002_0001' to 'edif/rl_parity_chk_0002_0001/rl_parity_chk_0002_0001.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002_0001/rl_parity_chk_0002_0001.edf.gz'
+#   step SERIALIZE : #bytes in: 638, #bytes out: 466, compression ratio: 1.369099
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002_0001: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : zebu_ts_orion_tick_clk_mod
+#   step REPORT : [39.350] Instance count of module zebu_ts_orion_tick_clk_mod is 1
+#   step REPORT : [6.1691] Total net count: 7
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zebu_ts_orion_tick_clk_mod' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   1 |                   2 |                   0 |                   0 |                   0 || zebu_ts_orion_tick_clk_mod
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zebu_ts_orion_tick_clk_mod' to 'edif/zebu_ts_orion_tick_clk_mod/zebu_ts_orion_tick_clk_mod.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zebu_ts_orion_tick_clk_mod/zebu_ts_orion_tick_clk_mod.edf.gz'
+#   step SERIALIZE : #bytes in: 682, #bytes out: 446, compression ratio: 1.529148
+#   step REPORT : [87.28] Resource usage for zebu_ts_orion_tick_clk_mod: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : io_pad_ring
+#   step REPORT : [39.350] Instance count of module io_pad_ring is 1
+#   step REPORT : [6.1691] Total net count: 39
+#   step REPORT : [6.1690] There are 1 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1696] Total LUT area: 0
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'io_pad_ring' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  38 |                   0 |                   0 |                   0 |                   0 || io_pad_ring
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'io_pad_ring' to 'edif/io_pad_ring/io_pad_ring.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/io_pad_ring/io_pad_ring.edf.gz'
+#   step SERIALIZE : #bytes in: 1402, #bytes out: 815, compression ratio: 1.720245
+#   step REPORT : [87.28] Resource usage for io_pad_ring: 0.036s 0.0M
+#   step REPORT : [39.349] Optimizing module : reset_handshake
+#   step REPORT : [39.350] Instance count of module reset_handshake is 10
+#   step REPORT : [6.1691] Total net count: 7
+#   step REPORT : [6.1690] There are 1 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 3-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'reset_handshake' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 || reset_handshake
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'reset_handshake' to 'edif/reset_handshake/reset_handshake.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/reset_handshake/reset_handshake.edf.gz'
+#   step SERIALIZE : #bytes in: 347, #bytes out: 307, compression ratio: 1.130293
+#   step REPORT : [87.28] Resource usage for reset_handshake: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : arcv_timer_synch
+#   step REPORT : [39.350] Instance count of module arcv_timer_synch is 1
+#   step REPORT : [6.1691] Total net count: 11
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 3-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'arcv_timer_synch' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   5 |                   2 |                   0 |                   0 |                   0 || arcv_timer_synch
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'arcv_timer_synch' to 'edif/arcv_timer_synch/arcv_timer_synch.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/arcv_timer_synch/arcv_timer_synch.edf.gz'
+#   step SERIALIZE : #bytes in: 694, #bytes out: 489, compression ratio: 1.419223
+#   step REPORT : [87.28] Resource usage for arcv_timer_synch: 0.036s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_parity_gen_0000_0003
+#   step REPORT : [39.350] Instance count of module rl_parity_gen_0000_0003 is 4
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 1 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_gen_0000_0003' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 || rl_parity_gen_0000_0003
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_gen_0000_0003' to 'edif/rl_parity_gen_0000_0003/rl_parity_gen_0000_0003.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_gen_0000_0003/rl_parity_gen_0000_0003.edf.gz'
+#   step SERIALIZE : #bytes in: 450, #bytes out: 342, compression ratio: 1.315789
+#   step REPORT : [87.28] Resource usage for rl_parity_gen_0000_0003: 0.033s 0.0M
+#   step Synth : RhinoDB status is set by default value: rhino_default_status:1.
+#   step Synth : Using zCreateNameDB from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB for RhinoDB population.
+#   step Synth : Running RhinoDB gate population on 23 modules. To skip this step please set SNPS_RHINODB_INTERNAL_3STEP_DISABLE env var.
+Running in 3step flow - bundle population mode, for bundle,modules = Bundle_14,rl_parity_gen_0000_0003,arcv_timer_synch,reset_handshake,io_pad_ring,zebu_ts_orion_tick_clk_mod,rl_parity_chk_0002_0001,rl_parity_gen_0000_0000,arcv_wd_parity_0000,rl_parity_gen_0000,rl_parity_chk_0002_0003,arcv_dm_top,arcv_wd_parity,rl_core,rl_parity_gen_0000_0002,rl_reset_ctrl_synch,rl_byte_unit,simple_parity_0000,simple_parity,rl_parity_chk_0002_0000,rl_reset_ctrl,rl_parity_chk_0002,rl_parity_chk_0002_0002,dm_cgm,
+Got following -X option = show_times
+#     Tue May 13 18:29:56 2025 : zCreateNameDB Started
+#      : Reading the Serializing VCS Version
+[2025-05-13 18:29:56.015358] [0x000015555540d300] [info]    #      : Reading the Serializing VCS Version
+
+#      : Deserializing names dictionary
+[2025-05-13 18:29:56.016044] [0x000015555540d300] [info]    #      : Deserializing names dictionary
+
+#      : Deserializing libraries
+[2025-05-13 18:29:56.022666] [0x000015555540d300] [info]    #      : Deserializing libraries
+
+#      : Deserializing RTL
+[2025-05-13 18:29:56.023934] [0x000015555540d300] [info]    #      : Deserializing RTL
+
+#      : Deserializing Gate
+[2025-05-13 18:29:56.025217] [0x000015555540d300] [info]    #      : Deserializing Gate
+
+#      : Deserializing design object
+[2025-05-13 18:29:56.026460] [0x000015555540d300] [info]    #      : Deserializing design object
+
+#      : Populating Dfs Table
+[2025-05-13 18:29:56.028028] [0x000015555540d300] [info]    #      : Populating Dfs Table
+
+### Tue May 13 18:29:56 2025 : RTL Deserialized
+### Tue May 13 18:29:56 2025 : Starting CHUNK Population
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_gen_0000_0003
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_gen_0000_0003
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_gen_0000_0003
+#     Tue May 13 18:29:56 2025 : Populating CHUNK arcv_timer_synch
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module arcv_timer_synch
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module arcv_timer_synch
+#     Tue May 13 18:29:56 2025 : Populating CHUNK reset_handshake
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module reset_handshake
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module reset_handshake
+#     Tue May 13 18:29:56 2025 : Populating CHUNK io_pad_ring
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module io_pad_ring
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module io_pad_ring
+#     Tue May 13 18:29:56 2025 : Populating CHUNK zebu_ts_orion_tick_clk_mod
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module zebu_ts_orion_tick_clk_mod
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module zebu_ts_orion_tick_clk_mod
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_chk_0002_0001
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_chk_0002_0001
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_chk_0002_0001
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_gen_0000_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_gen_0000_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_gen_0000_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK arcv_wd_parity_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module arcv_wd_parity_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module arcv_wd_parity_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_gen_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_gen_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_gen_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_chk_0002_0003
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_chk_0002_0003
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_chk_0002_0003
+#     Tue May 13 18:29:56 2025 : Populating CHUNK arcv_dm_top
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module arcv_dm_top
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module arcv_dm_top
+#     Tue May 13 18:29:56 2025 : Populating CHUNK arcv_wd_parity
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module arcv_wd_parity
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module arcv_wd_parity
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_core
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_core
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_core
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_gen_0000_0002
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_gen_0000_0002
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_gen_0000_0002
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_reset_ctrl_synch
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_reset_ctrl_synch
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_reset_ctrl_synch
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_byte_unit
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_byte_unit
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_byte_unit
+#     Tue May 13 18:29:56 2025 : Populating CHUNK simple_parity_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module simple_parity_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module simple_parity_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK simple_parity
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module simple_parity
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module simple_parity
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_chk_0002_0000
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_chk_0002_0000
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_chk_0002_0000
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_reset_ctrl
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_reset_ctrl
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_reset_ctrl
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_chk_0002
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_chk_0002
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_chk_0002
+#     Tue May 13 18:29:56 2025 : Populating CHUNK rl_parity_chk_0002_0002
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module rl_parity_chk_0002_0002
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module rl_parity_chk_0002_0002
+#     Tue May 13 18:29:56 2025 : Populating CHUNK dm_cgm
+#     Tue May 13 18:29:56 2025 : Gate Building light signal container for module dm_cgm
+#     Tue May 13 18:29:56 2025 : End of Gate Building light signal container for module dm_cgm
+### Tue May 13 18:29:56 2025(+0s) : CHUNK Population done
+zCreateNameDB finished without errors or warnings.
+#     Tue May 13 18:29:56 2025 : zCreateNameDB Ended
+#   step Synth : Synthesis called the following command: '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_14,rl_parity_gen_0000_0003,arcv_timer_synch,reset_handshake,io_pad_ring,zebu_ts_orion_tick_clk_mod,rl_parity_chk_0002_0001,rl_parity_gen_0000_0000,arcv_wd_parity_0000,rl_parity_gen_0000,rl_parity_chk_0002_0003,arcv_dm_top,arcv_wd_parity,rl_core,rl_parity_gen_0000_0002,rl_reset_ctrl_synch,rl_byte_unit,simple_parity_0000,simple_parity,rl_parity_chk_0002_0000,rl_reset_ctrl,rl_parity_chk_0002,rl_parity_chk_0002_0002,dm_cgm,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group'
+
+#   step exec summary : time 0m4.65059s
+#   exec summary : Total memory: 147000 kB minimum 
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:29:56 EEST 2025
+zFe exit status: 0
+command exit code is '0'

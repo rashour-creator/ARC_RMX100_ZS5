@@ -1,0 +1,30 @@
+#   step REPORT : Synthesizing module : rl_reset_ctrl_wrap
+#   step REPORT : [39.349] Optimizing module : rl_reset_ctrl_wrap
+#   step REPORT : [39.350] Instance count of module rl_reset_ctrl_wrap is 2
+#   step REPORT : [6.1691] Total net count: 27
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 2
+#   step REPORT : [6.1695] 3-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 3
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_reset_ctrl_wrap' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   3 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  17 |                   1 |                   0 |                   0 |                   0 || rl_reset_ctrl_wrap
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_reset_ctrl_wrap' to 'edif/rl_reset_ctrl_wrap/rl_reset_ctrl_wrap.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_reset_ctrl_wrap/rl_reset_ctrl_wrap.edf.gz'
+#   step SERIALIZE : #bytes in: 1127, #bytes out: 677, compression ratio: 1.664697
+#   step REPORT : [87.28] Resource usage for rl_reset_ctrl_wrap: 0.069s 0.0M

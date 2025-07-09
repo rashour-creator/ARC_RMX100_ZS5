@@ -1,0 +1,574 @@
+
+
+                                    ZeBu (R)
+                                      zFe
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+
+#   info : #----------------------------------------------------------------
+#   info : Setup
+#   info : #----------------------------------------------------------------
+# command line is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zFe compile_hdr.tcl script/Bundle_26_synp.tcl -log Bundle_26.log -zlog 1 
+# start time is Wed May 14 18:56:36 EEST 2025
+#   step Setup : CVS $Revision: #4 $
+#   step Setup : CVS $Date: 2024/02/21 $
+#   step Setup : Tcl executable is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/ztclsh
+#   step Setup : Tcl version is 8.6
+#   step Setup : Tcl patch level is 8.6.6
+#   step Setup : Tcl library directory is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/tcl/tcl8.6
+#   step Setup : execing Tcl status is 1
+#   step Setup : execing passed (something written to stderr, which is why Tcl status was 1)
+#   step Setup : Path to zFe is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin
+#   step Setup : zFe's current directory is /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group
+#   step Setup : 'which zfast' is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zfast
+#   step Setup : 'which zCui' is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zCui
+#   step Setup : pid_hostname is 4130772_vgzeburtdc264.internal.synopsys.com_6824bd34 
+#   step Setup : Environment variable ZEBU_ROOT is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   step Setup : Have set the data path to /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   step Setup : Environment variable THARAS_ROOT has been set to /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64, because it was not set.
+#   step Setup : Environment variable HCS_USECONFIG has been set to vcs, because it was not set.
+#   step Setup : Environment variable EVE_VHDL_PACKAGE_ROOT has been set to /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/vhdl/vhdl_packages/x86_64, because it was not set.
+#   step Setup : Environment variable VHDL_PDIR has been set to /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/vhdl/vhdl_packages/x86_64, because it was not set.
+#   step Setup : Environment variable JAGUAR_HOME has been set to ., because it was not set.
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+#   step Setup : Sourcing file concat_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ ...
+#   step Setup : Start of copy of file /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui, which has user attributes.
+#-------------------------------------------------------------------------------
+# Copyright (c) 2014 Synopsys Emulation and Verification
+#-------------------------------------------------------------------------------
+
+# Variables for zCui
+
+ZmemDirectory = zmem
+XcuiDirectory = xcui
+
+# Use of zlog as log files
+Error:MtfDll = libtclzlog.so
+Error:MtfName = zfastlog
+Error:FpcName = setLogFile
+
+# Compress edif files
+Compile:CompressEDIF = true
+
+# Keep spaces in escaped names.
+Compile:NoSpaceInEdifNames = false
+
+# Name for readmem.dump file produced by zFast.
+Compile:ReadmemDump = readmem_zfast.dump
+
+# Do not write ZFS_RNAME_SHOW attributes.
+Compile:PrintZdbProperty = false
+
+# Leave UseCarry4 unset for vtx7 and vtx8.
+# zfast can distinguish between true, false, and unset,
+# and when unset, can choose different defaults for UC1 vs UC2.
+# Compile:UseCarry4=true
+(onset Technology
+   (switch -nocase (get Technology)
+      "vtx5"
+         (block
+            (set Compile:UseCarry4 false)
+         )
+      "vtx6"
+         (block
+            (set Compile:UseCarry4 false)
+         )
+   )
+)
+
+#limit of 4 selector bits (up to MUXF8, as in Virtex7
+Compile:Expand:EncMuxLimit = 4
+
+# Support new tristate macros (zebu_PULLUP, zebu_PULLDOWN, zebu_KEEPER) 
+Compile:OptimizePullMacros = true
+#   step Setup : End of copy of file /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup : Start of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc, which has user attributes.
+Compile:DPI:Enable=true
+Compile:CCall:SupportDollarDisplay=true
+@Compile:DPI:ImplementAsProbe=false
+UceSynth=true
+Compile:SimplifySenseExpr=true
+hcs:sva=true
+Compile:Sva:FullModeAll=false
+Compile:SVA:InfiniteRange=20
+Internal:DumpMacroBodies=false
+Compile:UseVFS=false
+# Begin global optimization options
+Zview=reg
+# End optimization options
+#   step Setup : End of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup : Start of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/new_global_utf_config.hcsrc, which has user attributes.
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/utf/default_commands.utf 37
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/utf/default_commands.utf 37
+# ???
+Zview=dump
+Compile:ConvertStrength=1
+Compile:ConvertMos=1
+Compile:ConvertTranif=1
+#   step Setup : End of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/new_global_utf_config.hcsrc
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/new_global_utf_config.hcsrc
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup : Start of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/dut.hcsrc, which has user attributes.
+#   step Setup : End of copy of file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/dut.hcsrc
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/new_global_utf_config.hcsrc
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/dut.hcsrc
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc hcsrc.iba
+#   step Setup : Start of copy of file hcsrc.iba, which has user attributes.
+TILEC=true
+Esx:UnNamedBlockPrefix=(unnamed$$$$_)
+
+
+Compile:InseparableModules = ( rl_wtree_comp612 mss_bus_switch_ibp2pack_0002 mss_bus_switch_fifo_0000_0000 mss_bus_switch_fifo_0000_0005 mss_bus_switch_fifo_0000 alb_mss_fab_ibp2pack_0000 apb_dummy_slave alb_mss_fab_fifo_0001_0007 alb_mss_fab_ibp2pack mss_bus_switch_ibp2pack_0000 alb_mss_fab_fifo_0001_0006 rl_wtree_comp312 odd_pty_qual_dec_wrap_0000_0000 mss_bus_switch_ibpx2ibpy_0000_0001 mss_bus_switch_fifo_0000_0003 odd_pty_dec_0000 odd_pty_qual_dec_wrap_0000 alb_mss_mem_ibp2pack mss_bus_switch_fifo_0000_0009 alb_mss_fab_fifo_0001 ls_compare_unit_0003 alb_mss_mem_pack2ibp ls_compare_unit_0008 mss_bus_switch_pack2ibp_0001 mss_bus_switch_pack2ibp ls_compare_unit_0007 odd_pty_dec_0002 zz_Encrypt_3 odd_pty_enc_0001_0002 ls_compare_unit_0006 odd_pty_dec mss_bus_switch_fifo_0000_0007 alb_mss_fab_fifo_0001_0004 odd_pty_enc_0001_0001 alb_mss_fab_pack2ibp_0003 zz_Encrypt_13 ls_compare_unit_000F odd_pty_enc_0001_0000 zz_Encrypt_10 rl_wtree_comp432 mss_bus_switch_ibpx2ibpy_0000 mss_bus_switch_fifo_0000_0001 mss_bus_switch_fifo_0000_0006 alb_mss_fab_fifo_0001_0002 alb_mss_fab_pack2ibp_0001 alb_mss_fab_ibp2pack_0003 alb_mss_fab_fifo_0001_0009 DWbb_bcm00_maj rl_wtree_comp522 rl_wtree_comp302 alb_mss_fab_fifo_0001_0008 odd_pty_enc_0001 mss_bus_switch_ibp2pack_0003 odd_pty_qual_di_dec_wrap_0000_0001 mss_bus_switch_fifo_0000_0004 odd_pty_di_dec_wrap_0000 alb_mss_fab_ibp2pack_0001 odd_pty_enc_0000 odd_pty_qual_di_dec_wrap_0000 alb_mss_fab_pack2ibp mss_bus_switch_ibp2pack_0001 odd_pty_qual_di_dec_wrap_0000_0000 multi_bit_comparator_0000 ls_multi_bit_comparator_0006 mss_bus_switch_fifo_0000_0002 alb_mss_fab_fifo_0001_0000 mss_bus_switch_ibp2pack odd_pty_qual_dec_wrap_0000_0001 ls_multi_bit_comparator_0002 mss_bus_switch_pack2ibp_0002 odd_pty_dec_0003 zz_Encrypt_4 zz_Encrypt_14 alb_mss_fab_fifo_0001_0005 odd_pty_dec_wrap_0000 alb_mss_mem_ibp_split_0000 mss_bus_switch_pack2ibp_0000 odd_pty_dec_0001 mss_bus_switch_ibpx2ibpy_0000_0000 alb_mss_fab_fifo_0001_0003 alb_mss_fab_pack2ibp_0004 zz_Encrypt_15 ls_compare_unit_000E mss_bus_switch_fifo_0000_0008 rl_wtree_comp222 dw_dbp_stubs rl_logic_unit mss_bus_switch_ibp_cwbind_0000_0000 ls_multi_bit_comparator_0001 alb_mss_fab_pack2ibp_0002 alb_mss_fab_ibp2pack_0004 ls_multi_bit_comparator_0003 rl_wtree_comp622 rl_wtree_comp402 mss_bus_switch_ibp_cwbind_0000 alb_mss_fab_pack2ibp_0000 alb_mss_fab_fifo_0001_000A alb_mss_fab_ibp2pack_0002 zz_Encrypt_11 alb_mss_fab_fifo_0001_0001 )
+#   step Setup : End of copy of file hcsrc.iba
+#   step Setup : Debug flag = 0
+#   step Setup : Attribute files read: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zfs
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/vhs/hcsrc.zcui
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/global_utf.hcsrc
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/new_global_utf_config.hcsrc
+     /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group/dut.hcsrc
+     hcsrc.iba
+#   step Setup :         NEXT CALL to cmn::option phase synthesis
+#   info : #----------------------------------------------------------------
+#   info : Synth
+#   info : #----------------------------------------------------------------
+#   step Synth :         NEXT CALL to fs::simple_compile -technology vtx8 -mode block_based -version NewMixe ...
+#   step Synth : Deleting edif_tmp/edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz
+#   step Synth : Deleting edif_tmp/edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz_subedifs
+#   step Synth : Deleting zdpi/alb_mss_mem_fifo_0003_ccall.cc
+#   step Synth : Deleting zdpi/alb_mss_mem_fifo_0003_ccall.h
+#   step Synth : Deleting edif_tmp/edif/xtor_t32Jtag_svs/xtor_t32Jtag_svs.edf.gz
+#   step Synth : Deleting edif_tmp/edif/xtor_t32Jtag_svs/xtor_t32Jtag_svs.edf.gz_subedifs
+#   step Synth : Deleting zdpi/xtor_t32Jtag_svs_ccall.cc
+#   step Synth : Deleting zdpi/xtor_t32Jtag_svs_ccall.h
+#   step Synth : Deleting edif_tmp/edif/alb_mss_fab_ibp2single_0000/alb_mss_fab_ibp2single_0000.edf.gz
+#   step Synth : Deleting edif_tmp/edif/alb_mss_fab_ibp2single_0000/alb_mss_fab_ibp2single_0000.edf.gz_subedifs
+#   step Synth : Deleting zdpi/alb_mss_fab_ibp2single_0000_ccall.cc
+#   step Synth : Deleting zdpi/alb_mss_fab_ibp2single_0000_ccall.h
+#   step Synth : Deleting edif_tmp/edif/rl_pma/rl_pma.edf.gz
+#   step Synth : Deleting edif_tmp/edif/rl_pma/rl_pma.edf.gz_subedifs
+#   step Synth : Deleting zdpi/rl_pma_ccall.cc
+#   step Synth : Deleting zdpi/rl_pma_ccall.h
+#   step Synth : Deleting edif_tmp/edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz
+#   step Synth : Deleting edif_tmp/edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz_subedifs
+#   step Synth : Deleting zdpi/rl_parity_chk_0002_0000_ccall.cc
+#   step Synth : Deleting zdpi/rl_parity_chk_0002_0000_ccall.h
+#   step Synth : Deleting edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz
+#   step Synth : Deleting edif/xtor_t32Jtag_svs/xtor_t32Jtag_svs.edf.gz
+#   step Synth : Deleting edif/alb_mss_fab_ibp2single_0000/alb_mss_fab_ibp2single_0000.edf.gz
+#   step Synth : Deleting edif/rl_pma/rl_pma.edf.gz
+#   step Synth : Deleting edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz
+#   step Synth : Execing the following command:
+#   step Synth :    zfast +hcs+atf work_dir_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34/hcsrc_zfast_01.parsed_args
+#   step ALWAYS : 
+
+                                    ZeBu (R)
+                                     zfast
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+#   step REPORT : Synthesizing module : rl_parity_chk_0002_0000
+#   step REPORT : Synthesizing module : rl_pma
+#   step REPORT : Synthesizing module : alb_mss_fab_ibp2single_0000
+#   step REPORT : Synthesizing module : xtor_t32Jtag_svs
+#   step REPORT : Synthesizing module : alb_mss_mem_fifo_0003
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : rl_parity_chk_0002_0000
+#   step REPORT : [39.350] Instance count of module rl_parity_chk_0002_0000 is 6
+#   step REPORT : [6.1691] Total net count: 18
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 4-input LUTs: 2
+#   step REPORT : [6.1695] 5-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 3
+#   step REPORT : [6.1697] +CSA LUTs: 2
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_parity_chk_0002_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                   5 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  12 |                   0 |                   0 |                   0 |                   0 || rl_parity_chk_0002_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_parity_chk_0002_0000' to 'edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_parity_chk_0002_0000/rl_parity_chk_0002_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 784, #bytes out: 531, compression ratio: 1.476460
+#   step REPORT : [87.28] Resource usage for rl_parity_chk_0002_0000: 0.261s 112.2M
+#   step REPORT : [39.349] Optimizing module : rl_pma
+#   step REPORT : [39.350] Instance count of module rl_pma is 2
+#   step REPORT : [6.1691] Total net count: 1306
+#   step REPORT : [6.1690] There are 8 levels of combinational cells
+#   step REPORT : [6.1689] There are 10 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 20
+#   step REPORT : [6.1695] 3-input LUTs: 134
+#   step REPORT : [6.1695] 4-input LUTs: 34
+#   step REPORT : [6.1695] 5-input LUTs: 60
+#   step REPORT : [6.1695] 6-input LUTs: 154
+#   step REPORT : [6.1696] Total LUT area: 402
+#   step REPORT : [6.1697] State    : 240
+#   step REPORT : [6.1697]   (FF)   : 240
+#   step REPORT : [6.1697] CARRY    : 12
+#   step REPORT : [6.1697] +CSA LUTs: 174
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_pma' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 240 |                 576 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 180 |                  12 |                   0 |                   0 |                   0 || rl_pma
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_pma' to 'edif/rl_pma/rl_pma.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_pma/rl_pma.edf.gz'
+#   step SERIALIZE : #bytes in: 47197, #bytes out: 18756, compression ratio: 2.516368
+#   step REPORT : [87.28] Resource usage for rl_pma: 0.248s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_fab_ibp2single_0000
+#   step REPORT : [39.350] Instance count of module alb_mss_fab_ibp2single_0000 is 3
+#   step REPORT : [6.1691] Total net count: 833
+#   step REPORT : [6.1690] There are 8 levels of combinational cells
+#   step REPORT : [6.1689] There are 4 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 7
+#   step REPORT : [6.1695] 3-input LUTs: 25
+#   step REPORT : [6.1695] 4-input LUTs: 21
+#   step REPORT : [6.1695] 5-input LUTs: 46
+#   step REPORT : [6.1695] 6-input LUTs: 53
+#   step REPORT : [6.1696] Total LUT area: 152
+#   step REPORT : [6.1697] State    : 58
+#   step REPORT : [6.1697]   (FF)   : 58
+#   step REPORT : [6.1697] CARRY    : 4
+#   step REPORT : [6.1697] +CSA LUTs: 186
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_fab_ibp2single_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  58 |                 338 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 275 |                   3 |                   0 |                   0 |                   0 || alb_mss_fab_ibp2single_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_fab_ibp2single_0000' to 'edif/alb_mss_fab_ibp2single_0000/alb_mss_fab_ibp2single_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_fab_ibp2single_0000/alb_mss_fab_ibp2single_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 31494, #bytes out: 12625, compression ratio: 2.494574
+#   step REPORT : [87.28] Resource usage for alb_mss_fab_ibp2single_0000: 0.177s 0.0M
+#   step REPORT : [39.349] Optimizing module : xtor_t32Jtag_svs
+#   step REPORT : [39.350] Instance count of module xtor_t32Jtag_svs is 1
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net CPUcycles__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net CPUcycles__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net N_13
+### warning in ZFAST : (INTERNAL) no module information for net N_15
+### warning in ZFAST : (INTERNAL) no module information for net N_17
+### warning in ZFAST : (INTERNAL) no module information for net N_19
+### warning in ZFAST : (INTERNAL) no module information for net N_24
+### warning in ZFAST : (INTERNAL) no module information for net N_26
+### warning in ZFAST : (INTERNAL) no module information for net N_28
+### warning in ZFAST : (INTERNAL) no module information for net N_30
+### warning in ZFAST : (INTERNAL) no module information for net N_37
+### warning in ZFAST : (INTERNAL) no module information for net N_39
+### warning in ZFAST : (INTERNAL) no module information for net N_44
+### warning in ZFAST : (INTERNAL) no module information for net N_46
+### warning in ZFAST : (INTERNAL) no module information for net N_5
+### warning in ZFAST : (INTERNAL) no module information for net N_54
+### warning in ZFAST : (INTERNAL) no module information for net N_56
+### warning in ZFAST : (INTERNAL) no module information for net N_58
+### warning in ZFAST : (INTERNAL) no module information for net N_63
+### warning in ZFAST : (INTERNAL) no module information for net N_67
+### warning in ZFAST : (INTERNAL) no module information for net N_69
+### warning in ZFAST : (INTERNAL) no module information for net N_7
+### warning in ZFAST : (INTERNAL) no module information for net N_9
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net config_done__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net config_done__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net cycle_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net drive_reset__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net drive_reset_done__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_0__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_0__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_10__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_10__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_1__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_4__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_6__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_8__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_a__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_a__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_b__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_b__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_c__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_c__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_d__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_d__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_e__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_e__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_f__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_f__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net run_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net run_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net run_enable__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net send_and_receive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net set_done__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net set_signals__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net trstn_forced__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net trstn_forced__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_stop_driver_clock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__config_stop_driver_clock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__force_trst_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__force_trst_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__force_trst_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__force_trst_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_config_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_cycles_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__get_signals_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__hard_reset_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__hard_reset_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__is_reset_active_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_arg_reset_data_i___MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_arg_reset_data_i___MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_rx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_rx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_stop_driver_clock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_stop_driver_clock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__output_reset_message_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__runUntilReset_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__run_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__run_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__send_and_receive_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__send_and_receive_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__send_and_receive_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__send_and_receive_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__set_signals_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_jtag_xtor__set_signals_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemi_control_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemi_control_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemi_status_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemi_status_hw_tx_ready__MD_2
+#   step REPORT : [6.1691] Total net count: 6596
+#   step REPORT : [6.1690] There are 10 levels of combinational cells
+#   step REPORT : [6.1689] There are 56 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 150
+#   step REPORT : [6.1695] 3-input LUTs: 101
+#   step REPORT : [6.1695] 4-input LUTs: 261
+#   step REPORT : [6.1695] 5-input LUTs: 70
+#   step REPORT : [6.1695] 6-input LUTs: 282
+#   step REPORT : [6.1696] Total LUT area: 864
+#   step REPORT : [6.1697] State    : 3385
+#   step REPORT : [6.1697]   (FF)   : 2235
+#   step REPORT : [6.1697]   (Latch): 1150
+#   step REPORT : [6.1697] CARRY    : 114
+#   step REPORT : [6.1697] +CSA LUTs: 26
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (202 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'xtor_t32Jtag_svs' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                3385 |                 890 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 202 |                 131 |                   0 |                   0 |                   0 || xtor_t32Jtag_svs
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'xtor_t32Jtag_svs' to 'edif/xtor_t32Jtag_svs/xtor_t32Jtag_svs.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/xtor_t32Jtag_svs/xtor_t32Jtag_svs.edf.gz'
+#   step SERIALIZE : #bytes in: 211691, #bytes out: 74684, compression ratio: 2.834489
+#   step REPORT : [87.28] Resource usage for xtor_t32Jtag_svs: 0.773s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_mem_fifo_0003
+#   step REPORT : [39.350] Instance count of module alb_mss_mem_fifo_0003 is 2
+#   step REPORT : [6.1691] Total net count: 86
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 2
+#   step REPORT : [6.1695] 3-input LUTs: 6
+#   step REPORT : [6.1695] 4-input LUTs: 7
+#   step REPORT : [6.1695] 5-input LUTs: 3
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 19
+#   step REPORT : [6.1697] State    : 14
+#   step REPORT : [6.1697]   (FF)   : 14
+#   step REPORT : [6.1697] +CSA LUTs: 11
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_mem_fifo_0003' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  14 |                  30 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  18 |                   0 |                   0 |                   0 |                   0 || alb_mss_mem_fifo_0003
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_mem_fifo_0003' to 'edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz'
+#   step SERIALIZE : #bytes in: 3045, #bytes out: 1496, compression ratio: 2.035428
+#   step REPORT : [87.28] Resource usage for alb_mss_mem_fifo_0003: 0.090s 0.0M
+#   step Synth : execing Tcl status is 0
+#   step Synth : execing passed (nothing written to stderr)
+#   step Synth : Deleting synthesis_log_dir/alb_mss_mem_fifo_0003.log
+#   step Synth : Deleting synthesis_log_dir/xtor_t32Jtag_svs.log
+#   step Synth : Deleting synthesis_log_dir/alb_mss_fab_ibp2single_0000.log
+#   step Synth : Deleting synthesis_log_dir/rl_pma.log
+#   step Synth : Deleting synthesis_log_dir/rl_parity_chk_0002_0000.log
+#   step Synth : RhinoDB status is set by default value: rhino_default_status:1.
+#   step Synth : Using zCreateNameDB from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB for RhinoDB population.
+#   step Synth : Deleting Bundle_26_mods.list
+#   step Synth : Running RhinoDB gate population on 5 modules. To skip this step please set SNPS_RHINODB_INTERNAL_3STEP_DISABLE env var.
+#   step Synth : Execing the following command:
+#   step Synth :    /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_26,alb_mss_mem_fifo_0003,xtor_t32Jtag_svs,alb_mss_fab_ibp2single_0000,rl_pma,rl_parity_chk_0002_0000,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group
+#   step Synth : execing Tcl status is 0
+#   step Synth : execing passed (nothing written to stderr)
+#   step Synth : Synthesis called the following command: '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_26,alb_mss_mem_fifo_0003,xtor_t32Jtag_svs,alb_mss_fab_ibp2single_0000,rl_pma,rl_parity_chk_0002_0000,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group'
+#   step Synth : Deleting work_dir_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34
+#   step Synth : Sourcing file concat_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34 returned the result string '0'
+#   step Synth : Sourcing file concat_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34 has completed.
+#   step Synth : Deleting concat_Bundle_26_log_4130772_vgzeburtdc264.internal.synopsys.com_6824bd34
+
+#   step exec summary : time 0m12.65153s
+#   exec summary : Total memory: 147000 kB minimum 
+#   exec summary : Successful execution
+
+# end time is Wed May 14 18:56:48 EEST 2025

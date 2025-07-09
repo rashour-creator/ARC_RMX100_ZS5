@@ -1,0 +1,11 @@
+rl_reset_ctrl_synch
+u_cdc_synch_rst_init_disable -> u_cdc_synch_rst_init_disable -> cdc_synch_wrap
+u_cdc_synch_dm2arc_halt_on_reset -> u_cdc_synch_dm2arc_halt_on_reset -> cdc_synch_wrap
+u_cdc_synch_dm2arc_havereset_ack -> u_cdc_synch_dm2arc_havereset_ack -> cdc_synch_wrap
+u_cdc_synch_ndmreset -> u_cdc_synch_ndmreset -> cdc_synch_wrap
+u_cdc_synch_dm2arc_hartreset2 -> u_cdc_synch_dm2arc_hartreset2 -> cdc_synch_wrap
+u_cdc_synch_dm2arc_hartreset -> u_cdc_synch_dm2arc_hartreset -> cdc_synch_wrap
+u_cdc_synch_soft_reset_prepare -> u_cdc_synch_soft_reset_prepare -> cdc_synch_wrap
+u_cdc_synch_soft_reset_req -> u_cdc_synch_soft_reset_req -> cdc_synch_wrap
+u_cdc_synch_rst_cpu_req -> u_cdc_synch_rst_cpu_req -> cdc_synch_wrap
+u_rst_cdc_sync -> u_rst_cdc_sync -> ls_cdc_sync_0000

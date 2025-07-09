@@ -1,0 +1,39 @@
+#   step REPORT : Synthesizing module : fpga_sram_0002_0000
+#   step REPORT : [39.349] Optimizing module : fpga_sram_0002_0000
+#   step REPORT : [39.350] Instance count of module fpga_sram_0002_0000 is 2
+#   step REPORT : [6.1822] Got memory fpga_sram_0002_0000.mem_r (131072 x 40) with 2 read port(s), 1 write port(s), and 0 RW port(s)
+#   step REPORT : 
+#   step REPORT : +------+-------------+-------+----------+---------------------------+---...
+#   step REPORT : | type | total bits  | width |   depth  |           PORTS           | Memory name
+#   step REPORT : +------+-------------+-------+----------+---------------------------+---...
+#   step REPORT : | zMem |     5242880 |    40 |   131072 |  CW: 1   NCW: 0   R: 2    |fpga_sram_0002_0000.mem_r
+#   step REPORT : +------+-------------+-------+----------+---------------------------+---...
+#   step REPORT : 
+#   step REPORT : [6.1691] Total net count: 336
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 3-input LUTs: 40
+#   step REPORT : [6.1695] 5-input LUTs: 8
+#   step REPORT : [6.1696] Total LUT area: 48
+#   step REPORT : [6.1697] State    : 17
+#   step REPORT : [6.1697]   (FF)   : 17
+#   step REPORT : [6.1697] CARRY    : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'fpga_sram_0002_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  17 |                  48 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 140 |                   1 |                   0 |                   0 |                   0 || fpga_sram_0002_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'fpga_sram_0002_0000' to 'edif/fpga_sram_0002_0000/fpga_sram_0002_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/fpga_sram_0002_0000/fpga_sram_0002_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 8698, #bytes out: 4043, compression ratio: 2.151373
+#   step REPORT : [87.28] Resource usage for fpga_sram_0002_0000: 0.046s 0.0M

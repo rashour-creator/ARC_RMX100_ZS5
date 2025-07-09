@@ -1,0 +1,19 @@
+memory set_global_debug_mode true
+mem new zz_Encrypt_2_ZMEM_0 auto
+#
+# Inferred from /global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_amba_master_axi3_svs.sv, line 676
+mem depth 1024
+mem width 116
+mem add_port w0 w
+mem set_port_access w0 sync driver
+mem_port w0 clk w0clk 
+mem_port w0 addr w0addr 
+mem_port w0 di w0di 
+mem_port w0 we w0we 
+mem add_port r1 r
+mem set_port_access r1 sync driver
+mem_port r1 clk w0clk 
+mem_port r1 addr r1addr 
+mem_port r1 do r1do 
+mem_port r1 re r1re low
+mem generate

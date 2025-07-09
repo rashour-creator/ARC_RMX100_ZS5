@@ -1,0 +1,36 @@
+memory set_global_debug_mode true
+mem new alb_mss_mem_lat_0000_ZMEM_i_bdel_mem auto
+#
+# Inferred from /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_lat.v, line 113
+# Variable is i_bdel_mem
+#
+mem depth 1024
+mem width 2
+mem add_port w0 w
+mem set_port_access w0 sync
+mem_port w0 clk w0clk 
+mem_port w0 addr w0addr 
+mem_port w0 di w0di 
+mem_port w0 we w0we 
+mem add_port r1 r
+mem set_port_access r1 async
+mem_port r1 addr r1addr 
+mem_port r1 do r1do 
+mem new alb_mss_mem_lat_0000_ZMEM_i_rdel_mem auto
+#
+# Inferred from /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_lat.v, line 106
+# Variable is i_rdel_mem
+#
+mem depth 1024
+mem width 131
+mem add_port w0 w
+mem set_port_access w0 sync
+mem_port w0 clk w0clk 
+mem_port w0 addr w0addr 
+mem_port w0 di w0di 
+mem_port w0 we w0we 
+mem add_port r1 r
+mem set_port_access r1 async
+mem_port r1 addr r1addr 
+mem_port r1 do r1do 
+mem generate

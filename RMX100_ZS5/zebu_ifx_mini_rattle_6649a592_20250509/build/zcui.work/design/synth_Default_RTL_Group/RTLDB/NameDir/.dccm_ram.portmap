@@ -1,0 +1,19 @@
+Module dccm_ram{
+}
+Module fpga_sram_0002_0000{
+}
+
+EdfPortBounds fpga_sram_0000{
+12 5 addr
+55 0 din
+55 0 dout
+55 0 wren
+}
+EdfPortBounds fpga_sram_0002_0000{
+19 3 addr
+39 0 din
+39 0 dout
+39 0 wren
+}
+NonAliasNets dccm_ram{
+}

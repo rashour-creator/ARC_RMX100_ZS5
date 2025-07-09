@@ -1,0 +1,106 @@
+Module rl_dmp_lsq{
+}
+Module rl_dmp_lsq_cmd_port{
+}
+Module rl_dmp_lsq_fifo{
+}
+
+EdfPortBounds rl_dmp_lsq_cmd_port{
+31 0 lsq_cmd_addr
+5 0 lsq_cmd_atomic
+1 0 lsq_cmd_data_size
+2 0 lsq_cmd_target_r
+31 0 lsq_fifo_cmd_addr
+5 0 lsq_fifo_cmd_atop
+1 0 lsq_fifo_cmd_size
+2 0 lsq_fifo_cmd_target
+31 0 lsq_fifo_wr_data
+3 0 lsq_fifo_wr_mask
+3 0 lsq_fifo_wr_mask1
+31 0 lsq_wr_data
+3 0 lsq_wr_mask
+}
+EdfPortBounds arcv_wd_parity{
+7 0 d_in
+7 0 q_out
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0001{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds rl_predecoder{
+31 0 inst
+9 0 pd_fu
+4 0 pd_rf_src0
+4 0 pd_rf_src1
+}
+EdfPortBounds alb_mss_fab_fifo_0000{
+53 0 i_data
+0 0 i_occp
+53 0 o_data
+0 0 o_occp
+}
+EdfPortBounds mss_bus_switch_fifo_0001{
+3 0 i_data
+64 0 i_occp
+3 0 o_data
+64 0 o_occp
+}
+EdfPortBounds arcv_wd_parity_0001{
+31 0 d_in
+31 0 q_out
+}
+EdfPortBounds arcv_wd_parity_0000{
+5 0 d_in
+5 0 q_out
+}
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0000{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds arcv_wd_parity_0002{
+1 0 d_in
+1 0 q_out
+}
+EdfPortBounds rl_dmp_lsq_fifo{
+31 0 dmp_lsq_addr
+31 0 dmp_lsq_addr1
+5 0 dmp_lsq_atomic
+31 0 dmp_lsq_data
+4 0 dmp_lsq_reg_id
+1 0 dmp_lsq_size
+2 0 dmp_lsq_target
+4 0 lsq0_dst_id
+4 0 lsq1_dst_id
+2 0 lsq_cmd_target_r
+31 0 lsq_fifo_cmd_addr
+5 0 lsq_fifo_cmd_atop
+1 0 lsq_fifo_cmd_size
+2 0 lsq_fifo_cmd_target
+2 0 lsq_fifo_rd_addr_2_to_0
+31 0 lsq_fifo_rd_data_even
+31 0 lsq_fifo_rd_data_odd
+4 0 lsq_fifo_rd_reg_id
+1 0 lsq_fifo_rd_size
+2 0 lsq_fifo_target
+31 0 lsq_fifo_wr_data
+3 0 lsq_fifo_wr_mask
+3 0 lsq_fifo_wr_mask1
+31 0 lsq_rd_data
+}
+EdfPortBounds mss_bus_switch_rrobin{
+3 0 grt_vector
+3 0 req_vector
+}
+NonAliasNets rl_dmp_lsq{
+}

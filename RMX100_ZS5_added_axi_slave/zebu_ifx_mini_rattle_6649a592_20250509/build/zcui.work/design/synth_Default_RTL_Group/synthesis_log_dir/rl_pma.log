@@ -1,0 +1,35 @@
+#   step REPORT : Synthesizing module : rl_pma
+#   step REPORT : [39.349] Optimizing module : rl_pma
+#   step REPORT : [39.350] Instance count of module rl_pma is 2
+#   step REPORT : [6.1691] Total net count: 1306
+#   step REPORT : [6.1690] There are 8 levels of combinational cells
+#   step REPORT : [6.1689] There are 10 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 20
+#   step REPORT : [6.1695] 3-input LUTs: 134
+#   step REPORT : [6.1695] 4-input LUTs: 34
+#   step REPORT : [6.1695] 5-input LUTs: 60
+#   step REPORT : [6.1695] 6-input LUTs: 154
+#   step REPORT : [6.1696] Total LUT area: 402
+#   step REPORT : [6.1697] State    : 240
+#   step REPORT : [6.1697]   (FF)   : 240
+#   step REPORT : [6.1697] CARRY    : 12
+#   step REPORT : [6.1697] +CSA LUTs: 174
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_pma' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 240 |                 576 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 180 |                  12 |                   0 |                   0 |                   0 || rl_pma
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_pma' to 'edif/rl_pma/rl_pma.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_pma/rl_pma.edf.gz'
+#   step SERIALIZE : #bytes in: 47197, #bytes out: 18756, compression ratio: 2.516368
+#   step REPORT : [87.28] Resource usage for rl_pma: 0.248s 0.0M

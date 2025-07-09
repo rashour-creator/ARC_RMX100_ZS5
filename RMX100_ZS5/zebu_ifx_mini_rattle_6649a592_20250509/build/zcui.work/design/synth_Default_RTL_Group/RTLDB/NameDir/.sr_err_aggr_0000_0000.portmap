@@ -1,0 +1,102 @@
+Module sr_err_aggr_0000_0000{
+}
+
+EdfPortBounds mss_bus_switch_ibp_compr_0000_0000{
+235 0 i_bus_ibp_cmd_chnl
+3 0 i_bus_ibp_cmd_chnl_accept
+3 0 i_bus_ibp_cmd_chnl_user
+3 0 i_bus_ibp_cmd_chnl_valid
+3 0 i_bus_ibp_lockable
+523 0 i_bus_ibp_rd_chnl
+3 0 i_bus_ibp_rd_chnl_accept
+3 0 i_bus_ibp_rd_chnl_valid
+15 0 i_bus_ibp_uniq_id
+579 0 i_bus_ibp_wd_chnl
+3 0 i_bus_ibp_wd_chnl_accept
+3 0 i_bus_ibp_wd_chnl_valid
+11 0 i_bus_ibp_wrsp_chnl
+3 0 i_bus_ibp_wrsp_chnl_accept
+3 0 i_bus_ibp_wrsp_chnl_valid
+58 0 o_ibp_cmd_chnl
+3 0 o_ibp_cmd_chnl_id
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+3 0 o_ibp_wd_chnl_id
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_ibpx2ibpy_0001_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_mst_ibp_buffer_0000_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+130 0 i_ibp_rd_chnl
+144 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp2ahbl{
+32 0 ahb_haddr
+2 0 ahb_hburst
+3 0 ahb_hprot
+31 0 ahb_hrdata
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+32 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds mss_bus_switch_ibpx2ibpy_0002{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_ibp2ibps{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+514 0 o_ibp_rd_chnl
+576 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+NonAliasNets sr_err_aggr_0000_0000{
+}

@@ -1,0 +1,48 @@
+   elapsed:0.20 s    user:0.5 s    system:0.2 s      %cpu:34.65       load:3.10       fm:208155 m      vm:896 m      vm:+65 m      um:392 m      um:+50 m -- === Load RTX ( N R E P)
+      elapsed:1 s      user:1 s   system:0.12 s      %cpu:99.29       load:3.25       fm:207838 m     vm:1186 m     vm:+290 m      um:677 m     um:+285 m -- === Load equi netlist
+    elapsed:0.8 s    user:0.7 s      system:0 s      %cpu:88.61       load:3.25       fm:207825 m     vm:1197 m      vm:+11 m      um:689 m      um:+12 m -- LINK
+    elapsed:0.3 s    user:0.5 s    system:0.1 s     %cpu:218.18       load:3.25       fm:207815 m     vm:1246 m      vm:+49 m      um:700 m      um:+11 m -- === GraphBuilder/Build WB
+    elapsed:0.4 s   user:0.33 s    system:0.1 s     %cpu:781.61       load:3.25       fm:207773 m     vm:1288 m      vm:+11 m      um:740 m      um:+10 m -- === GraphBuilder/Build HW/Compute hier wires upfront
+    elapsed:0.5 s   user:0.33 s    system:0.2 s     %cpu:642.20       load:3.25       fm:207773 m     vm:1288 m      vm:+42 m      um:740 m      um:+40 m -- === GraphBuilder/Build HW
+   elapsed:0.12 s   user:0.12 s      system:0 s     %cpu:104.80       load:3.25       fm:207770 m     vm:1288 m       vm:+0 m      um:740 m       um:+0 m -- === GraphBuilder/report unknown models
+    elapsed:0.2 s    user:0.1 s    system:0.1 s      %cpu:83.33       load:3.25       fm:207722 m     vm:2056 m     vm:+768 m      um:788 m      um:+48 m -- === GraphBuilder/resize cells
+    elapsed:0.5 s   user:0.31 s    system:0.1 s     %cpu:695.65       load:3.25       fm:207705 m     vm:2824 m     vm:+768 m      um:805 m      um:+17 m -- === GraphBuilder/Build indexer for equiID
+   elapsed:0.20 s      user:2 s      system:0 s     %cpu:982.89       load:3.25       fm:207699 m     vm:3080 m     vm:+256 m      um:809 m       um:+4 m -- === GraphBuilder/Set EquiID of cells
+   elapsed:0.69 s      user:6 s    system:0.3 s     %cpu:943.21       load:3.25       fm:207595 m     vm:3171 m      vm:+91 m      um:904 m      um:+95 m -- === GraphBuilder/populate cells
+    elapsed:0.3 s   user:0.31 s      system:0 s     %cpu:953.85       load:3.25       fm:207594 m     vm:3171 m       vm:+0 m      um:904 m       um:+0 m -- === GraphBuilder/Test fanins
+    elapsed:0.2 s    user:0.7 s    system:0.1 s     %cpu:444.44       load:3.25       fm:207572 m     vm:5227 m    vm:+2056 m      um:927 m      um:+23 m -- === GraphBuilder/Populating MacroCells
+      elapsed:0 s    user:0.4 s      system:0 s     %cpu:444.44       load:3.25       fm:207567 m     vm:5483 m     vm:+256 m      um:931 m       um:+4 m -- === GraphBuilder/Substituting MacroCells
+    elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207567 m     vm:5483 m       vm:+0 m      um:931 m       um:+0 m -- === GraphBuilder/Optimize with MuDB
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207567 m     vm:5491 m       vm:+8 m      um:931 m       um:+0 m -- === GraphBuilder/Create rtl2Equi
+    elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:105.26       load:3.25       fm:207563 m     vm:5491 m       vm:+0 m      um:935 m       um:+4 m -- === GraphBuilder/build cell-to-equi map
+    elapsed:0.8 s   user:0.77 s    system:0.6 s     %cpu:965.12       load:3.25       fm:207309 m     vm:5491 m       vm:+0 m     um:1188 m     um:+251 m -- === GraphBuilder/SCC computation
+   elapsed:0.13 s   user:0.13 s      system:0 s     %cpu:105.26       load:3.25       fm:207307 m     vm:5491 m       vm:+0 m     um:1188 m       um:+0 m -- === GraphBuilder/Compute level of cells for combinational graph
+    elapsed:0.8 s   user:0.14 s      system:0 s     %cpu:169.70       load:3.25       fm:207299 m     vm:5491 m       vm:+0 m     um:1194 m       um:+6 m -- === GraphBuilder/Remove dead logic/	mark poc
+    elapsed:0.1 s    user:0.6 s      system:0 s    %cpu:1000.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m -- === GraphBuilder/Remove dead logic/	trace TFI
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m -- === GraphBuilder/Remove dead logic/	check SCC
+      elapsed:0 s    user:0.4 s      system:0 s     %cpu:727.27       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m -- === GraphBuilder/Remove dead logic/	mark dead cells
+    elapsed:0.2 s   user:0.15 s      system:0 s     %cpu:937.50       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m -- === GraphBuilder/Remove dead logic/	update equi2Cid
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m -- === GraphBuilder/Remove dead logic/	remove dead macros
+   elapsed:0.11 s   user:0.40 s      system:0 s     %cpu:361.99       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+6 m -- === GraphBuilder/Remove dead logic
+    elapsed:0.5 s   user:0.29 s      system:0 s     %cpu:644.44       load:3.25       fm:207295 m     vm:5491 m       vm:+0 m     um:1196 m       um:+0 m -- === GraphBuilder/Reordering cells/Sort cells by level
+    elapsed:0.1 s    user:0.5 s      system:0 s     %cpu:476.19       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+5 m -- === GraphBuilder/Reordering cells/Reorder cells
+      elapsed:0 s    user:0.4 s      system:0 s     %cpu:888.89       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m -- === GraphBuilder/Reordering cells/check level consistency
+    elapsed:0.9 s   user:0.52 s    system:0.1 s     %cpu:609.20       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+9 m -- === GraphBuilder/Reordering cells
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m -- === GraphBuilder/insert MID to SCC
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m -- === GraphBuilder/	create rtl2Poc
+   elapsed:0.31 s    user:0.3 s    system:0.2 s      %cpu:15.92       load:3.25       fm:207279 m     vm:5491 m       vm:+0 m     um:1205 m       um:+2 m -- === GraphBuilder/build cid2Pocs/	non-zxf flow enables RhinoDb full range of rtlIDs
+   elapsed:0.10 s   user:0.10 s    system:0.1 s     %cpu:112.82       load:3.25       fm:207258 m     vm:6003 m     vm:+512 m     um:1225 m      um:+20 m -- === GraphBuilder/build cid2Pocs/	finalize ranges
+      elapsed:4 s      user:3 s    system:0.4 s      %cpu:88.36       load:3.23       fm:207201 m     vm:6003 m       vm:+0 m     um:1226 m       um:+1 m -- === GraphBuilder/build cid2Pocs/	write full header
+    elapsed:0.3 s    user:0.1 s      system:0 s      %cpu:35.09       load:3.23       fm:207200 m     vm:6003 m       vm:+0 m     um:1227 m       um:+1 m -- === GraphBuilder/build cid2Pocs/	save cid2Pocs
+      elapsed:4 s      user:3 s    system:0.7 s      %cpu:83.45       load:3.23       fm:207200 m     vm:6003 m     vm:+512 m     um:1227 m      um:+24 m -- === GraphBuilder/build cid2Pocs
+      elapsed:0 s    user:0.1 s      system:0 s    %cpu:2000.00       load:3.23       fm:207200 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/	destroy rtl2Poc
+    elapsed:0.3 s   user:0.33 s      system:0 s     %cpu:942.86       load:3.23       fm:207201 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/Populate cid2HasPoc
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/Test SCCs
+      elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/=== Write graph/	(1. save cid2Pocs)
+      elapsed:0 s    user:0.1 s      system:0 s     %cpu:153.85       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/=== Write graph/	(1b. save cid2HasPoc)
+    elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:200.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/=== Write graph/	(2. save eid2HasPoc)
+    elapsed:0.1 s    user:0.1 s    system:0.1 s     %cpu:108.11       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/=== Write graph/	(2. save equi2cid)
+    elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m -- === GraphBuilder/=== Write graph/	(3. save graph)
+    elapsed:0.5 s   user:0.19 s      system:0 s     %cpu:348.62       load:3.23       fm:207199 m     vm:6003 m       vm:+0 m     um:1228 m       um:+1 m -- === GraphBuilder/=== Write graph/	(4. serialize cells)
+    elapsed:0.9 s   user:0.22 s    system:0.1 s     %cpu:261.36       load:3.23       fm:207199 m     vm:6003 m       vm:+0 m     um:1228 m       um:+1 m -- === GraphBuilder/=== Write graph
+      elapsed:6 s     user:15 s   system:0.26 s     %cpu:256.74       load:3.23       fm:207199 m     vm:5995 m    vm:+4798 m     um:1221 m     um:+532 m -- === GraphBuilder

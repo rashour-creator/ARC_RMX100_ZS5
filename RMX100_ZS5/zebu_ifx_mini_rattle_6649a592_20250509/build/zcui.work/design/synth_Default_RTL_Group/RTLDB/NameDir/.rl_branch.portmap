@@ -1,0 +1,45 @@
+Module rl_branch{
+}
+
+EdfPortBounds rl_parity_gen_0002{
+0 0 din
+}
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds rl_parity_chk_0002_0001{
+4 0 din
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0002{
+3 0 i_data
+64 0 i_occp
+3 0 o_data
+64 0 o_occp
+}
+EdfPortBounds rl_parity_chk_0002_0003{
+6 0 din
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds rl_parity_chk_0002_0002{
+3 0 din
+}
+EdfPortBounds rl_parity_chk_0002_0000{
+8 0 din
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds mss_bus_switch_rrobin{
+3 0 grt_vector
+3 0 req_vector
+}
+NonAliasNets rl_branch{
+}

@@ -1,0 +1,45 @@
+Module alb_mss_clkctrl{
+}
+Module alb_mss_clkctrl_clkgen{
+}
+Module alb_mss_clkctrl_clken_gen{
+}
+Module alb_mss_clkctrl_ratio_calc{
+}
+
+EdfPortBounds alb_mss_clkctrl_clkgen{
+7 0 div_cof_in
+}
+EdfPortBounds alb_mss_clkctrl_ratio_calc{
+7 0 ratio_in_A
+7 0 ratio_in_B
+7 0 ratio_result
+}
+EdfPortBounds alb_mss_clkctrl_clken_gen{
+7 0 ratio
+}
+NonAliasNets alb_mss_clkctrl{
+dccm_ahb_clk_en_calc_done_r    f   437
+dccm_ahb_clk_en_calc_err_r    f   438
+dfc_start    f   459
+iccm_ahb_clk_en_calc_done_r    f   493
+iccm_ahb_clk_en_calc_err_r    f   494
+mmio_ahb_clk_en_calc_done_r    f   505
+mmio_ahb_clk_en_calc_err_r    f   506
+mss_fab_mst0_clk_en_calc_done_r    f   533
+mss_fab_mst0_clk_en_calc_err_r    f   534
+mss_fab_mst1_clk_en_calc_done_r    f   545
+mss_fab_mst1_clk_en_calc_err_r    f   546
+mss_fab_mst2_clk_en_calc_done_r    f   557
+mss_fab_mst2_clk_en_calc_err_r    f   558
+mss_fab_mst3_clk_en_calc_done_r    f   568
+mss_fab_slv0_clk_en_calc_done_r    f   578
+mss_fab_slv0_clk_en_calc_err_r    f   579
+mss_fab_slv1_clk_en_calc_done_r    f   590
+mss_fab_slv1_clk_en_calc_err_r    f   591
+mss_fab_slv2_clk_en_calc_done_r    f   602
+mss_fab_slv2_clk_en_calc_err_r    f   603
+mss_fab_slv3_clk_en_calc_done_r    f   613
+mss_fab_slv4_clk_en_calc_done_r    f   622
+mss_fab_slv5_clk_en_calc_done_r    f   631
+}

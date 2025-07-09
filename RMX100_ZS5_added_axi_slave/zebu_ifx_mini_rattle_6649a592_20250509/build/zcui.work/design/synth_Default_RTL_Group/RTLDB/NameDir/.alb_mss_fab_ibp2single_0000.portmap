@@ -1,0 +1,42 @@
+Module alb_mss_fab_ibp2single_0000{
+}
+Module alb_mss_fab_fifo_0004{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0004{
+0 0 i_data
+5 0 i_occp
+0 0 o_data
+5 0 o_occp
+}
+EdfPortBounds rl_pma_hit{
+19 0 addr
+19 0 pmp_addr
+19 0 pmp_addr_mask
+1 0 pmp_addr_mode
+}
+NonAliasNets alb_mss_fab_ibp2single_0000{
+sdb_ibp_cmd_valid_r    f   603
+sdb_ibp_cmd_addr_r[11]    f   573
+sdb_ibp_cmd_addr_r[12]    f   572
+sdb_ibp_cmd_addr_r[13]    f   571
+sdb_ibp_cmd_addr_r[14]    f   570
+sdb_ibp_cmd_addr_r[15]    f   569
+sdb_ibp_cmd_addr_r[16]    f   568
+sdb_ibp_cmd_addr_r[17]    f   567
+sdb_ibp_cmd_addr_r[18]    f   566
+sdb_ibp_cmd_addr_r[19]    f   565
+sdb_ibp_cmd_addr_r[20]    f   564
+sdb_ibp_cmd_addr_r[21]    f   563
+sdb_ibp_cmd_addr_r[22]    f   562
+sdb_ibp_cmd_addr_r[23]    f   561
+sdb_ibp_cmd_addr_r[24]    f   560
+sdb_ibp_cmd_addr_r[25]    f   559
+sdb_ibp_cmd_addr_r[26]    f   558
+sdb_ibp_cmd_addr_r[27]    f   557
+sdb_ibp_cmd_addr_r[28]    f   556
+sdb_ibp_cmd_addr_r[29]    f   555
+sdb_ibp_cmd_addr_r[30]    f   554
+sdb_ibp_cmd_addr_r[31]    f   553
+sdb_ibp_cmd_addr_r[32]    f   552
+}

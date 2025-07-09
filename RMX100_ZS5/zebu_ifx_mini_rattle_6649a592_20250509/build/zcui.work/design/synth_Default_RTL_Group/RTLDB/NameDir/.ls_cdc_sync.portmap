@@ -1,0 +1,52 @@
+Module ls_cdc_sync{
+}
+Module DWbb_bcm21_atv_0000{
+}
+
+EdfPortBounds rl_ecc_cnt{
+31 0 aux_rdata
+31 0 cmd_addr_r
+1 0 dccm_ecc_scrub_err
+19 3 dccm_even_ecc_addr
+6 0 dccm_even_ecc_syndrome
+19 3 dccm_odd_ecc_addr
+6 0 dccm_odd_ecc_syndrome
+12 2 ic_data_ecc_addr
+38 32 ic_data_ecc_syndrome
+12 5 ic_tag_ecc_addr
+26 21 ic_tag_ecc_syndrome
+18 2 iccm0_ecc_addr
+6 0 iccm0_ecc_syndrome
+}
+EdfPortBounds DWbb_bcm21_atv_0000{
+0 0 data_d
+0 0 data_s
+}
+EdfPortBounds rl_ibp_target_wrapper{
+31 0 aux_rdata_r
+31 0 cmd_addr_r
+31 0 ibp_mmio_cmd_addr
+5 0 ibp_mmio_cmd_atomic
+3 0 ibp_mmio_cmd_cache
+2 0 ibp_mmio_cmd_data_size
+1 0 ibp_mmio_cmd_prot
+31 0 ibp_mmio_rd_data
+31 0 ibp_mmio_wr_data
+3 0 ibp_mmio_wr_mask
+}
+EdfPortBounds mss_bus_switch_ibpw2ibpn_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+NonAliasNets ls_cdc_sync{
+}

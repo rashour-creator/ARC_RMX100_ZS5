@@ -1,0 +1,211 @@
+#include "driver.h"
+#include <cnn_app.h>
+#include <evthreads.h>
+   
+using namespace std;
+
+/*************** GLOBAL Vairables Section Start *************/
+extern ev_cnn_detection_t *globalDetection;
+DummySlaveAccessor *driver = nullptr  ;
+int global_cnt =0 ;  
+int main(int argc, char **argv) {
+ //std::cout<<"[ZEBU NODE] started"<<std::endl ; 
+ bool res ; 
+ std::string src_name ="traffic_sign" ;  
+ std::string node_name ; 
+ char* input_data ;
+ // int iter  ; 
+ // sscanf(argv[argc-1],"%d",&iter) ;  
+ // int new_argc = argc - 2; // Exclude the last argument
+    // char* new_argv[new_argc];
+    // for (int i = 0; i < new_argc; ++i) {
+    //     new_argv[i] = argv[i];
+    // }
+ /************configure dummy slave memory************/
+ driver = DummySlaveAccessor::getInstance() ; 
+ driver->configSlaveMem(AXI_SLAVE_BASE_ADDR,AXI_SLAVE_SIZE_BYTES,MAX_INPUT_SIZE,ADDITIONAL_INFO_SIZE,MAX_OUTPUT_SIZE );
+ 
+ /************prepare output and additional_info buffers************/
+ uint64_t max_input_size =  driver->getMaxInputSize() ;
+ uint64_t max_output_size =  driver->getMaxOutputSize() ;
+ uint64_t additional_info_size = driver->getMaxAdditionalInfoSize() ;
+ char output_data[max_output_size] ; 
+ //char additional_info[additional_info_size] ;
+ ev_cnn_status status = CNN_STAT_FAIL;
+  const char *nn_bin_path  = nullptr;
+  std::cout<<"[ZEBU NODE] inside cnn app"<<std::endl ; 
+  for(int i=1;i <argc; i++){
+   if(strcmp(argv[i],"-binpath") == 0){
+    nn_bin_path = argv[++i];
+    break;
+   }
+  }
+  std::cout<<"upload binary"<<std::endl ; 
+    if(nn_bin_path == nullptr) {
+   PRN_ERR("Argument -binpath is not found! \n");
+   return -1;
+  }
+
+  uint8_t* cnnBinPtr = nullptr;
+  uint8_t* cnnMemBuf = nullptr;
+  uint32_t sz =0;
+
+  #ifdef  CNN_BIN_ADDR
+   cnnBinPtr = (uint8_t*)CNN_BIN_ADDR;
+  #endif
+   
+  uploadCnnBinary(nn_bin_path, &cnnBinPtr, &cnnMemBuf, &sz);
+
+
+  
+  
+ std::cout<<"[ZEBU NODE] waiting to open connection"<<std::endl ;
+ /************delcare that ZEBU node is ready************/
+ while(!driver->isConnectionOpen())  
+ {
+  //std::cout<<"[ZEBU NODE] waiting to open connection"<<std::endl ; 
+  
+ }
+ while(true)
+ {
+  memset(output_data,0,max_output_size);
+ // PRN_DBG("1. ======= Construct CnnGraphRunner object ======= \n");
+  CnnGraphRunner *ss_runner =
+    new(std::nothrow) CnnGraphRunner(cnnBinPtr, sz);
+
+  if(ss_runner == NULL) {
+   PRN_ERR("Cannot allocate memory in heap! \n");
+   return -1;
+  }
+
+  // PRN_DBG("2. ======= Initialize CnnGraphRunner object ======= \n");
+  if ((status = ss_runner->allocCnnProcess()) != CNN_STAT_OK){
+   PRN_ERR("Problems to allocate the CNN process\n");
+   return status;
+  }
+
+  if ((status = ss_runner->parseArguments(argv, argc)) != CNN_STAT_OK){
+    PRN_ERR("Problems to parse input arguments\n");
+    return status;
+  }
+
+  if ((status = ss_runner->initCnnProcess()) != CNN_STAT_OK){
+   PRN_ERR("Problems to initialize the CNN process\n");
+   return status;
+  }
+  // if (global_cnt < 12)
+  //  std::cout<<std::endl<<std::endl<<std::endl<<std::endl ; 
+  std::cout<<"[ZEBU NODE]:waiting for image."<<std::endl;
+  /************wait for input************/
+        while(!driver->isInputDataReady())
+        {
+            //std::cout<<"[ZEBU NODE]:waiting for input data ready flag to be set"<<std::endl;
+        }
+
+  // if(global_cnt >= 11)
+     /************read input data from dummy slave************/
+     std::cout<<"[ZEBU NODE]:reading inputs"<<std::endl;
+     input_data = driver->readInputData(1369) ; 
+   uint64_t start_cycles,end_cycles ;
+  start_cycles = getRTC() ;
+  #ifdef LOAD_IMG_DEFAULT
+  if ((status = ss_runner->initImageData()) != CNN_STAT_OK)            { return status; }
+  printf("initialized image data default\n");
+  #endif
+
+
+  if ((status = ss_runner->initImageDataFromAddr(input_data)) != CNN_STAT_OK)            { return status; }
+  printf("initialized image data from address\n");
+
+
+  #ifndef MINIMIZE_CODE_SZ
+   if ((status = ss_runner->initGraphMeasure()) != CNN_STAT_OK){
+    PRN_ERR("Problems to initialize measurement functions\n");
+    return status;
+   }
+  #endif
+   //if(global_cnt >= 11)
+   PRN_DBG("3.  ======= Run graph processing iteratively ======= \n");
+
+  if(ss_runner->run_start() == false)  {
+   PRN_ERR("Problems to start running the CNN graph\n");
+   return CNN_STAT_FAIL;
+  }
+  int iteration = 0 ; 
+  while(ss_runner->run_iteration() == true){
+   //if(global_cnt >= 11)
+    printf("Running iteration %d\n", iteration++);
+  }
+  if(ss_runner->run_finish() != CNN_STAT_OK)  {
+   PRN_ERR("Problems to finish running the CNN graph\n");
+   return CNN_STAT_FAIL;
+  }
+  //if(global_cnt >= 11)
+  PRN_DBG("4.  ======= Finish working with CnnGraphRunner object  ======= \n");
+  if ((status = ss_runner->finilize())              != CNN_STAT_OK){
+   PRN_ERR("Problem to finish working of CnnGraphRunner object")
+   return status;
+  }
+  end_cycles = getRTC() ; 
+  //printf("[DEBUG]: Top Detections are: \n");
+  
+  for(int cnt=0; cnt < 4; cnt++)
+  {
+   //if(global_cnt >= 11)
+   switch(globalDetection[cnt].x) 
+   {
+    case 0:
+      std::cout << "Class [" << globalDetection[cnt].x << "] has score: " << globalDetection[cnt].value << "\tmapped to -> Speed limit (30km/h)" << std::endl; 
+    break;
+
+    case 1:
+      std::cout << "Class [" << globalDetection[cnt].x << "] has score: " << globalDetection[cnt].value << "\tmapped to -> Speed limit (60km/h)" << std::endl; 
+    break;
+
+    case 2:
+      std::cout << "Class [" << globalDetection[cnt].x << "] has score: " << globalDetection[cnt].value << "\tmapped to -> Speed limit (90km/h)" << std::endl; 
+    break;
+
+    case 3:
+      std::cout << "Class [" << globalDetection[cnt].x << "] has score: " << globalDetection[cnt].value << "\tmapped to -> square_speed_limit_60" << std::endl; 
+    break;
+
+    default: 
+      std::cout << "unrecognized class!" << std::endl;
+    break;
+   }
+   output_data[globalDetection[cnt].x] = (char)globalDetection[cnt].value; 
+   std::cout<<"output_data["<<globalDetection[cnt].x<<"] = "<<(int)globalDetection[globalDetection[cnt].x].value<<std::endl ;
+  }
+  std::cout<<"[ZEBU NODE]: writing output data"<<std::endl ; 
+  for(int i = 0 ; i < 4 ; i++)
+  {
+   std::cout<<"output_data["<<i<<"] = "<<(int)(output_data[i])<<std::endl ; 
+  }
+  res = driver->writeOutputData(output_data, 4);
+        if(res == false )
+        {
+            std::cout<<"[ZEBU NODE]: failed to write output in memory"<<std::endl ;
+            return 1 ; 
+        }
+  std::cout<<"[ZEBU NODE]: setting output flag"<<std::endl ; 
+     res = driver->setOutputFlag(1) ; 
+        if(res == false)
+        {
+            std::cout<<"[ZEBU NODE] output flag is wrong"<<std::endl ; 
+            return 1 ;
+        }
+  //if(global_cnt >= 11)
+  printf("[ZEBU NODE]:clock cycles to run AI algorithm = %llu\n", end_cycles - start_cycles); 
+
+
+  delete ss_runner;
+  global_cnt++ ; 
+ }
+      #ifndef  CNN_BIN_ADDR
+  delete cnnMemBuf;
+ #endif  // CNN_BIN_ADDR
+
+    return 0 ;
+}
+ 

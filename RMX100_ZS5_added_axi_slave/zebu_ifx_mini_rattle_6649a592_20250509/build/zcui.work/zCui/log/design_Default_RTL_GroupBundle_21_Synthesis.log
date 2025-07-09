@@ -1,0 +1,867 @@
+Job <84716565> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on odcbench-00003-0032.static.us01-p10.synopsys.com>>
+
+
+                                    ZeBu (R)
+                                      zFe
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+
+#   info : #----------------------------------------------------------------
+#   info : Setup
+#   info : #----------------------------------------------------------------
+# command line is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zFe compile_hdr.tcl script/Bundle_21_synp.tcl -log Bundle_21.log -zlog 1 
+# start time is Wed May 14 18:56:30 EEST 2025
+#   step Setup : CVS $Revision: #4 $
+#   step Setup : CVS $Date: 2024/02/21 $
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_if ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc hcsrc.iba
+#   step Setup :         NEXT CALL to cmn::option phase synthesis
+#   info : #----------------------------------------------------------------
+#   info : Synth
+#   info : #----------------------------------------------------------------
+#   step Synth :         NEXT CALL to fs::simple_compile -technology vtx8 -mode block_based -version NewMixe ...
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_75
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_83
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_73
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_81
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_71
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_88
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_78
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_68
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_86
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_76
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_84
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_66
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_13
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_74
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_82
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_72
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_80
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_70
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_69
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_87
+#   step REPORT : Synthesizing module : rl_cpu_synch_wrap
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_77
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_85
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_75
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_75 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_75' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_75
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_75' to 'edif/ZebuClockDetectFront_75/ZebuClockDetectFront_75.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_75/ZebuClockDetectFront_75.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_75: 0.106s 112.2M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_83
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_83 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_83' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_83
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_83' to 'edif/ZebuClockDetectFront_83/ZebuClockDetectFront_83.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_83/ZebuClockDetectFront_83.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_83: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_73
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_73 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_73' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_73
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_73' to 'edif/ZebuClockDetectFront_73/ZebuClockDetectFront_73.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_73/ZebuClockDetectFront_73.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_73: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_81
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_81 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_81' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_81
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_81' to 'edif/ZebuClockDetectFront_81/ZebuClockDetectFront_81.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_81/ZebuClockDetectFront_81.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 373, compression ratio: 1.420912
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_81: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_71
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_71 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_n_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_71' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_71
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_71' to 'edif/ZebuClockDetectFront_71/ZebuClockDetectFront_71.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_71/ZebuClockDetectFront_71.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_71: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_88
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_88 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_88' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_88
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_88' to 'edif/ZebuClockDetectFront_88/ZebuClockDetectFront_88.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_88/ZebuClockDetectFront_88.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 373, compression ratio: 1.420912
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_88: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_78
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_78 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_n_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_78' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_78
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_78' to 'edif/ZebuClockDetectFront_78/ZebuClockDetectFront_78.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_78/ZebuClockDetectFront_78.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_78: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_68
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_68 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_68' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_68
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_68' to 'edif/ZebuClockDetectFront_68/ZebuClockDetectFront_68.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_68/ZebuClockDetectFront_68.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_68: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_86
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_86 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_86' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_86
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_86' to 'edif/ZebuClockDetectFront_86/ZebuClockDetectFront_86.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_86/ZebuClockDetectFront_86.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_86: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_76
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_76 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_76' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_76
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_76' to 'edif/ZebuClockDetectFront_76/ZebuClockDetectFront_76.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_76/ZebuClockDetectFront_76.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 371, compression ratio: 1.428571
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_76: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_84
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_84 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_84' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_84
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_84' to 'edif/ZebuClockDetectFront_84/ZebuClockDetectFront_84.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_84/ZebuClockDetectFront_84.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 373, compression ratio: 1.420912
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_84: 0.032s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_66
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_66 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_66' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_66
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_66' to 'edif/ZebuClockDetectFront_66/ZebuClockDetectFront_66.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_66/ZebuClockDetectFront_66.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_66: 0.037s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_13
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_13 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_13' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_13
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_13' to 'edif/ZebuClockDetectFront_13/ZebuClockDetectFront_13.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_13/ZebuClockDetectFront_13.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_13: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_74
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_74 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_74' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_74
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_74' to 'edif/ZebuClockDetectFront_74/ZebuClockDetectFront_74.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_74/ZebuClockDetectFront_74.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 371, compression ratio: 1.428571
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_74: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_82
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_82 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_82' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_82
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_82' to 'edif/ZebuClockDetectFront_82/ZebuClockDetectFront_82.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_82/ZebuClockDetectFront_82.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_82: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_72
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_72 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_72' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_72
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_72' to 'edif/ZebuClockDetectFront_72/ZebuClockDetectFront_72.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_72/ZebuClockDetectFront_72.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 374, compression ratio: 1.417112
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_72: 0.033s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_80
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_80 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_80' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_80
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_80' to 'edif/ZebuClockDetectFront_80/ZebuClockDetectFront_80.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_80/ZebuClockDetectFront_80.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_80: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_70
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_70 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_70' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_70
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_70' to 'edif/ZebuClockDetectFront_70/ZebuClockDetectFront_70.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_70/ZebuClockDetectFront_70.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 373, compression ratio: 1.420912
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_70: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_69
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_69 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_n_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_69' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_69
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_69' to 'edif/ZebuClockDetectFront_69/ZebuClockDetectFront_69.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_69/ZebuClockDetectFront_69.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 377, compression ratio: 1.405836
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_69: 0.035s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_87
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_87 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_87' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_87
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_87' to 'edif/ZebuClockDetectFront_87/ZebuClockDetectFront_87.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_87/ZebuClockDetectFront_87.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 372, compression ratio: 1.424731
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_87: 0.032s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_cpu_synch_wrap
+#   step REPORT : [39.350] Instance count of module rl_cpu_synch_wrap is 1
+#   step REPORT : [6.1691] Total net count: 46
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_cpu_synch_wrap' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   1 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  42 |                   4 |                   0 |                   0 |                   0 || rl_cpu_synch_wrap
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_cpu_synch_wrap' to 'edif/rl_cpu_synch_wrap/rl_cpu_synch_wrap.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_cpu_synch_wrap/rl_cpu_synch_wrap.edf.gz'
+#   step SERIALIZE : #bytes in: 1911, #bytes out: 1095, compression ratio: 1.745206
+#   step REPORT : [87.28] Resource usage for rl_cpu_synch_wrap: 0.038s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_77
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_77 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_77' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_77
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_77' to 'edif/ZebuClockDetectFront_77/ZebuClockDetectFront_77.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_77/ZebuClockDetectFront_77.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 373, compression ratio: 1.420912
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_77: 0.034s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_85
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_85 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_85' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_85
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_85' to 'edif/ZebuClockDetectFront_85/ZebuClockDetectFront_85.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_85/ZebuClockDetectFront_85.edf.gz'
+#   step SERIALIZE : #bytes in: 530, #bytes out: 370, compression ratio: 1.432432
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_85: 0.035s 0.0M
+#   step Synth : RhinoDB status is set by default value: rhino_default_status:1.
+#   step Synth : Using zCreateNameDB from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB for RhinoDB population.
+#   step Synth : Running RhinoDB gate population on 23 modules. To skip this step please set SNPS_RHINODB_INTERNAL_3STEP_DISABLE env var.
+Running in 3step flow - bundle population mode, for bundle,modules = Bundle_21,ZebuClockDetectFront_85,ZebuClockDetectFront_77,rl_cpu_synch_wrap,ZebuClockDetectFront_87,ZebuClockDetectFront_69,ZebuClockDetectFront_70,ZebuClockDetectFront_80,ZebuClockDetectFront_72,ZebuClockDetectFront_82,ZebuClockDetectFront_74,ZebuClockDetectFront_84,ZebuClockDetectFront_13,ZebuClockDetectFront_66,ZebuClockDetectFront_76,ZebuClockDetectFront_86,ZebuClockDetectFront_68,ZebuClockDetectFront_78,ZebuClockDetectFront_88,ZebuClockDetectFront_71,ZebuClockDetectFront_81,ZebuClockDetectFront_73,ZebuClockDetectFront_83,ZebuClockDetectFront_75,
+Got following -X option = show_times
+#     Wed May 14 18:56:33 2025 : zCreateNameDB Started
+#      : Reading the Serializing VCS Version
+[2025-05-14 18:56:33.384768] [0x000015555540d300] [info]    #      : Reading the Serializing VCS Version
+
+#      : Deserializing names dictionary
+[2025-05-14 18:56:33.385408] [0x000015555540d300] [info]    #      : Deserializing names dictionary
+
+#      : Deserializing libraries
+[2025-05-14 18:56:33.392477] [0x000015555540d300] [info]    #      : Deserializing libraries
+
+#      : Deserializing RTL
+[2025-05-14 18:56:33.393577] [0x000015555540d300] [info]    #      : Deserializing RTL
+
+#      : Deserializing Gate
+[2025-05-14 18:56:33.394655] [0x000015555540d300] [info]    #      : Deserializing Gate
+
+#      : Deserializing design object
+[2025-05-14 18:56:33.395791] [0x000015555540d300] [info]    #      : Deserializing design object
+
+#      : Populating Dfs Table
+[2025-05-14 18:56:33.396751] [0x000015555540d300] [info]    #      : Populating Dfs Table
+
+### Wed May 14 18:56:33 2025 : RTL Deserialized
+### Wed May 14 18:56:33 2025 : Starting CHUNK Population
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_85
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_85
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_85
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_77
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_77
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_77
+#     Wed May 14 18:56:33 2025 : Populating CHUNK rl_cpu_synch_wrap
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module rl_cpu_synch_wrap
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module rl_cpu_synch_wrap
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_87
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_87
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_87
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_69
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_69
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_69
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_70
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_70
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_70
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_80
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_80
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_80
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_72
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_72
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_72
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_82
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_82
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_82
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_74
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_74
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_74
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_84
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_84
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_84
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_13
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_13
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_13
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_66
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_66
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_66
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_76
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_76
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_76
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_86
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_86
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_86
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_68
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_68
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_68
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_78
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_78
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_78
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_88
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_88
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_88
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_71
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_71
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_71
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_81
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_81
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_81
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_73
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_73
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_73
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_83
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_83
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_83
+#     Wed May 14 18:56:33 2025 : Populating CHUNK ZebuClockDetectFront_75
+#     Wed May 14 18:56:33 2025 : Gate Building light signal container for module ZebuClockDetectFront_75
+#     Wed May 14 18:56:33 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_75
+### Wed May 14 18:56:33 2025(+0s) : CHUNK Population done
+zCreateNameDB finished without errors or warnings.
+#     Wed May 14 18:56:33 2025 : zCreateNameDB Ended
+#   step Synth : Synthesis called the following command: '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_21,ZebuClockDetectFront_85,ZebuClockDetectFront_77,rl_cpu_synch_wrap,ZebuClockDetectFront_87,ZebuClockDetectFront_69,ZebuClockDetectFront_70,ZebuClockDetectFront_80,ZebuClockDetectFront_72,ZebuClockDetectFront_82,ZebuClockDetectFront_74,ZebuClockDetectFront_84,ZebuClockDetectFront_13,ZebuClockDetectFront_66,ZebuClockDetectFront_76,ZebuClockDetectFront_86,ZebuClockDetectFront_68,ZebuClockDetectFront_78,ZebuClockDetectFront_88,ZebuClockDetectFront_71,ZebuClockDetectFront_81,ZebuClockDetectFront_73,ZebuClockDetectFront_83,ZebuClockDetectFront_75,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group'
+
+#   step exec summary : time 0m3.311s
+#   exec summary : Total memory: 147000 kB minimum 
+#   exec summary : Successful execution
+
+# end time is Wed May 14 18:56:33 EEST 2025
+zFe exit status: 0
+command exit code is '0'

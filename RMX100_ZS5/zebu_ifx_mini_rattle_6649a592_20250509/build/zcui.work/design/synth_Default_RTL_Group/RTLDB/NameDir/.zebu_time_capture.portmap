@@ -1,0 +1,376 @@
+Module zebu_time_capture{
+}
+Module zebu_bb_gdelay{
+}
+Module zebu_bb_add_zview{
+}
+Module zemi3OutPortBuffer_169_4096_24{
+}
+Module rtlClockControl{
+}
+Module zebu_reqsig_clock_driverclock{
+}
+Module zceiMessageInPort_2{
+}
+Module zceiMessageOutPort_128{
+}
+Module zceiMessageOutPort_4096{
+}
+Module zceiMessageInPort_6{
+}
+Module zceiMessageOutPort_3{
+}
+Module zebu_bb_ts_cur_time{
+}
+Module zebu_bb_sample_clk_uncond_sample_2_1{
+}
+Module zebu_bb_sample_clk_uncond_64_1{
+}
+Module zebu_bb_sample_clk_uncond_1_1{
+}
+Module zebu_bb_sample_clk_uncond_sample_64_1{
+}
+Module zebu_bb_sample_clk_uncond_24_1{
+}
+
+EdfPortBounds zceiMessageOutPort_4096{
+4095 0 message
+}
+EdfPortBounds zemi3OutPortBuffer_169_4096_24{
+23 0 message0
+4095 0 msg_out
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_2_1{
+1 0 signal
+1 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds zceiMessageOutPort_128{
+127 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_gdelay{
+23 0 out
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds zceiMessageInPort_2{
+1 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_24_1{
+23 0 signal
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds zebu_bb_ts_cur_time{
+63 0 ts_time
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+NonAliasNets zebu_time_capture{
+composite_cycle[63]    l   4227 0
+composite_cycle[62]    l   4228 0
+composite_cycle[61]    l   4229 0
+composite_cycle[60]    l   4230 0
+composite_cycle[59]    l   4231 0
+composite_cycle[58]    l   4232 0
+composite_cycle[57]    l   4233 0
+composite_cycle[56]    l   4234 0
+composite_cycle[55]    l   4235 0
+composite_cycle[54]    l   4236 0
+composite_cycle[53]    l   4237 0
+composite_cycle[52]    l   4238 0
+composite_cycle[51]    l   4239 0
+composite_cycle[50]    l   4240 0
+composite_cycle[49]    l   4241 0
+composite_cycle[48]    l   4242 0
+composite_cycle[47]    l   4243 0
+composite_cycle[46]    l   4244 0
+composite_cycle[45]    l   4245 0
+composite_cycle[44]    l   4246 0
+composite_cycle[43]    l   4247 0
+composite_cycle[42]    l   4248 0
+composite_cycle[41]    l   4249 0
+composite_cycle[40]    l   4250 0
+composite_cycle[39]    l   4251 0
+composite_cycle[38]    l   4252 0
+composite_cycle[37]    l   4253 0
+composite_cycle[36]    l   4254 0
+composite_cycle[35]    l   4255 0
+composite_cycle[34]    l   4256 0
+composite_cycle[33]    l   4257 0
+composite_cycle[32]    l   4258 0
+composite_cycle[31]    l   4259 0
+composite_cycle[30]    l   4260 0
+composite_cycle[29]    l   4261 0
+composite_cycle[28]    l   4262 0
+composite_cycle[27]    l   4263 0
+composite_cycle[26]    l   4264 0
+composite_cycle[25]    l   4265 0
+composite_cycle[24]    l   4266 0
+composite_cycle[23]    l   4267 0
+composite_cycle[22]    l   4268 0
+composite_cycle[21]    l   4269 0
+composite_cycle[20]    l   4270 0
+composite_cycle[19]    l   4271 0
+composite_cycle[18]    l   4272 0
+composite_cycle[17]    l   4273 0
+composite_cycle[16]    l   4274 0
+composite_cycle[15]    l   4275 0
+composite_cycle[14]    l   4276 0
+composite_cycle[13]    l   4277 0
+composite_cycle[12]    l   4278 0
+composite_cycle[11]    l   4279 0
+composite_cycle[10]    l   4280 0
+composite_cycle[9]    l   4281 0
+composite_cycle[8]    l   4282 0
+composite_cycle[7]    l   4283 0
+composite_cycle[6]    l   4284 0
+composite_cycle[5]    l   4285 0
+composite_cycle[4]    l   4286 0
+composite_cycle[3]    l   4287 0
+composite_cycle[2]    l   4288 0
+composite_cycle[1]    l   4289 0
+composite_cycle[0]    l   4290 0
+imp_state_net[1]    l   4356 0
+imp_state_net[0]    l   4357 1
+imp_state_net_1[1]    l   4358 0
+imp_state_net_1[0]    l   4359 1
+zebu_control_exportActive    f   4367 0
+zebu_control_hw_rx_ready    f   4368 1
+zebu_control_hw_tx_ready    f   4369 0
+zebu_control_tx_wait_counter[63]    f   4502 0
+zebu_control_tx_wait_counter[62]    f   4503 0
+zebu_control_tx_wait_counter[61]    f   4504 0
+zebu_control_tx_wait_counter[60]    f   4505 0
+zebu_control_tx_wait_counter[59]    f   4506 0
+zebu_control_tx_wait_counter[58]    f   4507 0
+zebu_control_tx_wait_counter[57]    f   4508 0
+zebu_control_tx_wait_counter[56]    f   4509 0
+zebu_control_tx_wait_counter[55]    f   4510 0
+zebu_control_tx_wait_counter[54]    f   4511 0
+zebu_control_tx_wait_counter[53]    f   4512 0
+zebu_control_tx_wait_counter[52]    f   4513 0
+zebu_control_tx_wait_counter[51]    f   4514 0
+zebu_control_tx_wait_counter[50]    f   4515 0
+zebu_control_tx_wait_counter[49]    f   4516 0
+zebu_control_tx_wait_counter[48]    f   4517 0
+zebu_control_tx_wait_counter[47]    f   4518 0
+zebu_control_tx_wait_counter[46]    f   4519 0
+zebu_control_tx_wait_counter[45]    f   4520 0
+zebu_control_tx_wait_counter[44]    f   4521 0
+zebu_control_tx_wait_counter[43]    f   4522 0
+zebu_control_tx_wait_counter[42]    f   4523 0
+zebu_control_tx_wait_counter[41]    f   4524 0
+zebu_control_tx_wait_counter[40]    f   4525 0
+zebu_control_tx_wait_counter[39]    f   4526 0
+zebu_control_tx_wait_counter[38]    f   4527 0
+zebu_control_tx_wait_counter[37]    f   4528 0
+zebu_control_tx_wait_counter[36]    f   4529 0
+zebu_control_tx_wait_counter[35]    f   4530 0
+zebu_control_tx_wait_counter[34]    f   4531 0
+zebu_control_tx_wait_counter[33]    f   4532 0
+zebu_control_tx_wait_counter[32]    f   4533 0
+zebu_control_tx_wait_counter[31]    f   4534 0
+zebu_control_tx_wait_counter[30]    f   4535 0
+zebu_control_tx_wait_counter[29]    f   4536 0
+zebu_control_tx_wait_counter[28]    f   4537 0
+zebu_control_tx_wait_counter[27]    f   4538 0
+zebu_control_tx_wait_counter[26]    f   4539 0
+zebu_control_tx_wait_counter[25]    f   4540 0
+zebu_control_tx_wait_counter[24]    f   4541 0
+zebu_control_tx_wait_counter[23]    f   4542 0
+zebu_control_tx_wait_counter[22]    f   4543 0
+zebu_control_tx_wait_counter[21]    f   4544 0
+zebu_control_tx_wait_counter[20]    f   4545 0
+zebu_control_tx_wait_counter[19]    f   4546 0
+zebu_control_tx_wait_counter[18]    f   4547 0
+zebu_control_tx_wait_counter[17]    f   4548 0
+zebu_control_tx_wait_counter[16]    f   4549 0
+zebu_control_tx_wait_counter[15]    f   4550 0
+zebu_control_tx_wait_counter[14]    f   4551 0
+zebu_control_tx_wait_counter[13]    f   4552 0
+zebu_control_tx_wait_counter[12]    f   4553 0
+zebu_control_tx_wait_counter[11]    f   4554 0
+zebu_control_tx_wait_counter[10]    f   4555 0
+zebu_control_tx_wait_counter[9]    f   4556 0
+zebu_control_tx_wait_counter[8]    f   4557 0
+zebu_control_tx_wait_counter[7]    f   4558 0
+zebu_control_tx_wait_counter[6]    f   4559 0
+zebu_control_tx_wait_counter[5]    f   4560 0
+zebu_control_tx_wait_counter[4]    f   4561 0
+zebu_control_tx_wait_counter[3]    f   4562 0
+zebu_control_tx_wait_counter[2]    f   4563 0
+zebu_control_tx_wait_counter[1]    f   4564 0
+zebu_control_tx_wait_counter[0]    f   4565 0
+zebu_sendtime_arg_gd_i_[23]    l   4566 0
+zebu_sendtime_arg_gd_i_[22]    l   4567 0
+zebu_sendtime_arg_gd_i_[21]    l   4568 0
+zebu_sendtime_arg_gd_i_[20]    l   4569 0
+zebu_sendtime_arg_gd_i_[19]    l   4570 0
+zebu_sendtime_arg_gd_i_[18]    l   4571 0
+zebu_sendtime_arg_gd_i_[17]    l   4572 0
+zebu_sendtime_arg_gd_i_[16]    l   4573 0
+zebu_sendtime_arg_gd_i_[15]    l   4574 0
+zebu_sendtime_arg_gd_i_[14]    l   4575 0
+zebu_sendtime_arg_gd_i_[13]    l   4576 0
+zebu_sendtime_arg_gd_i_[12]    l   4577 0
+zebu_sendtime_arg_gd_i_[11]    l   4578 0
+zebu_sendtime_arg_gd_i_[10]    l   4579 0
+zebu_sendtime_arg_gd_i_[9]    l   4580 0
+zebu_sendtime_arg_gd_i_[8]    l   4581 0
+zebu_sendtime_arg_gd_i_[7]    l   4582 0
+zebu_sendtime_arg_gd_i_[6]    l   4583 0
+zebu_sendtime_arg_gd_i_[5]    l   4584 0
+zebu_sendtime_arg_gd_i_[4]    l   4585 0
+zebu_sendtime_arg_gd_i_[3]    l   4586 0
+zebu_sendtime_arg_gd_i_[2]    l   4587 0
+zebu_sendtime_arg_gd_i_[1]    l   4588 0
+zebu_sendtime_arg_gd_i_[0]    l   4589 0
+zebu_sendtime_hw_tx_ready    l   4590 0
+zebu_sendtime_readyForClock    l   4615 1
+zebu_sendtime_tx_wait_counter[63]    l   4617 0
+zebu_sendtime_tx_wait_counter[62]    l   4618 0
+zebu_sendtime_tx_wait_counter[61]    l   4619 0
+zebu_sendtime_tx_wait_counter[60]    l   4620 0
+zebu_sendtime_tx_wait_counter[59]    l   4621 0
+zebu_sendtime_tx_wait_counter[58]    l   4622 0
+zebu_sendtime_tx_wait_counter[57]    l   4623 0
+zebu_sendtime_tx_wait_counter[56]    l   4624 0
+zebu_sendtime_tx_wait_counter[55]    l   4625 0
+zebu_sendtime_tx_wait_counter[54]    l   4626 0
+zebu_sendtime_tx_wait_counter[53]    l   4627 0
+zebu_sendtime_tx_wait_counter[52]    l   4628 0
+zebu_sendtime_tx_wait_counter[51]    l   4629 0
+zebu_sendtime_tx_wait_counter[50]    l   4630 0
+zebu_sendtime_tx_wait_counter[49]    l   4631 0
+zebu_sendtime_tx_wait_counter[48]    l   4632 0
+zebu_sendtime_tx_wait_counter[47]    l   4633 0
+zebu_sendtime_tx_wait_counter[46]    l   4634 0
+zebu_sendtime_tx_wait_counter[45]    l   4635 0
+zebu_sendtime_tx_wait_counter[44]    l   4636 0
+zebu_sendtime_tx_wait_counter[43]    l   4637 0
+zebu_sendtime_tx_wait_counter[42]    l   4638 0
+zebu_sendtime_tx_wait_counter[41]    l   4639 0
+zebu_sendtime_tx_wait_counter[40]    l   4640 0
+zebu_sendtime_tx_wait_counter[39]    l   4641 0
+zebu_sendtime_tx_wait_counter[38]    l   4642 0
+zebu_sendtime_tx_wait_counter[37]    l   4643 0
+zebu_sendtime_tx_wait_counter[36]    l   4644 0
+zebu_sendtime_tx_wait_counter[35]    l   4645 0
+zebu_sendtime_tx_wait_counter[34]    l   4646 0
+zebu_sendtime_tx_wait_counter[33]    l   4647 0
+zebu_sendtime_tx_wait_counter[32]    l   4648 0
+zebu_sendtime_tx_wait_counter[31]    l   4649 0
+zebu_sendtime_tx_wait_counter[30]    l   4650 0
+zebu_sendtime_tx_wait_counter[29]    l   4651 0
+zebu_sendtime_tx_wait_counter[28]    l   4652 0
+zebu_sendtime_tx_wait_counter[27]    l   4653 0
+zebu_sendtime_tx_wait_counter[26]    l   4654 0
+zebu_sendtime_tx_wait_counter[25]    l   4655 0
+zebu_sendtime_tx_wait_counter[24]    l   4656 0
+zebu_sendtime_tx_wait_counter[23]    l   4657 0
+zebu_sendtime_tx_wait_counter[22]    l   4658 0
+zebu_sendtime_tx_wait_counter[21]    l   4659 0
+zebu_sendtime_tx_wait_counter[20]    l   4660 0
+zebu_sendtime_tx_wait_counter[19]    l   4661 0
+zebu_sendtime_tx_wait_counter[18]    l   4662 0
+zebu_sendtime_tx_wait_counter[17]    l   4663 0
+zebu_sendtime_tx_wait_counter[16]    l   4664 0
+zebu_sendtime_tx_wait_counter[15]    l   4665 0
+zebu_sendtime_tx_wait_counter[14]    l   4666 0
+zebu_sendtime_tx_wait_counter[13]    l   4667 0
+zebu_sendtime_tx_wait_counter[12]    l   4668 0
+zebu_sendtime_tx_wait_counter[11]    l   4669 0
+zebu_sendtime_tx_wait_counter[10]    l   4670 0
+zebu_sendtime_tx_wait_counter[9]    l   4671 0
+zebu_sendtime_tx_wait_counter[8]    l   4672 0
+zebu_sendtime_tx_wait_counter[7]    l   4673 0
+zebu_sendtime_tx_wait_counter[6]    l   4674 0
+zebu_sendtime_tx_wait_counter[5]    l   4675 0
+zebu_sendtime_tx_wait_counter[4]    l   4676 0
+zebu_sendtime_tx_wait_counter[3]    l   4677 0
+zebu_sendtime_tx_wait_counter[2]    l   4678 0
+zebu_sendtime_tx_wait_counter[1]    l   4679 0
+zebu_sendtime_tx_wait_counter[0]    l   4680 0
+zemiControl[1]    f   4690 0
+zemi_control_hw_rx_ready    f   4695 1
+zemi_status_hw_tx_ready    f   4709 0
+zevent_readyForClock_0    l   4715 1
+imp_state_net_0[1]    f   5070
+imp_state_net_0[0]    f   5071
+imp_state_net_2[1]    f   5074
+imp_state_net_2[0]    f   5075
+zebu_sendtime_tx_wait_counter_0[63]    f   5639
+zebu_sendtime_tx_wait_counter_0[62]    f   5640
+zebu_sendtime_tx_wait_counter_0[61]    f   5641
+zebu_sendtime_tx_wait_counter_0[60]    f   5642
+zebu_sendtime_tx_wait_counter_0[59]    f   5643
+zebu_sendtime_tx_wait_counter_0[58]    f   5644
+zebu_sendtime_tx_wait_counter_0[57]    f   5645
+zebu_sendtime_tx_wait_counter_0[56]    f   5646
+zebu_sendtime_tx_wait_counter_0[55]    f   5647
+zebu_sendtime_tx_wait_counter_0[54]    f   5648
+zebu_sendtime_tx_wait_counter_0[53]    f   5649
+zebu_sendtime_tx_wait_counter_0[52]    f   5650
+zebu_sendtime_tx_wait_counter_0[51]    f   5651
+zebu_sendtime_tx_wait_counter_0[50]    f   5652
+zebu_sendtime_tx_wait_counter_0[49]    f   5653
+zebu_sendtime_tx_wait_counter_0[48]    f   5654
+zebu_sendtime_tx_wait_counter_0[47]    f   5655
+zebu_sendtime_tx_wait_counter_0[46]    f   5656
+zebu_sendtime_tx_wait_counter_0[45]    f   5657
+zebu_sendtime_tx_wait_counter_0[44]    f   5658
+zebu_sendtime_tx_wait_counter_0[43]    f   5659
+zebu_sendtime_tx_wait_counter_0[42]    f   5660
+zebu_sendtime_tx_wait_counter_0[41]    f   5661
+zebu_sendtime_tx_wait_counter_0[40]    f   5662
+zebu_sendtime_tx_wait_counter_0[39]    f   5663
+zebu_sendtime_tx_wait_counter_0[38]    f   5664
+zebu_sendtime_tx_wait_counter_0[37]    f   5665
+zebu_sendtime_tx_wait_counter_0[36]    f   5666
+zebu_sendtime_tx_wait_counter_0[35]    f   5667
+zebu_sendtime_tx_wait_counter_0[34]    f   5668
+zebu_sendtime_tx_wait_counter_0[33]    f   5669
+zebu_sendtime_tx_wait_counter_0[32]    f   5670
+zebu_sendtime_tx_wait_counter_0[31]    f   5671
+zebu_sendtime_tx_wait_counter_0[30]    f   5672
+zebu_sendtime_tx_wait_counter_0[29]    f   5673
+zebu_sendtime_tx_wait_counter_0[28]    f   5674
+zebu_sendtime_tx_wait_counter_0[27]    f   5675
+zebu_sendtime_tx_wait_counter_0[26]    f   5676
+zebu_sendtime_tx_wait_counter_0[25]    f   5677
+zebu_sendtime_tx_wait_counter_0[24]    f   5678
+zebu_sendtime_tx_wait_counter_0[23]    f   5679
+zebu_sendtime_tx_wait_counter_0[22]    f   5680
+zebu_sendtime_tx_wait_counter_0[21]    f   5681
+zebu_sendtime_tx_wait_counter_0[20]    f   5682
+zebu_sendtime_tx_wait_counter_0[19]    f   5683
+zebu_sendtime_tx_wait_counter_0[18]    f   5684
+zebu_sendtime_tx_wait_counter_0[17]    f   5685
+zebu_sendtime_tx_wait_counter_0[16]    f   5686
+zebu_sendtime_tx_wait_counter_0[15]    f   5687
+zebu_sendtime_tx_wait_counter_0[14]    f   5688
+zebu_sendtime_tx_wait_counter_0[13]    f   5689
+zebu_sendtime_tx_wait_counter_0[12]    f   5690
+zebu_sendtime_tx_wait_counter_0[11]    f   5691
+zebu_sendtime_tx_wait_counter_0[10]    f   5692
+zebu_sendtime_tx_wait_counter_0[9]    f   5693
+zebu_sendtime_tx_wait_counter_0[8]    f   5694
+zebu_sendtime_tx_wait_counter_0[7]    f   5695
+zebu_sendtime_tx_wait_counter_0[6]    f   5696
+zebu_sendtime_tx_wait_counter_0[5]    f   5697
+zebu_sendtime_tx_wait_counter_0[4]    f   5698
+zebu_sendtime_tx_wait_counter_0[3]    f   5699
+zebu_sendtime_tx_wait_counter_0[2]    f   5700
+zebu_sendtime_tx_wait_counter_0[1]    f   5701
+zebu_sendtime_tx_wait_counter_0[0]    f   5702
+}

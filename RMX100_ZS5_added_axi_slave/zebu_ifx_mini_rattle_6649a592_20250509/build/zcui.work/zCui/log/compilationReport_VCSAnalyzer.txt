@@ -1,0 +1,238 @@
+Compile Profile Report
+
+____________________________________________________________________________________________________
+Table Of Contents
+
+1. Compilation Summary
+2. Compile time with delay (slot and grid)
+3. Compile time without delay
+4. Compilation times per component
+5. Compilation Details per Task Class
+6. Main Compilation Stages
+  6.1. Front End Stages
+7. Hosts
+8. Memory usage
+9. Job queue memory analysis
+10. Grid Delay
+11. Grid Delay Per Job Queue
+
+____________________________________________________________________________________________________
+1. Compilation Summary
+
+All sessions cumulative compile times:
+    without delay  : 1min 05s
+    with delay*    : 2min 42s
+
+*including slot and grid delays, difference with total wall clock time could be NFS wait or internal flow handling delays
+
+Overview of the critical path of the compilation
+
+   Phase       (%)     Slot delay   Grid delay   Elapsed time   Total # of jobs fired   Max memory consumption
+------------ -------- ------------ ------------ -------------- ----------------------- -----------------------
+VCS            64.62     00:00:00     00:00:21       00:00:42                       1                 748.07MB
+Other tasks    35.38     00:00:00     00:01:16       00:00:23                       3                 194.22MB
+Total         100.00     00:00:00     00:01:37       00:01:05                       4                        -
+
+Columns:
+ - Phase                 : compilation phase
+ - (%)                   : percentage of contribution to the overall compile time
+ - Slot delay            : time waiting for a slot on the grid
+ - Grid delay            : time between the task is spawned and the task is launched
+ - Elapsed time          : contribution to the overall compile time
+ - Total # of jobs fired : number of jobs with same phase fired
+ - Max memory consumption: job in the phase with max memory taken
+
+____________________________________________________________________________________________________
+2. Compile time with delay (slot and grid)
+
+Critical path of the compilation with all waiting times
+
+                Task                    (%)     Slot delay   Grid delay   Elapsed time   Spawn Time   Finish Time               Host             
+------------------------------------- -------- ------------ ------------ -------------- ------------ ------------- ------------------------------
+Check Verdi Binaries Version            13.85     00:00:00     00:00:00       00:00:09     00:00:00      00:00:09   us01odcvde23280              
+Target Configuration                     1.54     00:00:00     00:00:47       00:00:01     00:00:10      00:00:58   odcphy-vg-1115               
+Analyze Target Configuration Results     3.08     00:00:00     00:00:00       00:00:02     00:01:56      00:01:58                                
+Build Fs Macro Script                    0.00     00:00:00     00:00:00       00:00:00     00:01:58      00:01:58                                
+Build Fs Macro Library                   3.08     00:00:00     00:00:29       00:00:02     00:01:58      00:02:29   odcphy-vg-1134               
+VCS                                     64.62     00:00:00     00:00:21       00:00:42     00:02:59      00:04:02   odcgen-zebu-16cx240g-2417-084
+Analyze VCS Results                     13.85     00:00:00     00:00:00       00:00:09     00:04:02      00:04:11                                
+Total time                             100.00     00:00:00     00:01:37       00:01:05            -             -   -                            
+
+Columns:
+ - Task        : task label
+ - (%)         : percentage of contribution to the overall compile time
+ - Slot delay  : time waiting for a slot on the grid
+ - Grid delay  : time between the task is spawned and the task is launched
+ - Elapsed time: contribution to the overall compile time
+ - Spawn Time  : time spawning on the grid, taking the spawn time of the first task as reference
+ - Finish Time : time finishing, taking the spawn time of the first task as reference
+ - Host        : host where the task was launched (only for tasks external to zCui)
+
+
+____________________________________________________________________________________________________
+3. Compile time without delay
+
+Critical path of the compilation with an ideal compute grid
+
+                Task                    (%)     Elapsed time               Host             
+------------------------------------- -------- -------------- ------------------------------
+Check Verdi Binaries Version            13.85       00:00:09   us01odcvde23280              
+Target Configuration                     1.54       00:00:01   odcphy-vg-1115               
+Analyze Target Configuration Results     3.08       00:00:02                                
+Build Fs Macro Script                    0.00       00:00:00                                
+Build Fs Macro Library                   3.08       00:00:02   odcphy-vg-1134               
+VCS                                     64.62       00:00:42   odcgen-zebu-16cx240g-2417-084
+Analyze VCS Results                     13.85       00:00:09                                
+Total                                  100.00       00:01:05   -                            
+
+Columns:
+ - Task        : task label
+ - (%)         : percentage of contribution to the overall compile time
+ - Elapsed time: contribution to the overall compile time
+ - Host        : host where the task was launched (only for tasks external to zCui)
+
+
+
+____________________________________________________________________________________________________
+4. Compilation times per component
+
+Compilation information grouped by start & stop components
+
+Component   Wall Clock   Total Exec time           From                             To                    Task count   Skipped tasks
+---------- ------------ ----------------- ----------------------- -------------------------------------- ------------ --------------
+Checker       00:01:59          00:00:23         Analyze Project   Analyze Target Configuration Results            7               0
+VCS           00:02:13          00:00:53   Build Fs Macro Script                    Analyze VCS Results            5               0
+
+Columns:
+ - Component      : Start & stop component
+ - Wall Clock     : Elasped time between the first start and last finish
+ - Total Exec time: Total execution time
+ - From           : First task in the component
+ - To             : Last task in the component
+ - Task count     : Number of tasks
+ - Skipped tasks  : Number of tasks not launched (using incrementality or start & stop)
+
+
+
+____________________________________________________________________________________________________
+5. Compilation Details per Task Class
+
+Number of jobs par task class
+
+      Task class         Number of jobs
+----------------------- ---------------
+ BE_Version_Checker      1             
+ FE_Version_Checker      1             
+ Fs_Macro                1             
+ Target_Config           1             
+ VCS_Task_Builder        1             
+ VERDI_Version_Checker   1             
+ Vcs_Version_Checker     1             
+
+Columns:
+ - Task class: Task class name
+
+
+____________________________________________________________________________________________________
+6. Main Compilation Stages
+
+
+6.1. Front End Stages
+Compilation time of frontend main stages
+
+        Task           Elapsed time   Execution time
+--------------------- -------------- ---------------
+Launch VCS                 00:01:03         00:00:42
+Elaboration Analyzer       00:00:09         00:00:09
+Synthesis                  00:00:00         00:00:00
+Back end Entry             00:00:00         00:00:00
+
+Columns:
+ - Task          : task label
+ - Elapsed time  : the time for the task being spawned and released
+ - Execution time: the time for the task being executed
+
+
+____________________________________________________________________________________________________
+7. Hosts
+
+Information about grid hosts used to run remote tasks, based on '/proc/cpuinfo' and 'lsb_release'
+
+        Machine name                           Model name                   Total memory   Total swap   CPU (MHz)   Cache size   CPU cores   Bogomips             Address sizes              Distributor   Release      CodeName                   Kernel            
+------------------------------ ------------------------------------------- -------------- ------------ ----------- ------------ ----------- ---------- ------------------------------------ ------------- --------- ----------------- -------------------------------
+odcgen-zebu-16cx240g-2417-084    AMD EPYC 7543 32-Core Processor                235.89GB      51.00GB    2799.998       512 KB           8    5599.99    40 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+odcphy-vg-1115                   Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz       723.55GB     256.00GB    3200.000     28160 KB          20    5000.00    46 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+odcphy-vg-1134                   Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz       376.33GB     256.00GB    2300.000     16896 KB          12    4600.00    46 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+us01odcvde23280                  AMD EPYC 9754 128-Core Processor                15.39GB       4.00GB    2250.006      1024 KB           2    4500.01    48 bits physical, 48 bits virtual     AlmaLinux      8.10   CeruleanLeopard    4.18.0-553.34.1.el8_10.x86_64
+
+
+
+____________________________________________________________________________________________________
+8. Memory usage
+
+Memory usage of tasks with the highest 'Maximum resident set size'
+
+            Task                Maximum RSS   Available memory at start                 Task                   Job queue   
+------------------------------ ------------- --------------------------- ---------------------------------- ---------------
+vcs_splitter_VCS_Task_Builder      748.07MB                    190.31GB   Launch VCS                         ZebuSuperHeavy
+BE_Version_Checker                 263.97MB                      8.26GB   Check Back-End Binaries Version    ZebuLocal     
+VERDI_Version_Checker              194.22MB                      8.26GB   Check Verdi Binaries Version       ZebuLocal     
+Vcs_Version_Checker                106.39MB                      8.26GB   Check Vcs Binaries Version         ZebuLocal     
+Target_Config                       92.47MB                    564.77GB   Target Configuration               Zebu          
+design_Fs_Macro                     82.84MB                    277.44GB   Build Fs Macro Library             Zebu          
+FE_Version_Checker                  17.18MB                      8.26GB   Check Front-End Binaries Version   ZebuLocal     
+
+Columns:
+ - Task                     : task label
+ - Maximum RSS              : Maximum Resident Set Size
+ - Available memory at start: Available memory on host when the job starts
+ - Task                     : Task Label
+ - Job queue                : Job queue name
+
+
+____________________________________________________________________________________________________
+9. Job queue memory analysis
+
+Memory information grouped by job queues
+
+  Job queue      Maximum RSS (max)   Maximum RSS (average)   Total jobs number   Slots (usage / limit)
+--------------- ------------------- ----------------------- ------------------- ----------------------
+Zebu                       92.47MB                 87.65MB                   2                 1 / 100
+ZebuLocal                 263.97MB                145.44MB                   4           4 / Unlimited
+ZebuSuperHeavy            748.07MB                748.07MB                   1                 1 / 100
+
+Columns:
+ - Job queue            : Job queue name
+ - Maximum RSS (max)    : Maximum value of Resident Set Size peak
+ - Maximum RSS (average): Average value of Resident Set Size peak
+ - Slots (usage / limit): Max slots used in parallel / Available slots limit
+
+
+____________________________________________________________________________________________________
+10. Grid Delay
+
+Remote tasks grid delays
+
+    Task        Grid delay
+-------------- -----------
+Target_Config     00:00:47
+
+Columns:
+ - Task: Task label
+
+
+____________________________________________________________________________________________________
+11. Grid Delay Per Job Queue
+
+Maximum and average grid delay per job queue
+
+  Job queue      Wait (max)   Wait (average)
+--------------- ------------ ---------------
+Zebu               00:00:47         00:00:38
+ZebuSuperHeavy     00:00:21         00:00:21
+
+Columns:
+ - Job queue     : Job queue name
+ - Wait (max)    : Maximum grid delay
+ - Wait (average): Average grid delay
+

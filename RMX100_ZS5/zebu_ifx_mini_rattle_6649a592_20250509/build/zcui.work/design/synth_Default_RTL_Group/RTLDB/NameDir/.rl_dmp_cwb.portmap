@@ -1,0 +1,411 @@
+Module rl_dmp_cwb{
+}
+
+EdfPortBounds rl_dmp_lsq{
+31 0 dmp_lsq_addr
+31 0 dmp_lsq_addr1
+18 10 dmp_lsq_amo_ctl
+31 0 dmp_lsq_data
+4 0 dmp_lsq_reg_id
+1 0 dmp_lsq_size
+2 0 dmp_lsq_target
+4 0 lsq0_dst_id
+4 0 lsq1_dst_id
+4 0 lsq_dst_id
+31 0 lsq_iccm_cmd_addr
+5 0 lsq_iccm_cmd_atomic
+3 0 lsq_iccm_cmd_cache
+2 0 lsq_iccm_cmd_data_size
+1 0 lsq_iccm_cmd_prot
+31 0 lsq_iccm_rd_data
+31 0 lsq_iccm_wr_data
+3 0 lsq_iccm_wr_mask
+31 0 lsq_mem_cmd_addr
+5 0 lsq_mem_cmd_atomic
+3 0 lsq_mem_cmd_cache
+2 0 lsq_mem_cmd_data_size
+1 0 lsq_mem_cmd_prot
+31 0 lsq_mem_rd_data
+31 0 lsq_mem_wr_data
+3 0 lsq_mem_wr_mask
+31 0 lsq_mmio_cmd_addr
+5 0 lsq_mmio_cmd_atomic
+3 0 lsq_mmio_cmd_cache
+2 0 lsq_mmio_cmd_data_size
+1 0 lsq_mmio_cmd_prot
+31 0 lsq_mmio_rd_data
+31 0 lsq_mmio_wr_data
+3 0 lsq_mmio_wr_mask
+31 0 lsq_per_cmd_addr
+5 0 lsq_per_cmd_atomic
+3 0 lsq_per_cmd_cache
+2 0 lsq_per_cmd_data_size
+1 0 lsq_per_cmd_prot
+31 0 lsq_per_rd_data
+31 0 lsq_per_wr_data
+3 0 lsq_per_wr_mask
+2 0 lsq_rb_addr_2_to_0
+31 0 lsq_rb_data_even
+31 0 lsq_rb_data_odd
+1 0 lsq_rb_size
+}
+EdfPortBounds ic_data_ecc_encoder{
+10 0 address
+31 0 data_in
+7 0 ecc
+}
+EdfPortBounds iccm_ecc_encoder{
+16 0 address
+31 0 data_in
+7 0 ecc
+}
+EdfPortBounds alb_mss_fab_axi2ibp_rrobin{
+1 0 grt_vector
+1 0 req_vector
+}
+EdfPortBounds ic_tag_ecc_encoder{
+7 0 address
+20 0 data_in
+6 0 ecc
+}
+EdfPortBounds ic_tag_ecc_decoder{
+7 0 address
+20 0 data_in
+20 0 data_out
+6 0 ecc_in
+6 0 ecc_out
+5 0 syndrome
+}
+EdfPortBounds ic_data_ecc_decoder{
+10 0 address
+31 0 data_in
+31 0 data_out
+7 0 ecc_in
+7 0 ecc_out
+6 0 syndrome
+}
+EdfPortBounds rl_dmp_store_aligner{
+1 0 addr_in
+31 0 data_in
+31 0 data_out
+}
+EdfPortBounds rl_dmp_load_aligner{
+2 0 addr_in
+31 0 data1_in
+31 0 data_in
+31 0 data_out
+1 0 size_in
+}
+EdfPortBounds rl_dmp_dccm_ibp_wrapper{
+11 0 dccm_base
+1 0 dmi_ack
+31 2 dmi_addr
+31 0 dmi_dccm_cmd_addr
+3 0 dmi_dccm_cmd_id
+31 0 dmi_dccm_rd_data
+31 0 dmi_dccm_wr_data
+3 0 dmi_dccm_wr_mask
+1 0 dmi_hp_req
+3 0 dmi_id
+31 0 dmi_rd_data
+1 0 dmi_req
+1 0 dmi_req_early
+31 0 dmi_wr_data
+3 0 dmi_wr_mask
+31 2 x2_dmi_addr_r
+3 0 x2_dmi_id_r
+3 0 x3_lock_dmi_id_r
+1 0 x3_lock_flag_r
+31 0 x3_lpa_r
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0000{
+0 0 i_data
+16 0 i_occp
+0 0 o_data
+16 0 o_occp
+}
+EdfPortBounds rl_dmp_amo{
+18 10 amo_ctl
+31 0 amo_mem_data
+31 0 amo_result
+31 0 amo_x_data
+}
+EdfPortBounds rl_ifu_iccm_csr{
+11 0 csr_iccm0_base
+1 0 csr_iccm0_eccen
+31 0 csr_rdata
+7 0 csr_sel_addr
+1 0 csr_sel_ctl
+7 0 csr_waddr
+31 0 csr_wdata
+1 0 priv_level
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000{
+59 0 i_data
+59 0 o_data
+}
+EdfPortBounds iccm_ecc_decoder{
+16 0 address
+31 0 data_in
+31 0 data_out
+7 0 ecc_in
+7 0 ecc_out
+6 0 syndrome
+}
+EdfPortBounds rl_dmp_cwb{
+1 0 cwb_ack
+19 3 cwb_addr
+31 0 cwb_data
+3 0 cwb_mask
+1 0 cwb_req
+31 0 cwb_x2_bypass_data_even
+31 0 cwb_x2_bypass_data_odd
+31 0 dmp_cwb_addr
+31 0 dmp_cwb_addr1
+31 0 dmp_cwb_data
+31 0 dmp_cwb_data1
+3 0 dmp_cwb_mask
+3 0 dmp_cwb_mask1
+31 0 dmp_x2_addr1_r
+31 0 dmp_x2_addr_r
+1 0 dmp_x2_size_r
+}
+EdfPortBounds alb_mss_fab_slv_axi_buffer_0000{
+41 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+3 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+41 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+3 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+3 0 i_axi_bid
+1 0 i_axi_bresp
+511 0 i_axi_rdata
+3 0 i_axi_rid
+1 0 i_axi_rresp
+511 0 i_axi_wdata
+3 0 i_axi_wid
+63 0 i_axi_wstrb
+41 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+3 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+41 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+3 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+3 0 o_axi_bid
+1 0 o_axi_bresp
+511 0 o_axi_rdata
+3 0 o_axi_rid
+1 0 o_axi_rresp
+511 0 o_axi_wdata
+3 0 o_axi_wid
+63 0 o_axi_wstrb
+}
+EdfPortBounds rl_ifu_icache_ctl{
+31 0 arcv_icache_data
+29 0 arcv_mcache_addr
+4 0 arcv_mcache_ctl
+31 0 arcv_mcache_data
+7 0 arcv_mcache_lines
+24 0 arcv_mcache_op
+31 0 ic_ctl_data
+20 0 ic_ctl_tag
+31 0 ic_icmo_adr
+31 0 ic_op_wr_data
+2 0 ic_state
+31 0 spc_x2_data
+}
+EdfPortBounds rl_dmp_dccm{
+7 0 arcv_mecc_diag_ecc
+1 0 cwb_ack
+19 3 cwb_addr_even
+19 3 cwb_addr_odd
+31 0 cwb_data_even
+31 0 cwb_data_odd
+3 0 cwb_mask
+1 0 cwb_req
+19 3 dccm_addr_even
+19 3 dccm_addr_odd
+39 0 dccm_din_even
+39 0 dccm_din_odd
+39 0 dccm_dout_even
+31 0 dccm_dout_even_correct
+39 0 dccm_dout_odd
+31 0 dccm_dout_odd_correct
+19 3 dccm_ecc_address_even
+19 3 dccm_ecc_address_odd
+1 0 dccm_ecc_enable
+7 0 dccm_ecc_even_out
+7 0 dccm_ecc_odd_out
+6 0 dccm_ecc_syndrome_even
+6 0 dccm_ecc_syndrome_odd
+4 0 dccm_wem_even
+4 0 dccm_wem_odd
+1 0 dmi_ack
+31 2 dmi_addr
+1 0 dmi_arb_freeze
+1 0 dmi_hp_req
+3 0 dmi_id
+31 0 dmi_rd_data
+1 0 dmi_req
+31 0 dmi_wr_data
+3 0 dmi_wr_mask
+31 0 dmp_x2_addr1_r
+31 0 dmp_x2_addr_r
+1 0 x1_ack
+19 3 x1_addr_even
+19 3 x1_addr_odd
+1 0 x1_req
+1 0 x2_ack
+19 3 x2_addr_even
+19 3 x2_addr_odd
+31 2 x2_dmi_addr_r
+3 0 x2_dmi_id_r
+1 0 x2_req
+5 0 x3_lock_counter_r
+3 0 x3_lock_dmi_id_r
+1 0 x3_lock_flag_r
+31 0 x3_lpa_r
+}
+EdfPortBounds alb_mss_fab_slv_axi_buffer{
+41 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+3 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+41 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+3 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+3 0 i_axi_bid
+1 0 i_axi_bresp
+31 0 i_axi_rdata
+3 0 i_axi_rid
+1 0 i_axi_rresp
+31 0 i_axi_wdata
+3 0 i_axi_wid
+3 0 i_axi_wstrb
+41 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+3 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+41 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+3 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+3 0 o_axi_bid
+1 0 o_axi_bresp
+31 0 o_axi_rdata
+3 0 o_axi_rid
+1 0 o_axi_rresp
+31 0 o_axi_wdata
+3 0 o_axi_wid
+3 0 o_axi_wstrb
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0001{
+3 0 i_data
+16 0 i_occp
+3 0 o_data
+16 0 o_occp
+}
+EdfPortBounds rl_dmp_csr{
+31 20 csr_arcv_per0_base_r
+31 20 csr_arcv_per0_limit
+11 0 csr_dccm_base
+31 0 csr_rdata
+7 0 csr_sel_addr
+1 0 csr_sel_ctl
+7 0 csr_waddr
+31 0 csr_wdata
+1 0 dccm_ecc_enable
+1 0 priv_level_r
+}
+EdfPortBounds rl_ifu_icache_rf{
+31 0 aux_ic_ram_addr_r
+1 0 ic_ctl_hit_way_hot
+1 0 ic_ctl_lock_way_hot
+1 0 ic_ctl_valid_way_hot
+1 0 ic_f1_data_fwd
+1 0 ic_hit_way_hot
+31 0 ic_icmo_adr
+31 2 ic_rf_addr
+31 2 ic_rf_addr_next
+1 0 ic_rf_way_hot
+31 0 ic_rf_wr_data
+31 0 rf_cmd_addr_r
+31 0 rf_cmd_address
+4 2 rf_cmd_burst_size
+3 0 rf_cmd_cache
+10 0 rf_data_counter
+12 5 rf_ic_counter
+12 2 rf_id_addr
+31 0 rf_id_data
+12 5 rf_it_addr
+20 2 rf_it_tag
+31 0 rf_rd_data
+1 0 rf_way_hot
+}
+EdfPortBounds rl_dmp_ecc_store_aligner{
+1 0 addr_r
+31 0 cwb_ecc_data0
+3 0 cwb_ecc_data0_mask
+31 0 cwb_ecc_data1
+3 0 cwb_ecc_data1_mask
+31 0 rd_data0
+31 0 rd_data1
+1 0 size_r
+31 0 wr_data_r
+}
+NonAliasNets rl_dmp_cwb{
+cwb_wr_ptr_r    f   687
+}

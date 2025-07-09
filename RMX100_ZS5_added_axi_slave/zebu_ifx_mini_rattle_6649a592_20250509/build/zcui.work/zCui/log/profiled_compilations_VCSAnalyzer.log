@@ -1,0 +1,115 @@
+***********************************************************************************************************************
+* Please switch to new profiler report in compilationReport.txt that provides more details to review your compilation *
+***********************************************************************************************************************
+
+.. Command: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/tracean3.py --top-delay=5 --syn-details=5 --pr-summary-by-time=5 --hhmm --local-time=detect --show-memory --fix-graph --cpu-time /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work
+.. Reading /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zCui/backup/multibackend_25_5_14_18_51_33/prof/tracerun.cui ...
+.. Detected --work=/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/.
+.. Detected --submit-host=us01odcvde23280
+.. Detected --submit-command=bsub
+.. Detected local time offset of 3.0 hours
+.. The first task started at Wed, 14 May 2025 15:51:35 UTC
+.. No timing info for backend_default_Intermediate_Profiling_Results_Analyzer_VCSAnalyzer (execution)
+
+*** Incremental = No ***
+
+Grade  Bogomips  Cache   Count  CPU model (sample machine)
+-----  --------  ------  -----  --------------------------
+ 1.00      5599     512      1  AMD EPYC 7543 32-Core Processor (odcgen-zebu-16cx240g-2417-084)
+ 1.61      4500    1024      1  AMD EPYC 9754 128-Core Processor (us01odcvde23280)
+27.11      4600   16896      1  Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz (odcphy-vg-1134)
+49.12      5000   28160      1  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz (odcphy-vg-1115)
+
+** UNKNOWN COMMAND: backend_default_Intermediate_Profiling_Results_Analyzer_VCSAnalyzer (duration: 0)
+
+======================================================================
+*** Back-end name: default backend ***
+
+Critical path, based on actual execution timing
+===============================================
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00  23.83%       0:01    1.1    0:00  Checks + config
+   0:01  25.04%                    (unexplained delay)
+   0:00  12.35%       0:00    1.0    0:00  Build Fs Macro Library
+   0:01  25.87%       0:01    1.0    0:00  Launch VCS
+-------  ------  ----------------  -------  -----
+   0:03  87.08%       0:02    0.7  * Total *
+
+Columns:
+- Elapsed: the difference between Finish and Submit times [hh:mm].
+- %total: the percentage of Elapsed time in overall compilation. Note that
+  it may add up to less than 100% if there were any gaps between Finish and
+  Submit times of successive stages.
+- SElapsed: sum of Elapsed times for all tasks constituting the stage. It
+  may be greater than Elapsed if some or all of these tasks were executed
+  in parallel [hh:mm].
+- SE/E: equal to SElapsed/Elapsed. A value greater than 1.0 indicates that
+  tasks were executed in parallel.
+- CPUtime: the CPUtime of each task in the stage
+Critical path, assuming timing without scheduling or grid delays
+================================================================
+
+Note: this section lists the same stages as the previous one.
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00  18.34%       0:00    1.8    0:00  Checks + config
+   0:00   3.42%       0:00    1.0    0:00  Build Fs Macro Library
+   0:00  78.24%       0:00    1.0    0:00  Launch VCS
+-------  ------  ----------------  -------  -----
+   0:00 100.00%       0:01    1.1  * Total *
+
+
+Critical path, assuming timing without delays, no PARFF and >= 100% CPU usage
+=============================================================================
+
+Note: this section lists the same stages as the previous one.
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00   4.23%       0:00    2.1    0:00  Checks + config
+   0:00   1.88%       0:00    1.0    0:00  Build Fs Macro Library
+   0:00  93.89%       0:00    1.0    0:00  Launch VCS
+-------  ------  ----------------  -------  -----
+   0:00 100.00%       0:00    1.0  * Total *
+
+
+Major compilation stages, ordered by submit time
+================================================
+
+Submit Elapsd %total   SExec  SE/E Tasks    %CPU Grade  Stage
+------ ------------- ------------- -------------------  -----
+ 18:51   0:00  23.83    0:00   0.3     5   21.96  4.19  Checks + config
+ 18:53   0:00  12.35    0:00   0.1     1   45.86 27.11  Build Fs Macro Library
+ 18:54   0:01  25.87    0:00   0.7     1  125.33  1.00  Launch VCS
+
+Columns:
+- Submit: the submit time of the first task in the stage [hh:mm].
+- Elapsd: the duration of the stage, based on actual timing [hh:mm].
+- %total: the percentage of Elapsd time in overall compilation.
+- SExec: sum of execution times (excluding scheduling and grid delays) for
+  all tasks constituting the stage. It may be greater than Elapsd if some
+  or all of these tasks were executed in parallel [hh:mm].
+- SE/E: equal to SExec/Elapsd. A value greater than 1.0 indicates that
+  tasks were executed in parallel.
+- %CPU: average CPU utilization: total CPU time divided by SExec.
+- Grade: average host grade.
+
+
+Memory usage:  Max Resident Set Size [MB]
+Known Unknown  Min      Avg      Max      Stage
+----- -------  -------- -------- -------- -----
+    5       0      17.2    134.8    264.0 Checks + config
+    1       0      82.8     82.8     82.8 Build Fs Macro Library
+    1       0     748.1    748.1    748.1 Launch VCS
+
+
+=== Top 1 tasks with longest grid delays
+
+Sched. Startd Ended   S.dlay Duratn %CPU   Grade RSS [MB]  Task
+------ ------ ------  ------ ------ ------ ----- --------  ----
+ 18:51  18:52  18:52    0:00   0:00  39.62 49.12     92.5  Target_Config
+
+

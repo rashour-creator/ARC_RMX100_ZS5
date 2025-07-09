@@ -1,0 +1,121 @@
+
+                                    ZeBu (R)
+                                      zMem
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zMem -createList -addScript ../../../../additionalZmemCommandFile.tcl -addScript ../../../../utf_generatefiles/zMem_config.tcl -debug -newLatency ../zz_Encrypt_6.zmem 
+
+# start time is Tue May 13 18:30:00 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:25
+# ---------------------------System Context--------------------------- 
+# Cpu        69 x bogomips - 4799.99 AMD EPYC 9654P 96-Core Processor
+#            Load: 11.20 11.42 14.15 28/1686 2548684
+#            Hostname: odcbench-00003-0032   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 1118242 MB Free: 342011 MB
+#            Swap space: 264191 MB Free Swap space: 263776 MB
+#            VmSize: 181 MB VmPeak: 181 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11764532
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step DEFINE : Latency is using 4-bits-16-values encoding
+#   step DEFINE : Evaluate additionnal script '../../../../additionalZmemCommandFile.tcl'.
+set_fpga_family v8 vu19p
+automatic_selection -ramlut_to_bram 11
+automatic_selection -ramlut -max_blocs 34480
+automatic_selection -bram -max_blocs 540
+automatic_selection -uram -max_blocs 80
+set_max_sys_freq clk_100
+#   step DEFINE : Evaluate additionnal script '../../../../utf_generatefiles/zMem_config.tcl'.
+enable_bram_dual_port_multiplexed
+memory set_global_debug_mode true
+#   step DEFINE : Global debug mode is ON
+mem new zz_Encrypt_6_ZMEM_0 auto
+#   step DEFINE : New memory : zz_Encrypt_6_ZMEM_0
+mem depth 1024
+#   step DEFINE : Set memory : zz_Encrypt_6_ZMEM_0 depth 1024
+mem width 613
+#   step DEFINE : Set memory : zz_Encrypt_6_ZMEM_0 width   613
+mem add_port w0 w
+#   step DEFINE : New port : 'w0' 'w' for memory 'zz_Encrypt_6_ZMEM_0'.
+mem set_port_access w0 sync driver
+#   step DEFINE : Set port access 'sync' of port 'w0' for memory 'zz_Encrypt_6_ZMEM_0'.
+mem_port w0 clk w0clk
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'w0'.
+mem_port w0 addr w0addr
+#   step DEFINE : Set 'addr' pin name 'w0addr' for port 'w0'.
+mem_port w0 di w0di
+#   step DEFINE : Set 'di' pin name 'w0di' for port 'w0'.
+mem_port w0 we w0we
+#   step DEFINE : Set 'we' pin name 'w0we' for port 'w0'.
+mem add_port r1 r
+#   step DEFINE : New port : 'r1' 'r' for memory 'zz_Encrypt_6_ZMEM_0'.
+mem set_port_access r1 sync driver
+#   step DEFINE : Set port access 'sync' of port 'r1' for memory 'zz_Encrypt_6_ZMEM_0'.
+mem_port r1 clk w0clk
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'r1'.
+mem_port r1 addr r1addr
+#   step DEFINE : Set 'addr' pin name 'r1addr' for port 'r1'.
+mem_port r1 do r1do
+#   step DEFINE : Set 'do' pin name 'r1do' for port 'r1'.
+mem_port r1 re r1re low
+#   step DEFINE : Set 're' pin name 'r1re' for port 'r1'.
+mem generate
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'bram' for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step DEFINE : Multiplexing forced on dual port BRAM.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'uram' for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'ramlut' for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Cannot chose type 'RAMLUT', too many RAMLUTs required (39232, max 34480).
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'zrm' for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step AUTOMATIC TYPE SELECTION : Type 'bram' has been chosen for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step DEFINE : Multiplexing forced on dual port BRAM.
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step MEMORY CHECK : Fast clock used for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step MEMORY CHECK : Fast clock used for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step ZMEM : Non-Optimizable zview instances used in module 'zz_Encrypt_6_ZMEM_0'.
+#   step MULTI_PORT : Replicating 2 instances to reduce high fanout nets
+#   step MEMORY MAPPING :   RAMB36E1    18
+#   step RESOURCE CHECK :   REG   1283
+#   step RESOURCE CHECK :   LUT   680 (RAMLUT: 0)
+#   step RESOURCE CHECK :   BRAM  18
+#   step RESOURCE CHECK :   URAM  0
+#   step FREQUENCY : Worst case frequency of the memory 'zz_Encrypt_6_ZMEM_0' would be 14285 kHz
+#   step ZMEM : Fast system clock 'clk_100' is used for memory 'zz_Encrypt_6_ZMEM_0'.
+#   step SERIALIZE : writing netlist 'zz_Encrypt_6_ZMEM_0' into znl file 'zz_Encrypt_6_ZMEM_0.edf.gz'
+#   step SERIALIZE : #bytes in: 214423, #bytes out: 54887, compression ratio: 3.906626
+#   step GENERATE : generating vhdl wrapper 'zz_Encrypt_6_ZMEM_0.vhd'
+#   step GENERATE : generating vhdl wrapper 'zz_Encrypt_6_ZMEM_0_bbx.vhd'
+#   step GENERATE : generating verilog wrapper 'zz_Encrypt_6_ZMEM_0.v'
+#   step GENERATE : generating verilog wrapper 'zz_Encrypt_6_ZMEM_0_bbx.v'
+#   step GENERATE : generating report file 'zz_Encrypt_6_ZMEM_0_report.log'
+
+#   exec summary :    0 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : user 0m0.167s, sys 0m0.50s
+#   exec summary : Total memory: 505668 kB - RSS memory: 139172 kB - Data memory: 126320 kB
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:30:00 2025

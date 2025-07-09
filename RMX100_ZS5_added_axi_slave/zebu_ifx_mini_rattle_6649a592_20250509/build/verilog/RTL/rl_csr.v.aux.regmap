@@ -1,0 +1,523 @@
+  [
+    {
+    addr:	768,
+    name:	"MSTATUS",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	784,
+    name:	"MSTATUSH",
+    reset:	1024,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1860,
+    name:	"MNSTATUS",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	912,
+    name:	"MLWID",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1864,
+    name:	"MWIDDELEG",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	769,
+    name:	"MISA",
+    reset:	1083183365,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	848,
+    name:	"MISELECT",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	849,
+    name:	"MIREG",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	773,
+    name:	"MTVEC",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	832,
+    name:	"MSCRATCH",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	833,
+    name:	"MEPC",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	834,
+    name:	"MCAUSE",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1856,
+    name:	"MNSCRATCH",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1857,
+    name:	"MNEPC",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1858,
+    name:	"MNCAUSE",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	835,
+    name:	"MTVAL",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	843,
+    name:	"MTVAL2",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	842,
+    name:	"MTINST",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3857,
+    name:	"MVENDORID",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3858,
+    name:	"MARCHID",
+    reset:	2147484673,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3859,
+    name:	"MIMPID",
+    reset:	65792,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3860,
+    name:	"MHARTID",
+    reset:	0,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3861,
+    name:	"MCONFIGPTR",
+    reset:	0,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2047,
+    name:	"MTSP",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	778,
+    name:	"MENVCFG",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	794,
+    name:	"MENVCFGH",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	774,
+    name:	"MCOUNTEREN",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	800,
+    name:	"MCOUNTINHIBIT",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2816,
+    name:	"MCYCLE",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2944,
+    name:	"MCYCLEH",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3072,
+    name:	"CYCLE",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3200,
+    name:	"CYCLEH",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3073,
+    name:	"TIME",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3201,
+    name:	"TIMEH",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2818,
+    name:	"MINSTRET",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2946,
+    name:	"MINSTRETH",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3074,
+    name:	"INSTRET",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	3202,
+    name:	"INSTRETH",
+    bcr:	false,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1988,
+    name:	"MECC_DIAGNOSTIC",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	2026,
+    name:	"MESB_CONTROL",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1992,
+    name:	"MCACHE_CTL",
+    reset:	3,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1993,
+    name:	"MCACHE_OP",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1994,
+    name:	"MCACHE_ADDR",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1995,
+    name:	"MCACHE_LINES",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1996,
+    name:	"MCACHE_DATA",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4049,
+    name:	"ARCV_ICACHE_BUILD",
+    reset:	78081,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4050,
+    name:	"ARCV_ICCM_BUILD",
+    reset:	2049,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	23,
+    name:	"JVT",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4043,
+    name:	"ARCV_BCR_BUILD",
+    reset:	1,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4038,
+    name:	"ARCV_MSFTY_BUILD",
+    reset:	1140850689,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4044,
+    name:	"ARCV_PMP_BUILD",
+    reset:	659457,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4046,
+    name:	"ARCV_PMA_BUILD",
+    reset:	1537,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4059,
+    name:	"ARCV_SEC_BUILD",
+    reset:	2147491841,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4042,
+    name:	"ARCV_TIMER_BUILD",
+    reset:	3758161921,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4052,
+    name:	"ARCV_CLINT_BUILD",
+    reset:	268435731,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4053,
+    name:	"ARCV_IMSIC_BUILD",
+    reset:	268500993,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4057,
+    name:	"ARCV_TRIGGERS_BUILD",
+    reset:	513,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4033,
+    name:	"ARCV_MMIO_BUILD",
+    reset:	3584,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4062,
+    name:	"ARCV_ISA_OPTS_BUILD",
+    reset:	53746657,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4048,
+    name:	"ARCV_DCCM_BUILD",
+    reset:	133377,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4061,
+    name:	"ARCV_DMP_PER_BUILD",
+    reset:	257,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	4064,
+    name:	"ARCV_RAS_BUILD",
+    reset:	800257,
+    rw:	"ro",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1968,
+    name:	"DCSR",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1969,
+    name:	"DPC",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+    {
+    addr:	1981,
+    name:	"ARCV_DBG_CTRL",
+    bcr:	false,
+    rw:	"rw",
+    space:	"aux",
+    }
+  ,
+  ]
+

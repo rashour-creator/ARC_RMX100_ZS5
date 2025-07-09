@@ -1,0 +1,145 @@
+***********************************************************************************************************************
+* Please switch to new profiler report in compilationReport.txt that provides more details to review your compilation *
+***********************************************************************************************************************
+
+.. Command: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/tracean3.py --top-delay=5 --syn-details=5 --pr-summary-by-time=5 --hhmm --local-time=detect --show-memory --fix-graph --cpu-time /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work
+.. Reading /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zCui/backup/multibackend_25_5_14_18_51_33/prof/tracerun.cui ...
+.. Detected --work=/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/.
+.. Detected --submit-host=us01odcvde23280
+.. Detected --submit-command=bsub
+.. Detected local time offset of 3.0 hours
+.. The first task started at Wed, 14 May 2025 15:51:35 UTC
+.. No timing info for backend_default_Intermediate_Profiling_Results_Analyzer_BackendEntry (execution)
+.. No timing info for backend_default_OptionsDbProc (execution)
+
+*** Incremental = No ***
+
+Grade  Bogomips  Cache   Count  CPU model (sample machine)
+-----  --------  ------  -----  --------------------------
+ 1.00      4499     512      3  AMD EPYC 9754 128-Core Processor (zebutrain-4762-001)
+ 1.07      4799     512      2  AMD EPYC 9654P 96-Core Processor (odcbench-00003-0035)
+ 1.24      5599     512      2  AMD EPYC 7543 32-Core Processor (odcgen-zebu-16cx240g-2615-013)
+ 2.00      4500    1024      1  AMD EPYC 9754 128-Core Processor (us01odcvde23280)
+33.74      4600   16896      1  Intel(R) Xeon(R) Gold 5118 CPU @ 2.30GHz (odcphy-vg-1134)
+53.33      4799   25600      1  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz (vgzeburtdc264)
+61.12      5000   28160      2  Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz (odcphy-vg-1115)
+
+** UNKNOWN COMMAND: backend_default_Intermediate_Profiling_Results_Analyzer_BackendEntry (duration: 0)
+** UNKNOWN COMMAND: backend_default_OptionsDbProc (duration: 0)
+
+======================================================================
+*** Back-end name: default backend ***
+
+Critical path, based on actual execution timing
+===============================================
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00  17.55%       0:01    1.1    0:00  Checks + config
+   0:01  18.44%                    (unexplained delay)
+   0:00   9.09%       0:00    1.0    0:00  Build Fs Macro Library
+   0:01  19.05%       0:01    1.0    0:00  Launch VCS
+   0:01  22.84%       0:28   23.1    0:03  FE + synthesis
+-------  ------  ----------------  -------  -----
+   0:04  86.97%       0:31    6.6  * Total *
+
+Columns:
+- Elapsed: the difference between Finish and Submit times [hh:mm].
+- %total: the percentage of Elapsed time in overall compilation. Note that
+  it may add up to less than 100% if there were any gaps between Finish and
+  Submit times of successive stages.
+- SElapsed: sum of Elapsed times for all tasks constituting the stage. It
+  may be greater than Elapsed if some or all of these tasks were executed
+  in parallel [hh:mm].
+- SE/E: equal to SElapsed/Elapsed. A value greater than 1.0 indicates that
+  tasks were executed in parallel.
+- CPUtime: the CPUtime of each task in the stage
+Critical path, assuming timing without scheduling or grid delays
+================================================================
+
+Note: this section lists the same stages as the previous one.
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00  12.33%       0:00    1.8    0:00  Checks + config
+   0:00   2.30%       0:00    1.0    0:00  Build Fs Macro Library
+   0:00  52.57%       0:00    1.0    0:00  Launch VCS
+   0:00  32.80%       0:04    9.7    0:03  FE + synthesis
+-------  ------  ----------------  -------  -----
+   0:01 100.00%       0:05    4.0  * Total *
+
+
+Critical path, assuming timing without delays, no PARFF and >= 100% CPU usage
+=============================================================================
+
+Note: this section lists the same stages as the previous one.
+
+Elapsed  %total   SElapsed   SE/E  CPUtime  Stage
+-------  ------  ----------------  -------  -----
+   0:00   2.70%       0:00    2.1    0:00  Checks + config
+   0:00   1.20%       0:00    1.0    0:00  Build Fs Macro Library
+   0:00  59.92%       0:00    1.0    0:00  Launch VCS
+   0:00  36.18%       0:03    7.7    0:03  FE + synthesis
+-------  ------  ----------------  -------  -----
+   0:01 100.00%       0:03    3.4  * Total *
+
+
+Major compilation stages, ordered by submit time
+================================================
+
+Submit Elapsd %total   SExec  SE/E Tasks    %CPU Grade  Stage
+------ ------------- ------------- -------------------  -----
+ 18:51   0:00  17.55    0:00   0.3     5   21.96  5.21  Checks + config
+ 18:53   0:00   9.09    0:00   0.1     1   45.86 33.74  Build Fs Macro Library
+ 18:54   0:01  19.05    0:00   0.7     1  125.33  1.24  Launch VCS
+ 18:55   0:00  13.30    0:00   0.0     1   27.50  1.07  Launch Verdi
+ 18:55   0:01  22.84    0:04   3.4    33   76.14 38.81  FE + synthesis
+ 18:55   0:00   1.31    0:00   1.0     1    4.43  2.00  Compilation Profiler (after VCSAnalyzer)
+ 18:55   0:00  12.88    0:00   0.0     1   34.43  1.07  Build Rhino Fsdb
+
+Columns:
+- Submit: the submit time of the first task in the stage [hh:mm].
+- Elapsd: the duration of the stage, based on actual timing [hh:mm].
+- %total: the percentage of Elapsd time in overall compilation.
+- SExec: sum of execution times (excluding scheduling and grid delays) for
+  all tasks constituting the stage. It may be greater than Elapsd if some
+  or all of these tasks were executed in parallel [hh:mm].
+- SE/E: equal to SExec/Elapsd. A value greater than 1.0 indicates that
+  tasks were executed in parallel.
+- %CPU: average CPU utilization: total CPU time divided by SExec.
+- Grade: average host grade.
+
+
+Memory usage:  Max Resident Set Size [MB]
+Known Unknown  Min      Avg      Max      Stage
+----- -------  -------- -------- -------- -----
+    5       0      17.2    134.8    264.0 Checks + config
+    1       0      82.8     82.8     82.8 Build Fs Macro Library
+    1       0     748.1    748.1    748.1 Launch VCS
+    1       0     124.0    124.0    124.0 Launch Verdi
+   33       0      95.9    137.5    386.8 FE + synthesis
+    1       0      20.1     20.1     20.1 Compilation Profiler (after VCSAnalyzer)
+    1       0     103.5    103.5    103.5 Build Rhino Fsdb
+
+
+=== Top 5 tasks with longest grid delays
+
+Sched. Startd Ended   S.dlay Duratn %CPU   Grade RSS [MB]  Task
+------ ------ ------  ------ ------ ------ ----- --------  ----
+ 18:55  18:56  18:56    0:00   0:00  94.20 53.33    189.2  design_Default_RTL_GroupBundle_30_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  95.63 53.33    199.9  design_Default_RTL_GroupBundle_0_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  70.08 53.33    118.1  design_Default_RTL_GroupBundle_10_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  57.24 53.33    138.6  design_Default_RTL_GroupBundle_13_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  53.20 53.33     96.5  design_Default_RTL_GroupBundle_16_Synthesis
+
+
+=== Details on task group 'Synthesis' (5 longest tasks out of 33)
+
+Sched. Startd Ended   S.dlay Duratn %CPU   Grade RSS [MB]  Task
+------ ------ ------  ------ ------ ------ ----- --------  ----
+ 18:55  18:56  18:57    0:00   0:00  96.75 53.33    227.8  design_Default_RTL_GroupBundle_23_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  94.20 53.33    189.2  design_Default_RTL_GroupBundle_30_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  95.63 53.33    199.9  design_Default_RTL_GroupBundle_0_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  92.86 53.33    151.8  design_Default_RTL_GroupBundle_31_Synthesis
+ 18:55  18:56  18:56    0:00   0:00  83.76 53.33    137.7  design_Default_RTL_GroupBundle_26_Synthesis
+

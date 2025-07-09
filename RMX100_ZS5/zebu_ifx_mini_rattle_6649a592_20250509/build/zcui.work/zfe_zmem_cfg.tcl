@@ -1,0 +1,1 @@
+zfe_zmem_opt -addScript ../../../../additionalZmemCommandFile.tcl -addScript ../../../../utf_generatefiles/zMem_config.tcl -debug -newLatency 

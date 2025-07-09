@@ -1,0 +1,128 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+# This makefile re-analyzes any updated file in the board
+# hierarchy and all the files which depend on the updated file.
+# It also reports errors.
+# 
+# It has to be run in the ARC600 design directory. This directory
+# contains the 'anz' directory where the *.anz and *.elab files
+# (the output from the analyze and elaborate commands,
+# respectively) are placed.
+
+
+# Libraries.
+# ==========
+#
+# IEEE - The ARC design uses the IEEE library supplied by Synopsys.
+#        The source can be found in:
+#            $SYNOPSYS/packages/IEEE/src/*.v   -- Solaris
+#            %SYNOPSYS%\packages\IEEE\src\*.v  -- Windows NT
+#
+# ARC  - Contains basecase ARC Verilog code, compiled from the install area.
+#
+# USER - Contains generated structural Verilog, memory interfaces for the
+#        system build, and all extension Verilog.  Also contains Altera
+#        specific files for the core which are slightly modified for the
+#        ARCAngel development board.
+
+
+# Synopsys DesignWare.
+# ====================
+#
+# If extensions are used which take advantage of Synopsys DesignWare
+# components, then the following files must be compiled into the
+# libraries named.
+#
+# The extensions currently using DesignWare parts are the 32x32 multiplier
+# and the MUL/MAC function.
+#
+# Library        Verilog file (on Solaris)
+# -----------------------------------------------------------
+#
+# DW01           $SYNOPSYS/dw/dw01/src_ver/DW01_add.v
+# DW01           $SYNOPSYS/dw/dw01/src_ver/DW01_csa.v
+#
+# DW02           $SYNOPSYS/dw/dw02/src_ver/DW02_mult.v
+# DW02           $SYNOPSYS/dw/dw02/src_ver/DW02_multp.v
+#
+# (On Windows NT replace "$SYNOPSYS" with "%SYNOPSYS%" in each of the
+# above paths.)
+#
+# The installation script creates these libraries, and performs the
+# compilation for your chosen simulator.
+
+
+# Using this makefile with simulators other than those supported by ARC Cores
+# ===========================================================================
+# 
+# It should be possible to use this makefile with most Verilog simulation
+# environments with a small alteration.  All simulator-specific commands
+# are held in a separate file and 'invoked' with a line like this:
+#     include ${ARCHITECT_ROOT}/share/simulation/makefile_interface_<simulator-name>_verilog
+#
+# In essence that file defines the following make variables/macros:
+#
+# | Variable            | ModelSim values   | NC
+# +---------------------+-------------------+--------------
+#  SIMULATOR_DIR_PREFIX   mti_                nc_
+#  ANALYZE                vlog                ncvlog
+#  ELABORATE              N/A                 ncelab
+#  ELABORATE_FLAGS        N/A                 N/A
+#  REPORT_WARNINGS        $(GREP) -i warning  $(GREP) "\*W"
+#
+# Change that include line to name a file that you've created.  That file
+# should contain appropriate values for each of the above variables.
+#
+# The 'ANALYZE' variable defines the name of the command to call to compile
+# Verilog. This can be altered to call a user-supplied batch file or script which
+# will perform the necessary steps to compile the supplied Verilog into the
+# specified library.
+#
+# The 'ELABORATE' variable defines the name of the command to call to elaborate
+# the compiled design.   Currently this command is only invoked on the top-level
+# entity.  This can be altered to call a user-supplied batch file or script which
+# will perform the necessary steps to elaborate the design from the specified
+# library and top-level entity.
+# If your simulator does not require designs to be elaborated you can define a
+# dummy or stubbed-out elaboration phase, thus:
+#     ELABORATE = $(MESSAGE) "Dummy elaboration phase for <My Simulator>: "
+#
+# The 'REPORT_WARNINGS' variable defines the name of the command to scan the
+# compiler's output for warnings (errors stop the compilation process).  Any
+# warnings are then displayed to the user (but the compilation continues).
+#
+# The 'SIMULATOR_DIR_PREFIX' variable defines string prefixed to the ARC and USER
+# library names.  The result is used to name directories (beneath your build
+# directory) that will contain the compiled libraries/designs.
+#
+# Here is an example an imaginary simulator that uses the commands 'working_library'
+# and 'compile_verilog':
+#
+#  1. Define 'ANALYZE' to call an executable batch file 'verilog_analyze' in
+#     the working directory.
+# 
+#  2. Make an executable batch file verilog_analyze:
+#
+#          #!/bin/csh
+#          # Called as 'verilog_analyze -work <library> <filename>'
+#          #
+#          # Select required working library
+#          working_library $2
+#
+#          # Compile Verilog into working library
+#          compile_verilog $3
+#
+# Ensure the correct libraries and DesignWare components have been compiled,
+# then type 'make'.
+
+
+# Working directories, build rules and inter-module dependencies
+# ==============================================================
+

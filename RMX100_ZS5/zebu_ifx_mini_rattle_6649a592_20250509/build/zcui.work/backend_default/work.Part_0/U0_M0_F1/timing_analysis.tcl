@@ -1,0 +1,2 @@
+
+tina::netlist_timing_analysis -fpga U0_M0_F1.edf.gz -timing_model $env(ZEBU_ROOT)/etc/timingModel/ -clock_handling fetch -target zs5 -options {CLOCK_CONE_CLR_PRE=1,CLOCK_CONE_LATCH=0,CLOCK_CONE_ENABLE=1,CLOCK_CONE_FEEDBACK=1,FILTER_ON_CLR_PRE=1,MCP_FEEDBACK=0,LD2FD_SAFE_TIMING=0,MODEL_FILTER_DATA=1} -clock_dependencies ../../tools/zTime/ -save U0_M0_F1 -tdfdr -ml_feature_setting ml_feature.tcl -delay_model machine_learning -gnetwork -gates_number_analysis -scc estimated 

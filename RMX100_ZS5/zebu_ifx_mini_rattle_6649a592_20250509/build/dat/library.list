@@ -1,0 +1,83 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+# All files to be used for hierarchy/makefile generation should be
+# included here followed by their location.
+#
+# ARC600 Verilog generation system - library file
+#
+# Note userlib_core is replaced with whatever user is replaced with for
+# a core build.
+# Also note variables ending in _verification are replaced with arc for a core verification build
+# (except for memcon which is replaced with value of user).
+#
+
+
+
+clock_defs user
+
+# System provides jtag interface, so should provide the entry here.
+jtag_interface user
+debug_if_or user
+mcd_top user
+ext_msb user
+mem_msb user
+
+# In case we use these external N:1 arbiters
+ic_nx1arb user
+xy_nx1arb user
+ibus_nx1arb user
+# Normally the bvci arbiter add this but we provide it in case
+# there is no such arbiter.
+arb_pkg    user
+
+
+# In case we use these protocol converters
+ic_bvci_to_axi user
+xy_bvci_to_axi user
+ibus_bvci_to_axi user
+ic_bvci_to_ahb user
+xy_bvci_to_ahb user
+ibus_bvci_to_ahb user
+
+
+# The group of islands in a multicore:
+archipelago user
+io_flops_mc user 
+
+# The full path to the libraries used by the system is included below.
+# Note the first library in the list is the working library.
+user :  /remote/us01sgnfs00727/arc_fpga/moyanz/Ratter3/template/dw_dbp/zebu_ifx_mini_rattle_6649a592_20250509/build/
+
+board user
+core_chip user
+glue user
+core_sys user
+cpu_top user
+archipelago user
+cores user
+io_pad_ring user
+clock_and_reset user
+misc user
+peripherals user
+peripherals_tb user
+jtag_chain user
+jtag_model user
+rascal2jtag user
+fast_rascal	user
+rascal_pipemon	user
+
+tb_trace user
+
+eia_signal_initialization user
+tb_uaux user
+tb_cct_err user
+archipelago_sub user
+
+

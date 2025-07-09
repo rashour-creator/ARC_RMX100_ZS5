@@ -1,0 +1,50 @@
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+zebu_time_capture_guts.sv, 58
+"zebu_control"
+  Analysing exported task zebu_control (zebu_control) in module 
+  zebu_time_capture
+
+Note-[ZEMI-ADIF] Analysing DPI imported function
+zebu_time_capture_guts.sv, 18
+"zebu_sendtime"
+  Analysing (pure) DPI imported function zebu_sendtime (zebu_sendtime) in 
+  module zebu_time_capture
+
+Note-[ZEMI-PDEF] 
+  Processing DPI exported functions
+
+Note-[ZEMI-PDIF] 
+  Processing DPI imported functions
+
+DPI exports summary:
+    +--------------+----------+---------+----------+----------+-----------+
+    | name         |     type | in bits | out bits | protocol | streaming |
+    +--------------+----------+---------+----------+----------+-----------+
+    | zebu_control |     task |       2 |      128 |       -- |        No |
+    +--------------+----------+---------+----------+----------+-----------+
+
+
+DPI imports summary:
+    +---------------+----------+---------+----------+---------+----------+-----------+--------------+
+    | name          |     type | in bits | out bits | context | protocol | streaming | prefetchable |
+    +---------------+----------+---------+----------+---------+----------+-----------+--------------+
+    | zebu_sendtime | function |      24 |        0 |      No |       -- |       Yes |           No |
+    +---------------+----------+---------+----------+---------+----------+-----------+--------------+
+
+
+Message Ports Summary:
+    +--------------------------------------------+------+--------+-------+---------+
+    | name                                       | type |   size | count | sharing |
+    +--------------------------------------------+------+--------+-------+---------+
+    | zebu_time_capture.zebu_control_in_port     |   in |      2 |     1 |      no |
+    | zebu_time_capture.zebu_control_out_port    |  out |    128 |     1 |      no |
+    | zebu_time_capture.zebu_sendtime_portbuffer |  out |   4096 |     1 |      no |
+    | -- (zebu_time_capture.zebu_sendtime)       |  out |     -- |    -- |     yes |
+    | zebu_time_capture.zemi_control_in_port     |   in |      6 |     1 |      no |
+    | zebu_time_capture.zemi_status_out_port     |  out |      3 |     1 |      no |
+    +--------------------------------------------+------+--------+-------+---------+
+
+    Total Message In Ports: 2 (8 bits)
+    Total Message Out Ports: 3 (4227 bits)
+

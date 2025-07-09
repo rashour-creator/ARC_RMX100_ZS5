@@ -1,0 +1,15 @@
+Module alb_mss_fab_fifo_000A{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+NonAliasNets alb_mss_fab_fifo_000A{
+fifo_dep_gt_1_occp_cpy_r[2]    f   410
+fifo_dep_gt_1_occp_cpy_r[1]    f   411
+fifo_dep_gt_1_rptr_vec_r[1]    f   582
+fifo_dep_gt_1_wptr_vec_r[1]    f   584
+}

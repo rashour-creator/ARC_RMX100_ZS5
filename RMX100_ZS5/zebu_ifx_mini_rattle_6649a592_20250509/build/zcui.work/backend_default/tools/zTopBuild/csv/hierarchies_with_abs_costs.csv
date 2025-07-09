@@ -1,0 +1,66 @@
+Hierarchy Properties
+Path,Module,LUT,LUT6,RAM,URAM,REG,DSP,RAMLUT,FWC_IP_NUM,FWC_IP_BITS,QIWC_IP_BITS,READ_PORT_IPS,READ_PORT_BITS,WRITE_PORT_IPS,WRITE_PORT_BITS,ZC_TRACE_BIT,ZCEI_MESSAGE_INPUT,ZCEI_MESSAGE_OUTPUT,FW_RESOURCES,ZPRD_BB,ZFORCE,ZVIEW,ZRM_SLOTS,ZRM_PORTS,Nb_connected_IOs,Wire_density
+FPGA Size,-,1225728,817152,1263,128,1797734,2302,161200,0,114278,629145,0,0,0,0,0,486,486,0,0,0,0,131072,8,0,0.0000
+Filling Rates,-,30,20,58,40,21,59,25,0,29,59,0,0,0,0,0,94,94,0,0,0,0,100,100,0,0.0000
+Bin Size,-,14708736,9805824,15156,1536,21572808,27624,1934400,0,1371336,7549740,0,0,0,0,0,5832,5832,0,0,0,0,655360,96,0,0.0000
+Max Block Size,-,14708736,9805824,15156,1536,21572808,27624,1934400,0,1371336,7549740,0,0,0,0,0,5832,5832,0,0,0,0,655360,96,20000,0.2500
+Min Block Size,-,1470873,980582,1515,153,2157280,2762,193440,0,137133,754974,0,0,0,0,0,583,583,0,0,0,0,655360,96,5000,0.7500
+zebu_top,zebu_top,314608,86064,48,98,236647,0,19888,0,833,94817,0,0,0,0,0,82,57,0,0,0,0,32768,1,0,1.0000
+zebu_top.core_chip_dut,core_chip,260713,82220,47,98,180055,0,5736,0,828,91162,0,0,0,0,0,45,24,0,0,0,0,32768,1,51,0.0984
+zebu_top.zebu_time_capture.zebu_sendtime_portbuffer,zemi3OutPortBuffer_169_4096_24,391,2,0,0,4091,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,4119,0.4130
+zebu_top.core_chip_dut.icore_sys,core_sys,260710,82219,47,98,180052,0,5736,0,827,91161,0,0,0,0,0,45,24,0,0,0,0,32768,1,53,0.9856
+zebu_top.core_chip_dut.icore_sys.iarchipelago,archipelago,131264,31075,5,98,77534,0,0,0,448,18863,0,0,0,0,0,0,0,0,0,0,0,0,0,787,0.7000
+zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor,zebu_axi_xtor,24478,6900,25,0,30809,0,5736,0,0,5396,0,0,0,0,0,45,24,0,0,0,0,0,0,1229,0.0049
+zebu_top.core_chip_dut.icore_sys.ialb_mss_mem,alb_mss_mem,7690,4983,6,0,4629,0,0,0,0,4571,0,0,0,0,0,0,0,0,0,0,0,32768,1,374,0.8381
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab,alb_mss_fab,88367,36892,11,0,61995,0,0,0,377,57586,0,0,0,0,0,0,0,0,0,0,0,0,0,2569,0.7357
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams,rl_srams,62508,1699,2,98,57700,0,0,0,0,777,0,0,0,0,0,0,0,0,0,0,0,0,0,620,0.0000
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller,cpu_top_safety_controller,65387,28204,3,0,17770,0,0,0,328,16272,0,0,0,0,0,0,0,0,0,0,0,0,0,1470,0.4132
+zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i,xtor_amba_master_axi3_svs,24478,6900,25,0,30808,0,5736,0,0,5395,0,0,0,0,0,45,24,0,0,0,0,0,0,1231,0.7562
+zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst,alb_mss_mem_model,78,61,1,0,41,0,0,0,0,174,0,0,0,0,0,0,0,0,0,0,0,32768,1,331,0.1232
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst,alb_mss_bus_switch,74421,30453,9,0,51403,0,0,0,0,48040,0,0,0,0,0,0,0,0,0,0,0,0,0,2476,0.4873
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd,dccm_ram,20273,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,124,0.0822
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even,dccm_ram,20273,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,124,0.0822
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even,iccm0_ram,20273,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,124,0.0822
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top,rl_cpu_top,31801,13838,2,0,8609,0,0,0,0,7984,0,0,0,0,0,0,0,0,0,0,0,0,0,1237,0.4153
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top,rl_cpu_top,32240,13917,2,0,8976,0,0,0,325,8127,0,0,0,0,0,0,0,0,0,0,0,0,0,1551,0.3527
+zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram,alb_mss_fpga_sram_0000,56,56,1,0,39,0,0,0,0,157,0,0,0,0,0,0,0,0,0,0,0,32768,1,330,0.0894
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5,mss_bus_switch_ibp_dw128_mst,17183,5740,3,0,12034,0,0,0,0,11246,0,0,0,0,0,0,0,0,0,0,0,0,0,1863,0.4995
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_4,mss_bus_switch_ibp_dw32_mst,8796,4018,2,0,6354,0,0,0,0,5938,0,0,0,0,0,0,0,0,0,0,0,0,0,1473,0.4374
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_3,mss_bus_switch_ibp_dw32_mst,8793,4018,2,0,6354,0,0,0,0,5938,0,0,0,0,0,0,0,0,0,0,0,0,0,1469,0.4376
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_2,mss_bus_switch_ibp_dw32_mst,8840,4031,2,0,6370,0,0,0,0,5953,0,0,0,0,0,0,0,0,0,0,0,0,0,1533,0.4316
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_1,mss_bus_switch_ibp_dw32_mst,8840,4031,2,0,6370,0,0,0,0,5953,0,0,0,0,0,0,0,0,0,0,0,0,0,1533,0.4316
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_0,mss_bus_switch_ibp_dw32_mst,8840,4031,2,0,6370,0,0,0,0,5953,0,0,0,0,0,0,0,0,0,0,0,0,0,1533,0.4316
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_3,mss_bus_switch_dw512_slv,4528,1489,1,0,1715,0,0,0,0,1602,0,0,0,0,0,0,0,0,0,0,0,0,0,3687,0.3048
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram,fpga_sram_0002_0000,20267,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0.5794
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram,fpga_sram_0002_0000,20267,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0.5794
+zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram,fpga_sram_0002,20267,532,1,32,18578,0,0,0,0,155,0,0,0,0,0,0,0,0,0,0,0,0,0,123,0.5794
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core,rl_core,28761,12786,2,0,7871,0,0,0,0,7296,0,0,0,0,0,0,0,0,0,0,0,0,0,1634,0.7384
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core,rl_core,29196,12866,2,0,8233,0,0,0,320,7439,0,0,0,0,0,0,0,0,0,0,0,0,0,1944,0.7062
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5.u_cming_ibp_compr,mss_bus_switch_ibp_compr_0000_0000,2282,825,1,0,1244,0,0,0,0,1162,0,0,0,0,0,0,0,0,0,0,0,0,0,1007,0.6291
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5.u_ibp_dw128_in_3_ibp512toibp128,mss_bus_switch_ibpx2ibpy_0001_0000,2313,1240,1,0,2210,0,0,0,0,2065,0,0,0,0,0,0,0,0,0,0,0,0,0,1272,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5.u_ibp_dw128_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1917,399,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.0082
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_4.u_ibp_dw32_in_3_ibp512toibp32,mss_bus_switch_ibpx2ibpy_0001,5015,2983,1,0,3979,0,0,0,0,3718,0,0,0,0,0,0,0,0,0,0,0,0,0,1165,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_4.u_ibp_dw32_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1899,399,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1149,0.0083
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_3.u_ibp_dw32_in_3_ibp512toibp32,mss_bus_switch_ibpx2ibpy_0001,5015,2983,1,0,3979,0,0,0,0,3718,0,0,0,0,0,0,0,0,0,0,0,0,0,1165,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_3.u_ibp_dw32_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1898,399,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1148,0.0083
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_2.u_ibp_dw32_in_3_ibp512toibp32,mss_bus_switch_ibpx2ibpy_0001,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_2.u_ibp_dw32_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1906,397,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1156,0.0071
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_1.u_ibp_dw32_in_3_ibp512toibp32,mss_bus_switch_ibpx2ibpy_0001,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_1.u_ibp_dw32_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1906,397,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1156,0.0071
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_0.u_ibp_dw32_in_3_ibp512toibp32,mss_bus_switch_ibpx2ibpy_0001,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.0000
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_0.u_ibp_dw32_in_3__ibp2ibps,mss_bus_switch_ibp2ibps,1906,397,1,0,1103,0,0,0,0,1030,0,0,0,0,0,0,0,0,0,0,0,0,0,1156,0.0071
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_slv_3.u_mid_ibp_splitter,mss_bus_switch_ibp_split_0000_0000,3494,1267,1,0,1445,0,0,0,0,1350,0,0,0,0,0,0,0,0,0,0,0,0,0,3688,0.6041
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_dmp,rl_dmp,4323,1401,1,0,814,0,0,0,0,760,0,0,0,0,0,0,0,0,0,0,0,0,0,1342,0.6505
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_exu,rl_exu,8711,3249,1,0,2879,0,0,0,0,2630,0,0,0,0,0,0,0,0,0,0,0,0,0,1783,0.4584
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_ifu,rl_ifu,3297,1246,1,0,893,0,0,0,0,834,0,0,0,0,0,0,0,0,0,0,0,0,0,1194,0.1833
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_dmp,rl_dmp,4335,1413,1,0,816,0,0,0,0,796,0,0,0,0,0,0,0,0,0,0,0,0,0,1377,0.6481
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_exu,rl_exu,8781,3281,1,0,2914,0,0,0,3,2630,0,0,0,0,0,0,0,0,0,0,0,0,0,1857,0.4504
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_ifu,rl_ifu,3333,1282,1,0,900,0,0,0,0,941,0,0,0,0,0,0,0,0,0,0,0,0,0,1231,0.1793
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_5.u_ibp_dw128_in_3_ibp512toibp128.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0001,2313,1240,1,0,2210,0,0,0,0,2065,0,0,0,0,0,0,0,0,0,0,0,0,0,1272,0.5868
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_4.u_ibp_dw32_in_3_ibp512toibp32.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0000,5015,2983,1,0,3979,0,0,0,0,3718,0,0,0,0,0,0,0,0,0,0,0,0,0,1165,0.7759
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_3.u_ibp_dw32_in_3_ibp512toibp32.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0000,5015,2983,1,0,3979,0,0,0,0,3718,0,0,0,0,0,0,0,0,0,0,0,0,0,1165,0.7759
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_2.u_ibp_dw32_in_3_ibp512toibp32.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0000,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.7743
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_1.u_ibp_dw32_in_3_ibp512toibp32.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0000,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.7743
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.u_switch_inst.u_mss_bs_mst_0.u_ibp_dw32_in_3_ibp512toibp32.x_w_gt_y_w_u_ibpw2ibpn,mss_bus_switch_ibpw2ibpn_0000,5025,2998,1,0,3995,0,0,0,0,3733,0,0,0,0,0,0,0,0,0,0,0,0,0,1166,0.7743
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_exu.u_rl_csr,rl_csr,2485,930,1,0,846,0,0,0,0,790,0,0,0,0,0,0,0,0,0,0,0,0,0,1419,0.6061
+zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_exu.u_rl_csr,rl_csr,2485,930,1,0,846,0,0,0,0,790,0,0,0,0,0,0,0,0,0,0,0,0,0,1419,0.6061

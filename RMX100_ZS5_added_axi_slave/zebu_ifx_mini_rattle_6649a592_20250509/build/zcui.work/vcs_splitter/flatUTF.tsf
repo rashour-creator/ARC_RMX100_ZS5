@@ -1,0 +1,43 @@
+architecture_file
+clock_delay
+cluster_constraint
+compile
+coverage
+debug
+design
+eco
+eco
+memories
+reg_init
+set_hwtop
+zforce
+zforce
+zforce
+eco -reserve_qiwc 2048 -reserve_fwc 1152 -reserve_force 32 -reserve_monitor 0 -enable false
+coverage -auto_bin_max 64
+vcs_uc_synth_opts -use_vfs f
+memories -zrm_latency_encoding ONEHOT
+vcs_uc_synth_opts -wls_option -checkSumForAllScm
+vcs_optimization -auto_inline_limit 50 -celldefine t
+compile -hydra t
+debug -waveform_reconstruction_params CSA=false, SIMZILLA=true, SIMZILLA_DISTRIBUTED_BUILD=false, SWAVE=false
+debug -waveform_reconstruction false
+design -convert_strength true
+architecture_file -filename /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl
+set_hwtop -module zebu_top
+zforce -sync_enable -rtlname zebu_top.rst_a
+zforce -sync_enable -rtlname zebu_top.core_chip_dut.i_ext_personality_mode -object_not_found warning
+zforce -sync_enable -rtlname zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode -object_not_found warning
+probe_signals -rtlname zebu_top.rst_a
+vcs_pre_elab_xtors -add_xtor_path /global/apps/zebu_vs_2023.03-SP1//drivers
+clock_delay -module zebu_top -debug true -auto_tolerance true
+cluster_constraint -set_max_fill lut = 30
+reg_init -default_value 0
+vcs_optimization -opt_level normal
+vcs_optimization -auto_inline_limit 30 -celldefine t
+vcs_optimization -number_of_threads 8
+compile -objective PERFORMANCE
+vcs_dpi_synthesis -enable all
+system_tasks -enable -task $display
+debug -all true
+debug -enable_offline_debug true

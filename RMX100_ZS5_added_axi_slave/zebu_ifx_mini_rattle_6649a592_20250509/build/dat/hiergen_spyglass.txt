@@ -1,0 +1,228 @@
+// synopsys translate_off
+<script>
+// Now we are in javascript.
+// Here put instead for-real spyglass commands.
+
+let before2 = "// spyglass disable_block W287b\n"
+before2 += "// SMD: Instance output port is not connected\n"
+before2 += "// SJ:  " 
+let after2  = "// spyglass enable_block W287b"
+let PW2 = {
+    module: /archi/,
+    port: /\dbg_rerr\b/,
+    before: before2,
+    after: after2
+    }
+add_port_wrap(PW2)
+
+
+let before6 = "// spyglass disable_block Propagate_Resets\n"
+before6 += "// SMD: Propagates Used-defines Resets\n"
+before6 += "// SJ:  atresetn is synchronised and passed to rtt modules\n"
+let after6  = "// spyglass enable_block Propagate_Resets"
+let PW6 = {
+    module: /archi/,
+    port: /\batresetn\b/,
+    before: before6,
+    after: after6
+    }
+add_port_wrap(PW6)
+
+
+let before11 = "// spyglass disable_block Propagate_Resets\n"
+before11 += "// SMD: Propagates Used-defines Resets \n"
+before11 += "// SJ: core1 and core0 both use c0pu_rst_a \n" 
+let after11  = "// spyglass enable_block Propagate_Resets"
+let PW11 = {
+    module: /archi/,
+    port: /\bc1pu_rst_a\b/,
+    before: before11,
+    after: after11
+    }
+add_port_wrap(PW11)
+
+
+let before21 = "// spyglass disable_block Topology_02\n"
+before21 += "// spyglass disable_block RegInputOutput-ML\n"
+before21 += "// SMD: direct connection from input port to output port\n"
+before21 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after21  = "// spyglass enable_block Topology_02\n"
+after21 += "// spyglass enable_block RegInputOutput-ML"
+let PW21 = {
+    module: /archi/,
+	  line: /ahb_h/,
+    before: before21,
+    after: after21
+    }
+add_port_wrap(PW21)
+
+let before22 = "// spyglass disable_block Ac_glitch02\n"
+before22 += "// SMD: Clock domain crossing may be subject to glitches\n"
+before22 += "// SJ: CDC accross is handled" 
+let after22  = "// spyglass enable_block Ac_glitch02"
+let PW22 = {
+    module: /archi/,
+	  line: /\bdmsi_valid\b/,
+    before: before22,
+    after: after22
+    }
+add_port_wrap(PW22)
+
+let before23 = "// spyglass disable_block Topology_02\n"
+before23 += "// SMD: direct connection from input port to output port\n"
+before23 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after23  = "// spyglass enable_block Topology_02"
+let PW23 = {
+    module: /archi/,
+	  port: /\bsoft_reset_prepare\b/,
+    before: before23,
+    after: after23
+    }
+add_port_wrap(PW23)
+
+let before24 = "// spyglass disable_block RegInputOutput-ML\n"
+before24 += "// SMD: Port is not registered\n"
+before24 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after24  = "// spyglass enable_block RegInputOutput-ML"
+let PW24 = {
+    module: /archi/,
+	  line: /\bdbg_apb_psel\b/,
+    before: before24,
+    after: after24
+    }
+add_port_wrap(PW24)
+
+let before25 = "// spyglass disable_block RegInputOutput-ML\n"
+before25 += "// SMD: Port is not registered\n"
+before25 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after25  = "// spyglass enable_block RegInputOutput-ML"
+let PW25 = {
+    module: /archi/,
+	  line: /\bdbg_apb_penable\b/,
+    before: before25,
+    after: after25
+    }
+add_port_wrap(PW25)
+
+let before26 = "// spyglass disable_block RegInputOutput-ML\n"
+before26 += "// SMD: Port is not registered\n"
+before26 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after26  = "// spyglass enable_block RegInputOutput-ML"
+let PW26 = {
+    module: /archi/,
+	  line: /\bdmsi_err\b/,
+    before: before26,
+    after: after26
+    }
+add_port_wrap(PW26)
+
+let before27 = "// spyglass disable_block RegInputOutput-ML\n"
+before27 += "// SMD: Port is not registered\n"
+before27 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after27  = "// spyglass enable_block RegInputOutput-ML"
+let PW27 = {
+    module: /archi/,
+	  line: /\bdmsi_credit/,
+    before: before27,
+    after: after27
+    }
+add_port_wrap(PW27)
+
+let before28 = "// spyglass disable_block RegInputOutput-ML\n"
+before28 += "// SMD: Port is not registered\n"
+before28 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after28  = "// spyglass enable_block RegInputOutput-ML"
+let PW28 = {
+    module: /archi/,
+	  line: /\bdmsi_cvalid/,
+    before: before28,
+    after: after28
+    }
+add_port_wrap(PW28)
+
+let before29 = "// spyglass disable_block RegInputOutput-ML\n"
+before29 += "// SMD: Port is not registered\n"
+before29 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after29  = "// spyglass enable_block RegInputOutput-ML"
+let PW29 = {
+    module: /archi/,
+	  line: /sys_sleep_/,
+    before: before29,
+    after: after29
+    }
+add_port_wrap(PW29)
+
+let before30 = "// spyglass disable_block RegInputOutput-ML\n"
+before30 += "// SMD: Port is not registered\n"
+before30 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after30  = "// spyglass enable_block RegInputOutput-ML"
+let PW30 = {
+    module: /archi/,
+	  line: /\bsafety_enabled\b/,
+    before: before30,
+    after: after30
+    }
+add_port_wrap(PW30)
+
+let before31 = "// spyglass disable_block RegInputOutput-ML\n"
+before31 += "// SMD: Port is not registered\n"
+before31 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after31  = "// spyglass enable_block RegInputOutput-ML"
+let PW31 = {
+    module: /archi/,
+	  line: /\bcritical_error\b/,
+    before: before31,
+    after: after31
+    }
+add_port_wrap(PW31)
+
+let before32 = "// spyglass disable_block RegInputOutput-ML\n"
+before32 += "// SMD: Port is not registered\n"
+before32 += "// SJ:  None-registered interface, potential combination loop should be taken care when integration" 
+let after32  = "// spyglass enable_block RegInputOutput-ML"
+let PW32 = {
+    module: /archi/,
+	  line: /dmsi_rdy/,
+    before: before32,
+    after: after32
+    }
+add_port_wrap(PW32)
+
+let before33 = "// spyglass disable_block Topology_02\n"
+before33 += "// SMD: direct connection from input port to output port\n"
+before33 += "// SJ:  None-registered interface"
+let after33  = "// spyglass enable_block Topology_02\n"
+let PW33 = {
+    module: /archi/,
+	  line: /reset_pc_in/,
+    before: before33,
+    after: after33
+    }
+add_port_wrap(PW33)
+
+let before34 = "// spyglass disable_block CDC_UNSYNC_NOSCHEME\n"
+before34 += "// SMD: direct connection from input port to output port\n"
+before34 += "// SJ: We do have CDC constraints for all signals, but it shows an exception for bit 0"
+let after34  = "// spyglass enable_block CDC_UNSYNC_NOSCHEME\n"
+let PW34 = {
+    module: /archi/,
+	  line: /dbg_apb_prdata/,
+    before: before34,
+    after: after34
+    }
+add_port_wrap(PW34)   
+
+let before35 = "// spyglass disable_block Topology_02\n"
+before35 += "// SMD: direct connection from input port to output port\n"
+before35 += "// SJ:  This issue arises in no source sync module,we will add a flop once it do not have ssync module"
+let after35  = "// spyglass enable_block Topology_02\n"
+let PW35 = {
+    module: /archi/,
+	  line: /stub*dbg_ibp_*/,
+    before: before35,
+    after: after35
+    }
+add_port_wrap(PW35)
+
+</script>
+// synopsys translate_on

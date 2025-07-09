@@ -1,0 +1,88 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1_AR76726 (lin64) Build 4044071 Fri Nov  3 11:45:33 MDT 2023
+| Date              : Tue May 13 18:53:26 2025
+| Host              : us01zebu-4587-002 running 64-bit AlmaLinux release 8.4 (Electric Cheetah)
+| Command           : report_timing -delay_type min_max -input_pins -file timing.rpt
+| Design            : fx_top
+| Device            : xcvu19p-fsva3824
+| Speed File        : -1  PRODUCTION 1.31 12-02-2020
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.010ns  (arrival time - required time)
+  Source:                 design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_ctrl/u_xst_wrapper_0/port_rcv_ctrl_sib_0/port_rcv256_din_reg[152]/C
+                            (rising edge-triggered cell FDRE clocked by CLK_sib_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Destination:            design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/RAMF/I
+                            (rising edge-triggered cell RAMD32 clocked by CLK_sib_clk  {rise@0.000ns fall@10.000ns period=20.000ns})
+  Path Group:             CLK_sib_clk
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (CLK_sib_clk rise@0.000ns - CLK_sib_clk rise@0.000ns)
+  Data Path Delay:        0.235ns  (logic 0.071ns (30.213%)  route 0.164ns (69.787%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.144ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    10.151ns
+    Source Clock Delay      (SCD):    9.829ns
+    Clock Pessimism Removal (CPR):    0.177ns
+  Clock Net Delay (Source):      3.425ns (routing 1.410ns, distribution 2.015ns)
+  Clock Net Delay (Destination): 3.857ns (routing 1.547ns, distribution 2.310ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_sib_clk rise edge)
+                                                      0.000     0.000 r  
+    N44                  IBUFCTRL                     0.000     0.000 r  design/zkprctrl/sys_idel_clk_in_zfnm_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.326     0.326    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/I
+    BUFGCTRL_X0Y152                                                   r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/bufgctrl_0/I0
+    BUFGCTRL_X0Y152      BUFGCTRL (Prop_BUFGCTRL_I0_O)
+                                                      0.079     0.405 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/bufgctrl_0/O
+                         net (fo=7, routed)           5.018     5.423    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/sys_idel_clk_in_bufg
+    SLR Crossing[3->1]   
+    MMCM_X0Y9                                                         r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/mmcme4_base/CLKIN1
+    MMCM_X0Y9            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                      0.644     6.067 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/mmcme4_base/CLKOUT0
+                         net (fo=1, routed)           0.258     6.325    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/lopt
+    BUFGCTRL_X0Y74                                                    r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/bufgctrl_0/I0
+    BUFGCTRL_X0Y74       BUFGCTRL (Prop_BUFGCTRL_I0_O)
+                                                      0.079     6.404 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/bufgctrl_0/O
+    X4Y10 (CLOCK_ROOT)   net (fo=39415, routed)       3.425     9.829    design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_ctrl/u_xst_wrapper_0/port_rcv_ctrl_sib_0/sib_clk
+    SLICE_X267Y466       FDRE                                         r  design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_ctrl/u_xst_wrapper_0/port_rcv_ctrl_sib_0/port_rcv256_din_reg[152]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X267Y466       FDRE (Prop_CFF2_SLICEL_C_Q)
+                                                      0.071     9.900 r  design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_ctrl/u_xst_wrapper_0/port_rcv_ctrl_sib_0/port_rcv256_din_reg[152]/Q
+                         net (fo=1, routed)           0.164    10.064    design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/DIF0
+    SLICE_X268Y471       RAMD32                                       r  design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/RAMF/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_sib_clk rise edge)
+                                                      0.000     0.000 r  
+    N44                  IBUFCTRL                     0.000     0.000 r  design/zkprctrl/sys_idel_clk_in_zfnm_ibufds/IBUFCTRL_INST/O
+                         net (fo=1, routed)           0.368     0.368    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/I
+    BUFGCTRL_X0Y152                                                   r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/bufgctrl_0/I0
+    BUFGCTRL_X0Y152      BUFGCTRL (Prop_BUFGCTRL_I0_O)
+                                                      0.092     0.460 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/x_bufgctrl_ce_idel_clk_in/bufgctrl_0/O
+                         net (fo=7, routed)           5.559     6.019    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/sys_idel_clk_in_bufg
+    SLR Crossing[3->1]   
+    MMCM_X0Y9                                                         r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/mmcme4_base/CLKIN1
+    MMCM_X0Y9            MMCME4_ADV (Prop_MMCM_CLKIN1_CLKOUT0)
+                                                     -0.106     5.913 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/mmcme4_base/CLKOUT0
+                         net (fo=1, routed)           0.289     6.202    design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/lopt
+    BUFGCTRL_X0Y74                                                    r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/bufgctrl_0/I0
+    BUFGCTRL_X0Y74       BUFGCTRL (Prop_BUFGCTRL_I0_O)
+                                                      0.092     6.294 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/x_bufgctrl_ce_sib_clk/bufgctrl_0/O
+    X4Y10 (CLOCK_ROOT)   net (fo=39415, routed)       3.857    10.151    design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/WCLK
+    SLICE_X268Y471       RAMD32                                       r  design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/RAMF/CLK
+                         clock pessimism             -0.177     9.974    
+    SLICE_X268Y471       RAMD32 (Hold_F5LUT_SLICEM_CLK_I)
+                                                      0.081    10.055    design/U0_M0_F0/U0_M0_F0_core/ts_runman_3/ts_runman/zmsg_in_zceiMessageInPort_cmd_in/port_rcv_message/port_rcv256[0]_port_rcv32[4]_port_rcv32/u_xst_wrapper_0/port_rcv32_slice[1]/RAM32M16_0/RAMF
+  -------------------------------------------------------------------
+                         required time                        -10.055    
+                         arrival time                          10.064    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+
+
+

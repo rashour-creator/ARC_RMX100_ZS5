@@ -1,0 +1,1279 @@
+Info: Running with full wave dump
+Info: Running with extra MDB arguments: --postconnect "command source init_mem.cmd"
+Info: Running command: 
+	 PSET 1 = PID.out
+
+                                    ZeBu (R)
+                                      zRci
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRci --zebu-work /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_xtor_lldb.tcl 
+
+# start time is Sun Jul  6 14:28:11 2025
+
+
+
+
+# Build Date : Oct  8 2023 - 20:41:08
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.02 0.40 0.34 1/280 3460519
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 120756 MB
+#            Swap space: 258047 MB Free Swap space: 258027 MB
+#            VmSize: 621 MB VmPeak: 621 MB
+# Disk Space Total: 5000 GB Available: 391 GB Used: 4609 GB
+#            Free inodes: 10983960
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+>>> Info: running pset 1 = PID.out 
+-- ZeBu : [1;34mzRci: [2;32mWARNING : Testbench was compiled using a different zRci revision. Consider recompiling your testbench (Got revision 5383188, expected 4962567)[0m
+-- ZeBu : [1;34mzRci: [0mNo database was set. zRci will use `emulation_data_20250706_142811`
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_07_06-14_28_11.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_07_06-14_28_11.log -> zRci.vgzeburt492.0.log
+
+                                    ZeBu (R)
+                                    libZebu
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# Build Date : Oct  8 2023 - 21:16:33
+
+# start time is Sun Jul  6 14:28:11 2025
+
+
+
+#   step DB LOAD : Loading tree
+#   step HUB : Loading main database in load on demand mode
+#   step DB LOAD : Loading database from path '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step DB LOAD : Opening light tree file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' to enable load on-demand
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' in read mode
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/coords.zrdb' in read mode
+#   step DB LOAD : Loading DB stamp from file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb' in read mode
+#   step DB LOAD : Version stamp is 2021.3.0
+#   step DB LOAD : The database was generated on : Mon Jun 30 14:24:08 2025
+#   step DB LOAD : Stored database CRC is : 92cdadbb
+#   step DB LOAD : Deserializing database : start
+#   step DB LOAD : Database version is 2021.3.0
+#   step DB LOAD : Auxillary databases splitted in 8 wrappers
+#   step DICTIONARY : Opening dictionary
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/names.zrdb' in read mode
+#   step DICTIONARY : Opened. 921497 unique names, in 15 chunks of 65536 entries, stored in 1 directories
+#   step DB LOAD : Skipped coordinates loading
+#   step MEMS : Opening memories database file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb' in read mode
+#   step MEMS : Memories database opened
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 83 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 83 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step DB LOAD : Deserializing tree : start
+#   step DICTIONARY : Loading chunk #0
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/0.zrdb' in read mode
+#   step INFO : RTLDB version is Build S-2021.09-2 Oct  8 2023 (4962567)
+#   step DICTIONARY : Reading 65536 entries
+-- ZeBu : zRci : Evaluating the file "/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #0 loaded. Added 65536 names.
+-- ZeBu : zRci : Launching the server, waiting for the connection (max delay 5 minutes).
+
+#   step DICTIONARY : Loading chunk #14
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/14.zrdb' in read mode
+#   step DICTIONARY : Reading 3993 entries
+#   step DICTIONARY : Read 3993 entries
+#   step DICTIONARY : Chunk #14 loaded. Added 3993 names.
+#   step DICTIONARY : Loading chunk #12
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/12.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #12 loaded. Added 65536 names.
+#   step DB LOAD : Deserializing tree : finished in 1 seconds
+#   step DB LOAD : Deserializing database : finished in 1 seconds
+#   step DB LOAD : Loading ZebuDB from '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/ZebuDB.zdb'
+#   step DB LOAD : ZebuDB loaded in 0 seconds
+#   step EQUI DB : Loading EquiDB from path '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step EQUI DB : Opening equi db files
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/0_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/1_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/2_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/3_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/4_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/5_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/6_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/7_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI DB : Equi db files opened
+#   step POWER DOMAIN DB : Loading power domain database from file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb'
+#   step POWER DOMAIN DB : Database file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb' not found - power domain db not available
+#   step PROPERTY DB : Loading property database from file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb' in read mode
+#   step PropertyDB : Deserializing...
+#   step PropertyDB : Deserialized in 0 seconds
+#   step FWC : Loading FWC value sets table
+#   step NameTable : Loading table from file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb' in read mode
+#   step NameTable : Deserializing '2' names
+#   step FWC : Loaded FWC value sets table
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+WARNING : OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_07_06-14_28_13.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_07_06-14_28_13.log -> zServer.vgzeburt492.0.log
+
+                                    ZeBu (R)
+                                    zServer
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /global/apps/zebu_2021.09-2/bin/orion/zServer -design /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures -zebu.work /remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default 
+
+# start time is Sun Jul  6 14:28:13 2025
+
+
+
+
+# Build Date : Oct  8 2023 - 20:42:58
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.02 0.40 0.34 2/286 3460575
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 120597 MB
+#            Swap space: 258047 MB Free Swap space: 258027 MB
+#            VmSize: 375 MB VmPeak: 375 MB
+# Disk Space Total: 5000 GB Available: 391 GB Used: 4609 GB
+#            Free inodes: 10983954
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+                                    ZeBu (R)
+                                libHWAccess 64b
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# "libHWAccess 64b" 
+
+# start time is Sun Jul  6 14:28:13 2025
+
+
+
+
+# Build Date : Oct  8 2023 - 20:42:53
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.02 0.40 0.34 1/286 3460576
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 120596 MB
+#            Swap space: 258047 MB Free Swap space: 258027 MB
+#            VmSize: 375 MB VmPeak: 375 MB
+# Disk Space Total: 5000 GB Available: 391 GB Used: 4609 GB
+#            Free inodes: 10983954
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_07_06-14_28_13.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_07_06-14_28_13.log -> zLicenseManager.vgzeburt492.0.log
+OptionsDB Info : DB ./options.db not available, loading the default values ..
+OptionsDB Warning : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info : Default value(false) overwritten with true for ztdb_rb_api
+
+                                    ZeBu (R)
+                                zLicenseManager
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /global/apps/zebu_2021.09-2/bin/zLicenseManager 3460528 17 6 
+
+# start time is Sun Jul  6 14:28:13 2025
+
+
+
+
+# Build Date : Oct  8 2023 - 20:39:37
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.02 0.40 0.34 1/287 3460627
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 120594 MB
+#            Swap space: 258047 MB Free Swap space: 258027 MB
+#            VmSize: 33 MB VmPeak: 33 MB
+# Disk Space Total: 5000 GB Available: 391 GB Used: 4609 GB
+#            Free inodes: 10983954
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+-- ZeBu : zServer : Evaluating the file "/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+-- ZeBu : zServer : Remapping requested by user :
+-- ZeBu : zServer :    U0.M0.S0 -> U0.M0.S3
+-- ZeBu : zServer : Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/profiler.vgzeburt492.rashour.2025_07_06-14_28_14.3460528.log -> profiler.vgzeburt492.0.log
+-- ZeBu : zServer : The PCIe connection through board 0 is free.
+
+-- ZeBu : zRci : Waiting for the server pid 3460528 to register the design.
+
+-- ZeBu : zServer :  
+-- ZeBu : zServer : Design loaded successfully.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+-- ZeBu : zRci : Parallel loading of the databases finished.
+#   step DICTIONARY : Loading chunk #1
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/1.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #1 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #2
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/2.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #2 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #3
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/3.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #3 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #4
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/4.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #4 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #6
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/6.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #6 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #7
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/7.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #7 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #8
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/8.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #8 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #9
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/9.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #9 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #10
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/10.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #10 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #11
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/11.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #11 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #13
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/13.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #13 loaded. Added 65536 names.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+-- ZeBu : zRci : Setting up driver for managing cycle to time conversions.
+-- ZeBu : zRci : Memory Opt Abstraction Manager: Mapping file (/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/memoryOptAbstractionInfo.lst) not found
+-- ZeBu : [1;34mzRci: [2;32mWARNING : app_var load_rb_selection_file_immediate was not set so selection was not loaded during initialization. It will be load upon enabling a readback dump.[0m
+-- ZeBu : zRci : Registering of user's close callback (0) : e9ed0
+-- ZeBu : [1;34mzRci: [2;32mWARNING : Invalid default_clock detected. Setting it automatically to `both tickClk`.[0m
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_0.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_0.zrdb' index (#5187 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_1.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_1.zrdb' index (#5188 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_2.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_2.zrdb' index (#5139 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_3.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_3.zrdb' index (#5227 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_4.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_4.zrdb' index (#5194 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_5.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_5.zrdb' index (#5148 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_6.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_6.zrdb' index (#5160 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_7.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_7.zrdb' index (#5175 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step COORDS : Opening coordinates database file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/coords.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/coords.zrdb' in read mode
+#   step COORDS : Coordinates database opened
+#   step COORDS : Loading size (1/3)
+#   step COORDS : Reading coordinates database header
+#   step COORDS : Coordinates database contains 2224813 entries
+#   step COORDS : Loading sizes (2/3)
+#   step COORDS : Reading coordinates database header (cont'd)
+#   step COORDS : Read coordinates database header complete (0 seconds)
+### warning in XTOR LOADING [ZXTOR0199W] : All transactor libraries already exist. ZEMI3 runtime will not build them again. 
+		Note that transactor libraries should be built using the same environment as the emulator hosts.
+		This can happen automatically with ZEMI3Manager::open() if user did not build them explicitly.
+		Please delete them and try again if you see spurious runtime failures.
+
+
+                                    ZeBu (R)
+                                libZebuZEMI3.so
+
+                Version S-2021.09-2 for linux64 - Oct 09, 2023 
+
+                    Copyright (c) 2002 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# libZebuZEMI3.so 
+
+# start time is Sun Jul  6 14:28:23 2025
+
+
+
+
+# Build Date : Oct  8 2023 - 20:41:08
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.02 0.40 0.34 1/280 3460519
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 120277 MB
+#            Swap space: 258047 MB Free Swap space: 258027 MB
+#            VmSize: 1788 MB VmPeak: 1788 MB
+# Disk Space Total: 5000 GB Available: 391 GB Used: 4609 GB
+#            Free inodes: 10983952
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+-- ZeBu : zRci : ClockLoop: Connecting clock loop tasks generic xtor
+-- ZeBu : zRci : ClockLoop: There was no clock loop mapping file (/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/clkLoopMap.lst)
+-- ZeBu : zRci : Memory Opt Abstraction: Mapping file (/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/memoryOptAbstractionInfo.lst) not found
+-- ZeBu : zRci : 141 xTor ports have been connected (58 HW -> SW, 83 SW -> HW).
+
+-- ZeBu : zServer : The design has been compiled without any delay insertion.
+-- ZeBu : zServer : The driverClk frequency is 5.555 MHz due to "zTime" constraints.
+-- ZeBu : zServer : zClockSkew is not used.
+-- ZeBu : zServer : zClockFilter is not used.
+-- ZeBu : zRci : The board is initialized,    elapsed:0.12 s      user:0 s    system:0.1 s       %cpu:0.00       load:0.09 pid(3460517), vmem(1802 m)   pid(3460517), vmem(1802 m) 
+#TB : Register JTAG Transactor...0xa3e5550
+#TB : Register AXI MASTER Transactor...0xa3e5550
+#TB : Register AXI SLAVE Transactor...0xa3e5550
+register done
+ 1 instance found for xtor_jtag_t32_svs Transactor
+ |__  xtor_jtag_t32_svs -> [xtor_t32Jtag_svs] zebu_top.i_t32Jtag_driver
+INFO    : zebu_top.i_t32Jtag_driver [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_t32Jtag_svs" detected.
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+INFO    : PATH [xtor_jtag_t32_svs]  Transactor Version : UnknownVersion
+INFO    : PATH [xtor_jtag_t32_svs]  Setting dbg lvl    : 00000001
+DEBUG   : PATH [xtor_jtag_t32_svs] JTAG probe selected.
+Connecting to ZeBu (S-2021.09-2) licensing server...
+-- ZeBu : zRci : Connecting to License Manager localhost at 127.0.0.1.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+
+________________________________________________________________
+            Copyright (c) 2005-2023, Synopsys, Inc.
+                 TRACE32 JTAG Transactor Server
+               Version: S.2023.03 for linux64 bit
+                    date : Thu 30 3 2023 - 07:35:02
+
+
+DEBUG1  : PATH [xtor_jtag_t32_svs] Creating JTAG TAP probe started.
+ 1 instance found for xtor_jtagtap_svs Transactor
+ |__  xtor_jtagtap_svs -> [xtor_t32Jtag_svs] zebu_top.i_t32Jtag_driver
+INFO    : zebu_top.i_t32Jtag_driver [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_t32Jtag_svs" detected.
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Transactor Version : UnknownVersion
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Setting dbg lvl    : 00000001
+DEBUG1  : PATH [xtor_jtag_t32_svs] Creating JTAG TAP probe done.
+ 1 instance found for xtor_amba_master_svs Transactor
+ |__  xtor_amba_master_svs -> [xtor_amba_master_axi3_svs] zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i
+creating instance for the master here
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_amba_master_axi3_svs" detected.
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] AMBA_MASTER_MODE   = AXI3
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] DATA_WIDTH         = 512 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ADDR_WIDTH         = 32 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ID_W_WIDTH         = 4 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ID_R_WIDTH         = 4 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] INTERLEAVE_DEPTH   = 1 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_REQ_WIDTH     = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_DATA_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_RESP_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] IS_HAPS            = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.wr_data_schd.gen_wdata_fifo[0].swtohw_W
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] Received configuration :: AMBA_MASTER_MODE = AXI3  , DATA_WIDTH = 512, ADDR_WIDTH = 32, ID_WIDTH = 4, BLEN_WIDTH = 4, USER_WIDTH = 0, SNOOP_ADDR_WIDTH = 0, SNOOP_DATA_WIDTH = 0 , IS_HAPS = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.swtohw_AW
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.swtohw_AR
+ 1 instance found for xtor_amba_slave_svs Transactor
+ |__  xtor_amba_slave_svs -> [xtor_amba_slave_axi3_svs] zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor
+creating instance for the slave here
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_amba_slave_axi3_svs" detected.
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [xtor_amba_slave_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [xtor_amba_slave_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [xtor_amba_slave_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [xtor_amba_slave_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] Configuration loaded from Hardware
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] AMBA_MODE          = AXI3 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] DATA_WIDTH         = 64 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] STROBE_WIDTH       = 8 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] ADDR_WIDTH         = 24 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] ID_WIDTH           = 16 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] BLEN_WIDTH         = 4 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] INTERLEAVE_DEPTH   = 8 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] IS_HAPS            = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] ID_W_WIDTH         = 16 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] ID_R_WIDTH         = 16 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] USER_REQ_WIDTH     = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] USER_DATA_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] USER_RESP_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] SID_WIDTH          = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] SSID_WIDTH         = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[0].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[1].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[2].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[3].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[4].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[5].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[6].swtohw_R
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.read_data_schd.gen_rdata_fifo[7].swtohw_R
+Connecting to ZeBu (S-2021.09-2) licensing server...
+-- ZeBu : zRci : Connecting to License Manager localhost at 127.0.0.1.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+
+________________________________________________________________
+            Copyright (c) 2005-2023, Synopsys, Inc.
+                      xtor_amba_slave_svs
+               Version: S.2023.03 for linux64 bit
+                    date : Thu 30 3 2023 - 06:58:00
+
+
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.slave_reset_and_clock_i
+DEBUG   : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.swtohw_BRESP
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave]  Transactor Version : UnknownVersion
+INFO    : zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor [amba_slave]  Setting dbg lvl    : 00000000
+Found - Drivers [(null)][?driverName?] ...
+getxtor done
+xtorinit done
+INFO    : PATH [xtor_jtag_t32_svs]  Transactor Version : UnknownVersion
+INFO    : PATH [xtor_jtag_t32_svs]  Setting dbg lvl    : 00000000
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Transactor Version : UnknownVersion
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Setting dbg lvl    : 00000000
+DEBUG   : PATH [xtor_jtag_t32_svs]  Debug level updated to 0
+[RDMA] Opening a remote DMA server at port 20013
+[RDMA] Waiting for a new client...
+-- ZeBu : [1;34mzRci: [0mInitialization successful!
+run-lldbac --disable-ext-check -c "connect=jtag-zebu-svs jtag_device=localhost:20010 jtag_cpuclk_tck_ratio=5" --postconnect "command source init_mem.cmd" -p " PID.out " -o "c" --batch 2>@1
+>>> Info: start dumping waves
+-- ZeBu : zRci : Slicing parameters:	Using size-slicing mode
+-- ZeBu : zRci : Slicing parameters:	Input slice size: 5000 MiB
+-- ZeBu : zRci : Slicing parameters:	Using size-slicing mode
+-- ZeBu : zRci : Slicing parameters:	Input slice size: 5000 MiB
+-- ZeBu : zRci : WARNING : FastWaveformCapture::SelectSamplingClock(s) may not be called explicitly
+			when design was compiled with delays (rtl clocks enabled).
+			Timestamps will be automatically used for sampling. Ignoring user provided clock.
+>>> Info: applying reset
+>>> Info: force_sig begin:
+>>> Info: force_sig end
+>>> wait_for: start_cycle=0, timeout=-1, args=20
+>>> Info: force_sig begin:
+>>> Info: force_sig end
+DEBUG   : zebu_top.i_t32Jtag_driver [jtag_tap] XTOR_JTAG_TAP_SVS :: Hardware Reset Change detect
+DEBUG   : zebu_top.i_t32Jtag_driver [jtag_tap] XTOR_JTAG_TAP_SVS :: Hardware moving out of reset state.
+VJTAG [DEBUG] : HW reset change detected!
+; 
+VJTAG [DEBUG] : HW moving out of Reset state. Connect the debugger now.
+server started 
+[xtor_jtag_t32_svs] :startServer :: JTAG thread spawned  
+
+VJTAG [INFO] : JTAGXTOR Daemon waiting for connection of client socket port : 20010
+>>> Info: mdb launched successfully, PID is 3460923
+mdb: (lldbac) platform connect '[{"connect": "jtag-zebu-svs", "connect-props": ["jtag_device=localhost:20010", "jtag_cpuclk_tck_ratio=5"], "postconnect": ["command source init_mem.cmd"], "name": "core0"}]'
+mdb:   Platform: board
+mdb:     Triple: arc-unknown-unknown
+mdb:   Hostname: (null)
+mdb:  Connected: yes
+mdb: (lldbac) launch-with-properties '[{"program": "PID.out", "core": "core0"}]'
+mdb: 
+mdb: ________________________________________________________________
+mdb:             Copyright (c) 2005-2023, Synopsys, Inc.
+mdb:                         Jtag transactor
+mdb:                Version: S.2023.03 for linux64 bit
+mdb:                     date : Thu 30 3 2023 - 07:05:48
+mdb: 
+mdb: 
+mdb: 
+mdb: [INFO ZEBU_JTAG_DLL] value of ZEBU_JTAG_PORT variable is: 20010
+mdb: [INFO ZEBU_JTAG_DLL] ZEBU_SOCKET_PORT : Remote socket set to user value : 20010
+mdb: [INFO ZEBU_JTAG_DLL] Value of ZEBU_JTAG_IP is : localhost
+mdb: [INFO ZEBU_JTAG_DLL] Successful connection to server (localhost@20010)
+mdb: 
+mdb: [JTAG] INFO: Initial CPUCLK / TCK ratio: 4
+mdb: 
+mdb: ________________________________________________________________
+mdb:             Copyright (c) 2005-2023, Synopsys, Inc.
+mdb:                         Jtag transactor
+mdb:                Version: S.2023.03 for linux64 bit
+mdb:                     date : Thu 30 3 2023 - 07:05:48
+mdb: 
+mdb: 
+mdb: 
+mdb: [INFO ZEBU_JTAG_DLL] value of ZEBU_JTAG_PORT variable is: 20010
+mdb: [INFO ZEBU_JTAG_DLL] ZEBU_SOCKET_PORT : Remote socket set to user value : 20010
+mdb: [INFO ZEBU_JTAG_DLL] Value of ZEBU_JTAG_IP is : localhost
+mdb: [INFO ZEBU_JTAG_DLL] Successful connection to server (localhost@20010)
+mdb: 
+mdb: [JTAG] INFO: New CPUCLK / TCK ratio: 5
+
+VJTAG [INFO] : JTAGXTOR server: got connection from 127.0.0.1
+VJTAG [WARN] : JTAGXTOR : : Client disconnected... waiting new Client!
+
+VJTAG [INFO] : JTAGXTOR Daemon waiting for connection of client socket port : 20010
+
+VJTAG [INFO] : JTAGXTOR server: got connection from 127.0.0.1
+mdb: [JTAG] INFO: Found 1 TAPs in the JTAG chain:
+mdb: [JTAG] INFO: 0   -> 0x300104b1 (DTM TAP)
+mdb: Executing commands in '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/init_mem.cmd'.
+mdb: (lldbac) mem write -l 262144 1048576*0 0
+mdb: (lldbac) mem write -l 262144 1048576*2048 0
+mdb: (lldbac) expr $bank_reg(0x1, 0x7B0)
+mdb: (unsigned long long) $2 = 1073778691
+mdb: (lldbac) expr $put_bank_reg(0x1, 0x7B0, (0x8000 | $bank_reg(0x1, 0x7B0)))
+mdb: (lldbac) expr -f h -- $bank_reg(0x1, 0x7B0)
+mdb: (unsigned long long) $3 = 0x0000000040009003
+mdb: (lldbac) reg read dcsr
+mdb:     dcsr = 0x40009003
+mdb: (lldbac) c
+mdb: rdtime() overhead: 1 cycles
+mdb: Simulating PID control to reach setpoint 10.0
+mdb: Control=20.5, Measurement=0
+mdb: The Begin Time is: 2122418
+mdb: The End Time is: 2131000
+mdb: The Elapsed Time is: 8580
+mdb: EXIT: Stopping the process instead of terminating the debugger, by retcode=0 because plugin.compatibility.mdb.semihosting.exit setting is false and debugger is not in silent mode
+mdb: Process 1 resuming
+mdb: Process 1 stopped
+mdb: * thread #1, stop reason = Unknown software breakpoint!
+mdb:     frame #0: 0x0000e998 PID.out`sys_semihost + 8
+mdb: PID.out`sys_semihost:
+mdb: ->  0xe998 <+8>:  srai   zero, zero, 7
+mdb:     0xe99c <+12>: ret    
+mdb: 
+mdb: PID.out`_mwmutex_create:
+mdb:     0xe9a0 <+0>:  ret    
+mdb: 
+mdb: PID.out`_mwmutex_delete:
+mdb:     0xe9a4 <+0>:  ret
+mdb: (lldbac) process status
+mdb: Process 1 stopped
+mdb: * thread #1, stop reason = Unknown software breakpoint!
+mdb:     frame #0: 0x0000e998 PID.out`sys_semihost + 8
+mdb: PID.out`sys_semihost:
+mdb: ->  0xe998 <+8>:  srai   zero, zero, 7
+mdb:     0xe99c <+12>: ret    
+mdb: 
+mdb: PID.out`_mwmutex_create:
+mdb:     0xe9a0 <+0>:  ret    
+mdb: 
+mdb: PID.out`_mwmutex_delete:
+mdb:     0xe9a4 <+0>:  ret    
+>>> Info: mdb terminated
+VJTAG [WARN] : JTAGXTOR : : Client disconnected... waiting new Client!
+>>> Info: stop dumping waves
+Ending testbench
+server closed 
+[xtor_jtag_t32_svs] :startServer :: JTAG thread has been terminated  
+VJTAG [WARN] : JTAGXTOR : : Client disconnected... waiting new Client!
+Exit JTAG loop
+Ending JTAG Threads
+[RDMA] Terminating the RDMA thread
+[RDMA] Failed to accept the client connection: Cancelled
+[RDMA] RDMA loop finished
+[RDMA] The RDMA thread was terminated
+JTAG deleted
+-- ZeBu : zRci : Execution of user's close callback (0) : e9ed0
+
+#   info : ZEMI3 Manager Statistics:
+
+		Number of transactors                   :            5
+		Number of threads managed               :            3
+		Total time in manager                   :     2264.356 s
+		Number of iterations in service thread  :            0
+		Number of singleLoop calls              :            0
+
+Statistics on transactor service loops:
+	zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher   (rl_ifu_fetcher           )         0 calls
+	zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher (rl_ifu_fetcher           )         0 calls
+	zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                                    (xtor_amba_master_axi3_svs)  1351723927 calls
+	zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                                    (xtor_amba_slave_axi3_svs )  1671023137 calls
+	zebu_top.i_t32Jtag_driver                                                                                                        (xtor_t32Jtag_svs         )  3970336221 calls
+
+
+Statistics on import and export calls:
+	import ZEBU_VS_SNPS_UDPI__clkTick                   (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__unlockSw                  (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__rst_deassert              (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            1
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            5 (  5.000 per call)
+	import ZEBU_VS_SNPS_UDPI__rst_assert                (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__BuildSerialNumber         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            1
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            7 (  7.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__wrDataFifo          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__wrAddrFifo          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__rdAddrFifo          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__read_resp           (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__nostream_read_resp  (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__write_resp          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_dpi__nostream_write_resp (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_error__notifier          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_error__notifier          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_error__notifier          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_error__notifier          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_MASTER_error__notifier          (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	export ZEBU_VS_AMBA_MASTER_dpi__getconfig           (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :           13 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_MASTER_dpi__driveRready         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_MASTER_dpi__driveBready         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_MASTER_dpi__setparam            (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_MASTER_dpi__getResetStatus      (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21289                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21288                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21290.sqnod1819                                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__waitResetComplete         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__runClk_sw                 (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__resetDetectEnable         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__getClkCount               (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod         (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__setTickPeriod             (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                ) (zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21291                                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	import ZEBU_VS_SNPS_UDPI__clkTick                   (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__unlockSw                  (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__rst_deassert              (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            1
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            5 (  5.000 per call)
+	import ZEBU_VS_SNPS_UDPI__rst_assert                (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_SNPS_UDPI__BuildSerialNumber         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            1
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            8 (  8.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_dpi__write_fifo           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_dpi__read_fifo            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_error__notifier           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_error__notifier           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_error__notifier           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_dpi__read_addr            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_dpi__write_data           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	import ZEBU_VS_AMBA_SLAVE_dpi__write_addr           (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            0 (  0.000 per call)
+	export ZEBU_VS_AMBA_SLAVE_dpi__getconfig            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :           15 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_SLAVE_dpi__driveARready         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_SLAVE_dpi__driveAWready         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_SLAVE_dpi__driveWready          (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_SLAVE_dpi__setparam             (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_AMBA_SLAVE_dpi__getResetStatus       (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                                          )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__waitResetComplete         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__runClk_sw                 (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__resetDetectEnable         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__getClkCount               (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod         (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__setTickPeriod             (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12752                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12753                               )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1439                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1440                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1441                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1442                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1443                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1444                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1445                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export ZEBU_VS_SNPS_UDPI__fromSwtoHwData            (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor) (zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod1446                     )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	import zebu_jtag_xtor__output_reset_message         (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            1
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for rx            :            7 (  7.000 per call)
+	export zebu_jtag_xtor__get_config                   (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__set_signals                  (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__force_trst                   (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__hard_reset                   (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__send_and_receive             (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :       199736
+		Words (32-bit) from hardware            :       399472 (  0.005 Mb/s)
+		Cycles waited in ZeBu for tx            :       199736 (  1.000 per call)
+		Words (32-bit) to hardware              :       998680 (  0.013 Mb/s)
+	export zebu_jtag_xtor__run                          (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :         1041
+		Words (32-bit) to hardware              :         1041 (  0.000 Mb/s)
+	export zebu_jtag_xtor__runUntilReset                (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            1
+		Words (32-bit) from hardware            :            1 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            1 (  1.000 per call)
+		Words (32-bit) to hardware              :            1 (  0.000 Mb/s)
+	export ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw       (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__config                       (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            3
+		Words (32-bit) to hardware              :            6 (  0.000 Mb/s)
+	export zebu_jtag_xtor__get_cycles                   (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__get_signals                  (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+	export zebu_jtag_xtor__is_reset_active              (zebu_top.i_t32Jtag_driver                                                    ) (zebu_top.i_t32Jtag_driver                                                                                              )
+		Number of loops                         :            0
+		Number of calls                         :            0
+		Words (32-bit) from hardware            :            0 (  0.000 Mb/s)
+		Cycles waited in ZeBu for tx            :            0 (  0.000 per call)
+		Words (32-bit) to hardware              :            0 (  0.000 Mb/s)
+
+-- ZeBu : zRci : Elapsed time waiting for resources     : 3 s
+-- ZeBu : zRci : Elapsed time for initialization        : 9 s
+-- ZeBu : zRci : Elapsed time for emulation             : 2266 s
+-- ZeBu : zRci : Total elapsed time                     : 2278 s
+
+
+-- ZeBu : zServer : End of run :
+-- ZeBu : zServer : zebu_top.zebuclk_ref_clk.clock edge counter 167464749.
+-- ZeBu : zServer : zebu_top.zebuclk_jtag_clk.clock edge counter 167464749.
+-- ZeBu : zServer : zebu_top.zebuclk_uart_sclk.clock edge counter 167464749.
+-- ZeBu : zServer : Unit 0 masterClk cycle counter : 113,283,330,720 (0x1a603672a0)
+-- ZeBu : zServer : Unit 0 driverClk cycle counter : 171,521,168 (0x0a393490)
+-- ZeBu : zServer : Unit 0 driverClkDut cycle counter : 171,521,168 (0x0a393490)
+-- ZeBu : zServer : Unit 0 tickClk edge counter : 167,464,750 (0x09fb4f2e)
+-- ZeBu : zServer : Unit 0 globalTime counter : 83,732,374,999 (0x137ed6a5d7)
+
+
+-- ZeBu : zRci : Waiting for zServer (3460528) to stop...
+
+
+-- ZeBu : zServer : Server closed correctly.
+-- ZeBu : zRci : zServer pid 3460528 finished with exit code 0.
+#   step EQUI DB : Closing equi db files
+#   step EQUI DB : Equi db files closed
+#   step DB CLOSE : Closing property db
+#   step DB CLOSE : Closing tree
+#   step DB : Closing database
+#   step ZTREEDB : Closing auxillary signal databases
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_0.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_1.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_2.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_3.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_4.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_5.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_6.zrdb' closed
+#   step DB : Database '/remote/sdgedt/tools/reem/train/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_7.zrdb' closed
+#   step ZTREEDB : Closed auxillary signal databases : 0 seconds
+#   step ZTREEDB : Freeing allocated memory
+#   step MEMS : Closed memories database
+#   step COORDS : Closed coordinates database
+#   step ZTREEDB : Freed allocated memory : 1 seconds
+#   step DB : Closed database : 1 seconds
+#   step DB CLOSE : Closing Zebu database
+#   step DB : Closed ZebuDB
+########################### zRci_cleanup done ##########################
+-- ZeBu : [1;34mzRci: [0mzRci finished

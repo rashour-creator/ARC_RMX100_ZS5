@@ -1,0 +1,54 @@
+disable defmapping_error_check
+cluster_generated -part_name U0_M0_F00 -lut 46026 -reg 45251 -dsp 13000 -ramlut 1 -cut 46
+cluster_generated -part_name U0_M0_F01 -lut 291926 -bram 79 -reg 210965 -dsp 6984 -ramlut 3 -cut 46
+defmapping {zebu_top} U0_M0_F01
+defmapping {zebu_top.sqnod_core0_pc[10]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[11]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[12]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[13]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[14]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[15]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[16]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[17]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[18]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[19]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[1]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[20]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[21]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[22]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[23]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[24]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[25]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[26]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[27]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[28]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[29]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[2]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[30]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[31]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[3]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[4]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[5]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[6]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[7]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[8]} U0_M0_F00
+defmapping {zebu_top.sqnod_core0_pc[9]} U0_M0_F00
+defmapping {zebu_top.trigger_pc} U0_M0_F00
+defmapping {zebu_top.ts_runman_0} U0_M0_F00
+defmapping {zebu_top.ts_runman_1} U0_M0_F00
+defmapping {zebu_top.ts_runman_2} U0_M0_F00
+defmapping {zebu_top.ts_runman_3} U0_M0_F00
+defmapping {zebu_top.ts_runman_4} U0_M0_F00
+defmapping {zebu_top.ts_runman_5} U0_M0_F00
+defmapping {zebu_top.ts_runman_6} U0_M0_F00
+defmapping {zebu_top.ts_runman_7} U0_M0_F00
+defmapping {zebu_top.ts_runman_8} U0_M0_F00
+defmapping {zebu_top.zebu_clockGen} U0_M0_F00
+defmapping {zebu_top.zebu_dummy_fetch_reg} U0_M0_F00
+defmapping {zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932} U0_M0_F00
+defmapping {zebu_top.zebu_orion_tickClk_inst} U0_M0_F00
+defmapping {zebu_top.zebu_time_capture} U0_M0_F00
+defmapping {zebu_top.zebuclk_jtag_clk} U0_M0_F00
+defmapping {zebu_top.zebuclk_ref_clk} U0_M0_F00
+defmapping {zebu_top.zebuclk_uart_sclk} U0_M0_F00
+defmapping -mem_type DRAM  {zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r} U0_M0_F1

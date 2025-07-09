@@ -1,0 +1,83 @@
+Module rl_ifu_icache_rf{
+}
+
+EdfPortBounds zceiMessageOutPort_4096{
+4095 0 message
+}
+EdfPortBounds zemi3OutPortBuffer_169_4096_24{
+23 0 message0
+4095 0 msg_out
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_2_1{
+1 0 signal
+1 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds zceiMessageOutPort_128{
+127 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_gdelay{
+23 0 out
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds zceiMessageInPort_2{
+1 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_24_1{
+23 0 signal
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds zebu_bb_ts_cur_time{
+63 0 ts_time
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+NonAliasNets rl_ifu_icache_rf{
+rf_prefetch_victim_way    f   510
+rf_rd_data_r[31]    f   511
+rf_rd_data_r[30]    f   512
+rf_rd_data_r[29]    f   513
+rf_rd_data_r[28]    f   514
+rf_rd_data_r[27]    f   515
+rf_rd_data_r[26]    f   516
+rf_rd_data_r[25]    f   517
+rf_rd_data_r[24]    f   518
+rf_rd_data_r[23]    f   519
+rf_rd_data_r[22]    f   520
+rf_rd_data_r[21]    f   521
+rf_rd_data_r[20]    f   522
+rf_rd_data_r[19]    f   523
+rf_rd_data_r[18]    f   524
+rf_rd_data_r[17]    f   525
+rf_rd_data_r[16]    f   526
+rf_rd_data_r[15]    f   527
+rf_rd_data_r[14]    f   528
+rf_rd_data_r[13]    f   529
+rf_rd_data_r[12]    f   530
+rf_rd_data_r[11]    f   531
+rf_rd_data_r[10]    f   532
+rf_rd_data_r[9]    f   533
+rf_rd_data_r[8]    f   534
+rf_rd_data_r[7]    f   535
+rf_rd_data_r[6]    f   536
+rf_rd_data_r[5]    f   537
+rf_rd_data_r[4]    f   538
+rf_rd_data_r[3]    f   539
+rf_rd_data_r[2]    f   540
+rf_rd_data_r[1]    f   541
+rf_rd_data_r[0]    f   542
+rf_rd_err_r    f   543
+rf_rd_last_r    f   544
+rf_rd_valid_r    f   545
+}

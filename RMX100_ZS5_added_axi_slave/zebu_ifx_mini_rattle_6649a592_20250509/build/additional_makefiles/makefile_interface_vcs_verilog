@@ -1,0 +1,95 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+#############################################################################
+#
+# This included makefile generates a file containing appropriate command-line
+# arguments for the simulator.  If required, it will also include Synopsys
+# DesignWare components.
+#
+#############################################################################
+
+SIMULATOR_DIR_PREFIX=vcs_
+
+# Analyse command
+ANALYZE = arc_vcs_wrapper
+ANALYZE_FLAGS =  -f vcs_commandline_args -deraceclockdata -debug_access+all -debug_region+cell+encrypt \
+		-o $(*F).simv
+ANALYZE_INCLUDE_DIR_SWITCH = -ignore-next-argument ""
+
+ELABORATE = $(WRITE)                          # dummy command
+ELABORATE_FLAGS = 
+
+REPORT_WARNINGS = $(GREP) -i "warning"
+
+VCS_COMMANDLINE_OPTIONS_FILE = vcs_commandline_args
+# The above is way too long; so here's shorthand:
+VCOF=$(VCS_COMMANDLINE_OPTIONS_FILE)
+PLI_EDIT_SCRIPT = scripts/modify_pli_for_vcs
+UPF_EDIT_SCRIPT = scripts/modify_upf_for_vcs
+
+ifneq ("$(wildcard $(CURDIR)/sim_ver)","")
+LSV_FILES := $(wildcard $(CURDIR)/sim_ver/*.v)
+$(shell echo "$(LSV_FILES)" > $(CURDIR)/sim_ver/manifest)
+LOCAL_SIMVER = +incdir+$(CURDIR)/sim_ver -y $(CURDIR)/sim_ver -f $(CURDIR)/sim_ver/manifest
+else
+LSV_FILES =
+LOCAL_SIMVER =
+endif
+
+# Permit ralf files in verilog/RTL only (not in testbench, or subdirs of RTL)
+ABS_SRC := $(realpath $(SRC))
+
+################################################################################
+# Rules for initiating and configuring Synopsys VCS use for this particular
+# build of an ARC.
+#
+
+install: ralf_targets
+	-@$(MESSAGE) "Generating command-line options file for VCS..."
+	@ensure_presence_of vcs
+	@$(COPY_FILE) "${ARCHITECT_ROOT}/lib/gnu_fileio_vcs_pli_table" "scripts/gnu_fileio_vcs_pli_table"
+	mkdir -p ./pli	
+	@$(COPY_FILE) "${ARCHITECT_ROOT}/lib/linux/libarc-vcs-hmsl-pli-verilog.so" "pli/libarc-vcs-hmsl-pli-verilog.so"
+	@$(WRITE) "+v2k"                                      >  $(VCOF)
+	@$(WRITE) "+define+RTL_PIPEMON=1"                     >  $(VCOF)
+	@$(WRITE) "+libext+.v+"                               >> $(VCOF)
+	@$(WRITE) "-debug_access+r+w -debug_region+cell+encrypt" >> $(VCOF)
+	@$(WRITE) "+vcs+lic+wait"                             >> $(VCOF)
+	@$(WRITE) "+lint=TFIPC-L"                             >> $(VCOF)
+	@$(WRITE) "+warn=noCONFLICTING_ISO_POL"               >> $(VCOF)
+	@$(WRITE) "+incdir+$(USER_SOURCE_PATH)+"              >> $(VCOF)
+	@$(WRITE) "-y $(USER_SOURCE_PATH)"                    >> $(VCOF)
+ifneq ("$(wildcard $(CURDIR)/sim_ver)","")
+	-@$(MESSAGE) "Adding local DesignWare simulation libraries..."
+	@$(WRITE) "+incdir+$(CURDIR)/sim_ver+" >> $(VCOF)
+	@$(WRITE) "-y $(CURDIR)/sim_ver"       >> $(VCOF)
+endif
+
+   
+	
+
+ralf_targets: 
+
+
+designware_libraries:
+	-@$(MESSAGE) "Adding DesignWare components to VCS command-line options file..."
+	@ensure_presence_of synopsys-designware-components
+	@$(WRITE) "+incdir+${SYNOPSYS}/dw/sim_ver+" >> $(VCOF)
+	@$(WRITE) "-y ${SYNOPSYS}/dw/sim_ver"       >> $(VCOF)
+
+fpga_ram_models:
+	-@$(MESSAGE) "Adding FPGA behavioural RAM models to VCS command-line options file..."
+	-f xilinx_models
+
+enable_rascal:
+
+enable_numericstdnowarnings:
+
+################################################################################

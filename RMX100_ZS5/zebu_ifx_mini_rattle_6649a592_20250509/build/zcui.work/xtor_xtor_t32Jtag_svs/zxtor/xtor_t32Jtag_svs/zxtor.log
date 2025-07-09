@@ -1,0 +1,150 @@
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADETF] Analysing DPI exported task/function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-ADIF] Analysing DPI imported function
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Note-[ZEMI-PDEF] 
+  Processing DPI exported functions
+
+Note-[ZEMI-PDIF] 
+  Processing DPI imported functions
+
+DPI exports summary:
+    +----------------------------------------+----------+---------+----------+----------+-----------+
+    | name                                   |     type | in bits | out bits | protocol | streaming |
+    +----------------------------------------+----------+---------+----------+----------+-----------+
+    | zebu_jtag_xtor__get_config             |     task |       0 |       64 |       -- |        No |
+    | zebu_jtag_xtor__set_signals            |     task |      64 |        0 |       -- |       Yes |
+    | zebu_jtag_xtor__force_trst             |     task |       0 |        0 |       -- |       Yes |
+    | zebu_jtag_xtor__hard_reset             |     task |       0 |        0 |       -- |       Yes |
+    | zebu_jtag_xtor__send_and_receive       |     task |     160 |       64 |       -- |        No |
+    | zebu_jtag_xtor__run                    |     task |      32 |        0 |       -- |       Yes |
+    | zebu_jtag_xtor__runUntilReset          |     task |       0 |        0 |       -- |        No |
+    | ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw |     task |      32 |        0 |       -- |        No |
+    | zebu_jtag_xtor__config                 | function |      35 |        0 |       -- |       Yes |
+    | zebu_jtag_xtor__get_cycles             | function |       0 |       64 |       -- |        No |
+    | zebu_jtag_xtor__get_signals            | function |       0 |        8 |       -- |        No |
+    | zebu_jtag_xtor__is_reset_active        | function |       0 |       33 |       -- |        No |
+    +----------------------------------------+----------+---------+----------+----------+-----------+
+
+
+DPI imports summary:
+    +--------------------------------------+----------+---------+----------+---------+----------+-----------+--------------+
+    | name                                 |     type | in bits | out bits | context | protocol | streaming | prefetchable |
+    +--------------------------------------+----------+---------+----------+---------+----------+-----------+--------------+
+    | zebu_jtag_xtor__output_reset_message | function |       2 |        1 |     Yes |       -- |        No |           No |
+    +--------------------------------------+----------+---------+----------+---------+----------+-----------+--------------+
+
+
+Message Ports Summary:
+    +------------------------------------------------------------------+------+--------+-------+---------+
+    | name                                                             | type |   size | count | sharing |
+    +------------------------------------------------------------------+------+--------+-------+---------+
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_config_in_port              |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_config_out_port             |  out |     64 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__set_signals_in_port             |   in |     64 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__force_trst_in_port              |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__hard_reset_in_port              |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__send_and_receive_in_port        |   in |    160 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__send_and_receive_out_port       |  out |     64 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__run_in_port                     |   in |     32 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__runUntilReset_in_port           |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__runUntilReset_out_port          |  out |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_in_port  |   in |     32 |     1 |      no |
+    | xtor_t32Jtag_svs.ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_out_port |  out |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__config_in_port                  |   in |     35 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_cycles_in_port              |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_cycles_out_port             |  out |     64 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_signals_in_port             |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__get_signals_out_port            |  out |      8 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__is_reset_active_in_port         |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__is_reset_active_out_port        |  out |     33 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__output_reset_message_in_port    |   in |      1 |     1 |      no |
+    | xtor_t32Jtag_svs.zebu_jtag_xtor__output_reset_message_out_port   |  out |      2 |     1 |      no |
+    | xtor_t32Jtag_svs.zemi_control_in_port                            |   in |      6 |     1 |      no |
+    | xtor_t32Jtag_svs.zemi_status_out_port                            |  out |      3 |     1 |      no |
+    +------------------------------------------------------------------+------+--------+-------+---------+
+
+    Total Message In Ports: 14 (337 bits)
+    Total Message Out Ports: 9 (240 bits)
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+
+
+Warning-[ZEMI-MBNB] Mix of blocking and non-blocking assignments
+/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v, 50
+

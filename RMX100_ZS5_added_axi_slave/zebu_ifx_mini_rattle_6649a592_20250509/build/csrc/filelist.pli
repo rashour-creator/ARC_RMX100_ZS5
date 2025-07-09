@@ -1,0 +1,6 @@
+PLI_STUB_OBJS_OBJ1=_vcs_pli_stub_.o
+PLI_STUB_OBJS_SRC1=_vcs_pli_stub_.c
+PLI_STUB_OBJS += $(PLI_STUB_OBJS_OBJ1)
+$(PLI_STUB_OBJS_OBJ1): $(PLI_STUB_OBJS_SRC1)
+	@$(CC) -I/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/include  -pipe -fPIC    -I/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/include  -fPIC -c -o $(PLI_STUB_OBJS_OBJ1) $(PLI_STUB_OBJS_SRC1)
+	@strip -g $(PLI_STUB_OBJS_OBJ1)

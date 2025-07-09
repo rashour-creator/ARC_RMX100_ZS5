@@ -1,0 +1,23 @@
+Module rl_csr{
+}
+Module rl_bitscan_32b{
+}
+
+EdfPortBounds rl_bitscan_32b{
+30 0 din
+4 0 dout
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0002{
+13 0 i_data
+64 0 i_occp
+13 0 o_data
+64 0 o_occp
+}
+NonAliasNets rl_csr{
+mnstatus_r[0]    f   1278
+arcv_mcache_op_r[24]    f   3802
+mcycle_r[0]    f   4016
+mnepc_r[0]    f   4181
+wid_rwiddeleg_r[63]    f   4338
+wid_rwiddeleg_r[31]    f   4370
+}

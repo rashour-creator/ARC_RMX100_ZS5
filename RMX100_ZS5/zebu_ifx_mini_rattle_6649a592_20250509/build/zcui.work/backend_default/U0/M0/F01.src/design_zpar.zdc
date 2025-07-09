@@ -1,0 +1,11 @@
+# Emulation Verification Engineering (c) - XDC generator
+# ------------------------------------------------------
+
+# zPar XDC dump -----------------------
+#xdc_addconst false_path
+set_false_path -quiet -to [get_pins -quiet -filter {REF_PIN_NAME==D} -of [get_cells -hier -filter {NAME=~*zview_*}]]
+set_false_path -quiet -from [get_pins -quiet -filter {REF_PIN_NAME==C} -of [get_cells -hier -filter {NAME=~*ztig_*}]]
+set_false_path -setup -quiet -through [get_nets  -hier -filter {TIG=="TRUE"}]
+set_false_path -setup -quiet -from    [get_cells -hier -filter {TIG=="TRUE"}]
+#xdc_addconst delay
+set_max_delay -datapath_only -from [get_pins -hierarchical {*zMem_multiport_FROM_clk_100*/Q}] -to [get_cells -hierarchical {*zMem_multiport_TO_clk_100*}] 20.0

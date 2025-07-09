@@ -1,0 +1,70 @@
+Job <80626200> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on odcgen-zebu-16cx240g-2417-084.vg.us01-odc.synopsys.com>>
+
+                                    ZeBu (R)
+                                  zTargetTools
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zTargetTools zTargetTools.tcl 
+
+# start time is Tue May 13 18:26:08 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:33:47
+# ---------------------------System Context--------------------------- 
+# Cpu        16 x bogomips - 5599.99 AMD EPYC 7543 32-Core Processor
+#            Load: 1.83 3.90 5.49 1/508 453559
+#            Hostname: odcgen-zebu-16cx240g-2417-084   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 241552 MB Free: 214230 MB
+#            Swap space: 52223 MB Free Swap space: 51734 MB
+#            VmSize: 88 MB VmPeak: 88 MB
+# Disk Space Total: 5000 GB Available: 555 GB Used: 4445 GB
+#            Free inodes: 11771551
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+OptionsDB Info : DB ./options.db not available, loading the default values ..
+OptionsDB Warning : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info : Default value(false) overwritten with true for ztdb_rb_api
+# Configuration used is:
+#   valid machines   : 
+#   created by       : tmorgand
+#   date             : Wed Dec  4 00:27:59 2024
+#   based on release : /fs/Release/daily_builds/zebu_nightly/linux64_TD/TD.241203/TD.241203
+#   platform type    : ZS5
+Loading basic configuration
+Loading ZS5 4 slots backplane configuration
+Loading 12 FPGAs module configuration (ref zs5_vup_12c_19_v2)
+#
+#  pos | name  | module
+# -----+-------+--------------------------
+#    0 | U0.M0 | zs5_vup_12c_19_v2 
+#    1 | U0.M1 | zs5_vup_12c_19_v2 
+#    2 | U0.M2 | zs5_vup_12c_19_v2 
+#    3 | U0.M3 | zs5_vup_12c_19_v2 
+#
+#   step TARGET INFO : Loading target informations from file '/remote/sdgzebu_system_dir/CONFIG/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl'
+#   step TARGET INFO : Driving target informations in file 'zTargetTools.xcui'
+command exit code is '0'

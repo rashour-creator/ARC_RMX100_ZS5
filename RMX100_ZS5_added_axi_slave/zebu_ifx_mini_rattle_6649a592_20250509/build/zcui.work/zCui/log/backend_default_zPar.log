@@ -1,0 +1,1054 @@
+Job <84735575> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on vgzeburtdc257.internal.synopsys.com>>
+#   step ARCHIVE : Creating archive file ./tools/zCui/zPar_archive.xcui
+
+                                    ZeBu (R)
+                                      zPar
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zPar zPar_zCui.tcl 
+
+# start time is Wed May 14 19:02:20 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:36:47
+# ---------------------------System Context--------------------------- 
+# Cpu        20 x bogomips - 4800.11 Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+#            Load: 3.05 3.47 4.52 6/915 810412
+#            Hostname: vgzeburtdc257   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 257566 MB Free: 202242 MB
+#            Swap space: 1023 MB Free Swap space: 0 MB
+#            VmSize: 294 MB VmPeak: 294 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11741139
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step OPTIONSDB : Started reading options db ./options.db
+#   step OPTIONSDB : Default value() overwritten with post_routing_basic for zopt
+#   step OPTIONSDB : Completed reading options db ./options.db
+### warning in OPTIONSDB [OPTDB01] : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+#   step OPTIONSDB : Default value(false) overwritten with true for ztdb_rb_api
+Commands for zPar from zCoreBuild, core: Part_0.
+### warning in TCL RETIREMENT [KPR1518W] : This command will be deprecated in the next major release after ZEBU20.03.
+Other commands for zPar.
+### warning in System [KPR1897W] : The medium routing effort command is renamed by default.
+
+
+################################################################
+# zPar STEP : Load the target configurations
+################################################################
+Loading zPar_target_conf.tcl for design zebu_top
+# Configuration used is:
+#   created by       : rashour
+#   based on release : /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   platform type    : zs5
+
+
+
+
+################################################################
+# zPar STEP : Load the design configurations
+################################################################
+Loading configuration for design zebu_top
+Design configuration for zPar from zCoreBuild, core: Part_0.
+Loading configuration for design zebu_top
+# no bufg propag for zceiClockPort clocks
+# FK related routing directives
+################################################################
+# zPar STEP : Loading 1 UCF constraints       
+################################################################
+
+
+
+
+################################################################
+# zPar STEP : Load DVE parameters
+################################################################
+
+
+################################################################
+# zPar STEP : Loading extra commands file ../utf_generatefiles/zPar_config.tcl      
+################################################################
+################################################################
+# zPar STEP : Merge the data base
+################################################################
+#   step Merge : Starting
+#   step MERGING CORES : Start cores merging
+#   step loadDB : Starting
+#   step ZNF PARSER : reading netlist from ZNF file 'edif/zebu_top.edf.gz'
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step ZNF PARSER : reading netlist from ZNF file 'work.Part_0/edif/zebu_top.edf.gz'
+#   step ZNF PARSER : reading netlist from ZNF file 'work.Part_0/edif/U0_M0.edf.gz'
+#   step SERIALIZE : writing netlist 'gmerge' into znl file 'tools/zPar/debug_netlists/global_merge.edf.gz'
+#   step SERIALIZE : #bytes in: 2942, #bytes out: 1508, compression ratio: 1.950928
+#   step loadDB : Done in    elapsed:0.17 s   user:0.13 s    system:0.1 s      %cpu:83.58       load:3.68       fm:201992 m      vm:644 m      vm:+51 m      um:207 m      um:+28 m
+### warning in ENV RETIREMENT [KPR1571W] : Environment variable "ZEBU_NO_LOCAL_RTB_ROUTING" will be deprecated in the next major release after ZEBU20.03.
+#   step flatten : Starting
+#   step flatten : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201990 m      vm:644 m       vm:+0 m      um:207 m       um:+0 m
+#   step unFlatten : Starting
+#   step unFlatten : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201989 m      vm:644 m       vm:+0 m      um:207 m       um:+0 m
+### warning in ENV RETIREMENT [KPR1572W] : Environment variable "ZEBU_NO_LOCAL_RTB_ROUTING" will be deprecated in the next major release after ZEBU20.03.
+#   step SERIALIZE : writing netlist 'gmerge' into znl file 'edif/mergetop.edf.gz'
+#   step SERIALIZE : #bytes in: 416, #bytes out: 333, compression ratio: 1.249249
+#   step mergeMezz : Starting
+#   step mergeMezz : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:105.26       load:3.68       fm:201975 m      vm:644 m       vm:+0 m      um:215 m       um:+4 m
+#   step SERIALIZE : writing netlist 'gmerge' into znl file 'globalMerge.edf.gz'
+#   step SERIALIZE : #bytes in: 3342, #bytes out: 1454, compression ratio: 2.298487
+#   step MERGING CORES : End cores merging
+#   step Merge : Done in    elapsed:0.21 s   user:0.15 s    system:0.1 s      %cpu:74.59       load:3.68       fm:201974 m      vm:644 m      vm:+51 m      um:215 m      um:+36 m
+
+
+################################################################
+# zPar STEP : Check the data base
+################################################################
+
+
+################################################################
+# zPar STEP : Initialize the data base
+################################################################
+#   step ZNF PARSER : reading netlist from ZNF file 'ztb_tg_remapped.edf.gz'
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/sys/ZS5/edifs/zs5_vup_12c_19_v2.edf.gz'
+#   step INIT : Targeting product type: zs5
+#   step INIT : Setting socket mode: native
+
+
+################################################################
+# zPar STEP : FractalSetting
+################################################################
+
+
+################################################################
+# zPar STEP : Place the design
+################################################################
+#   step Place : Starting
+#   step ZTIME : Create timing graph for optimization
+#   step ZTIME : build clock IF->FPGA vertices
+#   step ZTIME : build IF<->FPGA vertices
+#   step ZTIME : build FPGA<->FPGA vertices
+#   step ZTIME : create 80 nodes
+#   step ZTIME : create 40 arcs
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/common_eval_params.tcl' ...
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/v8_eval_params.tcl' ...
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zs5_config.tcl' ...
+#   step SOURCE : Source gzipped file 'tools/zTime/zTopBuild_timing.zti' ...
+#   step HYDRA : Hydra mode is enabled.
+#   step SOURCE : Source gzipped file 'tools/zTime/clock_dependencies.zti' ...
+#   step Loading Equi2Master : Starting
+#   step Loading Equi2Master : Done in     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:41.67       load:3.68       fm:201842 m      vm:931 m     vm:+258 m      um:274 m      um:+10 m
+#   step importZrefInfo : Starting
+#   step ZNF PARSER : reading netlist from ZNF file 'tools/zTime/zTime_hierarchy.edf.gz'
+#   step importZrefInfo : Done in     elapsed:0.2 s    user:0.2 s      system:0 s     %cpu:102.56       load:3.68       fm:201832 m      vm:936 m       vm:+5 m      um:278 m       um:+3 m
+#   step IMPORT : Clock domain deduplication is enabled
+#   step IMPORT : Starting
+#   step IMPORT : import use ZEBU_EDIF_TRANSFER
+#   step IMPORT : Import asynchronous paths from 'work.Part_0/tools/zTime/global_time.edf.gz'
+#   step ZNF PARSER : reading netlist from ZNF file 'work.Part_0/tools/zTime/global_time.edf.gz'
+### warning in IMPORT [KTM0560W] : zTime_clock_domain.cds not found
+#   step Memories timing paths distribution : 
+# +
+#   step IMPORT : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201831 m      vm:955 m      vm:+19 m      um:278 m       um:+0 m
+#   step SOURCE : Source gzipped file 'work.Part_0/tools/zTime/zCoreBuild_timing.zti' ...
+#   step SOURCE : Source gzipped file 'work.Part_0/U0_M0_F0/U0_M0_F0.zti' ...
+#   step IMPORT : import work.Part_0/U0_M0_F0/U0_M0_F0.db
+#   step IMPORT : Clock domain deduplication is enabled
+#   step IMPORT : Using file version
+#   step IMPORT : Starting
+#   step Load_Graph_Input_DB : Starting
+#   step LOAD : using file version: 7
+#   step Load_Graph_Input_DB : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201825 m      vm:955 m       vm:+0 m      um:281 m       um:+3 m
+#   step IMPORT : Importing data for fpga: U0_M0_F0.
+#   step IMPORT : Import details      is off.
+#   step IMPORT : Import clock domain is on.
+#   step IMPORT : Import feedbackMcp  is on.
+#   step ADVANCED_MCP : MCP advanced method: 1
+#   step IMPORT : unique CD2F arc: 8 deduplicated CD2F arcs: 0 feedback arcs: 0
+#   step IMPORT : unique F2CD arc: 68 deduplicated F2CD arcs: 0 feedback arcs: 0
+#   step IMPORT : load file work.Part_0/U0_M0_F0/U0_M0_F0.db, import 131 timing arcs, 4 ghost arcs, 0 cd nodes, 40 port nodes, 2 pin nodes
+
+#   step IMPORT : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201824 m      vm:955 m       vm:+0 m      um:281 m       um:+3 m
+#   step SOURCE : Source gzipped file 'work.Part_0/U0_M0_F1/U0_M0_F1.zti' ...
+#   step IMPORT : import work.Part_0/U0_M0_F1/U0_M0_F1.db
+#   step IMPORT : Clock domain deduplication is enabled
+#   step IMPORT : Using file version
+#   step IMPORT : Starting
+#   step Load_Graph_Input_DB : Starting
+#   step LOAD : using file version: 7
+#   step Load_Graph_Input_DB : Done in     elapsed:0.6 s    user:0.3 s    system:0.1 s      %cpu:63.49       load:3.68       fm:201791 m      vm:955 m       vm:+0 m      um:295 m      um:+14 m
+#   step IMPORT : Importing data for fpga: U0_M0_F1.
+#   step IMPORT : Import details      is off.
+#   step IMPORT : Import clock domain is on.
+#   step IMPORT : Import feedbackMcp  is on.
+#   step IMPORT : unique CD2F arc: 268 deduplicated CD2F arcs: 401 feedback arcs: 0
+#   step IMPORT : unique F2CD arc: 12 deduplicated F2CD arcs: 0 feedback arcs: 0
+#   step IMPORT : load file work.Part_0/U0_M0_F1/U0_M0_F1.db, import 1 timing arcs, 36 ghost arcs, 0 cd nodes, 40 port nodes, 2 pin nodes
+
+#   step IMPORT : Done in     elapsed:0.7 s    user:0.3 s    system:0.1 s      %cpu:56.74       load:3.68       fm:201777 m      vm:963 m       vm:+8 m      um:308 m      um:+27 m
+#   step ZTIME : Timing graph for optimization created
+#   step ROUTE :  Apply user zTime false paths constraints
+#   step SOURCE : Source file '../utf_generatefiles/zTime_config.tcl' ...
+#   step SOURCE : Source file '../utf_generatefiles/new_zTime_config.tcl' ...
+### warning in TCL COMMAND [KTM0769W] : Timing analysis command 'set_advanced_asynchronous_set_reset_analysis' is deprecated, use optionsDB variable timing_advanced_async_set_reset_analysis instead.
+
+#   step ZTIME : Enable filter path slack ratio fix
+#   step ARCHIVE : Creating archive file ./tools/zCui/zParBE_archive.xcui
+#   step PLACE : Placement result for module U0_M0 placed on zs5_vup_12c_19_v2:
+#   step PLACE :   +----+------------------------------+------------------------------+
+#   step PLACE :   |  0 | F00_VUP_12C_19_V1            | U0_M0_F0                     |
+#   step PLACE :   |  1 | F01_VUP_12C_19_V1            | U0_M0_F1                     |
+#   step PLACE :   |  2 | F02_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  3 | F03_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  4 | F04_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  5 | F05_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  6 | F06_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  7 | F07_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  8 | F08_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   |  9 | F09_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   | 10 | F10_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   | 11 | F11_VUP_12C_19_V1            | unused                       |
+#   step PLACE :   +----+------------------------------+------------------------------+
+#   step Granularity : Granularity is enabled
+#   step Granularity : Init with hardware zs5, confine unit: 3 FPGA
+#   step KR_ROUTE : FPGA logical name U0_M0_F0 placed at  FPGA ID 0
+#   step KR_ROUTE : FPGA logical name U0_M0_F1 placed at  FPGA ID 1
+#   step Place : Done in    elapsed:0.34 s   user:0.16 s    system:0.4 s      %cpu:59.17       load:3.68       fm:201770 m      vm:963 m     vm:+317 m      um:309 m      um:+75 m
+
+
+################################################################
+# zPar STEP : Route the design
+################################################################
+#   step Route : Starting
+#   step System : routingEffort default
+#   step KR_ROUTE : Loading hub config: 
+
+#   step KR_ROUTE : No data hub configuration
+
+#   step STATS : Writing file zPar_stats/zPar_config.csv
+#   step STATS : Writing file zPar_stats/zPar_before.csv
+#   step STATS : Writing file zPar_stats/zPar_in_before.csv
+#   step STATS : Writing file zPar_stats/zPar_out_before.csv
+#   step STATS : Writing file zPar_stats/zPar_ratios_before.csv
+#   step STATS : Writing file zPar_stats/design.txt
+#   step STATS : Writing file zPar_stats/target.txt
+#   step STATS : Writing file zPar_stats/targetSE.txt
+#   step MLDM : current architecture is EP1/ZS5, the delay model for EP1/ZS5 will be applied
+#   step MLDM : path model /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/mlmodelgen/1.0/models_zanaconda/path_fanout.mdl
+#   step ROUTE : Route design clocks
+#   step ROUTE : 0 physical clock nets (on 0) used to route 0 design clocks
+#   step ROUTE : Design nets fanout :
+#   step ROUTE : +-----------+-------+
+#   step ROUTE : | Fanout    |  0- 4 |
+#   step ROUTE : +-----------+-------+
+#   step ROUTE : | # of nets |    40 |
+#   step ROUTE : +-----------+-------+
+
+#   step ROUTE : Performing routing
+#   step ROUTE : A design is very small. routingEffort set to medium_legacy.
+#   step System : routingEffort medium_legacy
+#   step ROUTE_CUST : USE DEFAULT
+#   step MIN XDR : isenalbeLvsdMinXdr2:0
+#   step MIN XDR : isSEModeEnabled:0
+#   step CUT : Inter-HM cut matrix
+# +---------+---------+---------+
+# |         | U0M0HM0 | U0M0HM1 |
+# +---------+---------+---------+
+# | U0M0HM0 |    -    |    0/  0|
+# +---------+---------+---------+
+# | U0M0HM1 |    0/  0|    -    |
+# +---------+---------+---------+
+#   step CUT : Total half-module cut within module: 0
+#   step CUT : Total cut between indirected module: 0
+#   step FAST SOCKET : No MGT connection exist.
+#   step FAST SOCKET : GT_GP_FAST is enabled. Change physical type to fast MGT socket.
+#   step Router : Executing step RouterFlow
+#   step Router : Executing step RouterInitializationStep
+#   step MEM : sizeof, tarc:192, tnode:880
+#   step ROUTE : Number of modules used for the design = 1.
+#   step ROUTE : Initialize timing evaluator...
+#   step initFalsePath. : Starting
+#   step initializeAnalysis. : Starting
+#   step DBG_MASK : dbgMask:0x1
+#   step guaranteeArcOrderForNode. : Starting
+#   step guaranteeArcOrderForNode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step addClockDomainForFetchMode. : Starting
+#   step addClockDomainForFetchMode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step resolveMemoryReferences. : Starting
+#   step MEMORY : Improved memory timing is enabled.
+#   step resolveMemoryReferences. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _searchAndTagLoop. : Starting
+#   step _searchAndTagLoop. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step ANALYSIS : Identify false paths
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step initializeGraph. : Starting
+#   step initializeGraph. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step populateToBackAnnotationDB. : Starting
+#   step DELAY MODEL : delay model information provided for 0 arcs
+#   step populateToBackAnnotationDB. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step backAnnotate. : Starting
+#   step backAnnotate. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step ktim_delay_estimation::postProcess. : Starting
+#   step ktim_delay_estimation::postProcess. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step _reverseSortTopological. : Starting
+#   step _reverseSortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201348 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step topologicalSortClockCone. : Starting
+#   step topologicalSortClockCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step topologicalSortDataCone. : Starting
+#   step topologicalSortDataCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step initializeAnalysis. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step storeLoopArc. : Starting
+#   step storeLoopArc. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step recordAnnotatedDelay. : Starting
+#   step recordAnnotatedDelay. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step initFalsePath. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1132 m       vm:+0 m      um:479 m       um:+0 m
+#   step clockRangeAnalysisPreProcess. : Starting
+#   step clockRangeAnalysisPreProcess. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1176 m      vm:+44 m      um:479 m       um:+0 m
+#   step ADVANCED_MCP : MCP advanced method: 1
+#   step propagateTargetClockDomain. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1204 m       vm:+8 m      um:479 m       um:+0 m
+#   step clockRangeAnalysisMain. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201347 m     vm:1204 m       vm:+0 m      um:479 m       um:+0 m
+#   step set cdr mode: sdf : 
+#   step staticClockDomainReductionSDF_main. : Starting
+#   step CDR_STATIC : Multi-thread is turned On
+#   step CDR_STATIC : total accumulated source clock domains: 276 => 75
+#   step CDR_STATIC : total accumulated target clock domains: 74 => 74
+#   step staticClockDomainReductionSDF_main. : Done in       elapsed:0 s    user:0.1 s      system:0 s    %cpu:2000.00       load:3.68       fm:201347 m     vm:1204 m       vm:+0 m      um:479 m       um:+0 m
+#   step Static clock domain reduction : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:153.85       load:3.68       fm:201347 m     vm:1204 m      vm:+72 m      um:479 m       um:+0 m
+#   step CDR : is turned OFF,  Clock Relationship 8, (average,  effective) arrival times: (1.675214 , 1.675214)
+#   step ROUTE : 40 wires representing 40 targets to route.
+#   step ROUTE : 40 wires with only one target.
+
+#   step ROUTE : Create routing graph.
+#   step CACHE SIZE : size is 12
+#   step CACHE SETUP :  min cost 6000.000000
+#   step RouterInitializationStep. : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:111.11       load:3.68       fm:201346 m     vm:1204 m      vm:+72 m      um:479 m       um:+0 m
+#   step Router : Executing step Toward_Optimal_Route_Step
+#   step ZCR : Initialization
+#   step ZCR : Build Xdr Delay Table
+#   step ZCR : Build Route Table
+#   step ZCR : Total number of routing edge: 66
+#   step ZCR : #Timing Arc: 522, #Timing Node: 117
+#   step ZCR : Max IO Cut 40 occurs on FPGA U0/M0/F00 before routing.
+#   step RTL : RTL NAME IS DISABLED
+# System     - enableDelayEstimation: created
+# System     - enableSDFMemoryModel: set to true
+# System     - zpar_fpga_current_stats_file: set to work.Part_0/zPar_fpga_stats
+# System     - zpar_fpga_previous_stats_file: set to work.Part_0/zPar_fpga_stats_hist_0
+# System     - pinAssignmentEffort: set to zap
+# System     - sdfRequestType: set to PRIO
+# System     - filter_data_relocation: set to -type=timing_driven -solver_strategy=exhaustive_search 
+# System     - xclkFrequency: set to 1000000
+# System     - driverFrequencyZtopBuild: set to 10000
+# System     - routingEffort: set to medium
+# System     - generate_sdf_request: created
+# System     - scTdmCompileFlow: set to false
+# System     - timingCstFile: set to ../utf_generatefiles/zTime_config.tcl
+Error to open file db_zPar_stats/timing//Ideal_Route_dataPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//Ideal_Route_filterPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//Ideal_Route_memPath.csv
+#   step PBA : ideal delay pba
+#   step PBA : critical/total path number: (4,4)
+#   step ZCR : Ideal Route Delay: 184
+#   step ZCR : Estimated Ideal Delay 184
+#   step ZCR : ######################################################################
+#   step ZCR : #Skip optimization flow because ideal route achieves a legal solution#
+#   step ZCR : ######################################################################
+#   step MaxXDR : Max LVDSXDR : 1, Max MGTXDR : 0 
+#   step ZCR : Fill FPGA Pair Assignment
+#   step STATS : Writing file zPar_stats/zPar_pinpair_usage_ezcr.txt
+#   step EZCR : Delay after route : 184 ns
+#   step eZCRStep. : Done in     elapsed:0.5 s    user:0.4 s    system:0.1 s     %cpu:106.38       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+1 m
+#   step Router : Executing step FilterDataRelocationOptimizationRouterStep
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   zPar timing estimated delay cost is : 185 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step TDFDR_OPT : Performing timing analysis re-initialization sanity check...
+#   step initializeAnalysisAfterFilterDataRelocationOpt. : Starting
+#   step guaranteeArcOrderForNode. : Starting
+#   step guaranteeArcOrderForNode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ANALYSIS : Identify false paths
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step initializeGraph. : Starting
+#   step initializeGraph. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step populateToBackAnnotationDB. : Starting
+#   step DELAY MODEL : delay model information provided for 0 arcs
+#   step populateToBackAnnotationDB. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step backAnnotate. : Starting
+#   step backAnnotate. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ktim_delay_estimation::postProcess. : Starting
+#   step ktim_delay_estimation::postProcess. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _reverseSortTopological. : Starting
+#   step _reverseSortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortClockCone. : Starting
+#   step topologicalSortClockCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortDataCone. : Starting
+#   step topologicalSortDataCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step initializeAnalysisAfterFilterDataRelocationOpt. : Done in       elapsed:0 s    user:0.1 s      system:0 s     %cpu:333.33       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   zPar timing estimated delay cost is : 185 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step TDFDR_OPT : Sanity check passed.
+#   step TDFDR_OPT : Performing timing-driven filter data relocation optimization.
+#   step TDFDR_OPT : Timing analysis mode is :        COMPUTED
+#   step TDFDR_OPT : Timing graph is back-annotated : NO
+#   step TDFDR_OPT : generating timing constraints...
+#   step TDFDR_OPT::generateTimingConstraints : Starting
+#   step TDFDR_OPT::generateTimingConstraints : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step TDFDR_OPT : generating independent sub-problems...
+#   step TDFDR_OPT : DB contains 0 constraint(s).
+#   step TDFDR_OPT::generateIndependentConstraintSets : Starting
+#   step TDFDR_OPT : Found 0 independent constraints set(s).
+#   step TDFDR_OPT::generateIndependentConstraintSets : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step TDFDR_OPT : solving constraint sets to maximize minimum slack ...
+#   step TDFDR_OPT::solveConstraintSets : Starting
+#   step TDFDR_OPT::solveConstraintSets : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201336 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step TDFDR_OPT : Timing constraint sets resolution summary:
+#   step TDFDR_OPT : -------------------------------------------------------------------------------------------------------------
+#   step TDFDR_OPT : | Slack range  | Num    | Num       | Num       | Initial         | Final           | Abs. avg. | Rel. avg. |
+#   step TDFDR_OPT : | (ns)         | sets   | filters   | filters   | min slack       | min slack       | min slack | min slack |
+#   step TDFDR_OPT : |              |        | tot.      | reloc.    | range           | range           | improv.   | improv.   |
+#   step TDFDR_OPT : |              |        |           |           | (ns)            | (ns)            | (ns)      |           |
+#   step TDFDR_OPT : -------------------------------------------------------------------------------------------------------------
+#   step TDFDR_OPT : | (   0, 20  ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : | (  20, 50  ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : | (  50, 100 ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : | ( 100, 200 ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : | ( 200, 400 ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : | ( 400, inf ( |      0 |         0 |         0 |      0 - 0      |      0 - 0      |         0 |      0.00 |
+#   step TDFDR_OPT : -------------------------------------------------------------------------------------------------------------
+#   step TDFDR_OPT : Number of constraint sets:                   0
+#   step TDFDR_OPT : Number of critical constraint sets:          0
+#   step TDFDR_OPT : Number of critical constraint sets improved: 0
+#   step TDFDR_OPT : Applying filter data relocation solution to timing graph ...
+#   step TDFDR_OPT : writing file 'tools/zTime/async_filter_data_relocation.zti' ...
+#   step TDFDR_OPT : Initializing timing analyzer after filter data relocation optimization.
+#   step initializeAnalysisAfterFilterDataRelocationOpt. : Starting
+#   step guaranteeArcOrderForNode. : Starting
+#   step guaranteeArcOrderForNode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ANALYSIS : Identify false paths
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step initializeGraph. : Starting
+#   step initializeGraph. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step populateToBackAnnotationDB. : Starting
+#   step DELAY MODEL : delay model information provided for 0 arcs
+#   step populateToBackAnnotationDB. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step backAnnotate. : Starting
+#   step backAnnotate. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ktim_delay_estimation::postProcess. : Starting
+#   step ktim_delay_estimation::postProcess. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _reverseSortTopological. : Starting
+#   step _reverseSortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortClockCone. : Starting
+#   step topologicalSortClockCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortDataCone. : Starting
+#   step topologicalSortDataCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ZTIME : skip distribute slack ratio
+#   step initializeAnalysisAfterFilterDataRelocationOpt. : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:333.33       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step TDFDR_OPT : Relocating 0 data filters to improve timing.
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   zPar timing estimated delay cost is : 185 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step TDFDR_OPT : --------------------------------------------------
+#   step TDFDR_OPT : Initial delay: 185 ns
+#   step TDFDR_OPT : Updated delay: 185 ns
+#   step TDFDR_OPT : Improved critical path delay by 0 ns (0.0%)
+#   step TDFDR_OPT : --------------------------------------------------
+#   step FilterDataRelocationOptimizationRouterStep. : Done in     elapsed:0.1 s    user:0.2 s    system:0.1 s     %cpu:352.94       load:3.68       fm:201335 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step Router : Executing step QCheckStep
+#   step STATS : Writing file zPar_stats/zPar_data_lvds_splitter.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//Router_dataPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//Router_filterPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//Router_memPath.csv
+#   step QCheckStep. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201333 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step Router : Executing step SaveResultStep
+#   step Incr Phase2 : update IncrDB in RouteStep!
+#   step SaveResultStep. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201333 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step FAST SOCKET : Calculated maximum MGT XDR value is 0.
+#   step REPORT : No inter-fpga filter path found, can't report anything
+#   step REPORT : Report a maximum of 100 first routing data path(s) 
+#   step REPORT : 
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+# | Slack |      Required Time | Delay | Fpga | Clock Domain Source | Clock Domain Target                         |Port Name Source                    |Port Name Target                    |
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+# |   0 ns|185 ns ( 1.0 dvrCk )| 185 ns|     3|0.20787 (posedge)    |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]       |U0_M0_F1.F01_ts_clkbus_in[5]        |
+# |  25 ns|185 ns ( 1.0 dvrCk )| 160 ns|     2|0.20787 (posedge)    |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]       |U0_M0_F0.F01_ts_clkbus_in[6]        |
+# |  26 ns|185 ns ( 1.0 dvrCk )| 159 ns|     3|0.20787 (posedge)    |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397|U0_M0_F1.F01_ts_clkbus_in[8]        |
+# |  37 ns|185 ns ( 1.0 dvrCk )| 148 ns|     2|0.20787 (posedge)    |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397|U0_M0_F0.zcbsplt_4615901352719420397|
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+#   step REPORT : A total of 4 inter-fpga path(s) displayed
+
+#   step REPORT : Report a maximum of 50 first different delay(s) 
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : | Delay     | Paths     | Max Fpga  | Max Hop   | Max Async |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : |    185 ns |         1 |         3 |         0 |         1 |
+#   step REPORT : |    160 ns |         1 |         2 |         0 |         0 |
+#   step REPORT : |    159 ns |         2 |         3 |         0 |         1 |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : A total of 3 different delay(s) displayed
+
+#   step REPORT : Histogram with a maximum of 50 first different delay(s) 
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | Delay               | Paths                                            |
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | [  159 ns:  172 ns] |---------------------------------------->        3|
+#   step REPORT : | ]  172 ns:  185 ns[ |------------->                                   1|
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : A total of 3 different delay(s) encountered
+
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   zPar timing estimated delay cost is : 185 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+### warning in ZMetrics [ZTCL0307W] : ZMetrics : Id 'Delay before ZAP' is already used
+### warning in ZMetrics [ZTCL0307W] : ZMetrics : Id 'Delay after TDFDR' is already used
+#   step ROUTE : Sanity check passed.
+[##################################################] 100% (  inf kHz )     #   step ROUTING_METRICS : Number of targets: 40
+#   step ROUTING_METRICS : Number of nets: 40
+#   step ROUTING_METRICS : Avg hops: 1.000000
+#   step ROUTING_METRICS : Max hops: 1.000000
+#   step ROUTING_METRICS : Min hops: 1.000000
+#   step ROUTING_METRICS : Avg mgt hops: inf
+#   step ROUTING_METRICS : Max mgt hops: inf
+#   step ROUTING_METRICS : Min mgt hops: inf
+#   step WIRE ANALYSIS : Statistics on the criticality of wires to be routed: average = 0.228334, less than slackLimit(0.500000) = 0.925000
+#   step WIRE ANALYSIS : Statistics on the criticality of wires to be routed (timingType = OPTIMIZE_COMBI):
+#   step WIRE ANALYSIS : Slack ratio  |   zero  |  < 0.05 |  < 0.10 |     0.1 |     0.2 |     0.3 |     0.4 |     0.5 |     0.6 |     0.7 |     0.8 |     0.9 | 
+#   step WIRE ANALYSIS : -------------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+---------+-
+#   step WIRE ANALYSIS :  nb wires    |       2 |       0 |       0 |      35 |       0 |       0 |       0 |       0 |       1 |       0 |       1 |       1 | 
+#   step WIRE ANALYSIS :  nb MT wires |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 | 
+#   step WIRE ANALYSIS :  nb MGT wires|       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 |       0 | 
+#   step Router : Executing step RouterFlow
+#   step Router : Executing step zapStep
+#   step ZAP : skip ZAP optimization
+#   step ZAP : STAGE Preprocess : Done in elapsed time 0.000017 s 
+#   step expandZTimeGraph : Starting
+#   step ZAP : Loading zTime timing graph with routed nets...
+#   step collectNodeNameToTNodeHash : Starting
+#   step collectNodeNameToTNodeHash : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201329 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ANNOTATE : Product type: zs5
+#   step ANNOTATE : Socket mode: native
+#   step ANNOTATE : Compute delay values of all timing arcs
+#   step ANNOTATE : LVDS Delay mode is version2
+#   step ANNOTATE : Annotation of 602 Arcs and 197 Nodes done
+#   step FPAG DELAY INFO : No delay to apply on port in timing graph
+#   step initializeAnalysisAfterRoute. : Starting
+#   step guaranteeArcOrderForNode. : Starting
+#   step guaranteeArcOrderForNode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201328 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201328 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _searchAndTagLoop. : Starting
+#   step _searchAndTagLoop. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201328 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s    user:0.1 s      system:0 s       %cpu:0.00       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step _reverseSortTopological. : Starting
+#   step _reverseSortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortClockCone. : Starting
+#   step topologicalSortClockCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step topologicalSortDataCone. : Starting
+#   step topologicalSortDataCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step initializeAnalysisAfterRoute. : Done in       elapsed:0 s    user:0.1 s      system:0 s     %cpu:666.67       load:3.68       fm:201327 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ANALYSIS : Find worst path for each output filter
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   No inter-fpga clock path found
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step ANALYSIS : Find worst path for each output ports of the board
+#   step ANALYSIS : Given a zdelay (clock skew) of 20 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   The theoretical frequency using default settings is 5428 Khz
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step expandZTimeGraph : Done in     elapsed:0.2 s    user:0.1 s    system:0.1 s     %cpu:121.21       load:3.68       fm:201325 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step ZAP : STAGE Build : Done in elapsed time 0.017486 s 
+#   step ZAP : doing write back
+#   step ZAP : STAGE Discretize and Realize : Done in elapsed time 0.018534 s 
+#   step ANALYSIS : Set false path context to asynchronous set/reset
+#   step ANALYSIS : Set false path context to clock
+#   step ANALYSIS : Find worst path for each output filter
+#   step REPORT : No inter-fpga filter path found, can't report anything
+#   step ANALYSIS : Set false path context to data routing
+#   step ANALYSIS : Find worst path for each output ports of the board
+#   step ANALYSIS : Given a zdelay (clock skew) of 20 ns
+#   step REPORT : Report a maximum of 100 first routing data path(s) 
+#   step REPORT : 
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+# | Slack |      Required Time | Delay | Fpga | Clock Domain Source | Clock Domain Target                         |Port Name Source                    |Port Name Target                    |
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+# |   0 ns|185 ns ( 1.0 dvrCk )| 185 ns|     3|0.20787 (posedge)    |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]       |U0_M0_F1.F01_ts_clkbus_in[5]        |
+# |  25 ns|185 ns ( 1.0 dvrCk )| 160 ns|     2|0.20787 (posedge)    |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]       |U0_M0_F0.F01_ts_clkbus_in[6]        |
+# |  26 ns|185 ns ( 1.0 dvrCk )| 159 ns|     3|0.20787 (posedge)    |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397|U0_M0_F1.F01_ts_clkbus_in[8]        |
+# |  37 ns|185 ns ( 1.0 dvrCk )| 148 ns|     2|0.20787 (posedge)    |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397|U0_M0_F0.zcbsplt_4615901352719420397|
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+------------------------------------+------------------------------------+
+#   step REPORT : A total of 4 inter-fpga path(s) displayed
+
+#   step REPORT : Report a maximum of 50 first different delay(s) 
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : | Delay     | Paths     | Max Fpga  | Max Hop   | Max Async |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : |    185 ns |         1 |         3 |         0 |         1 |
+#   step REPORT : |    160 ns |         1 |         2 |         0 |         0 |
+#   step REPORT : |    159 ns |         2 |         3 |         0 |         1 |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : A total of 3 different delay(s) displayed
+
+#   step REPORT : Histogram with a maximum of 50 first different delay(s) 
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | Delay               | Paths                                            |
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | [  159 ns:  172 ns] |---------------------------------------->        3|
+#   step REPORT : | ]  172 ns:  185 ns[ |------------->                                   1|
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : A total of 3 different delay(s) encountered
+
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   zPar timing estimated delay cost is : 185 ns
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step ROUTE : Best delay = 185 ns.
+#   step ZAP : STAGE Report timing : Done in elapsed time 0.021075 s 
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//ZAP_dataPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//ZAP_filterPath.csv
+#   step RTL : RTL NAME IS DISABLED
+Error to open file db_zPar_stats/timing//ZAP_memPath.csv
+#   step AnalyticalPinAssignmentStep. : Done in     elapsed:0.3 s    user:0.1 s    system:0.1 s      %cpu:78.43       load:3.68       fm:201324 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+#   step kpr_ktim_util : total troncon:40, fail to map troncon in zap:0
+
+#   step ROUTE : Applying routing result
+[#                                                 ]   2%[##                                                ]   5%[###                                               ]   7%[#####                                             ]  10%[######                                            ]  12%[#######                                           ]  15%[########                                          ]  17%[##########                                        ]  20%[###########                                       ]  22%[############                                      ]  25%[#############                                     ]  27%[###############                                   ]  30%[################                                  ]  32%[#################                                 ]  35%[##################                                ]  37%[####################                              ]  40%[#####################                             ]  42%[######################                            ]  45%[#######################                           ]  47%[#########################                         ]  50%[##########################                        ]  52%[###########################                       ]  55%[############################                      ]  57%[##############################                    ]  60%[###############################                   ]  62%[################################                  ]  65%[#################################                 ]  67%[###################################               ]  70%[####################################              ]  72%[#####################################             ]  75%[######################################            ]  77%[########################################          ]  80%[#########################################         ]  82%[##########################################        ]  85%[###########################################       ]  87%[#############################################     ]  90%[##############################################    ]  92%[###############################################   ]  95%[################################################  ]  97%[##################################################] 100%[##################################################] 100%
+#   step STATS : Writing file zPar_stats/zPar_after.csv
+#   step STATS : Writing file zPar_stats/zPar_ratios_after.csv
+#   step STATS : Writing file zPar_stats/zPar_after_ft.csv
+
+#   step ROUTE : =================================================================================
+#   step ROUTE : Design matrix before routing (U0_M0)
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|       |    F00|    F01|    F02|    F03|    F04|    F05|    F06|    F07|    F08|    F09|    F10|    F11|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|    F00|      -|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F01|     40|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F02|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F03|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F04|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|
+#|    F05|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|
+#|    F06|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|
+#|    F07|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|
+#|    F08|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|
+#|    F09|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|
+#|    F10|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|
+#|    F11|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#   step ROUTE : * mean that there is no physical wire between FPGAs
+
+#   step ROUTE : =================================================================================
+#   step ROUTE : Design matrix after IdealRoute (U0_M0)
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|       |    F00|    F01|    F02|    F03|    F04|    F05|    F06|    F07|    F08|    F09|    F10|    F11|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|    F00|      -|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F01|     40|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F02|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F03|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F04|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|
+#|    F05|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|
+#|    F06|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|
+#|    F07|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|
+#|    F08|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|
+#|    F09|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|
+#|    F10|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|
+#|    F11|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+
+#   step ROUTE : =================================================================================
+#   step ROUTE : Design matrix after routing (U0_M0)
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|       |    F00|    F01|    F02|    F03|    F04|    F05|    F06|    F07|    F08|    F09|    F10|    F11|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#|    F00|      -|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F01|     40|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F02|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F03|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    F04|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|
+#|    F05|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|
+#|    F06|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|
+#|    F07|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|
+#|    F08|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|
+#|    F09|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|
+#|    F10|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|
+#|    F11|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|
+#+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+
+#   step Route : Done in       elapsed:1 s      user:1 s   system:0.10 s      %cpu:92.35       load:3.68       fm:201320 m     vm:1204 m     vm:+241 m      um:480 m     um:+171 m
+
+
+################################################################
+# zPar STEP : Generate the results
+################################################################
+#   step Generate : Starting
+#   step Dump DBs : Starting
+#   step INCR : Dumping config database './tools/zPar/zPar_db/configDB'
+#   step INCR : Dumping design database './tools/zPar/zPar_db/designDB'
+#   step INCR : Dumping place database './tools/zPar/zPar_db/placeDB'
+#   step INCR : Dumping routing database './tools/zPar/zPar_db/routeDB'
+#   step Dump DBs : Done in     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:43.48       load:3.68       fm:201315 m     vm:1204 m       vm:+0 m      um:480 m       um:+0 m
+
+
+#   step GENERATE : RACC (Run-time Asynchronous Communication Check) : off
+#   step GENERATION : Generating merge script 'zPar_merge.tcl'
+#   step GENERATE : Create ./tools/zTime/zPar2PDMTiming.tcl script
+#   step GENERATE : GT_GP_FAST is enabled. To turn it off, use 'System enable_MGT_fast false'
+#   step Create FPGA Wrappers : Starting
+#   step MultiDie DB : ---------------- Begin creation of multi die DB info for module zs5_vup_12c_19_v2
+#   step MultiDie DB : ---------------- multi die DB for module zs5_vup_12c_19_v2, size : 12
+#   step MultiDie DB : ---------------- End creation of multi die DB info for module zs5_vup_12c_19_v2
+#   step zrm handling : zrm firmware-library version is '2014.12-4701879'
+#   step Create FPGA Wrappers : Done in       elapsed:8 s      user:7 s      system:1 s      %cpu:99.71       load:3.87       fm:197727 m     vm:3309 m    vm:+2105 m     um:2586 m    um:+2106 m
+#   step Socket Generation : Starting
+#   step Socket Generation : NSG started.
+#   step Socket Generation : NSG with multithread.
+#   step Socket Generation : Done in     elapsed:0.1 s    user:0.2 s    system:0.1 s     %cpu:193.55       load:3.87       fm:197723 m     vm:3312 m       vm:+3 m     um:2589 m       um:+3 m
+#   step Sanity Checker : All sockets have been verified: no Xdr mismatch has been detected at this level. See tools/zPar/sanityChecker.txt for wire or LVDS mismatches
+
+#   step Display : Starting
+
+#   step DISPLAY : Maximum xDR per component:
+#   step DISPLAY : +------------+-----+-----+-----+-----+-----+
+#   step DISPLAY : |            |   0 |   1 |   2 |   3 |   4 |
+#   step DISPLAY : +------------+-----+-----+-----+-----+-----+
+#   step DISPLAY : |U0_M0       |   1 |   1 |   - |   - |   - |
+#   step DISPLAY : |LVDS        |   1 |   1 |   - |   - |   - |
+#   step DISPLAY : |MGT         |   0 |   0 |   - |   - |   - |
+#   step DISPLAY : +------------+-----+-----+-----+-----+-----+
+#   step DISPLAY : Max LVDS Xdr: 1 | Max MGT Xdr: 0
+
+#   step Display : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197709 m     vm:3315 m       vm:+0 m     um:2593 m       um:+0 m
+#   step NetlistTimingMarker : Collect 2 wrappers
+#   step NetlistTimingMarker : Annotate driver clock 184209 on wrapper
+#   step Write Fpga Data To Disk : Starting
+#   step Socket Generation : write fpga data to disk with multithread.
+#   step Socket Generation : Due to SDF flow, wrapper file of each FPGA do not be generated in Socket Generation but in the handleAttributes flow.
+#   step GENERATE : collectNonFeedthroughFPGAs done. container size:2, inputs size:27, outputs size:27
+#   step Socket Generation : Wrapper files generating...
+#   step XDC GENERATOR : Writing XDC file 'U0/M0/F01.src/design_zpar.zdc.incr_tmp' with 7 constraints
+#   step XDC GENERATOR : constraints have changed - regenerate XDC file 'U0/M0/F01.src/design_zpar.zdc'
+#   step GENERATE : Create symbolic link '../../../work.Part_0/U0_M0_F1/ml_feature.tcl' on file 'U0/M0/F01.src/ml_feature.tcl'.
+#   step XDC GENERATOR : Writing XDC file 'U0/M0/F00.src/design_zpar.zdc.incr_tmp' with 6 constraints
+#   step XDC GENERATOR : constraints have changed - regenerate XDC file 'U0/M0/F00.src/design_zpar.zdc'
+#   step GENERATE : Create symbolic link '../../../work.Part_0/U0_M0_F0/ml_feature.tcl' on file 'U0/M0/F00.src/ml_feature.tcl'.
+#   step Write Fpga Data To Disk : Done in    elapsed:0.34 s   user:0.24 s    system:0.1 s      %cpu:72.15       load:3.87       fm:197641 m     vm:3318 m       vm:+3 m     um:2596 m       um:+3 m
+#   step STATS : Writing file 'zPar_stats/zPar_socket_info.csv'
+#   step STATS : Writing file 'zPar_stats/zPar_data_lvds_socket.csv'
+#   step STATS : Writing file 'zPar_stats/zPar_config_opt.csv'
+#   step GENERATE : All wrappers passed connectivity verfications.
+#   step XREF : Dump relocate xref file ./tools/zPar/loc.xref
+#   step XREF : Dump module xref file ./tools/zPar/module.xref
+#   step XREF : Dump contiguous module xref file ​./tools/zPar/module.cont.xref
+#   step GENERATION : Generating './tools/zPar/zpar.mk' makefile
+#   step GENERATE : fpga task ordering : for fpga U0/M0/F00, greater duration found 0
+#   step GENERATE : fpga task ordering : for fpga U0/M0/F01, greater duration found 0
+#   step Create zCui Archive : Starting
+#   step Create zCui Archive : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197631 m     vm:3318 m       vm:+0 m     um:2596 m       um:+0 m
+#   step link : Check the existance of each symbolic link
+#   step link : Dump symbolic link and their target path to ./tools/zPar/symbolic_link_table.csv
+#   step Generate : Done in       elapsed:8 s      user:7 s      system:1 s      %cpu:97.91       load:3.87       fm:197630 m     vm:3318 m    vm:+2114 m     um:2596 m    um:+2116 m
+
+
+################################################################
+# zPar STEP : Path length analysis
+################################################################
+#   step Timing : Starting
+#   step elaborateDesign : Starting
+#   step ZTIME FPGA : elaborating design
+#   step elaborateDesign : Done in     elapsed:0.8 s    user:0.7 s    system:0.1 s     %cpu:103.23       load:3.87       fm:197595 m     vm:3336 m      vm:+18 m     um:2614 m      um:+18 m
+#   step timingGraphBuilder::dumpTclTimingFile : Starting
+#   step ZTIME : Dump timing graph in file 'tools/zTime/zPar_timing.zti'
+#   step ZTIME : Dump clock
+#   step ZTIME : Dump nets from route
+#   step ZTIME : Dump loop arcs
+#   step ZTIME : Found 0 combinatorial loop(s) in design
+#   step timingGraphBuilder::dumpTclTimingFile : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197594 m     vm:3337 m       vm:+1 m     um:2615 m       um:+1 m
+#   step dumpZfpgaTimingRequest : Starting
+#   step build_topPortToNodeId : Starting
+#   step ZPAR FW SDF : Total 0 FwPort Adding to SDF database
+#   step build_topPortToNodeId : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step getIntraFpgaTimingPathforZFpgaTiming : Starting
+#   step ZTIME FPGA : 40 socket->DUT timing path(s) and 40 DUT->socket timing path(s)
+#   step ZTIME FPGA : SDF requests done using priorities
+#   step getIntraFpgaTimingPathforZFpgaTiming : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step buildSdfRequestsFromTimingGraph : Starting
+#   step Populate drivers : Starting
+#   info : 40 drivers in cache
+#   step Populate drivers : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step Populate readers : Starting
+#   step populate cache : Starting
+#   step populate cache : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step populate names : Starting
+#   step populate names : Done in       elapsed:0 s      user:0 s    system:0.1 s    %cpu:1000.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   info : 40 readers in cache
+#   step Populate readers : Done in       elapsed:0 s    user:0.1 s    system:0.1 s    %cpu:1333.33       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step Build : Starting
+#   step Build : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step buildSdfRequestsFromTimingGraph : Done in       elapsed:0 s    user:0.1 s    system:0.1 s     %cpu:800.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step dumpZfpgaTimingRequest : [before] isReturn:0, path size:210, capacity:394
+#   step buildRoutingHopSdfRequests : Starting
+#   step buildRoutingHopSdfRequests : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step buildSdfRequestsFromTimingGraph : Starting
+#   step Populate drivers : Starting
+#   info : 0 drivers in cache
+#   step Populate drivers : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197592 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step Populate readers : Starting
+#   step populate cache : Starting
+#   step populate cache : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step populate names : Starting
+#   step populate names : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   info : 0 readers in cache
+#   step Populate readers : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step Build : Starting
+#   step Build : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step buildSdfRequestsFromTimingGraph : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step buildFilterSdfRequests : Starting
+#   step buildFilterSdfRequests : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step addGlobalSdfCommands : Starting
+#   step addGlobalSdfCommands : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step dumpSdfRequestBuilder : Starting
+#   step Concatenate requests : Starting
+#   step Concatenate requests : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197591 m     vm:3337 m       vm:+0 m     um:2615 m       um:+0 m
+#   step ZTIME FPGA : dumping requests in U0/M0/F00.src/zFpga_timing_paths.tcl
+#   step ZTIME FPGA : dumping requests in U0/M0/F01.src/zFpga_timing_paths.tcl
+#   step dumpSdfRequestBuilder : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197590 m     vm:3339 m       vm:+2 m     um:2615 m       um:+0 m
+#   step handleAttributes : Starting
+#   step ZTIME FPGA : generating wrapper to the disk ...
+#   step SERIALIZE : writing netlist 'design' into znl file 'U0/M0/F00.src/wrapper.edf.gz'
+#   step SERIALIZE : writing netlist 'design' into znl file 'U0/M0/F01.src/wrapper.edf.gz'
+#   step SERIALIZE : #bytes in: 3653842, #bytes out: 832334, compression ratio: 4.389875
+#   step SERIALIZE : #bytes in: 3605026, #bytes out: 815695, compression ratio: 4.419576
+#   step handleAttributes : Done in    elapsed:0.37 s   user:0.70 s    system:0.1 s     %cpu:191.37       load:3.87       fm:197513 m     vm:3344 m       vm:+5 m     um:2620 m       um:+5 m
+#   step dumpSoftTimingConstraint : Starting
+#   step VIVADO CONSTRAINTS : Distributing slack for the generation of vivado constraints.
+#   step ktim_analysis::distributeSlackForVivadoConstraints : Starting
+#   step ANALYSIS : Find worst path for each output ports of the board
+#   step ANALYSIS : Given a zdelay (clock skew) of 20 ns
+#   step IMP : Iteration '1': RT=184209ps; updatedRT = 184209ps; avgSlackMin = 42060.325000ps; avgSlackMinReduction = nan%; 
+#   step IMP : Iteration '2': RT=184209ps; updatedRT = 184209ps; avgSlackMin = 5408.875000ps; avgSlackMinReduction = 87.140%; 
+#   step IMP : Iteration '3': RT=184209ps; updatedRT = 184209ps; avgSlackMin = 2704.800000ps; avgSlackMinReduction = 49.993%; 
+#   step IMP : Iteration '4': RT=184209ps; updatedRT = 184209ps; avgSlackMin = 1352.800000ps; avgSlackMinReduction = 49.985%; 
+#   step IMP : Iteration '5': RT=184209ps; updatedRT = 184209ps; avgSlackMin = 676.800000ps; avgSlackMinReduction = 49.970%; 
+#   step ANALYSIS : Find worst path for each output ports of the board
+#   step ANALYSIS : Given a zdelay (clock skew) of 20 ns
+#   step ktim_analysis::distributeSlackForVivadoConstraints : Done in     elapsed:0.1 s    user:0.3 s      system:0 s     %cpu:461.54       load:3.87       fm:197511 m     vm:3344 m       vm:+0 m     um:2620 m       um:+0 m
+#   step ZTIME_FPGA* : Starting generation of Vivado constraints...
+#   step VivadoSoftTimingConstraintBuilder : +-----------+------------------+------------------------------+------------------------------------+---------------------------+------------+
+#   step VivadoSoftTimingConstraintBuilder : |   Fpga    | Slack (Last/Max) | FpgaDelay (Dumped/Total/Max) | FpgaGatesNumber (Dumped/Total/Max) | Constraints(Dumped/Total) |   Reason   |
+#   step VivadoSoftTimingConstraintBuilder : +-----------+------------------+------------------------------+------------------------------------+---------------------------+------------+
+#   step VivadoSoftTimingConstraintBuilder : | U0_M0_F00 |      84/250      |       5608/ 5608/80M         |           86K/  86K/10M            |          170/170          |         NA |
+#   step VivadoSoftTimingConstraintBuilder : +-----------+------------------+------------------------------+------------------------------------+---------------------------+------------+
+#   step VivadoSoftTimingConstraintBuilder : | U0_M0_F01 |      84/250      |       4044/ 4044/80M         |          298K/ 298K/10M            |           40/40           |         NA |
+#   step VivadoSoftTimingConstraintBuilder : +-----------+------------------+------------------------------+------------------------------------+---------------------------+------------+
+#   step VivadoSoftTimingConstraintBuilder : Exporting vivado soft constraints to file(s)...
+#   step ZTIME_FPGA* : Generation of Vivado constraints completed successfully.
+#   step dumpSoftTimingConstraint : Done in     elapsed:0.2 s    user:0.3 s      system:0 s     %cpu:142.86       load:3.87       fm:197509 m     vm:3344 m       vm:+0 m     um:2620 m       um:+0 m
+#   step dumpNodeIdAndNameOfIF : Starting
+#   step dumpNodeIdAndNameOfIF : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197509 m     vm:3344 m       vm:+0 m     um:2620 m       um:+0 m
+#   step dumpZfpgaTimingRequest : Done in    elapsed:0.41 s   user:0.75 s    system:0.2 s     %cpu:187.80       load:3.87       fm:197509 m     vm:3344 m       vm:+7 m     um:2620 m       um:+5 m
+#   step TDFDR_OPT::dumpFpgaRequests : Starting
+#   step TDFDR_OPT : generating zNetgen FPGA commands ...
+#   step TDFDR_OPT : writing zNetgen commands file 'U0/M0/F00.src/filter_data_relocation_fpga_requests.tcl'...
+#   step TDFDR_OPT : writing zNetgen commands file 'U0/M0/F01.src/filter_data_relocation_fpga_requests.tcl'...
+#   step TDFDR_OPT::dumpFpgaRequests : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197508 m     vm:3344 m       vm:+0 m     um:2620 m       um:+0 m
+#   step TDFDR_OPT : writing file 'tools/zTime/async_filter_data_relocation_routed.zti' ...
+#   step Timing : Done in    elapsed:0.50 s   user:0.82 s    system:0.3 s     %cpu:169.83       load:3.87       fm:197508 m     vm:3344 m      vm:+26 m     um:2620 m      um:+24 m
+
+
+################################################################
+# zPar STEP : Finish
+################################################################
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | Usage                                 | Description                                        |Default | Status           |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | It's set in UTF file.                 | Product Type: ZS3, ZS4, ZS5, HAPS, Orion++, EP1    | N/A    | zs5              |
+#   step  : |                                       |               EP2                                  |        |                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+----------+
+#   step  : | It's set in UTF file.                 | Hardware Family: V5, V6, V7 and V8                 | N/A    | V8               |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System enable_zs3_if_less_flow        | Turn on if less flow in ZS3                        |disabled| disabled         |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System routingEffort <val>            | Set the routing effort of zPar.                    | default|default           |
+#   step  : |                                       | The available value are min_distance,              |        |                  |
+#   step  : |                                       | optLargeDesignFast, optLargeDesign, default.       |        |                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System routerType  <val>              | Set the router type of zPar.                       | EZCR   | EZCR             |
+#   step  : |                                       | The available value are                            |        |                  |
+#   step  : |                                       | wirelength_timing_coopt(ZCR)                       |        |                  |
+#   step  : |                                       | partition_quality_checker(PQC)                     |        |                  |
+#   step  : |                                       | shortest_path_router(SPR)                          |        |                  |
+#   step  : |                                       | enhanced_zcr(EZCR)                                 |        |                  |
+#   step  : |                                       | legacy                                             |        |                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System pinAssignmentEffort <val>      | Set the pinassignment effort of zpar.              | zap    | zap              |
+#   step  : |                                       | The available value are no_effort, low, medium,    |        |                  |
+#   step  : |                                       | high, zap.                                         |        |                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System incremental                    | Incremental Mode                                   |disabled| disabled         |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System socketMode <val>               | Set socket mode                                    | depend | native           |
+#   step  : |                                       | The available value depends on product type        |   on   |                  |
+#   step  : |                                       | Possible value: v5v6v7, component, native, leo     | product|                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System socketGenerationSAG            | Turn on signal alignment generate flow.            |disabled| disabled         |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System socketGenerationNSG            | Turn on New Socket Generate flow.                  |disabled| enabled          |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System enable_MGT_fast                | Turn on fast MGT.                                  | enabled| enabled          |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System enable_MGT_fast_margin         | Turn on fast MGT margin.                           |disabled| disabled         |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step  : | System dedupClockDomains <val>        | Set dedup clock domain option.                     | enabled| enabled          |
+#   step  : |                                       | The available value: true , false                  |        |                  |
+#   step  : +---------------------------------------+----------------------------------------------------+--------+------------------+
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   No inter-fpga filter path found
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 185 ns
+#   step REPORT :   Critical routing data path delay : 185 ns
+#   step REPORT :   . Constant part    : 175 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   No fast waveform captures found
+#   step REPORT :   Driver clock frequency is constrained at a maximum of 10000kHz (100ns)
+#   step REPORT :   Driver clock frequency is limited by routing data paths : 185ns
+#   step REPORT :   The theoretical frequency using default settings and ignoring clock skew is 5428 Khz
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+#   step FinishBody. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.87       fm:197507 m     vm:3344 m       vm:+0 m     um:2620 m       um:+0 m
+
+#   exec summary :    9 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m13s, user 0m10.388s, sys 0m1.458s
+#   exec summary : Total memory: 3424544 kB - RSS memory: 2683884 kB - Data memory: 2950544 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 19:02:33 2025
+#   step zPar : Saving report before exiting.
+command exit code is '0'

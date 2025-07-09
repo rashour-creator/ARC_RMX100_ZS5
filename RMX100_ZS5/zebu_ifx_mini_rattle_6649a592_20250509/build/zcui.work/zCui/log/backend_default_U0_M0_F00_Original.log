@@ -1,0 +1,89 @@
+Job <80667786> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on us01zebu-4587-002.static.us01-p06.synopsys.com>>
+make[1]: Entering directory `/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0'
+if [ -f "./job.F00.qdel.done" -o -f "./job.F00.bkill.done"  ]; then \
+  echo "" ;\
+  echo "fpga FX=F00 has already a winner ... This job will not start" ;\
+  echo "" ;\
+else \
+    if [[ "Original" == "Original" ]]; then if [ -e  F00.src/zebu_common_env.mk ]; then rm -rf F00.src/zebu_common_env.mk; fi ; if [ -e  F00.src/zebu_lic_error ]; then rm -rf F00.src/zebu_lic_error; fi; echo "export ZEBU_FPGA_SRC_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.src"            > F00.src/zebu_common_env.mk ; echo "export ZEBU_FPGA_ORIGINAL_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original" >> F00.src/zebu_common_env.mk ; echo "export ZEBU_FPGA_MODULE_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0"                  >> F00.src/zebu_common_env.mk ; fi ;\
+	LABEL=Original FX=F00 zIseManager F00 Original YES /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/fpga_parff_strategies.xcui NO  ;\
+fi
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original :                                      ZeBu (R)
+# FX=F00 LABEL=Original :                                    zIseManager
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original :             Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original :                      Copyright (c) 2002 - 2024 Synopsys, Inc.
+# FX=F00 LABEL=Original :     This software and the associated documentation are proprietary to Synopsys,
+# FX=F00 LABEL=Original :   Inc. This software may only be used in accordance with the terms and conditions
+# FX=F00 LABEL=Original :   of a written license agreement with Synopsys, Inc. All other use, reproduction,
+# FX=F00 LABEL=Original :     or distribution of this software is strictly prohibited.  Licensed Products
+# FX=F00 LABEL=Original :       communicate with Synopsys servers for the purpose of providing software
+# FX=F00 LABEL=Original :      updates, detecting software piracy and verifying that customers are using
+# FX=F00 LABEL=Original :      Licensed Products in conformity with the applicable License Key for such
+# FX=F00 LABEL=Original :    Licensed Products. Synopsys will use information gathered in connection with
+# FX=F00 LABEL=Original :      this process to deliver software updates and pursue software pirates and
+# FX=F00 LABEL=Original :                                     infringers.
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original :   Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+# FX=F00 LABEL=Original :              Inclusivity and Diversity" (Refer to article 000036315 at
+# FX=F00 LABEL=Original :                          https://solvnetplus.synopsys.com)
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original :  
+# FX=F00 LABEL=Original : Parsing parameter file /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/fpga_parff_strategies.xcui
+
+Enter linking zNetgen phase, so that zNetgen will not be rerun.
+# FX=F00 LABEL=Original : Synchronization policy: 2
+# FX=F00 LABEL=Original : Lock file name: /tmp/zim.lock_cZemDKKHwZ
+# FX=F00 LABEL=Original : pid 2956994
+# FX=F00 LABEL=Original : # running command: make -f design.mk  &> compilation.log
+# FX=F00 LABEL=Original : Monitor father = 2956994
+# FX=F00 LABEL=Original : Monitoring compilation F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_NETLIST_ANALYSIS_PREPROCESSING
+# FX=F00 LABEL=Original : running VIVADO_READ_CONSTRAINTS
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_OPT_DESIGN
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_POST_OPT_NETLIST_ANALYS_PROCESSING
+# FX=F00 LABEL=Original : running VIVADO_PLACE_DESIGN
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_POST_PLACE_PHYS_OPT_DESIGN
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_ROUTE_DESIGN
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_POST_ROUTE_PHYS_OPT_DESIGN
+# FX=F00 LABEL=Original : running VIVADO_TIMING
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_DRC_BITSTREAM_CHECK
+# FX=F00 LABEL=Original : running WRITE_BITSTREAM
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_ZTIME_ANALYSE_ROUTE
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : running VIVADO_LOCATION_BUILDING
+# FX=F00 LABEL=Original : running VIVADO_WRITE
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : success 1 constraint_not_met 0 fatal_error 0
+/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original
+# FX=F00 LABEL=Original : finished OK
+# FX=F00 LABEL=Original : receive TERM for 2956994
+# FX=F00 LABEL=Original : killing Monitor process: 2957065
+
+# FX=F00 LABEL=Original : Makefile - End of zIseManager
+# FX=F00 LABEL=Original : Makefile - Checking Final status from xstep.cui file
+# FX=F00 LABEL=Original : Makefile - Finished detected
+make[1]: Leaving directory `/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0'
+command exit code is '0'

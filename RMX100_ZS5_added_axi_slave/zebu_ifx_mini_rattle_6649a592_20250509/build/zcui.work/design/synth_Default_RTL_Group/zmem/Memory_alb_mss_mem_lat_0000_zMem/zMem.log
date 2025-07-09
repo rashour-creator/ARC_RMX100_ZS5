@@ -1,0 +1,161 @@
+
+                                    ZeBu (R)
+                                      zMem
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zMem -createList -addScript ../../../../additionalZmemCommandFile.tcl -addScript ../../../../utf_generatefiles/zMem_config.tcl -debug -newLatency ../alb_mss_mem_lat_0000.zmem 
+
+# start time is Wed May 14 18:56:36 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:25
+# ---------------------------System Context--------------------------- 
+# Cpu        40 x bogomips - 5005.67 Intel(R) Xeon(R) Gold 6248 CPU @ 2.50GHz
+#            Load: 9.94 10.21 9.34 14/1935 1925292
+#            Hostname: odcphy-vg-1110   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 772413 MB Free: 655924 MB
+#            Swap space: 262143 MB Free Swap space: 258798 MB
+#            VmSize: 181 MB VmPeak: 181 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11745928
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step DEFINE : Latency is using 4-bits-16-values encoding
+#   step DEFINE : Evaluate additionnal script '../../../../additionalZmemCommandFile.tcl'.
+set_fpga_family v8 vu19p
+automatic_selection -ramlut_to_bram 11
+automatic_selection -ramlut -max_blocs 34480
+automatic_selection -bram -max_blocs 540
+automatic_selection -uram -max_blocs 80
+set_max_sys_freq clk_100
+#   step DEFINE : Evaluate additionnal script '../../../../utf_generatefiles/zMem_config.tcl'.
+enable_bram_dual_port_multiplexed
+memory set_global_debug_mode true
+#   step DEFINE : Global debug mode is ON
+mem new alb_mss_mem_lat_0000_ZMEM_i_bdel_mem auto
+#   step DEFINE : New memory : alb_mss_mem_lat_0000_ZMEM_i_bdel_mem
+mem depth 1024
+#   step DEFINE : Set memory : alb_mss_mem_lat_0000_ZMEM_i_bdel_mem depth 1024
+mem width 2
+#   step DEFINE : Set memory : alb_mss_mem_lat_0000_ZMEM_i_bdel_mem width     2
+mem add_port w0 w
+#   step DEFINE : New port : 'w0' 'w' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+mem set_port_access w0 sync
+#   step DEFINE : Set port access 'sync' of port 'w0' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+mem_port w0 clk w0clk
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'w0'.
+mem_port w0 addr w0addr
+#   step DEFINE : Set 'addr' pin name 'w0addr' for port 'w0'.
+mem_port w0 di w0di
+#   step DEFINE : Set 'di' pin name 'w0di' for port 'w0'.
+mem_port w0 we w0we
+#   step DEFINE : Set 'we' pin name 'w0we' for port 'w0'.
+mem add_port r1 r
+#   step DEFINE : New port : 'r1' 'r' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+mem set_port_access r1 async
+#   step DEFINE : Set port access 'async' of port 'r1' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+mem_port r1 addr r1addr
+#   step DEFINE : Set 'addr' pin name 'r1addr' for port 'r1'.
+mem_port r1 do r1do
+#   step DEFINE : Set 'do' pin name 'r1do' for port 'r1'.
+mem new alb_mss_mem_lat_0000_ZMEM_i_rdel_mem auto
+#   step DEFINE : New memory : alb_mss_mem_lat_0000_ZMEM_i_rdel_mem
+mem depth 1024
+#   step DEFINE : Set memory : alb_mss_mem_lat_0000_ZMEM_i_rdel_mem depth 1024
+mem width 131
+#   step DEFINE : Set memory : alb_mss_mem_lat_0000_ZMEM_i_rdel_mem width   131
+mem add_port w0 w
+#   step DEFINE : New port : 'w0' 'w' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+mem set_port_access w0 sync
+#   step DEFINE : Set port access 'sync' of port 'w0' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+mem_port w0 clk w0clk
+#   step DEFINE : Set 'clk' pin name 'w0clk' for port 'w0'.
+mem_port w0 addr w0addr
+#   step DEFINE : Set 'addr' pin name 'w0addr' for port 'w0'.
+mem_port w0 di w0di
+#   step DEFINE : Set 'di' pin name 'w0di' for port 'w0'.
+mem_port w0 we w0we
+#   step DEFINE : Set 'we' pin name 'w0we' for port 'w0'.
+mem add_port r1 r
+#   step DEFINE : New port : 'r1' 'r' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+mem set_port_access r1 async
+#   step DEFINE : Set port access 'async' of port 'r1' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+mem_port r1 addr r1addr
+#   step DEFINE : Set 'addr' pin name 'r1addr' for port 'r1'.
+mem_port r1 do r1do
+#   step DEFINE : Set 'do' pin name 'r1do' for port 'r1'.
+mem generate
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'bram' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'uram' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'ramlut' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'zrm' for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Type 'bram' has been chosen for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step MEMORY CHECK : Fast clock used for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step ZMEM : Non-Optimizable zview instances used in module 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step MEMORY MAPPING :   RAMB36E1    1
+#   step RESOURCE CHECK :   REG   10
+#   step RESOURCE CHECK :   LUT   0 (RAMLUT: 0)
+#   step RESOURCE CHECK :   BRAM  1
+#   step RESOURCE CHECK :   URAM  0
+#   step ZMEM : Fast system clock 'clk_100' is used for memory 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'.
+#   step SERIALIZE : writing netlist 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem' into znl file 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem.edf.gz'
+#   step SERIALIZE : #bytes in: 5388, #bytes out: 2396, compression ratio: 2.248748
+#   step GENERATE : generating vhdl wrapper 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem.vhd'
+#   step GENERATE : generating vhdl wrapper 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_bbx.vhd'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem.v'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_bbx.v'
+#   step VERILOG GENERATOR : writing netlist 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem' into verilog file 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_gates.v'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_gates_ins.v'
+#   step GENERATE : generating report file 'alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_report.log'
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'bram' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'uram' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'ramlut' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Evaluating type 'zrm' for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step AUTOMATIC TYPE SELECTION : Type 'bram' has been chosen for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step MEMORY CHECK : Fast clock used for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step ZMEM : Non-Optimizable zview instances used in module 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step MEMORY MAPPING :   RAMB36E1    4
+#   step RESOURCE CHECK :   REG   10
+#   step RESOURCE CHECK :   LUT   0 (RAMLUT: 0)
+#   step RESOURCE CHECK :   BRAM  4
+#   step RESOURCE CHECK :   URAM  0
+#   step ZMEM : Fast system clock 'clk_100' is used for memory 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'.
+#   step SERIALIZE : writing netlist 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem' into znl file 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem.edf.gz'
+#   step SERIALIZE : #bytes in: 18715, #bytes out: 6117, compression ratio: 3.059506
+#   step GENERATE : generating vhdl wrapper 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem.vhd'
+#   step GENERATE : generating vhdl wrapper 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_bbx.vhd'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem.v'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_bbx.v'
+#   step VERILOG GENERATOR : writing netlist 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem' into verilog file 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_gates.v'
+#   step GENERATE : generating verilog wrapper 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_gates_ins.v'
+#   step GENERATE : generating report file 'alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_report.log'
+
+#   exec summary :    0 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : user 0m0.214s, sys 0m0.72s
+#   exec summary : Total memory: 505668 kB - RSS memory: 138944 kB - Data memory: 126320 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 18:56:37 2025

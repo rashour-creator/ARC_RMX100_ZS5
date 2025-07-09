@@ -1,0 +1,33 @@
+#   step REPORT : Synthesizing module : zebu_top
+#   step REPORT : [39.349] Optimizing module : zebu_top
+#   step REPORT : [39.350] Instance count of module zebu_top is 1
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net ref_clk_cnt__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ref_clk_cnt__MD_2
+#   step REPORT : [6.1691] Total net count: 436
+#   step REPORT : [6.1690] There are 9 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 31
+#   step REPORT : [6.1696] Total LUT area: 31
+#   step REPORT : [6.1697] State    : 64
+#   step REPORT : [6.1697]   (FF)   : 64
+#   step REPORT : [6.1697] CARRY    : 8
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zebu_top' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  64 |                  31 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   8 |                   0 |                   0 |                   0 || zebu_top
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zebu_top' to 'edif/zebu_top/zebu_top.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zebu_top/zebu_top.edf.gz'
+#   step SERIALIZE : #bytes in: 13924, #bytes out: 4388, compression ratio: 3.173200
+#   step REPORT : [87.28] Resource usage for zebu_top: 0.049s 0.0M

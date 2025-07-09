@@ -1,0 +1,2495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config_list>
+  <tool_config version="1.0.108" mwdt_version="W-2025.03" utc_date="13-05-2025 14:19:06"/>
+  <configuration name="BCRs" filename="bcr_contents.txt">
+    <string><![CDATA[
+	0x301	0x40901105	MISA
+	0x310	0x400		MSTATUSH
+	0x7a1	0xf0000000	TDATA1
+	0x7a4	0x10080c0	TINFO
+	0x7c0	0x1		MICCM_CTL
+	0x7c2	0x80000001	MDCCM_CTL
+	0x7c6	0xf0000000	ARCV_PER0_BASE
+	0x7c7	0x1		ARCV_PER0_SIZE
+	0x7c8	0x3		MCACHE_CTL
+	0x7d0	0x0		MWDT_PASSWD
+	0x7d8	0x1ff		PMA_ADDR0
+	0x7d9	0x1ff		PMA_ADDR1
+	0x7da	0x1ff		PMA_ADDR2
+	0x7db	0x1ff		PMA_ADDR3
+	0x7dc	0x1ff		PMA_ADDR4
+	0x7dd	0x1ff		PMA_ADDR5
+	0x7f0	0x1		MSFTY_PASSWD
+	0x7f1	0x55555555	MSFTY_CTRL
+	0x7f2	0x55555555	MSFTY_DIAG
+	0x7f3	0x1		MSFTY_STL_CTRL
+	0xf12	0x80000401	MARCHID
+	0xf13	0x10100		MIMPID
+	0xf14	0x0		MHARTID
+	0xf15	0x0		MCONFIGPTR
+	0xfc0	0x8fa13c01	ARCV_MWDT_BUILD
+	0xfc1	0xe00		ARCV_MMIO_BUILD
+	0xfc3	0x80601		ARCV_HPM_BUILD
+	0xfc6	0x44000001	ARCV_MSFTY_BUILD
+	0xfca	0xe0010001	ARCV_TIMER_BUILD
+	0xfcb	0x1		ARCV_BCR_BUILD
+	0xfcc	0xa1001		ARCV_PMP_BUILD
+	0xfce	0x601		ARCV_PMA_BUILD
+	0xfd0	0x20901		ARCV_DCCM_BUILD
+	0xfd1	0x13101		ARCV_ICACHE_BUILD
+	0xfd2	0x801		ARCV_ICCM_BUILD
+	0xfd4	0x10000113	ARCV_CLINT_BUILD
+	0xfd5	0x10010001	ARCV_IMSIC_BUILD
+	0xfd9	0x201		ARCV_TRIGGERS_BUILD
+	0xfdb	0x80002001	ARCV_SEC_BUILD
+	0xfdd	0x101		ARCV_DMP_PER_BUILD
+	0xfde	0x3341be1	ARCV_ISA_OPTS_BUILD
+	0xfe0	0xc3601		ARCV_RAS_BUILD
+	0xff0	0x0		ARCV_SR_EPC
+]]></string>
+  </configuration>
+  <configuration name="build_version_info" filename="build_version_info.txt">
+    <string><![CDATA[
+Version Information:
+    ARChitect W-2025.03
+    IP Libraries:
+        ARCv5EM            v3.5.999999999
+        ARC xCAM           v4.3.24
+        ARC_COSIM          v3.2.999999999
+        ARC_Soc_Trace      v1.0.999999999
+        ARC_Trace          v3.0.999999999
+        ARCv2_ZEBU_RDF     v2.0.999999999
+        ARCv2MSS           v2.1.999999999
+        ARCV_CCT           v1.1.999999999
+        Basic_core_modules  v1.1.999999999
+        Implementation     v1.1.14
+        safety             v1.1.999999999
+        Tool Configuration  v1.0.108
+]]></string>
+  </configuration>
+  <configuration name="mw_compiler" filename="ccac.arg">
+    <string><![CDATA[
+	-av5rmx
+	-core1
+	-Za
+	-Zca
+	-Zm
+	-Zcb
+	-Zcmp
+	-Zcmt
+	-Zba
+	-Zbb
+	-Zbs
+	-Zicond
+	-Zicbom
+	-Zicbop
+	-Xunaligned
+	-Zifencei
+	-Zihintpause
+	-Zicsr
+	-Xmpy_cycles=10
+	-Smrnmi
+]]></string>
+  </configuration>
+  <configuration name="nSIM" filename="nsim.props">
+    <string><![CDATA[
+	nsim_isa_family=rv32
+	nsim_isa_core=0
+	nsim_isa_rv_marchid=0x80000401
+	nsim_isa_rv_mimpid=0x10100
+	nsim_isa_unaligned_option=1
+	nsim_isa_ext=-all.i.zicsr.zifencei.zihintpause.a.zca.m.u.zcb.zcmp.zcmt.zba.zbb.zbs.zicond.zicbom.zicbop
+	nsim_rv_reset_pc=0x0
+	nsim_rv_reset_pc_ext=1
+	nsim_isa_mpy_option=10c
+	iccm0_base=0x0
+	iccm0_size=0x80000
+	dccm_base=0x80000000
+	dccm_size=0x100000
+	nsim_isa_dccm_mem_cycles=1
+	icache=0x4000,32,2,a
+	nsim_isa_ic_version=1
+	nsim_mmio_base=0xe00
+	nsim_rtia_hart_major_prio=1
+	nsim_rtia_hart_major_prio_width=6
+	nsim_isa_ext=+stsp.snvi.-sstc
+	nsim_isa_ext=+smrnmi
+	nsim_rnmi_vec_ext=1
+	nsim_rnmi_int_vec=0x100
+]]></string>
+  </configuration>
+  <configuration name="architect" filename="build_configuration.txt">
+    <string><![CDATA[
+######## IP Libraries: ########
+# ARCv5EM, v3.5.999999999                /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARCV5EM_a9ec96d7/ip_library
+# ARC xCAM, v4.3.24                      /global/apps/architect_2025.03/ARChitect/lib/ARC_xCAM.iplib
+# ARC_COSIM, v3.2.999999999              /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_COSIM_6ea659d0/ip_library
+# ARC_Soc_Trace, v1.0.999999999          /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_SOC_TRACE_d03c7280/ip_library
+# ARC_Trace, v3.0.999999999              /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_TRACE_df791d41/ip_library
+# ARCv2_ZEBU_RDF, v2.0.999999999         /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library
+# ARCv2MSS, v2.1.999999999               /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARCV2MSS_bd839c44/ip_library
+# ARCV_CCT, v1.1.999999999               /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/CCTRV_0a73081c/ip_library
+# Basic_core_modules, v1.1.999999999     /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library
+# Implementation, v1.1.14                /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/IMPLEMENTATION_a9ec96d7/ip_library
+# safety, v1.1.999999999                 /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_SAFETY_a9a56107/ip_library
+# Tool Configuration, v1.0.108           /u/prjauto/arcartifactory-01/EngArea-Tools/CGEN/1.0.108/tool_configuration_v1.0.108.iplib
+
+######## zebu_ifx_mini_rattle_6649a592_20250509 --- com.arc.templates.project.Empty.1_0 ########
+
+# BuildHTMLDocs --- Creates custom HTML documentation in the 'docs' directory.
+-build_html_docs false
+
+# BuildSoftware --- Creates software under the Software directory.
+-build_software false
+
+# BuildTestCode --- Creates test source code under the 'tests' directory.
+-build_test_code false
+
+# BuildScripts --- Creates synthesis scripts and configuration files, which are required for hierarchy generation.
+-build_scripts true
+
+# BuildHDL --- Creates the behavioural and synthesisable HDL source code.
+-build_hdl true
+
+# CompileTestCode --- Compiles and assembles the test code.
+-compile_test_code false
+
+# GenerateStructuralHDL --- Generate the necessary structural HDL
+-generate_structural_hdl true
+
+# CompileForHDLSimulation --- Compile the HDL ready for simulation, using the selected Simulator.
+-compile_hdl_for_simulation false
+
+# BuildXCAM --- 
+# When true, build the XCAM cycle accurate model from HDL.
+# This happens only when the VTOC component (in the XCAM library) has been added to the design.
+# 
+-build_xcam false
+
+# RunARCsyn --- Synthesize design using ARCsyn
+-run_arcsyn false
+
+# RunSEIF --- Run Synopsys Embedit Integrator Flow to generate configured memory instances
+-run_seif false
+
+# RunARCrams --- Run ARCrams on the current build, this will stitch in vendor supplied RAM models and update the synthesis and simulation environment to use the models.
+-run_arcrams false
+
+# RunARCformal --- Formal Verification using ARCformal
+-run_arcformal false
+
+# RunARCpower --- Run the Power Analysis using RTL simulation to derive the activity
+-run_arcpower false
+
+# compile_nsim_user_extensions --- Build nSIM extensions for any APEX components in the current design using their C Models.
+-compile_nsim_user_extension false
+
+# compile_translated_nsim_extensions --- Converts APEX extensions from Verilog to C++ and compiles the model for nSIM.
+-compile_translated_nsim_extensions false
+
+
+######## System --- com.arc.hardware.System.1_0 ########
+
+# Create System
+-create com.arc.hardware.System.1_0 System
+
+# Testbench --- 
+# Only the rascal testbench is supported, and is required by ARCtest.
+# 	
+-testbench rascal
+
+# SynthesisLevel --- 
+# Sets the top level module name for synthesis.  
+# 
+# If not using core_sys: for single-core designs, cpu_isle is used; for multicore designs, archipelago is used.
+# 	
+-synthesislevel cpu_isle/archipelago
+
+# GateLevelSim --- When selected the gate level sim test code and scripts would be installed to run ARCgatesim
+-gatesim true
+
+# UserLibraryName --- The name for your HDL library
+-library_name user
+
+# OPTION_SimulatorName --- The name of the simulator you wish to use
+-simulator vcs
+
+# sim64 --- When selected, the 64-bit version of the simulator is used.  Be sure you have the 64-bit-capable simulator installed  and $ARCHITECT_ROOT/lib/linux_x86_64/ added to your LD_LIBRARY_PATH.
+# The setting of this option affects the content of the generated makefile_interface_*_verilog, where * is the simulator name.
+-sim64 false
+
+# verilog_2001 --- Enable Verilog 2001 file-io syntax (if false: use pli)
+-verilog_2001 true
+
+# export_srams_to --- Where to place srams, if not cpu_top
+-export_srams_to archipelago
+
+# copy_prefix --- 
+# A Copy Prefix P causes creation of a separate copy of the entire Verilog build where each Verilog filename, module, and `define is prefixed with P and copied to a separate directory named P.
+# 	
+-copy_prefix ""
+
+
+######## ARCRV CCT --- cct.RV.1_0 ########
+
+# Create ARCRV CCT
+-create cct.RV.1_0 "System.ARCRV CCT"
+
+# cct --- 
+# 	Option used to add a CCT to the design for command-line builds
+# 	Without this architect can't add this component to a build
+# 	via a cmdline -create command.  
+# 	with old scripts.
+# 	
+-cct true
+
+# no_hostlink --- 
+# This prevents the inclusion of the hostlink library (semihosting for ARC-V) when compiling
+# C or C++ programs.  The resultant executable, if it contains printfs,
+# will print to an internal fixed buffer __mwwrite_buf.  
+# Other hostlink operations that require debugger assistance, such as file
+# opens, will fail.
+# 
+# Hostlink references incur memory cycles at unpredictable times and 
+# so can perturb cycle-timing results.  Without hostlink,
+# the debugger will not in any way interfere with the target while it is running.  
+# Therefore this option is useful for simulation in which you want precisely the
+# same cycle timing to occur each time you run, or for accurate power consumption results.
+# 	
+-cct_no_hostlink false
+
+
+######## ARCV_DM --- com.arc.hardware.ARC_Soc_Trace.ARCV_DM.1_0 ########
+
+# Create ARCV_DM
+-create com.arc.hardware.ARC_Soc_Trace.ARCV_DM.1_0 System.ARCV_DM
+
+# dm_dbg_secure --- none: No Security Interface implemented for Debug Module.
+#  
+# full: Full Security Interface implemented for Debug Module.
+#  
+# unlock_only: Unlock Security Interface is implemented.
+# 
+-dm_dbg_secure unlock_only
+
+# dm_system_bus_access --- Adds System Bus Access feature
+-dm_system_bus_access false
+
+# dm_dbg_apb_async --- Use Asynchronous Debug APB interface
+-dm_dbg_apb_async false
+
+# dm_abc_ibp_if_srcsync --- Use SRCSYNC module on ABC-IBP interface. 0: without src_sync module, 1: with src_sync module
+-dm_abc_ibp_if_srcsync false
+
+
+######## BusFabric --- com.arc.hardware.ARCv2MSS.BusFabric.1_0 ########
+
+# Create BusFabric
+-create com.arc.hardware.ARCv2MSS.BusFabric.1_0 System.BusFabric
+
+# alb_mss_fab_def_div2ref --- This specifies the clock division factor at reset. It is used for mss clock controller to generate mss fabric clock, and the value N means mss fabric is running at (1/N) x ref_clk.
+-alb_mss_fab_def_div2ref 1
+
+# alb_mss_fab_lat --- This specifies the maximum latency in the master latency units.
+-alb_mss_fab_lat 0
+
+# alb_mss_fab_lat_rd --- This specifies the maximum read latency in the master latency units.
+-alb_mss_fab_lat_rd 0
+
+# alb_mss_fab_lat_wr --- This specifies the maximum write latency in the master latency units.
+-alb_mss_fab_lat_wr 0
+
+# alb_mss_fab_cdc_fifo_en --- This enables CDC FIFO from core clock domain to MSS clock domain.
+-alb_mss_fab_cdc_fifo_en false
+
+# alb_mss_fab_def_lat --- This specifies the latency after reset for the master latency units.
+-alb_mss_fab_def_lat 0
+
+# alb_mss_fab_def_lat_rd --- This specifies the read latency after reset for the master latency units.
+-alb_mss_fab_def_lat_rd 0
+
+# alb_mss_fab_def_lat_wr --- This specifies the write latency after reset for the master latency units.
+-alb_mss_fab_def_lat_wr 0
+
+# alb_mss_fab_def_wr_bw --- This specifies the write channel bandwidth parameter after reset for the master bandwidth control units.
+-alb_mss_fab_def_wr_bw 0
+
+# alb_mss_fab_def_rd_bw --- This specifies the read channel bandwidth parameter after reset for the master bandwidth control units.
+-alb_mss_fab_def_rd_bw 0
+
+# alb_mss_ccm_base --- This specifies the base address at which the ICCM and DCCM DMIs will be placed in the memory map. The address should be divided by 4KB i.e. do not specify the lower 12 bits of the address.
+-alb_mss_ccm_base 0x4_0000
+
+
+######## CPUisle --- com.arc.hardware.EM.CPU_isle.1_0 ########
+
+# Create CPUisle
+-create com.arc.hardware.EM.CPU_isle.1_0 System.CPUisle
+
+# unique_name --- verilog module modifier prefix
+-unique_name ""
+
+# ArcNum --- The processor number as read back in the ARCNUM field of the IDENTITY register.
+-arc_num 0
+
+# instances --- 
+# The number of instantiations of this core.
+# 
+-instances 1
+
+# CPUFloorplan --- Floorplan giving relative placement of the RAMs  for the given configuration of ARCv3HS or ARCv2HS or ARCv2EM in this CPUisle
+-cpu_floorplan User
+
+# userCPUFloorplanPath --- Pathname of user floorplan for the CPU when using a hierarchical implementation
+-usercpufloorplan_path ""
+
+# pinLocationConstraintsFile --- Pathname+filename of the physical pin location constraints file or just "side1" (all pins on l.h.s) or "side2" (pins on top only) or "side3" (pins on r.h.s. only) or "side4" (pins on bottom only) to get a template file generated
+-pin_location_constraints_file ""
+
+
+######## ARCv5EM --- com.arc.hardware.EM.ARCv5EM.1_0 ########
+
+# Create ARCv5EM
+-create com.arc.hardware.EM.ARCv5EM.1_0 System.CPUisle.ARCv5EM
+
+# rnmi_vec_ext --- When this option is set, the RNMI base address is defined by option reset_pc.
+-rnmi_vec_ext true
+
+# rnmi_int_vec --- RNMI interrupt base address, 8B aligned. This is N/A when the RNMI base exterbal option is selected
+-rnmi_int_vec 0
+
+# mmio_base_ext --- When this option is set, the MMIO base address is defined by external pins.
+-mmio_base_ext true
+
+# mmio_base --- MMIO base address[31:20], 1MB aligned. This is N/A when the MMIO base exterbal option is selected
+-mmio_base 3584
+
+# dmi_burst_option --- This enables high-throughput burst support on the DMI slave interfaces
+-dmi_burst_option false
+
+# mem_bus_option --- The core supports four bus protocols for accessing external memory: AHB5 and AXI5.
+-mem_bus_option AHB5
+
+# mem_bus_num --- This specifies the number of memory buses.
+-mem_bus_num 1
+
+# per0_bus_option --- The core supports the following bus protocols for accessing the peripheral space, when enabled: AHB5, APB and AXI5.
+-per0_bus_option AHB5
+
+# nvm_bus_option --- The core supports the following bus protocols for accessing the NVM space, when enabled: AHB5 and AXI5.
+-nvm_bus_option AHB5
+
+# bus_ecc_parity_option --- This option indicates whether ODD parity or EVEN parity will be used for signals on memory bus when safety feature enabled.
+-bus_ecc_parity_option Odd
+
+# rmx_isa_profile --- This is the baseline ISA for this core. The mini_profile is based on RV32E, and the default_profile is based on RV32I
+-rmx_isa_profile default_profile
+
+# rv_zicsr_option --- This is the RISC-V Zicsr extension for the mini profile
+-rv_zicsr_option true
+
+# rv_c_bit_manip_icond_option --- This option configures the following RISC-V extensions: Zce, Zba, Zbb, Zbs, and Zicond
+-rv_c_bit_manip_icond_option true
+
+# rv_a_option --- This is the RISC-V A extension
+-rv_a_option true
+
+# rv_m_option --- This is the RISC-V M extension
+-rv_m_option true
+
+# rv_zfinx_option --- This option includes the single-precision floating point extension, sharing the integer register file.
+-rv_zfinx_option false
+
+# rv_zdinx_option --- This option includes the double-precision floating point extension, using the register pairs in integer register file.
+-rv_zdinx_option false
+
+# rvv_option --- This is the RISC-V V extension
+-rvv_option false
+
+# rv_udsp_option --- This is the propriatary micro-DSP extension
+-rv_udsp_option false
+
+# rv_s_option --- Supervisor mode support
+-rv_s_option false
+
+# rv_wg_option --- World Guard support
+-rv_wg_option true
+
+# wid_mode --- Static built defined WID or dynamic WID.
+-wid_mode Dynamic
+
+# wid_num --- Number of worlds
+-wid_num 32
+
+# wid_fixed --- WID when wid_mode is static
+-wid_fixed 0
+
+# mpy_option --- The Multiplier option allows selection between several multiplier configurations to tradeoff performance with silicon area.
+# For select multiply options, when the DIV/REM option is also selected, some datapath resources will be shared between the multiply and divide pipeline to minimize total area.
+# 
+# <pre>
+# 
+# mpy_option  div_rem_option  Description
+# ----------  --------------  ---------------------
+#       
+# none	       none            no MPY, no DIV
+# 1c	         none or true    1c MPY with optional radix4_enhanced divider
+# 2c	         none or true    2c MPY with optional radix4_ennhanced divider
+# 10c	       none or true    10c MPY with optional radix2 divider
+# </pre>
+# 
+-mpy_option 10c
+
+# ld_st_queue --- Number of entries of the Load-Store Queue
+-ld_st_queue 2
+
+# ld_st_unaligned --- Support Unaligned Load-store accesses
+-ld_st_unaligned true
+
+# secded_option --- This option defines the implementation of the ECC SECDED algorithm. Applicable to all memories configured with ECC
+-secded_option all_01
+
+# sbe_addr_depth --- Configures recording of SBE address and syndrome depth. One set per memory, single option for all memories
+-sbe_addr_depth 1
+
+# halt_on_reset --- This defines whether the core is halted afterreset.
+-halt_on_reset true
+
+# soft_reset_option --- Set this option to enable soft-reset. This is a debug feature providing a mechanism to recover from system malfunctioning
+-soft_reset_option true
+
+# reset_pc_ext --- Set this option to drive the upper 22 bits [31:10] of the reset PC using the input signal reset_pc_in.
+-reset_pc_ext true
+
+# reset_pc --- This sets the upper 32-10 = 22 bits (32-bit core) or 64-11 = 53 bits (64-bit core) of the PC after reset Because this alue is the upper bits, the reset PC is aligned toa 1K-byte (32-bit) or 2K-byte (64-bit) boundary.
+-reset_pc 0x0
+
+# logic_bist --- This option will OR LBIST_EN with test_mode
+-logic_bist true
+
+# power_domains --- Add power domains and propagates power-gate control signals to the top level. Also generates UPF constraints and commands in the low-power scripts
+-power_domains false
+
+# clock_gating --- This enables the insertion of architectural clock gate elements in the design. By enabling this option, the clocks to various parts of the design will be disabled when the logic they drive is not in use to save power.
+-clock_gating true
+
+# backdoor_ccm --- Include a backdoor model for CCMs This provides memory access from the debugger without consuming simulation time.  This is presently unavaiable when ECC is enabled on the CCMs.  The backdoor models are disabled `ifdef SYNTHESIS and can also be manually disabled by defining DISABLE_BACKDOOR_CCM when compiling.
+-backdoor_ccm false
+
+
+######## Core Local Interrupt Controller --- com.arc.hardware.EM.Core_Local_Interrupt_Controller.1_0 ########
+
+# Create Core Local Interrupt Controller
+-create com.arc.hardware.EM.Core_Local_Interrupt_Controller.1_0 "System.CPUisle.ARCv5EM.Core Local Interrupt Controller"
+
+# small_interrupt --- Small interrupt controller that don't need APLIC
+-small_interrupt false
+
+# sfty_irq_dual --- Number of external interrupts as dual-rail
+-sfty_irq_dual 0
+
+# rtia_stsp --- Include/exclude ARC-V ISA trap stack pointer extension
+-rtia_stsp true
+
+# rtia_snvi --- Include/exclude ARC-V nested vector interrupts extension
+-rtia_snvi true
+
+# rtia_smrnmi --- Include/exclude ARC-V resumable NMI
+-rtia_smrnmi true
+
+# rtia_hart_major_prio --- Include/exclude major interrupts priority run-time configuration
+-rtia_hart_major_prio true
+
+# rtia_hart_major_prio_width --- Number of priority bits for major interrupts
+-rtia_hart_major_prio_width 6
+
+# rtia_sswi --- Include/exclude supervisor software interrupt
+-rtia_sswi false
+
+# rtia_delivery --- Configure interrupt delivery mechanism supported by the hart to either memory-mapped MSI, Direct MSI or both
+-rtia_delivery DMSI
+
+# rtia_imsic_m_mode_file --- Include/exclude machine mode interrupt file
+-rtia_imsic_m_mode_file true
+
+# rtia_imsic_m_file_size --- Size of M-mode IMSIC interrupt file
+-rtia_imsic_m_file_size 64
+
+
+######## Core Private Peripheral0 --- com.arc.hardware.EM.Core_Private_Peripheral0.1_0 ########
+
+# Create Core Private Peripheral0
+-create com.arc.hardware.EM.Core_Private_Peripheral0.1_0 "System.CPUisle.ARCv5EM.Core Private Peripheral0"
+
+# per0_base --- Sets the base region assignment for DMP Private Peripheral region. Specifies the base address of the peripheral aperture, aligned on a 1MB boundary
+-per0_base 3840
+
+# per0_size --- Sets the size of the Peripheral region in 1MB increments
+-per0_size 1
+
+
+######## DCCM --- com.arc.hardware.EM.DCCM.1_0 ########
+
+# Create DCCM
+-create com.arc.hardware.EM.DCCM.1_0 System.CPUisle.ARCv5EM.DCCM
+
+# dccm_size --- This defines the size of the Data Closely Coupled Memory (DCCM) in bytes
+-dccm_size 1048576
+
+# dccm_base --- Sets the initial memory region assignment for DCCM base address bits [31:20]. Kindly use the decimal value equivalent, when selecting the base
+-dccm_base 2048
+
+# dccm_dmi --- This enables external access through a DMI (direct memory interface) port.
+-dccm_dmi true
+
+# dccm_ecc_option --- This specifies error checking for on-chip DCCM rams.
+# SECDED means single-error correction and double-error detection.
+-dccm_ecc_option SECDED_ADDR
+
+# dccm_ecc_init --- DCCM is initialized with zero data at reset, when configured with ECC
+-dccm_ecc_init false
+
+
+######## Debug Interface --- com.arc.hardware.EM.Debug_Interface.1_0 ########
+
+# Create Debug Interface
+-create com.arc.hardware.EM.Debug_Interface.1_0 "System.CPUisle.ARCv5EM.Debug Interface"
+
+# num_triggers_t6 --- This is the number of triggers.
+-num_triggers_t6 4
+
+
+######## Hadrware Performance Monitor --- com.arc.hardware.EM.Hardware_Performance_Monitor.1_0 ########
+
+# Create Hadrware Performance Monitor
+-create com.arc.hardware.EM.Hardware_Performance_Monitor.1_0 "System.CPUisle.ARCv5EM.Hadrware Performance Monitor"
+
+# hpm_counters --- Number of counters for performance monitoring.
+-hpm_counters 8
+
+# hpm_overflow_interrupt --- When a counter overflows, an interrupt is generated.
+-hpm_overflow_interrupt true
+
+# hpm_counter_width --- Sets the counter width in bits.
+-hpm_counter_width 64
+
+
+######## ICCM0 --- com.arc.hardware.EM.ICCM0.1_0 ########
+
+# Create ICCM0
+-create com.arc.hardware.EM.ICCM0.1_0 System.CPUisle.ARCv5EM.ICCM0
+
+# iccm0_size --- This defines the size of ICCM0 in bytes.
+-iccm0_size 524288
+
+# iccm0_base --- Sets the initial memory region assignment. Specifies the 32-bit base address of the ICCM. The base address is aligned on 1MB boundary for ICCM. Kindly use the decimal value equivalent, when selecting the base0
+-iccm0_base 0
+
+# iccm0_dmi --- This enables external access through a DMI (direct memory interface) port.
+-iccm0_dmi true
+
+# iccm0_ecc_option --- This specifies error checking for on-chip ICCM0
+-iccm0_ecc_option SECDED_ADDR
+
+# iccm0_ecc_init --- ICCM is initialized with zero data at reset, when configured with ECC
+-iccm0_ecc_init false
+
+
+######## Instruction Cache --- com.arc.hardware.EM.Instruction_Cache.1_0 ########
+
+# Create Instruction Cache
+-create com.arc.hardware.EM.Instruction_Cache.1_0 "System.CPUisle.ARCv5EM.Instruction Cache"
+
+# ic_size --- This defines the total size of the instruction cache in bytes.
+-ic_size 16384
+
+# ic_ways --- This defines the number of cache ways
+-ic_ways 2
+
+# ic_bsize --- This defines the cache line length in bytes.
+-ic_bsize 32
+
+# ic_disable_on_reset --- The instruction cache may be enabled immediately after reset, depending on this option.  If this option is set to true, the instruction cache is disabled and instruction fetches bypass the cache, accessing system memory directly.
+-ic_disable_on_reset false
+
+# ic_ecc_option --- This specifies error checking for ICACHE Tag, Data rams.
+# SECDED means single-error correction and double-error detection.
+-ic_ecc_option SECDED_ADDR
+
+
+######## PMA --- com.arc.hardware.EM.PMA.1_0 ########
+
+# Create PMA
+-create com.arc.hardware.EM.PMA.1_0 System.CPUisle.ARCv5EM.PMA
+
+# pma_entries --- Number of configured PMA entries.
+-pma_entries 6
+
+
+######## PMP --- com.arc.hardware.EM.PMP.1_0 ########
+
+# Create PMP
+-create com.arc.hardware.EM.PMP.1_0 System.CPUisle.ARCv5EM.PMP
+
+# pmp_entries --- Number of configured PMP entries.
+-pmp_entries 16
+
+# pmp_granularity --- PMP region granularity
+-pmp_granularity 32
+
+
+######## Watchdog Timer --- com.arc.hardware.EM.Watchdog_Timer.1_0 ########
+
+# Create Watchdog Timer
+-create com.arc.hardware.EM.Watchdog_Timer.1_0 "System.CPUisle.ARCv5EM.Watchdog Timer"
+
+# watchdog_clk --- Specifies whether the timer should be driven from a separate clock.
+-watchdog_clk true
+
+# watchdog_clk_freq --- Specifies the frequency in MHz of the independent asynchronous clock to Watchdog Timer.
+-watchdog_clk_freq 20
+
+# watchdog_num --- Select the number of watchdog timers built.
+-watchdog_num 1
+
+# watchdog_size --- Specifies the bit width of timer's internal counter.
+-watchdog_size 32
+
+
+######## ClkCtrl --- com.arc.hardware.ARCv2MSS.ClkCtrl.1_0 ########
+
+# Create ClkCtrl
+-create com.arc.hardware.ARCv2MSS.ClkCtrl.1_0 System.ClkCtrl
+
+# alb_mss_clkctrl_base_addr --- This specifies the clock controller base address in the memory map, divided by 4KB i.e. do not specify the lower 12 bits of the address.
+-alb_mss_clkctrl_base_addr 0xc_0000
+
+# alb_mss_clkctrl_bypass_mode --- If true then all clock dividers/gaters in the clock controller are bypassed, clock ratio is not supported and the division options/registers are overriden
+-alb_mss_clkctrl_bypass_mode false
+
+
+######## DW_DBP --- com.arc.hardware.DW_DBP.1_0 ########
+
+# Create DW_DBP
+-create com.arc.hardware.DW_DBP.1_0 System.DW_DBP
+
+# jtag_interface --- Set this option to true for jtag debug interface,set to false for bvci interface
+-jtag_interface true
+
+# dbp_jtag_ap --- Enables/configures the JTAG-AP
+-dbp_jtag_ap true
+
+# num_apb_ap --- Sets the Number of APB Access Ports to be enabled.
+-num_apb_ap 1
+
+# dbp_apb_ap_async --- Use Asynchronous APB interface. 0: Use core/cluster clock, 1: Use dedicated PCLKDBG clock
+-dbp_apb_ap_async false
+
+# num_axi_ap --- Sets the Number of AXI Access Ports to be enabled.
+-num_axi_ap 1
+
+# num_apb_client0 --- Number of Clients for each APB AP.
+-num_apb_client0 1
+
+
+######## DummySLV --- com.arc.hardware.ARCv2MSS.DummySLV.1_0 ########
+
+# Create DummySLV
+-create com.arc.hardware.ARCv2MSS.DummySLV.1_0 System.DummySLV
+
+# alb_mss_dummy_slave_num --- This specifies the number of dummy slaves.
+-alb_mss_dummy_slave_num 2
+
+# alb_mss_dummy_slave1_base_addr --- This specifies the base address of dummy slave 1 in the memory map, divided by 4KB i.e. do not specify the lower 12 bits of the address.The base address of dummy slave should be aligned with the size of the dummy slave
+-alb_mss_dummy_slave1_base_addr 0xc_0006
+
+# alb_mss_dummy_slave1_size --- This specifies the size of dummy slave 1.
+-alb_mss_dummy_slave1_size 4KB
+
+# alb_mss_dummy_slave1_pref --- This specifies the unique prefix of dummy slave 1.
+-alb_mss_dummy_slave1_pref dslv1_
+
+# alb_mss_dummy_slave1_prot --- This specifies the protocol of dummy slave 1.
+-alb_mss_dummy_slave1_prot APB
+
+# alb_mss_dummy_slave1_dw --- This specifies the data width of dummy slave 1.
+-alb_mss_dummy_slave1_dw 32
+
+# alb_mss_dummy_slave1_idw --- This speciries the AXI ID width of the dummy slave port. This option is only valid when it's configured as AXI protocol.
+-alb_mss_dummy_slave1_idw 16
+
+# alb_mss_dummy_slave2_base_addr --- This specifies the base address of dummy slave 2 in the memory map, divided by 4KB i.e. do not specify the lower 12 bits of the address.The base address of dummy slave should be aligned with the size of the dummy slave
+-alb_mss_dummy_slave2_base_addr 0xc_0106
+
+# alb_mss_dummy_slave2_size --- This specifies the size of dummy slave 2.
+-alb_mss_dummy_slave2_size 16MB
+
+# alb_mss_dummy_slave2_pref --- This specifies the unique prefix of dummy slave 2.
+-alb_mss_dummy_slave2_pref dslv2_
+
+# alb_mss_dummy_slave2_prot --- This specifies the protocol of dummy slave 2.
+-alb_mss_dummy_slave2_prot AXI
+
+# alb_mss_dummy_slave2_dw --- This specifies the data width of dummy slave 2.
+-alb_mss_dummy_slave2_dw 64
+
+# alb_mss_dummy_slave2_idw --- This speciries the AXI ID width of the dummy slave port. This option is only valid when it's configured as AXI protocol.
+-alb_mss_dummy_slave2_idw 16
+
+
+######## Implementation --- com.arc.hardware.implementation.1_0 ########
+
+# Create Implementation
+-create com.arc.hardware.implementation.1_0 System.Implementation
+
+# ClockSpeed --- Target clock speed of the system
+-clock_speed 20
+
+# DDR2_clk_Ratio --- DDR2 Clock Vs System Clock Ratio
+# 2x
+# 3x
+# 4x
+-ddr2_clk_ratio 3x
+
+# ClockSkew --- The clock skew for the system
+-clock_skew 0.2
+
+# HoldMargin --- Margin for hold time checks
+-hold_margin 0.05
+
+# Floorplan --- Floorplan definition for relative placement of  RAMs (at CPU-level) or the placement of the rams and CPU hard cores (at multicore level)
+-floorplan User
+
+# JTAGFrequency --- Select the frequency of the JTAG clock Tck (in MHz).
+# 
+# The JTAG clock speed has to be less than 1/2 of the cpu clock otherwise the signals on the BVCI interface are not guaranteed to be valid.
+# 
+# NOTE: The RTL simulations will work when the JTAG clock frequency is set to half the CPU clock, however this may not be the case when simulating at gate level due to delays on the IO pads.
+# 
+# The default is set to 10 MHz so that there is no conflict when simulating with an ARCangel3 at 30MHz. (30 > 10*2)
+# 
+# The speed of simulation can be greatly increased by using a faster JTAG clock, but a dependency will warn if it exceeds 1/2 of the cpu clock.
+# 
+-jtag_tclk 10
+
+# execution_trace_level --- 
+# This traces committed instructions as they execute, and gathers statistics
+# visible in the debugger for counting instructions & cycle delays.
+# At the "stats" level ony the statistics are gathered and no trace is printed.
+# "file" is equivalent to "full", but the results go to a trace .txt file instead.
+# 
+-execution_trace_level stats
+
+# unique_clk --- 
+# Have unique clock for each core included in system.
+# 
+-unique_clk true
+
+# generate_ipxact --- 
+# Generate ipxact.xml file describing the CPUisle or archipelago frontier
+# 
+-generate_ipxact true
+
+# ipxact_include_aux_regs --- 
+# Include aux register descriptions in the generated ipxact.
+# 
+-ipxact_include_aux_regs true
+
+# ipxact_relative_path_names --- 
+# Use relative path names for Verilog files in the ipxact.
+# Otherwise, absolute path names are used.
+# 
+-ipxact_relative_path_names true
+
+
+######## Profiler --- com.arc.hardware.ARCv2MSS.Profiler.1_0 ########
+
+# Create Profiler
+-create com.arc.hardware.ARCv2MSS.Profiler.1_0 System.Profiler
+
+# alb_mss_perfctrl_base_addr --- This specifies the profiler base address in the memory map, divided by 4KB i.e. do not specify the lower 12 bits of the address.
+-alb_mss_perfctrl_base_addr 0xc_0002
+
+# alb_mss_perfctrl_tie_signal_control --- This specifies whether to control tied signals.
+-alb_mss_perfctrl_tie_signal_control false
+
+# alb_mss_perfctrl_signal_monitor_num --- This specifies the number of monitor to output signal
+-alb_mss_perfctrl_signal_monitor_num 1
+
+
+######## SRAMCtrl --- com.arc.hardware.ARCv2MSS.SRAMCtrl.1_0 ########
+
+# Create SRAMCtrl
+-create com.arc.hardware.ARCv2MSS.SRAMCtrl.1_0 System.SRAMCtrl
+
+# alb_mss_mem_region_num --- The number of regions supported in SRAMCtrl component
+-alb_mss_mem_region_num 1
+
+# alb_mss_mem0_base_addr --- This specifies the base address of memory region 0 in the memory map, divided by 4KB i.e. do no specify the lower 12 bits of the address.
+-alb_mss_mem0_base_addr 0
+
+# alb_mss_mem0_size --- This specifies the memory size of memory region 0.
+-alb_mss_mem0_size 2GB
+
+# alb_mss_mem0_attr --- This specifies the memory access attribute of memory region 0.
+-alb_mss_mem0_attr Read-Write
+
+# alb_mss_mem0_secure --- This specifies the memory secure attribute of memory region 0.
+-alb_mss_mem0_secure Non-Secure
+
+# alb_mss_mem0_lat --- This specifies the maximum latency of memory region 0 .
+-alb_mss_mem0_lat 1024
+
+# alb_mss_mem0_def_lat --- This specifies the latency after reset of memory region 0.
+-alb_mss_mem0_def_lat 0
+
+# alb_mss_mem0_lat_rd --- This specifies the maximum read latency of memory region 0 .
+-alb_mss_mem0_lat_rd 0
+
+# alb_mss_mem0_def_lat_rd --- This specifies the read latency after reset of memory region 0.
+-alb_mss_mem0_def_lat_rd 0
+
+# alb_mss_mem0_lat_wr --- This specifies the maximum write latency of memory region 0 .
+-alb_mss_mem0_lat_wr 0
+
+# alb_mss_mem0_def_lat_wr --- This specifies the write latency after reset of memory region 0.
+-alb_mss_mem0_def_lat_wr 0
+
+# alb_mss_mem1_def_lat --- This specifies the latency after reset of memory region 1.
+-alb_mss_mem1_def_lat 0
+
+# alb_mss_mem2_def_lat --- This specifies the latency after reset of memory region 2.
+-alb_mss_mem2_def_lat 0
+
+# alb_mss_mem3_def_lat --- This specifies the latency after reset of memory region 3.
+-alb_mss_mem3_def_lat 0
+
+# alb_mss_mem_is_default_slave --- If true then all transactions without destination will be routed here.
+-alb_mss_mem_is_default_slave true
+
+# alb_mss_mem_default_space --- This specifies the memory space width of the system.
+-alb_mss_mem_default_space 32
+
+# alb_mss_mem_data_width --- This specifies the memory data width
+-alb_mss_mem_data_width 128
+
+
+######## Safety Manager --- com.arc.hardware.RV.Safety_Manager.1_0 ########
+
+# Create Safety Manager
+-create com.arc.hardware.RV.Safety_Manager.1_0 "System.Safety Manager"
+
+# cpu_safety --- 0: ASIL-D, CPU will be protected by DCLS
+# 1: ASIL-B, CPU will be protected by Partial DCLS and End to End ECC
+# 2: Hybrid Mode, CPU can switch between ASIL-D and QM mode during reset
+# 3: Hybrid Mode, CPU can switch between ASIL-D and ASIL-B mode during reset
+-cpu_safety 0
+
+# safety_delay --- Specifies the number of delay stages for Time Diversity of core
+-safety_delay 0
+
+# hw_error_injection --- When configured this option will enable hardware error injection on safety mechanisms in diagnostic mode. This option includes error injection on Comparators, safety monitor aggregation logic .etc
+-hw_error_injection true
+
+# reg_comparands --- Register signals from main & shadow before comparing.
+-reg_comparands false
+
+
+######## Tool Configuration --- cgen.1_0 ########
+
+# Create Tool Configuration
+-create cgen.1_0 "System.Tool Configuration"
+
+# mwdt_version --- Selects the MetaWare version to be used with the TCF file.
+# Change from the "default" setting to an older or newer toolset version if you want the TCF file to be used with an older or newer version of the MetaWare tools.
+-mwdt_version default
+
+# code_base_addr --- 
+# The base address to assign to the executable code segment in the linker command file when there is no ICCM in the build.  If not set here, the value 0 or the location of the interrupt vectors may be used as a default.
+# 
+-code_base_addr 0xffffffff
+
+# data_base_addr --- 
+# The base address to assign to the data segment in the linker command file when the data is not being mapped to a DCCM.  This value is ignored when the data segment is mapped to a DCCM, as in that case the base address of the DCCM memory is used.
+# 
+# A value of 0xffffffff means that the data segment will not be mapped to any specific address.
+# 
+-data_base_addr 0xffffffff
+
+# ucdata_base_addr --- 
+# The base address to assign to the .ucdata section used to contain data designated _Uncached.  The region must not overlap the address ranges where code and data will be mapped in the TCF linker command file.
+# 
+-ucdata_base_addr 0xffffffff
+
+# ucdata_mem_size --- 
+# The size of the memory region to reserve for the .ucdata section
+# 
+-ucdata_mem_size 0
+
+# underscores_in_numbers --- Use underscores in hex numbers to improve readability.
+-underscores_in_numbers false
+
+# lcf_ccm_fill --- Linker command file fills CCM data memory for use with -Bzerobss
+-lcf_ccm_fill true
+
+# tcf_rebrand_name --- Alternate branding name for TCF (not used)
+-rebrand_name ""
+
+
+######## ZEBU_AXI_XTOR --- com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_AXI_XTOR.1_0 ########
+
+# Create ZEBU_AXI_XTOR
+-create com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_AXI_XTOR.1_0 System.ZEBU_AXI_XTOR
+
+# zebu_has_axi_xtor_gpio --- Description to follow
+-zebu_has_axi_xtor_gpio false
+
+
+######## ZEBU_BOX --- com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_BOX.1_0 ########
+
+# Create ZEBU_BOX
+-create com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_BOX.1_0 System.ZEBU_BOX
+
+# zebu_version --- Model of ZeBu Server where generated bitstream will run
+-zebu_version ZS5
+
+# architecture_file_path --- Path to architecture_file (zse_configuration.tcl) of target ZeBu Server
+-architecture_file_path ""
+
+
+]]></string>
+  </configuration>
+  <configuration name="assembler_defines" filename="core_config.s">
+    <string><![CDATA[
+.ifndef __core_config_s
+	.set __core_config_s, 1
+	.set _TOOL_CONFIG_VER, 10108
+	//--------  NOTE: Start of BCR/CIR Macros ------------------
+	// The initial macros with "_bcr_" or "_cir_" in the macro name
+	// may appear and disappear as different hardware releases change the
+	// layout of configuration registers. Additionally, the semantics of
+	// a "bcr" or "cir" macro value is subject to change.
+	// For these reasons it is recommended to avoid dependency on macros
+	// which have "_bcr_" or "_cir_" in the name (and request alternative
+	// macros as needed).
+	//----------------------------------------------------------
+	.set	core_config_cir_misa,0x40901105
+	.set	core_config_cir_misa_a,1
+	.set	core_config_cir_misa_b,0
+	.set	core_config_cir_misa_c,1
+	.set	core_config_cir_misa_d,0
+	.set	core_config_cir_misa_e,0
+	.set	core_config_cir_misa_f,0
+	.set	core_config_cir_misa_h,0
+	.set	core_config_cir_misa_i,1
+	.set	core_config_cir_misa_m,1
+	.set	core_config_cir_misa_s,0
+	.set	core_config_cir_misa_u,1
+	.set	core_config_cir_misa_v,0
+	.set	core_config_cir_misa_x,1
+	.set	core_config_cir_mstatush,0x00000400
+	.set	core_config_cir_tdata1,0xf0000000
+	.set	core_config_cir_tinfo,0x010080c0
+	.set	core_config_cir_miccm_ctl,0x00000001
+	.set	core_config_cir_miccm_ctl_e0,1
+	.set	core_config_cir_miccm_ctl_r0,0
+	.set	core_config_cir_miccm_ctl_d0,0
+	.set	core_config_cir_miccm_ctl_e1,0
+	.set	core_config_cir_miccm_ctl_r1,0
+	.set	core_config_cir_miccm_ctl_d1,0
+	.set	core_config_cir_miccm_ctl_iccm1_base,0
+	.set	core_config_cir_miccm_ctl_iccm0_base,0
+	.set	core_config_cir_mdccm_ctl,0x80000001
+	.set	core_config_cir_mdccm_ctl_e,1
+	.set	core_config_cir_mdccm_ctl_r,0
+	.set	core_config_cir_mdccm_ctl_d,0
+	.set	core_config_cir_mdccm_ctl_dccm_base,2048
+	.set	core_config_cir_arcv_per0_base,0xf0000000
+	.set	core_config_cir_arcv_per0_base_per0_base,3840
+	.set	core_config_cir_arcv_per0_size,0x00000001
+	.set	core_config_cir_arcv_per0_size_per0_size,1
+	.set	core_config_cir_mcache_ctl,0x00000003
+	.set	core_config_cir_mwdt_passwd,0x00000000
+	.set	core_config_cir_pma_addr0,0x000001ff
+	.set	core_config_cir_pma_addr1,0x000001ff
+	.set	core_config_cir_pma_addr2,0x000001ff
+	.set	core_config_cir_pma_addr3,0x000001ff
+	.set	core_config_cir_pma_addr4,0x000001ff
+	.set	core_config_cir_pma_addr5,0x000001ff
+	.set	core_config_cir_msfty_passwd,0x00000001
+	.set	core_config_cir_msfty_ctrl,0x55555555
+	.set	core_config_cir_msfty_diag,0x55555555
+	.set	core_config_cir_msfty_stl_ctrl,0x00000001
+	.set	core_config_cir_marchid,0x80000401
+	.set	core_config_cir_marchid_family,1
+	.set	core_config_cir_marchid_m,0
+	.set	core_config_cir_marchid_v,0
+	.set	core_config_cir_marchid_f,1
+	.set	core_config_cir_mimpid,0x00010100
+	.set	core_config_cir_mimpid_product,1
+	.set	core_config_cir_mimpid_major_rev,1
+	.set	core_config_cir_mimpid_minor_rev,0
+	.set	core_config_cir_mhartid,0x00000000
+	.set	core_config_cir_mconfigptr,0x00000000
+	.set	core_config_bcr_arcv_mwdt_build,0x8fa13c01
+	.set	core_config_bcr_arcv_mwdt_build_version,1
+	.set	core_config_bcr_arcv_mwdt_build_nt,0
+	.set	core_config_bcr_arcv_mwdt_build_sizes,15
+	.set	core_config_bcr_arcv_mwdt_build_scale,4
+	.set	core_config_bcr_arcv_mwdt_build_freq,2000
+	.set	core_config_bcr_arcv_mwdt_build_c,1
+	.set	core_config_bcr_arcv_mmio_build,0x00000e00
+	.set	core_config_bcr_arcv_mmio_build_core_mmio_base,3584
+	.set	core_config_bcr_arcv_hpm_build,0x00080601
+	.set	core_config_bcr_arcv_hpm_build_version,1
+	.set	core_config_bcr_arcv_hpm_build_s,2
+	.set	core_config_bcr_arcv_hpm_build_i,1
+	.set	core_config_bcr_arcv_hpm_build_c,8
+	.set	core_config_bcr_arcv_msfty_build,0x44000001
+	.set	core_config_bcr_arcv_msfty_build_version,1
+	.set	core_config_bcr_arcv_msfty_build_sb,0
+	.set	core_config_bcr_arcv_msfty_build_asil,0
+	.set	core_config_bcr_arcv_msfty_build_sbe_dpt,1
+	.set	core_config_bcr_arcv_msfty_build_stl,0
+	.set	core_config_bcr_arcv_msfty_build_hei,1
+	.set	core_config_bcr_arcv_msfty_build_hyb,0
+	.set	core_config_bcr_arcv_timer_build,0xe0010001
+	.set	core_config_bcr_arcv_timer_build_version,1
+	.set	core_config_bcr_arcv_timer_build_s,0
+	.set	core_config_bcr_arcv_timer_build_base,917520
+	.set	core_config_bcr_arcv_bcr_build,0x00000001
+	.set	core_config_bcr_arcv_bcr_build_version,1
+	.set	core_config_bcr_arcv_pmp_build,0x000a1001
+	.set	core_config_bcr_arcv_pmp_build_version,1
+	.set	core_config_bcr_arcv_pmp_build_regions,16
+	.set	core_config_bcr_arcv_pmp_build_s,0
+	.set	core_config_bcr_arcv_pmp_build_granularity,5
+	.set	core_config_bcr_arcv_pma_build,0x00000601
+	.set	core_config_bcr_arcv_pma_build_version,1
+	.set	core_config_bcr_arcv_pma_build_regions,6
+	.set	core_config_bcr_arcv_dccm_build,0x00020901
+	.set	core_config_bcr_arcv_dccm_build_version,1
+	.set	core_config_bcr_arcv_dccm_build_size,9
+	.set	core_config_bcr_arcv_dccm_build_cycles,1
+	.set	core_config_bcr_arcv_icache_build,0x00013101
+	.set	core_config_bcr_arcv_icache_build_version,1
+	.set	core_config_bcr_arcv_icache_build_assoc,1
+	.set	core_config_bcr_arcv_icache_build_size,3
+	.set	core_config_bcr_arcv_icache_build_bsize,1
+	.set	core_config_bcr_arcv_icache_build_c,0
+	.set	core_config_bcr_arcv_icache_build_d,0
+	.set	core_config_bcr_arcv_iccm_build,0x00000801
+	.set	core_config_bcr_arcv_iccm_build_version,1
+	.set	core_config_bcr_arcv_iccm_build_iccm0_size,8
+	.set	core_config_bcr_arcv_iccm_build_iccm1_size,0
+	.set	core_config_bcr_arcv_clint_build,0x10000113
+	.set	core_config_bcr_arcv_clint_build_stsp,1
+	.set	core_config_bcr_arcv_clint_build_snvi,1
+	.set	core_config_bcr_arcv_clint_build_sstc,0
+	.set	core_config_bcr_arcv_clint_build_sswi,0
+	.set	core_config_bcr_arcv_clint_build_mjpri,1
+	.set	core_config_bcr_arcv_clint_build_version,1
+	.set	core_config_bcr_arcv_imsic_build,0x10010001
+	.set	core_config_bcr_arcv_imsic_build_mfsz,1
+	.set	core_config_bcr_arcv_imsic_build_sifsz,0
+	.set	core_config_bcr_arcv_imsic_build_gifsz,0
+	.set	core_config_bcr_arcv_imsic_build_gifnum,0
+	.set	core_config_bcr_arcv_imsic_build_eidlv,1
+	.set	core_config_bcr_arcv_imsic_build_version,1
+	.set	core_config_bcr_arcv_triggers_build,0x00000201
+	.set	core_config_bcr_arcv_triggers_build_version,1
+	.set	core_config_bcr_arcv_triggers_build_trig_num,2
+	.set	core_config_bcr_arcv_sec_build,0x80002001
+	.set	core_config_bcr_arcv_sec_build_version,1
+	.set	core_config_bcr_arcv_sec_build_num_wids,32
+	.set	core_config_bcr_arcv_sec_build_fixed_wid,0
+	.set	core_config_bcr_arcv_sec_build_m,1
+	.set	core_config_bcr_arcv_dmp_per_build,0x00000101
+	.set	core_config_bcr_arcv_dmp_per_build_version,1
+	.set	core_config_bcr_arcv_dmp_per_build_per0_size,1
+	.set	core_config_bcr_arcv_isa_opts_build,0x03341be1
+	.set	core_config_bcr_arcv_isa_opts_build_version,1
+	.set	core_config_bcr_arcv_isa_opts_build_zcb,1
+	.set	core_config_bcr_arcv_isa_opts_build_zcmp,1
+	.set	core_config_bcr_arcv_isa_opts_build_zcmt,1
+	.set	core_config_bcr_arcv_isa_opts_build_zba,1
+	.set	core_config_bcr_arcv_isa_opts_build_zbb,1
+	.set	core_config_bcr_arcv_isa_opts_build_zbc,0
+	.set	core_config_bcr_arcv_isa_opts_build_zbs,1
+	.set	core_config_bcr_arcv_isa_opts_build_zicond,1
+	.set	core_config_bcr_arcv_isa_opts_build_zfinx,0
+	.set	core_config_bcr_arcv_isa_opts_build_zdinx,0
+	.set	core_config_bcr_arcv_isa_opts_build_zfa,0
+	.set	core_config_bcr_arcv_isa_opts_build_zfh,0
+	.set	core_config_bcr_arcv_isa_opts_build_zk,0
+	.set	core_config_bcr_arcv_isa_opts_build_zca,1
+	.set	core_config_bcr_arcv_isa_opts_build_zhinx,0
+	.set	core_config_bcr_arcv_isa_opts_build_zicbom,1
+	.set	core_config_bcr_arcv_isa_opts_build_zicbop,1
+	.set	core_config_bcr_arcv_isa_opts_build_ziccamoa,0
+	.set	core_config_bcr_arcv_isa_opts_build_zic64rs,0
+	.set	core_config_bcr_arcv_isa_opts_build_zicsr,1
+	.set	core_config_bcr_arcv_isa_opts_build_n,1
+	.set	core_config_bcr_arcv_isa_opts_build_res,0
+	.set	core_config_bcr_arcv_ras_build,0x000c3601
+	.set	core_config_bcr_arcv_ras_build_version,1
+	.set	core_config_bcr_arcv_ras_build_dp,6
+	.set	core_config_bcr_arcv_ras_build_ip,6
+	.set	core_config_bcr_arcv_ras_build_dcp,0
+	.set	core_config_bcr_arcv_ras_build_icp,6
+	.set	core_config_bcr_arcv_ras_build_l2cp,0
+	.set	core_config_bcr_arcv_ras_build_mmu,0
+	.set	core_config_cir_arcv_sr_epc,0x00000000
+	//------------- End of BCR/CIR Macros ---------------------
+	.set	core_config_family,1
+	.set	core_config_core_version,1
+	.set	core_config_za,1
+	.set	core_config_zca,1
+	.set	core_config_zc,1
+	.set	core_config_zm,1
+	.set	core_config_zu,1
+	.set	core_config_zcb,1
+	.set	core_config_zcmp,1
+	.set	core_config_zcmt,1
+	.set	core_config_zba,1
+	.set	core_config_zbb,1
+	.set	core_config_zbs,1
+	.set	core_config_zicond,1
+	.set	core_config_zicbom,1
+	.set	core_config_zicbop,1
+	.set	core_config_Xunaligned,1
+	.set	core_config_zifencei,1
+	.set	core_config_zihintpause,1
+	.set	core_config_zicsr,1
+	.set	core_config_reset_pc,0x0
+	.set	core_config_reset_pc_ext,1
+	.set	core_config_Xmpy_cycles,10
+	.set	core_config_iccm0_present,1
+	.set	core_config_iccm0_base,0x0
+	.set	core_config_iccm0_size,0x80000
+	.set	core_config_dccm_present,1
+	.set	core_config_dccm_base,0x80000000
+	.set	core_config_dccm_size,0x100000
+	.set	core_config_dccm_mem_cycles,1
+	.set	core_config_icache_present,1
+	.set	core_config_icache_size,0x4000
+	.set	core_config_icache_line_size,32
+	.set	core_config_icache_ways,2
+	.set	core_config_icache_version,1
+	.set	core_config_mmio_base,0xe0000000
+	.set	core_config_rtia_hart_major_width,64
+	.set	core_config_rtia_stsp,1
+	.set	core_config_rtia_snvi,1
+	.set	core_config_smrnmi,1
+	.set	core_config_rnmi_vec_ext,1
+	.set	core_config_rnmi_int_vec,0x100
+.endif // __core_config_s
+
+]]></string>
+  </configuration>
+  <configuration name="C_defines" filename="core_config.h">
+    <string><![CDATA[
+#ifndef core_config_h
+#define core_config_h
+    /* coverity[misra_c_2012_rule_21_1_violation] */
+    /* coverity[misra_c_2012_rule_21_2_violation] */
+#define __core_config_h
+
+    /* coverity[misra_c_2012_rule_21_1_violation] */
+    /* coverity[misra_c_2012_rule_21_2_violation] */
+#define _TOOL_CONFIG_VER 10108
+
+	/********  NOTE: Start of BCR/CIR Macros ******************
+	 * The initial macros with "_bcr_" or "_cir_" in the macro name
+	 * may appear and disappear as different hardware releases change the
+	 * layout of configuration registers. Additionally, the semantics of
+	 * a "bcr" or "cir" macro value is subject to change.
+	 * For these reasons it is recommended to avoid dependency on symbols
+	 * which have "_bcr_" or "_cir_" in the name (and request alternative
+	 * macros as needed).
+	 **********************************************************/
+	#define	core_config_cir_misa	0x40901105
+	#define	core_config_cir_misa_a	1
+	#define	core_config_cir_misa_b	0
+	#define	core_config_cir_misa_c	1
+	#define	core_config_cir_misa_d	0
+	#define	core_config_cir_misa_e	0
+	#define	core_config_cir_misa_f	0
+	#define	core_config_cir_misa_h	0
+	#define	core_config_cir_misa_i	1
+	#define	core_config_cir_misa_m	1
+	#define	core_config_cir_misa_s	0
+	#define	core_config_cir_misa_u	1
+	#define	core_config_cir_misa_v	0
+	#define	core_config_cir_misa_x	1
+	#define	core_config_cir_mstatush	0x00000400
+	#define	core_config_cir_tdata1	0xf0000000UL
+	#define	core_config_cir_tinfo	0x010080c0
+	#define	core_config_cir_miccm_ctl	0x00000001
+	#define	core_config_cir_miccm_ctl_e0	1
+	#define	core_config_cir_miccm_ctl_r0	0
+	#define	core_config_cir_miccm_ctl_d0	0
+	#define	core_config_cir_miccm_ctl_e1	0
+	#define	core_config_cir_miccm_ctl_r1	0
+	#define	core_config_cir_miccm_ctl_d1	0
+	#define	core_config_cir_miccm_ctl_iccm1_base	0
+	#define	core_config_cir_miccm_ctl_iccm0_base	0
+	#define	core_config_cir_mdccm_ctl	0x80000001UL
+	#define	core_config_cir_mdccm_ctl_e	1
+	#define	core_config_cir_mdccm_ctl_r	0
+	#define	core_config_cir_mdccm_ctl_d	0
+	#define	core_config_cir_mdccm_ctl_dccm_base	2048
+	#define	core_config_cir_arcv_per0_base	0xf0000000UL
+	#define	core_config_cir_arcv_per0_base_per0_base	3840
+	#define	core_config_cir_arcv_per0_size	0x00000001
+	#define	core_config_cir_arcv_per0_size_per0_size	1
+	#define	core_config_cir_mcache_ctl	0x00000003
+	#define	core_config_cir_mwdt_passwd	0x00000000
+	#define	core_config_cir_pma_addr0	0x000001ff
+	#define	core_config_cir_pma_addr1	0x000001ff
+	#define	core_config_cir_pma_addr2	0x000001ff
+	#define	core_config_cir_pma_addr3	0x000001ff
+	#define	core_config_cir_pma_addr4	0x000001ff
+	#define	core_config_cir_pma_addr5	0x000001ff
+	#define	core_config_cir_msfty_passwd	0x00000001
+	#define	core_config_cir_msfty_ctrl	0x55555555
+	#define	core_config_cir_msfty_diag	0x55555555
+	#define	core_config_cir_msfty_stl_ctrl	0x00000001
+	#define	core_config_cir_marchid	0x80000401UL
+	#define	core_config_cir_marchid_family	1
+	#define	core_config_cir_marchid_m	0
+	#define	core_config_cir_marchid_v	0
+	#define	core_config_cir_marchid_f	1
+	#define	core_config_cir_mimpid	0x00010100
+	#define	core_config_cir_mimpid_product	1
+	#define	core_config_cir_mimpid_major_rev	1
+	#define	core_config_cir_mimpid_minor_rev	0
+	#define	core_config_cir_mhartid	0x00000000
+	#define	core_config_cir_mconfigptr	0x00000000
+	#define	core_config_bcr_arcv_mwdt_build	0x8fa13c01UL
+	#define	core_config_bcr_arcv_mwdt_build_version	1
+	#define	core_config_bcr_arcv_mwdt_build_nt	0
+	#define	core_config_bcr_arcv_mwdt_build_sizes	15
+	#define	core_config_bcr_arcv_mwdt_build_scale	4
+	#define	core_config_bcr_arcv_mwdt_build_freq	2000
+	#define	core_config_bcr_arcv_mwdt_build_c	1
+	#define	core_config_bcr_arcv_mmio_build	0x00000e00
+	#define	core_config_bcr_arcv_mmio_build_core_mmio_base	3584
+	#define	core_config_bcr_arcv_hpm_build	0x00080601
+	#define	core_config_bcr_arcv_hpm_build_version	1
+	#define	core_config_bcr_arcv_hpm_build_s	2
+	#define	core_config_bcr_arcv_hpm_build_i	1
+	#define	core_config_bcr_arcv_hpm_build_c	8
+	#define	core_config_bcr_arcv_msfty_build	0x44000001
+	#define	core_config_bcr_arcv_msfty_build_version	1
+	#define	core_config_bcr_arcv_msfty_build_sb	0
+	#define	core_config_bcr_arcv_msfty_build_asil	0
+	#define	core_config_bcr_arcv_msfty_build_sbe_dpt	1
+	#define	core_config_bcr_arcv_msfty_build_stl	0
+	#define	core_config_bcr_arcv_msfty_build_hei	1
+	#define	core_config_bcr_arcv_msfty_build_hyb	0
+	#define	core_config_bcr_arcv_timer_build	0xe0010001UL
+	#define	core_config_bcr_arcv_timer_build_version	1
+	#define	core_config_bcr_arcv_timer_build_s	0
+	#define	core_config_bcr_arcv_timer_build_base	917520
+	#define	core_config_bcr_arcv_bcr_build	0x00000001
+	#define	core_config_bcr_arcv_bcr_build_version	1
+	#define	core_config_bcr_arcv_pmp_build	0x000a1001
+	#define	core_config_bcr_arcv_pmp_build_version	1
+	#define	core_config_bcr_arcv_pmp_build_regions	16
+	#define	core_config_bcr_arcv_pmp_build_s	0
+	#define	core_config_bcr_arcv_pmp_build_granularity	5
+	#define	core_config_bcr_arcv_pma_build	0x00000601
+	#define	core_config_bcr_arcv_pma_build_version	1
+	#define	core_config_bcr_arcv_pma_build_regions	6
+	#define	core_config_bcr_arcv_dccm_build	0x00020901
+	#define	core_config_bcr_arcv_dccm_build_version	1
+	#define	core_config_bcr_arcv_dccm_build_size	9
+	#define	core_config_bcr_arcv_dccm_build_cycles	1
+	#define	core_config_bcr_arcv_icache_build	0x00013101
+	#define	core_config_bcr_arcv_icache_build_version	1
+	#define	core_config_bcr_arcv_icache_build_assoc	1
+	#define	core_config_bcr_arcv_icache_build_size	3
+	#define	core_config_bcr_arcv_icache_build_bsize	1
+	#define	core_config_bcr_arcv_icache_build_c	0
+	#define	core_config_bcr_arcv_icache_build_d	0
+	#define	core_config_bcr_arcv_iccm_build	0x00000801
+	#define	core_config_bcr_arcv_iccm_build_version	1
+	#define	core_config_bcr_arcv_iccm_build_iccm0_size	8
+	#define	core_config_bcr_arcv_iccm_build_iccm1_size	0
+	#define	core_config_bcr_arcv_clint_build	0x10000113
+	#define	core_config_bcr_arcv_clint_build_stsp	1
+	#define	core_config_bcr_arcv_clint_build_snvi	1
+	#define	core_config_bcr_arcv_clint_build_sstc	0
+	#define	core_config_bcr_arcv_clint_build_sswi	0
+	#define	core_config_bcr_arcv_clint_build_mjpri	1
+	#define	core_config_bcr_arcv_clint_build_version	1
+	#define	core_config_bcr_arcv_imsic_build	0x10010001
+	#define	core_config_bcr_arcv_imsic_build_mfsz	1
+	#define	core_config_bcr_arcv_imsic_build_sifsz	0
+	#define	core_config_bcr_arcv_imsic_build_gifsz	0
+	#define	core_config_bcr_arcv_imsic_build_gifnum	0
+	#define	core_config_bcr_arcv_imsic_build_eidlv	1
+	#define	core_config_bcr_arcv_imsic_build_version	1
+	#define	core_config_bcr_arcv_triggers_build	0x00000201
+	#define	core_config_bcr_arcv_triggers_build_version	1
+	#define	core_config_bcr_arcv_triggers_build_trig_num	2
+	#define	core_config_bcr_arcv_sec_build	0x80002001UL
+	#define	core_config_bcr_arcv_sec_build_version	1
+	#define	core_config_bcr_arcv_sec_build_num_wids	32
+	#define	core_config_bcr_arcv_sec_build_fixed_wid	0
+	#define	core_config_bcr_arcv_sec_build_m	1
+	#define	core_config_bcr_arcv_dmp_per_build	0x00000101
+	#define	core_config_bcr_arcv_dmp_per_build_version	1
+	#define	core_config_bcr_arcv_dmp_per_build_per0_size	1
+	#define	core_config_bcr_arcv_isa_opts_build	0x03341be1
+	#define	core_config_bcr_arcv_isa_opts_build_version	1
+	#define	core_config_bcr_arcv_isa_opts_build_zcb	1
+	#define	core_config_bcr_arcv_isa_opts_build_zcmp	1
+	#define	core_config_bcr_arcv_isa_opts_build_zcmt	1
+	#define	core_config_bcr_arcv_isa_opts_build_zba	1
+	#define	core_config_bcr_arcv_isa_opts_build_zbb	1
+	#define	core_config_bcr_arcv_isa_opts_build_zbc	0
+	#define	core_config_bcr_arcv_isa_opts_build_zbs	1
+	#define	core_config_bcr_arcv_isa_opts_build_zicond	1
+	#define	core_config_bcr_arcv_isa_opts_build_zfinx	0
+	#define	core_config_bcr_arcv_isa_opts_build_zdinx	0
+	#define	core_config_bcr_arcv_isa_opts_build_zfa	0
+	#define	core_config_bcr_arcv_isa_opts_build_zfh	0
+	#define	core_config_bcr_arcv_isa_opts_build_zk	0
+	#define	core_config_bcr_arcv_isa_opts_build_zca	1
+	#define	core_config_bcr_arcv_isa_opts_build_zhinx	0
+	#define	core_config_bcr_arcv_isa_opts_build_zicbom	1
+	#define	core_config_bcr_arcv_isa_opts_build_zicbop	1
+	#define	core_config_bcr_arcv_isa_opts_build_ziccamoa	0
+	#define	core_config_bcr_arcv_isa_opts_build_zic64rs	0
+	#define	core_config_bcr_arcv_isa_opts_build_zicsr	1
+	#define	core_config_bcr_arcv_isa_opts_build_n	1
+	#define	core_config_bcr_arcv_isa_opts_build_res	0
+	#define	core_config_bcr_arcv_ras_build	0x000c3601
+	#define	core_config_bcr_arcv_ras_build_version	1
+	#define	core_config_bcr_arcv_ras_build_dp	6
+	#define	core_config_bcr_arcv_ras_build_ip	6
+	#define	core_config_bcr_arcv_ras_build_dcp	0
+	#define	core_config_bcr_arcv_ras_build_icp	6
+	#define	core_config_bcr_arcv_ras_build_l2cp	0
+	#define	core_config_bcr_arcv_ras_build_mmu	0
+	#define	core_config_cir_arcv_sr_epc	0x00000000
+	/************* End of BCR/CIR Macros **********************/
+	#define	core_config_family_name	"av5rmx"
+	#define	core_config_family	1
+	#define	core_config_core_version	1
+	#define	core_config_za	1
+	#define	core_config_zca	1
+	#define	core_config_zc	1
+	#define	core_config_zm	1
+	#define	core_config_zu	1
+	#define	core_config_zcb	1
+	#define	core_config_zcmp	1
+	#define	core_config_zcmt	1
+	#define	core_config_zba	1
+	#define	core_config_zbb	1
+	#define	core_config_zbs	1
+	#define	core_config_zicond	1
+	#define	core_config_zicbom	1
+	#define	core_config_zicbop	1
+	#define	core_config_Xunaligned	1
+	#define	core_config_zifencei	1
+	#define	core_config_zihintpause	1
+	#define	core_config_zicsr	1
+	#define	core_config_reset_pc	0x0
+	#define	core_config_reset_pc_ext	1
+	#define	core_config_Xmpy_cycles	10
+	#define	core_config_iccm0_present	1
+	#define	core_config_iccm0_base	0x0
+	#define	core_config_iccm0_size	0x80000
+	#define	core_config_dccm_present	1
+	#define	core_config_dccm_base	0x80000000UL
+	#define	core_config_dccm_size	0x100000
+	#define	core_config_dccm_mem_cycles	1
+	#define	core_config_icache_present	1
+	#define	core_config_icache_size	0x4000
+	#define	core_config_icache_line_size	32
+	#define	core_config_icache_ways	2
+	#define	core_config_icache_version	1
+	#define	core_config_mmio_base	0xe0000000UL
+	#define	core_config_rtia_hart_major_width	64
+	#define	core_config_rtia_stsp	1
+	#define	core_config_rtia_snvi	1
+	#define	core_config_smrnmi	1
+	#define	core_config_rnmi_vec_ext	1
+	#define	core_config_rnmi_int_vec	0x100
+#endif /* core_config_h */
+
+]]></string>
+  </configuration>
+  <configuration name="CPP_defines" filename="core_config.hpp">
+    <string><![CDATA[
+#ifndef core_config_hpp
+#define core_config_hpp
+
+#include <cstdint>
+
+    /* coverity[cert_dcl51_cpp_violation] */
+    /* coverity[autosar_cpp14_a16_0_1_violation] */
+    /* coverity[autosar_cpp14_a17_0_1_violation] */
+#define _TOOL_CONFIG_VER 10108
+
+namespace snps_arc {
+    namespace core_config {
+
+	/********  NOTE: Start of BCR/CIR Variables ******************
+	 * The initial variables with "kBcr" or "kCir" in the macro name
+	 * may appear and disappear as different hardware releases change the
+	 * layout of configuration registers. Additionally, the semantics of
+	 * a "kBcr" or "KCir" variable value is subject to change.
+	 * For these reasons it is recommended to avoid dependency on symbols
+	 * which have "kBcr" or "kCir" in the name (and request alternative
+	 * variables as needed).
+	 **********************************************************/
+	    /* value for misa */
+	static constexpr std::uint32_t kCirMisa{0x40901105UL};
+	    /* value for misa.a */
+	static constexpr std::uint32_t kCirMisaA{1UL};
+	    /* value for misa.b */
+	static constexpr std::uint32_t kCirMisaB{0UL};
+	    /* value for misa.c */
+	static constexpr std::uint32_t kCirMisaC{1UL};
+	    /* value for misa.d */
+	static constexpr std::uint32_t kCirMisaD{0UL};
+	    /* value for misa.e */
+	static constexpr std::uint32_t kCirMisaE{0UL};
+	    /* value for misa.f */
+	static constexpr std::uint32_t kCirMisaF{0UL};
+	    /* value for misa.h */
+	static constexpr std::uint32_t kCirMisaH{0UL};
+	    /* value for misa.i */
+	static constexpr std::uint32_t kCirMisaI{1UL};
+	    /* value for misa.m */
+	static constexpr std::uint32_t kCirMisaM{1UL};
+	    /* value for misa.s */
+	static constexpr std::uint32_t kCirMisaS{0UL};
+	    /* value for misa.u */
+	static constexpr std::uint32_t kCirMisaU{1UL};
+	    /* value for misa.v */
+	static constexpr std::uint32_t kCirMisaV{0UL};
+	    /* value for misa.x */
+	static constexpr std::uint32_t kCirMisaX{1UL};
+	    /* value for mstatush */
+	static constexpr std::uint32_t kCirMstatush{0x00000400UL};
+	    /* value for tdata1 */
+	static constexpr std::uint32_t kCirTdata1{0xF0000000UL};
+	    /* value for tinfo */
+	static constexpr std::uint32_t kCirTinfo{0x010080C0UL};
+	    /* value for miccm_ctl */
+	static constexpr std::uint32_t kCirMiccmCtl{0x00000001UL};
+	    /* value for miccm_ctl.e0 */
+	static constexpr std::uint32_t kCirMiccmCtlE0{1UL};
+	    /* value for miccm_ctl.r0 */
+	static constexpr std::uint32_t kCirMiccmCtlR0{0UL};
+	    /* value for miccm_ctl.d0 */
+	static constexpr std::uint32_t kCirMiccmCtlD0{0UL};
+	    /* value for miccm_ctl.e1 */
+	static constexpr std::uint32_t kCirMiccmCtlE1{0UL};
+	    /* value for miccm_ctl.r1 */
+	static constexpr std::uint32_t kCirMiccmCtlR1{0UL};
+	    /* value for miccm_ctl.d1 */
+	static constexpr std::uint32_t kCirMiccmCtlD1{0UL};
+	    /* value for miccm_ctl.iccm1_base */
+	static constexpr std::uint32_t kCirMiccmCtlIccm1Base{0UL};
+	    /* value for miccm_ctl.iccm0_base */
+	static constexpr std::uint32_t kCirMiccmCtlIccm0Base{0UL};
+	    /* value for mdccm_ctl */
+	static constexpr std::uint32_t kCirMdccmCtl{0x80000001UL};
+	    /* value for mdccm_ctl.e */
+	static constexpr std::uint32_t kCirMdccmCtlE{1UL};
+	    /* value for mdccm_ctl.r */
+	static constexpr std::uint32_t kCirMdccmCtlR{0UL};
+	    /* value for mdccm_ctl.d */
+	static constexpr std::uint32_t kCirMdccmCtlD{0UL};
+	    /* value for mdccm_ctl.dccm_base */
+	static constexpr std::uint32_t kCirMdccmCtlDccmBase{2048UL};
+	    /* value for arcv_per0_base */
+	static constexpr std::uint32_t kCirArcvPer0Base{0xF0000000UL};
+	    /* value for arcv_per0_base.per0_base */
+	static constexpr std::uint32_t kCirArcvPer0BasePer0Base{3840UL};
+	    /* value for arcv_per0_size */
+	static constexpr std::uint32_t kCirArcvPer0Size{0x00000001UL};
+	    /* value for arcv_per0_size.per0_size */
+	static constexpr std::uint32_t kCirArcvPer0SizePer0Size{1UL};
+	    /* value for mcache_ctl */
+	static constexpr std::uint32_t kCirMcacheCtl{0x00000003UL};
+	    /* value for mwdt_passwd */
+	static constexpr std::uint32_t kCirMwdtPasswd{0x00000000UL};
+	    /* value for pma_addr0 */
+	static constexpr std::uint32_t kCirPmaAddr0{0x000001FFUL};
+	    /* value for pma_addr1 */
+	static constexpr std::uint32_t kCirPmaAddr1{0x000001FFUL};
+	    /* value for pma_addr2 */
+	static constexpr std::uint32_t kCirPmaAddr2{0x000001FFUL};
+	    /* value for pma_addr3 */
+	static constexpr std::uint32_t kCirPmaAddr3{0x000001FFUL};
+	    /* value for pma_addr4 */
+	static constexpr std::uint32_t kCirPmaAddr4{0x000001FFUL};
+	    /* value for pma_addr5 */
+	static constexpr std::uint32_t kCirPmaAddr5{0x000001FFUL};
+	    /* value for msfty_passwd */
+	static constexpr std::uint32_t kCirMsftyPasswd{0x00000001UL};
+	    /* value for msfty_ctrl */
+	static constexpr std::uint32_t kCirMsftyCtrl{0x55555555UL};
+	    /* value for msfty_diag */
+	static constexpr std::uint32_t kCirMsftyDiag{0x55555555UL};
+	    /* value for msfty_stl_ctrl */
+	static constexpr std::uint32_t kCirMsftyStlCtrl{0x00000001UL};
+	    /* value for marchid */
+	static constexpr std::uint32_t kCirMarchid{0x80000401UL};
+	    /* value for marchid.family */
+	static constexpr std::uint32_t kCirMarchidFamily{1UL};
+	    /* value for marchid.m */
+	static constexpr std::uint32_t kCirMarchidM{0UL};
+	    /* value for marchid.v */
+	static constexpr std::uint32_t kCirMarchidV{0UL};
+	    /* value for marchid.f */
+	static constexpr std::uint32_t kCirMarchidF{1UL};
+	    /* value for mimpid */
+	static constexpr std::uint32_t kCirMimpid{0x00010100UL};
+	    /* value for mimpid.product */
+	static constexpr std::uint32_t kCirMimpidProduct{1UL};
+	    /* value for mimpid.major_rev */
+	static constexpr std::uint32_t kCirMimpidMajorRev{1UL};
+	    /* value for mimpid.minor_rev */
+	static constexpr std::uint32_t kCirMimpidMinorRev{0UL};
+	    /* value for mhartid */
+	static constexpr std::uint32_t kCirMhartid{0x00000000UL};
+	    /* value for mconfigptr */
+	static constexpr std::uint32_t kCirMconfigptr{0x00000000UL};
+	    /* value for arcv_mwdt_build */
+	static constexpr std::uint32_t kBcrArcvMwdtBuild{0x8FA13C01UL};
+	    /* value for arcv_mwdt_build.version */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildVersion{1UL};
+	    /* value for arcv_mwdt_build.nt */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildNt{0UL};
+	    /* value for arcv_mwdt_build.sizes */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildSizes{15UL};
+	    /* value for arcv_mwdt_build.scale */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildScale{4UL};
+	    /* value for arcv_mwdt_build.freq */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildFreq{2000UL};
+	    /* value for arcv_mwdt_build.c */
+	static constexpr std::uint32_t kBcrArcvMwdtBuildC{1UL};
+	    /* value for arcv_mmio_build */
+	static constexpr std::uint32_t kBcrArcvMmioBuild{0x00000E00UL};
+	    /* value for arcv_mmio_build.core_mmio_base */
+	static constexpr std::uint32_t kBcrArcvMmioBuildCoreMmioBase{3584UL};
+	    /* value for arcv_hpm_build */
+	static constexpr std::uint32_t kBcrArcvHpmBuild{0x00080601UL};
+	    /* value for arcv_hpm_build.version */
+	static constexpr std::uint32_t kBcrArcvHpmBuildVersion{1UL};
+	    /* value for arcv_hpm_build.s */
+	static constexpr std::uint32_t kBcrArcvHpmBuildS{2UL};
+	    /* value for arcv_hpm_build.i */
+	static constexpr std::uint32_t kBcrArcvHpmBuildI{1UL};
+	    /* value for arcv_hpm_build.c */
+	static constexpr std::uint32_t kBcrArcvHpmBuildC{8UL};
+	    /* value for arcv_msfty_build */
+	static constexpr std::uint32_t kBcrArcvMsftyBuild{0x44000001UL};
+	    /* value for arcv_msfty_build.version */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildVersion{1UL};
+	    /* value for arcv_msfty_build.sb */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildSb{0UL};
+	    /* value for arcv_msfty_build.asil */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildAsil{0UL};
+	    /* value for arcv_msfty_build.sbe_dpt */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildSbeDpt{1UL};
+	    /* value for arcv_msfty_build.stl */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildStl{0UL};
+	    /* value for arcv_msfty_build.hei */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildHei{1UL};
+	    /* value for arcv_msfty_build.hyb */
+	static constexpr std::uint32_t kBcrArcvMsftyBuildHyb{0UL};
+	    /* value for arcv_timer_build */
+	static constexpr std::uint32_t kBcrArcvTimerBuild{0xE0010001UL};
+	    /* value for arcv_timer_build.version */
+	static constexpr std::uint32_t kBcrArcvTimerBuildVersion{1UL};
+	    /* value for arcv_timer_build.s */
+	static constexpr std::uint32_t kBcrArcvTimerBuildS{0UL};
+	    /* value for arcv_timer_build.base */
+	static constexpr std::uint32_t kBcrArcvTimerBuildBase{917520UL};
+	    /* value for arcv_bcr_build */
+	static constexpr std::uint32_t kBcrArcvBcrBuild{0x00000001UL};
+	    /* value for arcv_bcr_build.version */
+	static constexpr std::uint32_t kBcrArcvBcrBuildVersion{1UL};
+	    /* value for arcv_pmp_build */
+	static constexpr std::uint32_t kBcrArcvPmpBuild{0x000A1001UL};
+	    /* value for arcv_pmp_build.version */
+	static constexpr std::uint32_t kBcrArcvPmpBuildVersion{1UL};
+	    /* value for arcv_pmp_build.regions */
+	static constexpr std::uint32_t kBcrArcvPmpBuildRegions{16UL};
+	    /* value for arcv_pmp_build.s */
+	static constexpr std::uint32_t kBcrArcvPmpBuildS{0UL};
+	    /* value for arcv_pmp_build.granularity */
+	static constexpr std::uint32_t kBcrArcvPmpBuildGranularity{5UL};
+	    /* value for arcv_pma_build */
+	static constexpr std::uint32_t kBcrArcvPmaBuild{0x00000601UL};
+	    /* value for arcv_pma_build.version */
+	static constexpr std::uint32_t kBcrArcvPmaBuildVersion{1UL};
+	    /* value for arcv_pma_build.regions */
+	static constexpr std::uint32_t kBcrArcvPmaBuildRegions{6UL};
+	    /* value for arcv_dccm_build */
+	static constexpr std::uint32_t kBcrArcvDccmBuild{0x00020901UL};
+	    /* value for arcv_dccm_build.version */
+	static constexpr std::uint32_t kBcrArcvDccmBuildVersion{1UL};
+	    /* value for arcv_dccm_build.size */
+	static constexpr std::uint32_t kBcrArcvDccmBuildSize{9UL};
+	    /* value for arcv_dccm_build.cycles */
+	static constexpr std::uint32_t kBcrArcvDccmBuildCycles{1UL};
+	    /* value for arcv_icache_build */
+	static constexpr std::uint32_t kBcrArcvIcacheBuild{0x00013101UL};
+	    /* value for arcv_icache_build.version */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildVersion{1UL};
+	    /* value for arcv_icache_build.assoc */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildAssoc{1UL};
+	    /* value for arcv_icache_build.size */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildSize{3UL};
+	    /* value for arcv_icache_build.bsize */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildBsize{1UL};
+	    /* value for arcv_icache_build.c */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildC{0UL};
+	    /* value for arcv_icache_build.d */
+	static constexpr std::uint32_t kBcrArcvIcacheBuildD{0UL};
+	    /* value for arcv_iccm_build */
+	static constexpr std::uint32_t kBcrArcvIccmBuild{0x00000801UL};
+	    /* value for arcv_iccm_build.version */
+	static constexpr std::uint32_t kBcrArcvIccmBuildVersion{1UL};
+	    /* value for arcv_iccm_build.iccm0_size */
+	static constexpr std::uint32_t kBcrArcvIccmBuildIccm0Size{8UL};
+	    /* value for arcv_iccm_build.iccm1_size */
+	static constexpr std::uint32_t kBcrArcvIccmBuildIccm1Size{0UL};
+	    /* value for arcv_clint_build */
+	static constexpr std::uint32_t kBcrArcvClintBuild{0x10000113UL};
+	    /* value for arcv_clint_build.stsp */
+	static constexpr std::uint32_t kBcrArcvClintBuildStsp{1UL};
+	    /* value for arcv_clint_build.snvi */
+	static constexpr std::uint32_t kBcrArcvClintBuildSnvi{1UL};
+	    /* value for arcv_clint_build.sstc */
+	static constexpr std::uint32_t kBcrArcvClintBuildSstc{0UL};
+	    /* value for arcv_clint_build.sswi */
+	static constexpr std::uint32_t kBcrArcvClintBuildSswi{0UL};
+	    /* value for arcv_clint_build.mjpri */
+	static constexpr std::uint32_t kBcrArcvClintBuildMjpri{1UL};
+	    /* value for arcv_clint_build.version */
+	static constexpr std::uint32_t kBcrArcvClintBuildVersion{1UL};
+	    /* value for arcv_imsic_build */
+	static constexpr std::uint32_t kBcrArcvImsicBuild{0x10010001UL};
+	    /* value for arcv_imsic_build.mfsz */
+	static constexpr std::uint32_t kBcrArcvImsicBuildMfsz{1UL};
+	    /* value for arcv_imsic_build.sifsz */
+	static constexpr std::uint32_t kBcrArcvImsicBuildSifsz{0UL};
+	    /* value for arcv_imsic_build.gifsz */
+	static constexpr std::uint32_t kBcrArcvImsicBuildGifsz{0UL};
+	    /* value for arcv_imsic_build.gifnum */
+	static constexpr std::uint32_t kBcrArcvImsicBuildGifnum{0UL};
+	    /* value for arcv_imsic_build.eidlv */
+	static constexpr std::uint32_t kBcrArcvImsicBuildEidlv{1UL};
+	    /* value for arcv_imsic_build.version */
+	static constexpr std::uint32_t kBcrArcvImsicBuildVersion{1UL};
+	    /* value for arcv_triggers_build */
+	static constexpr std::uint32_t kBcrArcvTriggersBuild{0x00000201UL};
+	    /* value for arcv_triggers_build.version */
+	static constexpr std::uint32_t kBcrArcvTriggersBuildVersion{1UL};
+	    /* value for arcv_triggers_build.trig_num */
+	static constexpr std::uint32_t kBcrArcvTriggersBuildTrigNum{2UL};
+	    /* value for arcv_sec_build */
+	static constexpr std::uint32_t kBcrArcvSecBuild{0x80002001UL};
+	    /* value for arcv_sec_build.version */
+	static constexpr std::uint32_t kBcrArcvSecBuildVersion{1UL};
+	    /* value for arcv_sec_build.num_wids */
+	static constexpr std::uint32_t kBcrArcvSecBuildNumWids{32UL};
+	    /* value for arcv_sec_build.fixed_wid */
+	static constexpr std::uint32_t kBcrArcvSecBuildFixedWid{0UL};
+	    /* value for arcv_sec_build.m */
+	static constexpr std::uint32_t kBcrArcvSecBuildM{1UL};
+	    /* value for arcv_dmp_per_build */
+	static constexpr std::uint32_t kBcrArcvDmpPerBuild{0x00000101UL};
+	    /* value for arcv_dmp_per_build.version */
+	static constexpr std::uint32_t kBcrArcvDmpPerBuildVersion{1UL};
+	    /* value for arcv_dmp_per_build.per0_size */
+	static constexpr std::uint32_t kBcrArcvDmpPerBuildPer0Size{1UL};
+	    /* value for arcv_isa_opts_build */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuild{0x03341BE1UL};
+	    /* value for arcv_isa_opts_build.version */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildVersion{1UL};
+	    /* value for arcv_isa_opts_build.zcb */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZcb{1UL};
+	    /* value for arcv_isa_opts_build.zcmp */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZcmp{1UL};
+	    /* value for arcv_isa_opts_build.zcmt */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZcmt{1UL};
+	    /* value for arcv_isa_opts_build.zba */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZba{1UL};
+	    /* value for arcv_isa_opts_build.zbb */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZbb{1UL};
+	    /* value for arcv_isa_opts_build.zbc */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZbc{0UL};
+	    /* value for arcv_isa_opts_build.zbs */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZbs{1UL};
+	    /* value for arcv_isa_opts_build.zicond */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZicond{1UL};
+	    /* value for arcv_isa_opts_build.zfinx */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZfinx{0UL};
+	    /* value for arcv_isa_opts_build.zdinx */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZdinx{0UL};
+	    /* value for arcv_isa_opts_build.zfa */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZfa{0UL};
+	    /* value for arcv_isa_opts_build.zfh */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZfh{0UL};
+	    /* value for arcv_isa_opts_build.zk */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZk{0UL};
+	    /* value for arcv_isa_opts_build.zca */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZca{1UL};
+	    /* value for arcv_isa_opts_build.zhinx */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZhinx{0UL};
+	    /* value for arcv_isa_opts_build.zicbom */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZicbom{1UL};
+	    /* value for arcv_isa_opts_build.zicbop */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZicbop{1UL};
+	    /* value for arcv_isa_opts_build.ziccamoa */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZiccamoa{0UL};
+	    /* value for arcv_isa_opts_build.zic64rs */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZic64rs{0UL};
+	    /* value for arcv_isa_opts_build.zicsr */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildZicsr{1UL};
+	    /* value for arcv_isa_opts_build.n */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildN{1UL};
+	    /* value for arcv_isa_opts_build.res */
+	static constexpr std::uint32_t kBcrArcvIsaOptsBuildRes{0UL};
+	    /* value for arcv_ras_build */
+	static constexpr std::uint32_t kBcrArcvRasBuild{0x000C3601UL};
+	    /* value for arcv_ras_build.version */
+	static constexpr std::uint32_t kBcrArcvRasBuildVersion{1UL};
+	    /* value for arcv_ras_build.dp */
+	static constexpr std::uint32_t kBcrArcvRasBuildDp{6UL};
+	    /* value for arcv_ras_build.ip */
+	static constexpr std::uint32_t kBcrArcvRasBuildIp{6UL};
+	    /* value for arcv_ras_build.dcp */
+	static constexpr std::uint32_t kBcrArcvRasBuildDcp{0UL};
+	    /* value for arcv_ras_build.icp */
+	static constexpr std::uint32_t kBcrArcvRasBuildIcp{6UL};
+	    /* value for arcv_ras_build.l2cp */
+	static constexpr std::uint32_t kBcrArcvRasBuildL2cp{0UL};
+	    /* value for arcv_ras_build.mmu */
+	static constexpr std::uint32_t kBcrArcvRasBuildMmu{0UL};
+	    /* value for arcv_sr_epc */
+	static constexpr std::uint32_t kCirArcvSrEpc{0x00000000UL};
+	/************* End of BCR/CIR Macros **********************/
+	    // coverity[autosar_cpp14_a3_9_1_violation]
+	    /* value for family_name */
+	static constexpr char const* const kFamilyName{"av5rmx"};
+	    /* value for family */
+	static constexpr std::uint32_t kFamily{1UL};
+	    /* value for core_version */
+	static constexpr std::uint32_t kCoreVersion{1UL};
+	    /* value for za */
+	static constexpr std::uint32_t kZa{1UL};
+	    /* value for zca */
+	static constexpr std::uint32_t kZca{1UL};
+	    /* value for zc */
+	static constexpr std::uint32_t kZc{1UL};
+	    /* value for zm */
+	static constexpr std::uint32_t kZm{1UL};
+	    /* value for zu */
+	static constexpr std::uint32_t kZu{1UL};
+	    /* value for zcb */
+	static constexpr std::uint32_t kZcb{1UL};
+	    /* value for zcmp */
+	static constexpr std::uint32_t kZcmp{1UL};
+	    /* value for zcmt */
+	static constexpr std::uint32_t kZcmt{1UL};
+	    /* value for zba */
+	static constexpr std::uint32_t kZba{1UL};
+	    /* value for zbb */
+	static constexpr std::uint32_t kZbb{1UL};
+	    /* value for zbs */
+	static constexpr std::uint32_t kZbs{1UL};
+	    /* value for zicond */
+	static constexpr std::uint32_t kZicond{1UL};
+	    /* value for zicbom */
+	static constexpr std::uint32_t kZicbom{1UL};
+	    /* value for zicbop */
+	static constexpr std::uint32_t kZicbop{1UL};
+	    /* value for Xunaligned */
+	static constexpr std::uint32_t kXunaligned{1UL};
+	    /* value for zifencei */
+	static constexpr std::uint32_t kZifencei{1UL};
+	    /* value for zihintpause */
+	static constexpr std::uint32_t kZihintpause{1UL};
+	    /* value for zicsr */
+	static constexpr std::uint32_t kZicsr{1UL};
+	    /* value for reset_pc */
+	static constexpr std::uint32_t kResetPc{0x0UL};
+	    /* value for reset_pc_ext */
+	static constexpr std::uint32_t kResetPcExt{1UL};
+	    /* value for Xmpy_cycles */
+	static constexpr std::uint32_t kXmpyCycles{10UL};
+	    /* value for iccm0.present */
+	static constexpr std::uint32_t kIccm0Present{1UL};
+	    /* value for iccm0.base */
+	static constexpr std::uint32_t kIccm0Base{0x0UL};
+	    /* value for iccm0.size */
+	static constexpr std::uint32_t kIccm0Size{0x80000UL};
+	    /* value for dccm.present */
+	static constexpr std::uint32_t kDccmPresent{1UL};
+	    /* value for dccm.base */
+	static constexpr std::uint32_t kDccmBase{0x80000000UL};
+	    /* value for dccm.size */
+	static constexpr std::uint32_t kDccmSize{0x100000UL};
+	    /* value for dccm_mem_cycles */
+	static constexpr std::uint32_t kDccmMemCycles{1UL};
+	    /* value for icache.present */
+	static constexpr std::uint32_t kIcachePresent{1UL};
+	    /* value for icache.size */
+	static constexpr std::uint32_t kIcacheSize{0x4000UL};
+	    /* value for icache.line_size */
+	static constexpr std::uint32_t kIcacheLineSize{32UL};
+	    /* value for icache.ways */
+	static constexpr std::uint32_t kIcacheWays{2UL};
+	    /* value for icache_version */
+	static constexpr std::uint32_t kIcacheVersion{1UL};
+	    /* value for mmio_base */
+	static constexpr std::uint32_t kMmioBase{0xE0000000UL};
+	    /* value for rtia_hart_major_width */
+	static constexpr std::uint32_t kRtiaHartMajorWidth{64UL};
+	    /* value for rtia_stsp */
+	static constexpr std::uint32_t kRtiaStsp{1UL};
+	    /* value for rtia_snvi */
+	static constexpr std::uint32_t kRtiaSnvi{1UL};
+	    /* value for smrnmi */
+	static constexpr std::uint32_t kSmrnmi{1UL};
+	    /* value for rnmi_vec_ext */
+	static constexpr std::uint32_t kRnmiVecExt{1UL};
+	    /* value for rnmi_int_vec */
+	static constexpr std::uint32_t kRnmiIntVec{0x100UL};
+    } // namespace core_config
+
+} // namespace snps_arc
+
+#endif /* core_config_hpp */
+
+]]></string>
+  </configuration>
+  <configuration name="core" filename="core.props">
+    <string><![CDATA[
+	core_config.cir.misa=0x40901105
+	core_config.cir.misa.a=1
+	core_config.cir.misa.b=0
+	core_config.cir.misa.c=1
+	core_config.cir.misa.d=0
+	core_config.cir.misa.e=0
+	core_config.cir.misa.f=0
+	core_config.cir.misa.h=0
+	core_config.cir.misa.i=1
+	core_config.cir.misa.m=1
+	core_config.cir.misa.s=0
+	core_config.cir.misa.u=1
+	core_config.cir.misa.v=0
+	core_config.cir.misa.x=1
+	core_config.cir.mstatush=0x00000400
+	core_config.cir.tdata1=0xf0000000
+	core_config.cir.tinfo=0x010080c0
+	core_config.cir.miccm_ctl=0x00000001
+	core_config.cir.miccm_ctl.e0=1
+	core_config.cir.miccm_ctl.r0=0
+	core_config.cir.miccm_ctl.d0=0
+	core_config.cir.miccm_ctl.e1=0
+	core_config.cir.miccm_ctl.r1=0
+	core_config.cir.miccm_ctl.d1=0
+	core_config.cir.miccm_ctl.iccm1_base=0
+	core_config.cir.miccm_ctl.iccm0_base=0
+	core_config.cir.mdccm_ctl=0x80000001
+	core_config.cir.mdccm_ctl.e=1
+	core_config.cir.mdccm_ctl.r=0
+	core_config.cir.mdccm_ctl.d=0
+	core_config.cir.mdccm_ctl.dccm_base=2048
+	core_config.cir.arcv_per0_base=0xf0000000
+	core_config.cir.arcv_per0_base.per0_base=3840
+	core_config.cir.arcv_per0_size=0x00000001
+	core_config.cir.arcv_per0_size.per0_size=1
+	core_config.cir.mcache_ctl=0x00000003
+	core_config.cir.mwdt_passwd=0x00000000
+	core_config.cir.pma_addr0=0x000001ff
+	core_config.cir.pma_addr1=0x000001ff
+	core_config.cir.pma_addr2=0x000001ff
+	core_config.cir.pma_addr3=0x000001ff
+	core_config.cir.pma_addr4=0x000001ff
+	core_config.cir.pma_addr5=0x000001ff
+	core_config.cir.msfty_passwd=0x00000001
+	core_config.cir.msfty_ctrl=0x55555555
+	core_config.cir.msfty_diag=0x55555555
+	core_config.cir.msfty_stl_ctrl=0x00000001
+	core_config.cir.marchid=0x80000401
+	core_config.cir.marchid.family=1
+	core_config.cir.marchid.m=0
+	core_config.cir.marchid.v=0
+	core_config.cir.marchid.f=1
+	core_config.cir.mimpid=0x00010100
+	core_config.cir.mimpid.product=1
+	core_config.cir.mimpid.major_rev=1
+	core_config.cir.mimpid.minor_rev=0
+	core_config.cir.mhartid=0x00000000
+	core_config.cir.mconfigptr=0x00000000
+	core_config.bcr.arcv_mwdt_build=0x8fa13c01
+	core_config.bcr.arcv_mwdt_build.version=1
+	core_config.bcr.arcv_mwdt_build.nt=0
+	core_config.bcr.arcv_mwdt_build.sizes=15
+	core_config.bcr.arcv_mwdt_build.scale=4
+	core_config.bcr.arcv_mwdt_build.freq=2000
+	core_config.bcr.arcv_mwdt_build.c=1
+	core_config.bcr.arcv_mmio_build=0x00000e00
+	core_config.bcr.arcv_mmio_build.core_mmio_base=3584
+	core_config.bcr.arcv_hpm_build=0x00080601
+	core_config.bcr.arcv_hpm_build.version=1
+	core_config.bcr.arcv_hpm_build.s=2
+	core_config.bcr.arcv_hpm_build.i=1
+	core_config.bcr.arcv_hpm_build.c=8
+	core_config.bcr.arcv_msfty_build=0x44000001
+	core_config.bcr.arcv_msfty_build.version=1
+	core_config.bcr.arcv_msfty_build.sb=0
+	core_config.bcr.arcv_msfty_build.asil=0
+	core_config.bcr.arcv_msfty_build.sbe_dpt=1
+	core_config.bcr.arcv_msfty_build.stl=0
+	core_config.bcr.arcv_msfty_build.hei=1
+	core_config.bcr.arcv_msfty_build.hyb=0
+	core_config.bcr.arcv_timer_build=0xe0010001
+	core_config.bcr.arcv_timer_build.version=1
+	core_config.bcr.arcv_timer_build.s=0
+	core_config.bcr.arcv_timer_build.base=917520
+	core_config.bcr.arcv_bcr_build=0x00000001
+	core_config.bcr.arcv_bcr_build.version=1
+	core_config.bcr.arcv_pmp_build=0x000a1001
+	core_config.bcr.arcv_pmp_build.version=1
+	core_config.bcr.arcv_pmp_build.regions=16
+	core_config.bcr.arcv_pmp_build.s=0
+	core_config.bcr.arcv_pmp_build.granularity=5
+	core_config.bcr.arcv_pma_build=0x00000601
+	core_config.bcr.arcv_pma_build.version=1
+	core_config.bcr.arcv_pma_build.regions=6
+	core_config.bcr.arcv_dccm_build=0x00020901
+	core_config.bcr.arcv_dccm_build.version=1
+	core_config.bcr.arcv_dccm_build.size=9
+	core_config.bcr.arcv_dccm_build.cycles=1
+	core_config.bcr.arcv_icache_build=0x00013101
+	core_config.bcr.arcv_icache_build.version=1
+	core_config.bcr.arcv_icache_build.assoc=1
+	core_config.bcr.arcv_icache_build.size=3
+	core_config.bcr.arcv_icache_build.bsize=1
+	core_config.bcr.arcv_icache_build.c=0
+	core_config.bcr.arcv_icache_build.d=0
+	core_config.bcr.arcv_iccm_build=0x00000801
+	core_config.bcr.arcv_iccm_build.version=1
+	core_config.bcr.arcv_iccm_build.iccm0_size=8
+	core_config.bcr.arcv_iccm_build.iccm1_size=0
+	core_config.bcr.arcv_clint_build=0x10000113
+	core_config.bcr.arcv_clint_build.stsp=1
+	core_config.bcr.arcv_clint_build.snvi=1
+	core_config.bcr.arcv_clint_build.sstc=0
+	core_config.bcr.arcv_clint_build.sswi=0
+	core_config.bcr.arcv_clint_build.mjpri=1
+	core_config.bcr.arcv_clint_build.version=1
+	core_config.bcr.arcv_imsic_build=0x10010001
+	core_config.bcr.arcv_imsic_build.mfsz=1
+	core_config.bcr.arcv_imsic_build.sifsz=0
+	core_config.bcr.arcv_imsic_build.gifsz=0
+	core_config.bcr.arcv_imsic_build.gifnum=0
+	core_config.bcr.arcv_imsic_build.eidlv=1
+	core_config.bcr.arcv_imsic_build.version=1
+	core_config.bcr.arcv_triggers_build=0x00000201
+	core_config.bcr.arcv_triggers_build.version=1
+	core_config.bcr.arcv_triggers_build.trig_num=2
+	core_config.bcr.arcv_sec_build=0x80002001
+	core_config.bcr.arcv_sec_build.version=1
+	core_config.bcr.arcv_sec_build.num_wids=32
+	core_config.bcr.arcv_sec_build.fixed_wid=0
+	core_config.bcr.arcv_sec_build.m=1
+	core_config.bcr.arcv_dmp_per_build=0x00000101
+	core_config.bcr.arcv_dmp_per_build.version=1
+	core_config.bcr.arcv_dmp_per_build.per0_size=1
+	core_config.bcr.arcv_isa_opts_build=0x03341be1
+	core_config.bcr.arcv_isa_opts_build.version=1
+	core_config.bcr.arcv_isa_opts_build.zcb=1
+	core_config.bcr.arcv_isa_opts_build.zcmp=1
+	core_config.bcr.arcv_isa_opts_build.zcmt=1
+	core_config.bcr.arcv_isa_opts_build.zba=1
+	core_config.bcr.arcv_isa_opts_build.zbb=1
+	core_config.bcr.arcv_isa_opts_build.zbc=0
+	core_config.bcr.arcv_isa_opts_build.zbs=1
+	core_config.bcr.arcv_isa_opts_build.zicond=1
+	core_config.bcr.arcv_isa_opts_build.zfinx=0
+	core_config.bcr.arcv_isa_opts_build.zdinx=0
+	core_config.bcr.arcv_isa_opts_build.zfa=0
+	core_config.bcr.arcv_isa_opts_build.zfh=0
+	core_config.bcr.arcv_isa_opts_build.zk=0
+	core_config.bcr.arcv_isa_opts_build.zca=1
+	core_config.bcr.arcv_isa_opts_build.zhinx=0
+	core_config.bcr.arcv_isa_opts_build.zicbom=1
+	core_config.bcr.arcv_isa_opts_build.zicbop=1
+	core_config.bcr.arcv_isa_opts_build.ziccamoa=0
+	core_config.bcr.arcv_isa_opts_build.zic64rs=0
+	core_config.bcr.arcv_isa_opts_build.zicsr=1
+	core_config.bcr.arcv_isa_opts_build.n=1
+	core_config.bcr.arcv_isa_opts_build.res=0
+	core_config.bcr.arcv_ras_build=0x000c3601
+	core_config.bcr.arcv_ras_build.version=1
+	core_config.bcr.arcv_ras_build.dp=6
+	core_config.bcr.arcv_ras_build.ip=6
+	core_config.bcr.arcv_ras_build.dcp=0
+	core_config.bcr.arcv_ras_build.icp=6
+	core_config.bcr.arcv_ras_build.l2cp=0
+	core_config.bcr.arcv_ras_build.mmu=0
+	core_config.cir.arcv_sr_epc=0x00000000
+	core_config.family_name=av5rmx
+	core_config.family=1
+	core_config.core_version=1
+	core_config.za=1
+	core_config.zca=1
+	core_config.zc=1
+	core_config.zm=1
+	core_config.zu=1
+	core_config.zcb=1
+	core_config.zcmp=1
+	core_config.zcmt=1
+	core_config.zba=1
+	core_config.zbb=1
+	core_config.zbs=1
+	core_config.zicond=1
+	core_config.zicbom=1
+	core_config.zicbop=1
+	core_config.Xunaligned=1
+	core_config.zifencei=1
+	core_config.zihintpause=1
+	core_config.zicsr=1
+	core_config.reset_pc=0x0
+	core_config.reset_pc_ext=1
+	core_config.Xmpy_cycles=10
+	core_config.iccm0.present=1
+	core_config.iccm0.base=0x0
+	core_config.iccm0.size=0x80000
+	core_config.dccm.present=1
+	core_config.dccm.base=0x80000000
+	core_config.dccm.size=0x100000
+	core_config.dccm_mem_cycles=1
+	core_config.icache.present=1
+	core_config.icache.size=0x4000
+	core_config.icache.line_size=32
+	core_config.icache.ways=2
+	core_config.icache_version=1
+	core_config.mmio_base=0xe0000000
+	core_config.rtia_hart_major_width=64
+	core_config.rtia_stsp=1
+	core_config.rtia_snvi=1
+	core_config.smrnmi=1
+	core_config.rnmi_vec_ext=1
+	core_config.rnmi_int_vec=0x100
+]]></string>
+  </configuration>
+  <configuration name="gcc_compiler" filename="gcc.arg">
+    <string><![CDATA[
+	-march=rv32i_zicsr_zifencei_zihintpause_a_zca_m_zcb_zcmp_zcmt_zba_zbb_zbs_zicond_zicbom_zicbop
+	-mabi=ilp32
+	-mtune=arc-v-rmx-100-series
+	--param arcv-mpy-option=10c
+]]></string>
+  </configuration>
+  <configuration name="linker_command_file" filename="link_cmd.txt">
+    <string><![CDATA[
+# SYSTEM memory regions indicate where external memory might be located.
+#   The TCF has no specific knowledge of whether SYSTEM regions contain 
+#   external memory or not.
+# CCMWRAP memory regions indicate unusable portions of the address space
+#   due to CCM memory wrapping into upper addresses beyond its size
+
+MEMORY {
+    ICCM0   : ORIGIN = 0x00000000, LENGTH = DEFINED(_ICCMSIZE) ? _ICCMSIZE : 0x00080000
+#   CCMWRAP0: ORIGIN = 0x00080000, LENGTH = 0x00080000
+   SYSTEM0 : ORIGIN = 0x00100000, LENGTH = 0x7ff00000
+    DCCM    : ORIGIN = 0x80000000, LENGTH = DEFINED(_DCCMSIZE) ? _DCCMSIZE : 0x00100000
+#   CCMWRAP1: ORIGIN = 0x80100000, LENGTH = 0x00000000
+#   SYSTEM1 : ORIGIN = 0x80100000, LENGTH = 0x3ff00000
+#   MSS_CLK : ORIGIN = 0xc0000000, LENGTH = 0x00001000
+#   SYSTEM2 : ORIGIN = 0xc0001000, LENGTH = 0x00001000
+#   MSS_PERF: ORIGIN = 0xc0002000, LENGTH = 0x00002000
+#   SYSTEM3 : ORIGIN = 0xc0004000, LENGTH = 0x1fffc000
+    MMIO    : ORIGIN = 0xe0000000, LENGTH = 0x00100000
+#   SYSTEM4 : ORIGIN = 0xe0100000, LENGTH = 0x1ff00000
+    }
+SECTIONS {
+    GROUP BLOCK(4) : {
+        .vectors? (TEXT): {}
+        .text : { *(SORT(.text .text.* .text$*))} 
+        .init : {
+             *(SORT( .init .init.* .init$*))
+        } = 0x00010001
+        .fini : {
+             *(SORT( .fini .fini.* .fini$* ))
+        } = 0x00010001
+        * (TEXT): {}
+        .rodata : {
+            *(SORT(.rodata .rodata.* .rodata$* ))
+        }
+        .eh_frame : {
+            *(.eh_frame .eh_frame.* .eh_frame$*)
+        }
+    	* (LIT): {}
+    } > ICCM0
+
+    GROUP SIZE(SIZEOF(SYSTEM0)) : {
+    .ctors : {
+        *(.ctors .ctors.* ctors$*)
+    }
+    .dtors : {
+        *(SORT(.dtors .dtors.* dtors$*))
+    }
+    .preinit_array :
+    {
+        PROVIDE_HIDDEN (__preinit_array_start = .);
+        KEEP(*(.preinit_array*))
+        PROVIDE_HIDDEN (__preinit_array_end = .);
+    }
+    .init_array :
+    {
+        PROVIDE_HIDDEN (__init_array_start = .);
+        KEEP(*(SORT(.init_array.*)))
+        KEEP(*(.init_array*))
+        PROVIDE_HIDDEN (__init_array_end = .);
+    }
+    .fini_array :
+    {
+        PROVIDE_HIDDEN (__fini_array_start = .);
+        KEEP(*(SORT(.fini_array.*)))
+        KEEP(*(.fini_array*))
+        PROVIDE_HIDDEN (__fini_array_end = .);
+    }
+    .tdata : { }
+    .tbss : { }
+    .sdata? : {
+        *(.sdata .sdata$* .sdata.*)
+    }
+    .sbss? : {
+        *(.sbss .sbss$* .sbss.*)
+    }
+    .rodata_in_data : { }
+    * (DATA): {}
+    .bss : { *(.bss .bss.* COMMON) }
+    * (BSS): {}
+    .stack ALIGN(16) : {
+        _fstack = .;
+        . = . + (DEFINED(_STACKSIZE) ? _STACKSIZE : 65536);
+        _estack = .;
+    }
+    _end = .;
+    .heap ALIGN(8) : {
+        _fheap = .;
+        . = . + (DEFINED(_HEAPSIZE) ? _HEAPSIZE : ADDR(SYSTEM0) + SIZEOF(SYSTEM0) - ADDR(.heap));
+        _eheap = .;
+    }
+} > SYSTEM0
+
+}
+
+]]></string>
+  </configuration>
+  <configuration name="gnu_linker_command_file" filename="memory.x">
+    <string><![CDATA[
+MEMORY {
+    ICCM0    : ORIGIN = 0x00000000, LENGTH = 0x00080000
+    CCMWRAP0 : ORIGIN = 0x00080000, LENGTH = 0x00080000
+    SYSTEM0  : ORIGIN = 0x00100000, LENGTH = 0x7ff00000
+    DCCM     : ORIGIN = 0x80000000, LENGTH = 0x00100000
+    CCMWRAP1 : ORIGIN = 0x80100000, LENGTH = 0x00000000
+    SYSTEM1  : ORIGIN = 0x80100000, LENGTH = 0x3ff00000
+    MSS_CLK  : ORIGIN = 0xc0000000, LENGTH = 0x00001000
+    SYSTEM2  : ORIGIN = 0xc0001000, LENGTH = 0x00001000
+    MSS_PERF : ORIGIN = 0xc0002000, LENGTH = 0x00002000
+    SYSTEM3  : ORIGIN = 0xc0004000, LENGTH = 0x1fffc000
+    MMIO     : ORIGIN = 0xe0000000, LENGTH = 0x00100000
+    SYSTEM4  : ORIGIN = 0xe0100000, LENGTH = 0x1ff00000
+    }
+REGION_ALIAS("startup", ICCM0)
+REGION_ALIAS("text", ICCM0)
+REGION_ALIAS("data", SYSTEM0)
+REGION_ALIAS("sdata", SYSTEM0)
+#PROVIDE (__stack_top = (0x800fffff & -4 ));
+#PROVIDE (__end_heap =  (0x800fffff ));
+PROVIDE (__stack_top = (0x7FFFFFFF & -4));  /* Top of SYSTEM0 */
+PROVIDE (__end_heap =  (0x7FFFFFFF));       /* End of SYSTEM0 */
+
+]]></string>
+  </configuration>
+  <configuration name="apex_header" filename="apexextensions.h">
+    <string><![CDATA[
+
+/* **** DO NOT EDIT - this file is generated by ARChitect2 ****
+ *
+ * Description: Header file declaring the compiler extensions for apex components 
+ */
+
+#ifndef _apexextensions_H_
+#define _apexextensions_H_
+
+
+
+#endif
+
+
+]]></string>
+  </configuration>
+  <configuration name="alb_mss_clkctrl_regmap.h" filename="alb_mss_clkctrl_regmap.h">
+    <string><![CDATA[
+/*************************************************************************/
+/**                                                                     **/
+/** Copyright (C) 2016-2017 Synopsys, Inc.                              **/
+/** All Rights Reserved.                                                **/
+/**                                                                     **/
+/** This Synopsys software and all associated documentation are         **/
+/** proprietary to Synopsys, Inc. and may only be used pursuant to the  **/
+/** terms and conditions of a written license agreement with Synopsys,  **/
+/** Inc. All other use, reproduction, modification, or distribution of  **/
+/** this Synopsys software or the associated documentation is strictly  **/
+/** prohibited.                                                         **/
+/**                                                                     **/
+/*************************************************************************/
+
+
+/* **** DO NOT EDIT - this file is generated by ARChitect2 ****
+ *
+ * Description: Header file declaring the compiler extensions for Clock control 
+ */
+#ifndef  _alb_mss_clkctrl_regmap_H_
+#define  _alb_mss_clkctrl_regmap_H_
+
+// Use -tcf_include= #include "alb_mss_fab_system_memmap.h"
+// Clock control registers
+#define MSS_CLKCTRL_CFG_CTRL_ADDR            (MSS_CLKCTRL_0_BASE+0x0)
+// clock divider registers
+#define MSS_CLKCTRL_CLK_DIV_ADDR      (MSS_CLKCTRL_0_BASE+0x4)
+#define MSS_CLKCTRL_WDT_CLK_DIV_ADDR      (MSS_CLKCTRL_0_BASE+0x8)
+#define MSS_CLKCTRL_MSS_CLK_DIV_ADDR      (MSS_CLKCTRL_0_BASE+0xc)
+// clock enable ratio and status registers
+// iccm_ahb_clk_en: clk <-> mss_clk; design rule: none (clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_ICCM_AHB_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x10)
+#define MSS_CLKCTRL_ICCM_AHB_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x14)
+// dccm_ahb_clk_en: clk <-> mss_clk; design rule: none (clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_DCCM_AHB_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x18)
+#define MSS_CLKCTRL_DCCM_AHB_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x1c)
+// mmio_ahb_clk_en: clk <-> mss_clk; design rule: none (clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MMIO_AHB_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x20)
+#define MSS_CLKCTRL_MMIO_AHB_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x24)
+// mss_fab_mst0_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_MST0_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x28)
+#define MSS_CLKCTRL_MSS_FAB_MST0_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x2c)
+// mss_fab_mst1_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_MST1_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x30)
+#define MSS_CLKCTRL_MSS_FAB_MST1_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x34)
+// mss_fab_mst2_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_MST2_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x38)
+#define MSS_CLKCTRL_MSS_FAB_MST2_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x3c)
+// mss_fab_mst3_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_MST3_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x40)
+#define MSS_CLKCTRL_MSS_FAB_MST3_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x44)
+// mss_fab_slv0_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV0_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x48)
+#define MSS_CLKCTRL_MSS_FAB_SLV0_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x4c)
+// mss_fab_slv1_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV1_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x50)
+#define MSS_CLKCTRL_MSS_FAB_SLV1_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x54)
+// mss_fab_slv2_clk_en: mss_clk <-> clk; design rule: none (mss_clk freq vs. clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV2_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x58)
+#define MSS_CLKCTRL_MSS_FAB_SLV2_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x5c)
+// mss_fab_slv3_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV3_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x60)
+#define MSS_CLKCTRL_MSS_FAB_SLV3_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x64)
+// mss_fab_slv4_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV4_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x68)
+#define MSS_CLKCTRL_MSS_FAB_SLV4_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x6c)
+// mss_fab_slv5_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV5_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x70)
+#define MSS_CLKCTRL_MSS_FAB_SLV5_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x74)
+// mss_fab_slv6_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV6_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x78)
+#define MSS_CLKCTRL_MSS_FAB_SLV6_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x7c)
+// mss_fab_slv7_clk_en: mss_clk <-> mss_clk; design rule: none (mss_clk freq vs. mss_clk freq)
+#define MSS_CLKCTRL_MSS_FAB_SLV7_CLK_EN_RATIO_ADDR     (MSS_CLKCTRL_0_BASE+0x80)
+#define MSS_CLKCTRL_MSS_FAB_SLV7_CLK_EN_STAT_ADDR      (MSS_CLKCTRL_0_BASE+0x84)
+
+#define MSS_CLKCTRL_NMI_COUNTER              (MSS_CLKCTRL_0_BASE+0x88)
+
+#endif
+]]></string>
+  </configuration>
+  <configuration name="system_memmap" filename="alb_mss_fab_system_memmap.h">
+    <string><![CDATA[
+/*************************************************************************/
+/**                                                                     **/
+/** Copyright (C) 2016-2017 Synopsys, Inc.                              **/
+/** All Rights Reserved.                                                **/
+/**                                                                     **/
+/** This Synopsys software and all associated documentation are         **/
+/** proprietary to Synopsys, Inc. and may only be used pursuant to the  **/
+/** terms and conditions of a written license agreement with Synopsys,  **/
+/** Inc. All other use, reproduction, modification, or distribution of  **/
+/** this Synopsys software or the associated documentation is strictly  **/
+/** prohibited.                                                         **/
+/**                                                                     **/
+/*************************************************************************/
+
+
+/* **** DO NOT EDIT - this file is generated by ARChitect2 ****
+ *
+ * Description: Header file declaring the compiler extensions for System Memory
+ */
+#ifndef  _alb_mss_fab_system_memmap_H_
+#define  _alb_mss_fab_system_memmap_H_
+// System memory map
+#define ICCM_AHB_H0_BASE 0x40000000
+#define ICCM_AHB_H0_SIZE 0x80000
+#define DCCM_AHB_H0_BASE 0x40100000
+#define DCCM_AHB_H0_SIZE 0x100000
+#define MMIO_AHB_H0_BASE 0x40200000
+#define MMIO_AHB_H0_SIZE 0x100000
+#define MSS_CLKCTRL_0_BASE 0xc0000000
+#define MSS_CLKCTRL_0_SIZE 0x1000
+#define DSLV1_0_BASE 0xc0006000
+#define DSLV1_0_SIZE 0x1000
+#define DSLV2_0_BASE 0xc1000000
+#define DSLV2_0_SIZE 0x1000000
+#define MSS_PERFCTRL_0_BASE 0xc0002000
+#define MSS_PERFCTRL_0_SIZE 0x2000
+#define MSS_MEM_0_BASE 0x0000
+#define MSS_MEM_0_SIZE 0x100000000
+
+// CCM system address with the specific name
+
+#define HAS_DEFAULT_SLAVE 1
+#endif
+]]></string>
+  </configuration>
+  <configuration name="alb_mss_perfctrl_regmap.h" filename="alb_mss_perfctrl_regmap.h">
+    <string><![CDATA[
+/*************************************************************************/
+/**                                                                     **/
+/** Copyright (C) 2016-2017 Synopsys, Inc.                              **/
+/** All Rights Reserved.                                                **/
+/**                                                                     **/
+/** This Synopsys software and all associated documentation are         **/
+/** proprietary to Synopsys, Inc. and may only be used pursuant to the  **/
+/** terms and conditions of a written license agreement with Synopsys,  **/
+/** Inc. All other use, reproduction, modification, or distribution of  **/
+/** this Synopsys software or the associated documentation is strictly  **/
+/** prohibited.                                                         **/
+/**                                                                     **/
+/*************************************************************************/
+
+
+/* **** DO NOT EDIT - this file is generated by ARChitect2 ****
+ *
+ * Description: Header file declaring the compiler extensions for Performance control
+ */
+#ifndef  _alb_mss_perfctrl_regmap_H_
+#define  _alb_mss_perfctrl_regmap_H_
+
+
+// Use -tcf_include= #include "alb_mss_fab_system_memmap.h"
+
+// The number of fabric master buses for which latency and performance counters can be controlled
+#define MSS_PERFCTRL_MST_FAB_COUNT                   4
+
+// The indices of each fabric master bus:
+// - These indices can be used in the  MSS_PERFCTRL_REG_*(i) macro's to get the
+//   corresponding latency/performance counter register for that specific fabric master bus.
+#define MSS_PERFCTRL_MST_FAB_AHB_HIDX               0
+#define MSS_PERFCTRL_MST_FAB_DBU_PER_AHB_HIDX               1
+#define MSS_PERFCTRL_MST_FAB_BRI_IDX               2
+#define MSS_PERFCTRL_MST_FAB_XTOR_AXI_IDX               3
+#define MSS_PERFCTRL_MEM_REGION_COUNT                 1
+// The index of the memory controller bus to be used in the MSS_PERFCTRL_REG_*(i) macro's
+// to get the latency/performance counter register for the memory controller bus.
+#define MSS_PERFCTRL_MEM_RGON0_IDX                 32
+
+// The Latency controller and performance counter registers for bus 'i':
+// * 0 <= i < 4  - Fabric master bus i
+// *      i==30  - Memory bus
+#define MSS_PERFCTRL_REG_LAT_CTRL(i)                  (MSS_PERFCTRL_0_BASE + (i*0x80))
+#define MSS_PERFCTRL_REG_AW_COUNT_LO(i)               (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x08)
+#define MSS_PERFCTRL_REG_AW_COUNT_HI(i)               (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x0C)
+#define MSS_PERFCTRL_REG_W_COUNT_LO(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x10)
+#define MSS_PERFCTRL_REG_W_COUNT_HI(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x14)
+#define MSS_PERFCTRL_REG_AW_LAT_LO(i)                 (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x18)
+#define MSS_PERFCTRL_REG_AW_LAT_HI(i)                 (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x1C)
+#define MSS_PERFCTRL_REG_W_FIRST_LAT_LO(i)            (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x20)
+#define MSS_PERFCTRL_REG_W_FIRST_LAT_HI(i)            (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x24)
+#define MSS_PERFCTRL_REG_W_LAST_LAT_LO(i)             (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x28)
+#define MSS_PERFCTRL_REG_W_LAST_LAT_HI(i)             (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x2C)
+#define MSS_PERFCTRL_REG_B_LAT_LO(i)                  (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x30)
+#define MSS_PERFCTRL_REG_B_LAT_HI(i)                  (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x34)
+#define MSS_PERFCTRL_REG_AR_COUNT_LO(i)               (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x38)
+#define MSS_PERFCTRL_REG_AR_COUNT_HI(i)               (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x3C)
+#define MSS_PERFCTRL_REG_R_COUNT_LO(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x40)
+#define MSS_PERFCTRL_REG_R_COUNT_HI(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x44)
+#define MSS_PERFCTRL_REG_AR_LAT_LO(i)                 (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x48)
+#define MSS_PERFCTRL_REG_AR_LAT_HI(i)                 (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x4C)
+#define MSS_PERFCTRL_REG_R_FIRST_LAT_LO(i)            (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x50)
+#define MSS_PERFCTRL_REG_R_FIRST_LAT_HI(i)            (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x54)
+#define MSS_PERFCTRL_REG_R_LAST_LAT_LO(i)             (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x58)
+#define MSS_PERFCTRL_REG_R_LAST_LAT_HI(i)             (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x5C)
+#define MSS_PERFCTRL_REG_BW_WR_CTRL(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x60)
+#define MSS_PERFCTRL_REG_BW_RD_CTRL(i)                (MSS_PERFCTRL_0_BASE + (i*0x80) + 0x64)
+
+// Global performance controller registers
+#define MSS_PERFCTRL_REG_CTRL                         (MSS_PERFCTRL_0_BASE + 0x1000 + 0x800)
+#define MSS_PERFCTRL_REG_TICK_COUNT_HI                (MSS_PERFCTRL_0_BASE + 0x1000 + 0x804)
+#define MSS_PERFCTRL_REG_TICK_COUNT_LO                (MSS_PERFCTRL_0_BASE + 0x1000 + 0x808)
+#define MSS_PERFCTRL_REG_COMP_VERSION                 (MSS_PERFCTRL_0_BASE + 0x1000 + 0x80C)
+#define MSS_PERFCTRL_REG_COMP_TYPE                    (MSS_PERFCTRL_0_BASE + 0x1000 + 0x810)
+
+
+#endif
+]]></string>
+  </configuration>
+  <configuration name="apex_assembly" filename="apexextensions.s">
+    <string><![CDATA[
+
+; Assembler directives for eia extensions in this design
+
+]]></string>
+  </configuration>
+  <configuration name="alb_mss_fab_system_memmap.s" filename="alb_mss_fab_system_memmap.s">
+    <string><![CDATA[
+// System memory map
+
+.equ ICCM_AHB_H0_BASE, 0x40000000
+.equ ICCM_AHB_H0_SIZE, 0x80000
+.equ DCCM_AHB_H0_BASE, 0x40100000
+.equ DCCM_AHB_H0_SIZE, 0x100000
+.equ MMIO_AHB_H0_BASE, 0x40200000
+.equ MMIO_AHB_H0_SIZE, 0x100000
+.equ MSS_CLKCTRL_0_BASE, 0xc0000000
+.equ MSS_CLKCTRL_0_SIZE, 0x1000
+.equ DSLV1_0_BASE, 0xc0006000
+.equ DSLV1_0_SIZE, 0x1000
+.equ DSLV2_0_BASE, 0xc1000000
+.equ DSLV2_0_SIZE, 0x1000000
+.equ MSS_PERFCTRL_0_BASE, 0xc0002000
+.equ MSS_PERFCTRL_0_SIZE, 0x2000
+.equ MSS_MEM_0_BASE, 0x0000
+.equ MSS_MEM_0_SIZE, 0x100000000
+
+
+
+.equ UNALLOC_SPACE_NUM,       0
+
+// CCM system address with the specific name
+
+.equ HAS_DEFAULT_SLAVE, 1
+]]></string>
+  </configuration>
+</config_list>
+

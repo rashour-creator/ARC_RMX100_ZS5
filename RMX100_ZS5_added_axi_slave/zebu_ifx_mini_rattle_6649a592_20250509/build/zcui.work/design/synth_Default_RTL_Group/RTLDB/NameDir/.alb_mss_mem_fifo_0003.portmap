@@ -1,0 +1,84 @@
+Module alb_mss_mem_fifo_0003{
+}
+
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_12_1{
+11 0 signal
+11 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_66_1{
+65 0 signal
+}
+EdfPortBounds zceiMessageOutPort_33{
+32 0 message
+}
+EdfPortBounds alb_mss_fab_fifo_0004{
+0 0 i_data
+5 0 i_occp
+0 0 o_data
+5 0 o_occp
+}
+EdfPortBounds zceiMessageInPort_35{
+34 0 message
+}
+EdfPortBounds zceiMessageOutPort_64{
+63 0 message
+}
+EdfPortBounds zceiMessageOutPort_1{
+0 0 message
+}
+EdfPortBounds rl_pma_hit{
+19 0 addr
+19 0 pmp_addr
+19 0 pmp_addr_mask
+1 0 pmp_addr_mode
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds zceiMessageOutPort_2{
+1 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_32_1{
+31 0 signal
+}
+EdfPortBounds zceiMessageInPort{
+31 0 message
+}
+EdfPortBounds zceiMessageOutPort_8{
+7 0 message
+}
+EdfPortBounds zceiMessageInPort_1{
+0 0 message
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_7_1{
+6 0 signal
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds zceiMessageInPort_64{
+63 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_5_1{
+4 0 signal
+4 0 signal_sample
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+EdfPortBounds zceiMessageInPort_160{
+159 0 message
+}
+NonAliasNets alb_mss_mem_fifo_0003{
+fifo_dep_gt_1_occp_cpy_r[2]    f   72
+fifo_dep_gt_1_occp_cpy_r[1]    f   73
+fifo_dep_gt_1_rptr_vec_r[1]    f   82
+fifo_dep_gt_1_wptr_vec_r[1]    f   84
+}

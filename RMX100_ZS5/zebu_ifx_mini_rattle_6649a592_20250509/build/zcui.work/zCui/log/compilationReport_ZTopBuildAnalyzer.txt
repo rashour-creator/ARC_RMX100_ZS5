@@ -1,0 +1,396 @@
+Compile Profile Report
+
+____________________________________________________________________________________________________
+Table Of Contents
+
+1. Compilation Summary
+2. Compile time with delay (slot and grid)
+3. Compile time without delay
+4. Compilation times per component
+5. Compilation Details per Task Class
+6. Main Compilation Stages
+  6.1. Front End Stages
+  6.2. Synthesis Waiting for slot distribution
+  6.3. Top 10 Synthesis Bundles
+  6.4. Back-end Stages
+7. Hosts
+8. Memory usage
+9. Job queue memory analysis
+10. Grid Delay
+11. Grid Delay Per Job Queue
+
+____________________________________________________________________________________________________
+1. Compilation Summary
+
+All sessions cumulative compile times:
+    without delay  : 1min 56s
+    with delay*    : 6min 08s
+
+*including slot and grid delays, difference with total wall clock time could be NFS wait or internal flow handling delays
+
+Overview of the critical path of the compilation
+
+   Phase       (%)     Slot delay   Grid delay   Elapsed time   Total # of jobs fired   Max memory consumption
+------------ -------- ------------ ------------ -------------- ----------------------- -----------------------
+VCS            32.76     00:00:00     00:00:35       00:00:38                       1                 749.05MB
+Synthesis      26.72     00:00:00     00:00:49       00:00:31                      28                 386.70MB
+zTopBuild      18.97     00:00:00     00:00:45       00:00:22                       1                   3.38GB
+Other tasks    21.55     00:00:00     00:02:03       00:00:25                       5                 263.98MB
+Total         100.00     00:00:00     00:04:12       00:01:56                      35                        -
+
+Columns:
+ - Phase                 : compilation phase
+ - (%)                   : percentage of contribution to the overall compile time
+ - Slot delay            : time waiting for a slot on the grid
+ - Grid delay            : time between the task is spawned and the task is launched
+ - Elapsed time          : contribution to the overall compile time
+ - Total # of jobs fired : number of jobs with same phase fired
+ - Max memory consumption: job in the phase with max memory taken
+
+____________________________________________________________________________________________________
+2. Compile time with delay (slot and grid)
+
+Critical path of the compilation with all waiting times
+
+                Task                    (%)     Slot delay   Grid delay   Elapsed time   Spawn Time   Finish Time               Host             
+------------------------------------- -------- ------------ ------------ -------------- ------------ ------------- ------------------------------
+Check Back-End Binaries Version          2.59     00:00:00     00:00:00       00:00:03     00:00:00      00:00:03   us01odcvde23280              
+Target Configuration                     0.86     00:00:00     00:00:24       00:00:01     00:00:03      00:00:28   odcgen-zebu-16cx240g-2417-084
+Analyze Target Configuration Results     1.72     00:00:00     00:00:00       00:00:02     00:00:57      00:00:59                                
+Build Fs Macro Script                    0.00     00:00:00     00:00:00       00:00:00     00:00:59      00:00:59                                
+Build Fs Macro Library                   0.86     00:00:00     00:00:41       00:00:01     00:00:59      00:01:41   zebutrain-4758-009           
+VCS                                     32.76     00:00:00     00:00:35       00:00:38     00:02:00      00:03:13   odcgen-zebu-16cx240g-2417-083
+Analyze VCS Results                      7.76     00:00:00     00:00:00       00:00:09     00:03:13      00:03:22                                
+Default_RTL_Group Bundle 22             26.72     00:00:00     00:00:49       00:00:31     00:03:22      00:04:42   vgzeburtdc273                
+Bundle_22_Analyzer                       0.00     00:00:00     00:00:00       00:00:00     00:04:42      00:04:42                                
+Memory zz_Encrypt_5_zMem                 0.00     00:00:00     00:00:00       00:00:00     00:00:00      00:00:00                                
+Prepare Backend Flow                     0.86     00:00:00     00:00:00       00:00:01     00:04:42      00:04:43                                
+Make RTL DB indexes                      6.03     00:00:00     00:00:40       00:00:07     00:04:44      00:05:31   odcgen-zebu-16cx240g-2417-084
+Make RTL DB link                         0.00     00:00:00     00:00:18       00:00:00     00:05:31      00:05:49   zebutrain-4758-011           
+zTopBuild                               18.97     00:00:00     00:00:45       00:00:22     00:05:50      00:06:57   odcgen-zebu-16cx240g-2417-084
+Analyze System Building Results          0.86     00:00:00     00:00:00       00:00:01     00:06:58      00:06:59                                
+Total time                             100.00     00:00:00     00:04:12       00:01:56            -             -   -                            
+
+Columns:
+ - Task        : task label
+ - (%)         : percentage of contribution to the overall compile time
+ - Slot delay  : time waiting for a slot on the grid
+ - Grid delay  : time between the task is spawned and the task is launched
+ - Elapsed time: contribution to the overall compile time
+ - Spawn Time  : time spawning on the grid, taking the spawn time of the first task as reference
+ - Finish Time : time finishing, taking the spawn time of the first task as reference
+ - Host        : host where the task was launched (only for tasks external to zCui)
+
+
+____________________________________________________________________________________________________
+3. Compile time without delay
+
+Critical path of the compilation with an ideal compute grid
+
+                Task                    (%)     Elapsed time               Host             
+------------------------------------- -------- -------------- ------------------------------
+Check Back-End Binaries Version          2.59       00:00:03   us01odcvde23280              
+Target Configuration                     0.86       00:00:01   odcgen-zebu-16cx240g-2417-084
+Analyze Target Configuration Results     1.72       00:00:02                                
+Build Fs Macro Script                    0.00       00:00:00                                
+Build Fs Macro Library                   0.86       00:00:01   zebutrain-4758-009           
+VCS                                     32.76       00:00:38   odcgen-zebu-16cx240g-2417-083
+Analyze VCS Results                      7.76       00:00:09                                
+Default_RTL_Group Bundle 22             26.72       00:00:31   vgzeburtdc273                
+Bundle_22_Analyzer                       0.00       00:00:00                                
+Memory zz_Encrypt_5_zMem                 0.00       00:00:00                                
+Prepare Backend Flow                     0.86       00:00:01                                
+Make RTL DB indexes                      6.03       00:00:07   odcgen-zebu-16cx240g-2417-084
+Make RTL DB link                         0.00       00:00:00   zebutrain-4758-011           
+zTopBuild                               18.97       00:00:22   odcgen-zebu-16cx240g-2417-084
+Analyze System Building Results          0.86       00:00:01                                
+Total                                  100.00       00:01:56   -                            
+
+Columns:
+ - Task        : task label
+ - (%)         : percentage of contribution to the overall compile time
+ - Elapsed time: contribution to the overall compile time
+ - Host        : host where the task was launched (only for tasks external to zCui)
+
+
+
+____________________________________________________________________________________________________
+4. Compilation times per component
+
+Compilation information grouped by start & stop components
+
+ Component     Wall Clock   Total Exec time                From                                    To                       Task count   Skipped tasks
+------------- ------------ ----------------- --------------------------------- ------------------------------------------- ------------ --------------
+Checker          00:04:46          00:00:16                   Analyze Project   Compilation Profiler (after BackendEntry)            9               0
+VCS              00:03:17          00:00:51             Build Fs Macro Script                                Launch Verdi            7               0
+Synthesis        00:00:08          00:03:02       Default_RTL_Group Bundle 16                           Bundle_9_Analyzer           65               9
+Build System     00:02:15          00:00:36              Prepare Backend Flow                                   zTopBuild            8               0
+ZCore            00:00:01          00:00:01   Analyze System Building Results             Analyze System Building Results            1               0
+
+Columns:
+ - Component      : Start & stop component
+ - Wall Clock     : Elasped time between the first start and last finish
+ - Total Exec time: Total execution time
+ - From           : First task in the component
+ - To             : Last task in the component
+ - Task count     : Number of tasks
+ - Skipped tasks  : Number of tasks not launched (using incrementality or start & stop)
+
+
+
+____________________________________________________________________________________________________
+5. Compilation Details per Task Class
+
+Number of jobs par task class
+
+               Task class                  Number of jobs
+----------------------------------------- ---------------
+ BE_Version_Checker                        1             
+ FE_Version_Checker                        1             
+ Fs_Macro                                  1             
+ Intermediate_Profiling_Results_Analyzer   2             
+ OptionsDbProc                             1             
+ RTL_DB_Indexer                            1             
+ RTL_DB_Link                               1             
+ RTL_DB_RunTime                            1             
+ RhinoFsdb_Builder                         1             
+ Target_Config                             1             
+ VCS_Task_Builder                          1             
+ VERDI_Version_Checker                     1             
+ Vcs_Link                                  1             
+ Vcs_Version_Checker                       1             
+ Verdi_Compilation                         1             
+ _Synthesis                                28            
+ zTopBuild                                 1             
+
+Columns:
+ - Task class: Task class name
+
+
+____________________________________________________________________________________________________
+6. Main Compilation Stages
+
+
+6.1. Front End Stages
+Compilation time of frontend main stages
+
+        Task           Elapsed time   Execution time
+--------------------- -------------- ---------------
+Launch VCS                 00:01:13         00:00:38
+Elaboration Analyzer       00:00:09         00:00:09
+Synthesis                  00:01:20         00:00:31
+Back end Entry             00:00:01         00:00:01
+
+Columns:
+ - Task          : task label
+ - Elapsed time  : the time for the task being spawned and released
+ - Execution time: the time for the task being executed
+
+6.2. Synthesis Waiting for slot distribution
+Distribution of synthesis wait for slot time, can be used to optimize the 'njobs' parameters in UTF
+
+ Interval    Job Count
+----------- ----------
+47s to 49s           6
+49s to 51s          11
+51s to 53s           1
+
+Columns:
+ - Interval : Waiting slot delay
+ - Job Count: Number of jobs
+
+6.3. Top 10 Synthesis Bundles
+Highest contributor synthesis bundles
+
+            Duration                    Waiting for Slot Duration                   Total Duration            
+---------------------------------- ----------------------------------- ---------------------------------------
+Default_RTL_Group Bundle 22 (31s)   Default_RTL_Group Bundle 26 (52s)   Default_RTL_Group Bundle 22 (1min 20s)
+Default_RTL_Group Bundle 0 (15s)    Default_RTL_Group Bundle 25 (52s)   Default_RTL_Group Bundle 0 (1min 04s) 
+Default_RTL_Group Bundle 5 (10s)    Default_RTL_Group Bundle 23 (52s)   Default_RTL_Group Bundle 5 (1min 02s) 
+Default_RTL_Group Bundle 24 (9s)    Default_RTL_Group Bundle 17 (52s)   Default_RTL_Group Bundle 25 (1min 00s)
+Default_RTL_Group Bundle 25 (8s)    Default_RTL_Group Bundle 12 (52s)   Default_RTL_Group Bundle 12 (59s)     
+Default_RTL_Group Bundle 8 (8s)     Default_RTL_Group Bundle 11 (52s)   Default_RTL_Group Bundle 26 (57s)     
+Default_RTL_Group Bundle 13 (7s)    Default_RTL_Group Bundle 5 (52s)    Default_RTL_Group Bundle 17 (57s)     
+Default_RTL_Group Bundle 12 (7s)    Default_RTL_Group Bundle 3 (52s)    Default_RTL_Group Bundle 13 (57s)     
+Default_RTL_Group Bundle 6 (7s)     Default_RTL_Group Bundle 2 (52s)    Default_RTL_Group Bundle 11 (57s)     
+Default_RTL_Group Bundle 21 (6s)    Default_RTL_Group Bundle 1 (52s)    Default_RTL_Group Bundle 24 (56s)     
+
+Back End Stages Timing for backend_default
+
+6.4. Back-end Stages
+Compilation time of backend main stages
+
+    Task       Elapsed time   Execution time
+------------- -------------- ---------------
+Build System       00:01:07         00:00:22
+
+Columns:
+ - Task          : task label
+ - Elapsed time  : the time for the task being spawned and released
+ - Execution time: the time for the task being executed
+
+
+____________________________________________________________________________________________________
+7. Hosts
+
+Information about grid hosts used to run remote tasks, based on '/proc/cpuinfo' and 'lsb_release'
+
+        Machine name                            Model name                   Total memory   Total swap   CPU (MHz)   Cache size   CPU cores   Bogomips             Address sizes              Distributor   Release      CodeName                   Kernel            
+------------------------------ -------------------------------------------- -------------- ------------ ----------- ------------ ----------- ---------- ------------------------------------ ------------- --------- ----------------- -------------------------------
+odcbench-00003-0032              AMD EPYC 9654P 96-Core Processor               1092.03GB     258.00GB    2399.998       512 KB          69    4799.99    52 bits physical, 57 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+odcgen-zebu-16cx240g-2417-083    AMD EPYC 7543 32-Core Processor                 235.89GB      51.00GB    2800.000       512 KB           8    5600.00    40 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+odcgen-zebu-16cx240g-2417-084    AMD EPYC 7543 32-Core Processor                 235.89GB      51.00GB    2799.998       512 KB           8    5599.99    40 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+us01odcvde23280                  AMD EPYC 9754 128-Core Processor                 15.39GB       4.00GB    2250.006      1024 KB           2    4500.01    48 bits physical, 48 bits virtual     AlmaLinux      8.10   CeruleanLeopard    4.18.0-553.34.1.el8_10.x86_64
+vgzeburtdc273                    Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz       251.53GB    1024.00MB    3400.000     25600 KB          10    4800.51    46 bits physical, 48 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+zebutrain-4758-009               AMD EPYC 9754 128-Core Processor                255.57GB      52.00GB    2249.998       512 KB          32    4499.99    52 bits physical, 57 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+zebutrain-4758-011               AMD EPYC 9754 128-Core Processor                255.57GB      52.00GB    2249.998       512 KB          32    4499.99    52 bits physical, 57 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+zebutrain-4761-004               AMD EPYC 9754 128-Core Processor                255.57GB      52.00GB    2249.998       512 KB          32    4499.99    52 bits physical, 57 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+zebutrain-4763-002               AMD EPYC 9754 128-Core Processor                255.57GB      52.00GB    2250.000       512 KB          32    4500.00    52 bits physical, 57 bits virtual     AlmaLinux       8.4   ElectricCheetah        4.18.0-425.3.1.el8.x86_64
+
+
+
+____________________________________________________________________________________________________
+8. Memory usage
+
+Memory usage of tasks with the highest 'Maximum resident set size'
+
+                                Task                                   Maximum RSS   Available memory at start                     Task                        Job queue   
+--------------------------------------------------------------------- ------------- --------------------------- ------------------------------------------- ---------------
+backend_default_zTopBuild                                                   3.38GB                    208.36GB   Build System                                ZebuSuperHeavy
+vcs_splitter_VCS_Task_Builder                                             749.05MB                    183.91GB   Launch VCS                                  ZebuSuperHeavy
+design_Default_RTL_GroupBundle_0_Synthesis                                386.70MB                    632.13GB   Default_RTL_Group Bundle 0                  ZebuSynthesis 
+BE_Version_Checker                                                        263.98MB                      8.29GB   Check Back-End Binaries Version             ZebuLocal     
+design_Default_RTL_GroupBundle_22_Synthesis                               241.42MB                    179.58GB   Default_RTL_Group Bundle 22                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_8_Synthesis                                201.07MB                    203.54GB   Default_RTL_Group Bundle 8                  ZebuSynthesis 
+VERDI_Version_Checker                                                     194.21MB                      8.29GB   Check Verdi Binaries Version                ZebuLocal     
+design_Default_RTL_GroupBundle_21_Synthesis                               149.54MB                    632.13GB   Default_RTL_Group Bundle 21                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_24_Synthesis                               147.73MB                    204.50GB   Default_RTL_Group Bundle 24                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_6_Synthesis                                144.86MB                    203.54GB   Default_RTL_Group Bundle 6                  ZebuSynthesis 
+design_Default_RTL_GroupBundle_19_Synthesis                               143.20MB                    204.50GB   Default_RTL_Group Bundle 19                 ZebuSynthesis 
+backend_default_RTL_DB_Indexer                                            142.98MB                    222.74GB   Make RTL DB indexes                         Zebu          
+design_Default_RTL_GroupBundle_12_Synthesis                               140.61MB                    178.55GB   Default_RTL_Group Bundle 12                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_3_Synthesis                                137.89MB                    178.55GB   Default_RTL_Group Bundle 3                  ZebuSynthesis 
+design_Default_RTL_GroupBundle_5_Synthesis                                136.44MB                    178.55GB   Default_RTL_Group Bundle 5                  ZebuSynthesis 
+design_Default_RTL_GroupBundle_13_Synthesis                               134.29MB                    179.50GB   Default_RTL_Group Bundle 13                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_25_Synthesis                               125.12MB                    178.55GB   Default_RTL_Group Bundle 25                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_26_Synthesis                               124.74MB                    178.55GB   Default_RTL_Group Bundle 26                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_7_Synthesis                                122.04MB                    203.54GB   Default_RTL_Group Bundle 7                  ZebuSynthesis 
+Verdi_Compilation                                                         121.80MB                    178.55GB   Launch Verdi                                ZebuSuperHeavy
+design_Default_RTL_GroupBundle_9_Synthesis                                112.30MB                    632.13GB   Default_RTL_Group Bundle 9                  ZebuSynthesis 
+design_Default_RTL_GroupBundle_23_Synthesis                               110.74MB                    178.55GB   Default_RTL_Group Bundle 23                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_20_Synthesis                               110.13MB                    632.13GB   Default_RTL_Group Bundle 20                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_10_Synthesis                               108.15MB                    632.13GB   Default_RTL_Group Bundle 10                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_18_Synthesis                               106.88MB                    632.13GB   Default_RTL_Group Bundle 18                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_27_Synthesis                               106.43MB                    632.13GB   Default_RTL_Group Bundle 27                 ZebuSynthesis 
+Vcs_Version_Checker                                                       106.40MB                      8.29GB   Check Vcs Binaries Version                  ZebuLocal     
+design_Default_RTL_GroupBundle_11_Synthesis                               103.62MB                    178.55GB   Default_RTL_Group Bundle 11                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_14_Synthesis                               103.24MB                    632.13GB   Default_RTL_Group Bundle 14                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_1_Synthesis                                103.00MB                    178.52GB   Default_RTL_Group Bundle 1                  ZebuSynthesis 
+RhinoFsdb_Builder                                                         102.52MB                    204.47GB   Build Rhino Fsdb                            Zebu          
+design_Default_RTL_GroupBundle_4_Synthesis                                102.18MB                    632.13GB   Default_RTL_Group Bundle 4                  ZebuSynthesis 
+design_Default_RTL_GroupBundle_15_Synthesis                                95.93MB                    632.13GB   Default_RTL_Group Bundle 15                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_17_Synthesis                                95.89MB                    178.53GB   Default_RTL_Group Bundle 17                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_16_Synthesis                                95.37MB                    203.54GB   Default_RTL_Group Bundle 16                 ZebuSynthesis 
+design_Default_RTL_GroupBundle_2_Synthesis                                 95.09MB                    178.55GB   Default_RTL_Group Bundle 2                  ZebuSynthesis 
+Target_Config                                                              92.82MB                    223.43GB   Target Configuration                        Zebu          
+design_Fs_Macro                                                            82.93MB                    225.98GB   Build Fs Macro Library                      Zebu          
+backend_default_OptionsDbProc                                              51.92MB                      8.39GB   Make optionsdb dump                         ZebuLocal     
+backend_default_RTL_DB_RunTime                                             51.67MB                    208.36GB   Make RTL DB for Run Time                    Zebu          
+backend_default_RTL_DB_Link                                                51.63MB                    215.15GB   Make RTL DB link                            Zebu          
+backend_default_Vcs_Link                                                   51.45MB                    222.74GB   Make VCS file links                         Zebu          
+backend_default_Intermediate_Profiling_Results_Analyzer_VCSAnalyzer        20.11MB                      8.12GB   Compilation Profiler (after VCSAnalyzer)    ZebuLocal     
+backend_default_Intermediate_Profiling_Results_Analyzer_BackendEntry       20.11MB                      8.39GB   Compilation Profiler (after BackendEntry)   ZebuLocal     
+FE_Version_Checker                                                         17.18MB                      8.29GB   Check Front-End Binaries Version            ZebuLocal     
+
+Columns:
+ - Task                     : task label
+ - Maximum RSS              : Maximum Resident Set Size
+ - Available memory at start: Available memory on host when the job starts
+ - Task                     : Task Label
+ - Job queue                : Job queue name
+
+
+____________________________________________________________________________________________________
+9. Job queue memory analysis
+
+Memory information grouped by job queues
+
+  Job queue      Maximum RSS (max)   Maximum RSS (average)   Total jobs number   Slots (usage / limit)
+--------------- ------------------- ----------------------- ------------------- ----------------------
+Zebu                      142.98MB                 82.29MB                   7                 2 / 100
+ZebuLocal                 263.98MB                 96.27MB                   7           4 / Unlimited
+ZebuSuperHeavy              3.38GB                  1.41GB                   3                 1 / 100
+ZebuSynthesis             386.70MB                135.16MB                  28                28 / 100
+
+Columns:
+ - Job queue            : Job queue name
+ - Maximum RSS (max)    : Maximum value of Resident Set Size peak
+ - Maximum RSS (average): Average value of Resident Set Size peak
+ - Slots (usage / limit): Max slots used in parallel / Available slots limit
+
+
+____________________________________________________________________________________________________
+10. Grid Delay
+
+Remote tasks grid delays
+
+                   Task                       Grid delay
+-------------------------------------------- -----------
+design_Default_RTL_GroupBundle_5_Synthesis      00:00:52
+Verdi_Compilation                               00:00:52
+design_Default_RTL_GroupBundle_1_Synthesis      00:00:52
+design_Default_RTL_GroupBundle_3_Synthesis      00:00:52
+design_Default_RTL_GroupBundle_11_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_12_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_2_Synthesis      00:00:52
+design_Default_RTL_GroupBundle_23_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_26_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_17_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_25_Synthesis     00:00:52
+design_Default_RTL_GroupBundle_13_Synthesis     00:00:50
+design_Default_RTL_GroupBundle_22_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_20_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_27_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_4_Synthesis      00:00:49
+design_Default_RTL_GroupBundle_9_Synthesis      00:00:49
+design_Default_RTL_GroupBundle_21_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_18_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_15_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_14_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_10_Synthesis     00:00:49
+design_Default_RTL_GroupBundle_0_Synthesis      00:00:49
+design_Default_RTL_GroupBundle_19_Synthesis     00:00:47
+design_Default_RTL_GroupBundle_24_Synthesis     00:00:47
+design_Default_RTL_GroupBundle_16_Synthesis     00:00:47
+RhinoFsdb_Builder                               00:00:47
+design_Default_RTL_GroupBundle_6_Synthesis      00:00:47
+design_Default_RTL_GroupBundle_7_Synthesis      00:00:47
+design_Default_RTL_GroupBundle_8_Synthesis      00:00:47
+backend_default_zTopBuild                       00:00:45
+backend_default_RTL_DB_RunTime                  00:00:45
+design_Fs_Macro                                 00:00:41
+backend_default_RTL_DB_Indexer                  00:00:40
+backend_default_Vcs_Link                        00:00:40
+vcs_splitter_VCS_Task_Builder                   00:00:35
+
+Columns:
+ - Task: Task label
+
+
+____________________________________________________________________________________________________
+11. Grid Delay Per Job Queue
+
+Maximum and average grid delay per job queue
+
+  Job queue      Wait (max)   Wait (average)
+--------------- ------------ ---------------
+Zebu               00:00:47         00:00:36
+ZebuLocal          00:00:05         00:00:05
+ZebuSuperHeavy     00:00:52         00:00:44
+ZebuSynthesis      00:00:52         00:00:49
+
+Columns:
+ - Job queue     : Job queue name
+ - Wait (max)    : Maximum grid delay
+ - Wait (average): Average grid delay
+

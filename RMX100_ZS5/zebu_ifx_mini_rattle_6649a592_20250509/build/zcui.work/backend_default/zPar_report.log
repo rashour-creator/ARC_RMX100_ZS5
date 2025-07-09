@@ -1,0 +1,338 @@
+
+
+
+
+
+
+
+                                    ZeBu (R)
+                                      zPar
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zPar zPar_zCui.tcl 
+
+# start time is Tue May 13 18:37:31 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:36:47
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4499.99 AMD EPYC 9754 128-Core Processor
+#            Load: 6.36 6.15 7.01 6/811 4058667
+#            Hostname: zebutrain-4761-004   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 201142 MB
+#            Swap space: 53247 MB Free Swap space: 51534 MB
+#            VmSize: 294 MB VmPeak: 294 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11763120
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+
+Table of content:
+-----------------
+
+
+ 1.Detailed_execution time and Memory Footprint
+ 2.KTIM_WARNING_SECTION
+ 3.KTIM_ECHO_SECTION
+ 4.KPR_WARNING_SECTION
+ 5.KPR_ECHO_SECTION
+ 6.KPR_FALSEPATH_SECTION
+ 7.KPR_LOGCOMMAND_SECTION
+ 8.ZAP_WARNING_SECTION
+
+
+======================================================================================================
+
+
+
+
+
+ 1.Detailed_execution time and Memory Footprint
+ ==============================================
+
+
+  Cpu performance: 98.19%
+
+  Cpu performance displays the performance of the CPU on which zTopBuild is started compared to a reference machin.
+  A positive number will indicate a CPU faster than our reference one.
+
+  
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4499.99 AMD EPYC 9754 128-Core Processor
+#            Load: 6.36 6.15 7.01 6/811 4058667
+#            Hostname: zebutrain-4761-004   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 201434 MB
+#            Swap space: 53247 MB Free Swap space: 51534 MB
+#            VmSize: 382 MB VmPeak: 382 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11763117
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+  In the section below, 
+    load : 1 minute load average
+    fm   : FreeMemory
+    vm   : VirtualMemory
+    um   : UsedMemory
+
+
+Reset time counter
+   3    elapsed:0.13 s    user:0.9 s      system:0 s      %cpu:72.18       load:6.36       fm:201451 m      vm:634 m      vm:+41 m      um:207 m      um:+28 m zPar/Merge/loadDB
+   4       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201448 m      vm:634 m       vm:+0 m      um:207 m       um:+0 m zPar/Merge/flatten
+   5       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201448 m      vm:634 m       vm:+0 m      um:207 m       um:+0 m zPar/Merge/unFlatten
+   6       elapsed:0 s    user:0.1 s      system:0 s     %cpu:152.38       load:6.36       fm:201431 m      vm:634 m       vm:+0 m      um:214 m       um:+3 m zPar/Merge/mergeMezz
+   6    elapsed:0.20 s   user:0.10 s    system:0.1 s      %cpu:56.41       load:6.36       fm:201428 m      vm:634 m      vm:+41 m      um:214 m      um:+35 m zPar/Merge
+   8       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201331 m      vm:646 m       vm:+0 m      um:236 m       um:+0 m zPar/Place/computeAndSetNumberOfDesignModule
+   9       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201331 m      vm:646 m       vm:+0 m      um:236 m       um:+0 m zPar/Place/createNoXdrPatterns
+  10       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201331 m      vm:646 m       vm:+0 m      um:236 m       um:+0 m zPar/Place/initPlace_false
+  12       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201331 m      vm:646 m       vm:+0 m      um:236 m       um:+0 m zPar/Place/buildDatabaseForPlaceAndRoute/design_netlistHubs2Matrix
+  14       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201355 m      vm:646 m       vm:+0 m      um:237 m       um:+0 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/createTimingGraphAtTop
+  15    elapsed:0.10 s    user:0.7 s      system:0 s      %cpu:74.67       load:6.36       fm:201321 m      vm:673 m      vm:+27 m      um:265 m      um:+28 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/kpr_sourceTimingAnalysisEvaluationParam
+  16     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:48.48       load:6.36       fm:201307 m      vm:931 m     vm:+258 m      um:275 m      um:+10 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/Loading_Equi2Master
+  17     elapsed:0.1 s    user:0.1 s    system:0.1 s     %cpu:160.00       load:6.36       fm:201305 m      vm:935 m       vm:+4 m      um:277 m       um:+1 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/importZrefInfo
+  18     elapsed:0.3 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201286 m      vm:950 m      vm:+15 m      um:277 m       um:+0 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/IMPORT
+  20     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201283 m      vm:950 m       vm:+0 m      um:281 m       um:+4 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/IMPORT/Load_Graph_Input_DB
+  20     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201283 m      vm:950 m       vm:+0 m      um:281 m       um:+4 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/IMPORT
+  22     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:34.78       load:6.36       fm:201269 m      vm:950 m       vm:+0 m      um:292 m      um:+11 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/IMPORT/Load_Graph_Input_DB
+  22     elapsed:0.3 s    user:0.1 s      system:0 s      %cpu:31.68       load:6.36       fm:201262 m      vm:953 m       vm:+3 m      um:299 m      um:+18 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init/IMPORT
+  22    elapsed:0.27 s   user:0.11 s    system:0.1 s      %cpu:45.34       load:6.36       fm:201262 m      vm:953 m     vm:+307 m      um:299 m      um:+63 m zPar/Place/buildDatabaseForPlaceAndRoute/timing_evaluator_init
+  23       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201262 m      vm:953 m       vm:+0 m      um:299 m       um:+0 m zPar/Place/buildDatabaseForPlaceAndRoute/setIfPorts
+  24       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201262 m      vm:953 m       vm:+0 m      um:299 m       um:+0 m zPar/Place/buildDatabaseForPlaceAndRoute/buildwireTargetContainer
+  24    elapsed:0.27 s   user:0.11 s    system:0.1 s      %cpu:44.96       load:6.36       fm:201262 m      vm:953 m     vm:+307 m      um:299 m      um:+63 m zPar/Place/buildDatabaseForPlaceAndRoute
+  25       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201256 m      vm:953 m       vm:+0 m      um:299 m       um:+0 m zPar/Place/translateUserPlaceConstr
+  26       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201250 m      vm:953 m       vm:+0 m      um:300 m       um:+1 m zPar/Place/InitPhyConnects
+  27       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201250 m      vm:953 m       vm:+0 m      um:300 m       um:+0 m zPar/Place/initPlace_true
+  28       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201250 m      vm:953 m       vm:+0 m      um:300 m       um:+0 m zPar/Place/fillNoHopFpgaSet
+  29       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201250 m      vm:953 m       vm:+0 m      um:300 m       um:+0 m zPar/Place/getCurrentPlacement
+  29    elapsed:0.30 s   user:0.11 s    system:0.1 s      %cpu:40.76       load:6.36       fm:201250 m      vm:953 m     vm:+307 m      um:300 m      um:+64 m zPar/Place
+  36       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./guaranteeArcOrderForNode.
+  37       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./addClockDomainForFetchMode.
+  38       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./resolveMemoryReferences.
+  39       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_buildPrimarySet.
+  40       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_searchAndTagLoop.
+  41       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_sortTopological.
+  42       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./handleFalsePath.
+  43       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./initializeGraph.
+  44       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./populateToBackAnnotationDB.
+  45       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./backAnnotate.
+  46       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./ktim_delay_estimation::postProcess.
+  47       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_buildPrimarySet.
+  48       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_sortTopological.
+  49       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./_reverseSortTopological.
+  50       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./topologicalSortClockCone.
+  51       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis./topologicalSortDataCone.
+  51       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./initializeAnalysis.
+  52       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./storeLoopArc.
+  53       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath./recordAnnotatedDelay.
+  53       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1126 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/initFalsePath.
+  54       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201019 m     vm:1162 m      vm:+36 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/clockRangeAnalysisPreProcess.
+  55       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1186 m      vm:+16 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/propagateTargetClockDomain.
+  56       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1186 m       vm:+0 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/clockRangeAnalysisMain.
+  57       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1222 m      vm:+36 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction/staticClockDomainReductionSDF_main.
+  57       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1222 m      vm:+96 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./Static_clock_domain_reduction
+  58       elapsed:0 s    user:0.1 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1234 m      vm:+12 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./propagate_without_feedbackmcp
+  59       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1246 m      vm:+12 m      um:476 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./propagate_with_feedbackmcp
+  60       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201018 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init./0_timing_evaluator_base_analysis
+  60       elapsed:0 s    user:0.1 s      system:0 s     %cpu:228.57       load:6.36       fm:201018 m     vm:1246 m     vm:+120 m      um:477 m       um:+1 m zPar/Route/RouterInitializationStep./RouterInitializationStep_timer_init.
+  60       elapsed:0 s    user:0.2 s      system:0 s     %cpu:304.76       load:6.36       fm:201018 m     vm:1246 m     vm:+120 m      um:477 m       um:+1 m zPar/Route/RouterInitializationStep.
+  62       elapsed:0 s      user:0 s    system:0.1 s    %cpu:1066.67       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/eZCRStep./1_timing_evaluator_base_analysis
+  63       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/eZCRStep./2_timing_evaluator_base_analysis
+  63     elapsed:0.5 s    user:0.2 s    system:0.1 s      %cpu:64.43       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/eZCRStep.
+  65       elapsed:0 s    user:0.1 s      system:0 s    %cpu:3200.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./3_timing_evaluator_base_analysis
+  67       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./guaranteeArcOrderForNode.
+  68       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_buildPrimarySet.
+  69       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_sortTopological.
+  70       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./handleFalsePath.
+  71       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./initializeGraph.
+  72       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./populateToBackAnnotationDB.
+  73       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./backAnnotate.
+  74       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./ktim_delay_estimation::postProcess.
+  75       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_reverseSortTopological.
+  76       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./topologicalSortClockCone.
+  77       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./topologicalSortDataCone.
+  77       elapsed:0 s    user:0.1 s      system:0 s     %cpu:533.33       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt.
+  78       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./4_timing_evaluator_base_analysis
+  79       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./TDFDR_OPT::generateTimingConstraints
+  80       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./TDFDR_OPT::generateIndependentConstraintSets
+  81       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./TDFDR_OPT::solveConstraintSets
+  83       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./guaranteeArcOrderForNode.
+  84       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_buildPrimarySet.
+  85       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_sortTopological.
+  86       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./handleFalsePath.
+  87       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./initializeGraph.
+  88       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./populateToBackAnnotationDB.
+  89       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./backAnnotate.
+  90       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./ktim_delay_estimation::postProcess.
+  91       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./_reverseSortTopological.
+  92       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./topologicalSortClockCone.
+  93       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt./topologicalSortDataCone.
+  93       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./initializeAnalysisAfterFilterDataRelocationOpt.
+  94       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep./5_timing_evaluator_base_analysis
+  94     elapsed:0.1 s    user:0.3 s      system:0 s     %cpu:417.39       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/FilterDataRelocationOptimizationRouterStep.
+  95     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/QCheckStep.
+  96       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201015 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/SaveResultStep.
+  97     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:103.23       load:6.36       fm:201012 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/6_timing_evaluator_base_analysis
+ 101       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201012 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/buildTimingGraphClocks
+ 102       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/buildTimingGraphRouted
+ 103       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/collectNodeNameToTNodeHash
+ 104       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:477 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/addGraphBuilderToTimingGraph_clk
+ 105       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+1 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/addGraphBuilderToTimingGraph_route
+ 106       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/deleteOriginalClockArc
+ 107       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/deleteOriginalRouteArc
+ 108       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph/updateNodeArcId
+ 108       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+1 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/expandClockAndRouteIntoTimingGraph
+ 109       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/updateClockInfoAfterExpand
+ 110       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/updateTriggerTypeAfterExapand
+ 111       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/annotateAfterExpand
+ 112       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/applyDelayEstimateAfterExpand
+ 115       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./guaranteeArcOrderForNode.
+ 116       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./_buildPrimarySet.
+ 117       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./_searchAndTagLoop.
+ 118       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./_sortTopological.
+ 119       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./handleFalsePath.
+ 120       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./_reverseSortTopological.
+ 121       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./topologicalSortClockCone.
+ 122       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute./topologicalSortDataCone.
+ 122       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201011 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand/initializeAnalysisAfterRoute.
+ 122     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:69.57       load:6.36       fm:201007 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/analysisAfterExpand
+ 123       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.36       fm:201007 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph/initCaches_expand
+ 123     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:59.26       load:6.36       fm:201007 m     vm:1246 m       vm:+0 m      um:478 m       um:+1 m zPar/Route/AnalyticalPinAssignmentStep./expandZTimeGraph
+ 123     elapsed:0.4 s    user:0.2 s    system:0.1 s      %cpu:78.69       load:6.36       fm:201003 m     vm:1246 m       vm:+0 m      um:478 m       um:+1 m zPar/Route/AnalyticalPinAssignmentStep.
+ 123       elapsed:1 s   user:0.82 s    system:0.8 s      %cpu:88.29       load:6.36       fm:201001 m     vm:1246 m     vm:+293 m      um:478 m     um:+178 m zPar/Route
+ 125     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:41.56       load:6.36       fm:200995 m     vm:1246 m       vm:+0 m      um:478 m       um:+0 m zPar/Generate/Dump_DBs
+ 126       elapsed:5 s      user:4 s   system:0.71 s      %cpu:99.87       load:6.49       fm:198254 m     vm:3352 m    vm:+2106 m     um:2580 m    um:+2102 m zPar/Generate/Create_FPGA_Wrappers
+ 127     elapsed:0.1 s    user:0.1 s      system:0 s      %cpu:86.49       load:6.49       fm:198249 m     vm:3354 m       vm:+2 m     um:2583 m       um:+3 m zPar/Generate/Socket_Generation
+ 128     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:152.38       load:6.53       fm:198221 m     vm:3358 m       vm:+0 m     um:2586 m       um:+0 m zPar/Generate/Display
+ 129    elapsed:0.35 s   user:0.14 s    system:0.1 s      %cpu:43.09       load:6.53       fm:198050 m     vm:3360 m       vm:+2 m     um:2589 m       um:+3 m zPar/Generate/Write_Fpga_Data_To_Disk
+ 130     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197967 m     vm:3360 m       vm:+0 m     um:2589 m       um:+0 m zPar/Generate/Create_zCui_Archive
+ 130       elapsed:5 s      user:4 s   system:0.73 s      %cpu:94.46       load:6.53       fm:197926 m     vm:3360 m    vm:+2114 m     um:2589 m    um:+2111 m zPar/Generate
+ 133     elapsed:0.2 s    user:0.3 s      system:0 s     %cpu:128.00       load:6.53       fm:197757 m     vm:3368 m       vm:+8 m     um:2597 m       um:+8 m zPar/Timing/elaborateDesign/elaborateDesign_U0_M0_F00
+ 134     elapsed:0.2 s    user:0.2 s      system:0 s      %cpu:87.67       load:6.53       fm:197729 m     vm:3379 m      vm:+11 m     um:2608 m      um:+11 m zPar/Timing/elaborateDesign/elaborateDesign_U0_M0_F01
+ 134     elapsed:0.4 s    user:0.5 s      system:0 s     %cpu:107.38       load:6.53       fm:197729 m     vm:3379 m      vm:+19 m     um:2608 m      um:+19 m zPar/Timing/elaborateDesign
+ 136       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197724 m     vm:3379 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/timingGraphBuilder::dumpTclTimingFile/buildTimingGraphRouted
+ 136     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197724 m     vm:3379 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/timingGraphBuilder::dumpTclTimingFile
+ 138       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197713 m     vm:3379 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/build_topPortToNodeId
+ 139       elapsed:0 s    user:0.1 s    system:0.1 s    %cpu:1280.00       load:6.53       fm:197711 m     vm:3380 m       vm:+1 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/getIntraFpgaTimingPathforZFpgaTiming
+ 141       elapsed:0 s      user:0 s    system:0.1 s    %cpu:3200.00       load:6.53       fm:197710 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_drivers
+ 143       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197710 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers/populate_cache
+ 144       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197710 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers/populate_names
+ 144       elapsed:0 s    user:0.1 s      system:0 s     %cpu:640.00       load:6.53       fm:197710 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers
+ 145       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197710 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Build
+ 145     elapsed:0.1 s    user:0.1 s    system:0.1 s     %cpu:914.29       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph
+ 146       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildRoutingHopSdfRequests
+ 148       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_drivers
+ 150       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers/populate_cache
+ 151       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers/populate_names
+ 151       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Populate_readers
+ 152       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph/Build
+ 152       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildSdfRequestsFromTimingGraph
+ 153       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/buildFilterSdfRequests
+ 154       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/addGlobalSdfCommands
+ 156       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197709 m     vm:3380 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpSdfRequestBuilder/Concatenate_requests
+ 156       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197705 m     vm:3381 m       vm:+1 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpSdfRequestBuilder
+ 157     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:290.91       load:6.53       fm:197702 m     vm:3381 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpStartEndSocketPointsForZfpgaTiming
+ 159       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197702 m     vm:3381 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/handleAttributes/instance_create_attribute
+ 160       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197702 m     vm:3381 m       vm:+0 m     um:2608 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/handleAttributes/collect_legal_mezz_idx
+ 161    elapsed:0.26 s   user:0.48 s    system:0.2 s     %cpu:190.93       load:6.53       fm:197503 m     vm:3386 m       vm:+5 m     um:2614 m       um:+6 m zPar/Timing/dumpZfpgaTimingRequest/handleAttributes/dumpNetlist
+ 161    elapsed:0.26 s   user:0.48 s    system:0.2 s     %cpu:190.70       load:6.53       fm:197503 m     vm:3386 m       vm:+5 m     um:2614 m       um:+6 m zPar/Timing/dumpZfpgaTimingRequest/handleAttributes
+ 163     elapsed:0.1 s    user:0.6 s      system:0 s     %cpu:533.33       load:6.53       fm:197489 m     vm:3386 m       vm:+0 m     um:2614 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpSoftTimingConstraint/ktim_analysis::distributeSlackForVivadoConstraints
+ 163     elapsed:0.3 s    user:0.6 s      system:0 s     %cpu:181.13       load:6.53       fm:197482 m     vm:3386 m       vm:+0 m     um:2614 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpSoftTimingConstraint
+ 164       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197482 m     vm:3386 m       vm:+0 m     um:2614 m       um:+0 m zPar/Timing/dumpZfpgaTimingRequest/dumpNodeIdAndNameOfIF
+ 164    elapsed:0.32 s   user:0.57 s    system:0.4 s     %cpu:190.81       load:6.53       fm:197482 m     vm:3386 m       vm:+7 m     um:2614 m       um:+6 m zPar/Timing/dumpZfpgaTimingRequest
+ 165     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:6.53       fm:197477 m     vm:3386 m       vm:+0 m     um:2614 m       um:+0 m zPar/Timing/TDFDR_OPT::dumpFpgaRequests
+ 165    elapsed:0.38 s   user:0.63 s    system:0.4 s     %cpu:174.59       load:6.53       fm:197466 m     vm:3386 m      vm:+26 m     um:2614 m      um:+25 m zPar/Timing
+ 166     elapsed:0.1 s      user:0 s    system:0.1 s     %cpu:355.56       load:6.53       fm:197440 m     vm:3386 m       vm:+0 m     um:2614 m       um:+0 m zPar/FinishBody.
+ 166       elapsed:7 s      user:6 s   system:0.88 s      %cpu:94.10       load:6.53       fm:197440 m     vm:3386 m    vm:+2793 m     um:2614 m    um:+2435 m zPar
+
+
+ 2.KTIM_WARNING_SECTION
+ ======================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 3.KTIM_ECHO_SECTION
+ ===================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 4.KPR_WARNING_SECTION
+ =====================
+
+ROUTE [KPR0961W] : numTrocons = 0
+ROUTE [KPR0961W] : numUsedFpga = 0
+
+
+ 5.KPR_ECHO_SECTION
+ ==================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 6.KPR_FALSEPATH_SECTION
+ =======================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 7.KPR_LOGCOMMAND_SECTION
+ ========================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 8.ZAP_WARNING_SECTION
+ =====================
+
+
+
+                 *** EMPTY SECTION *** 
+
+

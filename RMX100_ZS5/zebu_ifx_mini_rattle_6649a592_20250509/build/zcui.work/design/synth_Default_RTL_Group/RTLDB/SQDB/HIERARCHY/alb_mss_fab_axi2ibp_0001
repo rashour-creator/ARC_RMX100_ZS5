@@ -1,0 +1,9 @@
+alb_mss_fab_axi2ibp_0001
+wrsp_id_fifo -> wrsp_id_fifo -> alb_mss_fab_fifo_0002_0001
+rd_id_fifo -> rd_id_fifo -> alb_mss_fab_fifo_0002_0001
+wrsp_splt_uop_fifo -> wrsp_splt_uop_fifo -> alb_mss_fab_fifo_0002_0000
+rd_splt_uop_fifo -> rd_splt_uop_fifo -> alb_mss_fab_fifo_0002_0000
+wd_splt_uop_fifo -> wd_splt_uop_fifo -> alb_mss_fab_fifo_0002_0000
+ibp_cmd_bypbuf -> ibp_cmd_bypbuf -> alb_mss_fab_bypbuf_0000
+u_axi2ibp_rrobin -> u_axi2ibp_rrobin -> alb_mss_fab_axi2ibp_rrobin
+u_axi2ibp_axi_buffer -> u_axi2ibp_axi_buffer -> alb_mss_fab_slv_axi_buffer_0000

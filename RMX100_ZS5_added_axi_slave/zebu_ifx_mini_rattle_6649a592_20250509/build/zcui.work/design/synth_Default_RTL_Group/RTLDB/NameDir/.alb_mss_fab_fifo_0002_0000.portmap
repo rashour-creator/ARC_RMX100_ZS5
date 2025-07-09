@@ -1,0 +1,132 @@
+Module alb_mss_fab_fifo_0002_0000{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0000_000B{
+40 0 i_data
+0 0 i_occp
+40 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000_0002{
+58 0 i_data
+58 0 o_data
+}
+EdfPortBounds mss_bus_switch_ibp2single_0000{
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+511 0 i_ibp_rd_data
+511 0 i_ibp_wr_data
+63 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+511 0 o_ibp_rd_data
+511 0 o_ibp_wr_data
+63 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_mst_axi_buffer{
+24 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+15 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+24 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+15 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+15 0 i_axi_bid
+1 0 i_axi_bresp
+63 0 i_axi_rdata
+15 0 i_axi_rid
+1 0 i_axi_rresp
+63 0 i_axi_wdata
+15 0 i_axi_wid
+7 0 i_axi_wstrb
+24 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+15 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+24 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+15 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+15 0 o_axi_bid
+1 0 o_axi_bresp
+63 0 o_axi_rdata
+15 0 o_axi_rid
+1 0 o_axi_rresp
+63 0 o_axi_wdata
+15 0 o_axi_wid
+7 0 o_axi_wstrb
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0007{
+36 0 i_data
+0 0 i_occp
+36 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0009{
+2 0 i_data
+0 0 i_occp
+2 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0008{
+34 0 i_data
+0 0 i_occp
+34 0 o_data
+0 0 o_occp
+}
+NonAliasNets alb_mss_fab_fifo_0002_0000{
+fifo_dep_gt_1_wptr_vec_r[15]    f   234
+fifo_dep_gt_1_rptr_vec_r[15]    f   218
+fifo_dep_gt_1_occp_cpy_r[1]    f   183
+fifo_dep_gt_1_occp_cpy_r[2]    f   182
+fifo_dep_gt_1_occp_cpy_r[3]    f   181
+fifo_dep_gt_1_occp_cpy_r[4]    f   180
+fifo_dep_gt_1_occp_cpy_r[5]    f   179
+fifo_dep_gt_1_occp_cpy_r[6]    f   178
+fifo_dep_gt_1_occp_cpy_r[7]    f   177
+fifo_dep_gt_1_occp_cpy_r[8]    f   176
+fifo_dep_gt_1_occp_cpy_r[9]    f   175
+fifo_dep_gt_1_occp_cpy_r[10]    f   174
+fifo_dep_gt_1_occp_cpy_r[11]    f   173
+fifo_dep_gt_1_occp_cpy_r[12]    f   172
+fifo_dep_gt_1_occp_cpy_r[13]    f   171
+fifo_dep_gt_1_occp_cpy_r[14]    f   170
+fifo_dep_gt_1_occp_cpy_r[15]    f   169
+fifo_dep_gt_1_occp_cpy_r[16]    f   168
+}

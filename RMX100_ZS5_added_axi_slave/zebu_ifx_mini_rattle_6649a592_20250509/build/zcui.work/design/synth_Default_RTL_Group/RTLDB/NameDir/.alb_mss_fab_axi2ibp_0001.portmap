@@ -1,0 +1,96 @@
+Module alb_mss_fab_axi2ibp_0001{
+}
+Module alb_mss_fab_slv_axi_buffer_0000{
+}
+Module alb_mss_fab_axi2ibp_rrobin{
+}
+Module alb_mss_fab_bypbuf_0000{
+}
+Module alb_mss_fab_fifo_0002_0000{
+}
+Module alb_mss_fab_fifo_0002_0001{
+}
+
+EdfPortBounds alb_mss_fab_bypbuf_0000{
+59 0 i_data
+59 0 o_data
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0001{
+3 0 i_data
+16 0 i_occp
+3 0 o_data
+16 0 o_occp
+}
+EdfPortBounds alb_mss_fab_axi2ibp_rrobin{
+1 0 grt_vector
+1 0 req_vector
+}
+EdfPortBounds alb_mss_fab_slv_axi_buffer_0000{
+41 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+3 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+41 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+3 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+3 0 i_axi_bid
+1 0 i_axi_bresp
+511 0 i_axi_rdata
+3 0 i_axi_rid
+1 0 i_axi_rresp
+511 0 i_axi_wdata
+3 0 i_axi_wid
+63 0 i_axi_wstrb
+41 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+3 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+41 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+3 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+3 0 o_axi_bid
+1 0 o_axi_bresp
+511 0 o_axi_rdata
+3 0 o_axi_rid
+1 0 o_axi_rresp
+511 0 o_axi_wdata
+3 0 o_axi_wid
+63 0 o_axi_wstrb
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0000{
+0 0 i_data
+16 0 i_occp
+0 0 o_data
+16 0 o_occp
+}
+NonAliasNets alb_mss_fab_axi2ibp_0001{
+axi2ibp_sdb_fixed_r    f   4479
+axi2ibp_sdb_valid_r    f   4489
+axi2ibp_sdb_wrap_r    f   4490
+}

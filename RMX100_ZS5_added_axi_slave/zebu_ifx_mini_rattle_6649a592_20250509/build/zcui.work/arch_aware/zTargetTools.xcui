@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiConf type="xcui" version="1.2" creator="zTargetTools">
+
+<architecture_type>ZS5</architecture_type>
+<fpga_type>8</fpga_type>
+<product_type>4</product_type>
+<flag>DefaultMcp</flag>
+<flag>Fractal</flag>
+<flag>NoDve</flag>
+<flag>Predictor</flag>
+<flag>SimzillaSequential</flag>
+<flag>URam</flag>
+<flag>WAP</flag>
+<flag>ZPrd</flag>
+<backends>
+    <backend id="default">
+        <fpga_number>48</fpga_number>
+        <disk_space>14496</disk_space>
+        <low_filling_rates>
+            <LUT>40</LUT>
+            <REG>15</REG>
+            <BRAM>50</BRAM>
+            <URAM>30</URAM>
+            <DSP>40</DSP>
+            <RAMLUT>25</RAMLUT>
+            <FWCIP>80</FWCIP>
+            <FWC>15</FWC>
+            <QIWC>50</QIWC>
+        </low_filling_rates>
+        <default_filling_rates>
+            <LUT>50</LUT>
+            <REG>22</REG>
+            <BRAM>60</BRAM>
+            <URAM>40</URAM>
+            <DSP>60</DSP>
+            <RAMLUT>25</RAMLUT>
+            <FWCIP>80</FWCIP>
+            <FWC>30</FWC>
+            <QIWC>60</QIWC>
+        </default_filling_rates>
+        <high_filling_rates>
+            <LUT>55</LUT>
+            <REG>30</REG>
+            <BRAM>90</BRAM>
+            <URAM>60</URAM>
+            <DSP>90</DSP>
+            <RAMLUT>30</RAMLUT>
+            <FWCIP>80</FWCIP>
+            <FWC>35</FWC>
+            <QIWC>70</QIWC>
+        </high_filling_rates>
+    </backend>
+</backends>
+
+<resources_max>
+    <BRAM>540</BRAM>
+    <URAM>80</URAM>
+    <RAMLUT>34480</RAMLUT>
+</resources_max>
+
+<disk_space_constants>
+    <CstG>302.000000</CstG>
+    <CstS>1.040000</CstS>
+    <CstB>229.000000</CstB>
+    <CstC>164.000000</CstC>
+    <CstX>156.699997</CstX>
+    <CstE>400.000000</CstE>
+    <CstV>517.000000</CstV>
+</disk_space_constants>
+
+</ZeBuUiConf>

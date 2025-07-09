@@ -1,0 +1,21 @@
+memory set_global_debug_mode true
+mem new alb_mss_fpga_sram_0000_ZMEM_mem_r auto
+#
+# Inferred from /remote/us01sgnfs00727/arc_fpga/moyanz/Ratter3/template/dw_dbp/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fpga_sram.v, line 67
+# Variable is mem_r
+#
+mem depth 268435456
+mem width 128
+mem add_port rw0 rw
+mem set_port_access rw0 sync
+mem_port rw0 clk rw0clk 
+mem_port rw0 addr rw0addr 
+mem_port rw0 do rw0do 
+mem_port rw0 re rw0re 
+mem_port rw0 di rw0di 
+mem_port rw0 we rw0we 
+mem_port rw0 fbie rw0bie 
+mem set_rw_mode rw0 readbeforewrite
+mem optimize_capacity true
+    mem set_word_length 8
+mem generate

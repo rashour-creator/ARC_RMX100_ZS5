@@ -1,0 +1,1111 @@
+
+***** Build Started: May 13, 2025 at 4:17:34 PM GMT+02:00 *****
+
+Version Information:
+    ARChitect W-2025.03
+
+    IP Libraries:
+        ARCv5EM            v3.5.999999999
+        ARC xCAM           v4.3.24
+        ARC_COSIM          v3.2.999999999
+        ARC_Soc_Trace      v1.0.999999999
+        ARC_Trace          v3.0.999999999
+        ARCv2_ZEBU_RDF     v2.0.999999999
+        ARCv2MSS           v2.1.999999999
+        ARCV_CCT           v1.1.999999999
+        Basic_core_modules  v1.1.999999999
+        Implementation     v1.1.14
+        safety             v1.1.999999999
+        Tool Configuration  v1.0.108
+
+IP Library locations:
+    ARCv5EM                 /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARCV5EM_a9ec96d7/ip_library
+    ARC xCAM                /global/apps/architect_2025.03/ARChitect/lib/ARC_xCAM.iplib
+    ARC_COSIM               /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_COSIM_6ea659d0/ip_library
+    ARC_Soc_Trace           /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_SOC_TRACE_d03c7280/ip_library
+    ARC_Trace               /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_TRACE_df791d41/ip_library
+    ARCv2_ZEBU_RDF          /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library
+    ARCv2MSS                /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARCV2MSS_bd839c44/ip_library
+    ARCV_CCT                /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/CCTRV_0a73081c/ip_library
+    Basic_core_modules      /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library
+    Implementation          /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/IMPLEMENTATION_a9ec96d7/ip_library
+    safety                  /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARC_SAFETY_a9a56107/ip_library
+    Tool Configuration      /u/prjauto/arcartifactory-01/EngArea-Tools/CGEN/1.0.108/tool_configuration_v1.0.108.iplib
+
+*** Dependency summary ***
+
+ZEBU_BOX: If JTAG Interface not present, a JTAG2BVCI converter will be added to MSS when mapping to ZeBu
+CPUisle: CPU 0: User defined floorplan has been configured for CPU-level but no floorplan file has been specified.Consider specifying a value for the -usercpufloorplan_file  option if intention is to go to place & route
+BusFabric: Note: As SRAMCtrl is set to be default slave, its memory size will be fixed to 4GB, which will override your current memory size!
+ARCRV CCT: Processor 0: CCTs may not run correctly without IFQ make sure to add 32K ICCM atleast or ICache or external memory
+
+*** Configuration changes identified, hence RTL will be rebuilt. ***
+
+
+*** Building Scripts ***
+
+VPP: apex_cmodels/verilator/makefile_cmodels.pp  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/cmodels/makefile_cmodels
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/rascal.env'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/rascal_ram_map.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/.arctest'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/build_configuration.json'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/build_configuration.csv'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/build_info.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.linux'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.unix'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.win32'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.win64'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/arc_copyright_notice.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_rules_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_header_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/makefile'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/hex_conv.pl'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_interface_vcs_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/arc_vcs_pli_table'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/library.list'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/board.hier'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/board.mg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/fix_manifest_paths.sh'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/current_directory.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/library.list'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_interface_vcs_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/xilinx_models'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/rascal_ram_map.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/arcsyn.makefile'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/module_instantiations.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/dummy.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/options.tcl'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/archipelago.sdc'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/arcv_dm_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_fab_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_clkctrl_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_dummy_slave_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_perfctrl_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_mem_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/zebu_axi_xtor_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/zebu_box_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/dw_dbp_config.in'.
+Writing folder '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL'.
+Writing folder '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/mini_rattler.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/rattler.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/config_and_core.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/alb.in'.
+Writing folder '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/include'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/include/const.def'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/core.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/core_info.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/apexextensions.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/apexextensions.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tests/common/apexextensions.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tests/common/apexextensions.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/rv_safety_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/rascal.env'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/rascal_ram_map.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/.arctest'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/build_configuration.json'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/build_configuration.csv'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/build_info.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.linux'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.unix'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.win32'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_operating_system_abstraction.win64'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/arc_copyright_notice.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_rules_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_header_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/makefile'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/hex_conv.pl'.
+Making file executable '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/hex_conv.pl'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/additional_makefiles/makefile_interface_vcs_verilog'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/arc_vcs_pli_table'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/library.list'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/board.hier'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/board.mg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/fix_manifest_paths.sh'.
+Making file executable '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/fix_manifest_paths.sh'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/current_directory.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/xilinx_models'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/arcsyn.makefile'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/module_instantiations.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/dummy.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/options.tcl'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/archipelago.sdc'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/arcv_dm_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_fab_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_clkctrl_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_dummy_slave_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_perfctrl_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/alb_mss_mem_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/zebu_axi_xtor_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/config/zebu_box_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/dw_dbp_config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/mini_rattler.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/rattler.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/config_and_core.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/alb.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/include/const.def'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/config.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/core.in'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/core_info.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/apexextensions.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/apexextensions.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tests/common/apexextensions.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tests/common/apexextensions.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/config/rv_safety_config.in'.
+  Copy /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/include/const.def to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/const.def
+  Copy /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/include/const.def to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/const.def
+
+*** Building HDL ***
+
+
+*** BEGIN exported defines for System.CPUisle.ARCv5EM ***
+Send results to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+VPP manifest file is exported_manifest.vpp
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+ARCv5EM:non-macro vppfiles = config/exported_manifest.vpp
+VPP: config/exported_manifest.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_manifest.v
+ARCv5EM:headers = rtl/exported_defines.vpp
+VPP: rtl/exported_defines.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_defines.v
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+*** END exported defines for System.CPUisle.ARCv5EM ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.ARCV_DM ***
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+ARCV_DM:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_manifest.v
+ARCV_DM:headers = config/arcv_dm_defines.vpp,config/arcv_dm_exported_defines.vpp
+VPP: ./config/arcv_dm_defines.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_defines.v
+VPP: ./config/arcv_dm_exported_defines.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_exported_defines.v
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_defines_arcv_dm_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.ARCV_DM ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.ClkCtrl ***
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+ClkCtrl:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+ClkCtrl:headers = vpp/alb_mss_clkctrl_exported_defines.vpp
+VPP: ./vpp/alb_mss_clkctrl_exported_defines.vpp  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_exported_defines.v
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_alb_mss_clkctrl_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.ClkCtrl ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.DW_DBP ***
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+DW_DBP:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_manifest.v
+DW_DBP:headers = config/dw_dbp_defines.vpp,config/dw_dbp_exported_defines.vpp
+VPP: ./config/dw_dbp_defines.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_defines.v
+VPP: ./config/dw_dbp_exported_defines.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_exported_defines.v
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_defines_dw_dbp_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.DW_DBP ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.DummySLV ***
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+DummySLV:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+DummySLV:headers = vpp/alb_mss_dummy_slave_exported_defines.vpp
+VPP: ./vpp/alb_mss_dummy_slave_exported_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave_exported_defines.v
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_alb_mss_dummy_slave_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.DummySLV ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.Profiler ***
+Pre-processing VPP source files for Profiler (System.Profiler)
+Profiler:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+Profiler:headers = vpp/alb_mss_perfctrl_exported_defines.vpp
+VPP: ./vpp/alb_mss_perfctrl_exported_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_exported_defines.v
+Pre-processing VPP source files for Profiler (System.Profiler)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_alb_mss_perfctrl_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.Profiler ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.SRAMCtrl ***
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+SRAMCtrl:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+SRAMCtrl:headers = vpp/alb_mss_mem_exported_defines.vpp
+VPP: ./vpp/alb_mss_mem_exported_defines.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_exported_defines.v
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_alb_mss_mem_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.SRAMCtrl ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.Safety Manager ***
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_manifest.v
+Safety Manager:headers = rtl/rv_safety_exported_defines.vpp
+VPP: ./rtl/rv_safety_exported_defines.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_exported_defines.v
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_defines_rv_safety_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.Safety Manager ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.ZEBU_AXI_XTOR ***
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+ZEBU_AXI_XTOR:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+ZEBU_AXI_XTOR:headers = vpp/zebu_axi_xtor_exported_defines.vpp
+VPP: ./vpp/zebu_axi_xtor_exported_defines.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor_exported_defines.v
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_zebu_axi_xtor_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.ZEBU_AXI_XTOR ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.ZEBU_BOX ***
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+ZEBU_BOX:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+ZEBU_BOX:headers = rtl/zebu_exported_defines.vpp
+VPP: ./rtl/zebu_exported_defines.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_exported_defines.v
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_zebu_box_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.ZEBU_BOX ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (exported defines) for System.BusFabric ***
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+BusFabric:non-macro vppfiles = config/exported_manifest.vpp
+VPP: ./config/exported_manifest.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_manifest.v
+BusFabric:headers = vpp/new_fabric/alb_mss_fab_exported_defines.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab_exported_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_exported_defines.v
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/exported_defines_alb_mss_fab_compile_manifest
+*** END Building RTL (Verilog preprocessing) (exported defines) for System.BusFabric ***
+
+*** BEGIN Checking constraints for System.CPUisle.ARCv5EM ***
+Send results to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+VPP manifest file is manifest.vpp
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+ARCv5EM:non-macro vppfiles = config/manifest.vpp
+VPP: config/manifest.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+ARCv5EM:headers = rtl/defines.vpp,rtl/ifu_defines.vpp,rtl/alu_defines.vpp,rtl/mpy_defines.vpp,rtl/dmp_defines.vpp,rtl/csr_defines.vpp,rtl/csr_debug_defines.vpp,rtl/fpu_defines.vpp,rtl/clint_defines.vpp,rtl/ras_defines.vpp,rtl/cpu_defs.vpp,rtl/HPM/hpm_defines.vpp
+VPP: rtl/defines.vpp                             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/defines.v
+VPP: rtl/ifu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ifu_defines.v
+VPP: rtl/alu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/alu_defines.v
+VPP: rtl/mpy_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/mpy_defines.v
+VPP: rtl/dmp_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dmp_defines.v
+VPP: rtl/csr_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_defines.v
+VPP: rtl/csr_debug_defines.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_debug_defines.v
+VPP: rtl/fpu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpu_defines.v
+VPP: rtl/clint_defines.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clint_defines.v
+VPP: rtl/ras_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ras_defines.v
+VPP: rtl/cpu_defs.vpp                            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_defs.v
+VPP: rtl/HPM/hpm_defines.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/hpm_defines.v
+Warning: recursive define `ISA_MAJ_REV replaced by 0.
+ARCv5EM:constraints = rtl/constraints.vpp
+Processing constraint files for ARCv5EM (System.CPUisle.ARCv5EM)
+VPP: rtl/constraints.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/constraints.v
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+*** END Checking constraints for System.CPUisle.ARCv5EM ***
+
+*** BEGIN Checking constraints for System.ARCV_DM ***
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+ARCV_DM:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+ARCV_DM:headers = config/arcv_dm_defines.vpp
+VPP: ./config/arcv_dm_defines.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_defines.v
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+*** END Checking constraints for System.ARCV_DM ***
+
+*** BEGIN Checking constraints for System.ClkCtrl ***
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+ClkCtrl:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+ClkCtrl:headers = vpp/alb_mss_clkctrl_defines.vpp,vpp/alb_mss_clkctrl_misc_defines.vpp
+VPP: ./vpp/alb_mss_clkctrl_defines.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_defines.v
+VPP: ./vpp/alb_mss_clkctrl_misc_defines.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_misc_defines.v
+ClkCtrl:constraints = vpp/alb_mss_clkctrl_constraints.vpp
+Processing constraint files for ClkCtrl (System.ClkCtrl)
+VPP: ./vpp/alb_mss_clkctrl_constraints.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_constraints.v
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+*** END Checking constraints for System.ClkCtrl ***
+
+*** BEGIN Checking constraints for System.DW_DBP ***
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+DW_DBP:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+DW_DBP:headers = config/dw_dbp_exported_defines.vpp,config/dw_dbp_defines.vpp
+VPP: ./config/dw_dbp_exported_defines.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_exported_defines.v
+VPP: ./config/dw_dbp_defines.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_defines.v
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+*** END Checking constraints for System.DW_DBP ***
+
+*** BEGIN Checking constraints for System.DummySLV ***
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+DummySLV:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+DummySLV:headers = vpp/alb_mss_dummy_slave_defines.vpp
+VPP: ./vpp/alb_mss_dummy_slave_defines.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave_defines.v
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+*** END Checking constraints for System.DummySLV ***
+
+*** BEGIN Checking constraints for System.Profiler ***
+Pre-processing VPP source files for Profiler (System.Profiler)
+Profiler:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+Profiler:headers = vpp/alb_mss_perfctrl_defines.vpp
+VPP: ./vpp/alb_mss_perfctrl_defines.vpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_defines.v
+Profiler:constraints = vpp/alb_mss_perfctrl_constraints.vpp
+Processing constraint files for Profiler (System.Profiler)
+VPP: ./vpp/alb_mss_perfctrl_constraints.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_constraints.v
+Pre-processing VPP source files for Profiler (System.Profiler)
+*** END Checking constraints for System.Profiler ***
+
+*** BEGIN Checking constraints for System.SRAMCtrl ***
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+SRAMCtrl:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+SRAMCtrl:headers = vpp/ibp_mem/alb_mss_mem_defines.vpp
+VPP: ./vpp/ibp_mem/alb_mss_mem_defines.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_defines.v
+SRAMCtrl:constraints = vpp/ibp_mem/alb_mss_mem_constraints.vpp
+Processing constraint files for SRAMCtrl (System.SRAMCtrl)
+VPP: ./vpp/ibp_mem/alb_mss_mem_constraints.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_constraints.v
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+*** END Checking constraints for System.SRAMCtrl ***
+
+*** BEGIN Checking constraints for System.Safety Manager ***
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+Safety Manager:headers = rtl/rv_safety_defines.vpp
+VPP: ./rtl/rv_safety_defines.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_defines.v
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+*** END Checking constraints for System.Safety Manager ***
+
+*** BEGIN Checking constraints for System.ZEBU_AXI_XTOR ***
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+ZEBU_AXI_XTOR:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+ZEBU_AXI_XTOR:headers = vpp/zebu_axi_xtor_defines.vpp
+VPP: ./vpp/zebu_axi_xtor_defines.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor_defines.v
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+*** END Checking constraints for System.ZEBU_AXI_XTOR ***
+
+*** BEGIN Checking constraints for System.ZEBU_BOX ***
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+ZEBU_BOX:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+*** END Checking constraints for System.ZEBU_BOX ***
+
+*** BEGIN Checking constraints for System.BusFabric ***
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+BusFabric:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+BusFabric:headers = vpp/new_fabric/alb_mss_fab_defines.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_defines.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab_defines.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_defines.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_defines.v
+BusFabric:constraints = vpp/new_fabric/alb_mss_fab_constraints.vpp
+Processing constraint files for BusFabric (System.BusFabric)
+VPP: ./vpp/new_fabric/alb_mss_fab_constraints.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_constraints.v
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+*** END Checking constraints for System.BusFabric ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.CPUisle.ARCv5EM ***
+Send results to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+VPP manifest file is manifest.vpp
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+ARCv5EM:non-macro vppfiles = config/manifest.vpp
+VPP: config/manifest.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+ARCv5EM:headers = rtl/defines.vpp,rtl/ifu_defines.vpp,rtl/alu_defines.vpp,rtl/mpy_defines.vpp,rtl/dmp_defines.vpp,rtl/csr_defines.vpp,rtl/csr_debug_defines.vpp,rtl/fpu_defines.vpp,rtl/clint_defines.vpp,rtl/ras_defines.vpp,rtl/cpu_defs.vpp,rtl/HPM/hpm_defines.vpp
+VPP: rtl/defines.vpp                             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/defines.v
+VPP: rtl/ifu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ifu_defines.v
+VPP: rtl/alu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/alu_defines.v
+VPP: rtl/mpy_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/mpy_defines.v
+VPP: rtl/dmp_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dmp_defines.v
+VPP: rtl/csr_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_defines.v
+VPP: rtl/csr_debug_defines.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_debug_defines.v
+VPP: rtl/fpu_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpu_defines.v
+VPP: rtl/clint_defines.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clint_defines.v
+VPP: rtl/ras_defines.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ras_defines.v
+VPP: rtl/cpu_defs.vpp                            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_defs.v
+VPP: rtl/HPM/hpm_defines.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/hpm_defines.v
+Warning: recursive define `ISA_MAJ_REV replaced by 0.
+ARCv5EM:constraints = rtl/constraints.vpp
+Processing constraint files for ARCv5EM (System.CPUisle.ARCv5EM)
+VPP: rtl/constraints.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/constraints.v
+ARCv5EM:copyfiles = component:ARC_COMN.BCM:rtl/reset_ctrl/reset_handshake.v,component:ARC_COMN.BCM:rtl/reset_ctrl/reset_fsm.v,rtl/synch_top/rl_cpu_synch_funcs.vpp,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_func.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_func.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_func.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_func.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_gen.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_gen.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_cac.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_shdw_cac.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_cac_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_chk.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_chk_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/sr_err_aggr.sv,component:ARC_COMN.BCM:rtl/ecc_all01/multi_bit_comparator.sv,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_dec.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_qual_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_enc.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_dec.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_enc.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_di_cac_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_di_chk_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_qual_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_di_dec_wrap.v
+Copying non-preprocessed Copy source files for ARCv5EM (System.CPUisle.ARCv5EM)
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/reset_ctrl/reset_handshake.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_handshake.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/reset_ctrl/reset_fsm.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_fsm.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/ARCV5EM_a9ec96d7/ip_library/com/arc/hardware/EM/ARCv5EM/1_0/verilog_child/cpu/rtl/synch_top/rl_cpu_synch_funcs.vpp to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_synch_funcs.vpp
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_func.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_func.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_func.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_func.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_func.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_func.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_func.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_func.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_gen.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_gen.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_gen.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_gen.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_cac.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_cac.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_shdw_cac.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_shdw_cac.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_cac_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_cac_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_chk.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_chk.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_chk_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_chk_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/sr_err_aggr.sv to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sr_err_aggr.sv
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/multi_bit_comparator.sv to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_comparator.sv
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_dec.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_qual_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_enc.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_enc.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_dec.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_enc.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_enc.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_di_cac_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_di_cac_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_di_chk_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_di_chk_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_di_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_di_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/even_pty_qual_di_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_di_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_di_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_di_dec_wrap.v
+  Copy /slowfs/us01dwt2p156/svc-archw-gr/iplibs/rattler_mini_ga/BCM_e0ed958e/ip_library/com/arc/hardware/ARC_COMN/BCM/1_0/verilog_child/rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_di_dec_wrap.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_di_dec_wrap.v
+Pre-processing VPP source files for ARCv5EM (System.CPUisle.ARCv5EM)
+ARCv5EM:macro (+x) vppfiles = models/ram_core.vpp,models/fpga_sram.vpp,models/iccm0_ram.vpp,models/dccm_ram.vpp,models/ic_tag_ram.vpp,models/ic_data_ram.vpp
+VPP: models/ram_core.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ram_core.v
+VPP: models/fpga_sram.vpp                        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpga_sram.v
+VPP: models/iccm0_ram.vpp                        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm0_ram.v
+VPP: models/dccm_ram.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dccm_ram.v
+VPP: models/ic_tag_ram.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ram.v
+VPP: models/ic_data_ram.vpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ram.v
+ARCv5EM:non-macro vppfiles = rtl/ifu_micro/rl_ifu_fetcher.svpp,rtl/ifu_micro/rl_ifu_id_ctrl.svpp,rtl/ifu_micro/rl_ifu_iccm.svpp,rtl/ifu_micro/rl_ifu_iccm_csr.svpp,rtl/ifu_micro/ecc/iccm_ecc_encoder.vpp,rtl/ifu_micro/ecc/iccm_ecc_decoder.vpp,rtl/ifu_micro/ecc/iccm_ecc_func.vpp,rtl/ifu_micro/rl_ifu_align.svpp,rtl/ifu_micro/rl_ifu_icache.svpp,rtl/ifu_micro/rl_ifu_icache_rf.svpp,rtl/ifu_micro/rl_ifu_icache_ctl.svpp,rtl/ifu_micro/ecc/ic_tag_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_tag_ecc_decoder.vpp,rtl/ifu_micro/ecc/ic_tag_ecc_func.vpp,rtl/ifu_micro/ecc/ic_data_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_decoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_func.vpp,rtl/ifu_micro/rl_ifu.svpp,rtl/clock_ctrl/rl_clock_ctrl.vpp,rtl/reset_ctrl/rl_reset_ctrl_wrap.vpp,rtl/reset_ctrl/rl_reset_ctrl.vpp,rtl/synch_top/cdc_synch_wrap.vpp,rtl/synch_top/rl_reset_ctrl_synch.vpp,rtl/synch_top/rl_cpu_misc_synch.vpp,rtl/synch_top/rl_cpu_synch_wrap.vpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_wdt_synch.svpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_timer_synch.svpp,rtl/ras_micro/rl_ibp_target_wrapper.vpp,rtl/ras_micro/rl_ecc_cnt.vpp,rtl/ras_micro/rl_ras_top.vpp,rtl/exu_mini/rl_adder.svpp,rtl/exu_mini/rl_alu_data_path.svpp,rtl/exu_mini/rl_alu.svpp,rtl/exu_mini/rl_iesb.vpp,rtl/exu_mini/rl_bypass.vpp,rtl/exu_mini/rl_result_bus.vpp,rtl/exu_mini/rl_pipe_ctrl.vpp,rtl/exu_mini/rl_complete.vpp,rtl/exu_mini/rl_dispatch.vpp,rtl/exu_mini/rl_uop_seq.svpp,rtl/exu_mini/rl_mpy.svpp,rtl/exu_mini/rl_byte_unit.vpp,rtl/exu_mini/rl_bitscan.vpp,rtl/exu_mini/fpu/rl_bitscan_32b.vpp,rtl/exu_mini/rl_bitscan_16b.vpp,rtl/exu_mini/rl_bitscan_8b.vpp,rtl/exu_mini/rl_bitscan_4b.vpp,rtl/exu_mini/rl_branch.vpp,rtl/exu_mini/rl_csr.vpp,rtl/exu_mini/rl_trap.vpp,rtl/exu_mini/rl_special.vpp,rtl/exu_mini/rl_exu.vpp,rtl/exu_mini/rl_decoder.vpp,rtl/exu_mini/rl_predecoder.vpp,rtl/exu_mini/rl_halt_mgr.vpp,rtl/exu_mini/rl_debug.vpp,rtl/exu_mini/rl_regfile.svpp,rtl/exu_mini/rl_maskgen.vpp,rtl/exu_mini/rl_logic_unit.vpp,rtl/exu_mini/rl_shifter.svpp,rtl/exu_mini/rl_fd_ffs_33.vpp,rtl/exu_mini/rl_fd_shift_34.vpp,rtl/exu_mini/rl_fd_radix4_counter.vpp,rtl/exu_mini/rl_wtree_32x4.vpp,rtl/exu_mini/rl_wtree_comp302.vpp,rtl/exu_mini/rl_wtree_comp402.vpp,rtl/exu_mini/rl_wtree_comp612.vpp,rtl/exu_mini/rl_wtree_comp522.vpp,rtl/exu_mini/rl_wtree_comp622.vpp,rtl/exu_mini/rl_wtree_comp432.vpp,rtl/exu_mini/rl_wtree_comp222.vpp,rtl/exu_mini/rl_wtree_comp312.vpp,rtl/exu_mini/rl_pmp.vpp,rtl/exu_mini/rl_epmp.vpp,rtl/exu_mini/rl_pmp_hit.vpp,rtl/rl_triggers.vpp,rtl/rl_triggers_iso.vpp,rtl/exu_mini/rl_pma.vpp,rtl/exu_mini/rl_pma_hit.vpp,rtl/dmp_mini/rl_dmp.vpp,rtl/dmp_mini/rl_dmp_amo.vpp,rtl/dmp_mini/rl_dmp_load_aligner.vpp,rtl/dmp_mini/rl_dmp_store_aligner.vpp,rtl/dmp_mini/rl_dmp_csr.vpp,rtl/dmp_mini/rl_dmp_dccm.svpp,rtl/dmp_mini/rl_dmp_ecc_store_aligner.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_encoder.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_decoder.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_func.vpp,rtl/dmp_mini/rl_dmp_dccm_ibp_wrapper.vpp,rtl/dmp_mini/rl_dmp_cwb.svpp,rtl/rl_soft_reset_aux.vpp,rtl/dmp_mini/rl_dmp_lsq.vpp,rtl/dmp_mini/rl_dmp_lsq_fifo.vpp,rtl/dmp_mini/rl_dmp_lsq_cmd_port.vpp,rtl/rl_simple_fifo.vpp,rtl/biu_mini/rl_ibp2ahb.vpp,rtl/biu_mini/rl_per_ibp2ahb.vpp,rtl/biu_mini/rl_ahb2ibp.vpp,rtl/biu_mini/rl_mmio_ahb2ibp.vpp,rtl/biu_mini/rl_parity_gen.vpp,rtl/biu_mini/rl_parity_chk.vpp,rtl/biu_mini/rl_ibp2mmio.vpp,rtl/rl_core.vpp,rtl/rl_cpu_top.vpp,rtl/clint/arcv_imsic_clint.vpp,rtl/clint/iprio_arb.vpp,rtl/clint/iprio_arb_4to1.vpp,rtl/HPM/rl_hpm.vpp,rtl/clint/arcv_timer.vpp,rtl/watchdog/arcv_watchdog.vpp,rtl/watchdog/arcv_watchdog_csr.vpp,rtl/watchdog/arcv_watchdog_ctrl.vpp,rtl/watchdog/arcv_wd_parity.vpp,rtl/sfty/rl_sfty_csr.vpp,rtl/sfty/sfty_ibp_ini_e2e_wrap.svpp,rtl/sfty/sfty_dmsi_down_tgt_e2e_wrap.svpp,component:ARC_COMN.BCM:rtl/DWbb_bcm00_maj.vpp,rtl/rl_srams.svpp,models/clkgate.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/rtl_pipemon.vpp
+VPP: rtl/ifu_micro/rl_ifu_fetcher.svpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_fetcher.sv
+VPP: rtl/ifu_micro/rl_ifu_id_ctrl.svpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_id_ctrl.sv
+VPP: rtl/ifu_micro/rl_ifu_iccm.svpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm.sv
+VPP: rtl/ifu_micro/rl_ifu_iccm_csr.svpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm_csr.sv
+VPP: rtl/ifu_micro/ecc/iccm_ecc_encoder.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_encoder.v
+VPP: rtl/ifu_micro/ecc/iccm_ecc_decoder.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_decoder.v
+VPP: rtl/ifu_micro/ecc/iccm_ecc_func.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_func.v
+VPP: rtl/ifu_micro/rl_ifu_align.svpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_align.sv
+VPP: rtl/ifu_micro/rl_ifu_icache.svpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache.sv
+VPP: rtl/ifu_micro/rl_ifu_icache_rf.svpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_rf.sv
+VPP: rtl/ifu_micro/rl_ifu_icache_ctl.svpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_ctl.sv
+VPP: rtl/ifu_micro/ecc/ic_tag_ecc_encoder.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_encoder.v
+VPP: rtl/ifu_micro/ecc/ic_tag_ecc_decoder.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_decoder.v
+VPP: rtl/ifu_micro/ecc/ic_tag_ecc_func.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_func.v
+VPP: rtl/ifu_micro/ecc/ic_data_ecc_encoder.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_encoder.v
+VPP: rtl/ifu_micro/ecc/ic_data_ecc_decoder.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_decoder.v
+VPP: rtl/ifu_micro/ecc/ic_data_ecc_func.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_func.v
+VPP: rtl/ifu_micro/rl_ifu.svpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu.sv
+VPP: rtl/clock_ctrl/rl_clock_ctrl.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_clock_ctrl.v
+VPP: rtl/reset_ctrl/rl_reset_ctrl_wrap.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_wrap.v
+VPP: rtl/reset_ctrl/rl_reset_ctrl.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl.v
+VPP: rtl/synch_top/cdc_synch_wrap.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cdc_synch_wrap.v
+VPP: rtl/synch_top/rl_reset_ctrl_synch.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_synch.v
+VPP: rtl/synch_top/rl_cpu_misc_synch.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_misc_synch.v
+VPP: rtl/synch_top/rl_cpu_synch_wrap.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_synch_wrap.v
+VPP: component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_wdt_synch.svpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wdt_synch.sv
+VPP: component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_timer_synch.svpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer_synch.sv
+VPP: rtl/ras_micro/rl_ibp_target_wrapper.vpp     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp_target_wrapper.v
+VPP: rtl/ras_micro/rl_ecc_cnt.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ecc_cnt.v
+VPP: rtl/ras_micro/rl_ras_top.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ras_top.v
+VPP: rtl/exu_mini/rl_adder.svpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_adder.sv
+VPP: rtl/exu_mini/rl_alu_data_path.svpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu_data_path.sv
+VPP: rtl/exu_mini/rl_alu.svpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu.sv
+VPP: rtl/exu_mini/rl_iesb.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_iesb.v
+VPP: rtl/exu_mini/rl_bypass.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bypass.v
+VPP: rtl/exu_mini/rl_result_bus.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_result_bus.v
+VPP: rtl/exu_mini/rl_pipe_ctrl.vpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pipe_ctrl.v
+VPP: rtl/exu_mini/rl_complete.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_complete.v
+VPP: rtl/exu_mini/rl_dispatch.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dispatch.v
+VPP: rtl/exu_mini/rl_uop_seq.svpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_uop_seq.sv
+VPP: rtl/exu_mini/rl_mpy.svpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mpy.sv
+VPP: rtl/exu_mini/rl_byte_unit.vpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_byte_unit.v
+VPP: rtl/exu_mini/rl_bitscan.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan.v
+VPP: rtl/exu_mini/fpu/rl_bitscan_32b.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_32b.v
+VPP: rtl/exu_mini/rl_bitscan_16b.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_16b.v
+VPP: rtl/exu_mini/rl_bitscan_8b.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_8b.v
+VPP: rtl/exu_mini/rl_bitscan_4b.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_4b.v
+VPP: rtl/exu_mini/rl_branch.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_branch.v
+VPP: rtl/exu_mini/rl_csr.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_csr.v
+VPP: rtl/exu_mini/rl_trap.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_trap.v
+VPP: rtl/exu_mini/rl_special.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_special.v
+VPP: rtl/exu_mini/rl_exu.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_exu.v
+VPP: rtl/exu_mini/rl_decoder.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_decoder.v
+VPP: rtl/exu_mini/rl_predecoder.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_predecoder.v
+VPP: rtl/exu_mini/rl_halt_mgr.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_halt_mgr.v
+VPP: rtl/exu_mini/rl_debug.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_debug.v
+VPP: rtl/exu_mini/rl_regfile.svpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_regfile.sv
+VPP: rtl/exu_mini/rl_maskgen.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_maskgen.v
+VPP: rtl/exu_mini/rl_logic_unit.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_logic_unit.v
+VPP: rtl/exu_mini/rl_shifter.svpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_shifter.sv
+VPP: rtl/exu_mini/rl_fd_ffs_33.vpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_ffs_33.v
+VPP: rtl/exu_mini/rl_fd_shift_34.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_shift_34.v
+VPP: rtl/exu_mini/rl_fd_radix4_counter.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_radix4_counter.v
+VPP: rtl/exu_mini/rl_wtree_32x4.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_32x4.v
+VPP: rtl/exu_mini/rl_wtree_comp302.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp302.v
+VPP: rtl/exu_mini/rl_wtree_comp402.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp402.v
+VPP: rtl/exu_mini/rl_wtree_comp612.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp612.v
+VPP: rtl/exu_mini/rl_wtree_comp522.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp522.v
+VPP: rtl/exu_mini/rl_wtree_comp622.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp622.v
+VPP: rtl/exu_mini/rl_wtree_comp432.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp432.v
+VPP: rtl/exu_mini/rl_wtree_comp222.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp222.v
+VPP: rtl/exu_mini/rl_wtree_comp312.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp312.v
+VPP: rtl/exu_mini/rl_pmp.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp.v
+VPP: rtl/exu_mini/rl_epmp.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_epmp.v
+VPP: rtl/exu_mini/rl_pmp_hit.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp_hit.v
+VPP: rtl/rl_triggers.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers.v
+VPP: rtl/rl_triggers_iso.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers_iso.v
+VPP: rtl/exu_mini/rl_pma.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma.v
+VPP: rtl/exu_mini/rl_pma_hit.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma_hit.v
+VPP: rtl/dmp_mini/rl_dmp.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp.v
+VPP: rtl/dmp_mini/rl_dmp_amo.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_amo.v
+VPP: rtl/dmp_mini/rl_dmp_load_aligner.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_load_aligner.v
+VPP: rtl/dmp_mini/rl_dmp_store_aligner.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_store_aligner.v
+VPP: rtl/dmp_mini/rl_dmp_csr.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_csr.v
+VPP: rtl/dmp_mini/rl_dmp_dccm.svpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm.sv
+VPP: rtl/dmp_mini/rl_dmp_ecc_store_aligner.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_ecc_store_aligner.v
+VPP: rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_encoder.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_encoder.v
+VPP: rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_decoder.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_decoder.v
+VPP: rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_func.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_func.v
+VPP: rtl/dmp_mini/rl_dmp_dccm_ibp_wrapper.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ibp_wrapper.v
+VPP: rtl/dmp_mini/rl_dmp_cwb.svpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_cwb.sv
+VPP: rtl/rl_soft_reset_aux.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_soft_reset_aux.v
+VPP: rtl/dmp_mini/rl_dmp_lsq.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq.v
+VPP: rtl/dmp_mini/rl_dmp_lsq_fifo.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_fifo.v
+VPP: rtl/dmp_mini/rl_dmp_lsq_cmd_port.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_cmd_port.v
+VPP: rtl/rl_simple_fifo.vpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_simple_fifo.v
+VPP: rtl/biu_mini/rl_ibp2ahb.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2ahb.v
+VPP: rtl/biu_mini/rl_per_ibp2ahb.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_per_ibp2ahb.v
+VPP: rtl/biu_mini/rl_ahb2ibp.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ahb2ibp.v
+VPP: rtl/biu_mini/rl_mmio_ahb2ibp.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mmio_ahb2ibp.v
+VPP: rtl/biu_mini/rl_parity_gen.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_gen.v
+VPP: rtl/biu_mini/rl_parity_chk.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_chk.v
+VPP: rtl/biu_mini/rl_ibp2mmio.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2mmio.v
+VPP: rtl/rl_core.vpp                             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_core.v
+VPP: rtl/rl_cpu_top.vpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_top.v
+VPP: rtl/clint/arcv_imsic_clint.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_imsic_clint.v
+VPP: rtl/clint/iprio_arb.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb.v
+VPP: rtl/clint/iprio_arb_4to1.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb_4to1.v
+VPP: rtl/HPM/rl_hpm.vpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_hpm.v
+VPP: rtl/clint/arcv_timer.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer.v
+VPP: rtl/watchdog/arcv_watchdog.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog.v
+VPP: rtl/watchdog/arcv_watchdog_csr.vpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_csr.v
+VPP: rtl/watchdog/arcv_watchdog_ctrl.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_ctrl.v
+VPP: rtl/watchdog/arcv_wd_parity.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wd_parity.v
+VPP: rtl/sfty/rl_sfty_csr.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_csr.v
+VPP: rtl/sfty/sfty_ibp_ini_e2e_wrap.svpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_ibp_ini_e2e_wrap.sv
+VPP: rtl/sfty/sfty_dmsi_down_tgt_e2e_wrap.svpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_dmsi_down_tgt_e2e_wrap.sv
+VPP: component:ARC_COMN.BCM:rtl/DWbb_bcm00_maj.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm00_maj.v
+VPP: rtl/rl_srams.svpp                           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_srams.sv
+VPP: models/clkgate.vpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clkgate.v
+VPP: component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v
+VPP: component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v
+VPP: component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v
+VPP: rtl/rtl_pipemon.vpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rtl_pipemon.v
+ARCv5EM:vpp_commands = rtl/rl_ecc_funcs.svhpp,constraints/rl_cpu_top_exported_tim_defines.vpp,constraints/rl_cpu_top_sdc.vpp,rtl/hiergen_spyglass.vpp
+VPP: rtl/rl_ecc_funcs.svhpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ecc_funcs.svh
+VPP: constraints/rl_cpu_top_exported_tim_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/rl_cpu_top_exported_tim_defines.v
+VPP: constraints/rl_cpu_top_sdc.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/rl_cpu_top.sdc
+VPP: rtl/hiergen_spyglass.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/hiergen_spyglass.txt
+ARCv5EM:architect = models/ram_sizes.vpp,models/rams_analyze.vpp
+VPP: models/ram_sizes.vpp                        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ram_sizes.txt
+VPP: models/rams_analyze.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rams_analyze.txt
+ARCv5EM:sim_modules = rtl/ifu_micro/rl_ifu_fetcher.svpp,rtl/ifu_micro/rl_ifu_id_ctrl.svpp,rtl/ifu_micro/rl_ifu_iccm.svpp,rtl/ifu_micro/rl_ifu_iccm_csr.svpp,rtl/ifu_micro/ecc/iccm_ecc_encoder.vpp,rtl/ifu_micro/ecc/iccm_ecc_decoder.vpp,rtl/ifu_micro/rl_ifu_align.svpp,rtl/ifu_micro/rl_ifu_icache.svpp,rtl/ifu_micro/rl_ifu_icache_rf.svpp,rtl/ifu_micro/rl_ifu_icache_ctl.svpp,rtl/ifu_micro/ecc/ic_tag_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_tag_ecc_decoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_decoder.vpp,rtl/ifu_micro/rl_ifu.svpp,rtl/clock_ctrl/rl_clock_ctrl.vpp,rtl/reset_ctrl/rl_reset_ctrl_wrap.vpp,rtl/reset_ctrl/rl_reset_ctrl.vpp,rtl/synch_top/cdc_synch_wrap.vpp,rtl/synch_top/rl_reset_ctrl_synch.vpp,rtl/synch_top/rl_cpu_misc_synch.vpp,rtl/synch_top/rl_cpu_synch_wrap.vpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_wdt_synch.svpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_timer_synch.svpp,rtl/ras_micro/rl_ibp_target_wrapper.vpp,rtl/ras_micro/rl_ecc_cnt.vpp,rtl/ras_micro/rl_ras_top.vpp,rtl/exu_mini/rl_adder.svpp,rtl/exu_mini/rl_alu_data_path.svpp,rtl/exu_mini/rl_alu.svpp,rtl/exu_mini/rl_iesb.vpp,rtl/exu_mini/rl_bypass.vpp,rtl/exu_mini/rl_result_bus.vpp,rtl/exu_mini/rl_pipe_ctrl.vpp,rtl/exu_mini/rl_complete.vpp,rtl/exu_mini/rl_dispatch.vpp,rtl/exu_mini/rl_uop_seq.svpp,rtl/exu_mini/rl_mpy.svpp,rtl/exu_mini/rl_byte_unit.vpp,rtl/exu_mini/rl_bitscan.vpp,rtl/exu_mini/fpu/rl_bitscan_32b.vpp,rtl/exu_mini/rl_bitscan_16b.vpp,rtl/exu_mini/rl_bitscan_8b.vpp,rtl/exu_mini/rl_bitscan_4b.vpp,rtl/exu_mini/rl_branch.vpp,rtl/exu_mini/rl_csr.vpp,rtl/exu_mini/rl_trap.vpp,rtl/exu_mini/rl_special.vpp,rtl/exu_mini/rl_exu.vpp,rtl/exu_mini/rl_decoder.vpp,rtl/exu_mini/rl_predecoder.vpp,rtl/exu_mini/rl_halt_mgr.vpp,rtl/exu_mini/rl_debug.vpp,rtl/exu_mini/rl_regfile.svpp,rtl/exu_mini/rl_maskgen.vpp,rtl/exu_mini/rl_logic_unit.vpp,rtl/exu_mini/rl_shifter.svpp,rtl/exu_mini/rl_fd_ffs_33.vpp,rtl/exu_mini/rl_fd_shift_34.vpp,rtl/exu_mini/rl_fd_radix4_counter.vpp,rtl/exu_mini/rl_wtree_32x4.vpp,rtl/exu_mini/rl_wtree_comp302.vpp,rtl/exu_mini/rl_wtree_comp402.vpp,rtl/exu_mini/rl_wtree_comp612.vpp,rtl/exu_mini/rl_wtree_comp522.vpp,rtl/exu_mini/rl_wtree_comp622.vpp,rtl/exu_mini/rl_wtree_comp432.vpp,rtl/exu_mini/rl_wtree_comp222.vpp,rtl/exu_mini/rl_wtree_comp312.vpp,rtl/exu_mini/rl_pmp.vpp,rtl/exu_mini/rl_epmp.vpp,rtl/exu_mini/rl_pmp_hit.vpp,rtl/rl_triggers.vpp,rtl/rl_triggers_iso.vpp,rtl/exu_mini/rl_pma.vpp,rtl/exu_mini/rl_pma_hit.vpp,rtl/dmp_mini/rl_dmp.vpp,rtl/dmp_mini/rl_dmp_amo.vpp,rtl/dmp_mini/rl_dmp_load_aligner.vpp,rtl/dmp_mini/rl_dmp_store_aligner.vpp,rtl/dmp_mini/rl_dmp_csr.vpp,rtl/dmp_mini/rl_dmp_dccm.svpp,rtl/dmp_mini/rl_dmp_ecc_store_aligner.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_encoder.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_decoder.vpp,rtl/dmp_mini/rl_dmp_dccm_ibp_wrapper.vpp,rtl/dmp_mini/rl_dmp_cwb.svpp,rtl/rl_soft_reset_aux.vpp,rtl/dmp_mini/rl_dmp_lsq.vpp,rtl/dmp_mini/rl_dmp_lsq_fifo.vpp,rtl/dmp_mini/rl_dmp_lsq_cmd_port.vpp,rtl/rl_simple_fifo.vpp,rtl/biu_mini/rl_ibp2ahb.vpp,rtl/biu_mini/rl_per_ibp2ahb.vpp,rtl/biu_mini/rl_ahb2ibp.vpp,rtl/biu_mini/rl_mmio_ahb2ibp.vpp,rtl/biu_mini/rl_parity_gen.vpp,rtl/biu_mini/rl_parity_chk.vpp,rtl/biu_mini/rl_ibp2mmio.vpp,rtl/rl_core.vpp,rtl/rl_cpu_top.vpp,rtl/clint/arcv_imsic_clint.vpp,rtl/clint/iprio_arb.vpp,rtl/clint/iprio_arb_4to1.vpp,rtl/HPM/rl_hpm.vpp,rtl/clint/arcv_timer.vpp,rtl/watchdog/arcv_watchdog.vpp,rtl/watchdog/arcv_watchdog_csr.vpp,rtl/watchdog/arcv_watchdog_ctrl.vpp,rtl/watchdog/arcv_wd_parity.vpp,rtl/sfty/rl_sfty_csr.vpp,rtl/sfty/sfty_ibp_ini_e2e_wrap.svpp,rtl/sfty/sfty_dmsi_down_tgt_e2e_wrap.svpp,component:ARC_COMN.BCM:rtl/DWbb_bcm00_maj.vpp,rtl/rl_srams.svpp,models/clkgate.vpp,models/ram_core.vpp,models/fpga_sram.vpp,models/iccm0_ram.vpp,models/dccm_ram.vpp,models/ic_tag_ram.vpp,models/ic_data_ram.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/rtl_pipemon.vpp
+ARCv5EM:sim_modules = component:ARC_COMN.BCM:rtl/reset_ctrl/reset_handshake.v,component:ARC_COMN.BCM:rtl/reset_ctrl/reset_fsm.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_gen.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_gen.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_cac.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_shdw_cac.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_cac_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_chk.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_chk_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/sr_err_aggr.sv,component:ARC_COMN.BCM:rtl/ecc_all01/multi_bit_comparator.sv,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_dec.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_qual_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_enc.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_dec.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_enc.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_ecc32_1stg_qual_di_cac_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/e2e_32bit/e2e_edc32_1stg_qual_di_chk_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/even_pty_qual_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_di_dec_wrap.v,component:ARC_COMN.BCM:rtl/ecc_all01/e2e_rl/parity/odd_pty_qual_di_dec_wrap.v
+ARCv5EM:cpu_sources = rtl/ifu_micro/rl_ifu_fetcher.svpp,rtl/ifu_micro/rl_ifu_id_ctrl.svpp,rtl/ifu_micro/rl_ifu_iccm.svpp,rtl/ifu_micro/rl_ifu_iccm_csr.svpp,rtl/ifu_micro/ecc/iccm_ecc_encoder.vpp,rtl/ifu_micro/ecc/iccm_ecc_decoder.vpp,rtl/ifu_micro/ecc/iccm_ecc_func.vpp,rtl/ifu_micro/rl_ifu_align.svpp,rtl/ifu_micro/rl_ifu_icache.svpp,rtl/ifu_micro/rl_ifu_icache_rf.svpp,rtl/ifu_micro/rl_ifu_icache_ctl.svpp,rtl/ifu_micro/ecc/ic_tag_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_tag_ecc_decoder.vpp,rtl/ifu_micro/ecc/ic_tag_ecc_func.vpp,rtl/ifu_micro/ecc/ic_data_ecc_encoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_decoder.vpp,rtl/ifu_micro/ecc/ic_data_ecc_func.vpp,rtl/ifu_micro/rl_ifu.svpp,rtl/clock_ctrl/rl_clock_ctrl.vpp,rtl/reset_ctrl/rl_reset_ctrl_wrap.vpp,rtl/reset_ctrl/rl_reset_ctrl.vpp,rtl/synch_top/cdc_synch_wrap.vpp,rtl/synch_top/rl_reset_ctrl_synch.vpp,rtl/synch_top/rl_cpu_misc_synch.vpp,rtl/synch_top/rl_cpu_synch_wrap.vpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_wdt_synch.svpp,component:ARC_COMN.BCM:rtl/timer_wdt_synch/arcv_timer_synch.svpp,rtl/ras_micro/rl_ibp_target_wrapper.vpp,rtl/ras_micro/rl_ecc_cnt.vpp,rtl/ras_micro/rl_ras_top.vpp,rtl/exu_mini/rl_adder.svpp,rtl/exu_mini/rl_alu_data_path.svpp,rtl/exu_mini/rl_alu.svpp,rtl/exu_mini/rl_iesb.vpp,rtl/exu_mini/rl_bypass.vpp,rtl/exu_mini/rl_result_bus.vpp,rtl/exu_mini/rl_pipe_ctrl.vpp,rtl/exu_mini/rl_complete.vpp,rtl/exu_mini/rl_dispatch.vpp,rtl/exu_mini/rl_uop_seq.svpp,rtl/exu_mini/rl_mpy.svpp,rtl/exu_mini/rl_byte_unit.vpp,rtl/exu_mini/rl_bitscan.vpp,rtl/exu_mini/fpu/rl_bitscan_32b.vpp,rtl/exu_mini/rl_bitscan_16b.vpp,rtl/exu_mini/rl_bitscan_8b.vpp,rtl/exu_mini/rl_bitscan_4b.vpp,rtl/exu_mini/rl_branch.vpp,rtl/exu_mini/rl_csr.vpp,rtl/exu_mini/rl_trap.vpp,rtl/exu_mini/rl_special.vpp,rtl/exu_mini/rl_exu.vpp,rtl/exu_mini/rl_decoder.vpp,rtl/exu_mini/rl_predecoder.vpp,rtl/exu_mini/rl_halt_mgr.vpp,rtl/exu_mini/rl_debug.vpp,rtl/exu_mini/rl_regfile.svpp,rtl/exu_mini/rl_maskgen.vpp,rtl/exu_mini/rl_logic_unit.vpp,rtl/exu_mini/rl_shifter.svpp,rtl/exu_mini/rl_fd_ffs_33.vpp,rtl/exu_mini/rl_fd_shift_34.vpp,rtl/exu_mini/rl_fd_radix4_counter.vpp,rtl/exu_mini/rl_wtree_32x4.vpp,rtl/exu_mini/rl_wtree_comp302.vpp,rtl/exu_mini/rl_wtree_comp402.vpp,rtl/exu_mini/rl_wtree_comp612.vpp,rtl/exu_mini/rl_wtree_comp522.vpp,rtl/exu_mini/rl_wtree_comp622.vpp,rtl/exu_mini/rl_wtree_comp432.vpp,rtl/exu_mini/rl_wtree_comp222.vpp,rtl/exu_mini/rl_wtree_comp312.vpp,rtl/exu_mini/rl_pmp.vpp,rtl/exu_mini/rl_epmp.vpp,rtl/exu_mini/rl_pmp_hit.vpp,rtl/rl_triggers.vpp,rtl/rl_triggers_iso.vpp,rtl/exu_mini/rl_pma.vpp,rtl/exu_mini/rl_pma_hit.vpp,rtl/dmp_mini/rl_dmp.vpp,rtl/dmp_mini/rl_dmp_amo.vpp,rtl/dmp_mini/rl_dmp_load_aligner.vpp,rtl/dmp_mini/rl_dmp_store_aligner.vpp,rtl/dmp_mini/rl_dmp_csr.vpp,rtl/dmp_mini/rl_dmp_dccm.svpp,rtl/dmp_mini/rl_dmp_ecc_store_aligner.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_encoder.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_decoder.vpp,rtl/dmp_mini/ecc/rl_dmp_dccm_ecc_func.vpp,rtl/dmp_mini/rl_dmp_dccm_ibp_wrapper.vpp,rtl/dmp_mini/rl_dmp_cwb.svpp,rtl/rl_soft_reset_aux.vpp,rtl/dmp_mini/rl_dmp_lsq.vpp,rtl/dmp_mini/rl_dmp_lsq_fifo.vpp,rtl/dmp_mini/rl_dmp_lsq_cmd_port.vpp,rtl/rl_simple_fifo.vpp,rtl/biu_mini/rl_ibp2ahb.vpp,rtl/biu_mini/rl_per_ibp2ahb.vpp,rtl/biu_mini/rl_ahb2ibp.vpp,rtl/biu_mini/rl_mmio_ahb2ibp.vpp,rtl/biu_mini/rl_parity_gen.vpp,rtl/biu_mini/rl_parity_chk.vpp,rtl/biu_mini/rl_ibp2mmio.vpp,rtl/rl_core.vpp,rtl/rl_cpu_top.vpp,rtl/clint/arcv_imsic_clint.vpp,rtl/clint/iprio_arb.vpp,rtl/clint/iprio_arb_4to1.vpp,rtl/HPM/rl_hpm.vpp,rtl/clint/arcv_timer.vpp,rtl/watchdog/arcv_watchdog.vpp,rtl/watchdog/arcv_watchdog_csr.vpp,rtl/watchdog/arcv_watchdog_ctrl.vpp,rtl/watchdog/arcv_wd_parity.vpp,rtl/sfty/rl_sfty_csr.vpp,rtl/sfty/sfty_ibp_ini_e2e_wrap.svpp,rtl/sfty/sfty_dmsi_down_tgt_e2e_wrap.svpp,component:ARC_COMN.BCM:rtl/DWbb_bcm00_maj.vpp,rtl/rl_srams.svpp,models/clkgate.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp
+Creating compile_manifest file in /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+Creating analyze_manifest file in /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+Creating analyze1.syn file in /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/
+*** END Building RTL (Verilog preprocessing) for System.CPUisle.ARCv5EM ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.ARCV_DM ***
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+ARCV_DM:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+ARCV_DM:headers = config/arcv_dm_defines.vpp
+VPP: ./config/arcv_dm_defines.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_defines.v
+Pre-processing VPP source files for ARCV_DM (System.ARCV_DM)
+ARCV_DM:non-macro vppfiles = component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/arcv_dm.svpp,rtl/dm_cdc_sync.vpp,rtl/dm_clock_gate.vpp,rtl/dm_cgm.vpp,rtl/dm_hmst.svpp,rtl/dm_ibp_if.svpp,rtl/dm_src_sync_tx.vpp,rtl/dm_src_sync_rx.vpp,rtl/dm_ssync_clkgate.svpp,rtl/arcv_dm_top.vpp,rtl/arcv_dm_top_stubs.vpp
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v
+VPP: ./rtl/arcv_dm.svpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm.sv
+VPP: ./rtl/dm_cdc_sync.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cdc_sync.v
+VPP: ./rtl/dm_clock_gate.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_clock_gate.v
+VPP: ./rtl/dm_cgm.vpp                            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cgm.v
+VPP: ./rtl/dm_hmst.svpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_hmst.sv
+VPP: ./rtl/dm_ibp_if.svpp                        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ibp_if.sv
+VPP: ./rtl/dm_src_sync_tx.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_tx.v
+VPP: ./rtl/dm_src_sync_rx.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_rx.v
+VPP: ./rtl/dm_ssync_clkgate.svpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ssync_clkgate.sv
+VPP: ./rtl/arcv_dm_top.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_top.v
+VPP: ./rtl/arcv_dm_top_stubs.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/arcv_dm_top_stubs.v
+ARCV_DM:vpp_commands = constraints/arcv_dm_top_exported_tim_defines.vpp,rtl/arcv_dm_top_hiercmd0.vpp
+VPP: ./constraints/arcv_dm_top_exported_tim_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/arcv_dm_top_exported_tim_defines.v
+VPP: ./rtl/arcv_dm_top_hiercmd0.vpp              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/dat/arcv_dm_top_hiercmd.txt
+ARCV_DM:sim_modules = component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/arcv_dm.svpp,rtl/dm_cdc_sync.vpp,rtl/dm_clock_gate.vpp,rtl/dm_cgm.vpp,rtl/dm_hmst.svpp,rtl/dm_ibp_if.svpp,rtl/dm_src_sync_tx.vpp,rtl/dm_src_sync_rx.vpp,rtl/dm_ssync_clkgate.svpp,rtl/arcv_dm_top.vpp,rtl/arcv_dm_top_stubs.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.ARCV_DM ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.ClkCtrl ***
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+ClkCtrl:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+ClkCtrl:headers = vpp/alb_mss_clkctrl_defines.vpp,vpp/alb_mss_clkctrl_misc_defines.vpp
+VPP: ./vpp/alb_mss_clkctrl_defines.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_defines.v
+VPP: ./vpp/alb_mss_clkctrl_misc_defines.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_misc_defines.v
+ClkCtrl:constraints = vpp/alb_mss_clkctrl_constraints.vpp
+Processing constraint files for ClkCtrl (System.ClkCtrl)
+VPP: ./vpp/alb_mss_clkctrl_constraints.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_constraints.v
+Pre-processing VPP source files for ClkCtrl (System.ClkCtrl)
+ClkCtrl:non-macro vppfiles = vpp/alb_mss_clkctrl.vpp,vpp/alb_mss_ext_stub.vpp,vpp/alb_mss_clkctrl_regmap_defines.vpp,vpp/alb_mss_clkctrl_ratio_calc.vpp
+VPP: ./vpp/alb_mss_clkctrl.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl.v
+VPP: ./vpp/alb_mss_ext_stub.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_ext_stub.v
+VPP: ./vpp/alb_mss_clkctrl_regmap_defines.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_regmap_defines.v
+VPP: ./vpp/alb_mss_clkctrl_ratio_calc.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_ratio_calc.v
+ClkCtrl:vpp_commands = vpp/alb_mss_clkctrl_regmap.h,vpp/alb_mss_clkctrl_regmap.s
+VPP: ./vpp/alb_mss_clkctrl_regmap.h              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/alb_mss_clkctrl_regmap.h
+VPP: ./vpp/alb_mss_clkctrl_regmap.s              => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/alb_mss_clkctrl_regmap.s
+ClkCtrl:sim_modules = vpp/alb_mss_clkctrl.vpp,vpp/alb_mss_ext_stub.vpp,vpp/alb_mss_clkctrl_regmap_defines.vpp,vpp/alb_mss_clkctrl_ratio_calc.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.ClkCtrl ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.DW_DBP ***
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+DW_DBP:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+DW_DBP:headers = config/dw_dbp_exported_defines.vpp,config/dw_dbp_defines.vpp
+VPP: ./config/dw_dbp_exported_defines.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_exported_defines.v
+VPP: ./config/dw_dbp_defines.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_defines.v
+Pre-processing VPP source files for DW_DBP (System.DW_DBP)
+DW_DBP:non-macro vppfiles = component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/island_pkg_axi.vpp,rtl/bvci_to_axi.vpp,rtl/dw_buf_gate.vpp,rtl/apb_master_ap0.vpp,rtl/dw_dbp_stubs.vpp,rtl/dw_dbp.vpp,rtl/jtag_buf.vpp,rtl/dwt_jtag_port.vpp,rtl/dwt_debug_port.vpp,rtl/dwt_tap_controller.vpp,rtl/dwt_sys_clk_sync.vpp,rtl/dw_dbp_cdc_sync.vpp,rtl/dwt_reset_ctrl.vpp
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v
+VPP: ./rtl/island_pkg_axi.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/island_pkg_axi.v
+VPP: ./rtl/bvci_to_axi.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/bvci_to_axi.v
+VPP: ./rtl/dw_buf_gate.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_buf_gate.v
+VPP: ./rtl/apb_master_ap0.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/apb_master_ap0.v
+VPP: ./rtl/dw_dbp_stubs.vpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dw_dbp_stubs.v
+VPP: ./rtl/dw_dbp.vpp                            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp.v
+VPP: ./rtl/jtag_buf.vpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/jtag_buf.v
+VPP: ./rtl/dwt_jtag_port.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_jtag_port.v
+VPP: ./rtl/dwt_debug_port.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_debug_port.v
+VPP: ./rtl/dwt_tap_controller.vpp                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_tap_controller.v
+VPP: ./rtl/dwt_sys_clk_sync.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_sys_clk_sync.v
+VPP: ./rtl/dw_dbp_cdc_sync.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_cdc_sync.v
+VPP: ./rtl/dwt_reset_ctrl.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_reset_ctrl.v
+DW_DBP:vpp_commands = constraints/dw_dbp_exported_tim_defines.vpp
+VPP: ./constraints/dw_dbp_exported_tim_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/dw_dbp_exported_tim_defines.v
+DW_DBP:sim_modules = component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,rtl/island_pkg_axi.vpp,rtl/bvci_to_axi.vpp,rtl/dw_buf_gate.vpp,rtl/apb_master_ap0.vpp,rtl/dw_dbp_stubs.vpp,rtl/dw_dbp.vpp,rtl/jtag_buf.vpp,rtl/dwt_jtag_port.vpp,rtl/dwt_debug_port.vpp,rtl/dwt_tap_controller.vpp,rtl/dwt_sys_clk_sync.vpp,rtl/dw_dbp_cdc_sync.vpp,rtl/dwt_reset_ctrl.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.DW_DBP ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.DummySLV ***
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+DummySLV:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+DummySLV:headers = vpp/alb_mss_dummy_slave_defines.vpp
+VPP: ./vpp/alb_mss_dummy_slave_defines.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave_defines.v
+Pre-processing VPP source files for DummySLV (System.DummySLV)
+DummySLV:non-macro vppfiles = vpp/alb_mss_dummy_slave.vpp,vpp/axi_dummy_slave.vpp,vpp/ahb_dummy_slave.vpp,vpp/bvci_dummy_slave.vpp,vpp/apb_dummy_slave.vpp
+VPP: ./vpp/alb_mss_dummy_slave.vpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave.v
+VPP: ./vpp/axi_dummy_slave.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/axi_dummy_slave.v
+VPP: ./vpp/ahb_dummy_slave.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/ahb_dummy_slave.v
+VPP: ./vpp/bvci_dummy_slave.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/bvci_dummy_slave.v
+VPP: ./vpp/apb_dummy_slave.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/apb_dummy_slave.v
+DummySLV:sim_modules = vpp/alb_mss_dummy_slave.vpp,vpp/axi_dummy_slave.vpp,vpp/ahb_dummy_slave.vpp,vpp/bvci_dummy_slave.vpp,vpp/apb_dummy_slave.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.DummySLV ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.Implementation ***
+Pre-processing VPP source files for Implementation (System.Implementation)
+Implementation:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+Pre-processing VPP source files for Implementation (System.Implementation)
+Implementation:non-macro vppfiles = rtl/rv_debug.svpp,rtl/rascal2space_if.svpp,rtl/jtag_fsm.svpp,rtl/rascal2jtag.svpp,rtl/dm_via_jtag.svpp,rtl/space2dm_if.svpp,rtl/rascal.vpp
+VPP: ./rtl/rv_debug.svpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rv_debug.sv
+VPP: ./rtl/rascal2space_if.svpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2space_if.sv
+VPP: ./rtl/jtag_fsm.svpp                         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/jtag_fsm.sv
+VPP: ./rtl/rascal2jtag.svpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2jtag.sv
+VPP: ./rtl/dm_via_jtag.svpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dm_via_jtag.sv
+VPP: ./rtl/space2dm_if.svpp                      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/space2dm_if.sv
+VPP: ./rtl/rascal.vpp                            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal.v
+Implementation:sim_modules = rtl/rv_debug.svpp,rtl/rascal2space_if.svpp,rtl/jtag_fsm.svpp,rtl/rascal2jtag.svpp,rtl/dm_via_jtag.svpp,rtl/space2dm_if.svpp,rtl/rascal.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/impl_debugvpp_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.Implementation ***
+Generating file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/jtag_chain.v
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.Profiler ***
+Pre-processing VPP source files for Profiler (System.Profiler)
+Profiler:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+Profiler:headers = vpp/alb_mss_perfctrl_defines.vpp
+VPP: ./vpp/alb_mss_perfctrl_defines.vpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_defines.v
+Profiler:constraints = vpp/alb_mss_perfctrl_constraints.vpp
+Processing constraint files for Profiler (System.Profiler)
+VPP: ./vpp/alb_mss_perfctrl_constraints.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_constraints.v
+Pre-processing VPP source files for Profiler (System.Profiler)
+Profiler:non-macro vppfiles = vpp/alb_mss_perfctrl.vpp
+VPP: ./vpp/alb_mss_perfctrl.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl.v
+Profiler:vpp_commands = vpp/alb_mss_perfctrl_regmap.h
+VPP: ./vpp/alb_mss_perfctrl_regmap.h             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/alb_mss_perfctrl_regmap.h
+Profiler:sim_modules = vpp/alb_mss_perfctrl.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.Profiler ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.SRAMCtrl ***
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+SRAMCtrl:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+SRAMCtrl:headers = vpp/ibp_mem/alb_mss_mem_defines.vpp
+VPP: ./vpp/ibp_mem/alb_mss_mem_defines.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_defines.v
+SRAMCtrl:constraints = vpp/ibp_mem/alb_mss_mem_constraints.vpp
+Processing constraint files for SRAMCtrl (System.SRAMCtrl)
+VPP: ./vpp/ibp_mem/alb_mss_mem_constraints.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_constraints.v
+Pre-processing VPP source files for SRAMCtrl (System.SRAMCtrl)
+SRAMCtrl:macro (+x) vppfiles = vpp/ibp_mem/alb_mss_mem_fifo.vpp,vpp/ibp_mem/alb_mss_mem_model.vpp,vpp/ibp_mem/alb_mss_fpga_sram.vpp
+VPP: ./vpp/ibp_mem/alb_mss_mem_fifo.vpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_fifo.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_model.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_model.v
+VPP: ./vpp/ibp_mem/alb_mss_fpga_sram.vpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fpga_sram.v
+SRAMCtrl:non-macro vppfiles = vpp/ibp_mem/alb_mss_mem.vpp,vpp/ibp_mem/alb_mss_mem_ibp_buf.vpp,vpp/ibp_mem/alb_mss_mem_bypbuf.vpp,vpp/ibp_mem/alb_mss_mem_lat.vpp,vpp/ibp_mem/alb_mss_mem_ibp_lat.vpp,vpp/ibp_mem/alb_mss_mem_ctrl.vpp,vpp/ibp_mem/alb_mss_mem_clkgate.vpp,vpp/ibp_mem/alb_mss_mem_ibp_excl.vpp,vpp/ibp_mem/alb_mss_mem_ibp2pack.vpp,vpp/ibp_mem/alb_mss_mem_ibp_split.vpp,vpp/ibp_mem/alb_mss_mem_pack2ibp.vpp,vpp/ibp_mem/alb_mss_mem_ibp2single.vpp,vpp/ibp_mem/alb_mss_mem_ibp_bypbuf.vpp,vpp/ibp_mem/alb_mss_mem_ibp_cwbind.vpp
+VPP: ./vpp/ibp_mem/alb_mss_mem.vpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_buf.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_buf.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_bypbuf.vpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_bypbuf.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_lat.vpp           => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_lat.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_lat.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_lat.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ctrl.vpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ctrl.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_clkgate.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_clkgate.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_excl.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_excl.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp2pack.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2pack.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_split.vpp     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_split.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_pack2ibp.vpp      => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_pack2ibp.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp2single.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2single.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_bypbuf.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_bypbuf.v
+VPP: ./vpp/ibp_mem/alb_mss_mem_ibp_cwbind.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_cwbind.v
+SRAMCtrl:sim_modules = vpp/ibp_mem/alb_mss_mem.vpp,vpp/ibp_mem/alb_mss_mem_ibp_buf.vpp,vpp/ibp_mem/alb_mss_mem_bypbuf.vpp,vpp/ibp_mem/alb_mss_mem_fifo.vpp,vpp/ibp_mem/alb_mss_mem_lat.vpp,vpp/ibp_mem/alb_mss_mem_ibp_lat.vpp,vpp/ibp_mem/alb_mss_mem_ctrl.vpp,vpp/ibp_mem/alb_mss_mem_clkgate.vpp,vpp/ibp_mem/alb_mss_mem_model.vpp,vpp/ibp_mem/alb_mss_fpga_sram.vpp,vpp/ibp_mem/alb_mss_mem_ibp_excl.vpp,vpp/ibp_mem/alb_mss_mem_ibp2pack.vpp,vpp/ibp_mem/alb_mss_mem_ibp_split.vpp,vpp/ibp_mem/alb_mss_mem_pack2ibp.vpp,vpp/ibp_mem/alb_mss_mem_ibp2single.vpp,vpp/ibp_mem/alb_mss_mem_ibp_bypbuf.vpp,vpp/ibp_mem/alb_mss_mem_ibp_cwbind.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.SRAMCtrl ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.Safety Manager ***
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest.v
+Safety Manager:headers = rtl/rv_safety_defines.vpp
+VPP: ./rtl/rv_safety_defines.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_defines.v
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = rtl/ls_input_delay.svpp,rtl/ls_compare_unit.vpp,rtl/ls_multi_bit_comparator.svpp,rtl/ls_cdc_reset_sync.vpp,rtl/ls_cdc_sync.vpp,rtl/multi_bit_syncP.vpp,rtl/single_bit_syncP.vpp,rtl/ls_error_register.vpp,rtl/simple_parity.vpp,rtl/ls_register.vpp,rtl/ls_boot_counter.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_3.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_4.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_n.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm23_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm95.vpp,rtl/cpu_top_safety_controller.svpp,rtl/err_inj_ctrl.svpp,rtl/ls_sfty_mnt_diag_ctrl.svpp,rtl/safety_iso_sync.svpp,rtl/cpu_ls_defines.vpp
+VPP: ./rtl/ls_input_delay.svpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_input_delay.sv
+VPP: ./rtl/ls_compare_unit.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_compare_unit.v
+VPP: ./rtl/ls_multi_bit_comparator.svpp          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_multi_bit_comparator.sv
+VPP: ./rtl/ls_cdc_reset_sync.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_reset_sync.v
+VPP: ./rtl/ls_cdc_sync.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_sync.v
+VPP: ./rtl/multi_bit_syncP.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_syncP.v
+VPP: ./rtl/single_bit_syncP.vpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/single_bit_syncP.v
+VPP: ./rtl/ls_error_register.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_error_register.v
+VPP: ./rtl/simple_parity.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/simple_parity.v
+VPP: ./rtl/ls_register.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_register.v
+VPP: ./rtl/ls_boot_counter.vpp                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_boot_counter.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99_3.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_3.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99_4.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_4.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm99_n.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_n.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm23_atv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm23_atv.v
+VPP: ./component:ARC_COMN.BCM:rtl/DWbb_bcm95.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm95.v
+VPP: ./rtl/cpu_top_safety_controller.svpp        => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_top_safety_controller.sv
+VPP: ./rtl/err_inj_ctrl.svpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/err_inj_ctrl.sv
+VPP: ./rtl/ls_sfty_mnt_diag_ctrl.svpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_sfty_mnt_diag_ctrl.sv
+VPP: ./rtl/safety_iso_sync.svpp                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/safety_iso_sync.sv
+VPP: ./rtl/cpu_ls_defines.vpp                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_ls_defines.v
+Safety Manager:sim_modules = rtl/ls_input_delay.svpp,rtl/ls_compare_unit.vpp,rtl/ls_multi_bit_comparator.svpp,rtl/ls_cdc_reset_sync.vpp,rtl/ls_cdc_sync.vpp,rtl/multi_bit_syncP.vpp,rtl/single_bit_syncP.vpp,rtl/ls_error_register.vpp,rtl/simple_parity.vpp,rtl/ls_register.vpp,rtl/ls_boot_counter.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm21.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_3.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_4.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm99_n.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm23_atv.vpp,component:ARC_COMN.BCM:rtl/DWbb_bcm95.vpp,rtl/cpu_top_safety_controller.svpp,rtl/err_inj_ctrl.svpp,rtl/ls_sfty_mnt_diag_ctrl.svpp,rtl/safety_iso_sync.svpp,rtl/cpu_ls_defines.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.Safety Manager ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.ZEBU_AXI_XTOR ***
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+ZEBU_AXI_XTOR:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+ZEBU_AXI_XTOR:headers = vpp/zebu_axi_xtor_defines.vpp
+VPP: ./vpp/zebu_axi_xtor_defines.vpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor_defines.v
+Pre-processing VPP source files for ZEBU_AXI_XTOR (System.ZEBU_AXI_XTOR)
+ZEBU_AXI_XTOR:non-macro vppfiles = vpp/zebu_axi_xtor.vpp
+VPP: ./vpp/zebu_axi_xtor.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor.v
+ZEBU_AXI_XTOR:sim_modules = vpp/zebu_axi_xtor.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.ZEBU_AXI_XTOR ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.ZEBU_BOX ***
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+ZEBU_BOX:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+ZEBU_BOX:copyfiles = scripts/process_zebu_dump.py,scripts/setup_zebu.sh,scripts/setup_zebu.csh,scripts/zebu_cct,scripts/copy_rdf_files.sh,runtime/zebu_mdb,runtime/kill_zRun,runtime/change_hex_word_width.py,runtime/testbench/TB_no_uart.so,runtime/testbench/TB_no_uart.cpp,runtime/testbench/RemoteDMA.hpp
+Copying non-preprocessed Copy source files for ZEBU_BOX (System.ZEBU_BOX)
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./scripts/process_zebu_dump.py to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/process_zebu_dump.py
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./scripts/setup_zebu.sh to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/setup_zebu.sh
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./scripts/setup_zebu.csh to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/setup_zebu.csh
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./scripts/zebu_cct to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/zebu_cct
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./scripts/copy_rdf_files.sh to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/copy_rdf_files.sh
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/zebu_mdb to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zebu_mdb
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/kill_zRun to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/kill_zRun
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/change_hex_word_width.py to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/change_hex_word_width.py
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/testbench/TB_no_uart.so to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/TB.so
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/testbench/TB_no_uart.cpp to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/TB.cpp
+  Copy /remote/us01sgnfs00727/arc_fpga/moyanz/git/RDF/arc_rdf_zebu/ARCv2_Zebu/main/dev/ip_library/com/arc/hardware/ARCv2_ZEBU_RDF/ZEBU_BOX/1_0/verilog_child/./runtime/testbench/RemoteDMA.hpp to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/RemoteDMA.hpp
+Pre-processing VPP source files for ZEBU_BOX (System.ZEBU_BOX)
+ZEBU_BOX:non-macro vppfiles = rtl/zebu_top.vpp,rtl/zebu_dumpvars.vpp
+VPP: ./rtl/zebu_top.vpp                          => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_top.v
+VPP: ./rtl/zebu_dumpvars.vpp                     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_dumpvars.v
+ZEBU_BOX:vpp_commands = scripts/arczebu.makefile,scripts/extract_triggers.do,scripts/extract_dumpvars.do,scripts/project.utf,scripts/project_zs5.utf,runtime/designFeatures,runtime/zrci_automation.tcl,runtime/zrci_xtor_mdb.tcl,runtime/zrci_xtor_lldb.tcl,runtime/collect_utilization.sh,runtime/zrci_cct_mdb.tcl
+VPP: ./scripts/arczebu.makefile                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/arczebu.makefile
+VPP: ./scripts/extract_triggers.do               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/extract_triggers.do
+VPP: ./scripts/extract_dumpvars.do               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/extract_dumpvars.do
+VPP: ./scripts/project.utf                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project.utf
+VPP: ./scripts/project_zs5.utf                   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf
+VPP: ./runtime/designFeatures                    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures
+VPP: ./runtime/zrci_automation.tcl               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_automation.tcl
+VPP: ./runtime/zrci_xtor_mdb.tcl                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_xtor_mdb.tcl
+VPP: ./runtime/zrci_xtor_lldb.tcl                => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_xtor_lldb.tcl
+VPP: ./runtime/collect_utilization.sh            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/collect_utilization.sh
+VPP: ./runtime/zrci_cct_mdb.tcl                  => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_cct_mdb.tcl
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_box_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.ZEBU_BOX ***
+
+*** BEGIN Building RTL (Verilog preprocessing) for System.BusFabric ***
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+BusFabric:non-macro vppfiles = config/manifest.vpp
+VPP: ./config/manifest.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/manifest.v
+BusFabric:headers = vpp/new_fabric/alb_mss_fab_defines.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_defines.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab_defines.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_defines.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_defines.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_defines.v
+BusFabric:constraints = vpp/new_fabric/alb_mss_fab_constraints.vpp
+Processing constraint files for BusFabric (System.BusFabric)
+VPP: ./vpp/new_fabric/alb_mss_fab_constraints.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_constraints.v
+Pre-processing VPP source files for BusFabric (System.BusFabric)
+BusFabric:macro (+x) vppfiles = vpp/new_fabric/alb_mss_fab_fifo.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_fifo.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab_fifo.vpp       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_fifo.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_fifo.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_fifo.v
+BusFabric:non-macro vppfiles = vpp/new_fabric/alb_mss_fab.vpp,vpp/new_fabric/alb_mss_fab_ibp_lat.vpp,vpp/new_fabric/alb_mss_fab_bus_lat.vpp,vpp/new_fabric/alb_mss_fab_axi2ibp_rrobin.vpp,vpp/new_fabric/alb_mss_fab_slv_axi_buffer.vpp,vpp/new_fabric/alb_mss_fab_axi2ibp.vpp,vpp/new_fabric/alb_mss_fab_ahbl2ibp.vpp,vpp/new_fabric/alb_mss_fab_ibp2axi_rg.vpp,vpp/new_fabric/alb_mss_fab_ibp2axi.vpp,vpp/new_fabric/alb_mss_fab_mst_axi_buffer.vpp,vpp/new_fabric/alb_mss_fab_ibp2ahbl_sel.vpp,vpp/new_fabric/alb_mss_fab_ibp2ahbl.vpp,vpp/new_fabric/alb_mss_fab_single2ahbl.vpp,vpp/new_fabric/alb_mss_fab_single2sparse.vpp,vpp/new_fabric/alb_mss_fab_ibp2apb.vpp,vpp/new_fabric/alb_mss_fab_ibp2single.vpp,vpp/new_fabric/alb_mss_fab_bypbuf.vpp,vpp/new_fabric/alb_mss_fab_ibp2pack.vpp,vpp/new_fabric/alb_mss_fab_pack2ibp.vpp,vpp/new_fabric/alb_mss_fab_ibp_buffer.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_default_slv.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2pack.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_pack2ibp.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpx2ibpy.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2single.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2ibps.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpw2ibpn.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpn2ibpw.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_bypbuf.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_cwbind.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_split.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_slv_ibp_buffer.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_rrobin.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_mst_ibp_buffer.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_compr.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw32_slv.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw512_slv.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw64_mst.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw32_mst.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw128_mst.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab.vpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp_lat.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_lat.v
+VPP: ./vpp/new_fabric/alb_mss_fab_bus_lat.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bus_lat.v
+VPP: ./vpp/new_fabric/alb_mss_fab_axi2ibp_rrobin.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp_rrobin.v
+VPP: ./vpp/new_fabric/alb_mss_fab_slv_axi_buffer.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_slv_axi_buffer.v
+VPP: ./vpp/new_fabric/alb_mss_fab_axi2ibp.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ahbl2ibp.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ahbl2ibp.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2axi_rg.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi_rg.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2axi.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi.v
+VPP: ./vpp/new_fabric/alb_mss_fab_mst_axi_buffer.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_mst_axi_buffer.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2ahbl_sel.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl_sel.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2ahbl.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl.v
+VPP: ./vpp/new_fabric/alb_mss_fab_single2ahbl.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2ahbl.v
+VPP: ./vpp/new_fabric/alb_mss_fab_single2sparse.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2sparse.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2apb.vpp    => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2apb.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2single.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2single.v
+VPP: ./vpp/new_fabric/alb_mss_fab_bypbuf.vpp     => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bypbuf.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp2pack.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2pack.v
+VPP: ./vpp/new_fabric/alb_mss_fab_pack2ibp.vpp   => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_pack2ibp.v
+VPP: ./vpp/new_fabric/alb_mss_fab_ibp_buffer.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_buffer.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_default_slv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_default_slv.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2pack.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2pack.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_pack2ibp.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_pack2ibp.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpx2ibpy.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpx2ibpy.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2single.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2single.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2ibps.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2ibps.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpw2ibpn.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpw2ibpn.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpn2ibpw.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpn2ibpw.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_bypbuf.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_bypbuf.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_cwbind.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_cwbind.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_split.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_split.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_slv_ibp_buffer.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_slv_ibp_buffer.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_rrobin.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_rrobin.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_mst_ibp_buffer.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_mst_ibp_buffer.v
+VPP: ./vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_compr.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_compr.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw32_slv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw32_slv.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw512_slv.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw512_slv.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw64_mst.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw64_mst.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw32_mst.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw32_mst.v
+VPP: ./vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw128_mst.vpp => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw128_mst.v
+BusFabric:vpp_commands = vpp/new_fabric/alb_mss_fab_system_memmap.h,vpp/new_fabric/alb_mss_fab_system_memmap.s,constraints/sdc.vpp
+VPP: ./vpp/new_fabric/alb_mss_fab_system_memmap.h => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/alb_mss_fab_system_memmap.h
+VPP: ./vpp/new_fabric/alb_mss_fab_system_memmap.s => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/User/alb_mss_fab_system_memmap.s
+VPP: ./constraints/sdc.vpp                       => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/constraints/archipelago.sdc
+BusFabric:sim_modules = vpp/new_fabric/alb_mss_fab.vpp,vpp/new_fabric/alb_mss_fab_ibp_lat.vpp,vpp/new_fabric/alb_mss_fab_bus_lat.vpp,vpp/new_fabric/alb_mss_fab_axi2ibp_rrobin.vpp,vpp/new_fabric/alb_mss_fab_slv_axi_buffer.vpp,vpp/new_fabric/alb_mss_fab_axi2ibp.vpp,vpp/new_fabric/alb_mss_fab_ahbl2ibp.vpp,vpp/new_fabric/alb_mss_fab_ibp2axi_rg.vpp,vpp/new_fabric/alb_mss_fab_ibp2axi.vpp,vpp/new_fabric/alb_mss_fab_mst_axi_buffer.vpp,vpp/new_fabric/alb_mss_fab_ibp2ahbl_sel.vpp,vpp/new_fabric/alb_mss_fab_ibp2ahbl.vpp,vpp/new_fabric/alb_mss_fab_single2ahbl.vpp,vpp/new_fabric/alb_mss_fab_single2sparse.vpp,vpp/new_fabric/alb_mss_fab_ibp2apb.vpp,vpp/new_fabric/alb_mss_fab_ibp2single.vpp,vpp/new_fabric/alb_mss_fab_fifo.vpp,vpp/new_fabric/alb_mss_fab_bypbuf.vpp,vpp/new_fabric/alb_mss_fab_ibp2pack.vpp,vpp/new_fabric/alb_mss_fab_pack2ibp.vpp,vpp/new_fabric/alb_mss_fab_ibp_buffer.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_default_slv.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2pack.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_pack2ibp.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpx2ibpy.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2single.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp2ibps.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpw2ibpn.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibpn2ibpw.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_fifo.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_bypbuf.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_cwbind.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_split.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_slv_ibp_buffer.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_rrobin.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_mst_ibp_buffer.vpp,vpp/new_fabric/bus_switch/common/alb_mss_bus_switch_ibp_compr.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw32_slv.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_dw512_slv.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw64_mst.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw32_mst.vpp,vpp/new_fabric/bus_switch/alb_mss_bus_switch_ibp_dw128_mst.vpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_compile_manifest
+*** END Building RTL (Verilog preprocessing) for System.BusFabric ***
+
+*** BEGIN Building RTL (Verilog preprocessing) (pass 2) for System.Safety Manager ***
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = config/manifest_pass2.vpp
+VPP: ./config/manifest_pass2.vpp                 => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/manifest_pass2.v
+Pre-processing VPP source files for Safety Manager (System.Safety Manager)
+Safety Manager:non-macro vppfiles = rtl/cpu_safety_monitor.svpp,rtl/rl_sfty_mnt_reg_agent.svpp,rtl/rl_sfty_mnt_err_aggr.svpp,rtl/rl_sfty_ibp_tgt_e2e_wrap.svpp
+VPP: ./rtl/cpu_safety_monitor.svpp               => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_safety_monitor.sv
+VPP: ./rtl/rl_sfty_mnt_reg_agent.svpp            => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_reg_agent.sv
+VPP: ./rtl/rl_sfty_mnt_err_aggr.svpp             => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_err_aggr.sv
+VPP: ./rtl/rl_sfty_ibp_tgt_e2e_wrap.svpp         => /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_ibp_tgt_e2e_wrap.sv
+Safety Manager:sim_modules = rtl/cpu_safety_monitor.svpp,rtl/rl_sfty_mnt_reg_agent.svpp,rtl/rl_sfty_mnt_err_aggr.svpp,rtl/rl_sfty_ibp_tgt_e2e_wrap.svpp
+Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/pass_2_rv_safety_compile_manifest
+*** END Building RTL (Verilog preprocessing) (pass 2) for System.Safety Manager ***
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/bcr_contents.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/board.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/io_pad_ring.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/clock_and_reset.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal_pipemon.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.hpp'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/nsim.props'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/compile.arg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/gcc.arg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/link_cmd.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/memory.x'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/arc.tcf'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/bcr_contents.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/board.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/io_pad_ring.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/clock_and_reset.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal_pipemon.v'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.s'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.h'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/core_config.hpp'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/nsim.props'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/compile.arg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/gcc.arg'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/link_cmd.txt'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/memory.x'.
+Writing file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/tool_config/arc.tcf'.
+
+*** Generating Structural HDL ***
+
+
+*** Generating Structural HDL for board ***
+
+HIERGEN: Version 3.41
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_top.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_top_safety_controller.sv
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_safety_monitor.sv
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_srams.sv
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//arcv_dm_top_stubs.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_fab.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_ext_stub.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_dummy_slave.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_perfctrl.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_mem.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_axi_xtor.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//dw_dbp_stubs.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//clock_and_reset.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//rascal2jtag.sv
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//rascal_pipemon.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//io_pad_ring.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//board.v
+HIERGEN: Reading Verilog file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//board.v
+HIERGEN: Using new hiergen algorithm.
+HIERGEN: Making multiple instances of rl_srams
+HIERGEN: ========= Generate block for rl_srams_instances ===========
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_perfctrl_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_mem_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_axi_xtor_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_fab_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl_misc_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_perfctrl_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_mem_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_axi_xtor_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_fab_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_bus_switch_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl_regmap_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_dummy_slave_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_dummy_slave_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_exported_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ifu_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/alu_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/mpy_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dmp_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/csr_debug_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpu_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clint_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ras_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/hpm_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_defines.v
+HIERGEN: Reading defines file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_ls_defines.v
+HIERGEN:   This module will be back-substituted.
+HIERGEN: ========= Generate block for archipelago ===========
+HIERGEN: ========= Generate block for core_sys ===========
+HIERGEN: ========= Generate block for core_chip ===========
+HIERGEN: ========= Generate block for board ===========
+HIERGEN: ========= Hierarchy generation complete ===========
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_fab_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_clkctrl_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_dummy_slave_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//impl_debugvpp_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_perfctrl_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//alb_mss_mem_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rv_safety_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_axi_xtor_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog//zebu_box_compile_manifest
+  Add contents of manifest file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/pass_2_rv_safety_compile_manifest
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/compile_manifest
+  Copy /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/archipelago.v to /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/archipelago.v
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/compile_manifest
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/analyze.syn
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/ram_sizes.txt
+*** Constructing ipxact 2009 ***
+Added interface:
+	bri_awready,bri_wready,bri_bid,bri_bresp,bri_bvalid,bri_arready,bri_rid,bri_rdata,bri_rlast,bri_rvalid,bri_rresp,bri_arid,bri_arvalid,bri_araddr,bri_arburst,bri_arsize,bri_arlen,bri_arcache,bri_arprot,bri_rready,bri_awid,bri_awvalid,bri_awaddr,bri_awburst,bri_awsize,bri_awlen,bri_awcache,bri_awprot,bri_wid,bri_wvalid,bri_wdata,bri_wstrb,bri_wlast,bri_bready
+Added interface:
+	iccm_ahb_htrans,iccm_ahb_hwrite,iccm_ahb_haddr,iccm_ahb_hsize,iccm_ahb_hburst,iccm_ahb_hprot,iccm_ahb_hwdata,iccm_ahb_hready,iccm_ahb_hrdata,iccm_ahb_hresp
+Added interface:
+	iccm_ahb_haddrchk,iccm_ahb_htranschk,iccm_ahb_hprotchk,iccm_ahb_hreadychk,iccm_ahb_hwdatachk,iccm_ahb_hrespchk,iccm_ahb_hrdatachk
+Added interface:
+	dccm_ahb_htrans,dccm_ahb_hwrite,dccm_ahb_haddr,dccm_ahb_hsize,dccm_ahb_hburst,dccm_ahb_hprot,dccm_ahb_hwdata,dccm_ahb_hready,dccm_ahb_hrdata,dccm_ahb_hresp
+Added interface:
+	dccm_ahb_haddrchk,dccm_ahb_htranschk,dccm_ahb_hprotchk,dccm_ahb_hreadychk,dccm_ahb_hwdatachk,dccm_ahb_hrespchk,dccm_ahb_hrdatachk
+Added interface:
+	mmio_ahb_htrans,mmio_ahb_hwrite,mmio_ahb_haddr,mmio_ahb_hsize,mmio_ahb_hburst,mmio_ahb_hprot,mmio_ahb_hwdata,mmio_ahb_hready,mmio_ahb_hrdata,mmio_ahb_hresp
+Added interface:
+	mmio_ahb_haddrchk,mmio_ahb_htranschk,mmio_ahb_hprotchk,mmio_ahb_hreadychk,mmio_ahb_hwdatachk,mmio_ahb_hrespchk,mmio_ahb_hrdatachk
+Added interface:
+	ahb_hready,ahb_hresp,ahb_hrdata,ahb_htrans,ahb_hwrite,ahb_haddr,ahb_hsize,ahb_hburst,ahb_hprot,ahb_hwdata
+Added interface:
+	ahb_hreadychk,ahb_hrespchk,ahb_hrdatachk,ahb_haddrchk,ahb_htranschk,ahb_hprotchk,ahb_hwdatachk
+Added interface:
+	dbu_per_ahb_hready,dbu_per_ahb_hresp,dbu_per_ahb_hrdata,dbu_per_ahb_htrans,dbu_per_ahb_hwrite,dbu_per_ahb_haddr,dbu_per_ahb_hsize,dbu_per_ahb_hburst,dbu_per_ahb_hprot,dbu_per_ahb_hwdata
+Added interface:
+	dbu_per_ahb_hreadychk,dbu_per_ahb_hrespchk,dbu_per_ahb_hrdatachk,dbu_per_ahb_haddrchk,dbu_per_ahb_htranschk,dbu_per_ahb_hprotchk,dbu_per_ahb_hwdatachk
+*** Constructing ipxact 2014 ***
+Added interface:
+	bri_awready,bri_wready,bri_bid,bri_bresp,bri_bvalid,bri_arready,bri_rid,bri_rdata,bri_rlast,bri_rvalid,bri_rresp,bri_arid,bri_arvalid,bri_araddr,bri_arburst,bri_arsize,bri_arlen,bri_arcache,bri_arprot,bri_rready,bri_awid,bri_awvalid,bri_awaddr,bri_awburst,bri_awsize,bri_awlen,bri_awcache,bri_awprot,bri_wid,bri_wvalid,bri_wdata,bri_wstrb,bri_wlast,bri_bready
+Added interface:
+	iccm_ahb_htrans,iccm_ahb_hwrite,iccm_ahb_haddr,iccm_ahb_hsize,iccm_ahb_hburst,iccm_ahb_hprot,iccm_ahb_hwdata,iccm_ahb_hready,iccm_ahb_hrdata,iccm_ahb_hresp
+Added interface:
+	iccm_ahb_haddrchk,iccm_ahb_htranschk,iccm_ahb_hprotchk,iccm_ahb_hreadychk,iccm_ahb_hwdatachk,iccm_ahb_hrespchk,iccm_ahb_hrdatachk
+Added interface:
+	dccm_ahb_htrans,dccm_ahb_hwrite,dccm_ahb_haddr,dccm_ahb_hsize,dccm_ahb_hburst,dccm_ahb_hprot,dccm_ahb_hwdata,dccm_ahb_hready,dccm_ahb_hrdata,dccm_ahb_hresp
+Added interface:
+	dccm_ahb_haddrchk,dccm_ahb_htranschk,dccm_ahb_hprotchk,dccm_ahb_hreadychk,dccm_ahb_hwdatachk,dccm_ahb_hrespchk,dccm_ahb_hrdatachk
+Added interface:
+	mmio_ahb_htrans,mmio_ahb_hwrite,mmio_ahb_haddr,mmio_ahb_hsize,mmio_ahb_hburst,mmio_ahb_hprot,mmio_ahb_hwdata,mmio_ahb_hready,mmio_ahb_hrdata,mmio_ahb_hresp
+Added interface:
+	mmio_ahb_haddrchk,mmio_ahb_htranschk,mmio_ahb_hprotchk,mmio_ahb_hreadychk,mmio_ahb_hwdatachk,mmio_ahb_hrespchk,mmio_ahb_hrdatachk
+Added interface:
+	ahb_hready,ahb_hresp,ahb_hrdata,ahb_htrans,ahb_hwrite,ahb_haddr,ahb_hsize,ahb_hburst,ahb_hprot,ahb_hwdata
+Added interface:
+	ahb_hreadychk,ahb_hrespchk,ahb_hrdatachk,ahb_haddrchk,ahb_htranschk,ahb_hprotchk,ahb_hwdatachk
+Added interface:
+	dbu_per_ahb_hready,dbu_per_ahb_hresp,dbu_per_ahb_hrdata,dbu_per_ahb_htrans,dbu_per_ahb_hwrite,dbu_per_ahb_haddr,dbu_per_ahb_hsize,dbu_per_ahb_hburst,dbu_per_ahb_hprot,dbu_per_ahb_hwdata
+Added interface:
+	dbu_per_ahb_hreadychk,dbu_per_ahb_hrespchk,dbu_per_ahb_hrdatachk,dbu_per_ahb_haddrchk,dbu_per_ahb_htranschk,dbu_per_ahb_hprotchk,dbu_per_ahb_hwdatachk
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/ipxact.xml
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/ipxact2014.xml
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/ipxact2009.xml
+  Create file /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/docs/registers.html
+
+*** Refreshing ARChitect view due to view information generated in build. ***
+
+
+***** Build Finished: May 13, 2025 at 4:19:10 PM GMT+02:00 *****
+

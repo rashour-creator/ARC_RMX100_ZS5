@@ -1,0 +1,9 @@
+`define BYTE_ORDER           0
+`define DBUS_WIDTH           32
+`define DBUS_BE_RANGE        4:0
+`define DBUS_DATA_RANGE      31:0
+`define DBUS_ADDR_RANGE      31:0
+`define DBUS_CMD_RANGE       1:0
+`define DBUS_PLEN_WIDTH      4
+`define DBUS_PLEN_MSB        3
+`define DBUS_PLEN_RANGE      3:0

@@ -1,0 +1,185 @@
+
+                                    ZeBu (R)
+                                      zRDB
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRDB -krb -edf ./fpga_reports/zNetgen/design_db.znf -virtex xcvu19p -forceTopName zebu_top -o zrdb/ZebuDB.zdb -db zxl_base.zdb -xdl design.loc -fpga F1 -unit U0 -module M0 
+
+# start time is Tue May 13 19:22:21 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:25
+# ---------------------------System Context--------------------------- 
+# Cpu        30 x bogomips - 5000.00 INTEL(R) XEON(R) GOLD 6548Y+
+#            Load: 2.60 3.06 2.94 1/620 2991194
+#            Hostname: us01zebu-4587-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 987467 MB Free: 891212 MB
+#            Swap space: 104447 MB Free Swap space: 102414 MB
+#            VmSize: 358 MB VmPeak: 358 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11762590
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step ENV.VAR : LM_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : SNPSLMD_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : VCS_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : VERDI_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VERDI/VERDI2021.09/ZEBU/08052024/INSTALL/VERDI/verdi/S-2021.09-SP2-10
+#   step ENV.VAR : ZEBU_ACTIVATE_EMU_QUEUE=TRUE
+#   step ENV.VAR : ZEBU_COMPILATION_OBJECTIVE=PERFORMANCE
+#   step ENV.VAR : ZEBU_DEBUG_DYN_GRAPH_LOADING=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_AUTO_ZXF=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_DFS=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_SIMZILLA=1
+#   step ENV.VAR : ZEBU_DRIVER_PATH=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/drivers
+#   step ENV.VAR : ZEBU_ENABLE_DDR_DMA=true
+#   step ENV.VAR : ZEBU_ENABLE_NEW_ZTDB_RB=1
+#   step ENV.VAR : ZEBU_FPGA_MODULE_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0
+#   step ENV.VAR : ZEBU_FPGA_ORIGINAL_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F01.Original
+#   step ENV.VAR : ZEBU_FPGA_SRC_DIR=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F01.src
+#   step ENV.VAR : ZEBU_IP_ROOT=/global/apps/zebu_vs_2023.03-SP1/
+#   step ENV.VAR : ZEBU_ROOT=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : ZEBU_SA_ROOT=/remote/vginterfaces1/zebu_sa/ZebuSaRoot_Q-2020.03
+#   step ENV.VAR : ZEBU_SDF_ANALYSIS=1
+#   step ENV.VAR : ZEBU_SERIALIZED_ZFPGATIMING_BACK_ANNOTATION=1
+#   step ENV.VAR : ZEBU_SIMZILLA_VIRTUAL_SLICING=1
+#   step ENV.VAR : ZEBU_SYSTEM_DIR=/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/ZSE/zs5_4s.zs_0170
+#   step ENV.VAR : ZEBU_XIL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/ise/ISE_DS
+#   step ENV.VAR : ZEBU_XIL_VIVADO=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_FRACTAL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_fractal/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P2=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p2/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P4=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p4/
+#   step ZRDB : libZebuRDB version 2021.3.0 RW
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step FpgaCoords::run : Starting
+#   step UNIQUIFY : Netlist with Top 'design'
+#   step UNIQUIFY : 3499 modules created
+#   step Init whiteboard : Starting
+#   step Init whiteboard : Done in    elapsed:0.11 s   user:0.26 s    system:0.5 s     %cpu:301.95       load:2.47       fm:889227 m     vm:2829 m     vm:+192 m     um:2263 m      um:+59 m
+### warning in WAP Instrumentation [EDI0355W] : No WAP IP found - no MuDB coordinates generated.
+#   step Information : IP Rewiring: Reading and updating the rewired information from rewire_grp.out
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[97]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[96]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[95]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[94]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[93]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[92]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[91]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[90]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[89]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[88]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[87]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[86]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[85]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[84]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : LUT design/zkprctrl/wrapper/srb_bridge/u_xst_wrapper_0/srb_bridge_srb/srb_bridge_srb_upstream/u_sib_leaf_32/fifo2/u_xst_wrapper_0/dout[83]_i_1's INIT value 8 in vivado.log not equal or inverse of INIT value 202 in design.edf
+### warning in Netlist [RDB0424W] : Reached max count for message, next warning of this id won't be displayed.
+#   step writeConstants : Starting
+#   step writeConstants : Done in     elapsed:0.2 s      user:0 s      system:0 s       %cpu:0.00       load:2.35       fm:889176 m     vm:3099 m       vm:+0 m     um:2282 m       um:+0 m
+#   step FpgaCoords::run : Done in       elapsed:6 s      user:6 s   system:0.24 s     %cpu:102.19       load:2.35       fm:889176 m     vm:3099 m     vm:+791 m     um:2282 m     um:+403 m
+#   step writeCoords : Starting
+#   step writeCoords : Done in     elapsed:0.3 s    user:0.7 s      system:0 s     %cpu:235.96       load:2.35       fm:889175 m     vm:3099 m       vm:+0 m     um:2282 m       um:+0 m
+#   step DATABASE : checking and preparing netlist.
+#   step DATABASE : uniquified algo will be used.
+#   step FETCH : We are now in fetch mode. This will disable socket visibility on clock domain registers
+
+#   step UNIQUIFY : Netlist with Top 'design'
+#   step UNIQUIFY : 239 modules created
+#   step DATABASE : Referencing nodes (top instances)
+#   step DATABASE : 1 nodes referenced in 0 seconds. Total of 0 referenced nodes.
+#   step DATABASE : reading data base 'zxl_base.zdb'
+#   step ZVP : Reading vivado placement log file 'design.loc'
+#   step ZVP : 'design.loc':1 - reading a FD/LD section
+#   step ZVP : 'design.loc':236138 - reading a FD/LD section
+#   step ZVP : 'design.loc':237356 - reading a BRAM section
+#   step ZVP : 'design.loc':237504 - reading a URAM section
+#   step ZVP : 'design.loc':237604 - reading a RAMLUT section
+#   step ZVP : 1550 ramluts found, 12882 unsupported or unknown ramluts
+#   step ZVP : 'design.loc':251263 - reading an SRL section
+#   step ZVP : 'design.loc':254646 - reading a DSP48 section
+#   step ZVP : File 'design.loc' : read complete in 1 seconds
+#   step ZVP : Reading vivado simplifications log file 'vivado_opt.log'
+#   step ZVP : Fetching constants
+#   step ZVP : Fetching removed
+#   step ZVP : File 'vivado_opt.log' : read complete in 0 seconds
+#   step VVD : Collected 237351 register locations, 93396 constant or removed registers, 3381 SRL locations, 146 BRAM locations, 98 URAM locations, and 775 RAMLUT locations.
+#   step DATABASE : adding signals to data base 'zxl_base.zdb'
+#   step KRB : Building top list
+#   step KRB : added top 'U0_M0_F1/U0_M0_F1_core'
+#   step DB : Top name set to 'zebu_top'
+### warning in CompositeBuilder [RDB0344E] : Coord dynprb:(U0/M0/F01:X273Y385:4)r-w- has no access permission at all
+### warning in CompositeBuilder [RDB0344E] : Coord dynprb:(U0/M0/F01:X273Y385:4)r-w- has no access permission at all
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/riu_rd_val_r1_reg_srl3'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/lmb_bram_I/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTA_SHFT_REG_reg[3]_srl3'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/lmb_bram_I/U0/inst_blk_mem_gen/gnbram.gnative_mem_map_bmg.native_mem_map_blk_mem_gen/valid.cstr/ramloop[9].ram.r/SAFETY_CKT_GEN.RSTB_SHFT_REG_reg[3]_srl3'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Data_Flow_I/Using_Div_Unit.Div_unit_I1/FPGA_Shift.cnt_shifts_reg[1]_srl30'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][0]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][10]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][11]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][12]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][13]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][14]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][15]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][16]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][17]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][18]_srl4'
+### warning in RDB0308W [Netlist] : could not find instance for SRL 'U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/i_ZRM/ctrl/wrapper/ddr4_ctrl_memif/u_ddr4_0/inst/u_ddr_cal_riu/mcs0/inst/microblaze_I/U0/MicroBlaze_Core_I/Performance.Core/Decode_I/PC_Module_I/PC_Buffer_reg[3][19]_srl4'
+### warning in RDB0308W [Netlist] : Reached max count for message, next warning of this id won't be displayed.
+#   step FWC : Starting FWC coordinate retrieval
+#   step FWC : Exploring netlist step 1/3 : fetch all FWC coordinates
+### warning in WAP Instrumentation [EDI0355W] : No WAP IP found - no MuDB coordinates generated.
+#   step Information : IP Rewiring: Reading and updating the rewired information from rewire_grp.out
+#   step FWC : Exploring netlist step 1/3 : done in 0 seconds
+#   step FWC : Exploring netlist step 2/3 : associating FWC coordinates to paths
+#   step FWC : Exploring netlist step 2/3 : done in 7 seconds
+#   step FWC : Exploring netlist step 3/3 : clean backend datastructures
+#   step FWC : Exploring netlist step 3/3 : done in 0 seconds
+#   step FWC : Saving to file './zrdb/fwc_local_table.zrdb'
+#   step FILE : Opening file './zrdb/fwc_local_table.zrdb' in write mode
+#   step DICTIONARY : Serializing dictionary
+#   step DICTIONARY : Serialized dictionary in 0 seconds, 126225 different names
+#   step FWC : Serializing 2 ValueSets
+#   step FWC : Serializing value set 'FULL_DUT_DUMP'
+#   step FWC : Serializing valueset
+#   step FWC : Serialized 3568 hierarchical references, 506818 signals, 506818 coordinates in 0 seconds
+#   step FWC : Serializing value set 'FULL_DUT_DUMP_PORTS'
+#   step FWC : Serializing valueset
+#   step FWC : Serialized 178 hierarchical references, 8897 signals, 8897 coordinates in 0 seconds
+#   step FWC : All ValueSets serialized in 0 seconds
+#   step FWC : Saved in 0 seconds'
+#   step FWC : All done in '7 seconds'
+### warning in DATABASE [RDB0289W] : Found 70872 mismatches between Xilinx file and Edif netlist
+#   step KRB : Writing SAC to './zrdb/tree.zrdb'.
+#   step KRB : Wrote SAC in 0 seconds.
+#   step CompositeBuilder : Saving composite DB to './zrdb/composites.zrdb'
+#   step FILE : Opening file './zrdb/composites.zrdb' in write mode
+
+#   step zlog : Ran into 1597 messages with id 'Netlist', yet only 16 were displayed in the log as per user request.
+#   step zlog : Ran into 7833 messages with id 'RDB0424W', yet only 16 were displayed in the log as per user request.
+#   exec summary : 9435 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m32s, user 0m30.660s, sys 0m0.940s
+#   exec summary : Total memory: 3806720 kB - RSS memory: 3005356 kB - Data memory: 3405756 kB
+#   exec summary : Successful execution
+
+# end time is Tue May 13 19:22:53 2025

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<utfproject major="1" minor="0" type="UC1">
+    <sourcepath>/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf</sourcepath>
+    <files>
+        <file>
+            <id>1</id>
+            <path>/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf</path>
+        </file>
+        <file>
+            <id>2</id>
+            <path>/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/utf/default_commands.utf</path>
+        </file>
+        <file>
+            <id>3</id>
+            <path>/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/etc/unizfe/utf/default_commands.tcl</path>
+        </file>
+    </files>
+    <commands>
+        <command>
+            <name>architecture_file</name>
+            <options>
+                <option name="-converged_flow" type="bool">f</option>
+                <option name="-filename" type="file" file="1" line="3">/remote/sdgzebu_system_dir/CONFIG/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl</option>
+            </options>
+        </command>
+        <command>
+            <name>clock_delay</name>
+            <options>
+                <option name="-auto_tolerance" type="bool" file="1" line="21">t</option>
+                <option name="-debug" type="bool" file="1" line="21">t</option>
+                <option name="-module" type="list" file="1" line="21">
+                    <element>zebu_top</element>
+                </option>
+            </options>
+        </command>
+        <command>
+            <name>cluster_constraint</name>
+            <options>
+                <option name="-set_max_fill" type="multilist">
+                    <suboption name="lut" type="int" file="1" line="29">30</suboption>
+                </option>
+            </options>
+        </command>
+        <command>
+            <name>compile</name>
+            <options>
+                <option name="-hydra" type="bool" file="2" line="36">t</option>
+                <option name="-objective" type="enum" file="1" line="42">Performance</option>
+            </options>
+        </command>
+        <command>
+            <name>coverage</name>
+            <options>
+                <option name="-auto_bin_max" type="int" file="3" line="26">64</option>
+            </options>
+        </command>
+        <command>
+            <name>debug</name>
+            <options>
+                <option name="-all" type="bool" file="1" line="59">t</option>
+                <option name="-enable_hwtop_ports_access" type="enum" file="1" line="59">all</option>
+                <option name="-offline_debug" type="bool" file="1" line="63">t</option>
+                <option name="-set_dyn_probes_on_dut_ios" type="bool" file="1" line="59">t</option>
+                <option name="-set_dyn_probes_on_memory_ios" type="bool" file="1" line="59">t</option>
+                <option name="-verdi_db" type="enum" file="1" line="59">true</option>
+                <option name="-waveform_reconstruction" type="bool" file="1" line="59">t</option>
+                <option name="-waveform_reconstruction_params" type="multilist">
+                    <suboption name="csa" type="bool" file="2" line="37">f</suboption>
+                    <suboption name="simzilla" type="enum" file="2" line="37">t</suboption>
+                    <suboption name="simzilla_distributed_build" type="bool" file="2" line="37">f</suboption>
+                    <suboption name="swave" type="enum" file="2" line="37">disabled</suboption>
+                </option>
+            </options>
+        </command>
+        <command>
+            <name>design</name>
+            <options>
+                <option name="-convert_strength" type="bool" file="2" line="40">t</option>
+            </options>
+        </command>
+        <command>
+            <name>eco</name>
+            <options>
+                <option name="-enable" type="bool" file="3" line="23">f</option>
+            </options>
+        </command>
+        <command>
+            <name>eco</name>
+            <options>
+                <option name="-reserve_force" type="int" file="3" line="23">32</option>
+                <option name="-reserve_fwc" type="int" file="3" line="23">1152</option>
+                <option name="-reserve_monitor" type="int" file="3" line="23">0</option>
+                <option name="-reserve_qiwc" type="int" file="3" line="23">2048</option>
+            </options>
+        </command>
+        <command>
+            <name>environment</name>
+            <options>
+                <option name="-generate_wrapper" type="enum" file="1" line="67">CPP</option>
+            </options>
+        </command>
+        <command>
+            <name>fpga</name>
+            <options>
+                <option name="-inter_die_tdm" type="bool" file="1" line="18">t</option>
+                <option name="-inter_die_tdm_params" type="multilist">
+                    <suboption name="strategy" type="enum">Pdm_Direct</suboption>
+                    <suboption name="time_budgets" type="bool">t</suboption>
+                </option>
+                <option name="-parff" type="enum" file="2" line="27">t</option>
+                <option name="-parff_multi_stage" type="bool" file="1" line="27">t</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="3" line="12">DEFAULT_QUEUE</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-delete" type="string" file="1" line="45">kill -9 %p</option>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="1" line="45">Zebu</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-delete" type="string" file="1" line="48">kill -9 %p</option>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="1" line="48">ZebuIse</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-delete" type="string" file="1" line="49">kill -9 %p</option>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="1" line="49">ZebuSynthesis</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-delete" type="string" file="1" line="46">kill -9 %p</option>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="1" line="46">ZebuHeavy</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>grid_cmd</name>
+            <options>
+                <option name="-delete" type="string" file="1" line="47">kill -9 %p</option>
+                <option name="-njobs" type="int" file="1" line="51">100</option>
+                <option name="-queue" type="string" file="1" line="47">ZebuSuperHeavy</option>
+                <option name="-submit" type="string" file="1" line="51">bsub -Is -app comp_zebucae -Jd zebu_compile</option>
+            </options>
+        </command>
+        <command>
+            <name>memories</name>
+            <options>
+                <option name="-zrm_latency_encoding" type="enum" file="3" line="32">ONEHOT</option>
+            </options>
+        </command>
+        <command>
+            <name>nfs_settings</name>
+            <options>
+                <option name="-access_level" type="enum" file="2" line="26">5</option>
+                <option name="-delay" type="int" file="2" line="26">1000</option>
+                <option name="-max_retries" type="int" file="2" line="26">120</option>
+            </options>
+        </command>
+        <command>
+            <name>probe_signals</name>
+            <options>
+                <option name="-rtlname" type="list" file="1" line="11">
+                    <element>zebu_top.rst_a</element>
+                </option>
+            </options>
+        </command>
+        <command>
+            <name>reg_init</name>
+            <options>
+                <option name="-default_value" type="enum" file="1" line="30">0</option>
+            </options>
+        </command>
+        <command>
+            <name>run_manager</name>
+            <options>
+                <option name="-number_of_instances" type="int" file="1" line="24">3</option>
+            </options>
+        </command>
+        <command>
+            <name>set_app_var</name>
+            <options>
+                <option name="name" type="string" file="1" line="42">zopt</option>
+                <option name="value" type="string" file="1" line="42">post_routing_basic</option>
+            </options>
+        </command>
+        <command>
+            <name>set_hwtop</name>
+            <options>
+                <option name="-module" type="string" file="1" line="5">zebu_top</option>
+            </options>
+        </command>
+        <command>
+            <name>set_perf_flow</name>
+            <options>
+                <option name="-patch" type="string" file="2" line="73">2021.09</option>
+                <option name="-patch_list" type="list" file="2" line="74">
+                    <element>2020.03-LCA</element>
+                    <element>2020.03-SP1-1-LCA</element>
+                    <element>2021.09</element>
+                    <element>2021.09-LCA</element>
+                </option>
+                <option name="mode" type="string" file="2" line="75">flow1</option>
+            </options>
+        </command>
+        <command>
+            <name>synthesis_preferences</name>
+            <options>
+                <option name="-enable_wls" type="bool" file="1" line="28">t</option>
+            </options>
+        </command>
+        <command>
+            <name>timing_analysis</name>
+            <options>
+                <option name="-advanced_async_set_reset_analysis" type="bool" file="3" line="17">f</option>
+                <option name="-delay_min_zfilter_skew" type="int" file="3" line="17">40000</option>
+                <option name="-post_fpga" type="enum" file="1" line="34">BACK_ANNOTATED</option>
+                <option name="-pre_fpga" type="enum" file="3" line="17">CONSTANTS_BASE_DELAY_MODEL</option>
+                <option name="-use_hdl_names" type="bool" file="3" line="17">f</option>
+            </options>
+        </command>
+        <command>
+            <name>timing_analysis</name>
+            <options>
+                <option name="-advanced_command" type="string" file="1" line="36">set_performance_report true</option>
+            </options>
+        </command>
+        <command>
+            <name>timing_analysis</name>
+            <options>
+                <option name="-fpga_advanced_command" type="string" file="1" line="42">data_path_analysis mcp</option>
+            </options>
+        </command>
+        <command>
+            <name>vcs_exec_command</name>
+            <options>
+                <option name="script" type="list" file="1" line="4">
+                    <element>/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui_vcs_cmd.csh</element>
+                </option>
+            </options>
+        </command>
+        <command>
+            <name>xtors</name>
+            <options>
+                <option name="-add_xtor_path" type="string" file="1" line="14">/global/apps/zebu_vs_2023.03-SP1//drivers</option>
+            </options>
+        </command>
+        <command>
+            <name>xtors</name>
+            <options>
+                <option name="-use_zebu_ip_root" type="bool" file="1" line="15">t</option>
+            </options>
+        </command>
+        <command>
+            <name>zforce</name>
+            <options>
+                <option name="-hier_sep" type="string" file="1" line="8">.</option>
+                <option name="-line_no" type="int">8</option>
+                <option name="-mode" type="enum" file="1" line="8">dynamic</option>
+                <option name="-object_not_found" type="enum" file="1" line="8">fatal</option>
+                <option name="-rtlname" type="list" file="1" line="8">
+                    <element>zebu_top.rst_a</element>
+                </option>
+                <option name="-sync" type="bool" file="1" line="8">t</option>
+                <option name="-utf_file" type="string">/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf</option>
+            </options>
+        </command>
+        <command>
+            <name>zforce</name>
+            <options>
+                <option name="-hier_sep" type="string" file="1" line="9">.</option>
+                <option name="-line_no" type="int">9</option>
+                <option name="-mode" type="enum" file="1" line="9">dynamic</option>
+                <option name="-object_not_found" type="enum" file="1" line="9">warning</option>
+                <option name="-rtlname" type="list" file="1" line="9">
+                    <element>zebu_top.core_chip_dut.i_ext_personality_mode</element>
+                </option>
+                <option name="-sync" type="bool" file="1" line="9">t</option>
+                <option name="-utf_file" type="string">/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf</option>
+            </options>
+        </command>
+        <command>
+            <name>zforce</name>
+            <options>
+                <option name="-hier_sep" type="string" file="1" line="10">.</option>
+                <option name="-line_no" type="int">10</option>
+                <option name="-mode" type="enum" file="1" line="10">dynamic</option>
+                <option name="-object_not_found" type="enum" file="1" line="10">warning</option>
+                <option name="-rtlname" type="list" file="1" line="10">
+                    <element>zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode</element>
+                </option>
+                <option name="-sync" type="bool" file="1" line="10">t</option>
+                <option name="-utf_file" type="string">/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf</option>
+            </options>
+        </command>
+        <command>
+            <name>zpar</name>
+            <options>
+                <option name="-effort" type="enum" file="3" line="20">Medium</option>
+            </options>
+        </command>
+        <command>
+            <name>zpar</name>
+            <options>
+                <option name="-advanced_command" type="string" file="1" line="19">System dapEngine rdp</option>
+            </options>
+        </command>
+        <command>
+            <name>ztopbuild</name>
+            <options>
+                <option name="-advanced_command" type="string" file="2" line="31">enable advanced_incremental_mode</option>
+            </options>
+        </command>
+        <command>
+            <name>ztopbuild</name>
+            <options>
+                <option name="-advanced_command" type="string" file="1" line="37">set_fast_waveform_capture -relocate yes</option>
+            </options>
+        </command>
+        <command>
+            <name>ztopbuild</name>
+            <options>
+                <option name="-advanced_command" type="string" file="1" line="38">dump_stats -logic_optimization</option>
+            </options>
+        </command>
+        <command>
+            <name>ztopbuild</name>
+            <options>
+                <option name="-advanced_command" type="string" file="1" line="39">enable zrm_performance_mode</option>
+            </options>
+        </command>
+    </commands>
+</utfproject>

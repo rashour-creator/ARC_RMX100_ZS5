@@ -1,0 +1,109 @@
+
+####################################################################################################
+Zebu Incremental Compile Report
+####################################################################################################
+
+
+####################################################################################################
+                                     Incremental Command Usage
+####################################################################################################
+
+Latest run status of incremental parametersfor "compile -incremental" UTF command in latest run:
+NA
+Is --skipFe present in zCui command ==> No
+Is Synthesis (FE) step is skipped ==> No
+
+####################################################################################################
+                                       zTopBuild Stage Status
+####################################################################################################
+
+Is zTopBuild skipped ==> No : Last run status for zTopBuild is Non-Skipped
+Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/tools/zTopBuild/zTopBuild_Incr_Report.log ==> Yes : The file is present and is non-empty
+============================================================================================
+ 	 	  	   zTopBuild INCREMENTAL COMPILE  	 	 	 	    
+============================================================================================
+
+enable advanced_incremental_mode is present :Yes
+
+
+Incremental status Partitioning : SUCCESS
+
+####################################################################################################
+                                      zCoreBuild Stage Status
+####################################################################################################
+
+Is zCoreBuild_Part_0 skipped ==> No : Last run status for zCoreBuild_Part_0 is Non-Skipped
+Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/work.Part_0/zCoreBuild_Incr_Report.log ==> Yes : The file is present and is non-empty
+============================================================================================
+ 	 	  	   zCoreBuild INCREMENTAL COMPILE - Part_0 	 	                
+============================================================================================
+
+enable advanced_incremental_mode is present :No
+
+
+Is there a change in Core Interface ./edif/U0_M0.edf.gz : Yes
+
+Following FPGA edifs generated in this run:
+./edif/U0_M0_F0.edf.gz
+./edif/U0_M0_F1.edf.gz
+
+####################################################################################################
+                                         zPar Stage Status
+####################################################################################################
+
+Is zPar skipped ==> No : Last run status for zPar is Non-Skipped
+Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zPar_Incr_Report.log ==> No : The file is not present
+
+####################################################################################################
+                                        Vivado Stage Status
+####################################################################################################
+
+Vivado launched for following FPGAs:
+U0_M0_F00
+U0_M0_F01
+Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original/Vivado_Incr_Report.log ==> No : The file is not present
+Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F01.Original/Vivado_Incr_Report.log ==> No : The file is not present
+
+####################################################################################################
+                                          Run based status
+####################################################################################################
+
+
+                                  R0   
+------------------------------ --------
+vcs_splitter_VCS_Task_Builder   SUCCESS
+    backend_default_zTopBuild   SUCCESS
+
+
+====================================================================================================
+                                         zCoreBuild Status
+====================================================================================================
+
+
+                            R0   
+----------------------- ---------
+                Part_0    SUCCESS
+./edif/U0_M0_F0.edf.gz   Modified
+./edif/U0_M0_F1.edf.gz   Modified
+
+
+====================================================================================================
+                                            zPar Status
+====================================================================================================
+
+
+                         R0   
+--------------------- --------
+backend_default_zPar   SUCCESS
+
+
+====================================================================================================
+                                        Vivado FPGA Compile
+====================================================================================================
+
+
+              R0   
+---------- --------
+U0_M0_F00   SUCCESS
+U0_M0_F01   SUCCESS
+

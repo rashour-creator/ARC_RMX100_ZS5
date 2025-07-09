@@ -1,0 +1,9 @@
+set rtl_clock_mode true
+set timescale 1ps/1ps
+set rtl_clock_auto_tolerance true
+set rtl_clock_port zebu_top.zebuclk_ref_clk 1 1 0
+set rtl_clock_port zebu_top.zebuclk_jtag_clk 1 1 0
+set rtl_clock_port zebu_top.zebuclk_uart_sclk 1 1 0
+set group_delays_with_terminal true
+set rtl_clock_replication_mode fpga
+set replica_file rtl_clock_cdp_repl_Part_0.xref

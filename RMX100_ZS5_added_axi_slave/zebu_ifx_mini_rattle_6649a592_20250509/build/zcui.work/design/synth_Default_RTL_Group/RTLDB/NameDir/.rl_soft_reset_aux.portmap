@@ -1,0 +1,54 @@
+Module rl_soft_reset_aux{
+}
+
+EdfPortBounds dm_hmst{
+2 0 aarsize_i
+31 0 cmd_addr_o
+3 0 cmd_space_o
+7 0 cmdtype_i
+31 0 hmstaddress_i
+31 0 hmstdata_i
+31 0 hmstdata_o
+31 0 rd_data_i
+31 0 wr_data_o
+3 0 wr_mask_o
+}
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds rl_parity_gen_0000_0001{
+4 0 din
+}
+EdfPortBounds rl_bitscan_32b{
+30 0 din
+4 0 dout
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0002{
+13 0 i_data
+64 0 i_occp
+13 0 o_data
+64 0 o_occp
+}
+EdfPortBounds rl_parity_gen_0000_0003{
+3 0 din
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds rl_parity_gen_0000_0000{
+8 0 din
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds rl_parity_gen_0000_0002{
+6 0 din
+}
+NonAliasNets rl_soft_reset_aux{
+}

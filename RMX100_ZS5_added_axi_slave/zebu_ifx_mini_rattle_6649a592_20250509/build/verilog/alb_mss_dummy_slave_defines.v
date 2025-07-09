@@ -1,0 +1,11 @@
+`define ALB_MSS_DUMMY_SLAVE_NUM             2
+`define ALB_MSS_DUMMY_SLAVE1_PREF            dslv1_
+`define ALB_MSS_DUMMY_SLAVE2_PREF            dslv2_
+`define ALB_MSS_DUMMY_SLAVE1_IDW            16
+`define ALB_MSS_DUMMY_SLAVE1_PROT            apb
+`define ALB_MSS_DUMMY_SLAVE1_AW              12
+`define ALB_MSS_DUMMY_SLAVE1_DW              32
+`define ALB_MSS_DUMMY_SLAVE2_IDW            16
+`define ALB_MSS_DUMMY_SLAVE2_PROT            axi
+`define ALB_MSS_DUMMY_SLAVE2_AW              24
+`define ALB_MSS_DUMMY_SLAVE2_DW              64

@@ -1,0 +1,53 @@
+Module rl_ifu_align{
+}
+Module rl_predecoder{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0000_0000{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0001{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds rl_predecoder{
+31 0 inst
+9 0 pd_fu
+4 0 pd_rf_src0
+4 0 pd_rf_src1
+}
+EdfPortBounds alb_mss_fab_fifo_0000{
+53 0 i_data
+0 0 i_occp
+53 0 o_data
+0 0 o_occp
+}
+NonAliasNets rl_ifu_align{
+spill_data_r[15]    f   1075
+spill_data_r[14]    f   1076
+spill_data_r[13]    f   1077
+spill_data_r[12]    f   1078
+spill_data_r[11]    f   1079
+spill_data_r[10]    f   1080
+spill_data_r[9]    f   1081
+spill_data_r[8]    f   1082
+spill_data_r[7]    f   1083
+spill_data_r[6]    f   1084
+spill_data_r[5]    f   1085
+spill_data_r[4]    f   1086
+spill_data_r[3]    f   1087
+spill_data_r[2]    f   1088
+spill_data_r[1]    f   1089
+spill_data_r[0]    f   1090
+}

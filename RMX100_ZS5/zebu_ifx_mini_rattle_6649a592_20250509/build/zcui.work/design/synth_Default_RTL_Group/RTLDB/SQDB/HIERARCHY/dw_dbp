@@ -1,0 +1,7 @@
+dw_dbp
+u1_bvci_to_axi -> u1_bvci_to_axi -> bvci_to_axi
+u0_apb_master -> u0_apb_master -> apb_master_ap0
+u_jtag_port -> u_jtag_port -> dwt_jtag_port
+u_dwt_jtag_reset_ctrl -> u_dwt_jtag_reset_ctrl -> dwt_reset_ctrl_0000
+u_cdc_sync -> u_cdc_sync -> dw_dbp_cdc_sync
+u_dwt_reset_ctrl -> u_dwt_reset_ctrl -> dwt_reset_ctrl

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="glog">
+ <author>zCui</author>
+ <date></date>
+ <views>
+  <view name="Incremental compile" order="0">
+<h1>Incremental Command Usage</h1>
+<p>Latest run status of incremental parametersfor "compile -incremental" UTF command in latest run:</p>
+<p>NA</p>
+<p>Is --skipFe present in zCui command ==> No</p>
+<p>Is Synthesis (FE) step is skipped ==> No</p>
+<h1>zTopBuild Stage Status</h1>
+<p>Is zTopBuild skipped ==> No : Last run status for zTopBuild is Non-Skipped</p>
+<p>Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/tools/zTopBuild/zTopBuild_Incr_Report.log ==> Yes : The file is present and is non-empty</p>
+<p>^INCLUDE(tools/zTopBuild/zTopBuild_Incr_Report.log)Include zTopBuild_Incr_Report.log^INCLUDE-</p>
+<h1>zCoreBuild Stage Status</h1>
+<p>Is zCoreBuild_Part_0 skipped ==> No : Last run status for zCoreBuild_Part_0 is Non-Skipped</p>
+<p>Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/work.Part_0/zCoreBuild_Incr_Report.log ==> Yes : The file is present and is non-empty</p>
+<p>^INCLUDE(work.Part_0/zCoreBuild_Incr_Report.log)Include zCoreBuild_Incr_Report.log^INCLUDE-</p>
+<h1>zPar Stage Status</h1>
+<p>Is zPar skipped ==> No : Last run status for zPar is Non-Skipped</p>
+<p>Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zPar_Incr_Report.log ==> No : The file is not present</p>
+<p>^INCLUDE(zPar_Incr_Report.log)Include zPar_Incr_Report.log^INCLUDE-</p>
+<h1>Vivado Stage Status</h1>
+<p>Vivado launched for following FPGAs:</p>
+<p>U0_M0_F00</p>
+<p>U0_M0_F01</p>
+<p>Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F00.Original/Vivado_Incr_Report.log ==> No : The file is not present</p>
+<p>Is incremental log file available at /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/U0/M0/F01.Original/Vivado_Incr_Report.log ==> No : The file is not present</p>
+<p>^INCLUDE(U0/M0/F00.Original/Vivado_Incr_Report.log)Include Vivado_Incr_Report.log^INCLUDE-</p>
+<p>^INCLUDE(U0/M0/F01.Original/Vivado_Incr_Report.log)Include Vivado_Incr_Report.log^INCLUDE-</p>
+<h1>Run based status</h1>
+<p>^TABLE(tools/zCui/incrTable.xml,run_based_status,DD)This is a lable^TABLE-</p>
+<h2>zCoreBuild Status</h2>
+<p>^TABLE(tools/zCui/incrTable.xml,zCoreBuild_status,DD)This is a lable^TABLE-</p>
+<h2>zPar Status</h2>
+<p>^TABLE(tools/zCui/incrTable.xml,zPar_status,DD)This is a lable^TABLE-</p>
+<h2>Vivado FPGA Compile</h2>
+<p>^TABLE(tools/zCui/incrTable.xml,fpga_status,DD)This is a lable^TABLE-</p>
+  </view>
+ </views>
+</ZeBuUiDoc>

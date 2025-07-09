@@ -1,0 +1,675 @@
+Job <80639595> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on vgzeburtdc273.internal.synopsys.com>>
+
+
+                                    ZeBu (R)
+                                      zFe
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+
+
+#   info : #----------------------------------------------------------------
+#   info : Setup
+#   info : #----------------------------------------------------------------
+# command line is /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zFe compile_hdr.tcl script/Bundle_25_synp.tcl -log Bundle_25.log -zlog 1 
+# start time is Tue May 13 18:29:55 EEST 2025
+#   step Setup : CVS $Revision: #4 $
+#   step Setup : CVS $Date: 2024/02/21 $
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx ...
+#   step Setup :         NEXT CALL to cmn::option fe_hcsrc hcsrc.iba
+#   step Setup :         NEXT CALL to cmn::option phase synthesis
+#   info : #----------------------------------------------------------------
+#   info : Synth
+#   info : #----------------------------------------------------------------
+#   step Synth :         NEXT CALL to fs::simple_compile -technology vtx8 -mode block_based -version NewMixe ...
+#   step REPORT : Synthesizing module : alb_mss_fab_axi2ibp_0001
+#   step REPORT : Synthesizing module : rl_dmp
+#   step REPORT : Synthesizing module : rl_ifu_icache
+#   step REPORT : Synthesizing module : ZebuClockDetectFront_9
+#   step REPORT : Synthesizing module : rl_ibp2mmio
+#   step REPORT : Synthesizing module : rl_dmp_dccm_ecc_decoder
+#   step REPORT : Synthesizing module : mss_bus_switch_fifo_0001_0004
+#   step REPORT : Synthesizing module : rl_maskgen
+#   step REPORT : Synthesizing module : dwt_debug_port
+#   step REPORT : Synthesizing module : alb_mss_fab_axi2ibp_0000
+#   step REPORT : Synthesizing module : alb_mss_fab_fifo_0002
+#   step REPORT : Synthesizing module : ic_data_ecc_decoder
+#   step REPORT : Synthesizing module : alb_mss_mem_fifo_0003
+#   step REPORT : Synthesizing module : rl_ifu_iccm
+#   step REPORT : Synthesizing module : iccm_ecc_decoder
+#   step REPORT : Synthesizing module : rl_dmp_cwb
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : alb_mss_fab_axi2ibp_0001
+#   step REPORT : [39.350] Instance count of module alb_mss_fab_axi2ibp_0001 is 1
+#   step REPORT : [6.1691] Total net count: 4989
+#   step REPORT : [6.1690] There are 19 levels of combinational cells
+#   step REPORT : [6.1689] There are 4 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 33
+#   step REPORT : [6.1695] 3-input LUTs: 87
+#   step REPORT : [6.1695] 4-input LUTs: 59
+#   step REPORT : [6.1695] 5-input LUTs: 57
+#   step REPORT : [6.1695] 6-input LUTs: 97
+#   step REPORT : [6.1696] Total LUT area: 333
+#   step REPORT : [6.1697] State    : 76
+#   step REPORT : [6.1697]   (FF)   : 76
+#   step REPORT : [6.1697] CARRY    : 10
+#   step REPORT : [6.1697] +CSA LUTs: 544
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_fab_axi2ibp_0001' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  76 |                 877 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                2408 |                   8 |                   0 |                   0 |                   0 || alb_mss_fab_axi2ibp_0001
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_fab_axi2ibp_0001' to 'edif/alb_mss_fab_axi2ibp_0001/alb_mss_fab_axi2ibp_0001.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_fab_axi2ibp_0001/alb_mss_fab_axi2ibp_0001.edf.gz'
+#   step SERIALIZE : #bytes in: 183223, #bytes out: 58872, compression ratio: 3.112226
+#   step REPORT : [87.28] Resource usage for alb_mss_fab_axi2ibp_0001: 0.659s 112.2M
+#   step REPORT : [39.349] Optimizing module : rl_dmp
+#   step REPORT : [39.350] Instance count of module rl_dmp is 2
+#   step REPORT : [6.1691] Total net count: 4693
+#   step REPORT : [6.1690] There are 31 levels of combinational cells
+#   step REPORT : [6.1689] There are 6 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 86
+#   step REPORT : [6.1695] 3-input LUTs: 425
+#   step REPORT : [6.1695] 4-input LUTs: 81
+#   step REPORT : [6.1695] 5-input LUTs: 232
+#   step REPORT : [6.1695] 6-input LUTs: 215
+#   step REPORT : [6.1696] Total LUT area: 1039
+#   step REPORT : [6.1697] State    : 226
+#   step REPORT : [6.1697]   (FF)   : 226
+#   step REPORT : [6.1697] CARRY    : 18
+#   step REPORT : [6.1697] +CSA LUTs: 599
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_dmp' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 226 |                1638 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                1498 |                   9 |                   0 |                   0 |                   0 || rl_dmp
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_dmp' to 'edif/rl_dmp/rl_dmp.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_dmp/rl_dmp.edf.gz'
+#   step SERIALIZE : #bytes in: 173441, #bytes out: 65323, compression ratio: 2.655129
+#   step REPORT : [87.28] Resource usage for rl_dmp: 0.648s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_ifu_icache
+#   step REPORT : [39.350] Instance count of module rl_ifu_icache is 2
+#   step REPORT : [6.1691] Total net count: 3073
+#   step REPORT : [6.1690] There are 24 levels of combinational cells
+#   step REPORT : [6.1689] There are 6 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 124
+#   step REPORT : [6.1695] 3-input LUTs: 208
+#   step REPORT : [6.1695] 4-input LUTs: 43
+#   step REPORT : [6.1695] 5-input LUTs: 128
+#   step REPORT : [6.1695] 6-input LUTs: 301
+#   step REPORT : [6.1696] Total LUT area: 804
+#   step REPORT : [6.1697] State    : 152
+#   step REPORT : [6.1697]   (FF)   : 152
+#   step REPORT : [6.1697] CARRY    : 3
+#   step REPORT : [6.1697] +CSA LUTs: 451
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.002 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_ifu_icache' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 152 |                1255 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 859 |                  10 |                   0 |                   0 |                   0 || rl_ifu_icache
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_ifu_icache' to 'edif/rl_ifu_icache/rl_ifu_icache.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_ifu_icache/rl_ifu_icache.edf.gz'
+#   step SERIALIZE : #bytes in: 126746, #bytes out: 46817, compression ratio: 2.707264
+#   step REPORT : [87.28] Resource usage for rl_ifu_icache: 0.530s 0.0M
+#   step REPORT : [39.349] Optimizing module : ZebuClockDetectFront_9
+#   step REPORT : [39.350] Instance count of module ZebuClockDetectFront_9 is 1
+### warning in ZFAST : (INTERNAL) no module information for net in_p_0
+#   step REPORT : [6.1691] Total net count: 8
+#   step REPORT : [6.1690] There are 2 levels of combinational cells
+#   step REPORT : [6.1689] There are 1 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 1
+#   step REPORT : [6.1697] State    : 1
+#   step REPORT : [6.1697]   (FF)   : 1
+#   step REPORT : [6.1697] +CSA LUTs: 1
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ZebuClockDetectFront_9' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   1 |                   2 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   3 |                   1 |                   0 |                   0 |                   0 || ZebuClockDetectFront_9
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ZebuClockDetectFront_9' to 'edif/ZebuClockDetectFront_9/ZebuClockDetectFront_9.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ZebuClockDetectFront_9/ZebuClockDetectFront_9.edf.gz'
+#   step SERIALIZE : #bytes in: 528, #bytes out: 368, compression ratio: 1.434783
+#   step REPORT : [87.28] Resource usage for ZebuClockDetectFront_9: 0.084s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_ibp2mmio
+#   step REPORT : [39.350] Instance count of module rl_ibp2mmio is 2
+#   step REPORT : [6.1691] Total net count: 1589
+#   step REPORT : [6.1690] There are 10 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 26
+#   step REPORT : [6.1695] 3-input LUTs: 127
+#   step REPORT : [6.1695] 4-input LUTs: 247
+#   step REPORT : [6.1695] 5-input LUTs: 17
+#   step REPORT : [6.1695] 6-input LUTs: 170
+#   step REPORT : [6.1696] Total LUT area: 587
+#   step REPORT : [6.1697] State    : 6
+#   step REPORT : [6.1697]   (FF)   : 6
+#   step REPORT : [6.1697] +CSA LUTs: 197
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_ibp2mmio' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   6 |                 784 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 669 |                   0 |                   0 |                   0 |                   0 || rl_ibp2mmio
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_ibp2mmio' to 'edif/rl_ibp2mmio/rl_ibp2mmio.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_ibp2mmio/rl_ibp2mmio.edf.gz'
+#   step SERIALIZE : #bytes in: 53505, #bytes out: 19250, compression ratio: 2.779480
+#   step REPORT : [87.28] Resource usage for rl_ibp2mmio: 0.303s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_dmp_dccm_ecc_decoder
+#   step REPORT : [39.350] Instance count of module rl_dmp_dccm_ecc_decoder is 4
+#   step REPORT : [6.1691] Total net count: 380
+#   step REPORT : [6.1690] There are 15 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 21
+#   step REPORT : [6.1695] 3-input LUTs: 18
+#   step REPORT : [6.1695] 4-input LUTs: 22
+#   step REPORT : [6.1695] 5-input LUTs: 45
+#   step REPORT : [6.1695] 6-input LUTs: 61
+#   step REPORT : [6.1696] Total LUT area: 167
+#   step REPORT : [6.1697] CARRY    : 33
+#   step REPORT : [6.1697] +CSA LUTs: 22
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_dmp_dccm_ecc_decoder' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 189 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 108 |                   0 |                   0 |                   0 |                   0 || rl_dmp_dccm_ecc_decoder
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_dmp_dccm_ecc_decoder' to 'edif/rl_dmp_dccm_ecc_decoder/rl_dmp_dccm_ecc_decoder.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_dmp_dccm_ecc_decoder/rl_dmp_dccm_ecc_decoder.edf.gz'
+#   step SERIALIZE : #bytes in: 12907, #bytes out: 6215, compression ratio: 2.076750
+#   step REPORT : [87.28] Resource usage for rl_dmp_dccm_ecc_decoder: 0.365s 0.0M
+#   step REPORT : [39.349] Optimizing module : mss_bus_switch_fifo_0001_0004
+#   step REPORT : [39.350] Instance count of module mss_bus_switch_fifo_0001_0004 is 2
+#   step REPORT : [6.1691] Total net count: 2356
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 69 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 191
+#   step REPORT : [6.1695] 3-input LUTs: 3
+#   step REPORT : [6.1695] 5-input LUTs: 83
+#   step REPORT : [6.1695] 6-input LUTs: 241
+#   step REPORT : [6.1696] Total LUT area: 518
+#   step REPORT : [6.1697] State    : 898
+#   step REPORT : [6.1697]   (FF)   : 898
+#   step REPORT : [6.1697] +CSA LUTs: 260
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.002 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'mss_bus_switch_fifo_0001_0004' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 898 |                 778 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 158 |                   0 |                   0 |                   0 |                   0 || mss_bus_switch_fifo_0001_0004
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'mss_bus_switch_fifo_0001_0004' to 'edif/mss_bus_switch_fifo_0001_0004/mss_bus_switch_fifo_0001_0004.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/mss_bus_switch_fifo_0001_0004/mss_bus_switch_fifo_0001_0004.edf.gz'
+#   step SERIALIZE : #bytes in: 86685, #bytes out: 27590, compression ratio: 3.141899
+#   step REPORT : [87.28] Resource usage for mss_bus_switch_fifo_0001_0004: 0.390s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_maskgen
+#   step REPORT : [39.350] Instance count of module rl_maskgen is 2
+#   step REPORT : [6.1691] Total net count: 204
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 13
+#   step REPORT : [6.1695] 3-input LUTs: 4
+#   step REPORT : [6.1695] 4-input LUTs: 4
+#   step REPORT : [6.1695] 5-input LUTs: 5
+#   step REPORT : [6.1695] 6-input LUTs: 25
+#   step REPORT : [6.1696] Total LUT area: 51
+#   step REPORT : [6.1697] +CSA LUTs: 59
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_maskgen' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 110 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  40 |                   0 |                   0 |                   0 |                   0 || rl_maskgen
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_maskgen' to 'edif/rl_maskgen/rl_maskgen.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_maskgen/rl_maskgen.edf.gz'
+#   step SERIALIZE : #bytes in: 5957, #bytes out: 2639, compression ratio: 2.257294
+#   step REPORT : [87.28] Resource usage for rl_maskgen: 0.113s 0.0M
+#   step REPORT : [39.349] Optimizing module : dwt_debug_port
+#   step REPORT : [39.350] Instance count of module dwt_debug_port is 1
+#   step REPORT : [6.1691] Total net count: 1787
+#   step REPORT : [6.1690] There are 11 levels of combinational cells
+#   step REPORT : [6.1689] There are 17 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 83
+#   step REPORT : [6.1695] 3-input LUTs: 68
+#   step REPORT : [6.1695] 4-input LUTs: 202
+#   step REPORT : [6.1695] 5-input LUTs: 127
+#   step REPORT : [6.1695] 6-input LUTs: 260
+#   step REPORT : [6.1696] Total LUT area: 740
+#   step REPORT : [6.1697] State    : 492
+#   step REPORT : [6.1697]   (FF)   : 492
+#   step REPORT : [6.1697] CARRY    : 4
+#   step REPORT : [6.1697] +CSA LUTs: 9
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'dwt_debug_port' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 492 |                 749 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 257 |                   0 |                   0 |                   0 |                   0 || dwt_debug_port
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'dwt_debug_port' to 'edif/dwt_debug_port/dwt_debug_port.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/dwt_debug_port/dwt_debug_port.edf.gz'
+#   step SERIALIZE : #bytes in: 54517, #bytes out: 25135, compression ratio: 2.168967
+#   step REPORT : [87.28] Resource usage for dwt_debug_port: 0.346s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_fab_axi2ibp_0000
+#   step REPORT : [39.350] Instance count of module alb_mss_fab_axi2ibp_0000 is 1
+#   step REPORT : [6.1691] Total net count: 1936
+#   step REPORT : [6.1690] There are 26 levels of combinational cells
+#   step REPORT : [6.1689] There are 4 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 40
+#   step REPORT : [6.1695] 3-input LUTs: 94
+#   step REPORT : [6.1695] 4-input LUTs: 57
+#   step REPORT : [6.1695] 5-input LUTs: 58
+#   step REPORT : [6.1695] 6-input LUTs: 93
+#   step REPORT : [6.1696] Total LUT area: 342
+#   step REPORT : [6.1697] State    : 76
+#   step REPORT : [6.1697]   (FF)   : 76
+#   step REPORT : [6.1697] CARRY    : 10
+#   step REPORT : [6.1697] +CSA LUTs: 542
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_fab_axi2ibp_0000' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  76 |                 884 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 368 |                   8 |                   0 |                   0 |                   0 || alb_mss_fab_axi2ibp_0000
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_fab_axi2ibp_0000' to 'edif/alb_mss_fab_axi2ibp_0000/alb_mss_fab_axi2ibp_0000.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_fab_axi2ibp_0000/alb_mss_fab_axi2ibp_0000.edf.gz'
+#   step SERIALIZE : #bytes in: 78136, #bytes out: 29491, compression ratio: 2.649486
+#   step REPORT : [87.28] Resource usage for alb_mss_fab_axi2ibp_0000: 0.380s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_fab_fifo_0002
+#   step REPORT : [39.350] Instance count of module alb_mss_fab_fifo_0002 is 2
+#   step REPORT : [6.1691] Total net count: 2283
+#   step REPORT : [6.1690] There are 3 levels of combinational cells
+#   step REPORT : [6.1689] There are 21 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 47
+#   step REPORT : [6.1695] 3-input LUTs: 3
+#   step REPORT : [6.1695] 4-input LUTs: 60
+#   step REPORT : [6.1695] 5-input LUTs: 75
+#   step REPORT : [6.1695] 6-input LUTs: 301
+#   step REPORT : [6.1696] Total LUT area: 486
+#   step REPORT : [6.1697] State    : 1026
+#   step REPORT : [6.1697]   (FF)   : 1026
+#   step REPORT : [6.1697] +CSA LUTs: 421
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.002 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_fab_fifo_0002' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                1026 |                 907 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 162 |                   0 |                   0 |                   0 |                   0 || alb_mss_fab_fifo_0002
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_fab_fifo_0002' to 'edif/alb_mss_fab_fifo_0002/alb_mss_fab_fifo_0002.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_fab_fifo_0002/alb_mss_fab_fifo_0002.edf.gz'
+#   step SERIALIZE : #bytes in: 88922, #bytes out: 30736, compression ratio: 2.893090
+#   step REPORT : [87.28] Resource usage for alb_mss_fab_fifo_0002: 0.393s 0.0M
+#   step REPORT : [39.349] Optimizing module : ic_data_ecc_decoder
+#   step REPORT : [39.350] Instance count of module ic_data_ecc_decoder is 4
+#   step REPORT : [6.1691] Total net count: 388
+#   step REPORT : [6.1690] There are 15 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 32
+#   step REPORT : [6.1695] 3-input LUTs: 27
+#   step REPORT : [6.1695] 4-input LUTs: 32
+#   step REPORT : [6.1695] 5-input LUTs: 43
+#   step REPORT : [6.1695] 6-input LUTs: 48
+#   step REPORT : [6.1696] Total LUT area: 182
+#   step REPORT : [6.1697] CARRY    : 33
+#   step REPORT : [6.1697] +CSA LUTs: 21
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'ic_data_ecc_decoder' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 203 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 102 |                   0 |                   0 |                   0 |                   0 || ic_data_ecc_decoder
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'ic_data_ecc_decoder' to 'edif/ic_data_ecc_decoder/ic_data_ecc_decoder.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/ic_data_ecc_decoder/ic_data_ecc_decoder.edf.gz'
+#   step SERIALIZE : #bytes in: 13054, #bytes out: 6372, compression ratio: 2.048650
+#   step REPORT : [87.28] Resource usage for ic_data_ecc_decoder: 0.301s 0.0M
+#   step REPORT : [39.349] Optimizing module : alb_mss_mem_fifo_0003
+#   step REPORT : [39.350] Instance count of module alb_mss_mem_fifo_0003 is 2
+#   step REPORT : [6.1691] Total net count: 86
+#   step REPORT : [6.1690] There are 4 levels of combinational cells
+#   step REPORT : [6.1689] There are 2 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 2
+#   step REPORT : [6.1695] 3-input LUTs: 6
+#   step REPORT : [6.1695] 4-input LUTs: 7
+#   step REPORT : [6.1695] 5-input LUTs: 3
+#   step REPORT : [6.1695] 6-input LUTs: 1
+#   step REPORT : [6.1696] Total LUT area: 19
+#   step REPORT : [6.1697] State    : 14
+#   step REPORT : [6.1697]   (FF)   : 14
+#   step REPORT : [6.1697] +CSA LUTs: 11
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'alb_mss_mem_fifo_0003' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                  14 |                  30 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                  18 |                   0 |                   0 |                   0 |                   0 || alb_mss_mem_fifo_0003
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'alb_mss_mem_fifo_0003' to 'edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/alb_mss_mem_fifo_0003/alb_mss_mem_fifo_0003.edf.gz'
+#   step SERIALIZE : #bytes in: 3045, #bytes out: 1496, compression ratio: 2.035428
+#   step REPORT : [87.28] Resource usage for alb_mss_mem_fifo_0003: 0.092s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_ifu_iccm
+#   step REPORT : [39.350] Instance count of module rl_ifu_iccm is 2
+#   step REPORT : [6.1691] Total net count: 2448
+#   step REPORT : [6.1690] There are 21 levels of combinational cells
+#   step REPORT : [6.1689] There are 6 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 113
+#   step REPORT : [6.1695] 3-input LUTs: 110
+#   step REPORT : [6.1695] 4-input LUTs: 87
+#   step REPORT : [6.1695] 5-input LUTs: 158
+#   step REPORT : [6.1695] 6-input LUTs: 230
+#   step REPORT : [6.1696] Total LUT area: 698
+#   step REPORT : [6.1697] State    : 270
+#   step REPORT : [6.1697]   (FF)   : 270
+#   step REPORT : [6.1697] +CSA LUTs: 424
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.002 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_ifu_iccm' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 270 |                1122 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 590 |                   5 |                   0 |                   0 |                   0 || rl_ifu_iccm
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_ifu_iccm' to 'edif/rl_ifu_iccm/rl_ifu_iccm.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_ifu_iccm/rl_ifu_iccm.edf.gz'
+#   step SERIALIZE : #bytes in: 91549, #bytes out: 36360, compression ratio: 2.517849
+#   step REPORT : [87.28] Resource usage for rl_ifu_iccm: 0.460s 0.0M
+#   step REPORT : [39.349] Optimizing module : iccm_ecc_decoder
+#   step REPORT : [39.350] Instance count of module iccm_ecc_decoder is 2
+#   step REPORT : [6.1691] Total net count: 380
+#   step REPORT : [6.1690] There are 15 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 21
+#   step REPORT : [6.1695] 3-input LUTs: 18
+#   step REPORT : [6.1695] 4-input LUTs: 22
+#   step REPORT : [6.1695] 5-input LUTs: 45
+#   step REPORT : [6.1695] 6-input LUTs: 61
+#   step REPORT : [6.1696] Total LUT area: 167
+#   step REPORT : [6.1697] CARRY    : 33
+#   step REPORT : [6.1697] +CSA LUTs: 22
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'iccm_ecc_decoder' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 189 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 108 |                   0 |                   0 |                   0 |                   0 || iccm_ecc_decoder
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'iccm_ecc_decoder' to 'edif/iccm_ecc_decoder/iccm_ecc_decoder.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/iccm_ecc_decoder/iccm_ecc_decoder.edf.gz'
+#   step SERIALIZE : #bytes in: 12886, #bytes out: 6208, compression ratio: 2.075709
+#   step REPORT : [87.28] Resource usage for iccm_ecc_decoder: 0.368s 0.0M
+#   step REPORT : [39.349] Optimizing module : rl_dmp_cwb
+#   step REPORT : [39.350] Instance count of module rl_dmp_cwb is 2
+#   step REPORT : [6.1691] Total net count: 1312
+#   step REPORT : [6.1690] There are 9 levels of combinational cells
+#   step REPORT : [6.1689] There are 4 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 7
+#   step REPORT : [6.1695] 3-input LUTs: 260
+#   step REPORT : [6.1695] 4-input LUTs: 15
+#   step REPORT : [6.1695] 5-input LUTs: 25
+#   step REPORT : [6.1695] 6-input LUTs: 83
+#   step REPORT : [6.1696] Total LUT area: 390
+#   step REPORT : [6.1697] State    : 146
+#   step REPORT : [6.1697]   (FF)   : 146
+#   step REPORT : [6.1697] +CSA LUTs: 143
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.001 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_dmp_cwb' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 146 |                 533 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 339 |                   0 |                   0 |                   0 |                   0 || rl_dmp_cwb
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_dmp_cwb' to 'edif/rl_dmp_cwb/rl_dmp_cwb.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_dmp_cwb/rl_dmp_cwb.edf.gz'
+#   step SERIALIZE : #bytes in: 39364, #bytes out: 15140, compression ratio: 2.600000
+#   step REPORT : [87.28] Resource usage for rl_dmp_cwb: 0.227s 0.0M
+#   step Synth : RhinoDB status is set by default value: rhino_default_status:1.
+#   step Synth : Using zCreateNameDB from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB for RhinoDB population.
+#   step Synth : Running RhinoDB gate population on 16 modules. To skip this step please set SNPS_RHINODB_INTERNAL_3STEP_DISABLE env var.
+Running in 3step flow - bundle population mode, for bundle,modules = Bundle_25,rl_dmp_cwb,iccm_ecc_decoder,rl_ifu_iccm,alb_mss_mem_fifo_0003,ic_data_ecc_decoder,alb_mss_fab_fifo_0002,alb_mss_fab_axi2ibp_0000,dwt_debug_port,rl_maskgen,mss_bus_switch_fifo_0001_0004,rl_dmp_dccm_ecc_decoder,rl_ibp2mmio,ZebuClockDetectFront_9,rl_ifu_icache,rl_dmp,alb_mss_fab_axi2ibp_0001,
+Got following -X option = show_times
+#     Tue May 13 18:30:03 2025 : zCreateNameDB Started
+#      : Reading the Serializing VCS Version
+[2025-05-13 18:30:03.520486] [0x000015555540d300] [info]    #      : Reading the Serializing VCS Version
+
+#      : Deserializing names dictionary
+[2025-05-13 18:30:03.521072] [0x000015555540d300] [info]    #      : Deserializing names dictionary
+
+#      : Deserializing libraries
+[2025-05-13 18:30:03.532272] [0x000015555540d300] [info]    #      : Deserializing libraries
+
+#      : Deserializing RTL
+[2025-05-13 18:30:03.533189] [0x000015555540d300] [info]    #      : Deserializing RTL
+
+#      : Deserializing Gate
+[2025-05-13 18:30:03.534151] [0x000015555540d300] [info]    #      : Deserializing Gate
+
+#      : Deserializing design object
+[2025-05-13 18:30:03.536138] [0x000015555540d300] [info]    #      : Deserializing design object
+
+#      : Populating Dfs Table
+[2025-05-13 18:30:03.537294] [0x000015555540d300] [info]    #      : Populating Dfs Table
+
+### Tue May 13 18:30:03 2025 : RTL Deserialized
+### Tue May 13 18:30:03 2025 : Starting CHUNK Population
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_dmp_cwb
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_dmp_cwb
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_dmp_cwb
+#     Tue May 13 18:30:03 2025 : Populating CHUNK iccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module iccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module iccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_ifu_iccm
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_ifu_iccm
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_ifu_iccm
+#     Tue May 13 18:30:03 2025 : Populating CHUNK alb_mss_mem_fifo_0003
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module alb_mss_mem_fifo_0003
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module alb_mss_mem_fifo_0003
+#     Tue May 13 18:30:03 2025 : Populating CHUNK ic_data_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module ic_data_ecc_decoder
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module ic_data_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Populating CHUNK alb_mss_fab_fifo_0002
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module alb_mss_fab_fifo_0002
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module alb_mss_fab_fifo_0002
+#     Tue May 13 18:30:03 2025 : Populating CHUNK alb_mss_fab_axi2ibp_0000
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module alb_mss_fab_axi2ibp_0000
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module alb_mss_fab_axi2ibp_0000
+#     Tue May 13 18:30:03 2025 : Populating CHUNK dwt_debug_port
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module dwt_debug_port
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module dwt_debug_port
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_maskgen
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_maskgen
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_maskgen
+#     Tue May 13 18:30:03 2025 : Populating CHUNK mss_bus_switch_fifo_0001_0004
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module mss_bus_switch_fifo_0001_0004
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module mss_bus_switch_fifo_0001_0004
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_dmp_dccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_dmp_dccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_dmp_dccm_ecc_decoder
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_ibp2mmio
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_ibp2mmio
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_ibp2mmio
+#     Tue May 13 18:30:03 2025 : Populating CHUNK ZebuClockDetectFront_9
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module ZebuClockDetectFront_9
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module ZebuClockDetectFront_9
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_ifu_icache
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_ifu_icache
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_ifu_icache
+#     Tue May 13 18:30:03 2025 : Populating CHUNK rl_dmp
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module rl_dmp
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module rl_dmp
+#     Tue May 13 18:30:03 2025 : Populating CHUNK alb_mss_fab_axi2ibp_0001
+#     Tue May 13 18:30:03 2025 : Gate Building light signal container for module alb_mss_fab_axi2ibp_0001
+#     Tue May 13 18:30:03 2025 : End of Gate Building light signal container for module alb_mss_fab_axi2ibp_0001
+### Tue May 13 18:30:03 2025(+0s) : CHUNK Population done
+zCreateNameDB finished without errors or warnings.
+#     Tue May 13 18:30:03 2025 : zCreateNameDB Ended
+#   step Synth : Synthesis called the following command: '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/bin/zCreateNameDB -bundle Bundle_25,rl_dmp_cwb,iccm_ecc_decoder,rl_ifu_iccm,alb_mss_mem_fifo_0003,ic_data_ecc_decoder,alb_mss_fab_fifo_0002,alb_mss_fab_axi2ibp_0000,dwt_debug_port,rl_maskgen,mss_bus_switch_fifo_0001_0004,rl_dmp_dccm_ecc_decoder,rl_ibp2mmio,ZebuClockDetectFront_9,rl_ifu_icache,rl_dmp,alb_mss_fab_axi2ibp_0001,  -v -X show_times -z /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/design/synth_Default_RTL_Group'
+
+#   step exec summary : time 0m8.732s
+#   exec summary : Total memory: 147000 kB minimum 
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:30:03 EEST 2025
+zFe exit status: 0
+command exit code is '0'

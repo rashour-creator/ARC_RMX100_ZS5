@@ -1,0 +1,114 @@
+Module mss_bus_switch_ibp2single_0000{
+}
+Module mss_bus_switch_fifo_0001_0000{
+}
+
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds zceiMessageOutPort_4096{
+4095 0 message
+}
+EdfPortBounds rl_parity_gen_0000_0001{
+4 0 din
+}
+EdfPortBounds zemi3OutPortBuffer_169_4096_24{
+23 0 message0
+4095 0 msg_out
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0000{
+0 0 i_data
+64 0 i_occp
+0 0 o_data
+64 0 o_occp
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_2_1{
+1 0 signal
+1 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds rl_parity_gen_0000_0003{
+3 0 din
+}
+EdfPortBounds rl_parity_gen_0000_0000{
+8 0 din
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds zceiMessageOutPort_128{
+127 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_gdelay{
+23 0 out
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds zceiMessageInPort_2{
+1 0 message
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_24_1{
+23 0 signal
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds rl_parity_gen_0000_0002{
+6 0 din
+}
+EdfPortBounds zebu_bb_ts_cur_time{
+63 0 ts_time
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+NonAliasNets mss_bus_switch_ibp2single_0000{
+sdb_ibp_cmd_addr_r[41]    f   2664
+sdb_ibp_cmd_addr_r[40]    f   2665
+sdb_ibp_cmd_addr_r[39]    f   2666
+sdb_ibp_cmd_addr_r[38]    f   2667
+sdb_ibp_cmd_addr_r[37]    f   2668
+sdb_ibp_cmd_addr_r[36]    f   2669
+sdb_ibp_cmd_addr_r[35]    f   2670
+sdb_ibp_cmd_addr_r[34]    f   2671
+sdb_ibp_cmd_addr_r[33]    f   2672
+sdb_ibp_cmd_addr_r[32]    f   2673
+sdb_ibp_cmd_addr_r[31]    f   2674
+sdb_ibp_cmd_addr_r[30]    f   2675
+sdb_ibp_cmd_addr_r[29]    f   2676
+sdb_ibp_cmd_addr_r[28]    f   2677
+sdb_ibp_cmd_addr_r[27]    f   2678
+sdb_ibp_cmd_addr_r[26]    f   2679
+sdb_ibp_cmd_addr_r[25]    f   2680
+sdb_ibp_cmd_addr_r[24]    f   2681
+sdb_ibp_cmd_addr_r[23]    f   2682
+sdb_ibp_cmd_addr_r[22]    f   2683
+sdb_ibp_cmd_addr_r[21]    f   2684
+sdb_ibp_cmd_addr_r[20]    f   2685
+sdb_ibp_cmd_addr_r[19]    f   2686
+sdb_ibp_cmd_addr_r[18]    f   2687
+sdb_ibp_cmd_addr_r[17]    f   2688
+sdb_ibp_cmd_addr_r[16]    f   2689
+sdb_ibp_cmd_addr_r[15]    f   2690
+sdb_ibp_cmd_addr_r[14]    f   2691
+sdb_ibp_cmd_addr_r[13]    f   2692
+sdb_ibp_cmd_addr_r[12]    f   2693
+sdb_ibp_cmd_addr_r[11]    f   2694
+sdb_ibp_cmd_valid_r    f   2724
+}

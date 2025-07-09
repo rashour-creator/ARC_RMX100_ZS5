@@ -1,0 +1,9 @@
+zebu_top
+zebu_orion_tickClk_inst -> zebu_orion_tickClk_inst -> zebu_ts_orion_tick_clk_mod
+zebu_time_capture -> zebu_time_capture -> zebu_time_capture
+trigger_pc -> trigger_pc -> zceiTrigger
+i_t32Jtag_driver -> i_t32Jtag_driver -> xtor_t32Jtag_svs
+zebuclk_uart_sclk -> zebuclk_uart_sclk -> clockDelayPort_0000
+zebuclk_jtag_clk -> zebuclk_jtag_clk -> clockDelayPort_0000
+zebuclk_ref_clk -> zebuclk_ref_clk -> clockDelayPort_0000
+core_chip_dut -> core_chip_dut -> core_chip

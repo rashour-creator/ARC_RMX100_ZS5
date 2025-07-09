@@ -1,0 +1,15 @@
+Module alb_mss_fab_ibp2single_0000_0000{
+}
+Module alb_mss_fab_fifo_0009{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+NonAliasNets alb_mss_fab_ibp2single_0000_0000{
+sdb_ibp_cmd_addr_r[11]    f   384
+sdb_ibp_cmd_valid_r    f   414
+}

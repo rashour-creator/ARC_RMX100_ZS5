@@ -1,0 +1,485 @@
+Module alb_mss_fab_ibp2single_0000_0001{
+}
+Module alb_mss_fab_fifo_0009{
+}
+
+EdfPortBounds alb_mss_fab_axi2ibp_0001{
+41 0 axi_araddr
+1 0 axi_arburst
+3 0 axi_arcache
+3 0 axi_arid
+3 0 axi_arlen
+1 0 axi_arlock
+2 0 axi_arprot
+0 0 axi_arregion
+2 0 axi_arsize
+41 0 axi_awaddr
+1 0 axi_awburst
+3 0 axi_awcache
+3 0 axi_awid
+3 0 axi_awlen
+1 0 axi_awlock
+2 0 axi_awprot
+0 0 axi_awregion
+2 0 axi_awsize
+3 0 axi_bid
+1 0 axi_bresp
+511 0 axi_rdata
+3 0 axi_rid
+1 0 axi_rresp
+511 0 axi_wdata
+63 0 axi_wstrb
+41 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_rgon
+511 0 ibp_rd_data
+511 0 ibp_wr_data
+63 0 ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_ibp_lat{
+11 0 cfg_lat_r
+11 0 cfg_lat_w
+9 0 cfg_rd_bw
+9 0 cfg_wr_bw
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+31 0 i_ibp_rd_data
+31 0 i_ibp_wr_data
+3 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+31 0 o_ibp_rd_data
+31 0 o_ibp_wr_data
+3 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0005{
+39 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+39 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ahbl2ibp_0000{
+41 0 ahb_haddr
+2 0 ahb_hburst
+3 0 ahb_hprot
+31 0 ahb_hrdata
+0 0 ahb_hsel
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+3 0 ahb_hwstrb
+41 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_rgon
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0001{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds rl_predecoder{
+31 0 inst
+9 0 pd_fu
+4 0 pd_rf_src0
+4 0 pd_rf_src1
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0003{
+5 0 i_data
+64 0 i_occp
+5 0 o_data
+64 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+EdfPortBounds alb_mss_bus_switch{
+41 0 ahb_hbs_ibp_cmd_addr
+3 0 ahb_hbs_ibp_cmd_burst_size
+3 0 ahb_hbs_ibp_cmd_cache
+2 0 ahb_hbs_ibp_cmd_data_size
+1 0 ahb_hbs_ibp_cmd_prot
+31 0 ahb_hbs_ibp_rd_data
+31 0 ahb_hbs_ibp_wr_data
+3 0 ahb_hbs_ibp_wr_mask
+41 0 bri_bs_ibp_cmd_addr
+3 0 bri_bs_ibp_cmd_burst_size
+3 0 bri_bs_ibp_cmd_cache
+2 0 bri_bs_ibp_cmd_data_size
+1 0 bri_bs_ibp_cmd_prot
+31 0 bri_bs_ibp_rd_data
+31 0 bri_bs_ibp_wr_data
+3 0 bri_bs_ibp_wr_mask
+41 0 dbu_per_ahb_hbs_ibp_cmd_addr
+3 0 dbu_per_ahb_hbs_ibp_cmd_burst_size
+3 0 dbu_per_ahb_hbs_ibp_cmd_cache
+2 0 dbu_per_ahb_hbs_ibp_cmd_data_size
+1 0 dbu_per_ahb_hbs_ibp_cmd_prot
+31 0 dbu_per_ahb_hbs_ibp_rd_data
+31 0 dbu_per_ahb_hbs_ibp_wr_data
+3 0 dbu_per_ahb_hbs_ibp_wr_mask
+41 0 dccm_ahb_hbs_ibp_cmd_addr
+3 0 dccm_ahb_hbs_ibp_cmd_burst_size
+3 0 dccm_ahb_hbs_ibp_cmd_cache
+2 0 dccm_ahb_hbs_ibp_cmd_data_size
+1 0 dccm_ahb_hbs_ibp_cmd_prot
+0 0 dccm_ahb_hbs_ibp_cmd_region
+31 0 dccm_ahb_hbs_ibp_rd_data
+31 0 dccm_ahb_hbs_ibp_wr_data
+3 0 dccm_ahb_hbs_ibp_wr_mask
+41 0 iccm_ahb_hbs_ibp_cmd_addr
+3 0 iccm_ahb_hbs_ibp_cmd_burst_size
+3 0 iccm_ahb_hbs_ibp_cmd_cache
+2 0 iccm_ahb_hbs_ibp_cmd_data_size
+1 0 iccm_ahb_hbs_ibp_cmd_prot
+0 0 iccm_ahb_hbs_ibp_cmd_region
+31 0 iccm_ahb_hbs_ibp_rd_data
+31 0 iccm_ahb_hbs_ibp_wr_data
+3 0 iccm_ahb_hbs_ibp_wr_mask
+41 0 mmio_ahb_hbs_ibp_cmd_addr
+3 0 mmio_ahb_hbs_ibp_cmd_burst_size
+3 0 mmio_ahb_hbs_ibp_cmd_cache
+2 0 mmio_ahb_hbs_ibp_cmd_data_size
+1 0 mmio_ahb_hbs_ibp_cmd_prot
+0 0 mmio_ahb_hbs_ibp_cmd_region
+31 0 mmio_ahb_hbs_ibp_rd_data
+31 0 mmio_ahb_hbs_ibp_wr_data
+3 0 mmio_ahb_hbs_ibp_wr_mask
+41 0 mss_clkctrl_bs_ibp_cmd_addr
+3 0 mss_clkctrl_bs_ibp_cmd_burst_size
+3 0 mss_clkctrl_bs_ibp_cmd_cache
+2 0 mss_clkctrl_bs_ibp_cmd_data_size
+1 0 mss_clkctrl_bs_ibp_cmd_prot
+0 0 mss_clkctrl_bs_ibp_cmd_region
+31 0 mss_clkctrl_bs_ibp_rd_data
+31 0 mss_clkctrl_bs_ibp_wr_data
+3 0 mss_clkctrl_bs_ibp_wr_mask
+41 0 mss_mem_bs_ibp_cmd_addr
+3 0 mss_mem_bs_ibp_cmd_burst_size
+3 0 mss_mem_bs_ibp_cmd_cache
+2 0 mss_mem_bs_ibp_cmd_data_size
+1 0 mss_mem_bs_ibp_cmd_prot
+0 0 mss_mem_bs_ibp_cmd_region
+127 0 mss_mem_bs_ibp_rd_data
+127 0 mss_mem_bs_ibp_wr_data
+15 0 mss_mem_bs_ibp_wr_mask
+41 0 mss_perfctrl_bs_ibp_cmd_addr
+3 0 mss_perfctrl_bs_ibp_cmd_burst_size
+3 0 mss_perfctrl_bs_ibp_cmd_cache
+2 0 mss_perfctrl_bs_ibp_cmd_data_size
+1 0 mss_perfctrl_bs_ibp_cmd_prot
+0 0 mss_perfctrl_bs_ibp_cmd_region
+31 0 mss_perfctrl_bs_ibp_rd_data
+31 0 mss_perfctrl_bs_ibp_wr_data
+3 0 mss_perfctrl_bs_ibp_wr_mask
+41 0 xtor_axi_bs_ibp_cmd_addr
+3 0 xtor_axi_bs_ibp_cmd_burst_size
+3 0 xtor_axi_bs_ibp_cmd_cache
+2 0 xtor_axi_bs_ibp_cmd_data_size
+1 0 xtor_axi_bs_ibp_cmd_prot
+511 0 xtor_axi_bs_ibp_rd_data
+511 0 xtor_axi_bs_ibp_wr_data
+63 0 xtor_axi_bs_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_ibp2apb{
+11 2 apb_addr
+31 0 apb_rdata
+0 0 apb_sel
+31 0 apb_wdata
+3 0 apb_wstrb
+11 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_region
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0008{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+130 0 i_ibp_rd_chnl
+144 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_axi2ibp_0000{
+41 0 axi_araddr
+1 0 axi_arburst
+3 0 axi_arcache
+3 0 axi_arid
+3 0 axi_arlen
+1 0 axi_arlock
+2 0 axi_arprot
+0 0 axi_arregion
+2 0 axi_arsize
+41 0 axi_awaddr
+1 0 axi_awburst
+3 0 axi_awcache
+3 0 axi_awid
+3 0 axi_awlen
+1 0 axi_awlock
+2 0 axi_awprot
+0 0 axi_awregion
+2 0 axi_awsize
+3 0 axi_bid
+1 0 axi_bresp
+31 0 axi_rdata
+3 0 axi_rid
+1 0 axi_rresp
+31 0 axi_wdata
+3 0 axi_wstrb
+41 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_rgon
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0007{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+130 0 i_ibp_rd_chnl
+144 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0002{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+514 0 o_ibp_rd_chnl
+576 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds arcv_wd_parity{
+7 0 d_in
+7 0 q_out
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp2ahbl_sel{
+31 0 ahb_haddr
+2 0 ahb_hburst
+31 0 ahb_hrdata
+0 0 ahb_hsel
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+31 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_region
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+EdfPortBounds zebu_bb_clockDelayPort_24{
+23 0 initial_dutyHigh
+23 0 initial_dutyLow
+23 0 initial_phase
+23 0 initial_resetDuration
+}
+EdfPortBounds alb_mss_fab_fifo_0000{
+53 0 i_data
+0 0 i_occp
+53 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0004{
+38 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+38 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0001{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds arcv_wd_parity_0001{
+31 0 d_in
+31 0 q_out
+}
+EdfPortBounds arcv_wd_parity_0000{
+5 0 d_in
+5 0 q_out
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0000{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds arcv_wd_parity_0002{
+1 0 d_in
+1 0 q_out
+}
+EdfPortBounds alb_mss_fab_ibp_lat_0000{
+11 0 cfg_lat_r
+11 0 cfg_lat_w
+9 0 cfg_rd_bw
+9 0 cfg_wr_bw
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+511 0 i_ibp_rd_data
+511 0 i_ibp_wr_data
+63 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+511 0 o_ibp_rd_data
+511 0 o_ibp_wr_data
+63 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0003{
+38 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+38 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp_buffer_0000_0006{
+39 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+39 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_fab_ibp2apb_0000{
+12 2 apb_addr
+31 0 apb_rdata
+0 0 apb_sel
+31 0 apb_wdata
+3 0 apb_wstrb
+12 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+0 0 ibp_cmd_region
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+3 0 ibp_wr_mask
+}
+NonAliasNets alb_mss_fab_ibp2single_0000_0001{
+sdb_ibp_cmd_addr_r[12]    f   392
+sdb_ibp_cmd_addr_r[11]    f   393
+sdb_ibp_cmd_valid_r    f   423
+}

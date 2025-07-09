@@ -1,0 +1,196 @@
+
+# empty dict by default
+set utf__TargetFlags [dict create]
+
+proc utf__isCapabilitySupported { beName flagID } {
+    global utf__TargetFlags
+    if { [dict exists $utf__TargetFlags $beName] } {
+        if { [lsearch [dict get $utf__TargetFlags $beName] $flagID] != -1 } {
+            return true
+        }
+    }
+    return false
+}
+
+if {[info exists ::env(SNPS_ZEBU_TARGET_CAPABILITIES)]} {
+    set additionalCommands $::env(SNPS_ZEBU_TARGET_CAPABILITIES)
+    if [file exists $additionalCommands ] {
+        source $additionalCommands
+    }
+}
+
+# default partitioning flow
+#design_size -mode AUTO
+#clustering -system_auto_core_generation t
+
+nfs_settings -max_retries 120 -delay 1000 -access_level 5
+fpga -parff true -parff_multi_stage true
+#synthesis -advanced_command {Compile:PLY:LUTCost=(10 10 10 12 15)}
+synthesis -wls_option {-checkSumForAllScm}
+timing_analysis -post_fpga BACK_ANNOTATED
+ztopbuild -advanced_command {enable advanced_incremental_mode}
+
+optimization -auto_inline_limit 50
+
+# Hydra is ON by default
+compile -hydra t
+debug -waveform_reconstruction_params {CSA=false, SIMZILLA=true, SIMZILLA_DISTRIBUTED_BUILD=false, SWAVE=false}
+debug -waveform_reconstruction false
+# Enable conversion of strength/(r)mos/(r)tranif
+design -convert_strength true
+
+proc ztb_adv_command { cmd } {
+	ztopbuild -advanced_command "lappend perfFlowCommand {$cmd}"
+}
+
+# fixing memory indeterminism issues:
+# memory_preferences -manage_dual_port_bram_access t
+
+
+###############################################################################
+#
+#                   Master switch for partitioning flow
+#
+# reference on flows in:
+# https://sp-vg/sites/zebu_be/Shared%20Documents/Partitioning/Benchmarking/PerformanceAndStabilityBenchmarking.docx?Web=1
+###############################################################################
+
+proc global_setenv { var value } {
+     zCui_quote "ZCUI_add -taskEnvVar global {$var} {$value}"
+}
+
+set backwardCompatibility "2021.09"
+set UTF_PERF_FLOW_LIST {flow1 flow2 base none}
+set UTF_PERF_FLOW_PATCH_LIST  {2020.03-LCA 2020.03-SP1-1-LCA 2021.09 2021.09-LCA}
+
+
+
+# Future syntax: set_perf_flow <flow1|flow2|base|none> [-patch < patch_value> ] [-patch_list { <list>  } ]
+#                set_perf_flow flow1 -patch <patch_value>
+#                set_perf_flow flow2 -patch <patch_value2>
+#
+# Future default:
+set_perf_flow -patch $backwardCompatibility
+set_perf_flow -patch_list $UTF_PERF_FLOW_PATCH_LIST
+set_perf_flow flow1
+
+#set_perf_flow flow1
+
+
+
+##########################################################################
+#
+#                                COMPILE OBJECTIVE
+#
+##########################################################################
+
+
+proc performance_objective_internal_zebu { v } {
+    # commands for zTopBuild must instead be added to: sw_cc/zTopBuild/scripts/zTopBuild_from_zcui.tcl
+    # commands for zPar must instead be added to: sw_cc/kpar/zPar_from_zCui.tcl
+    switch -exact -- [string tolower $v] {
+        fast_turn_around {
+        }
+        bringup {
+        }
+        performance {
+            timing_analysis -fpga_advanced_command {data_path_analysis mcp}
+            #performance -fetch_mode true -zemi3_fm_opt true -zemi3_fm_mcp_opt true
+            set_app_var zopt post_routing_basic
+        }
+        capacity {
+        }
+    }
+}
+
+##########################################################################
+#
+#                                HYDRA FLOW
+#
+##########################################################################
+
+
+proc set_hydra_flow {} {
+
+    compile -hydra true
+    debug -waveform_reconstruction_params {CSA=false, SIMZILLA=true}
+    ztopbuild -advanced_command {set_hydra -check_consistency yes}
+    ztopbuild -advanced_command {set_fast_waveform_capture -process_ids no}
+
+}
+
+################################################################################
+#           FRACTAL FLOW
+#
+################################################################################
+
+proc utfDefaultCheckBool {v} {
+    set lowerv [string tolower $v]
+    switch -exact -- $lowerv {
+        "true" -
+        "t" -
+        "yes" -
+        "y" -
+        "1" { return true }
+        default { return false }
+    }
+}
+
+proc __utf_post_exec_compile {args} {
+    set params [lindex $args 0]
+    set argc [llength $params]
+    set i 0
+    while {$i < $argc} {
+        set arg [lindex $params $i]
+        incr i
+        if {$arg == "-fractal"} {
+            set v [lindex $params $i]
+            incr i
+            if {[utfDefaultCheckBool $v]} {
+                set_fractal_flow_commands
+            }
+        }
+    }
+}
+
+if {[llength [info procs compile]]} { 
+    trace add execution compile leave __utf_post_exec_compile
+}
+
+proc set_fractal_flow_commands {} {
+    # set_app_var internal::zcui_enable_fractal_final_CTM_report true
+    # ztopbuild -advanced_command {Module set zs5_vup_12c_19_v2.bufg 1 20} ; # QG: Is this still needed ?
+    clock_config -accuracy 32
+    memory_preferences -zmem_clock_frequency 100
+}
+
+proc set_fractal_flow {} {
+    compile -fractal true
+}
+
+##########################################################################
+#
+# Target dependent capabilities
+#
+##########################################################################
+
+# if { [utf__isCapabilitySupported default SimzillaSequential] } {
+#     debug -waveform_reconstruction_params {SIMZILLA=sequential}
+# }
+
+if { [utf__isCapabilitySupported default AtSpeedZprd] } {
+    debug -offline_debug true
+    debug -offline_debug_params {INCL_XTORS=true}
+}
+
+##########################################################################
+#
+# Internal testing. Always keep at the end.
+#
+##########################################################################
+
+if {[info exists ::env(SNPS_INTERNAL_ADDITIONAL_DEFAULTS_UTF_FILE)]} {
+    if [file exists $::env(SNPS_INTERNAL_ADDITIONAL_DEFAULTS_UTF_FILE) ] {
+        source $::env(SNPS_INTERNAL_ADDITIONAL_DEFAULTS_UTF_FILE)
+    }
+}

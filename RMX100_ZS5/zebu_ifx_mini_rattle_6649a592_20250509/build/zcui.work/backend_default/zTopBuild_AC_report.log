@@ -1,0 +1,236 @@
+
+
+
+
+
+
+
+#
+
+
+Table of content:
+-----------------
+
+
+ 1.zTopBuild automatic clustering report
+    1.1.Design pre-analysis
+    1.2.Design analysis
+    1.3.Design mapping optimization
+    1.4.Post-optimization
+    1.5.Commands processing
+        1.5.1.Command transmission to zCore
+    1.6.Design post split analysis
+ 2.Time and memory usage
+ 3.hMetis partitioning
+    3.1.Block connectivity
+
+
+======================================================================================================
+
+
+
+
+
+ 1.zTopBuild automatic clustering report
+ =======================================
+
+
+    1.1.Design pre-analysis
+    -----------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.2.Design analysis
+    -------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.3.Design mapping optimization
+    -------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.4.Post-optimization
+    ---------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.5.Commands processing
+    -----------------------
+
+
+    1.5.1.Command transmission to zCore
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    1.6.Design post split analysis
+    ------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 2.Time and memory usage
+ =======================
+
+Reset time counter
+   1     elapsed:0.5 s    user:0.5 s    system:0.1 s     %cpu:109.09      load:12.92       fm:199536 m    vm:10941 m       vm:+0 m     um:2949 m       um:+4 m ZTOPPARTITIONING
+
+
+ 3.hMetis partitioning
+ =====================
+
+
+    3.1.Block connectivity
+    ----------------------
+
+# The partition of the cell is marked by '*'.
+
+# The cell resource size which is larger than partition size * $ZEBU_CELL_REPORT_SIZE_THRES will be marked by '**'.
+
+### 1. Collect cells that have ratio of (internal-cuts/total cuts) < 743828704, the ratio is 0.5 by default, and can be set by env(ZEBU_CELL_REPORT_INCUT_THRES).
+
+### 2. Collect cells whose size are bigger than partition size * 743828704 (0.2 by default), and can be set by env(ZEBU_CELL_REPORT_SIZE_THRES).
+
+# Only print 110 cell instances based on above constraints.
+
+ 
++---------------------+------+----------------------------------------------------------------------------------------------------+------+-----+---+----+-----+------+-----------+------------+------------------+-------------------+---------+---------+
+|Partition \ Partition|Part_0|Cell instances                                                                                      |   LUT| LUT6|RAM|URAM|  REG|RAMLUT|FWC_IP_BITS|QIWC_IP_BITS|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|ZRM_SLOTS|ZRM_PORTS|
++---------------------+------+----------------------------------------------------------------------------------------------------+------+-----+---+----+-----+------+-----------+------------+------------------+-------------------+---------+---------+
+|               Part_0|    *5|zebu_top.ts_runman_5                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_4                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_3                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_2                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_0                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *4|zebu_top.zebu_time_capture                                                                          |  9219|   12|  0|   0|11795|  3304|          0|           0|                 2|                  3|        0|        0|
+|                     |    *5|zebu_top.ts_runman_1                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |   *33|zebu_top.trigger_pc                                                                                 |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *7|zebu_top.zebuclk_uart_sclk                                                                          |  1142|  121|  0|   0| 1085|   208|          0|           2|                 1|                  1|        0|        0|
+|                     |    *9|zebu_top.zebuclk_jtag_clk                                                                           |  1142|  121|  0|   0| 1085|   208|          0|           2|                 1|                  1|        0|        0|
+|                     |   *10|zebu_top.zebuclk_ref_clk                                                                            |  1143|  121|  0|   0| 1086|   208|          1|           2|                 1|                  1|        0|        0|
+|                     |    *5|zebu_top.ts_runman_6                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_7                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |    *5|zebu_top.ts_runman_8                                                                                |  3762|  219|  0|   0| 3474|  1008|          0|           0|                 2|                  2|        0|        0|
+|                     |   *32|ZEBU_VIRTUAL_BLOCK__97                                                                              |    11|   11|  0|   0|    2|     0|          0|          32|                 0|                  0|        0|        0|
+|                     |   *32|ZEBU_VIRTUAL_BLOCK__96                                                                              |    11|   11|  0|   0|    2|     0|          0|          32|                 0|                  0|        0|        0|
+|                     |   *32|ZEBU_VIRTUAL_BLOCK__95                                                                              |    11|   11|  0|   0|    2|     0|          0|          32|                 0|                  0|        0|        0|
+|                     |   *32|ZEBU_VIRTUAL_BLOCK__94                                                                              |    11|   11|  0|   0|    2|     0|          0|          32|                 0|                  0|        0|        0|
+|                     |  *303|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r              | 21318|    0| 31|   0|27012|     0|          0|           0|                 0|                  0|    32768|        1|
+|                     |   *14|ZEBU_VIRTUAL_BLOCK__92                                                                              |     4|    4|  0|   0|   12|     0|          0|          12|                 0|                  0|        0|        0|
+|                     |   *18|ZEBU_VIRTUAL_BLOCK__91                                                                              |     5|    5|  0|   0|   17|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |    *7|ZEBU_VIRTUAL_BLOCK__90                                                                              |     1|    1|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *7|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.zfast_02wd7n2yxw7u1|     1|    1|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *7|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.zfast_pnfkg96slpm83|     1|    1|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|ZEBU_VIRTUAL_BLOCK__87                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__86                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__85                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__84                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__83                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__82                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__81                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__80                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__79                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__78                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__77                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__76                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__75                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__74                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__73                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__72                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *4|ZEBU_VIRTUAL_BLOCK__71                                                                              |     1|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |  *406|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_ibp_buf_inst                                        |   491|   73|  0|   0|  231|     0|          0|         215|                 0|                  0|        0|        0|
+|                     |   *54|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_mem_exclusive_monitor                               |   877|  260|  0|   0|  829|     0|          0|         774|                 0|                  0|        0|        0|
+|                     |  *308|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst                                      |  4356| 4160|  5|   0| 2658|     0|          0|        2324|                 0|                  0|        0|        0|
+|                     |  *122|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ibp2single                                    |   243|   82|  0|   0|  129|     0|          0|         123|                 0|                  0|        0|        0|
+|                     |  *672|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ibp_bypbuf                                    |   868|  183|  0|   0|  400|     0|          0|         519|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ibp_cwbind                                    |    59|   21|  0|   0|   22|     0|          0|          21|                 0|                  0|        0|        0|
+|                     |  *269|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_ctrl_inst                                     |   412|  100|  0|   0|  312|     0|          0|         291|                 0|                  0|        0|        0|
+|                     |    *4|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_cg_inst                                             |     1|    0|  0|   0|    1|     0|          0|           2|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_pre_byp_rgon0_ibp_err_wr                        |     1|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__61                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__60                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__59                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__58                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__57                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__56                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__55                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__54                                                                              |    21|    5|  0|   0|    1|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_pre_byp_rgon0_ibp_rd_last                       |     1|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_pre_byp_rgon0_ibp_rd_valid                      |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_pre_byp_rgon0_ibp_wr_done                       |     1|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *66|ZEBU_VIRTUAL_BLOCK__50                                                                              |    32|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *66|ZEBU_VIRTUAL_BLOCK__49                                                                              |    32|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *66|ZEBU_VIRTUAL_BLOCK__48                                                                              |    32|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *66|ZEBU_VIRTUAL_BLOCK__47                                                                              |    32|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *4|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_splt_i_ibp_rd_last                              |     1|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_splt_i_ibp_rd_valid                             |     1|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_bind_rgon0_ibp_rd_chnl_valid[0]                 |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.sqnod_bind_rgon0_ibp_wrsp_chnl_valid[0]               |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     | *2569|zebu_top.core_chip_dut.icore_sys.ialb_mss_fab                                                       | 88367|36892| 11|   0|61995|     0|        377|       57586|                 0|                  0|        0|        0|
+|                     |   *96|zebu_top.core_chip_dut.icore_sys.ialb_mss_clkctrl                                                   |  1507|  411|  0|   0|  849|     0|          2|         785|                 0|                  0|        0|        0|
+|                     |  *219|zebu_top.core_chip_dut.icore_sys.ialb_mss_perfctrl                                                  |  7405| 1960|  0|   0| 4238|     0|          0|        3960|                 0|                  0|        0|        0|
+|                     | *1229|zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor                                                     | 24479| 6900| 25|   0|30809|  5736|          0|        5396|                45|                 24|        0|        0|
+|                     |  *787|zebu_top.core_chip_dut.icore_sys.iarchipelago                                                       |131265|31075|  4|  98|77534|     0|        448|       18863|                 0|                  0|        0|        0|
+|                     |    *8|zebu_top.core_chip_dut.iio_pad_ring                                                                 |     2|    0|  0|   0|    3|     0|          1|           1|                 0|                  0|        0|        0|
+|                     |   *24|zebu_top.i_t32Jtag_driver                                                                           |  7337| 1474|  0|   0|10200|  1152|          4|        3580|                14|                  9|        0|        0|
+|                     |    *3|zebu_top.zebu_orion_tickClk_inst                                                                    |     2|    0|  0|   0|    2|     0|          0|           2|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.val                                                                                        |     0|    0|  0|   0|    1|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.zebu_zebu_disable_zinject                                                                  |     0|    0|  0|   0|    1|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.zebu_clockGen                                                                              |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_ie7calw5tbwk2                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_iqo8lutkc3jl                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_0eyfli1baazu2                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_eor0cx8xjo1f1                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_8r5uvxuhxtxe3                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_69u5pmythfl5                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *19|zebu_top.zfast_dg5ei8xcp6ul2                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *16|zebu_top.zfast_2qmqp6emsb073                                                                        |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_sys_xtor_mcp_51030                                                                 |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_sys_xtor_mcp_51028                                                                 |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_sys_xtor_mcp_51026                                                                 |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|ZEBU_VIRTUAL_BLOCK__20                                                                              |     0|    0|  0|   0|    1|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *3|ZEBU_VIRTUAL_BLOCK__19                                                                              |     0|    0|  0|   0|    0|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *3|ZEBU_VIRTUAL_BLOCK__18                                                                              |     0|    0|  0|   0|    1|     0|          0|           1|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_sys_fm_912                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *3|zebu_top.unnamed_sys_fm_884                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.unnamed_sys_fm_882                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.unnamed_sys_fm_880                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.zebu_top\.unnamed_4_O-Neg_sys_xtor_mcp                                                     |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.unnamed_sys_fm_867                                                                         |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.zebu_top\.unnamed_4_O-Pos_sys_xtor_mcp                                                     |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *63|ZEBU_VIRTUAL_BLOCK__8                                                                               |    31|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__7                                                                               |     5|    5|  0|   0|   17|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__6                                                                               |     5|    5|  0|   0|   17|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__5                                                                               |     5|    5|  0|   0|   17|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |   *33|ZEBU_VIRTUAL_BLOCK__4                                                                               |     5|    5|  0|   0|   17|     0|          0|          16|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_4                                                                                  |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *2|zebu_top.unnamed_3                                                                                  |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.hydra_system_vcc                                                                           |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
+|                     |    *1|zebu_top.hydra_system_gnd                                                                           |     0|    0|  0|   0|    0|     0|          0|           0|                 0|                  0|        0|        0|
++---------------------+------+----------------------------------------------------------------------------------------------------+------+-----+---+----+-----+------+-----------+------------+------------------+-------------------+---------+---------+
+
+

@@ -1,0 +1,2 @@
+
+instantiate rl_srams  { prefixes: [ "esrams_", ] , noreplicate: { signals: [ "test_mode", "LBIST_EN", "jtag_tck", "jtag_tms", "jtag_trst_n", "rst_a", "iso_override", "atclken", "atresetn", "trace_iso_enb_r", "pclkdbg_en", "ndmreset_a", "ref_clk", ] , } , } 

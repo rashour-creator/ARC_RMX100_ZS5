@@ -1,0 +1,16 @@
+`define MPY_1C    0
+`define MPY_2C    0
+`define MPY_10C   1
+`define MPY_CTL_MUL    0
+`define MPY_CTL_MULH   1
+`define MPY_CTL_MULHSU 2
+`define MPY_CTL_MULHU  3
+`define MPY_CTL_DIV    4
+`define MPY_CTL_DIVU   5
+`define MPY_CTL_REM    6
+`define MPY_CTL_REMU   7
+`define MPY_CTL_RANGE  7:0
+`define MPY_CTL_WIDTH  8
+`define MPY_KIND_RANGE  2:0
+`define MPY_KIND_BITS   3
+`define MPYOP_RANGE       1:0

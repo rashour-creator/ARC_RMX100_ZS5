@@ -1,0 +1,14 @@
+Customer_Design,compile_date,ZEBU_ROOT,Vivado_build,Total_Fpgas,Original_Winners,Num_of_PARFF_triggers,minutes_to_PARFF_trigger,grid_time_to_trigger_parff_minutes,FPGA_HOST_CONFIG,FPGA_NAME,Long_Pole_Fpga_CT,MISC_CT,Num_fpgas_with_CT_lessthan_4hrs,Num_fpgas_with_CT_between_4to6hrs,Num_fpgas_with_CT_gt_6hrs,Avg_FPGA_CT,Load_factor,Regs,LUTs,BRAMs,URAMs,F7Muxes,F8Muxes,DSP48s,LUT6s,PARFF_Win_Strategies,zNetgen_CT,link_CT,netlist_opt_CT,read_cons_CT,opt_CT,postOptProcessing_CT,place_design_CT,route_design_CT,report_timing_CT,write_bit_CT,extra_timing_CT,location_building_CT,pre_ztime,post_ztime,peakMem,PDM_Enabled,vivado_ct_lp , fpga_ct_lp , Peak_Memory , vivado_VERSION 
+Customer_Design,May13 2025 19:04:24,0,2022.1_AR76726,2,2,0,Original Winner,NA,INTEL(R) XEON(R) GOLD 6548Y+,U0-M0-F01,44.9333,6,2,0,0,26.5,0.14,308422,563529,175,98,367,16,5,99657,None,5,3,1,2,5,1,13,13,1,3,1,1,,,18470.988,1, 39 , 44.9333 , 18470.988 , 2022.1_AR76726 
+
+
+#######################Extracting detailed info ################################
+
+[31mBACKEND(B[m=/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default
+[35m          FPGA | LUT | LUT6 | RAML | CY8 | MuxF | REG | BRAM | URAM | DSP | FWC | QWC |    IO | IOMGT |  SKET | SLL(avg) | SLR(avg) |  CSET | BUFG | DAP || Place | CPUs || Route | CPUs || Overall | Mem(GB) |     SKU |       Vivado Version | status (B[m
+[1;34m----------------------------- U0/M0                (zCore=Part_0)       ---------------[0m
+[32mU0/M0/F00.Orig(B[m |   3 |    0 |    1 |   0 |    0 |   0 |    3 |    0 |   0 | 0.0 | 0.0 |    40 |     0 |    40 |   0(  0) |  26(  6) |  6069 |    7 | (B[m no(B[m || 00:04 | [33mx1.5(B[m || 00:03 | x2.0 ||    0:19 |      13 | unknown |       2022.1_AR76726 | [32mPASSED(B[m 
+[32mU0/M0/F01.Orig(B[m |  10 |    2 |    0 |   0 |    0 |   2 |    7 |   30 |   0 | 0.2 | 0.0 |    40 |     0 |    40 |   7(  2) |  60( 19) | 10088 |    8 | (B[m no(B[m || 00:10 | [33mx1.8(B[m || 00:11 | [33mx2.0(B[m ||    0:46 |      19 | unknown |       2022.1_AR76726 | [32mPASSED(B[m 
+ U0/M0/F02.src |  -- |   -- |   -- |  -- |   -- |  -- |   -- |   -- |  -- |  -- |  -- |    -- |    -- |    -- |       -- |       -- |    -- |   -- |  -- ||    -- |   -- ||    -- |   -- ||      -- |      -- |      -- |                   -- | [34mEMPTY(B[m 
+ U0/M0/F03.src |  -- |   -- |   -- |  -- |   -- |  -- |   -- |   -- |  -- |  -- |  -- |    -- |    -- |    -- |       -- |       -- |    -- |   -- |  -- ||    -- |   -- ||    -- |   -- ||      -- |      -- |      -- |                   -- | [34mEMPTY(B[m 
+WARNING: did not send an email copy, as ansi2html.sh is not available.

@@ -1,0 +1,45 @@
+#   step REPORT : Synthesizing module : zz_Encrypt_7
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : zz_Encrypt_7
+#   step REPORT : [39.350] Instance count of module zz_Encrypt_7 is 8
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_2
+#   step REPORT : [6.1691] Total net count: 13309
+#   step REPORT : [6.1690] There are 16 levels of combinational cells
+#   step REPORT : [6.1689] There are 10 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 60
+#   step REPORT : [6.1695] 3-input LUTs: 21
+#   step REPORT : [6.1695] 4-input LUTs: 201
+#   step REPORT : [6.1695] 5-input LUTs: 1051
+#   step REPORT : [6.1695] 6-input LUTs: 1289
+#   step REPORT : [6.1696] Total LUT area: 2622
+#   step REPORT : [6.1697] State    : 6043
+#   step REPORT : [6.1697]   (FF)   : 6043
+#   step REPORT : [6.1697] CARRY    : 18
+#   step REPORT : [6.1697] +CSA LUTs: 15
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.008 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (192 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zz_Encrypt_7' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                6043 |                2637 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 192 |                  21 |                   0 |                   0 |                   0 || zz_Encrypt_7
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zz_Encrypt_7' to 'edif/zz_Encrypt_7/zz_Encrypt_7.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zz_Encrypt_7/zz_Encrypt_7.edf.gz'
+#   step SERIALIZE : #bytes in: 444949, #bytes out: 138117, compression ratio: 3.221537
+#   step REPORT : [87.28] Resource usage for zz_Encrypt_7: 4.736s 192.2M

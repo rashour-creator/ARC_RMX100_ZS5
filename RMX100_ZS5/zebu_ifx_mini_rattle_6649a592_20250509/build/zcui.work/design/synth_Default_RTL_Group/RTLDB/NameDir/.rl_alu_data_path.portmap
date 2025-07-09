@@ -1,0 +1,38 @@
+Module rl_alu_data_path{
+}
+Module rl_adder_0000{
+}
+Module rl_maskgen{
+}
+Module rl_shifter_0000{
+}
+Module rl_byte_unit{
+}
+Module rl_bitscan{
+}
+
+EdfPortBounds rl_maskgen{
+31 0 mask_result
+4 0 src2_val
+}
+EdfPortBounds rl_adder_0000{
+31 0 result
+31 0 src0
+3 1 src0_shx_ctl
+31 0 src1
+}
+EdfPortBounds rl_shifter_0000{
+31 0 result
+31 0 src0
+31 0 src1_s6
+}
+EdfPortBounds rl_byte_unit{
+31 0 byte_result
+31 0 src
+}
+EdfPortBounds rl_bitscan{
+5 0 bitscan_result
+31 0 src2_val
+}
+NonAliasNets rl_alu_data_path{
+}

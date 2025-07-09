@@ -1,0 +1,113 @@
+FROM PATH 0
+tNode[ 2017495]:  acc delay        0 | arr   171256 | req   181854 | slk    10598 ||| port id  3196273 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser3.I1.O(S)
+--out[ 2017498] 151(151+0)
+tNode[ 2017498]:  acc delay      151 | arr   171407 | req   182005 | slk    10598 ||| port id  3196275 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser3.LVDSDES.ld_0.D
+--out[ 2017496] 100(0+100)
+tNode[ 2017496]:  acc delay      251 | arr   171507 | req   182105 | slk    10598 ||| port id  3196278 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser3.LVDSDES.ld_0.Q
+--out[    1130] 151(151+0)
+tNode[    1130]:  acc delay      402 | arr   171658 | req   182256 | slk    10598 ||| port id     1129 | part -1 | defpart | design.U0_M0_F1.F01_SocketOut.zplts_out_pclk_ready_in(E)
+
+FROM PATH 1
+tNode[ 2017477]:  acc delay        0 | arr   163256 | req   178392 | slk    15136 ||| port id  3196249 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser0.I1.O(S)
+--out[ 2017480] 151(151+0)
+tNode[ 2017480]:  acc delay      151 | arr   163407 | req   178543 | slk    15136 ||| port id  3196251 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser0.LVDSDES.ld_0.D
+--out[ 2017478] 100(0+100)
+tNode[ 2017478]:  acc delay      251 | arr   163507 | req   178643 | slk    15136 ||| port id  3196254 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser0.LVDSDES.ld_0.Q
+--out[    1040] 151(151+0)
+tNode[    1040]:  acc delay      402 | arr   163658 | req   178794 | slk    15136 ||| port id      840 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_in1_tic_clk_ready_in
+--out[     903] 3462(0+3462)
+tNode[     903]:  acc delay     3864 | arr   167120 | req   182256 | slk    15136 ||| port id     1042 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_out_ts_g_time_nxt[63](E)
+
+FROM PATH 2
+tNode[ 2017489]:  acc delay        0 | arr   155256 | req   178091 | slk    22835 ||| port id  3196265 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser2.I1.O(S)
+--out[ 2017492] 151(151+0)
+tNode[ 2017492]:  acc delay      151 | arr   155407 | req   178242 | slk    22835 ||| port id  3196267 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser2.LVDSDES.ld_0.D
+--out[ 2017490] 100(0+100)
+tNode[ 2017490]:  acc delay      251 | arr   155507 | req   178342 | slk    22835 ||| port id  3196270 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser2.LVDSDES.ld_0.Q
+--out[    1042] 151(151+0)
+tNode[    1042]:  acc delay      402 | arr   155658 | req   178493 | slk    22835 ||| port id      842 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_in_edge_ready_in[1]
+--out[     903] 3763(0+3763)
+tNode[     903]:  acc delay     4165 | arr   167120 | req   182256 | slk    15136 ||| port id     1042 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_out_ts_g_time_nxt[63](E)
+
+FROM PATH 3
+tNode[ 2017483]:  acc delay        0 | arr   154256 | req   178091 | slk    23835 ||| port id  3196257 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser1.I1.O(S)
+--out[ 2017486] 151(151+0)
+tNode[ 2017486]:  acc delay      151 | arr   154407 | req   178242 | slk    23835 ||| port id  3196259 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser1.LVDSDES.ld_0.D
+--out[ 2017484] 100(0+100)
+tNode[ 2017484]:  acc delay      251 | arr   154507 | req   178342 | slk    23835 ||| port id  3196262 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser1.LVDSDES.ld_0.Q
+--out[    1041] 151(151+0)
+tNode[    1041]:  acc delay      402 | arr   154658 | req   178493 | slk    23835 ||| port id      841 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_in_edge_ready_in[0]
+--out[     903] 3763(0+3763)
+tNode[     903]:  acc delay     4165 | arr   167120 | req   182256 | slk    15136 ||| port id     1042 | part -1 | defpart | design.U0_M0_F1.F01_ClockGen.zplts_out_ts_g_time_nxt[63](E)
+
+FROM PATH 4
+tNode[ 2017501]:  acc delay        0 | arr    92256 | req   181553 | slk    89297 ||| port id  3196281 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser4.I1.O(S)
+--out[ 2017504] 151(151+0)
+tNode[ 2017504]:  acc delay      151 | arr    92407 | req   181704 | slk    89297 ||| port id  3196283 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser4.LVDSDES.ld_0.D
+--out[ 2017502] 100(0+100)
+tNode[ 2017502]:  acc delay      251 | arr    92507 | req   181804 | slk    89297 ||| port id  3196286 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank29A.ClockRegion000R_29A.dser4.LVDSDES.ld_0.Q
+--out[ 2011446] 301(151+150)
+tNode[ 2011446]:  acc delay      552 | arr    92808 | req   182105 | slk    89297 ||| port id  3189553 | part -1 | design.U0_M0_F1.U0_M0_F1_core.zebuclk_uart_sclk_UNIT0_MOD0_F1_dup.zebu_zdr_U0_M0_F1\.U0_M0_F1_core\.zebuclk_uart_sclk_UNIT0_MOD0_F1_dup\.unnamed_sys_fm_20467_Q_AND_U0_M0_F1\.zrtlclkdup_14792976088952604435.O
+--out[ 2011292] 151(151+0)
+tNode[ 2011292]:  acc delay      703 | arr    92959 | req   182256 | slk    89297 ||| port id  3188752 | part -1 | design.U0_M0_F1.U0_M0_F1_core.zebuclk_uart_sclk_UNIT0_MOD0_F1_dup.fm_cset_rewrite_unnamed_89038.CE(E)
+
+TO PATH 0
+tNode[ 2017671]:  acc delay        0 | arr     9472 | req    70000 | slk    60528 ||| port id  3196517 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser2.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 1
+tNode[ 2017667]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196511 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser10.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 2
+tNode[ 2017679]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196529 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser4.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 3
+tNode[ 2017683]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196535 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser5.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 4
+tNode[ 2017687]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196541 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser6.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 5
+tNode[ 2017691]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196547 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser7.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 6
+tNode[ 2017695]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196553 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser8.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 7
+tNode[ 2017699]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196559 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank31B.ClockRegion002S_31B.ser9.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 8
+tNode[ 2017846]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196764 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank66A.ClockRegion003S_66A.ser0.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 9
+tNode[ 2017850]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196770 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank66A.ClockRegion003S_66A.ser1.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 10
+tNode[ 2017858]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196782 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank66A.ClockRegion003S_66A.ser2.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 11
+tNode[ 2017862]:  acc delay        0 | arr    46327 | req   110000 | slk    63673 ||| port id  3196788 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank66A.ClockRegion003S_66A.ser3.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 12
+tNode[ 2017291]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3195983 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser0.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 13
+tNode[ 2017295]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3195989 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser1.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 14
+tNode[ 2017299]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3195995 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser10.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 15
+tNode[ 2017303]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3196001 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser2.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 16
+tNode[ 2017307]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3196007 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser3.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 17
+tNode[ 2017311]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3196013 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser4.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 18
+tNode[ 2017315]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3196019 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser5.LVDSSER.sock_dout_INST_0.I1(E)
+
+TO PATH 19
+tNode[ 2017319]:  acc delay        0 | arr    46327 | req   111000 | slk    64673 ||| port id  3196025 | part -1 | defpart | design.socket_00_01_00_00.sockHalfBank22B.ClockRegion000S_22B.ser6.LVDSSER.sock_dout_INST_0.I1(E)
+

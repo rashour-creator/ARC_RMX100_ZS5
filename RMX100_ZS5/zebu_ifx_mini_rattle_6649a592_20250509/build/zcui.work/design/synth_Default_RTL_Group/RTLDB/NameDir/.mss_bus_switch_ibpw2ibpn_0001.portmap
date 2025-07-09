@@ -1,0 +1,39 @@
+Module mss_bus_switch_ibpw2ibpn_0001{
+}
+Module mss_bus_switch_fifo_0001_0004{
+}
+
+EdfPortBounds mss_bus_switch_fifo_0001_0004{
+9 0 i_data
+64 0 i_occp
+9 0 o_data
+64 0 o_occp
+}
+EdfPortBounds zceiMessageOutPort{
+31 0 message
+}
+EdfPortBounds zceiMessageOutPort_1{
+0 0 message
+}
+EdfPortBounds zceiMessageOutPort_65{
+64 0 message
+}
+EdfPortBounds zceiMessageInPort{
+31 0 message
+}
+EdfPortBounds zceiMessageInPort_1{
+0 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_4_1{
+3 0 signal
+3 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+NonAliasNets mss_bus_switch_ibpw2ibpn_0001{
+}

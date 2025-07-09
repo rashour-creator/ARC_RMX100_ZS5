@@ -1,0 +1,18 @@
+rl_core
+u_rl_soft_reset_aux -> u_rl_soft_reset_aux -> rl_soft_reset_aux
+u_rl_mmio_ahb2ibp -> u_rl_mmio_ahb2ibp -> rl_mmio_ahb2ibp
+u_rl_dccm_ahb2ibp -> u_rl_dccm_ahb2ibp -> rl_ahb2ibp_0001
+u_rl_iccm_ahb2ibp -> u_rl_iccm_ahb2ibp -> rl_ahb2ibp_0000
+u_rl_per_ibp2ahb -> u_rl_per_ibp2ahb -> rl_per_ibp2ahb
+u_rl_ibp2ahb -> u_rl_ibp2ahb -> rl_ibp2ahb
+u_rl_ras_top -> u_rl_ras_top -> rl_ras_top
+u_rl_ibp2mmio -> u_rl_ibp2mmio -> rl_ibp2mmio
+u_sfty_ibp_mmio_ini_e2e -> u_sfty_ibp_mmio_ini_e2e -> sfty_ibp_ini_e2e_wrap_0000
+u_rl_sfty_csr -> u_rl_sfty_csr -> rl_sfty_csr
+u_rl_triggers -> u_rl_triggers -> rl_triggers
+u_rl_pma -> u_rl_pma -> rl_pma
+u_rl_epmp -> u_rl_epmp -> rl_epmp
+u_rl_dmp -> u_rl_dmp -> rl_dmp
+u_rl_exu -> u_rl_exu -> rl_exu
+u_rl_ifu -> u_rl_ifu -> rl_ifu
+u_rl_hpm -> u_rl_hpm -> rl_hpm

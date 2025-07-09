@@ -1,0 +1,28 @@
+Module iprio_arb_4to1{
+}
+
+EdfPortBounds mss_bus_switch_ibp2single_0000_0001{
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+127 0 i_ibp_rd_data
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+127 0 o_ibp_rd_data
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+NonAliasNets iprio_arb_4to1{
+}

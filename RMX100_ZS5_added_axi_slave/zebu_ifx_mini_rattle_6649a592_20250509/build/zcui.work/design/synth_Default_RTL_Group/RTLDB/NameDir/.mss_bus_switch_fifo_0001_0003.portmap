@@ -1,0 +1,288 @@
+Module mss_bus_switch_fifo_0001_0003{
+}
+
+EdfPortBounds alb_mss_mem_fifo_0002{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+EdfPortBounds bvci_to_axi{
+31 0 bri_araddr
+1 0 bri_arburst
+3 0 bri_arcache
+3 0 bri_arid
+3 0 bri_arlen
+1 0 bri_arlock
+2 0 bri_arprot
+2 0 bri_arsize
+31 0 bri_awaddr
+1 0 bri_awburst
+3 0 bri_awcache
+3 0 bri_awid
+3 0 bri_awlen
+1 0 bri_awlock
+2 0 bri_awprot
+2 0 bri_awsize
+3 0 bri_bid
+1 0 bri_bresp
+31 0 bri_rdata
+3 0 bri_rid
+1 0 bri_rresp
+31 0 bri_wdata
+3 0 bri_wid
+3 0 bri_wstrb
+31 0 select_in
+31 0 t_address
+3 0 t_be
+1 0 t_cmd
+8 0 t_plen
+31 0 t_rdata
+31 0 t_wdata
+}
+EdfPortBounds alb_mss_fab_axi2ibp_rrobin{
+1 0 grt_vector
+1 0 req_vector
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_2_1{
+1 0 signal
+1 0 signal_sample
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0000{
+0 0 i_data
+64 0 i_occp
+0 0 o_data
+64 0 o_occp
+}
+EdfPortBounds zebu_bb_gdelay{
+23 0 out
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0000{
+0 0 i_data
+16 0 i_occp
+0 0 o_data
+16 0 o_occp
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+EdfPortBounds zebu_bb_ts_cur_time{
+63 0 ts_time
+}
+EdfPortBounds rl_parity_gen_0000_0002{
+6 0 din
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000{
+59 0 i_data
+59 0 o_data
+}
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds zceiMessageOutPort_4096{
+4095 0 message
+}
+EdfPortBounds zemi3OutPortBuffer_169_4096_24{
+23 0 message0
+4095 0 msg_out
+}
+EdfPortBounds rl_parity_gen_0000_0001{
+4 0 din
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds rl_wtree_32x4{
+32 0 a
+33 0 acc
+3 0 b
+36 0 pcarry
+36 0 psum
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds rl_parity_gen_0000_0003{
+3 0 din
+}
+EdfPortBounds apb_master_ap0{
+31 2 dbg_address
+3 0 dbg_be
+1 0 dbg_cmd
+31 0 dbg_rdata
+31 0 dbg_wdata
+31 2 paddrdbg
+31 0 prdatadbg
+31 0 pwdatadbg
+31 0 select_in
+}
+EdfPortBounds alb_mss_fab_slv_axi_buffer{
+41 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+3 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+41 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+3 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+3 0 i_axi_bid
+1 0 i_axi_bresp
+31 0 i_axi_rdata
+3 0 i_axi_rid
+1 0 i_axi_rresp
+31 0 i_axi_wdata
+3 0 i_axi_wid
+3 0 i_axi_wstrb
+41 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+3 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+41 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+3 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+3 0 o_axi_bid
+1 0 o_axi_bresp
+31 0 o_axi_rdata
+3 0 o_axi_rid
+1 0 o_axi_rresp
+31 0 o_axi_wdata
+3 0 o_axi_wid
+3 0 o_axi_wstrb
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds rl_parity_gen_0000_0000{
+8 0 din
+}
+EdfPortBounds zceiMessageOutPort_128{
+127 0 message
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds alb_mss_fab_fifo_0002_0001{
+3 0 i_data
+16 0 i_occp
+3 0 o_data
+16 0 o_occp
+}
+EdfPortBounds zceiMessageInPort_2{
+1 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_24_1{
+23 0 signal
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds dwt_jtag_port{
+31 0 dbg_address
+3 0 dbg_be
+1 0 dbg_cmd
+31 0 dbg_rdata
+31 0 dbg_wdata
+}
+NonAliasNets mss_bus_switch_fifo_0001_0003{
+fifo_dep_gt_1_occp_cpy_r[6]    f   582
+fifo_dep_gt_1_occp_cpy_r[3]    f   585
+fifo_dep_gt_1_occp_cpy_r[5]    f   583
+fifo_dep_gt_1_occp_cpy_r[2]    f   586
+fifo_dep_gt_1_occp_cpy_r[4]    f   584
+fifo_dep_gt_1_wptr_vec_r[63]    f   1102
+fifo_dep_gt_1_rptr_vec_r[63]    f   1038
+fifo_dep_gt_1_occp_cpy_r[1]    f   587
+fifo_dep_gt_1_occp_cpy_r[7]    f   581
+fifo_dep_gt_1_occp_cpy_r[8]    f   580
+fifo_dep_gt_1_occp_cpy_r[9]    f   579
+fifo_dep_gt_1_occp_cpy_r[10]    f   578
+fifo_dep_gt_1_occp_cpy_r[11]    f   577
+fifo_dep_gt_1_occp_cpy_r[12]    f   576
+fifo_dep_gt_1_occp_cpy_r[13]    f   575
+fifo_dep_gt_1_occp_cpy_r[14]    f   574
+fifo_dep_gt_1_occp_cpy_r[15]    f   573
+fifo_dep_gt_1_occp_cpy_r[16]    f   572
+fifo_dep_gt_1_occp_cpy_r[17]    f   571
+fifo_dep_gt_1_occp_cpy_r[18]    f   570
+fifo_dep_gt_1_occp_cpy_r[19]    f   569
+fifo_dep_gt_1_occp_cpy_r[20]    f   568
+fifo_dep_gt_1_occp_cpy_r[21]    f   567
+fifo_dep_gt_1_occp_cpy_r[22]    f   566
+fifo_dep_gt_1_occp_cpy_r[23]    f   565
+fifo_dep_gt_1_occp_cpy_r[24]    f   564
+fifo_dep_gt_1_occp_cpy_r[25]    f   563
+fifo_dep_gt_1_occp_cpy_r[26]    f   562
+fifo_dep_gt_1_occp_cpy_r[27]    f   561
+fifo_dep_gt_1_occp_cpy_r[28]    f   560
+fifo_dep_gt_1_occp_cpy_r[29]    f   559
+fifo_dep_gt_1_occp_cpy_r[30]    f   558
+fifo_dep_gt_1_occp_cpy_r[31]    f   557
+fifo_dep_gt_1_occp_cpy_r[32]    f   556
+fifo_dep_gt_1_occp_cpy_r[33]    f   555
+fifo_dep_gt_1_occp_cpy_r[34]    f   554
+fifo_dep_gt_1_occp_cpy_r[35]    f   553
+fifo_dep_gt_1_occp_cpy_r[36]    f   552
+fifo_dep_gt_1_occp_cpy_r[37]    f   551
+fifo_dep_gt_1_occp_cpy_r[38]    f   550
+fifo_dep_gt_1_occp_cpy_r[39]    f   549
+fifo_dep_gt_1_occp_cpy_r[40]    f   548
+fifo_dep_gt_1_occp_cpy_r[41]    f   547
+fifo_dep_gt_1_occp_cpy_r[42]    f   546
+fifo_dep_gt_1_occp_cpy_r[43]    f   545
+fifo_dep_gt_1_occp_cpy_r[44]    f   544
+fifo_dep_gt_1_occp_cpy_r[45]    f   543
+fifo_dep_gt_1_occp_cpy_r[46]    f   542
+fifo_dep_gt_1_occp_cpy_r[47]    f   541
+fifo_dep_gt_1_occp_cpy_r[48]    f   540
+fifo_dep_gt_1_occp_cpy_r[49]    f   539
+fifo_dep_gt_1_occp_cpy_r[50]    f   538
+fifo_dep_gt_1_occp_cpy_r[51]    f   537
+fifo_dep_gt_1_occp_cpy_r[52]    f   536
+fifo_dep_gt_1_occp_cpy_r[53]    f   535
+fifo_dep_gt_1_occp_cpy_r[54]    f   534
+fifo_dep_gt_1_occp_cpy_r[55]    f   533
+fifo_dep_gt_1_occp_cpy_r[56]    f   532
+fifo_dep_gt_1_occp_cpy_r[57]    f   531
+fifo_dep_gt_1_occp_cpy_r[58]    f   530
+fifo_dep_gt_1_occp_cpy_r[59]    f   529
+fifo_dep_gt_1_occp_cpy_r[60]    f   528
+fifo_dep_gt_1_occp_cpy_r[61]    f   527
+fifo_dep_gt_1_occp_cpy_r[62]    f   526
+fifo_dep_gt_1_occp_cpy_r[63]    f   525
+fifo_dep_gt_1_occp_cpy_r[64]    f   524
+}

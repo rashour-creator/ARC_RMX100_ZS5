@@ -1,0 +1,34 @@
+#   step REPORT : Synthesizing module : rl_alu_data_path
+#   step REPORT : Synthesizing module : rl_logic_unit
+#   step REPORT : [39.349] Optimizing module : rl_alu_data_path
+#   step REPORT : [39.350] Instance count of module rl_alu_data_path is 2
+#   step REPORT : [6.1691] Total net count: 1087
+#   step REPORT : [6.1690] There are 19 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 64
+#   step REPORT : [6.1695] 3-input LUTs: 67
+#   step REPORT : [6.1695] 4-input LUTs: 50
+#   step REPORT : [6.1695] 5-input LUTs: 99
+#   step REPORT : [6.1695] 6-input LUTs: 119
+#   step REPORT : [6.1696] Total LUT area: 399
+#   step REPORT : [6.1697] CARRY    : 3
+#   step REPORT : [6.1697] +CSA LUTs: 223
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_alu_data_path' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 622 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 215 |                   5 |                   0 |                   0 |                   0 || rl_alu_data_path
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_alu_data_path' to 'edif/rl_alu_data_path/rl_alu_data_path.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_alu_data_path/rl_alu_data_path.edf.gz'
+#   step SERIALIZE : #bytes in: 39860, #bytes out: 18246, compression ratio: 2.184588
+#   step REPORT : [87.28] Resource usage for rl_alu_data_path: 0.170s 0.0M

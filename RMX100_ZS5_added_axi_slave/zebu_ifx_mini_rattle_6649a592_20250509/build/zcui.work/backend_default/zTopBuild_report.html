@@ -1,0 +1,2298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html&nbsp;charset=ISO-8859-1" />
+<title align="center">Report(/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default)</title>
+</head>
+<body>
+<div id="title" class="title">
+    <h1>Report</h1>
+  </div>
+  <div id="content" class="content">
+
+
+<h2>Command line:</h2>
+    <h3>Directory:(/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default)</h3>
+<pre>
+
+
+
+
+                                    ZeBu (R)
+                                   zTopBuild
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zTopBuild zTopBuild.tcl 
+
+# start time is Wed May 14 18:58:15 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:40:17
+# ---------------------------System Context--------------------------- 
+# Cpu        20 x bogomips - 4800.11 Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+#            Load: 2.48 4.14 4.99 5/901 805462
+#            Hostname: vgzeburtdc257   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 257566 MB Free: 209633 MB
+#            Swap space: 1023 MB Free Swap space: 0 MB
+#            VmSize: 382 MB VmPeak: 382 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11741568
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+
+</pre>
+<h2>Table of content:</h2><ul>
+<li>
+<a href="#K1.">
+ 1.Loading.
+</a>
+<ul>
+<li>
+<a href="#K1.1.">
+    1.1.Netlist files loading.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K2.">
+ 2.Incremental manipulations.
+</a>
+</li>
+<li>
+<a href="#K3.">
+ 3.Netlist editing.
+</a>
+<ul>
+<li>
+<a href="#K3.1.">
+    3.1.zGate was applied to following wires/signals.
+</a>
+</li>
+<li>
+<a href="#K3.2.">
+    3.2.User blackbox processings
+</a>
+</li>
+<li>
+<a href="#K3.3.">
+    3.3.Removal of top-level ports in no DVE flow.
+</a>
+</li>
+<li>
+<a href="#K3.4.">
+    3.4.Auto-fixing of undriven & multidriven nets
+</a>
+</li>
+<li>
+<a href="#K3.5.">
+    3.5.Auto-fixing of undriven nets and ports
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K4.">
+ 4.Checks on user original netlist.
+</a>
+<ul>
+<li>
+<a href="#K4.1.">
+    4.1.Blackbox automated fixing.
+</a>
+</li>
+<li>
+<a href="#K4.2.">
+    4.2.Unexpected Blackboxes
+</a>
+</li>
+<li>
+<a href="#K4.3.">
+    4.3.TOP CONNECTIONS
+</a>
+</li>
+<li>
+<a href="#K4.4.">
+    4.4.Checking module names in input netlist.
+</a>
+</li>
+<li>
+<a href="#K4.5.">
+    4.5.Checking INIT values on netlist's instances.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K5.">
+ 5.Pre-clustering.
+</a>
+<ul>
+<li>
+<a href="#K5.1.">
+    5.1.U0_M0 constraint generation
+</a>
+</li>
+<li>
+<a href="#K5.2.">
+    5.2.Summary
+</a>
+</li>
+<li>
+<a href="#K5.3.">
+    5.3.Multiple instantiation
+</a>
+<ul>
+<li>
+<a href="#K5.3.1.">
+        5.3.1.Multi-instantiation cost (ordered with various criteria)
+</a>
+</li>
+<li>
+<a href="#K5.3.2.">
+        5.3.2.Modules with unusual properties (ordered with various criteria)
+</a>
+</li>
+</ul>
+</li>
+<li>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_5_4_Detection_.html" name="K5.4." id="K5.4.">    5.4.Detection of sub-system candidates
+</a>
+</li>
+<li>
+<a href="#K5.5.">
+    5.5.ZMem resource utilization
+</a>
+</li>
+<li>
+<a href="#K5.6.">
+    5.6.ZMem resource utilization
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K6.">
+ 6.Power network definition.
+</a>
+</li>
+<li>
+<a href="#K7.">
+ 7.User and netlist wire resolution directives.
+</a>
+<ul>
+<li>
+<a href="#K7.1.">
+    7.1.Wire resolution user commands.
+</a>
+</li>
+<li>
+<a href="#K7.2.">
+    7.2.Wire resolution definitions from zebu macros.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K8.">
+ 8.User and netlist tristate directives.
+</a>
+<ul>
+<li>
+<a href="#K8.1.">
+    8.1.Tristate global parameters.
+</a>
+</li>
+<li>
+<a href="#K8.2.">
+    8.2.Tristate user commands.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K9.">
+ 9.User probes.
+</a>
+<ul>
+<li>
+<a href="#K9.1.">
+    9.1.Rtl name resolution in probes
+</a>
+</li>
+<li>
+<a href="#K9.2.">
+    9.2.User dynamic probes.
+</a>
+</li>
+<li>
+<a href="#K9.3.">
+    9.3.User sram_trace probes.
+</a>
+</li>
+<li>
+<a href="#K9.4.">
+    9.4.User read/write port probes.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K10.">
+ 10.Fast Waveform Capture.
+</a>
+</li>
+<li>
+<a href="#K11.">
+ 11.Monitor.
+</a>
+</li>
+<li>
+<a href="#K12.">
+ 12.Pre-Split Data Localization.
+</a>
+</li>
+<li>
+<a href="#K13.">
+ 13.User forces (assign/undriven).
+</a>
+</li>
+<li>
+<a href="#K14.">
+ 14.User dynamic forces.
+</a>
+<ul>
+<li>
+<a href="#K14.1.">
+    14.1.User dynamic forces (pre-netlist-load checks).
+</a>
+</li>
+<li>
+<a href="#K14.2.">
+    14.2.User dynamic forces (insertion).
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K15.">
+ 15.User forces and injection.
+</a>
+<ul>
+<li>
+<a href="#K15.1.">
+    15.1.User forces and injections (pre-netlist-load checks).
+</a>
+</li>
+<li>
+<a href="#K15.2.">
+    15.2.User forces and injections (insertion).
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K16.">
+ 16.Memory non-determinism resolution.
+</a>
+</li>
+<li>
+<a href="#K17.">
+ 17.Logic Optimization.
+</a>
+</li>
+<li>
+<a href="#K18.">
+ 18.Post-buffer simplification undriven fixing.
+</a>
+</li>
+<li>
+<a href="#K19.">
+ 19.Partitioning.
+</a>
+<ul>
+<li>
+<a href="#K19.1.">
+    19.1.Design size areas before partitioning
+</a>
+</li>
+<li>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_19_2_Partitione.html" name="K19.2." id="K19.2.">    19.2.Partitioner constraints
+</a>
+</li>
+<li>
+<a href="#K19.3.">
+    19.3.Partitioner basic resource estimations
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K20.">
+ 20.Netlist split.
+</a>
+<ul>
+<li>
+<a href="#K20.1.">
+    20.1.Initial core definition (defcore commands)
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K21.">
+ 21.Asynchronous paths optimization processing
+</a>
+</li>
+<li>
+<a href="#K22.">
+ 22.Post-split wire resolution handling.
+</a>
+</li>
+<li>
+<a href="#K23.">
+ 23.Post-split tristate handling.
+</a>
+</li>
+<li>
+<a href="#K24.">
+ 24.Clock handling.
+</a>
+</li>
+<li>
+<a href="#K25.">
+ 25.Post-split statistics.
+</a>
+</li>
+<li>
+<a href="#K26.">
+ 26.Object IDs statistics.
+</a>
+</li>
+<li>
+<a href="#K27.">
+ 27.Ice connection processing.
+</a>
+<ul>
+<li>
+<a href="#K27.1.">
+    27.1.ICE commands report.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#K28.">
+ 28.Combinational loops manipulations.
+</a>
+</li>
+<li>
+<a href="#K29.">
+ 29.Inter-partition combinational loops checks.
+</a>
+</li>
+<li>
+<a href="#K30.">
+ 30.Sparse Memory Conversion.
+</a>
+</li>
+<li>
+<a href="#K31.">
+ 31.Netlist memory usage.
+</a>
+<ul>
+<li>
+<a href="#K31.1.">
+    31.1.Netlist memory information after the 'merged' step of the flow.
+</a>
+</li>
+</ul>
+</li>
+<li>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_32_Detailed_e.html" name="K32." id="K32."> 32.Detailed execution time and memory usage.
+</a>
+</li>
+<li>
+<a href="#K33.">
+ 33.SCC Reduction.
+</a>
+</li>
+<li>
+<a href="#K34.">
+ 34.Memory optimization.
+</a>
+</li>
+</ul>
+
+
+<pre>
+======================================================================================================
+</pre>
+
+
+
+<a name="K1." id="K1."></a>
+<h4><a href="#">1.Loading.
+</a></h4>
+<pre>
+</pre>
+<a name="K1.1." id="K1.1."></a>
+<h4><a href="#">1.1.Netlist files loading.
+</a></h4>
+<pre>
+
+487 edif files read out of 487 commands.
+</pre>
+<a name="K2." id="K2."></a>
+<h4><a href="#">2.Incremental manipulations.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K3." id="K3."></a>
+<h4><a href="#">3.Netlist editing.
+</a></h4>
+<pre>
+</pre>
+<a name="K3.1." id="K3.1."></a>
+<h4><a href="#">3.1.zGate was applied to following wires/signals.
+</a></h4>
+<pre>
+Note: "Module1 (Module2)" indicates that this zGate drives an instance port, Module1 is owner of the zGate, and Module2 is module of the port driven by this zGate
+</pre>
+<a name="K3.2." id="K3.2."></a>
+<h4><a href="#">3.2.User blackbox processings
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K3.3." id="K3.3."></a>
+<h4><a href="#">3.3.Removal of top-level ports in no DVE flow.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K3.4." id="K3.4."></a>
+<h4><a href="#">3.4.Auto-fixing of undriven & multidriven nets
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K3.5." id="K3.5."></a>
+<h4><a href="#">3.5.Auto-fixing of undriven nets and ports
+</a></h4>
+<pre>
+Undriven net fixing: 
+zebu_top.jtag_srstn
+zebu_top.jtag_xtor_info_port[83]
+zebu_top.jtag_xtor_info_port[84]
+zebu_top.jtag_xtor_info_port[85]
+zebu_top.jtag_xtor_info_port[86]
+zebu_top.jtag_xtor_info_port[87]
+zebu_top.jtag_xtor_info_port[88]
+zebu_top.jtag_xtor_info_port[89]
+zebu_top.jtag_xtor_info_port[90]
+zebu_top.jtag_xtor_info_port[91]
+zebu_top.jtag_xtor_info_port[92]
+zebu_top.jtag_xtor_info_port[93]
+zebu_top.jtag_xtor_info_port[94]
+zebu_top.jtag_xtor_info_port[95]
+zebu_top.jtag_xtor_info_port[96]
+zebu_top.jtag_xtor_info_port[97]
+zebu_top.jtag_xtor_info_port[98]
+zebu_top.jtag_xtor_info_port[99]
+zebu_top.jtag_xtor_info_port[100]
+zebu_top.jtag_xtor_info_port[101]
+zebu_top.jtag_xtor_info_port[102]
+zebu_top.jtag_xtor_info_port[103]
+zebu_top.jtag_xtor_info_port[104]
+zebu_top.jtag_xtor_info_port[105]
+zebu_top.jtag_xtor_info_port[106]
+zebu_top.jtag_xtor_info_port[107]
+zebu_top.jtag_xtor_info_port[108]
+zebu_top.jtag_xtor_info_port[109]
+zebu_top.jtag_xtor_info_port[110]
+zebu_top.jtag_xtor_info_port[111]
+zebu_top.jtag_xtor_info_port[112]
+zebu_top.jtag_xtor_info_port[113]
+zebu_top.jtag_xtor_info_port[114]
+zebu_top.jtag_xtor_info_port[115]
+zebu_top.jtag_xtor_info_port[116]
+zebu_top.jtag_xtor_info_port[117]
+zebu_top.jtag_xtor_info_port[118]
+zebu_top.jtag_xtor_info_port[119]
+zebu_top.jtag_xtor_info_port[120]
+zebu_top.jtag_xtor_info_port[121]
+zebu_top.jtag_xtor_info_port[122]
+zebu_top.jtag_xtor_info_port[123]
+zebu_top.jtag_xtor_info_port[124]
+zebu_top.jtag_xtor_info_port[125]
+zebu_top.jtag_xtor_info_port[126]
+zebu_top.jtag_xtor_info_port[127]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[2]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[3]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[4]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[5]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[6]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[7]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[8]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[9]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[10]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[11]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[12]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[13]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[14]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.wid[15]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awprot[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awprot[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awprot[2]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awlock[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awlock[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awcache[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awcache[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awcache[2]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.awcache[3]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arprot[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arprot[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arprot[2]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arlock[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arlock[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arcache[0]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arcache[1]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arcache[2]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.arcache[3]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[5]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[6]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[7]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[8]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[9]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[10]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[11]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[12]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[13]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[14]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[15]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[16]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[17]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[18]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[19]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[20]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[21]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[22]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[23]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[24]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[25]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[26]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[27]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[28]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[29]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[30]
+zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.xtor_info_slave[31]
+
+Undriven port fixing: 
+Reached max count for report ! To get full report please use command: wire_resolution_defaults -report_undriven_multidriver true
+
+Manipulating tristate / multi-driven nets:
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.mst_dbu_per_ahb_hibp_cmd_excl with conflict resolution WAND and with pull type PULLDOWN
+    with 2 drivers (1 constant, 1 other)
+zebu_top.core_chip_dut.icore_sys.ialb_mss_fab.mst_ahb_hibp_cmd_excl with conflict resolution WAND and with pull type PULLDOWN
+    with 2 drivers (1 constant, 1 other)
+</pre>
+<a name="K4." id="K4."></a>
+<h4><a href="#">4.Checks on user original netlist.
+</a></h4>
+<pre>
+</pre>
+<a name="K4.1." id="K4.1."></a>
+<h4><a href="#">4.1.Blackbox automated fixing.
+</a></h4>
+<pre>
+
+Blackbox module ports will be connected to dangling wires.
+As a result blackbox will not be driven anymore and netlist fixing algorithms will take care of addressing undriven signals created during this process.
+
+    design_lib@arcv_dm_top_stubs
+</pre>
+<a name="K4.2." id="K4.2."></a>
+<h4><a href="#">4.2.Unexpected Blackboxes
+</a></h4>
+<pre>
+    design_lib@arcv_dm_top_stubs
+</pre>
+<a name="K4.3." id="K4.3."></a>
+<h4><a href="#">4.3.TOP CONNECTIONS
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K4.4." id="K4.4."></a>
+<h4><a href="#">4.4.Checking module names in input netlist.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K4.5." id="K4.5."></a>
+<h4><a href="#">4.5.Checking INIT values on netlist's instances.
+</a></h4>
+<pre>
+
+
+This check can be (de)activated with the tcl command 'check_input_netlist -check_init_values=yes|no'.
+</pre>
+<a name="K5." id="K5."></a>
+<h4><a href="#">5.Pre-clustering.
+</a></h4>
+<pre>
+</pre>
+<a name="K5.1." id="K5.1."></a>
+<h4><a href="#">5.1.U0_M0 constraint generation
+</a></h4>
+<pre>
+Defcore legalization
+</pre>
+<a name="K5.2." id="K5.2."></a>
+<h4><a href="#">5.2.Summary
+</a></h4>
+<pre>
+
+Net list information:
+          +--------------------------------+--+
+          |Hierarchical Modules            |40|
+          |Macro Models                    |70|
+          |Blackbox Memory(ies)            |12|
+          |Blackbox ZView(s)               | 1|
+          |Fast Waveform Capture IP box(es)| 0|
+          |DPI Module(s)                   | 0|
+          |Qiwc IP box(es)                 | 0|
+          |Asynchronous ZMEM Memory(ies)   | 6|
+          |Synchronous ZMEM Memory(ies)    | 6|
+          +--------------------------------+--+
+
+
+
+Primitive count from the top module 
+          +-----------------------------------+---------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+          |Primitive Name                     |Total nb.|Cost per primitive                                                                      |Cost at top level                                                                                                                                          |
+          +-----------------------------------+---------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+          |BUF                                |      542|                                                                                        |                                                                                                                                                           |
+          |CARRY8                             |     2981|                                                                                        |                                                                                                                                                           |
+          |DBG_FWC                            |        4|LUT: 2 LUT6: 1 RAM: 1 REG: 2 FWC_IP_BITS: 1 QIWC_IP_BITS: 1                             |LUT: 6 LUT6: 2 RAM: 1 REG: 5 FWC_IP_BITS: 4 QIWC_IP_BITS: 4                                                                                                |
+          |DBG_FWC                            |      830|LUT: 1 REG: 1 FWC_IP_BITS: 1                                                            |LUT: 830 REG: 830 FWC_IP_BITS: 830                                                                                                                         |
+          |DBG_QIWC                           |   116285|LUT: 1 LUT6: 1 RAM: 1 REG: 1 QIWC_IP_BITS: 1                                            |LUT: 38762 LUT6: 38762 RAM: 22 REG: 8140 QIWC_IP_BITS: 116285                                                                                              |
+          |DBG_READBACK                       |        4|LUT: 1 LUT6: 1 RAM: 1 REG: 1 QIWC_IP_BITS: 1                                            |LUT: 2 LUT6: 2 RAM: 1 REG: 1 QIWC_IP_BITS: 4                                                                                                               |
+          |DBG_READBACK                       |      567|LUT: 1 LUT6: 1 RAM: 1 REG: 2 QIWC_IP_BITS: 1                                            |LUT: 189 LUT6: 189 RAM: 1 REG: 607 QIWC_IP_BITS: 567                                                                                                       |
+          |DBG_READBACK                       |    10918|                                                                                        |                                                                                                                                                           |
+          |DBG_READBACK                       |    32598|REG: 1                                                                                  |REG: 32598                                                                                                                                                 |
+          |DRIVERLESS                         |    30885|                                                                                        |                                                                                                                                                           |
+          |FD                                 |    14572|REG: 1                                                                                  |REG: 14572                                                                                                                                                 |
+          |FDC                                |    12586|REG: 1                                                                                  |REG: 12586                                                                                                                                                 |
+          |FDCE                               |    54449|REG: 1                                                                                  |LUT: 1271 REG: 54449                                                                                                                                       |
+          |FDCP                               |        1|REG: 1                                                                                  |REG: 1                                                                                                                                                     |
+          |FDCPE                              |        3|REG: 1                                                                                  |REG: 3                                                                                                                                                     |
+          |FDC_1                              |        6|REG: 1                                                                                  |REG: 6                                                                                                                                                     |
+          |FDE                                |    60856|REG: 1                                                                                  |LUT: 1421 REG: 60856                                                                                                                                       |
+          |FDP                                |      368|REG: 1                                                                                  |REG: 368                                                                                                                                                   |
+          |FDPE                               |      701|REG: 1                                                                                  |LUT: 16 REG: 701                                                                                                                                           |
+          |FDP_1                              |        1|REG: 1                                                                                  |REG: 1                                                                                                                                                     |
+          |FDR                                |        8|REG: 1                                                                                  |REG: 8                                                                                                                                                     |
+          |FDRE                               |     2932|REG: 1                                                                                  |LUT: 68 REG: 2932                                                                                                                                          |
+          |FDSE                               |      116|REG: 1                                                                                  |LUT: 2 REG: 116                                                                                                                                            |
+          |FD_1                               |     3118|REG: 1                                                                                  |REG: 3118                                                                                                                                                  |
+          |GND                                |       14|                                                                                        |                                                                                                                                                           |
+          |INV                                |     1210|                                                                                        |                                                                                                                                                           |
+          |LD_1                               |       26|REG: 1                                                                                  |REG: 26                                                                                                                                                    |
+          |LUT1                               |      653|                                                                                        |                                                                                                                                                           |
+          |LUT2                               |    39190|LUT: 1                                                                                  |LUT: 39190                                                                                                                                                 |
+          |LUT3                               |    26062|LUT: 1                                                                                  |LUT: 26062                                                                                                                                                 |
+          |LUT4                               |    35892|LUT: 1                                                                                  |LUT: 35892                                                                                                                                                 |
+          |LUT5                               |    36108|LUT: 1                                                                                  |LUT: 36108                                                                                                                                                 |
+          |LUT6                               |    66765|LUT: 1 LUT6: 1                                                                          |LUT: 66765 LUT6: 66765                                                                                                                                     |
+          |MUXF7                              |      335|LUT: 1 REG: 1                                                                           |LUT: 335 REG: 335                                                                                                                                          |
+          |VCC                                |       66|                                                                                        |                                                                                                                                                           |
+          |ZCEICLOCKCONTROL_ENABLE            |       36|                                                                                        |                                                                                                                                                           |
+          |ZCEICLOCKCONTROL_READY             |       36|                                                                                        |                                                                                                                                                           |
+          |ZCEI_TRIGGER                       |        1|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_CLKHUB                     |        1|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_CYCLE_DELAY                |    29808|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_STOP_DRIVER_CLOCK          |        5|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_TS_CUR_TIME                |        1|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_TS_RTL_CLOCK               |        6|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_TS_RTL_CLOCK_NO_TOL        |        9|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_WB_REG                     |        4|REG: 1                                                                                  |REG: 4                                                                                                                                                     |
+          |ZEBU_BB_XTOR_MCP_CLK               |        9|                                                                                        |                                                                                                                                                           |
+          |ZEBU_BB_ZMEM                       |        1|RAM: 1 REG: 35                                                                          |RAM: 1 REG: 35                                                                                                                                             |
+          |ZEBU_BB_ZMEM                       |        1|LUT: 61 RAM: 1 REG: 106                                                                 |LUT: 61 RAM: 1 REG: 106                                                                                                                                    |
+          |ZEBU_BB_ZMEM                       |        1|RAM: 4 REG: 293                                                                         |RAM: 4 REG: 293                                                                                                                                            |
+          |ZEBU_BB_ZMEM                       |        1|LUT: 150 RAM: 1 REG: 327                                                                |LUT: 150 RAM: 1 REG: 327                                                                                                                                   |
+          |ZEBU_BB_ZMEM                       |        1|LUT: 169 RAM: 4 REG: 411                                                                |LUT: 169 RAM: 4 REG: 411                                                                                                                                   |
+          |ZEBU_BB_ZMEM                       |        1|LUT: 694 RAM: 18 REG: 1918                                                              |LUT: 694 RAM: 18 REG: 1918                                                                                                                                 |
+          |ZEBU_BB_ZMEM                       |        1|LUT: 1261 URAM: 2 REG: 1598                                                             |LUT: 1261 URAM: 2 REG: 1598                                                                                                                                |
+          |ZEBU_BB_ZMEM                       |        2|LUT: 138 RAM: 3 REG: 320                                                                |LUT: 276 RAM: 6 REG: 640                                                                                                                                   |
+          |ZEBU_BB_ZMEM                       |        3|LUT: 20166 LUT6: 480 URAM: 32 REG: 18550                                                |LUT: 60500 LUT6: 1440 URAM: 96 REG: 55650                                                                                                                  |
+          |ZEBU_BB_ZMEM                       |        8|LUT: 238 RAM: 6 REG: 608                                                                |LUT: 1906 RAM: 48 REG: 4864                                                                                                                                |
+          |ZEBU_BB_ZRM                        |        1|ZRM_SLOTS: 32768 ZRM_PORTS: 1                                                           |                                                                                                                                                           |
+          |ZEBU_CLOCK_GENERATOR               |        1|                                                                                        |                                                                                                                                                           |
+          |ZEBU_DRIVER_CLOCK_READY_IN         |        9|                                                                                        |                                                                                                                                                           |
+          |ZEBU_DRIVER_CLOCK_READY_OUT        |        9|                                                                                        |                                                                                                                                                           |
+          |ZEBU_DRIVER_CLOCK_SOURCE           |       23|                                                                                        |                                                                                                                                                           |
+          |ZEBU_DUT_DRIVER_CLOCK_SOURCE       |        1|                                                                                        |                                                                                                                                                           |
+          |ZEBU_EDGE_DETECTOR                 |        8|                                                                                        |                                                                                                                                                           |
+          |ZEBU_EDGE_DETECTOR_PCLK            |       19|                                                                                        |                                                                                                                                                           |
+          |ZEBU_FILTER_CLOCK                  |        2|                                                                                        |                                                                                                                                                           |
+          |ZEBU_FREE_DRIVER_CLOCK_SOURCE      |        2|                                                                                        |                                                                                                                                                           |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        1|LUT: 4 REG: 39 RAMLUT: 32 ZCEI_MESSAGE_INPUT: 1                                         |LUT: 4 REG: 39 RAMLUT: 32 ZCEI_MESSAGE_INPUT: 1                                                                                                            |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        1|LUT: 8 REG: 78 RAMLUT: 64 ZCEI_MESSAGE_INPUT: 1                                         |LUT: 8 REG: 78 RAMLUT: 64 ZCEI_MESSAGE_INPUT: 1                                                                                                            |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        1|LUT: 24 REG: 234 RAMLUT: 192 ZCEI_MESSAGE_INPUT: 1                                      |LUT: 24 REG: 234 RAMLUT: 192 ZCEI_MESSAGE_INPUT: 1                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        1|LUT: 24 REG: 234 RAMLUT: 192 ZCEI_MESSAGE_INPUT: 1                                      |LUT: 24 REG: 234 RAMLUT: 192 ZCEI_MESSAGE_INPUT: 1                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        1|LUT: 316 REG: 3081 RAMLUT: 2528 ZCEI_MESSAGE_INPUT: 16                                  |LUT: 316 REG: 3081 RAMLUT: 2528 ZCEI_MESSAGE_INPUT: 16                                                                                                     |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        2|LUT: 20 REG: 195 RAMLUT: 160 ZCEI_MESSAGE_INPUT: 1                                      |LUT: 40 REG: 390 RAMLUT: 320 ZCEI_MESSAGE_INPUT: 2                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        3|LUT: 12 REG: 117 RAMLUT: 96 ZCEI_MESSAGE_INPUT: 1                                       |LUT: 28 REG: 273 RAMLUT: 224 ZCEI_MESSAGE_INPUT: 1                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        3|LUT: 20 REG: 195 RAMLUT: 160 ZCEI_MESSAGE_INPUT: 1                                      |LUT: 52 REG: 507 RAMLUT: 416 ZCEI_MESSAGE_INPUT: 2                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        4|LUT: 4 REG: 39 RAMLUT: 32 ZCEI_MESSAGE_INPUT: 1                                         |LUT: 4 REG: 39 RAMLUT: 32 ZCEI_MESSAGE_INPUT: 1                                                                                                            |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |        8|LUT: 372 REG: 3627 RAMLUT: 2976 ZCEI_MESSAGE_INPUT: 16                                  |LUT: 2964 REG: 28899 RAMLUT: 23712 ZCEI_MESSAGE_INPUT: 128                                                                                                 |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |       10|LUT: 8 REG: 78 RAMLUT: 64 ZCEI_MESSAGE_INPUT: 1                                         |LUT: 44 REG: 429 RAMLUT: 352 ZCEI_MESSAGE_INPUT: 2                                                                                                         |
+          |ZEBU_MACRO_ZCEI_MSG_IN             |       49|LUT: 4 REG: 39 RAMLUT: 32 ZCEI_MESSAGE_INPUT: 1                                         |LUT: 8 REG: 78 RAMLUT: 64 ZCEI_MESSAGE_INPUT: 1                                                                                                            |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 372 REG: 346 RAMLUT: 48 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 372 REG: 346 RAMLUT: 48 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 488 REG: 436 RAMLUT: 96 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 488 REG: 436 RAMLUT: 96 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 662 REG: 571 RAMLUT: 168 ZCEI_MESSAGE_OUTPUT: 1                                    |LUT: 662 REG: 571 RAMLUT: 168 ZCEI_MESSAGE_OUTPUT: 1                                                                                                       |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 1184 REG: 976 RAMLUT: 384 ZCEI_MESSAGE_OUTPUT: 1                                   |LUT: 1184 REG: 976 RAMLUT: 384 ZCEI_MESSAGE_OUTPUT: 1                                                                                                      |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 1300 REG: 1066 RAMLUT: 432 ZCEI_MESSAGE_OUTPUT: 1                                  |LUT: 1300 REG: 1066 RAMLUT: 432 ZCEI_MESSAGE_OUTPUT: 1                                                                                                     |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 1474 REG: 1201 RAMLUT: 504 ZCEI_MESSAGE_OUTPUT: 1                                  |LUT: 1474 REG: 1201 RAMLUT: 504 ZCEI_MESSAGE_OUTPUT: 1                                                                                                     |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        1|LUT: 7738 REG: 6061 RAMLUT: 3096 ZCEI_MESSAGE_OUTPUT: 1                                 |LUT: 7738 REG: 6061 RAMLUT: 3096 ZCEI_MESSAGE_OUTPUT: 1                                                                                                    |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        2|LUT: 430 REG: 391 RAMLUT: 72 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 546 REG: 481 RAMLUT: 120 ZCEI_MESSAGE_OUTPUT: 1                                                                                                       |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        2|LUT: 546 REG: 481 RAMLUT: 120 ZCEI_MESSAGE_OUTPUT: 1                                    |LUT: 778 REG: 661 RAMLUT: 216 ZCEI_MESSAGE_OUTPUT: 1                                                                                                       |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        3|LUT: 430 REG: 391 RAMLUT: 72 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 662 REG: 571 RAMLUT: 168 ZCEI_MESSAGE_OUTPUT: 1                                                                                                       |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |        4|LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |       18|LUT: 372 REG: 346 RAMLUT: 48 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 1358 REG: 1111 RAMLUT: 456 ZCEI_MESSAGE_OUTPUT: 1                                                                                                     |
+          |ZEBU_MACRO_ZCEI_MSG_OUT            |       22|LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                     |LUT: 314 REG: 301 RAMLUT: 24 ZCEI_MESSAGE_OUTPUT: 1                                                                                                        |
+          |ZGDELAY                            |        1|                                                                                        |                                                                                                                                                           |
+          |ZRTL_CLOCK_CONTROL                 |       99|                                                                                        |                                                                                                                                                           |
+          |ZTS_RUNMAN                         |        9|LUT: 3753 LUT6: 219 REG: 3464 RAMLUT: 1008 ZCEI_MESSAGE_INPUT: 2 ZCEI_MESSAGE_OUTPUT: 2 |LUT: 28695 LUT6: 1971 REG: 25736 RAMLUT: 8176 ZCEI_MESSAGE_INPUT: 16 ZCEI_MESSAGE_OUTPUT: 2                                                                |
+          |zebu_bb_clock_counter_reset_zpl_box|        9|                                                                                        |                                                                                                                                                           |
+          |zebu_bb_fm_revert_mode_zpl_box     |        9|                                                                                        |                                                                                                                                                           |
+          |zebu_bb_pclk_en_zpl_box            |        9|                                                                                        |                                                                                                                                                           |
+          |zebu_bb_pclkdut_en_zpl_box         |        9|                                                                                        |                                                                                                                                                           |
+          |zebu_bb_reset_zpl_box              |        9|                                                                                        |                                                                                                                                                           |
+          |zebu_bb_revert_en_zpl_box          |        9|                                                                                        |                                                                                                                                                           |
+          +-----------------------------------+---------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+          |Total                              |   581970|                                                                                        |LUT: 361971 LUT6: 109130 RAM: 105 URAM: 98 REG: 332806 RAMLUT: 42088 FWC_IP_BITS: 834 QIWC_IP_BITS: 116860 ZCEI_MESSAGE_INPUT: 173 ZCEI_MESSAGE_OUTPUT: 17 |
+          +-----------------------------------+---------+----------------------------------------------------------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
+</pre>
+<a name="K5.3." id="K5.3."></a>
+<h4><a href="#">5.3.Multiple instantiation
+</a></h4>
+<pre>
+</pre>
+<a name="K5.3.1." id="K5.3.1."></a>
+<h4><a href="#">5.3.1.Multi-instantiation cost (ordered with various criteria)
+</a></h4>
+<pre>
+
+*** stat_mod -min_prim=0 -min_multi=0  -local_primitive_only
+
+
+
+Multi-instantiation cost ordered by REG (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                        Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT  |HLUT(raw)|HREG  |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |           fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |                fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |     xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429 |11989    |30808 |1231  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    |      xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103 |27456    |97272 |265   |
+ |1       |4091   |366    |0       |0       |0      |0         |2       |zemi3OutPortBuffer_169_4096_24|4091 |366  |0   |0   |0  |0     |2   |366   |272      |4091  |4119  |
+ |3       |1701   |6756   |3       |0       |0      |0         |2766    | mss_bus_switch_ibpw2ibpn_0000|567  |2252 |1   |0   |0  |0     |922 |5003  |3672     |3995  |1166  |
+ |2       |1100   |4482   |2       |0       |0      |0         |1814    | mss_bus_switch_ibpw2ibpn_0000|550  |2241 |1   |0   |0  |0     |907 |4992  |3670     |3979  |1165  |
+ |1       |846    |2481   |1       |0       |0      |0         |930     |                        rl_csr|846  |2481 |1   |0   |0  |0     |930 |2481  |2202     |846   |1419  |
+ |1       |514    |1622   |1       |0       |0      |0         |526     | mss_bus_switch_ibpw2ibpn_0001|514  |1622 |1   |0   |0  |0     |526 |3592  |2643     |2847  |1201  |
+ |1       |425    |878    |1       |0       |0      |0         |396     | mss_bus_switch_ibpw2ibpn_0002|425  |878  |1   |0   |0  |0     |396 |2301  |1564     |2210  |1272  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                        rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4331  |4088     |816   |1377  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                        rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4319  |4054     |814   |1342  |
+ |1       |178    |527    |2       |0       |0      |0         |113     |                  zz_Encrypt_5|178  |527  |2   |0   |0  |0     |113 |27621 |24321    |82161 |208   |
+ |1       |73     |54     |1       |0       |0      |0         |23      |                      zebu_top|73   |54   |1   |0   |0  |0     |23  |381453|236995   |354365|0     |
+ |1       |71     |1188   |0       |0       |0      |0         |35      |                   alb_mss_fab|71   |1188 |0   |0   |0  |0     |35  |115334|88334    |82426 |2822  |
+ |1       |39     |56     |1       |0       |0      |0         |56      |        alb_mss_fpga_sram_0000|39   |56   |1   |0   |0  |0     |56  |56    |22       |39    |330   |
+ |1       |11     |9      |1       |0       |0      |0         |3       |                       rl_core|11   |9    |1   |0   |0  |0     |3   |29160 |26295    |8233  |1944  |
+ |1       |9      |304    |1       |0       |0      |0         |43      |                   alb_mss_mem|9    |304  |1   |0   |0  |0     |43  |7679  |6339     |4629  |374   |
+ |1       |6      |4      |1       |0       |0      |0         |3       |                       rl_core|6    |4    |1   |0   |0  |0     |3   |28724 |26150    |7871  |1634  |
+ |1       |4      |4      |1       |0       |0      |0         |1       |                    rl_cpu_top|4    |4    |1   |0   |0  |0     |1   |32202 |29162    |8976  |1551  |
+ |1       |3      |3      |1       |0       |0      |0         |1       |                    rl_cpu_top|3    |3    |1   |0   |0  |0     |1   |31763 |29016    |8609  |1237  |
+ |1       |3      |10     |1       |0       |0      |0         |2       |                        rl_exu|3    |10   |1   |0   |0  |0     |2   |8766  |7786     |2914  |1857  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |               axi_dummy_slave|2    |1    |1   |0   |0  |0     |1   |40104 |27456    |97274 |263   |
+ |1       |2      |23     |1       |0       |0      |0         |6       |             alb_mss_mem_model|2    |23   |1   |0   |0  |0     |6   |78    |39       |41    |331   |
+ |1       |2      |9      |1       |0       |0      |0         |2       |                        rl_exu|2    |9    |1   |0   |0  |0     |2   |8696  |7718     |2879  |1783  |
+ |1       |2      |115    |0       |0       |0      |0         |47      |     cpu_top_safety_controller|2    |115  |0   |0   |0  |0     |47  |65312 |59493    |17770 |1470  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                 zebu_axi_xtor|2    |1    |1   |0   |0  |0     |1   |24429 |11989    |30809 |1229  |
+ +--------+-------+-------+--------+--------+-------+----------+--------+------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by LUT (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                            Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT  |HLUT(raw)|HREG  |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |               fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |                    fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |         xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429 |11989    |30808 |1231  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    |          xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103 |27456    |97272 |265   |
+ |3       |1701   |6756   |3       |0       |0      |0         |2766    |     mss_bus_switch_ibpw2ibpn_0000|567  |2252 |1   |0   |0  |0     |922 |5003  |3672     |3995  |1166  |
+ |2       |1100   |4482   |2       |0       |0      |0         |1814    |     mss_bus_switch_ibpw2ibpn_0000|550  |2241 |1   |0   |0  |0     |907 |4992  |3670     |3979  |1165  |
+ |1       |846    |2481   |1       |0       |0      |0         |930     |                            rl_csr|846  |2481 |1   |0   |0  |0     |930 |2481  |2202     |846   |1419  |
+ |1       |0      |2179   |0       |0       |0      |0         |548     |mss_bus_switch_ibp_split_0000_0000|0    |2179 |0   |0   |0  |0     |548 |4373  |3841     |1650  |4230  |
+ |1       |514    |1622   |1       |0       |0      |0         |526     |     mss_bus_switch_ibpw2ibpn_0001|514  |1622 |1   |0   |0  |0     |526 |3592  |2643     |2847  |1201  |
+ |3       |0      |1560   |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |520  |0   |0   |0  |0     |0   |1901  |1538     |1103  |1156  |
+ |1       |71     |1188   |0       |0       |0      |0         |35      |                       alb_mss_fab|71   |1188 |0   |0   |0  |0     |35  |115334|88334    |82426 |2822  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4319  |4054     |814   |1342  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4331  |4088     |816   |1377  |
+ |1       |425    |878    |1       |0       |0      |0         |396     |     mss_bus_switch_ibpw2ibpn_0002|425  |878  |1   |0   |0  |0     |396 |2301  |1564     |2210  |1272  |
+ |1       |0      |735    |0       |0       |0      |0         |293     |mss_bus_switch_ibp_compr_0000_0001|0    |735  |0   |0   |0  |0     |293 |2278  |1878     |1244  |1007  |
+ |1       |0      |544    |0       |0       |0      |0         |6       |          mss_bus_switch_dw512_slv|0    |544  |0   |0   |0  |0     |6   |5528  |4921     |1980  |4229  |
+ |1       |178    |527    |2       |0       |0      |0         |113     |                      zz_Encrypt_5|178  |527  |2   |0   |0  |0     |113 |27621 |24321    |82161 |208   |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1894  |1531     |1103  |1149  |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1905  |1542     |1103  |1160  |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1893  |1530     |1103  |1148  |
+ |1       |0      |520    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |520  |0   |0   |0  |0     |0   |1912  |1549     |1103  |1166  |
+ |1       |4091   |366    |0       |0       |0      |0         |2       |    zemi3OutPortBuffer_169_4096_24|4091 |366  |0   |0   |0  |0     |2   |366   |272      |4091  |4119  |
+ |1       |9      |304    |1       |0       |0      |0         |43      |                       alb_mss_mem|9    |304  |1   |0   |0  |0     |43  |7679  |6339     |4629  |374   |
+ |1       |2      |115    |0       |0       |0      |0         |47      |         cpu_top_safety_controller|2    |115  |0   |0   |0  |0     |47  |65312 |59493    |17770 |1470  |
+ |1       |0      |87     |0       |0       |0      |0         |18      |                alb_mss_bus_switch|0    |87   |0   |0   |0  |0     |18  |98992 |76369    |69634 |2762  |
+ |1       |39     |56     |1       |0       |0      |0         |56      |            alb_mss_fpga_sram_0000|39   |56   |1   |0   |0  |0     |56  |56    |22       |39    |330   |
+ |1       |73     |54     |1       |0       |0      |0         |23      |                          zebu_top|73   |54   |1   |0   |0  |0     |23  |381453|236995   |354365|0     |
+ |1       |2      |23     |1       |0       |0      |0         |6       |                 alb_mss_mem_model|2    |23   |1   |0   |0  |0     |6   |78    |39       |41    |331   |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3330  |3067     |900   |1231  |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3294  |3031     |893   |1194  |
+ |2       |0      |12     |0       |0       |0      |0         |0       |                          dccm_ram|0    |6    |0   |0   |0  |0     |0   |20273 |3449     |18578 |124   |
+ |1       |3      |10     |1       |0       |0      |0         |2       |                            rl_exu|3    |10   |1   |0   |0  |0     |2   |8766  |7786     |2914  |1857  |
+ |1       |2      |9      |1       |0       |0      |0         |2       |                            rl_exu|2    |9    |1   |0   |0  |0     |2   |8696  |7718     |2879  |1783  |
+ |1       |11     |9      |1       |0       |0      |0         |3       |                           rl_core|11   |9    |1   |0   |0  |0     |3   |29160 |26295    |8233  |1944  |
+ |3       |0      |6      |0       |0       |0      |0         |0       |       mss_bus_switch_ibp_dw32_mst|0    |2    |0   |0   |0  |0     |0   |8807  |6705     |6370  |1533  |
+ |1       |0      |6      |0       |0       |0      |0         |0       |                         iccm0_ram|0    |6    |0   |0   |0  |0     |0   |20273 |3449     |18578 |124   |
+ |1       |4      |4      |1       |0       |0      |0         |1       |                        rl_cpu_top|4    |4    |1   |0   |0  |0     |1   |32202 |29162    |8976  |1551  |
+ |1       |6      |4      |1       |0       |0      |0         |3       |                           rl_core|6    |4    |1   |0   |0  |0     |3   |28724 |26150    |7871  |1634  |
+ |1       |3      |3      |1       |0       |0      |0         |1       |                        rl_cpu_top|3    |3    |1   |0   |0  |0     |1   |31763 |29016    |8609  |1237  |
+ |1       |0      |2      |0       |0       |0      |0         |0       |      mss_bus_switch_ibp_dw128_mst|0    |2    |0   |0   |0  |0     |0   |17134 |13257    |12034 |1863  |
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by BRAM (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+-----------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                       Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT  |HLUT(raw)|HREG  |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+-----------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |3       |1701   |6756   |3       |0       |0      |0         |2766    |mss_bus_switch_ibpw2ibpn_0000|567  |2252 |1   |0   |0  |0     |922 |5003  |3672     |3995  |1166  |
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |          fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |178    |527    |2       |0       |0      |0         |113     |                 zz_Encrypt_5|178  |527  |2   |0   |0  |0     |113 |27621 |24321    |82161 |208   |
+ |2       |1100   |4482   |2       |0       |0      |0         |1814    |mss_bus_switch_ibpw2ibpn_0000|550  |2241 |1   |0   |0  |0     |907 |4992  |3670     |3979  |1165  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |              axi_dummy_slave|2    |1    |1   |0   |0  |0     |1   |40104 |27456    |97274 |263   |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                zebu_axi_xtor|2    |1    |1   |0   |0  |0     |1   |24429 |11989    |30809 |1229  |
+ |1       |3      |3      |1       |0       |0      |0         |1       |                   rl_cpu_top|3    |3    |1   |0   |0  |0     |1   |31763 |29016    |8609  |1237  |
+ |1       |6      |4      |1       |0       |0      |0         |3       |                      rl_core|6    |4    |1   |0   |0  |0     |3   |28724 |26150    |7871  |1634  |
+ |1       |4      |4      |1       |0       |0      |0         |1       |                   rl_cpu_top|4    |4    |1   |0   |0  |0     |1   |32202 |29162    |8976  |1551  |
+ |1       |11     |9      |1       |0       |0      |0         |3       |                      rl_core|11   |9    |1   |0   |0  |0     |3   |29160 |26295    |8233  |1944  |
+ |1       |2      |9      |1       |0       |0      |0         |2       |                       rl_exu|2    |9    |1   |0   |0  |0     |2   |8696  |7718     |2879  |1783  |
+ |1       |3      |10     |1       |0       |0      |0         |2       |                       rl_exu|3    |10   |1   |0   |0  |0     |2   |8766  |7786     |2914  |1857  |
+ |1       |2      |23     |1       |0       |0      |0         |6       |            alb_mss_mem_model|2    |23   |1   |0   |0  |0     |6   |78    |39       |41    |331   |
+ |1       |73     |54     |1       |0       |0      |0         |23      |                     zebu_top|73   |54   |1   |0   |0  |0     |23  |381453|236995   |354365|0     |
+ |1       |39     |56     |1       |0       |0      |0         |56      |       alb_mss_fpga_sram_0000|39   |56   |1   |0   |0  |0     |56  |56    |22       |39    |330   |
+ |1       |9      |304    |1       |0       |0      |0         |43      |                  alb_mss_mem|9    |304  |1   |0   |0  |0     |43  |7679  |6339     |4629  |374   |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |               fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                       rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4331  |4088     |816   |1377  |
+ |1       |846    |2481   |1       |0       |0      |0         |930     |                       rl_csr|846  |2481 |1   |0   |0  |0     |930 |2481  |2202     |846   |1419  |
+ |1       |514    |1622   |1       |0       |0      |0         |526     |mss_bus_switch_ibpw2ibpn_0001|514  |1622 |1   |0   |0  |0     |526 |3592  |2643     |2847  |1201  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    |     xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103 |27456    |97272 |265   |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                       rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4319  |4054     |814   |1342  |
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |    xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429 |11989    |30808 |1231  |
+ |1       |425    |878    |1       |0       |0      |0         |396     |mss_bus_switch_ibpw2ibpn_0002|425  |878  |1   |0   |0  |0     |396 |2301  |1564     |2210  |1272  |
+ +--------+-------+-------+--------+--------+-------+----------+--------+-----------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by URAM (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|             Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT |HLUT(raw)|HREG |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267|3443     |18578|123   |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |     fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267|3443     |18578|123   |
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by DSP (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+------+---+---+----+----+---+------+----+----+---------+----+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|Module|REG|LUT|BRAM|URAM|DSP|RAMLUT|LUT6|HLUT|HLUT(raw)|HREG|Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+------+---+---+----+----+---+------+----+----+---------+----+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by RAMLUT (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                   Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT |HLUT(raw)|HREG |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429|11989    |30808|1231  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    | xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103|27456    |97272|265   |
+ +--------+-------+-------+--------+--------+-------+----------+--------+-------------------------+-----+-----+----+----+---+------+----+-----+---------+-----+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by LUT6 (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                            Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT  |HLUT(raw)|HREG  |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |3       |1701   |6756   |3       |0       |0      |0         |2766    |     mss_bus_switch_ibpw2ibpn_0000|567  |2252 |1   |0   |0  |0     |922 |5003  |3672     |3995  |1166  |
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |         xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429 |11989    |30808 |1231  |
+ |2       |1100   |4482   |2       |0       |0      |0         |1814    |     mss_bus_switch_ibpw2ibpn_0000|550  |2241 |1   |0   |0  |0     |907 |4992  |3670     |3979  |1165  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    |          xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103 |27456    |97272 |265   |
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |               fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |846    |2481   |1       |0       |0      |0         |930     |                            rl_csr|846  |2481 |1   |0   |0  |0     |930 |2481  |2202     |846   |1419  |
+ |1       |0      |2179   |0       |0       |0      |0         |548     |mss_bus_switch_ibp_split_0000_0000|0    |2179 |0   |0   |0  |0     |548 |4373  |3841     |1650  |4230  |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |                    fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |514    |1622   |1       |0       |0      |0         |526     |     mss_bus_switch_ibpw2ibpn_0001|514  |1622 |1   |0   |0  |0     |526 |3592  |2643     |2847  |1201  |
+ |1       |425    |878    |1       |0       |0      |0         |396     |     mss_bus_switch_ibpw2ibpn_0002|425  |878  |1   |0   |0  |0     |396 |2301  |1564     |2210  |1272  |
+ |1       |0      |735    |0       |0       |0      |0         |293     |mss_bus_switch_ibp_compr_0000_0001|0    |735  |0   |0   |0  |0     |293 |2278  |1878     |1244  |1007  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4331  |4088     |816   |1377  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4319  |4054     |814   |1342  |
+ |1       |178    |527    |2       |0       |0      |0         |113     |                      zz_Encrypt_5|178  |527  |2   |0   |0  |0     |113 |27621 |24321    |82161 |208   |
+ |1       |39     |56     |1       |0       |0      |0         |56      |            alb_mss_fpga_sram_0000|39   |56   |1   |0   |0  |0     |56  |56    |22       |39    |330   |
+ |1       |2      |115    |0       |0       |0      |0         |47      |         cpu_top_safety_controller|2    |115  |0   |0   |0  |0     |47  |65312 |59493    |17770 |1470  |
+ |1       |9      |304    |1       |0       |0      |0         |43      |                       alb_mss_mem|9    |304  |1   |0   |0  |0     |43  |7679  |6339     |4629  |374   |
+ |1       |71     |1188   |0       |0       |0      |0         |35      |                       alb_mss_fab|71   |1188 |0   |0   |0  |0     |35  |115334|88334    |82426 |2822  |
+ |1       |73     |54     |1       |0       |0      |0         |23      |                          zebu_top|73   |54   |1   |0   |0  |0     |23  |381453|236995   |354365|0     |
+ |1       |0      |87     |0       |0       |0      |0         |18      |                alb_mss_bus_switch|0    |87   |0   |0   |0  |0     |18  |98992 |76369    |69634 |2762  |
+ |1       |2      |23     |1       |0       |0      |0         |6       |                 alb_mss_mem_model|2    |23   |1   |0   |0  |0     |6   |78    |39       |41    |331   |
+ |1       |0      |544    |0       |0       |0      |0         |6       |          mss_bus_switch_dw512_slv|0    |544  |0   |0   |0  |0     |6   |5528  |4921     |1980  |4229  |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3294  |3031     |893   |1194  |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3330  |3067     |900   |1231  |
+ |1       |6      |4      |1       |0       |0      |0         |3       |                           rl_core|6    |4    |1   |0   |0  |0     |3   |28724 |26150    |7871  |1634  |
+ |1       |11     |9      |1       |0       |0      |0         |3       |                           rl_core|11   |9    |1   |0   |0  |0     |3   |29160 |26295    |8233  |1944  |
+ |1       |4091   |366    |0       |0       |0      |0         |2       |    zemi3OutPortBuffer_169_4096_24|4091 |366  |0   |0   |0  |0     |2   |366   |272      |4091  |4119  |
+ |1       |3      |10     |1       |0       |0      |0         |2       |                            rl_exu|3    |10   |1   |0   |0  |0     |2   |8766  |7786     |2914  |1857  |
+ |1       |2      |9      |1       |0       |0      |0         |2       |                            rl_exu|2    |9    |1   |0   |0  |0     |2   |8696  |7718     |2879  |1783  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                   axi_dummy_slave|2    |1    |1   |0   |0  |0     |1   |40104 |27456    |97274 |263   |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                     zebu_axi_xtor|2    |1    |1   |0   |0  |0     |1   |24429 |11989    |30809 |1229  |
+ |1       |3      |3      |1       |0       |0      |0         |1       |                        rl_cpu_top|3    |3    |1   |0   |0  |0     |1   |31763 |29016    |8609  |1237  |
+ |1       |4      |4      |1       |0       |0      |0         |1       |                        rl_cpu_top|4    |4    |1   |0   |0  |0     |1   |32202 |29162    |8976  |1551  |
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+
+Multi-instantiation cost ordered by number of instances (flat logic only)
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |Nb Inst.|ALL REG|ALL LUT|ALL BRAM|ALL URAM|ALL DSP|ALL RAMLUT|ALL LUT6|                            Module|REG  |LUT  |BRAM|URAM|DSP|RAMLUT|LUT6|HLUT  |HLUT(raw)|HREG  |Nb IOs|
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+ |3       |1701   |6756   |3       |0       |0      |0         |2766    |     mss_bus_switch_ibpw2ibpn_0000|567  |2252 |1   |0   |0  |0     |922 |5003  |3672     |3995  |1166  |
+ |3       |0      |1560   |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |520  |0   |0   |0  |0     |0   |1901  |1538     |1103  |1156  |
+ |3       |0      |6      |0       |0       |0      |0         |0       |       mss_bus_switch_ibp_dw32_mst|0    |2    |0   |0   |0  |0     |0   |8807  |6705     |6370  |1533  |
+ |3       |0      |0      |0       |0       |0      |0         |0       |     mss_bus_switch_ibpx2ibpy_0001|0    |0    |0   |0   |0  |0     |0   |5003  |3672     |3995  |1166  |
+ |2       |1100   |4482   |2       |0       |0      |0         |1814    |     mss_bus_switch_ibpw2ibpn_0000|550  |2241 |1   |0   |0  |0     |907 |4992  |3670     |3979  |1165  |
+ |2       |37156  |40534  |2       |64      |0      |0         |1064    |               fpga_sram_0002_0000|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |2       |0      |12     |0       |0       |0      |0         |0       |                          dccm_ram|0    |6    |0   |0   |0  |0     |0   |20273 |3449     |18578 |124   |
+ |2       |0      |0      |0       |0       |0      |0         |0       |     mss_bus_switch_ibpx2ibpy_0001|0    |0    |0   |0   |0  |0     |0   |4992  |3670     |3979  |1165  |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1893  |1530     |1103  |1148  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                   axi_dummy_slave|2    |1    |1   |0   |0  |0     |1   |40104 |27456    |97274 |263   |
+ |1       |0      |6      |0       |0       |0      |0         |0       |                         iccm0_ram|0    |6    |0   |0   |0  |0     |0   |20273 |3449     |18578 |124   |
+ |1       |0      |0      |0       |0       |0      |0         |0       |                          core_sys|0    |0    |0   |0   |0  |0     |0   |327665|214556   |297770|53    |
+ |1       |0      |0      |0       |0       |0      |0         |0       |               alb_mss_dummy_slave|0    |0    |0   |0   |0  |0     |0   |40104 |27456    |97274 |263   |
+ |1       |0      |0      |0       |0       |0      |0         |0       |mss_bus_switch_ibpx2ibpy_0001_0000|0    |0    |0   |0   |0  |0     |0   |3592  |2643     |2847  |1201  |
+ |1       |4      |4      |1       |0       |0      |0         |1       |                        rl_cpu_top|4    |4    |1   |0   |0  |0     |1   |32202 |29162    |8976  |1551  |
+ |1       |3      |3      |1       |0       |0      |0         |1       |                        rl_cpu_top|3    |3    |1   |0   |0  |0     |1   |31763 |29016    |8609  |1237  |
+ |1       |2      |1      |1       |0       |0      |0         |1       |                     zebu_axi_xtor|2    |1    |1   |0   |0  |0     |1   |24429 |11989    |30809 |1229  |
+ |1       |3      |10     |1       |0       |0      |0         |2       |                            rl_exu|3    |10   |1   |0   |0  |0     |2   |8766  |7786     |2914  |1857  |
+ |1       |0      |520    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |520  |0   |0   |0  |0     |0   |1912  |1549     |1103  |1166  |
+ |1       |0      |0      |0       |0       |0      |0         |0       |mss_bus_switch_ibpx2ibpy_0001_0001|0    |0    |0   |0   |0  |0     |0   |2301  |1564     |2210  |1272  |
+ |1       |0      |0      |0       |0       |0      |0         |0       |                          rl_srams|0    |0    |0   |0   |0  |0     |0   |62505 |10916    |57700 |620   |
+ |1       |0      |2      |0       |0       |0      |0         |0       |      mss_bus_switch_ibp_dw128_mst|0    |2    |0   |0   |0  |0     |0   |17134 |13257    |12034 |1863  |
+ |1       |0      |2      |0       |0       |0      |0         |0       |       mss_bus_switch_ibp_dw64_mst|0    |2    |0   |0   |0  |0     |0   |15661 |11992    |11330 |1708  |
+ |1       |0      |1      |0       |0       |0      |0         |0       |       mss_bus_switch_ibp_dw32_mst|0    |1    |0   |0   |0  |0     |0   |8764  |6671     |6354  |1473  |
+ |1       |0      |0      |0       |0       |0      |0         |0       |                         core_chip|0    |0    |0   |0   |0  |0     |0   |327667|214561   |297773|51    |
+ |1       |0      |0      |0       |0       |0      |0         |0       |                       archipelago|0    |0    |0   |0   |0  |0     |0   |131177|73025    |77534 |788   |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1905  |1542     |1103  |1160  |
+ |1       |0      |1      |0       |0       |0      |0         |0       |       mss_bus_switch_ibp_dw32_mst|0    |1    |0   |0   |0  |0     |0   |8761  |6668     |6354  |1469  |
+ |1       |0      |521    |0       |0       |0      |0         |0       |           mss_bus_switch_ibp2ibps|0    |521  |0   |0   |0  |0     |0   |1894  |1531     |1103  |1149  |
+ |1       |2      |115    |0       |0       |0      |0         |47      |         cpu_top_safety_controller|2    |115  |0   |0   |0  |0     |47  |65312 |59493    |17770 |1470  |
+ |1       |13000  |11579  |1       |0       |0      |2104      |2423    |         xtor_amba_master_axi3_svs|13000|11579|1   |0   |0  |2104  |2423|24429 |11989    |30808 |1231  |
+ |1       |8197   |7391   |1       |0       |0      |1504      |1185    |          xtor_amba_slave_axi3_svs|8197 |7391 |1   |0   |0  |1504  |1185|40103 |27456    |97272 |265   |
+ |1       |846    |2481   |1       |0       |0      |0         |930     |                            rl_csr|846  |2481 |1   |0   |0  |0     |930 |2481  |2202     |846   |1419  |
+ |1       |0      |2179   |0       |0       |0      |0         |548     |mss_bus_switch_ibp_split_0000_0000|0    |2179 |0   |0   |0  |0     |548 |4373  |3841     |1650  |4230  |
+ |1       |18578  |20267  |1       |32      |0      |0         |532     |                    fpga_sram_0002|18578|20267|1   |32  |0  |0     |532 |20267 |3443     |18578 |123   |
+ |1       |514    |1622   |1       |0       |0      |0         |526     |     mss_bus_switch_ibpw2ibpn_0001|514  |1622 |1   |0   |0  |0     |526 |3592  |2643     |2847  |1201  |
+ |1       |425    |878    |1       |0       |0      |0         |396     |     mss_bus_switch_ibpw2ibpn_0002|425  |878  |1   |0   |0  |0     |396 |2301  |1564     |2210  |1272  |
+ |1       |0      |735    |0       |0       |0      |0         |293     |mss_bus_switch_ibp_compr_0000_0001|0    |735  |0   |0   |0  |0     |293 |2278  |1878     |1244  |1007  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4331  |4088     |816   |1377  |
+ |1       |235    |1103   |1       |0       |0      |0         |278     |                            rl_dmp|235  |1103 |1   |0   |0  |0     |278 |4319  |4054     |814   |1342  |
+ |1       |178    |527    |2       |0       |0      |0         |113     |                      zz_Encrypt_5|178  |527  |2   |0   |0  |0     |113 |27621 |24321    |82161 |208   |
+ |1       |39     |56     |1       |0       |0      |0         |56      |            alb_mss_fpga_sram_0000|39   |56   |1   |0   |0  |0     |56  |56    |22       |39    |330   |
+ |1       |2      |9      |1       |0       |0      |0         |2       |                            rl_exu|2    |9    |1   |0   |0  |0     |2   |8696  |7718     |2879  |1783  |
+ |1       |9      |304    |1       |0       |0      |0         |43      |                       alb_mss_mem|9    |304  |1   |0   |0  |0     |43  |7679  |6339     |4629  |374   |
+ |1       |71     |1188   |0       |0       |0      |0         |35      |                       alb_mss_fab|71   |1188 |0   |0   |0  |0     |35  |115334|88334    |82426 |2822  |
+ |1       |73     |54     |1       |0       |0      |0         |23      |                          zebu_top|73   |54   |1   |0   |0  |0     |23  |381453|236995   |354365|0     |
+ |1       |0      |87     |0       |0       |0      |0         |18      |                alb_mss_bus_switch|0    |87   |0   |0   |0  |0     |18  |98992 |76369    |69634 |2762  |
+ |1       |2      |23     |1       |0       |0      |0         |6       |                 alb_mss_mem_model|2    |23   |1   |0   |0  |0     |6   |78    |39       |41    |331   |
+ |1       |0      |544    |0       |0       |0      |0         |6       |          mss_bus_switch_dw512_slv|0    |544  |0   |0   |0  |0     |6   |5528  |4921     |1980  |4229  |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3294  |3031     |893   |1194  |
+ |1       |0      |14     |0       |0       |0      |0         |5       |                            rl_ifu|0    |14   |0   |0   |0  |0     |5   |3330  |3067     |900   |1231  |
+ |1       |6      |4      |1       |0       |0      |0         |3       |                           rl_core|6    |4    |1   |0   |0  |0     |3   |28724 |26150    |7871  |1634  |
+ |1       |11     |9      |1       |0       |0      |0         |3       |                           rl_core|11   |9    |1   |0   |0  |0     |3   |29160 |26295    |8233  |1944  |
+ |1       |4091   |366    |0       |0       |0      |0         |2       |    zemi3OutPortBuffer_169_4096_24|4091 |366  |0   |0   |0  |0     |2   |366   |272      |4091  |4119  |
+ +--------+-------+-------+--------+--------+-------+----------+--------+----------------------------------+-----+-----+----+----+---+------+----+------+---------+------+------+
+Nb Inst.    : Number of instances
+ALL REG     : Nb inst. * Nb REG
+ALL LUT     : Nb inst. * Nb LUT
+ALL BRAM    : Nb inst. * Nb BRAM
+ALL URAM    : Nb inst. * Nb URAM
+ALL DSP     : Nb inst. * Nb DSP
+ALL RAMLUT  : Nb inst. * Nb RAMLUT
+ALL LUT6    : Nb inst. * Nb LUT6
+Module      : Module name, long names are truncated and displayed below
+LUT         : Lut counting
+HLUT        : HIER LUT EQUIV (lut weighting)
+HLUT(raw)   : HIER LUT EQUIV (no lut weighting)
+HREG        : HIER REG_EQUIV
+
+
+</pre>
+<a name="K5.3.2." id="K5.3.2."></a>
+<h4><a href="#">5.3.2.Modules with unusual properties (ordered with various criteria)
+</a></h4>
+<pre>
+
+Modules ordered by reg/lut ratio (decreasing order, only if 2*reg>lut) (flat logic only)
+ +--------+-----+-----+---------+------------------------------+------+
+ |Nb Inst.|HREG |HLUT |HLUT(raw)|                        Module|Nb IOs|
+ +--------+-----+-----+---------+------------------------------+------+
+ |1       |4091 |366  |272      |zemi3OutPortBuffer_169_4096_24|4119  |
+ |2       |18578|20267|3443     |           fpga_sram_0002_0000|123   |
+ |1       |18578|20267|3443     |                fpga_sram_0002|123   |
+ |1       |30808|24429|11989    |     xtor_amba_master_axi3_svs|1231  |
+ |1       |39   |56   |22       |        alb_mss_fpga_sram_0000|330   |
+ +--------+-----+-----+---------+------------------------------+------+
+Nb Inst.   : Number of instances
+HREG       : HIER REG_EQUIV
+HLUT       : HIER LUT EQUIV (lut weighting)
+HLUT(raw)  : HIER LUT EQUIV (no lut weighting)
+Module     : Module name, long names are truncated and displayed below
+
+
+
+Cost ordered by biggest variation caused by lut weighting) (flat logic only)
+ +--------+------+------+---------+----------------------------------+------+
+ |Nb Inst.|HREG  |HLUT  |HLUT(raw)|                            Module|Nb IOs|
+ +--------+------+------+---------+----------------------------------+------+
+ |1       |39    |56    |22       |            alb_mss_fpga_sram_0000|330   |
+ |1       |41    |78    |39       |                 alb_mss_mem_model|331   |
+ |1       |4091  |366   |272      |    zemi3OutPortBuffer_169_4096_24|4119  |
+ |1       |816   |4331  |4088     |                            rl_dmp|1377  |
+ |1       |893   |3294  |3031     |                            rl_ifu|1194  |
+ |1       |900   |3330  |3067     |                            rl_ifu|1231  |
+ |1       |814   |4319  |4054     |                            rl_dmp|1342  |
+ |1       |846   |2481  |2202     |                            rl_csr|1419  |
+ |1       |1103  |1912  |1549     |           mss_bus_switch_ibp2ibps|1166  |
+ |1       |1103  |1905  |1542     |           mss_bus_switch_ibp2ibps|1160  |
+ |3       |1103  |1901  |1538     |           mss_bus_switch_ibp2ibps|1156  |
+ |1       |1103  |1894  |1531     |           mss_bus_switch_ibp2ibps|1149  |
+ |1       |1103  |1893  |1530     |           mss_bus_switch_ibp2ibps|1148  |
+ |1       |1244  |2278  |1878     |mss_bus_switch_ibp_compr_0000_0001|1007  |
+ |1       |1650  |4373  |3841     |mss_bus_switch_ibp_split_0000_0000|4230  |
+ |1       |1980  |5528  |4921     |          mss_bus_switch_dw512_slv|4229  |
+ |1       |2210  |2301  |1564     |     mss_bus_switch_ibpw2ibpn_0002|1272  |
+ |1       |2210  |2301  |1564     |mss_bus_switch_ibpx2ibpy_0001_0001|1272  |
+ |1       |2847  |3592  |2643     |mss_bus_switch_ibpx2ibpy_0001_0000|1201  |
+ |1       |2847  |3592  |2643     |     mss_bus_switch_ibpw2ibpn_0001|1201  |
+ |1       |2879  |8696  |7718     |                            rl_exu|1783  |
+ |1       |2914  |8766  |7786     |                            rl_exu|1857  |
+ |2       |3979  |4992  |3670     |     mss_bus_switch_ibpw2ibpn_0000|1165  |
+ |2       |3979  |4992  |3670     |     mss_bus_switch_ibpx2ibpy_0001|1165  |
+ |3       |3995  |5003  |3672     |     mss_bus_switch_ibpx2ibpy_0001|1166  |
+ |3       |3995  |5003  |3672     |     mss_bus_switch_ibpw2ibpn_0000|1166  |
+ |1       |4629  |7679  |6339     |                       alb_mss_mem|374   |
+ |1       |6354  |8764  |6671     |       mss_bus_switch_ibp_dw32_mst|1473  |
+ |1       |6354  |8761  |6668     |       mss_bus_switch_ibp_dw32_mst|1469  |
+ |3       |6370  |8807  |6705     |       mss_bus_switch_ibp_dw32_mst|1533  |
+ |1       |7871  |28724 |26150    |                           rl_core|1634  |
+ |1       |8609  |31763 |29016    |                        rl_cpu_top|1237  |
+ |1       |8233  |29160 |26295    |                           rl_core|1944  |
+ |1       |8976  |32202 |29162    |                        rl_cpu_top|1551  |
+ |1       |82161 |27621 |24321    |                      zz_Encrypt_5|208   |
+ |1       |11330 |15661 |11992    |       mss_bus_switch_ibp_dw64_mst|1708  |
+ |1       |12034 |17134 |13257    |      mss_bus_switch_ibp_dw128_mst|1863  |
+ |1       |17770 |65312 |59493    |         cpu_top_safety_controller|1470  |
+ |1       |30808 |24429 |11989    |         xtor_amba_master_axi3_svs|1231  |
+ |1       |30809 |24429 |11989    |                     zebu_axi_xtor|1229  |
+ |1       |97272 |40103 |27456    |          xtor_amba_slave_axi3_svs|265   |
+ |1       |97274 |40104 |27456    |               alb_mss_dummy_slave|263   |
+ |1       |97274 |40104 |27456    |                   axi_dummy_slave|263   |
+ |2       |18578 |20273 |3449     |                          dccm_ram|124   |
+ |1       |18578 |20273 |3449     |                         iccm0_ram|124   |
+ |1       |18578 |20267 |3443     |                    fpga_sram_0002|123   |
+ |2       |18578 |20267 |3443     |               fpga_sram_0002_0000|123   |
+ |1       |69634 |98992 |76369    |                alb_mss_bus_switch|2762  |
+ |1       |82426 |115334|88334    |                       alb_mss_fab|2822  |
+ |1       |57700 |62505 |10916    |                          rl_srams|620   |
+ |1       |77534 |131177|73025    |                       archipelago|788   |
+ |1       |297773|327667|214561   |                         core_chip|51    |
+ |1       |297770|327665|214556   |                          core_sys|53    |
+ |1       |354365|381453|236995   |                          zebu_top|0     |
+ +--------+------+------+---------+----------------------------------+------+
+Nb Inst.   : Number of instances
+HREG       : HIER REG_EQUIV
+HLUT       : HIER LUT EQUIV (lut weighting)
+HLUT(raw)  : HIER LUT EQUIV (no lut weighting)
+Module     : Module name, long names are truncated and displayed below
+
+
+</pre>
+<a name="K5.4." id="K5.4."></a>
+<h4><a href="#">5.4.Detection of sub-system candidates
+</a></h4>
+<a name="K5.4." id="K5.4."></a>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_5_4_Detection_.html">
+	read *** ./zTopBuild_report_html_large_sections.dir/_SEC_5_4_Detection_.html ***
+
+</a></h4>
+<a name="K5.5." id="K5.5."></a>
+<h4><a href="#">5.5.ZMem resource utilization
+</a></h4>
+<pre>
+ZMEM module (ZEBU_BB_ZRM, model alb_mss_fpga_sram_0000_ZMEM_mem_r), Address width = 28 bits, Data width = 128 bits, Ports = 1, Type = Synchronous
+ZMEM module (ZEBU_BB_ZMEM, model alb_mss_mem_lat_0000_ZMEM_i_bdel_mem), Address width = 10 bits, Data width = 2 bits, Ports = 2, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model alb_mss_mem_lat_0000_ZMEM_i_rdel_mem), Address width = 10 bits, Data width = 131 bits, Ports = 2, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model fpga_sram_0000_ZMEM_mem_r), Address width = 8 bits, Data width = 56 bits, Ports = 2, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model fpga_sram_0001_ZMEM_mem_r), Address width = 11 bits, Data width = 80 bits, Ports = 2, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model fpga_sram_0002_0000_ZMEM_mem_r), Address width = 17 bits, Data width = 40 bits, Ports = 3, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model fpga_sram_0002_ZMEM_mem_r), Address width = 17 bits, Data width = 40 bits, Ports = 3, Type = Asynchronous
+ZMEM module (ZEBU_BB_ZMEM, model zz_Encrypt_2_ZMEM_0), Address width = 10 bits, Data width = 116 bits, Ports = 2, Type = Synchronous
+ZMEM module (ZEBU_BB_ZMEM, model zz_Encrypt_5_ZMEM_0), Address width = 10 bits, Data width = 16 bits, Ports = 2, Type = Synchronous
+ZMEM module (ZEBU_BB_ZMEM, model zz_Encrypt_7_ZMEM_0), Address width = 10 bits, Data width = 181 bits, Ports = 2, Type = Synchronous
+ZMEM module (ZEBU_BB_ZMEM, model zz_Encrypt_8_ZMEM_0), Address width = 10 bits, Data width = 86 bits, Ports = 2, Type = Synchronous
+ZMEM module (ZEBU_BB_ZMEM, model zz_Encrypt_9_ZMEM_0), Address width = 10 bits, Data width = 613 bits, Ports = 2, Type = Synchronous
+</pre>
+<a name="K5.6." id="K5.6."></a>
+<h4><a href="#">5.6.ZMem resource utilization
+</a></h4>
+<pre>
+
+Primitive count in ZMEM module(reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem), Instantiated 1 times
+          +-------------------+---------+------------------+-----------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level|
+          +-------------------+---------+------------------+-----------------+
+          |DBG_READBACK       |       25|REG: 1            |REG: 25          |
+          |FD                 |       10|REG: 1            |REG: 10          |
+          |GND                |        1|                  |                 |
+          |RAMB36E1           |        1|RAM: 1            |RAM: 1           |
+          |VCC                |        1|                  |                 |
+          |ZEBU_BB_ZMEM_PORT  |       26|                  |                 |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                 |
+          |ZXLSYS             |        1|                  |                 |
+          +-------------------+---------+------------------+-----------------+
+          |Total              |       67|                  |RAM: 1 REG: 35   |
+          +-------------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem), Instantiated 1 times
+          +-------------------+---------+------------------+-----------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level|
+          +-------------------+---------+------------------+-----------------+
+          |DBG_READBACK       |      283|REG: 1            |REG: 283         |
+          |FD                 |       10|REG: 1            |REG: 10          |
+          |GND                |        1|                  |                 |
+          |RAMB36E1           |        4|RAM: 1            |RAM: 4           |
+          |VCC                |        1|                  |                 |
+          |ZEBU_BB_ZMEM_PORT  |      284|                  |                 |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                 |
+          |ZXLSYS             |        1|                  |                 |
+          +-------------------+---------+------------------+-----------------+
+          |Total              |      586|                  |RAM: 4 REG: 293  |
+          +-------------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0000_ZMEM_mem_r), Instantiated 1 times
+          +-------------------+---------+------------------+-------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level        |
+          +-------------------+---------+------------------+-------------------------+
+          |AND2               |       78|LUT: 1            |LUT: 78                  |
+          |DBG_READBACK       |      129|REG: 1            |REG: 129                 |
+          |FD                 |      138|REG: 1            |REG: 138                 |
+          |FDE                |       56|REG: 1            |REG: 56                  |
+          |FDRE               |        2|REG: 1            |REG: 2                   |
+          |FDRS               |        2|REG: 1            |REG: 2                   |
+          |GND                |        2|                  |                         |
+          |INV                |        3|                  |                         |
+          |LUT2               |        3|LUT: 1            |LUT: 3                   |
+          |LUT3               |       58|LUT: 1            |LUT: 58                  |
+          |MUXCY_L            |        1|                  |                         |
+          |OR2                |        9|LUT: 1            |LUT: 9                   |
+          |RAMB36E1           |        1|RAM: 1            |RAM: 1                   |
+          |VCC                |        3|                  |                         |
+          |XOR2               |        1|LUT: 1            |LUT: 1                   |
+          |XORCY              |        1|                  |                         |
+          |ZEBU_BB_ZMEM_PORT  |      186|                  |                         |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                         |
+          |ZXLSYS             |        2|                  |                         |
+          +-------------------+---------+------------------+-------------------------+
+          |Total              |      677|                  |LUT: 149 RAM: 1 REG: 327 |
+          +-------------------+---------+------------------+-------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0000_ZMEM_mem_r_base), Instantiated 1 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |        1|RAM: 1            |RAM: 1           |
+          |VCC           |        1|                  |                 |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |        4|                  |RAM: 1           |
+          +--------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0001_ZMEM_mem_r), Instantiated 1 times
+          +-------------------+---------+--------------------------+----------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive        |Cost at top level           |
+          +-------------------+---------+--------------------------+----------------------------+
+          |AND2               |      111|LUT: 1                    |LUT: 111                    |
+          |DBG_READBACK       |      183|REG: 1                    |REG: 183                    |
+          |FD                 |      193|REG: 1                    |REG: 193                    |
+          |FDE                |       80|REG: 1                    |REG: 80                     |
+          |FDRE               |        2|REG: 1                    |REG: 2                      |
+          |FDRS               |        2|REG: 1                    |REG: 2                      |
+          |GND                |        3|                          |                            |
+          |INV                |        3|                          |                            |
+          |LUT2               |        3|LUT: 1                    |LUT: 3                      |
+          |LUT3               |       82|LUT: 1                    |LUT: 82                     |
+          |MUXCY_L            |        1|                          |                            |
+          |OR2                |       13|LUT: 1                    |LUT: 13                     |
+          |URAM288_BASE       |        2|LUT: 525 URAM: 1 REG: 569 |LUT: 1050 URAM: 2 REG: 1138 |
+          |VCC                |        3|                          |                            |
+          |XOR2               |        1|LUT: 1                    |LUT: 1                      |
+          |XORCY              |        1|                          |                            |
+          |ZEBU_BB_ZMEM_PORT  |      264|                          |                            |
+          |ZEBU_BB_ZMEM_TIMING|        2|                          |                            |
+          |ZXLSYS             |        2|                          |                            |
+          +-------------------+---------+--------------------------+----------------------------+
+          |Total              |      951|                          |LUT: 1260 URAM: 2 REG: 1598 |
+          +-------------------+---------+--------------------------+----------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0001_ZMEM_mem_r_base), Instantiated 1 times
+          +--------------+---------+--------------------------+----------------------------+
+          |Primitive Name|Total nb.|Cost per primitive        |Cost at top level           |
+          +--------------+---------+--------------------------+----------------------------+
+          |GND           |        1|                          |                            |
+          |URAM288_BASE  |        2|LUT: 525 URAM: 1 REG: 569 |LUT: 1050 URAM: 2 REG: 1138 |
+          |VCC           |        1|                          |                            |
+          |ZXLSYS        |        1|                          |                            |
+          +--------------+---------+--------------------------+----------------------------+
+          |Total         |        5|                          |LUT: 1050 URAM: 2 REG: 1138 |
+          +--------------+---------+--------------------------+----------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r), Instantiated 2 times
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive        |Cost at top level                        |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |AND2               |     2721|LUT: 1                    |LUT: 2721                                |
+          |AND2B1             |       60|LUT: 1                    |LUT: 60                                  |
+          |DBG_READBACK       |       92|REG: 1                    |REG: 92                                  |
+          |FD                 |      166|REG: 1                    |REG: 166                                 |
+          |FDE                |       80|REG: 1                    |REG: 80                                  |
+          |FDRE               |        2|REG: 1                    |REG: 2                                   |
+          |FDRS               |        2|REG: 1                    |REG: 2                                   |
+          |GND                |        3|                          |                                         |
+          |INV                |        5|                          |                                         |
+          |LUT2               |       83|LUT: 1                    |LUT: 83                                  |
+          |LUT3               |        2|LUT: 1                    |LUT: 2                                   |
+          |LUT6               |      480|LUT: 1 LUT6: 1            |LUT: 480 LUT6: 480                       |
+          |MUXCY_L            |        1|                          |                                         |
+          |OR2                |       18|LUT: 1                    |LUT: 18                                  |
+          |URAM288_BASE       |       32|LUT: 525 URAM: 1 REG: 569 |LUT: 16800 URAM: 32 REG: 18208           |
+          |VCC                |        3|                          |                                         |
+          |XOR2               |        1|LUT: 1                    |LUT: 1                                   |
+          |XORCY              |        1|                          |                                         |
+          |ZEBU_BB_ZMEM_PORT  |      173|                          |                                         |
+          |ZEBU_BB_ZMEM_TIMING|        3|                          |                                         |
+          |ZXLSYS             |        2|                          |                                         |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |Total              |     3930|                          |LUT: 20165 LUT6: 480 URAM: 32 REG: 18550 |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_base), Instantiated 2 times
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |Primitive Name|Total nb.|Cost per primitive        |Cost at top level                        |
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |AND2          |     2620|LUT: 1                    |LUT: 2620                                |
+          |AND2B1        |       60|LUT: 1                    |LUT: 60                                  |
+          |FD            |       64|REG: 1                    |REG: 64                                  |
+          |GND           |        1|                          |                                         |
+          |INV           |        2|                          |                                         |
+          |LUT2          |       80|LUT: 1                    |LUT: 80                                  |
+          |LUT6          |      480|LUT: 1 LUT6: 1            |LUT: 480 LUT6: 480                       |
+          |URAM288_BASE  |       32|LUT: 525 URAM: 1 REG: 569 |LUT: 16800 URAM: 32 REG: 18208           |
+          |VCC           |        1|                          |                                         |
+          |ZXLSYS        |        1|                          |                                         |
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |Total         |     3341|                          |LUT: 20040 LUT6: 480 URAM: 32 REG: 18272 |
+          +--------------+---------+--------------------------+-----------------------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0002_ZMEM_mem_r), Instantiated 1 times
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive        |Cost at top level                        |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |AND2               |     2721|LUT: 1                    |LUT: 2721                                |
+          |AND2B1             |       60|LUT: 1                    |LUT: 60                                  |
+          |DBG_READBACK       |       92|REG: 1                    |REG: 92                                  |
+          |FD                 |      166|REG: 1                    |REG: 166                                 |
+          |FDE                |       80|REG: 1                    |REG: 80                                  |
+          |FDRE               |        2|REG: 1                    |REG: 2                                   |
+          |FDRS               |        2|REG: 1                    |REG: 2                                   |
+          |GND                |        3|                          |                                         |
+          |INV                |        5|                          |                                         |
+          |LUT2               |       83|LUT: 1                    |LUT: 83                                  |
+          |LUT3               |        2|LUT: 1                    |LUT: 2                                   |
+          |LUT6               |      480|LUT: 1 LUT6: 1            |LUT: 480 LUT6: 480                       |
+          |MUXCY_L            |        1|                          |                                         |
+          |OR2                |       18|LUT: 1                    |LUT: 18                                  |
+          |URAM288_BASE       |       32|LUT: 525 URAM: 1 REG: 569 |LUT: 16800 URAM: 32 REG: 18208           |
+          |VCC                |        3|                          |                                         |
+          |XOR2               |        1|LUT: 1                    |LUT: 1                                   |
+          |XORCY              |        1|                          |                                         |
+          |ZEBU_BB_ZMEM_PORT  |      173|                          |                                         |
+          |ZEBU_BB_ZMEM_TIMING|        3|                          |                                         |
+          |ZXLSYS             |        2|                          |                                         |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+          |Total              |     3930|                          |LUT: 20165 LUT6: 480 URAM: 32 REG: 18550 |
+          +-------------------+---------+--------------------------+-----------------------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_fpga_sram_0002_ZMEM_mem_r_base), Instantiated 1 times
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |Primitive Name|Total nb.|Cost per primitive        |Cost at top level                        |
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |AND2          |     2620|LUT: 1                    |LUT: 2620                                |
+          |AND2B1        |       60|LUT: 1                    |LUT: 60                                  |
+          |FD            |       64|REG: 1                    |REG: 64                                  |
+          |GND           |        1|                          |                                         |
+          |INV           |        2|                          |                                         |
+          |LUT2          |       80|LUT: 1                    |LUT: 80                                  |
+          |LUT6          |      480|LUT: 1 LUT6: 1            |LUT: 480 LUT6: 480                       |
+          |URAM288_BASE  |       32|LUT: 525 URAM: 1 REG: 569 |LUT: 16800 URAM: 32 REG: 18208           |
+          |VCC           |        1|                          |                                         |
+          |ZXLSYS        |        1|                          |                                         |
+          +--------------+---------+--------------------------+-----------------------------------------+
+          |Total         |     3341|                          |LUT: 20040 LUT6: 480 URAM: 32 REG: 18272 |
+          +--------------+---------+--------------------------+-----------------------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_2_ZMEM_0), Instantiated 1 times
+          +-------------------+---------+------------------+-------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level        |
+          +-------------------+---------+------------------+-------------------------+
+          |AND2               |      146|LUT: 1            |LUT: 146                 |
+          |AND3               |        1|LUT: 1            |LUT: 1                   |
+          |DBG_READBACK       |      138|REG: 1            |REG: 138                 |
+          |FD                 |      151|REG: 1            |REG: 151                 |
+          |FDE                |      116|REG: 1            |REG: 116                 |
+          |FDRE               |        2|REG: 1            |REG: 2                   |
+          |FDRS               |        4|REG: 1            |REG: 4                   |
+          |GND                |        3|                  |                         |
+          |INV                |        5|                  |                         |
+          |LUT2               |        3|LUT: 1            |LUT: 3                   |
+          |LUT3               |        3|LUT: 1            |LUT: 3                   |
+          |MUXCY_L            |        1|                  |                         |
+          |OR2                |       12|LUT: 1            |LUT: 12                  |
+          |RAMB36E1           |        4|RAM: 1            |RAM: 4                   |
+          |VCC                |        2|                  |                         |
+          |XOR2               |        2|LUT: 1            |LUT: 2                   |
+          |XORCY              |        1|                  |                         |
+          |ZEBU_BB_ZMEM_PORT  |      256|                  |                         |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                         |
+          |ZXLSYS             |        2|                  |                         |
+          +-------------------+---------+------------------+-------------------------+
+          |Total              |      854|                  |LUT: 167 RAM: 4 REG: 411 |
+          +-------------------+---------+------------------+-------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_2_ZMEM_0__zz_Encrypt_2_ZMEM_0_base_15), Instantiated 1 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |        4|RAM: 1            |RAM: 4           |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |        6|                  |RAM: 4           |
+          +--------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_5_ZMEM_0), Instantiated 1 times
+          +-------------------+---------+------------------+------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level       |
+          +-------------------+---------+------------------+------------------------+
+          |AND2               |       42|LUT: 1            |LUT: 42                 |
+          |DBG_READBACK       |       37|REG: 1            |REG: 37                 |
+          |FD                 |       47|REG: 1            |REG: 47                 |
+          |FDE                |       16|REG: 1            |REG: 16                 |
+          |FDRE               |        2|REG: 1            |REG: 2                  |
+          |FDRS               |        4|REG: 1            |REG: 4                  |
+          |GND                |        3|                  |                        |
+          |INV                |        4|                  |                        |
+          |LUT2               |        3|LUT: 1            |LUT: 3                  |
+          |LUT3               |        3|LUT: 1            |LUT: 3                  |
+          |MUXCY_L            |        1|                  |                        |
+          |OR2                |       11|LUT: 1            |LUT: 11                 |
+          |RAMB36E1           |        1|RAM: 1            |RAM: 1                  |
+          |VCC                |        2|                  |                        |
+          |XOR2               |        2|LUT: 1            |LUT: 2                  |
+          |XORCY              |        1|                  |                        |
+          |ZEBU_BB_ZMEM_PORT  |       55|                  |                        |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                        |
+          |ZXLSYS             |        2|                  |                        |
+          +-------------------+---------+------------------+------------------------+
+          |Total              |      238|                  |LUT: 61 RAM: 1 REG: 106 |
+          +-------------------+---------+------------------+------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_5_ZMEM_0_base), Instantiated 1 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |        1|RAM: 1            |RAM: 1           |
+          |VCC           |        1|                  |                 |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |        4|                  |RAM: 1           |
+          +--------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_7_ZMEM_0), Instantiated 8 times
+          +-------------------+---------+------------------+-------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level        |
+          +-------------------+---------+------------------+-------------------------+
+          |AND2               |      213|LUT: 1            |LUT: 213                 |
+          |AND3               |        1|LUT: 1            |LUT: 1                   |
+          |DBG_READBACK       |      203|REG: 1            |REG: 203                 |
+          |FD                 |      218|REG: 1            |REG: 218                 |
+          |FDE                |      181|REG: 1            |REG: 181                 |
+          |FDRE               |        2|REG: 1            |REG: 2                   |
+          |FDRS               |        4|REG: 1            |REG: 4                   |
+          |GND                |        3|                  |                         |
+          |INV                |        5|                  |                         |
+          |LUT2               |        3|LUT: 1            |LUT: 3                   |
+          |LUT3               |        3|LUT: 1            |LUT: 3                   |
+          |MUXCY_L            |        1|                  |                         |
+          |OR2                |       12|LUT: 1            |LUT: 12                  |
+          |RAMB36E1           |        6|RAM: 1            |RAM: 6                   |
+          |VCC                |        2|                  |                         |
+          |XOR2               |        2|LUT: 1            |LUT: 2                   |
+          |XORCY              |        1|                  |                         |
+          |ZEBU_BB_ZMEM_PORT  |      386|                  |                         |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                         |
+          |ZXLSYS             |        2|                  |                         |
+          +-------------------+---------+------------------+-------------------------+
+          |Total              |     1250|                  |LUT: 234 RAM: 6 REG: 608 |
+          +-------------------+---------+------------------+-------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_7_ZMEM_0__zz_Encrypt_7_ZMEM_0_base_22), Instantiated 8 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |        6|RAM: 1            |RAM: 6           |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |        8|                  |RAM: 6           |
+          +--------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_8_ZMEM_0), Instantiated 2 times
+          +-------------------+---------+------------------+-------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level        |
+          +-------------------+---------+------------------+-------------------------+
+          |AND2               |      115|LUT: 1            |LUT: 115                 |
+          |AND3               |        1|LUT: 1            |LUT: 1                   |
+          |DBG_READBACK       |      108|REG: 1            |REG: 108                 |
+          |FD                 |      120|REG: 1            |REG: 120                 |
+          |FDE                |       86|REG: 1            |REG: 86                  |
+          |FDRE               |        2|REG: 1            |REG: 2                   |
+          |FDRS               |        4|REG: 1            |REG: 4                   |
+          |GND                |        3|                  |                         |
+          |INV                |        5|                  |                         |
+          |LUT2               |        3|LUT: 1            |LUT: 3                   |
+          |LUT3               |        3|LUT: 1            |LUT: 3                   |
+          |MUXCY_L            |        1|                  |                         |
+          |OR2                |       12|LUT: 1            |LUT: 12                  |
+          |RAMB36E1           |        3|RAM: 1            |RAM: 3                   |
+          |VCC                |        2|                  |                         |
+          |XOR2               |        2|LUT: 1            |LUT: 2                   |
+          |XORCY              |        1|                  |                         |
+          |ZEBU_BB_ZMEM_PORT  |      196|                  |                         |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                         |
+          |ZXLSYS             |        2|                  |                         |
+          +-------------------+---------+------------------+-------------------------+
+          |Total              |      671|                  |LUT: 136 RAM: 3 REG: 320 |
+          +-------------------+---------+------------------+-------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_8_ZMEM_0__zz_Encrypt_8_ZMEM_0_base_30), Instantiated 2 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |        3|RAM: 1            |RAM: 3           |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |        5|                  |RAM: 3           |
+          +--------------+---------+------------------+-----------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_9_ZMEM_0), Instantiated 1 times
+          +-------------------+---------+------------------+---------------------------+
+          |Primitive Name     |Total nb.|Cost per primitive|Cost at top level          |
+          +-------------------+---------+------------------+---------------------------+
+          |AND2               |      659|LUT: 1            |LUT: 659                   |
+          |AND3               |        1|LUT: 1            |LUT: 1                     |
+          |DBG_READBACK       |      635|REG: 1            |REG: 635                   |
+          |FD                 |      664|REG: 1            |REG: 664                   |
+          |FDE                |      613|REG: 1            |REG: 613                   |
+          |FDRE               |        2|REG: 1            |REG: 2                     |
+          |FDRS               |        4|REG: 1            |REG: 4                     |
+          |GND                |        3|                  |                           |
+          |INV                |        5|                  |                           |
+          |LUT2               |        3|LUT: 1            |LUT: 3                     |
+          |LUT3               |        3|LUT: 1            |LUT: 3                     |
+          |MUXCY_L            |        1|                  |                           |
+          |OR2                |       12|LUT: 1            |LUT: 12                    |
+          |RAMB36E1           |       18|RAM: 1            |RAM: 18                    |
+          |VCC                |        2|                  |                           |
+          |XOR2               |        2|LUT: 1            |LUT: 2                     |
+          |XORCY              |        1|                  |                           |
+          |ZEBU_BB_ZMEM_PORT  |     1250|                  |                           |
+          |ZEBU_BB_ZMEM_TIMING|        2|                  |                           |
+          |ZXLSYS             |        2|                  |                           |
+          +-------------------+---------+------------------+---------------------------+
+          |Total              |     3882|                  |LUT: 680 RAM: 18 REG: 1918 |
+          +-------------------+---------+------------------+---------------------------+
+
+
+
+Primitive count in ZMEM module(reserved_scope_zz_Encrypt_9_ZMEM_0__zz_Encrypt_9_ZMEM_0_base_38), Instantiated 1 times
+          +--------------+---------+------------------+-----------------+
+          |Primitive Name|Total nb.|Cost per primitive|Cost at top level|
+          +--------------+---------+------------------+-----------------+
+          |GND           |        1|                  |                 |
+          |RAMB36E1      |       18|RAM: 1            |RAM: 18          |
+          |ZXLSYS        |        1|                  |                 |
+          +--------------+---------+------------------+-----------------+
+          |Total         |       20|                  |RAM: 18          |
+          +--------------+---------+------------------+-----------------+
+
+
+</pre>
+<a name="K6." id="K6."></a>
+<h4><a href="#">6.Power network definition.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K7." id="K7."></a>
+<h4><a href="#">7.User and netlist wire resolution directives.
+</a></h4>
+<pre>
+</pre>
+<a name="K7.1." id="K7.1."></a>
+<h4><a href="#">7.1.Wire resolution user commands.
+</a></h4>
+<pre>
+No user wire resolution command specified.
+</pre>
+<a name="K7.2." id="K7.2."></a>
+<h4><a href="#">7.2.Wire resolution definitions from zebu macros.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K8." id="K8."></a>
+<h4><a href="#">8.User and netlist tristate directives.
+</a></h4>
+<pre>
+</pre>
+<a name="K8.1." id="K8.1."></a>
+<h4><a href="#">8.1.Tristate global parameters.
+</a></h4>
+<pre>
+Default tristate resolution on tristate buses is PULLUP.
+Default conflict resolution on tristate buses is WAND.
+</pre>
+<a name="K8.2." id="K8.2."></a>
+<h4><a href="#">8.2.Tristate user commands.
+</a></h4>
+<pre>
+No user tristate command specified.
+</pre>
+<a name="K9." id="K9."></a>
+<h4><a href="#">9.User probes.
+</a></h4>
+<pre>
+</pre>
+<a name="K9.1." id="K9.1."></a>
+<h4><a href="#">9.1.Rtl name resolution in probes
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K9.2." id="K9.2."></a>
+<h4><a href="#">9.2.User dynamic probes.
+</a></h4>
+<pre>
+1 dynamic probes were inserted in the design.
+
+</pre>
+<a name="K9.3." id="K9.3."></a>
+<h4><a href="#">9.3.User sram_trace probes.
+</a></h4>
+<pre>
+No sram_trace probe was defined by user.
+</pre>
+<a name="K9.4." id="K9.4."></a>
+<h4><a href="#">9.4.User read/write port probes.
+</a></h4>
+<pre>
+No read_port was defined by user.
+No write_port was defined by user.
+</pre>
+<a name="K10." id="K10."></a>
+<h4><a href="#">10.Fast Waveform Capture.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K11." id="K11."></a>
+<h4><a href="#">11.Monitor.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K12." id="K12."></a>
+<h4><a href="#">12.Pre-Split Data Localization.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K13." id="K13."></a>
+<h4><a href="#">13.User forces (assign/undriven).
+</a></h4>
+<pre>
+0 'force undriven' command(s) were specified by user.
+0 'force assign' command(s) were specified by user.
+
+0 wire(s) were manipulated.
+
+</pre>
+<a name="K14." id="K14."></a>
+<h4><a href="#">14.User dynamic forces.
+</a></h4>
+<pre>
+</pre>
+<a name="K14.1." id="K14.1."></a>
+<h4><a href="#">14.1.User dynamic forces (pre-netlist-load checks).
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K14.2." id="K14.2."></a>
+<h4><a href="#">14.2.User dynamic forces (insertion).
+</a></h4>
+<pre>
+No dynamic forces were define by user.
+</pre>
+<a name="K15." id="K15."></a>
+<h4><a href="#">15.User forces and injection.
+</a></h4>
+<pre>
+</pre>
+<a name="K15.1." id="K15.1."></a>
+<h4><a href="#">15.1.User forces and injections (pre-netlist-load checks).
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K15.2." id="K15.2."></a>
+<h4><a href="#">15.2.User forces and injections (insertion).
+</a></h4>
+<pre>
+Processing for command zinject -mode dynamic -rtlname { {zebu_top.zebu_disable} } -access all -initValue 0 -object_not_found fatal
+
+Processing for command zinject -mode dynamic -rtlname { {zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable} } -access all -initValue 0 -object_not_found fatal
+
+Processing for command zinject -mode dynamic -rtlname { {zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.zebu_disable} } -access all -initValue 0 -object_not_found fatal
+
+
+3 injection(s) were performed.
+
+Processing for command zforce -mode dynamic -rtlname { {zebu_top.rst_a} } -access all  -type global -object_not_found fatal
+
+
+1 force(s) were applied.
+
+Inject undriven 'zebu_top.zebu_disable' wire with 'zebu_zebu_disable_zinject' instance, within 'zebu_top' module (initialized to 0).
+Inject undriven 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable' wire with 'zebu_zebu_disable_zinject' instance, within 'zebu_axi_xtor' module (initialized to 0).
+Inject undriven 'zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.zebu_disable' wire with 'zebu_zebu_disable_zinject' instance, within 'axi_dummy_slave' module (initialized to 0).
+Force undriven 'zebu_top.rst_a' wire.
+
+0 both force(s) / injection(s) were performed.
+
+</pre>
+<a name="K16." id="K16."></a>
+<h4><a href="#">16.Memory non-determinism resolution.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K17." id="K17."></a>
+<h4><a href="#">17.Logic Optimization.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K18." id="K18."></a>
+<h4><a href="#">18.Post-buffer simplification undriven fixing.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K19." id="K19."></a>
+<h4><a href="#">19.Partitioning.
+</a></h4>
+<pre>
+</pre>
+<a name="K19.1." id="K19.1."></a>
+<h4><a href="#">19.1.Design size areas before partitioning
+</a></h4>
+<pre>
+
+Pre-Partitioning : Design areas size estimations
+          +-----------------------+-----------------------------------------------------------------------------+-----------+-----+-----+-----+-----+-----+------+-----------+------------+-----------+------------+---------+---------+--------------------------------------------------------------------------------------------------+
+          |Type                   |Grp name or zMem prop                                                        |max_bin    |LUT  |LUT6 |RAM  |URAM |REG  |RAMLUT|FWC_IP_BITS|QIWC_IP_BITS|ZCEI_MSG_IN|ZCEI_MSG_OUT|ZRM_SLOTS|ZRM_PORTS|Path or Model name                                                                                |
+          +-----------------------+-----------------------------------------------------------------------------+-----------+-----+-----+-----+-----+-----+------+-----------+------------+-----------+------------+---------+---------+--------------------------------------------------------------------------------------------------+
+          |Area                   |DEFAULT_GROUP                                                                |min fit : 1|377K |109K |105  |98   |354K |46K   |834        |117K        |237        |78          |33K      |1        |+zebu_top                                                                                         |
+          |area without memories  |                                                                             |           |312K |108K |22   |0    |289K |46K   |834        |117K        |237        |78          |0        |0        |                                                                                                  |
+          |resource per bin       |                                                                             |           |15M  |9806K|15K  |1536 |22M  |1934K |9516       |1371K       |7550K      |3072        |98K      |3072     |                                                                                                  |
+          |utilization (1 bins)   |                                                                             |           |2.56%|1.11%|0.69%|6.38%|1.64%|2.39% |8.76%      |8.52%       |0.00%      |2.54%       |33.33%   |0.03%    |                                                                                                  |
+          +.......................|.............................................................................|...........|.....|.....|.....|.....|.....|......|...........|............|...........|............|.........|.........|..................................................................................................+
+          |zrm                    |depth(268435456) width(128) rd(0) wr(0) rw(1)                                |           |1    |0    |0    |0    |0    |0     |0          |0           |0          |0           |33K      |1        |zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r            |
+          |zmem bram              |depth(1024) width(116) rd(1) wr(1) rw(0), port(2), SYNC, SPLIT(NO)           |           |176  |0    |4    |0    |411  |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod6249|
+          |zmem bram              |depth(1024) width(131) rd(1) wr(1) rw(0), port(2), SYNC_ASYNC_MIX, SPLIT(NO) |           |2    |0    |4    |0    |293  |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_rdel_mem           |
+          |zmem bram              |depth(1024) width(16) rd(1) wr(1) rw(0), port(2), SYNC, SPLIT(NO)            |           |68   |0    |1    |0    |106  |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1465|
+          |zmem bram (8 instances)|depth(1024) width(181) rd(1) wr(1) rw(0), port(2), SYNC, SPLIT(NO)           |           |245  |0    |6    |0    |608  |0     |0          |0           |0          |0           |0        |0        |Model name: zz_Encrypt_7_ZMEM_0                                                                   |
+          |zmem bram              |depth(1024) width(2) rd(1) wr(1) rw(0), port(2), SYNC_ASYNC_MIX, SPLIT(NO)   |           |2    |0    |1    |0    |35   |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_bdel_mem           |
+          |zmem bram              |depth(1024) width(613) rd(1) wr(1) rw(0), port(2), SYNC, SPLIT(NO)           |           |701  |0    |18   |0    |1918 |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818.sqnod845601    |
+          |zmem bram (2 instances)|depth(1024) width(86) rd(1) wr(1) rw(0), port(2), SYNC, SPLIT(NO)            |           |145  |0    |3    |0    |320  |0     |0          |0           |0          |0           |0        |0        |Model name: zz_Encrypt_8_ZMEM_0                                                                   |
+          |zmem uram (3 instances)|depth(131072) width(40) rd(2) wr(1) rw(0), port(3), SYNC_ASYNC_MIX, SPLIT(NO)|           |20K  |480  |0    |32   |19K  |0     |0          |0           |0          |0           |0        |0        |Model name: fpga_sram_0002_0000_ZMEM_mem_r                                                        |
+          |zmem uram              |depth(2048) width(80) rd(1) wr(1) rw(0), port(2), SYNC_ASYNC_MIX, SPLIT(NO)  |           |1258 |0    |0    |2    |1598 |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_data_ram.u_ic_data_ram.mem_r  |
+          |zmem bram              |depth(256) width(56) rd(1) wr(1) rw(0), port(2), SYNC_ASYNC_MIX, SPLIT(NO)   |           |157  |0    |1    |0    |327  |0     |0          |0           |0          |0           |0        |0        |zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_tag_ram.u_ic_tag_ram.mem_r    |
+          |XTOR (2 instances)     |                                                                             |           |1132 |122  |1    |0    |1086 |208   |0          |2           |1          |1           |0        |0        |Model name: clockDelayPort_0000                                                                   |
+          |XTOR                   |                                                                             |           |1133 |122  |1    |0    |1087 |208   |1          |2           |1          |1           |0        |0        |zebu_top.zebuclk_ref_clk                                                                          |
+          |XTOR (2 instances)     |                                                                             |           |86   |23   |1    |0    |57   |0     |0          |53          |0          |0           |0        |0        |Model name: rl_ifu_fetcher                                                                        |
+          |XTOR (80 instances)    |                                                                             |           |0    |0    |0    |0    |0    |0     |0          |0           |0          |0           |0        |0        |Model name: rtlClockControl                                                                       |
+          |XTOR (9 instances)     |                                                                             |           |3557 |219  |0    |0    |3474 |1008  |0          |0           |2          |2           |0        |0        |Model name: ts_runman                                                                             |
+          |XTOR                   |                                                                             |           |24K  |6900 |25   |0    |31K  |5736  |0          |5395        |45         |24          |0        |0        |zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i                                     |
+          |XTOR                   |                                                                             |           |39K  |12K  |54   |0    |97K  |26K   |0          |2928        |155        |21          |0        |0        |zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor                     |
+          |XTOR                   |                                                                             |           |7242 |1474 |1    |0    |10K  |1152  |4          |3580        |14         |9           |0        |0        |zebu_top.i_t32Jtag_driver                                                                         |
+          |XTOR                   |                                                                             |           |9173 |12   |0    |0    |12K  |3304  |0          |0           |2          |3           |0        |0        |zebu_top.zebu_time_capture                                                                        |
+          +=======================+=============================================================================+===========+=====+=====+=====+=====+=====+======+===========+============+===========+============+=========+=========+==================================================================================================+
+          |SUM GROUPS             |                                                                             |           |377K |109K |105  |98   |354K |46K   |834        |117K        |237        |78          |33K      |1        |                                                                                                  |
+          |SUM MEM                |                                                                             |           |65K  |1440 |83   |98   |66K  |0     |0          |0           |0          |0           |33K      |1        |                                                                                                  |
+          |SUM XTOR               |                                                                             |           |115K |23K  |85   |0    |185K |46K   |5          |12K         |237        |78          |0        |0        |                                                                                                  |
+          +-----------------------+-----------------------------------------------------------------------------+-----------+-----+-----+-----+-----+-----+------+-----------+------------+-----------+------------+---------+---------+--------------------------------------------------------------------------------------------------+
+
+
+</pre>
+<a name="K19.2." id="K19.2."></a>
+<h4><a href="#">19.2.Partitioner constraints
+</a></h4>
+<a name="K19.2." id="K19.2."></a>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_19_2_Partitione.html">
+	read *** ./zTopBuild_report_html_large_sections.dir/_SEC_19_2_Partitione.html ***
+
+</a></h4>
+<a name="K19.3." id="K19.3."></a>
+<h4><a href="#">19.3.Partitioner basic resource estimations
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K20." id="K20."></a>
+<h4><a href="#">20.Netlist split.
+</a></h4>
+<pre>
+</pre>
+<a name="K20.1." id="K20.1."></a>
+<h4><a href="#">20.1.Initial core definition (defcore commands)
+</a></h4>
+<pre>
+
+0 core definition(s)
+
+
+</pre>
+<a name="K21." id="K21."></a>
+<h4><a href="#">21.Asynchronous paths optimization processing
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K22." id="K22."></a>
+<h4><a href="#">22.Post-split wire resolution handling.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K23." id="K23."></a>
+<h4><a href="#">23.Post-split tristate handling.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K24." id="K24."></a>
+<h4><a href="#">24.Clock handling.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K25." id="K25."></a>
+<h4><a href="#">25.Post-split statistics.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K26." id="K26."></a>
+<h4><a href="#">26.Object IDs statistics.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K27." id="K27."></a>
+<h4><a href="#">27.Ice connection processing.
+</a></h4>
+<pre>
+</pre>
+<a name="K27.1." id="K27.1."></a>
+<h4><a href="#">27.1.ICE commands report.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K28." id="K28."></a>
+<h4><a href="#">28.Combinational loops manipulations.
+</a></h4>
+<pre>
+The report contains EDIF hierarchical paths only as no RTLDB is loaded.
+
+Found 0 strongly connected component(s), going through asynchronous ports (PRE/CLR), going through clock ports (C/G).
+
+
+</pre>
+<a name="K29." id="K29."></a>
+<h4><a href="#">29.Inter-partition combinational loops checks.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K30." id="K30."></a>
+<h4><a href="#">30.Sparse Memory Conversion.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K31." id="K31."></a>
+<h4><a href="#">31.Netlist memory usage.
+</a></h4>
+<pre>
+</pre>
+<a name="K31.1." id="K31.1."></a>
+<h4><a href="#">31.1.Netlist memory information after the 'merged' step of the flow.
+</a></h4>
+<pre>
+################################################################################
+# MEMORY REPORT v1.0                                                           #
+# Wed May 14 18:58:20 2025
+                                                    #
+################################################################################
+
+
+TOTAL MEMORY: 165.392 MB
+    -netlist data base               : 165.392 MB
+
+STATISTICS FOR OBJECTS IN THE DATABASE #########################################
+netlist object type      number of occurrences    used memory         average memory per object     size of the object  average attribute per object  alias count         
+netlists:                1                        72 bytes            72                            72                  0                             0                   
+libraries:               9                        82.136  KB          9126.22                       80                  0                             0                   
+hierarchical modules:    934                      6.61462 MB          7082.03                       392                 1.79336                       0                   
+leaf modules:            1310                     1.2831 MB           979.469                       360                 2                             0                   
+hierarchical instances:  2542                     2.47227 MB          972.57                        136                 0.355232                      0                   
+leaf instances:          299977                   38.9478 MB          129.836                       104                 0.557369                      0                   
+hierarchical ports:      434749                   22.3597 MB          51.4312                       48                  0.00366188                    312                 
+leaf ports:              1353484                  54.1428 MB          40.0026                       40                  7.97941e-05                   0                   
+port vectors:            24489                    6.24372 MB          254.96                        80                  0                             0                   
+wires:                   515885                   33.2455 MB          64.4436                       64                  0.0138636                     0                   
+
+Detailed statistics for hierarchical modules:
+Module count :                                    934                 
+Memory in modules :                               6614616             
+Xilinx module number :                            0                   
+
+ -- Module summary table:
+Module object type  total               average             median              max                 
+ports               180096              192.822             1498                11641               
+port-vectors        5019                5.37366             23                  152                 
+instances           302519              323.896             3914                23862               
+wires               515885              552.339             5449                48312               
+
+ -- Module instantiation statistics:
+total               average             median              max                 
+2542                2.72163             5                   272                 
+
+
+Detailed statistics for leaf modules:
+Module count :                                    1310                
+Memory in modules :                               1283104             
+Xilinx module number :                            1310                
+
+ -- Module summary table:
+Module object type  total               average             median              max                 
+ports               44371               33.871              429                 4019                
+port-vectors        2769                2.11374             55                  288                 
+instances           0                   0                   0                   0                   
+wires               0                   0                   0                   0                   
+
+ -- Module instantiation statistics:
+total               average             median              max                 
+299977              228.99              33069               81555               
+
+
+Detailled statistics for hier ports:
+port count :                            434749              
+Memory in ports :                       22.3597 MB          
+Module port number :                    180096              
+Instance port number :                  254653              
+Vector port number :                    406046              
+
+Detailled statistics for leaf ports:
+port count :                            1353484             
+Memory in ports :                       54.1428 MB          
+Module port number :                    44371               
+Instance port number :                  1309113             
+Vector port number :                    129529              
+
+Detailed statistics for hierarchical instances:
+Instance count :                        2542                     
+Memory in instances :                   2.47227 MB               
+Xilinx instance number :                0                        
+Average port number :                   100.178                  
+Average port-vector number :            2.97128                  
+
+Detailed statistics for leaf instances:
+Instance count :                        299977                   
+Memory in instances :                   38.9478 MB               
+Xilinx instance number :                299977                   
+Average port number :                   4.36404                  
+Average port-vector number :            0.0304957                
+
+Detailed statistics for wires:
+Wire count :                            515885              
+Memory in wires :                       33.2455 MB          
+Average port number :                   3.28546             
+
+Detailled statistics for attributes:
+Memory in attributes :                  182.558  KB
+Attribute count :                       182558
+
+Uniquification ratios for the netlist 'zTopBuild_netlist : 
+Top module 'zebu_top' : 
+719773 occurences of leaf instances in the hierarchy out of 294412 leaf instances in the folded model.
+Resulting ratio: 2.44
+1094848 occurences of wires in the hierarchy out of 730158 wires in the folded model.
+The ratio resulting from the hierarchical instances and modules: 
+The number of hierarchical instances excluding fs_macros: 2270
+The number of hierarchical modules excluding fs_macros: 901
+Resulting ratio: 2.52
+</pre>
+<a name="K32." id="K32."></a>
+<h4><a href="#">32.Detailed execution time and memory usage.
+</a></h4>
+<a name="K32." id="K32."></a>
+<h4><a href=".//zTopBuild_report_html_large_sections.dir/_SEC_32_Detailed_e.html">
+	read *** ./zTopBuild_report_html_large_sections.dir/_SEC_32_Detailed_e.html ***
+
+</a></h4>
+<a name="K33." id="K33."></a>
+<h4><a href="#">33.SCC Reduction.
+</a></h4>
+<pre>
+
+
+                 *** EMPTY SECTION *** 
+
+
+</pre>
+<a name="K34." id="K34."></a>
+<h4><a href="#">34.Memory optimization.
+</a></h4>
+<pre>
+MemoryOpt::preProcess Nothing to do
+MemoryOpt::postProcess Nothing to do
+</pre>
+</div>
+</body>
+</html>

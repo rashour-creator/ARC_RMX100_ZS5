@@ -1,0 +1,713 @@
+
+                                    ZeBu (R)
+                                     zTime
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zTime zTime_fpga_zcui.tcl -log zTime_fpga.log 
+
+# start time is Wed May 14 21:27:31 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:24
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4499.99 AMD EPYC 9754 128-Core Processor
+#            Load: 14.39 8.81 7.37 5/803 3790000
+#            Hostname: zebutrain-4758-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 210952 MB
+#            Swap space: 53247 MB Free Swap space: 51606 MB
+#            VmSize: 216 MB VmPeak: 216 MB
+# Disk Space Total: 5000 GB Available: 552 GB Used: 4448 GB
+#            Free inodes: 11740112
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step ENV.VAR : LM_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : SNPSLMD_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : VCS_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : VERDI_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VERDI/VERDI2021.09/ZEBU/08052024/INSTALL/VERDI/verdi/S-2021.09-SP2-10
+#   step ENV.VAR : ZEBU_ACTIVATE_EMU_QUEUE=TRUE
+#   step ENV.VAR : ZEBU_DEBUG_DYN_GRAPH_LOADING=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_AUTO_ZXF=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_DFS=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_SIMZILLA=1
+#   step ENV.VAR : ZEBU_DRIVER_PATH=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/drivers
+#   step ENV.VAR : ZEBU_ENABLE_DDR_DMA=true
+#   step ENV.VAR : ZEBU_ENABLE_NEW_ZTDB_RB=1
+#   step ENV.VAR : ZEBU_IP_ROOT=/global/apps/zebu_vs_2023.03-SP1/
+#   step ENV.VAR : ZEBU_ROOT=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : ZEBU_SA_ROOT=/remote/vginterfaces1/zebu_sa/ZebuSaRoot_Q-2020.03
+#   step ENV.VAR : ZEBU_SERIALIZED_ZFPGATIMING_BACK_ANNOTATION=1
+#   step ENV.VAR : ZEBU_SIMZILLA_VIRTUAL_SLICING=1
+#   step ENV.VAR : ZEBU_SYSTEM_DIR=/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/ZSE/zs5_4s.zs_0170
+#   step ENV.VAR : ZEBU_XIL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/ise/ISE_DS
+#   step ENV.VAR : ZEBU_XIL_VIVADO=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_FRACTAL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_fractal/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P2=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p2/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P4=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p4/
+#   step OPTIONSDB : Started reading options db ./options.db
+#   step OPTIONSDB : Default value() overwritten with post_routing_basic for zopt
+#   step OPTIONSDB : Completed reading options db ./options.db
+### warning in OPTIONSDB [OPTDB01] : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+#   step OPTIONSDB : Default value(false) overwritten with true for ztdb_rb_api
+source gridjob_profiling_parameters.tcl
+#   step SOURCE : Source file 'gridjob_profiling_parameters.tcl' ...
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zTime_definitions.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zTime_definitions.tcl' ...
+#   step SET_HTML_ALIAS_FILTERING_PATTERNS : ^design/socket.*
+#   step SET_HTML_ALIAS_FILTERING_PATTERNS : ^zcbsplt_.*
+#   step SET_HTML_ALIAS_FILTERING_PATTERNS : ^ztbsplt_.*
+#   step SET_HTML_ALIAS_FILTERING_PATTERNS : ^zext_.*
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zTime_from_zcui.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zTime_from_zcui.tcl' ...
+source tools/zTime/zPar_timing.zti
+#   step SOURCE : Source gzipped file 'tools/zTime/zPar_timing.zti' ...
+set_timing_switch_param sdf_mode 1
+set_eval_param TAURUS_CABLE_AND_PCB_DELAY=7000
+#   step KPR_CONFIG : ===== loadKprConfigs =======
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zPar_zTime_eval_params.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zPar_zTime_eval_params.tcl' ...
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/common_eval_params.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/common_eval_params.tcl' ...
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/v8_eval_params.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/v8_eval_params.tcl' ...
+set_eval_param ESTIMATED_RMSE_ARC_DELAY=10400
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zs5_config.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/zs5_config.tcl' ...
+set_eval_param ESTIMATED_RMSE_ARC_DELAY=19000
+set_eval_param MGT_GT_GP_FW_LATENCY=130000
+set_eval_param MGT_FAST_SOCKET_LATENCY=80000
+set_eval_param MGT_MUX64_DELAY=10000
+set_eval_param MGT_MUX32_DELAY=5000
+set_eval_param DELAY_ON_SINGLE_ZL=20000
+set_eval_param DELAY_ON_LVDS_ZL=1111
+set_eval_param DELAY_ON_LVDS_ZL2=833
+set_eval_param SLL_XCLK_PERIOD=10000
+set_eval_param SLL_LATENCY=10000
+set_eval_param MGT_LATENCY=74000
+set_eval_param SLL_UBDR=1.0
+set_eval_param MGT_UBDR=1.142857
+set_eval_param SDR_COFFICIENT=1.0
+set_eval_param SLL_SDR_DELAY=15000
+set_eval_param DELAY_ON_LOW_SKEW=5000
+set_eval_param DELAY_IN_FPGA=10000
+set_eval_param DELAY_IN_DIE=10000
+set_eval_param DELAY_IN_CLOCKGEN=5000
+set_eval_param DELAY_IN_MSGPORT=16000
+set_eval_param DELAY_ASYNC_FPGA=16000
+set_eval_param DELAY_ASYNC_DIE=16000
+set_eval_param DELAY_IN_SOCKET=1
+set_eval_param DELAY_CROSS_FPGA=0
+set_eval_param DELAY_S2S_INT=15000
+set_eval_param DELAY_S2S_INT_DIE=15000
+set_eval_param DELAY_F2F_INT=1
+set_eval_param DELAY_F2I_INT=1
+set_eval_param DELAY_I2F_INT=1
+set_eval_param DELAY_I2I_INT=1
+set_eval_param DELAY_RACC=0
+set_eval_param DELAY_DIE_AWARE=0
+set_eval_param DELAY_MIN_ZFILTER=40000
+set_eval_param DELAY_MIN_ZFILTER_SKEW=40000
+set_eval_param DELAY_MIN_SKEW_DRVCLK=40000
+set_eval_param DELAY_MIN_ZFILTER_DRVCLK=0
+set_eval_param DELAY_ADD_SKEW=0
+set_eval_param DELAY_ADD_DRVCLK=0
+set_eval_param SSRAM_HZ_CYCLE=2
+set_eval_param SSRAM_DUT2MEM_CYCLE=3
+set_eval_param SSRAM_CONTROL_CYCLE=4
+set_eval_param SSRAM_DEFAULT_FREQ=150.0
+set_eval_param SSRAM_FORCE_FREQ=0
+set_eval_param SSRAM_EMPIRICAL_FMAX=25.0
+set_eval_param SSRAM_WORD_WIDTH=32
+set_eval_param RLDRAM_DEFAULT_FREQ=200.0
+set_eval_param RLDRAM_FORCE_FREQ=0.0
+set_eval_param RLDRAM_EMPIRICAL_FMAX=25.0
+set_eval_param RLDRAM_WORD_WIDTH=32
+set_eval_param RLDRAM_HZ_CYCLE=3
+set_eval_param RLDRAM_SIMULTANEOUS_RW=0
+set_eval_param DRAM_DEFAULT_FREQ=234
+set_eval_param DRAM_FORCE_FREQ=0.0
+set_eval_param DRAM_EMPIRICAL_FMAX=25.0
+set_eval_param DRAM_EMPIRICAL_XTOR_FMAX=17.0
+set_eval_param DRAM_WORD_WIDTH=256
+set_eval_param DRAM_SIMULTANEOUS_RW=0
+set_eval_param DRAM3_DEFAULT_FREQ=400.0
+set_eval_param DRAM3_FORCE_FREQ=0.0
+set_eval_param DRAM3_EMPIRICAL_FMAX=25.0
+set_eval_param DRAM3_EMPIRICAL_XTOR_FMAX=17.0
+set_eval_param DRAM3_WORD_WIDTH=512
+set_eval_param DRAM3_SIMULTANEOUS_RW=0
+set_eval_param DRAM4_DEFAULT_FREQ=800.0
+set_eval_param DRAM4_FORCE_FREQ=0.0
+set_eval_param DRAM4_EMPIRICAL_FMAX=25.0
+set_eval_param DRAM4_EMPIRICAL_XTOR_FMAX=17.0
+set_eval_param DRAM4_WORD_WIDTH=512
+set_eval_param DRAM4_SIMULTANEOUS_RW=0
+set_eval_param BRAM_EMPIRICAL_FMAX=25.0
+set_eval_param RAMLUT_EMPIRICAL_FMAX=25.0
+set_eval_param MAX_FWCIP_SIZE=480
+set_eval_param MAX_SKEW_OFFSET=65530
+set_eval_param MAX_DRIVER_OFFSET=65530
+set_eval_param MASTER_CLOCK_FREQ=100.0
+set_eval_param XCLK_PERIOD=1.6666666666666667
+set_eval_param DELAY_IF2IF=50000
+set_eval_param DELAY_IF2H=100000
+set_eval_param DELAY_I2I_EXT=30000
+set_lazy_eval_func DELAY_I2I_EXT=_tsInterfArcDelay
+set_eval_param DELAY_IN_CLKHUB=100000
+set_eval_param DELAY_IN_32U_CLKHUB=240000
+set_eval_param EXTRA_DELAY_TS_CLKBUS_IN=4000
+set_eval_param EXTRA_DELAY_TS_CLKBUS_OUT=15000
+set_eval_param DELAY_IN_TSINTERF=150000
+set_lazy_eval_func DELAY_IN_TSINTERF=_tsInterfInternalDelay
+set_eval_param EXTRA_DELAY_LANCE_LOGIC=0
+set_xclock 1000
+set_xclock2 -1
+#   step clock_config : Setting clock constraint for "driverfrequency" at 10000000Hz.
+set_post_fpga true
+source tools/zTime/clock_dependencies.zti
+#   step SOURCE : Source gzipped file 'tools/zTime/clock_dependencies.zti' ...
+clock_dependencies_update
+import_zref_info tools/zTime/zTime_hierarchy.edf.gz
+#   step importZrefInfo : Starting
+#   step ZNF PARSER : reading netlist from ZNF file 'tools/zTime/zTime_hierarchy.edf.gz'
+#   step importZrefInfo : Done in     elapsed:0.2 s    user:0.1 s      system:0 s      %cpu:40.00      load:14.39       fm:210596 m      vm:521 m       vm:+6 m      um:136 m       um:+3 m
+source tools/zTime/zTopBuild_timing.zti
+#   step SOURCE : Source gzipped file 'tools/zTime/zTopBuild_timing.zti' ...
+set_timing_switch_param zmem_clock_domain_instrument 1
+set_timing_switch_param localize_clock_stop_retro_at_latch 1
+set_timing_switch_param localize_clock_stop_retro_at_async_set_reset 0
+set_hydra -enable true
+#   step HYDRA : Hydra mode is enabled.
+import_async_paths work.Part_0/tools/zTime/global_time.edf.gz -sdf=true
+#   step IMPORT : SDF support of memory paths is enabled
+#   step IMPORT : Starting
+#   step IMPORT : import use ZEBU_EDIF_TRANSFER
+#   step IMPORT : Import asynchronous paths from 'work.Part_0/tools/zTime/global_time.edf.gz'
+#   step ZNF PARSER : reading netlist from ZNF file 'work.Part_0/tools/zTime/global_time.edf.gz'
+### warning in IMPORT [KTM0560W] : zTime_clock_domain.cds not found
+#   step Memories timing paths distribution : 
+# +
+#   step IMPORT : Done in     elapsed:0.2 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210584 m      vm:541 m      vm:+20 m      um:136 m       um:+0 m
+source work.Part_0/tools/zTime/zCoreBuild_timing.zti
+#   step SOURCE : Source gzipped file 'work.Part_0/tools/zTime/zCoreBuild_timing.zti' ...
+set_fgs_mode on
+set_fetch_mode on
+set_fetch_mode_pclk_opt on
+source work.Part_0/U0_M0_F0/U0_M0_F0.zti
+#   step SOURCE : Source gzipped file 'work.Part_0/U0_M0_F0/U0_M0_F0.zti' ...
+#   step IMPORT : import work.Part_0/U0_M0_F0/U0_M0_F0.db
+#   step IMPORT : Using file version
+#   step IMPORT : Starting
+#   step Load_Graph_Input_DB : Starting
+#   step LOAD : using file version: 7
+#   step Load_Graph_Input_DB : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210571 m      vm:541 m       vm:+0 m      um:141 m       um:+5 m
+#   step IMPORT : Importing data for fpga: U0_M0_F0.
+#   step IMPORT : Import details      is on.
+#   step IMPORT : Import clock domain is on.
+#   step IMPORT : Import feedbackMcp  is on.
+#   step IMPORT : load file work.Part_0/U0_M0_F0/U0_M0_F0.db, import 204 timing arcs, 4 ghost arcs, 0 cd nodes, 40 port nodes, 0 pin nodes
+
+#   step IMPORT : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210570 m      vm:541 m       vm:+0 m      um:141 m       um:+5 m
+source work.Part_0/U0_M0_F1/U0_M0_F1.zti
+#   step SOURCE : Source gzipped file 'work.Part_0/U0_M0_F1/U0_M0_F1.zti' ...
+#   step IMPORT : import work.Part_0/U0_M0_F1/U0_M0_F1.db
+#   step IMPORT : Using file version
+#   step IMPORT : Starting
+#   step Load_Graph_Input_DB : Starting
+#   step LOAD : using file version: 7
+#   step Load_Graph_Input_DB : Done in     elapsed:0.4 s    user:0.2 s      system:0 s      %cpu:48.85      load:14.39       fm:210533 m      vm:541 m       vm:+0 m      um:155 m      um:+14 m
+#   step IMPORT : Importing data for fpga: U0_M0_F1.
+#   step IMPORT : Import details      is on.
+#   step IMPORT : Import clock domain is on.
+#   step IMPORT : Import feedbackMcp  is on.
+#   step IMPORT : load file work.Part_0/U0_M0_F1/U0_M0_F1.db, import 679 timing arcs, 36 ghost arcs, 0 cd nodes, 40 port nodes, 0 pin nodes
+
+#   step IMPORT : Done in     elapsed:0.4 s    user:0.2 s    system:0.1 s      %cpu:68.09      load:14.39       fm:210520 m      vm:549 m       vm:+8 m      um:168 m      um:+27 m
+set_timing_switch_param zfilter_async_set_reset_path 1
+set_timing_switch_param zfilter_latch_path 0
+set_timing_switch_param zfilter_disable_asyncsr 0
+source tools/zTime/zParFPGAs_timing.zti
+#   step SOURCE : Source gzipped file 'tools/zTime/zParFPGAs_timing.zti' ...
+set_current_fpga_scan U0/M0/F00
+source U0/M0/F00/zFpgaTiming.zti
+#   step SOURCE : Source file 'U0/M0/F00/zFpgaTiming.zti' ...
+import_zfpgatiming_data -type STD -file_name U0/M0/F00/zFpgaTimingSTD.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F00/zFpgaTimingSTD.bindata'.
+import_zfpgatiming_data -type FILTER -file_name U0/M0/F00/zFpgaTimingFilter.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F00/zFpgaTimingFilter.bindata'.
+import_zfpgatiming_data -type STS -file_name U0/M0/F00/zFpgaTiming.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F00/zFpgaTiming.bindata'.
+import_zfpgatiming_data -type DTS -file_name U0/M0/F00/zFpgaTimingDTS.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F00/zFpgaTimingDTS.bindata'.
+import_zfpgatiming_data -type CLOCK -file_name U0/M0/F00/zFpgaTimingCD.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F00/zFpgaTimingCD.bindata'.
+set_current_fpga_scan U0/M0/F01
+source U0/M0/F01/zFpgaTiming.zti
+#   step SOURCE : Source file 'U0/M0/F01/zFpgaTiming.zti' ...
+import_zfpgatiming_data -type STD -file_name U0/M0/F01/zFpgaTimingSTD.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F01/zFpgaTimingSTD.bindata'.
+import_zfpgatiming_data -type FILTER -file_name U0/M0/F01/zFpgaTimingFilter.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F01/zFpgaTimingFilter.bindata'.
+import_zfpgatiming_data -type STS -file_name U0/M0/F01/zFpgaTiming.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F01/zFpgaTiming.bindata'.
+import_zfpgatiming_data -type DTS -file_name U0/M0/F01/zFpgaTimingDTS.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F01/zFpgaTimingDTS.bindata'.
+import_zfpgatiming_data -type CLOCK -file_name U0/M0/F01/zFpgaTimingCD.bindata
+#   step NEW BACK ANNOTATION : Reading file 'U0/M0/F01/zFpgaTimingCD.bindata'.
+#   step FWC : setting FWC/QiWC sampling frequency to 50000 (Khz).
+#   step INTRA FPGA FILTER AND SKEW : 
+# +--------------------------------------+-----------+-------------+
+# |                            dalay name|delay value|delay origine|
+# +--------------------------------------+-----------+-------------+
+# |intra fpga filter (DELAY_ADD_ZFILTER) |       0 ns|default value|
+# |        skew (DELAY_MIN_ZFILTER_SKEW) |       0 ns|default value|
+# +--------------------------------------+-----------+-------------+
+source ../utf_generatefiles/zTime_config.tcl
+#   step SOURCE : Source file '../utf_generatefiles/zTime_config.tcl' ...
+source ../utf_generatefiles/new_zTime_config.tcl
+#   step SOURCE : Source file '../utf_generatefiles/new_zTime_config.tcl' ...
+### warning in TCL COMMAND [KTM0769W] : Timing analysis command 'set_advanced_asynchronous_set_reset_analysis' is deprecated, use optionsDB variable timing_advanced_async_set_reset_analysis instead.
+set_advanced_asynchronous_set_reset_analysis false
+set_eval_param DELAY_MIN_ZFILTER_SKEW=40000
+set_performance_report true
+source /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/ztime_ignored_system_ports.tcl
+#   step SOURCE : Source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/ztime/ztime_ignored_system_ports.tcl' ...
+set_system_port -verbose=true -match=zFilterClk
+set_system_port -verbose=true -match=zStable
+set_system_port -verbose=true -match=*z_dclk_delay
+set_system_port -verbose=true -match=*z_dclk_delay2
+set_system_port -verbose=true -match=zSaveClk
+set_system_port -verbose=true -match=*zebu_sfg_filter_clk
+set_system_port -verbose=true -match=zsfg_save_dut
+annotate
+#   step ANNOTATE : Product type: zs5
+#   step ANNOTATE : Socket mode: native
+#   step ANNOTATE : Compute delay values of all timing arcs
+#   step ANNOTATE : LVDS Delay mode is version2
+#   step ANNOTATE : Annotation of 997 Arcs and 193 Nodes done
+#   step FPAG DELAY INFO : No delay to apply on port in timing graph
+analyze
+#   step ANALYSIS : Starting
+#   step initializeAnalysis. : Starting
+#   step ANALYSIS : Initialize timing analyzer
+#   step DBG_MASK : dbgMask:0x1
+#   step guaranteeArcOrderForNode. : Starting
+#   step guaranteeArcOrderForNode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step addClockDomainForFetchMode. : Starting
+#   step addClockDomainForFetchMode. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step resolveMemoryReferences. : Starting
+#   step MEMORY : Improved memory timing is enabled.
+#   step resolveMemoryReferences. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Search combinatorial loops
+#   step _searchAndTagLoop. : Starting
+#   step _searchAndTagLoop. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Found 0 combinatorial loop(s)
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Identify false paths
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step initializeGraph. : Starting
+#   step initializeGraph. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step populateToBackAnnotationDB. : Starting
+#   step DELAY MODEL : delay model information provided for 0 arcs
+#   step populateToBackAnnotationDB. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step backAnnotate. : Starting
+#   step Disable arcs : Starting
+#   step Disable arcs : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step Disable nodes : Starting
+#   step Disable nodes : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210445 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step BACK ANNOTATION : Serialized back annotation flow is activated
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_3830294243856125173
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_10563144985268597479
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_2951204365075976037
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_4235327683240035090
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_5994554879341424662
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_3984315081942884252
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_7979316453246418362
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_7215169931398036968
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_5480973022819466473
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_16313754172334808327
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_346178806364307449
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_9998007281709205214
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_5590949607437080138
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_15243191125415055743
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_17235533021953005794
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_2112739098195069504
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F01.F01_ts_clkbus_in[8]
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_17683760033340913968
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_6774488396189771154
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_8820522856797679042
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_8496018540919577243
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_9874427958930599883
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_1363936433540621605
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_7900767817217595736
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_17501392680794861390
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_15822658261462781398
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_11878020862803189657
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_2386550705448559505
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_11741619952856858099
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_9381608657414026840
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.F01_ts_clkbus_in[7]
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_14351285661933920593
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_4615901352719420397
+### warning in SET DELAY FROM [KTM0822W] : Cannot find clock domain clock 0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (clear 0., preset 0.) 1 0 3 for node U0.M0.F00.zcbsplt_7537740905665114294
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_3830294243856125173 (Node37)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_3830294243856125173 (Node37)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_6774488396189771154 (Node109)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_6774488396189771154 (Node109)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_10563144985268597479 (Node125)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_10563144985268597479 (Node125)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_4235327683240035090 (Node129)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_4235327683240035090 (Node129)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5994554879341424662 (Node57)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5994554879341424662 (Node57)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_3984315081942884252 (Node133)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_3984315081942884252 (Node133)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7979316453246418362 (Node61)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7979316453246418362 (Node61)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_1363936433540621605 (Node137)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_1363936433540621605 (Node137)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7215169931398036968 (Node65)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7215169931398036968 (Node65)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5480973022819466473 (Node41)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5480973022819466473 (Node41)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_346178806364307449 (Node153)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_346178806364307449 (Node153)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9998007281709205214 (Node45)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9998007281709205214 (Node45)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5590949607437080138 (Node85)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_5590949607437080138 (Node85)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_15243191125415055743 (Node157)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_15243191125415055743 (Node157)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17235533021953005794 (Node49)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17235533021953005794 (Node49)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2112739098195069504 (Node89)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2112739098195069504 (Node89)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2951204365075976037 (Node53)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2951204365075976037 (Node53)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17683760033340913968 (Node93)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17683760033340913968 (Node93)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.F01_ts_clkbus_out[6] (Node21)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.F01_ts_clkbus_out[6] (Node21)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132622 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.F01_ts_clkbus_out[6] (Node21)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_8820522856797679042 (Node113)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_8820522856797679042 (Node113)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_8496018540919577243 (Node117)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_8496018540919577243 (Node117)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9874427958930599883 (Node121)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9874427958930599883 (Node121)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7900767817217595736 (Node69)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7900767817217595736 (Node69)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17501392680794861390 (Node141)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_17501392680794861390 (Node141)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_15822658261462781398 (Node73)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_15822658261462781398 (Node73)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_11878020862803189657 (Node145)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_11878020862803189657 (Node145)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2386550705448559505 (Node77)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_2386550705448559505 (Node77)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_11741619952856858099 (Node149)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_11741619952856858099 (Node149)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_16313754172334808327 (Node81)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_16313754172334808327 (Node81)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9381608657414026840 (Node97)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_9381608657414026840 (Node97)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_14351285661933920593 (Node101)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_14351285661933920593 (Node101)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_4615901352719420397 (Node33)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_4615901352719420397 (Node33)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132622 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_4615901352719420397 (Node33)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132782 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7537740905665114294 (Node105)
+### warning in SET DELAY TO [KTM0824W] : Cannot find clock domain clock 0.132783 (clear 0., preset 0.) 1 0 1 for node U0.M0.F01.zcbsplt_7537740905665114294 (Node105)
+#   step SANITY CHECK (BACK ANNOTATION) : 877 arcs to back annotate (0 IF arcs), 877 well back annotated, 0 not requested, 0 optimized by Xilinx and 0 requested but no delay found. 
+#   step backAnnotate. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Identify primary inputs and outputs
+#   step _buildPrimarySet. : Starting
+#   step _buildPrimarySet. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Build topological order
+#   step _sortTopological. : Starting
+#   step _sortTopological. : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Found 40 inputs and 42 outputs
+#   step ANALYSIS : Re-propagate false path tag
+#   step handleFalsePath. : Starting
+#   step Timing : Executing step  FalsePathFlow
+#   step Timing : Executing step ResetFalsePathStep
+#   step Timing : Executing step MassageFalsePathStep
+#   step Timing : Executing step AddFalsePathToSourceLessNodeStep
+#   step Timing : Executing step AddFalsePathToResetOnlyNodeStep
+#   step Timing : Executing step ApplyFalsePathSpecToTimingGraphStep
+#   step Timing : Executing step PropagateFalsePathTagStep
+#   step handleFalsePath. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : The maximum topological depth is 242
+#   step _reverseSortTopological. : Starting
+#   step _reverseSortTopological. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : The maximum topological depth is 10
+#   step ANALYSIS : Build clock topological order
+#   step topologicalSortClockCone. : Starting
+#   step topologicalSortClockCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210435 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Build data topological order
+#   step topologicalSortDataCone. : Starting
+#   step topologicalSortDataCone. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210434 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step getPdpGraphEquivalencyChecker. : Starting
+#   step getPdpGraphEquivalencyChecker. : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210434 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step initializeAnalysis. : Done in     elapsed:0.2 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210434 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+#   step ANALYSIS : Done in     elapsed:0.2 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210434 m      vm:549 m       vm:+0 m      um:170 m       um:+0 m
+update_equiId_to_path  
+#   step UpdateEquiId2Path : Starting
+#   step EquiId2Rtl Init : Init translator with mode RTL_FALLBACK_EDIF, edfMode RETURN_DRIVER_WNAME
+#   step UpdateEquiId2Path : Populate for cache size 0 :  preFPGA details count 27 preFPGA count 0 	 postFPGA details 0 postFPGA count 0 	 Common EquiID count 0 
+#   step EquiID2Rtl populate : Starting
+#   step EquiIDTranslator populate : Starting
+#   step Loading NameDB : Starting
+#   step Loading NameDB : Done in    elapsed:0.13 s    user:0.2 s    system:0.1 s      %cpu:22.64      load:14.39       fm:210241 m      vm:603 m      vm:+54 m      um:209 m      um:+39 m
+#   step Loading MuDB : Starting
+#   step Loading Properties : Starting
+#   step Loading Properties : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210148 m      vm:603 m       vm:+0 m      um:209 m       um:+0 m
+#   step Loading EquiID2Master : Starting
+#   step Loading EquiID2Master : Done in     elapsed:0.2 s    user:0.3 s      system:0 s     %cpu:200.00      load:14.39       fm:210213 m     vm:1235 m     vm:+632 m      um:221 m      um:+12 m
+#   step Loading MuDB : Done in     elapsed:0.3 s    user:0.3 s      system:0 s     %cpu:109.09      load:14.39       fm:210213 m     vm:1235 m     vm:+632 m      um:221 m      um:+12 m
+#   step RTL-name resolution : Starting
+#   step RTL-name resolution : Done in    elapsed:0.24 s    user:0.2 s    system:0.1 s      %cpu:12.48      load:14.39       fm:210300 m     vm:1235 m       vm:+0 m      um:231 m      um:+10 m
+#   step Loading beEid2hierPath : Starting
+#   step Loading BeEquiID2HierPath : Starting
+#   step Loading BeEquiID2HierPath : Done in     elapsed:0.3 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210292 m     vm:1238 m       vm:+3 m      um:237 m       um:+6 m
+#   step Loading beEid2hierPath : Done in     elapsed:0.3 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210292 m     vm:1238 m       vm:+3 m      um:237 m       um:+6 m
+#   step Loading EquiID2Label : Starting
+#   step Loading EquiID2Label : Starting
+#   step Loading EquiID2Label : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210289 m     vm:1238 m       vm:+0 m      um:240 m       um:+1 m
+#   step Loading EquiID2Label : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:100.00      load:14.39       fm:210289 m     vm:1238 m       vm:+0 m      um:240 m       um:+1 m
+#   step Loading 'eid2names.bin' : Starting
+#   step Loading 'eid2names.bin' : Done in     elapsed:0.6 s    user:0.2 s    system:0.1 s      %cpu:46.83      load:14.39       fm:210256 m     vm:1496 m     vm:+258 m      um:266 m      um:+26 m
+#   step Loading 'hierview.edf.gz' : Starting
+#   step Loading 'hierview.edf.gz' : Done in    elapsed:0.43 s    user:0.1 s      system:0 s       %cpu:2.36      load:14.39       fm:210113 m     vm:1496 m       vm:+0 m      um:269 m       um:+3 m
+#   step EquiIDTranslator populate : Done in    elapsed:0.93 s   user:0.13 s    system:0.3 s      %cpu:17.34      load:14.39       fm:210113 m     vm:1496 m     vm:+947 m      um:269 m      um:+99 m
+#   step EquiID2Rtl populate : Done in    elapsed:0.93 s   user:0.14 s    system:0.3 s      %cpu:18.37      load:14.39       fm:210112 m     vm:1487 m     vm:+938 m      um:261 m      um:+91 m
+#   step UpdateEquiId2Path : Done in    elapsed:0.95 s   user:0.14 s    system:0.3 s      %cpu:17.90      load:14.39       fm:210112 m     vm:1487 m     vm:+938 m      um:261 m      um:+91 m
+save_zmetrics_graph_info -pre_annotate
+report_out_asyncsr_paths -all
+#   step REPORT : Report output asynchronous set/reset paths statistics
+get_fgs_mode -check
+build_out_filter_paths -async=true
+#   step Build output paths : Starting
+#   step ANALYSIS : Find worst path for each output filter
+#   step Build output paths : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210109 m     vm:1487 m       vm:+0 m      um:261 m       um:+0 m
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+report_out_filter_paths -all
+#   step REPORT : Report output filter paths statistics
+#   step REPORT : No inter-fpga filter path found, can't report anything
+drive_out_filter_paths -debug_mode=false -enable_equiId=true -dump_verdi_db=false -enable_rtl=false ztime_filter_out_paths_fpga.html
+### warning in DRIVE OUT FILTER PATHS [KTM0856W] : drive_out_filter_paths is deprecated in fetch mode plus zCoreTiming flow
+build_out_clock_paths -async=true -zfilter=true
+#   step Build output paths : Starting
+#   step Build output paths : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:14.39       fm:210109 m     vm:1487 m       vm:+0 m      um:261 m       um:+0 m
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   No inter-fpga clock path found
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+drive_clock_nets
+#   step DRIVE NETS : Drive all clock nets in file 'clock_nets.dump'
+
+build_memory_paths
+report_memory -all
+build_out_routing_paths -async=true -zdelay=true -nomcp=false
+#   step Build output paths : Starting
+#   step ANALYSIS : Find worst path for each output ports of the board
+#   step ANALYSIS : Given a zdelay (clock skew) of 20 ns
+#   step ADVANCED_MCP : MCP advanced method: 1
+#   step Loading Equi2Master : Starting
+#   step Loading Equi2Master : Done in       elapsed:0 s    user:0.1 s      system:0 s     %cpu:168.42      load:14.39       fm:210105 m     vm:1487 m       vm:+0 m      um:261 m       um:+0 m
+#   step Build output paths : Done in     elapsed:0.1 s    user:0.2 s      system:0 s     %cpu:156.10      load:14.39       fm:210103 m     vm:1487 m       vm:+0 m      um:261 m       um:+0 m
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 161 ns
+#   step REPORT :   Critical routing data path delay : 161 ns
+#   step REPORT :   . Constant part    : 151 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   The theoretical frequency using default settings is 6219 Khz
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+drive_out_paths -debug_mode=false -enable_equiId=true -dump_verdi_db=false -enable_rtl=false ztime_out_paths_fpga.html
+#   step DRIVE PATHS : Drive all paths in file 'ztime_out_paths_fpga.html' (HTML format)
+#   step RTL : RTL NAME IS DISABLED
+report_out_routing_paths -all -glog
+#   step REPORT : Report FPGA paths statistics
+#   step REPORT : Report a maximum of 100 first routing data path(s) 
+#   step REPORT : 
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+# | Slack |      Required Time | Delay | Fpga | Clock Domain Source | Clock Domain Target                         |Port Name Source                                                                                              |Port Name Target                                                                                                                                                                                                                    |
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+# |   0 ns|161 ns ( 1.0 dvrCk )| 161 ns|     3|0.132783 (posedge)   |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]                                                                                 |U0_M0_F1.F01_ts_clkbus_in[5]                                                                                                                                                                                                        |
+# |   1 ns|161 ns ( 1.0 dvrCk )| 161 ns|     3|0.132783 (posedge)   |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397                                                                          |U0_M0_F1.F01_ts_clkbus_in[8]                                                                                                                                                                                                        |
+# |   9 ns|161 ns ( 1.0 dvrCk )| 153 ns|     2|0.132783 (posedge)   |0.A_MASTER_CYCLE_BEFORE_DRIVERCLOCK (posedge)|U0_M0_F1.zcbsplt_4615901352719420397                                                                          |U0_M0_F0.zcbsplt_4615901352719420397                                                                                                                                                                                                |
+# |  13 ns|161 ns ( 1.0 dvrCk )| 148 ns|     2|0.132783 (posedge)   |DRIVERCLOCK (system)                         |U0_M0_F1.F01_ts_clkbus_out[6]                                                                                 |U0_M0_F0.F01_ts_clkbus_in[6]                                                                                                                                                                                                        |
+# |  38 ns|161 ns ( 1.0 dvrCk )| 124 ns|     1|0.132450 (posedge)   |DRIVERCLOCK (system)                         |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/izebu_axi_xtor/master_node_i/zmsg_out_ZEBU_VS_AMBA_MASTER_dpi__wrDataFifo_out_port/wrapper/port_snd_ctrl/u_xst_wrapper_0/port_snd_ctrl_pclk_0/port_snd256_we_i_reg/D|
+# |  59 ns|161 ns ( 1.0 dvrCk )| 103 ns|     1|DRIVERCLOCK (system) |0.809619 (posedge)                           |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/izebu_axi_xtor/master_node_i/sqnod21116/R                                                                                                                           |
+# |  60 ns|161 ns ( 1.0 dvrCk )| 102 ns|     1|DRIVERCLOCK (system) |0.29434 (posedge)                            |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_rgon0_mem_inst/u_alb_mss_mem_ram/mem_r/SDF_Mem_Inst_rw0_fd_posedge/D                                                                                 |
+# |  61 ns|161 ns ( 1.0 dvrCk )| 101 ns|     1|DRIVERCLOCK (system) |0.20787 (posedge)                            |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_mst_2/u_cming_ibp_compr/comp_num_gt_1_gen_wdata_chnl_fifo/fm_cset_rewrite_fifo_dep_gt_1_occp_cpy_r\[29\]/D                      |
+# |  62 ns|161 ns ( 1.0 dvrCk )| 100 ns|     1|DRIVERCLOCK (system) |0.20787 (posedge)                            |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_mem/u_ibp_buf_inst/u_mss_mem_wr_chnl_bypbuf/u_alb_mss_mem_fifo/fifo_dep_gt_1_rf_r\[0\]\[59\]/CE                                                            |
+# |  62 ns|161 ns ( 1.0 dvrCk )| 100 ns|     1|DRIVERCLOCK (system) |0.20787 (posedge)                            |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_mst_2/u_cming_ibp_compr/comp_num_gt_1_gen_wdata_chnl_fifo/fm_cset_rewrite_fifo_dep_gt_1_occp_r\[0\]/D                           |
+# |  62 ns|161 ns ( 1.0 dvrCk )| 100 ns|     1|DRIVERCLOCK (system) |0.21820 (posedge)                            |U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C                       |U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/iarchipelago/idw_dbp/u1_bvci_to_axi/fm_cset_rewrite_i_wdata_r\[3\]/D                                                                                                |
+# | 131 ns|161 ns ( 1.0 dvrCk )|  30 ns|     1|DRIVERCLOCK (system) |DRIVERCLOCK (system)                         |U0/M0/F00/design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/sysclk_dut_zs5_bus/mmcme4_base/CLKOUT1|U0/M0/F00/design/U0_M0_F0/U0_M0_F0_core/ts_runman_0/ts_runman/global_time_count/u_xst_wrapper_0/reg_ts_counter_reg\[41\]/D                                                                                                          |
+# +-------+--------------------+-------+------+---------------------+---------------------------------------------+--------------------------------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+#   step REPORT : A total of 12 inter-fpga path(s) displayed
+
+#   step REPORT : Report a maximum of 50 first different delay(s) 
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : | Delay     | Paths     | Max Fpga  | Max Hop   | Max Async |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : |    161 ns |         2 |         3 |         0 |         1 |
+#   step REPORT : |    153 ns |         1 |         2 |         0 |         0 |
+#   step REPORT : |    148 ns |         1 |         2 |         0 |         0 |
+#   step REPORT : |    124 ns |         1 |         1 |         0 |         0 |
+#   step REPORT : |    103 ns |         1 |         1 |         0 |         0 |
+#   step REPORT : |    102 ns |         1 |         1 |         0 |         0 |
+#   step REPORT : |    101 ns |         1 |         1 |         0 |         0 |
+#   step REPORT : |    100 ns |         4 |         1 |         0 |         0 |
+#   step REPORT : +-----------+-----------+-----------+-----------+-----------+
+#   step REPORT : A total of 8 different delay(s) displayed
+
+#   step REPORT : Histogram with a maximum of 50 first different delay(s) 
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | Delay               | Paths                                            |
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : | [  100 ns:  115 ns] |---------------------------------------->        7|
+#   step REPORT : | ]  115 ns:  130 ns] |----->                                           1|
+#   step REPORT : | ]  130 ns:  145 ns] |                                                  |
+#   step REPORT : | ]  145 ns:  161 ns[ |---------------------->                          4|
+#   step REPORT : +---------------------+--------------------------------------------------+
+#   step REPORT : A total of 8 different delay(s) encountered
+
+drive_out_memory_paths -debug_mode=false -enable_equiId=true -dump_verdi_db=false -enable_rtl=false ztime_memory_out_paths_fpga.html
+#   step DRIVE PATHS : Drive all memory paths in file 'ztime_memory_out_paths_fpga.html' (HTML format)
+report_out_fwc 5 -type all
+#   step REPORT : Report the 4 biggest Fast Waveform Capture IP
+#   step REPORT : 
+# +-----+-------------------+----------+---------+-------+
+# |scope|             groupe|      size|frequency|IP type|
+# +-----+-------------------+----------+---------+-------+
+# |     |      FULL_DUT_DUMP|32768 bits|   47 kHz|   QIWC|
+# |     |      FULL_DUT_DUMP|  225 bits| 1612 kHz|   QIWC|
+# |     |FULL_DUT_DUMP_PORTS|  384 bits| 2941 kHz|    FWC|
+# |     |FULL_DUT_DUMP_PORTS|   32 bits| 8333 kHz|    FWC|
+# +-----+-------------------+----------+---------+-------+
+#   step REPORT : using fwc  may limit driver clock to 2941 kHz
+#   step REPORT : using qiwc may limit driver clock to 47 kHz
+#   step   :  
+#   step REPORT : No DPI detected
+report_out_summary
+#   step REPORT : +-------------------------------------------------------------------------------+
+#   step REPORT :   No inter-fpga filter path found
+#   step REPORT :   Max pessimistic delay (clock skew + routing data) is : 161 ns
+#   step REPORT :   Critical routing data path delay : 161 ns
+#   step REPORT :   . Constant part    : 151 ns
+#   step REPORT :   . Multiplexed part : 10 ns
+#   step REPORT :   Xclock frequency is : 1000 MHz
+#   step REPORT :   Longest memory latency is : 164 ns
+#   step REPORT :   No fast waveform captures found
+#   step REPORT :   Driver clock frequency is constrained at a maximum of 10000kHz (100ns)
+#   step REPORT :   Driver clock frequency is limited by routing data paths : 161ns
+#   step REPORT :   The theoretical frequency using default settings and ignoring clock skew is 6219 Khz
+#   step REPORT : +-------------------------------------------------------------------------------+
+
+display_component_delay -zrm=true
+#   step MEMORIES : 
+# +----------------------------------------------------------------------------------------------------------------------------+----+----------------------+----------------+----------------+---------------------------------------------------+
+# |                                                                                                                        Name|Type|DriverClock Constraint|          Delays|      Properties|                                      Delay Factors|
+# +----------------------------------------------------------------------------------------------------------------------------+----+----------------------+----------------+----------------+---------------------------------------------------+
+# |                        U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r|DDR4|                 82 ns|sync port: 164ns|Port:1 Width:128|ports factor: 1  driverClock constraint factor: 1  |
+# |              U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_data_ram.u_ic_data_ram.mem_r|URAM|                  NONE|async port: 80ns| Port:2 Width:80|                                  ports factor: 1  |
+# |                U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_tag_ram.u_ic_tag_ram.mem_r|BRAM|                  NONE|async port: 80ns| Port:2 Width:56|                                  ports factor: 1  |
+# |            U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod6249|BRAM|                  NONE| sync port: 71ns|Port:2 Width:116|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1438.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1439.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1440.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1441.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1442.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1443.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1444.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1445.sqnod256809|BRAM|                  NONE| sync port: 71ns|Port:2 Width:181|                                  ports factor: 1  |
+# |            U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1465|BRAM|                  NONE| sync port: 71ns| Port:2 Width:16|                                  ports factor: 1  |
+# |                  U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.mem_r|URAM|                  NONE|async port: 71ns| Port:3 Width:40|                                  ports factor: 1  |
+# |                   U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.mem_r|URAM|                  NONE|async port: 71ns| Port:3 Width:40|                                  ports factor: 1  |
+# |                U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.mem_r|URAM|                  NONE|async port: 71ns| Port:3 Width:40|                                  ports factor: 1  |
+# |                            U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21800.sqnod2985|BRAM|                  NONE| sync port: 71ns| Port:2 Width:86|                                  ports factor: 1  |
+# |                            U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21801.sqnod2985|BRAM|                  NONE| sync port: 71ns| Port:2 Width:86|                                  ports factor: 1  |
+# |                U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818.sqnod845601|BRAM|                  NONE| sync port: 71ns|Port:2 Width:613|                                  ports factor: 1  |
+# |                       U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_bdel_mem|BRAM|                  NONE|async port: 40ns|  Port:2 Width:2|                                  ports factor: 1  |
+# |                       U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_rdel_mem|BRAM|                  NONE|async port: 40ns|Port:2 Width:131|                                  ports factor: 1  |
+# +----------------------------------------------------------------------------------------------------------------------------+----+----------------------+----------------+----------------+---------------------------------------------------+
+#   step MEMORIES : dumping list of memories in zTime_memories.txt
+#   step MEMORIES : to generate paths involving memories please launch command : zTiNa $ZEBU_ROOT/etc/ztina/zTiNa_memories[_fpga].tcl
+#   step MEMORIES : results of the command will be in ztime_memory_out_paths[_fpga].html
+save_run_param tools/zTime/des_ztime_post_fpga.xref
+#   step SAVE RUN PARAM : Save max frequency and clock skew time in file 'tools/zTime/des_ztime_post_fpga.xref'
+#   step SAVE RUN PARAM : driverClk.Period = 180 ns (161 ns before rounding)
+#   step SAVE RUN PARAM : $driverClk.Frequency = 5555 kHz (6219 kHz before rounding)
+drive_index_html zTime_fpga.html
+#   step DRIVE HTML : Drive index in file 'zTime_fpga.html'
+dump_timing_switch_param
+#   step REPORT : 
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+# |                Area               |                       Timing Switch                 |     Tool   |      Status      |
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+# |Back annotation                    |    timing_analysis -post_fpga BACK_ANNOTATED        |zTime       |     Activated    |
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+# |Set and reset asynchronous handling|    timing -analyze ZFILTER_ASYNC_SET_RESET_PATH     |zCoreBuild  |     Activated    |
+# |                                   |timing -analyze NO_ZFILTER_DISABLE_ASYNCSR_DATAPATH  |zCoreBuild  |     Activated    |
+# |                                   |    clock_localization -stop_at_async_set_reset = no |zTopBuild   |     Activated    |
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+# |Transparent latch on clock path    |    timing -analyze ZFILTER_LATCH_PATH               |zCoreBuild  |   Not Activated  |
+# |                                   |    clock_localization -stop_at_latch_input = no     |zTopBuild   |   Not Activated  |
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+# |Memories handling                  |    zmem_clock_domain_instrument                     |zTopBuild   |     Activated    |
+# |                                   |    improvedMemoryTiming                             |zPar        |     Activated    |
+# +-----------------------------------+-----------------------------------------------------+------------+------------------+
+### warning in MEMORY PATH REPORT [KTM0857W] : dump_csv_memory_path_report is deprecated in zCoreTiming flow
+#   step ZTIME : Display timing arcs distribution 
+#   step NODE STATS : 160 ports, 0 memories, 0 clockgens, 0 msgports, 0 logicals, 52 clock_domains, 30 pins, 0 joins
+#   step ARC STATS : 40 f2s, 40 s2f, 40 s2s_ext, 0 s2s_int
+#   step ARC STATS : 130 f2f, 0 f2i (msg: 0, gen: 0, mem: 0, join: 0, logical: 0), 0 i2f (msg: 0, gen: 0, mem: 0, join: 0, logical: 0)
+#   step ARC STATS : 15 i2i, (gen->gen: 0, gen->mem: 0, gen->msg: 0, gen->join: 0, mem->gen: 0, mem->mem: 0, mem->msg: 0, mem->join: 0, msg->gen: 0, msg->mem: 0, msg->msg: 0, msg->join: 0, join->gen: 0, join->mem: 0, join->msg: 0, join->join: 0)
+#   step ARC STATS : 0 i2i_ext, 0 if2if, 0 if2h, 72 f2cd, 675 cd2f, 0 cd2cd, 15 cd2pin, 15 pin2cd, 0 pin2f, 0 f2pin
+save_zmetrics_graph_info -post_annotate
+
+#   exec summary :  107 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : user 0m0.349s, sys 0m0.150s
+#   exec summary : Total memory: 1525756 kB - RSS memory: 267320 kB - Data memory: 1098332 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 21:27:35 2025

@@ -1,0 +1,21 @@
+#
+# Hierarchy File.
+#
+# The format of this file is to represent the hierarchy of the
+# system to be built. This file is used by structural HDL hierarchy
+# generator. 
+#
+# The format is as follows :
+#  upper_block : component1 component2 component3
+#
+
+# Structural Levels.
+archipelago : arcv_dm_top dw_dbp cpu_top_safety_controller cpu_safety_monitor rl_srams 
+core_sys : arcv_dm_top_stubs alb_mss_fab alb_mss_ext_stub alb_mss_clkctrl alb_mss_perfctrl alb_mss_mem zebu_axi_xtor dw_dbp_stubs archipelago 
+board : core_chip clock_and_reset rascal2jtag rascal_pipemon 
+core_chip : io_pad_ring core_sys 
+
+# Synthesizable Levels.
+
+# Behavioural Levels.
+

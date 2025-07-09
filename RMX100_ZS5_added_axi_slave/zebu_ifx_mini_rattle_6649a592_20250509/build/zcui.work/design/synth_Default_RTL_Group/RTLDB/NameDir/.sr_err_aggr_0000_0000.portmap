@@ -1,0 +1,54 @@
+Module sr_err_aggr_0000_0000{
+}
+
+EdfPortBounds mss_bus_switch_slv_ibp_buffer_0001_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+514 0 o_ibp_rd_chnl
+576 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_ibp_split_0000_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+8 0 i_ibp_split_indicator
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+530 0 o_bus_ibp_cmd_chnl
+8 0 o_bus_ibp_cmd_chnl_accept
+8 0 o_bus_ibp_cmd_chnl_user
+8 0 o_bus_ibp_cmd_chnl_valid
+4634 0 o_bus_ibp_rd_chnl
+8 0 o_bus_ibp_rd_chnl_accept
+8 0 o_bus_ibp_rd_chnl_valid
+5192 0 o_bus_ibp_wd_chnl
+8 0 o_bus_ibp_wd_chnl_accept
+8 0 o_bus_ibp_wd_chnl_valid
+26 0 o_bus_ibp_wrsp_chnl
+8 0 o_bus_ibp_wrsp_chnl_accept
+8 0 o_bus_ibp_wrsp_chnl_valid
+}
+EdfPortBounds mss_bus_switch_slv_ibp_buffer_0000_0000{
+58 0 i_ibp_cmd_chnl
+8 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+8 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+514 0 o_ibp_rd_chnl
+576 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+NonAliasNets sr_err_aggr_0000_0000{
+}

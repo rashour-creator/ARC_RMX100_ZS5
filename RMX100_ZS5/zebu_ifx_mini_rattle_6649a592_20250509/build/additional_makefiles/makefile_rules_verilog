@@ -1,0 +1,63 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+#############################################################################
+#
+# This included makefile contains the rules needed to compile the Verilog for
+# simulation.
+#
+
+#############################################################################
+# This initial target MUST be first.  Its commands will be executed AFTER the
+# top entity (e.g. board) has been made.
+#
+# Do NOT add any targets before this one.
+
+it: top_entity
+	@$(MESSAGE_BLANK_LINE)
+	@$(MESSAGE) "Type 'ARCtest' from the design directory to run the ARC test code."
+	@$(MESSAGE_BLANK_LINE)
+
+#############################################################################
+# OK to added targets and rules from here on.
+
+#
+# The redundant T-piece on the final command, REPORT_WARNINGS, is to stop
+# GNU make reporting that it is ignoring an error (when no warnings are
+# present).
+# The redirection of any output from COPY_FILE is for Windows NT, which reports
+# how many files it operated on.
+#
+
+$(NNZ)/%.anz : $(USER_SOURCE_PATH)/%.v
+	-@$(MESSAGE) Analysing $(<F)
+	@$(ANALYZE) $(ANALYZE_FLAGS) $(ANALYZE_INCLUDE_DIR_SWITCH)$(USER_SOURCE_PATH). -work $(USER_LIBRARY_NAME) $< >  $(@D)/error.log
+	@$(COPY_FILE) $(@D)/error.log $@ > $(NULL_DEVICE)
+	@$(REMOVE_FILE) $(@D)/error.log
+	@$(ECHO_FILE) $@ >> make.log
+	-@$(REPORT_WARNINGS) $@ | $(T_PIECE)
+
+#
+# Only one design entity currently needs to be elaborated -- the top one,
+# i.e. 'board'.
+#
+$(NNZ)/%.elab : $(NNZ)/%.anz
+	-@$(MESSAGE) Elaborating $(*F)
+	@$(ELABORATE) $(ELABORATE_FLAGS) -work $(USER_LIBRARY_NAME) $(*F)$(ELABORATE_VIEW_SUFFIX) > $(@D)/error.log
+	@$(COPY_FILE) $(@D)/error.log $@ > $(NULL_DEVICE)
+	@$(REMOVE_FILE) $(@D)/error.log
+	@$(ECHO_FILE) $@ >> make.log
+	-@$(REPORT_WARNINGS) $@ | $(T_PIECE)
+
+.FAILED :
+	@$(MESSAGE_BLANK_LINE)
+	@$(SHOW_FILE) $(NNZ)/error.log
+	@$(MESSAGE_BLANK_LINE)
+
+#############################################################################

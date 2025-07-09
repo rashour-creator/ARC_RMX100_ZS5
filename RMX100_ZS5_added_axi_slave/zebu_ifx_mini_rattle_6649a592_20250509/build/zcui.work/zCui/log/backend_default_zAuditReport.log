@@ -1,0 +1,669 @@
+
+  zAudit     ZeBu Compile Analysis, Diagnostics, and Recommendations
+
+  zcui_work: /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work
+  zebu_work: <zcui_work>/backend_default
+  zAudit db: <zcui_work>/zAudit.db
+  Global Compile Log: <zcui_work>/zCui/backup/latest/backend_default_globalLog.html
+---------------------------------------------------------------------------
+  Stage:     Completed
+
+
+                                        Technology Summary                                        
++-------------------+--------+-------------------------------------------------------------------+
+| Technology        | Active | Reason                                                            |
++===================+========+===================================================================+
+| Excalibur         | False  | Not enabled by user (UTF Command)                                 |
+| Fetch-Mode        | True   | Enabled by default                                                |
+| Hard Constraints  | False  | Not enabled by user                                               |
+| Hydra             | True   | Enabled by default at zTopBuild                                   |
+| Soft Constraints  | False  | Not enabled by user                                               |
+| TDFDR_OPT         | True   | Enabled by default.                                               |
+| MLDM              | True   | Enabled by user tcl command                                       |
+| TD OPT            | True   | Octane Mode, Env ZEBU_COMPILATION_OBJECTIVE is set to PERFORMANCE |
+| FPGA MCP          | True   | MCP activated                                                     |
+| Fractal           | False  | Disabled by default                                               |
+| TwoPassVisibility | True   | Enabled by default                                                |
++-------------------+--------+-------------------------------------------------------------------+
+
+
+                                                                     Summary                                                                     
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Category     | Details                                                                                                                        |
++==============+================================================================================================================================+
+| General      | Platform: ZS5, ZeBu Release: S-2021.09-2-TZ-20240507_Full64, Vivado Release: 2022.1_AR76726                                    |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Memories     | Total: 13, By Type: {BRAM: 9, URAM: 3, ZRM: 1}, With # Ports: {1-3: 13, 4-7: 0, 8-15: 0, 16-31: 0, 32+: 0}                     |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Clocks       | Fetch Mode: yes, Excalibur: no, RTL Clocks: yes, RLC Strategy: {zTopBuild: N/A, zCores: {FULL: 0}}                             |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Size         | REG: 381,377, LUT: 398,499, LUT6: 109,130 (27% of LUT), BRAM: 141, RAMLUT: 46,176, DSP: 0, MUXCY: 18                           |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Mapping      | Units: 1, Modules: 1, FPGAs: 2                                                                                                 |
+|              | Avg Fill: {REG: 0%, LUT: 0%, BRAM: 0%, URAM: 2%}                                                                               |
+|              | Max FPGA Fill: {REG: 3%, LUT: 9%, BRAM: 4%, URAM: 30%}                                                                         |
+|              | Avg CUT: {FPGA: 40}, Max CUT: {FPGA: 40}                                                                                       |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Routing      | routerType: EZCR, routing Effort: default, pinAssignmentEffort: zap, SocketMode: native, SAG: disabled                         |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Timing       | driverClk: 5555 kHz (180 ns)                                                                                                   |
+|              | Pre-Post delta before rounding: {driverClk: 5428 -> 6219 (14%)}                                                                |
+|              | bottleneck: routing data paths : 161ns, Longest Delays: {data: 161 ns, memory: 164 ns}, #MGT in top path: {data: 0, filter: 0} |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| FPGA         | Total Num. of completed FPGAs: 2                                                                                               |
+|              | Original Winners: 2                                                                                                            |
+|              | Fractal Winners: 0                                                                                                             |
+|              | Original FPGAlet winners: 0                                                                                                    |
+|              | PARFF FPGAlet winners: 0                                                                                                       |
+|              | PARFF Winners: 0        PARFF Winning FPGAs: None                                                                              |
+|              | PARFF Winning FPGAs Strategy: {}                                                                                               |
+|              | Num of Failed FPGAs: 0, Failed FPGAs: []                                                                                       |
+|              | Num FPGA compile ongoing: 0, FPGA compile ongoing: []                                                                          |
+|              | Long Pole FPGA Compile Times: {U0_M0_F01: 139, U0_M0_F00: 42}                                                                  |
+|              |                                                                                                                                |
+|              | FPGA compile status: PASS                                                                                                      |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+| Compile Time | Front-End: 01m:08s                                                                                                             |
+|              | Back-End: 02m:47s                                                                                                              |
+|              | FPGA-Compile: 00m:36s                                                                                                          |
+|              | Total: 04m:31s                                                                                                                 |
++--------------+--------------------------------------------------------------------------------------------------------------------------------+
+
+The summary HTML is created in: /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zAudit_Summary.html
+
+                                             Memory-Threshold-Settings                                              
++------------------------------------+-----------------------------------+-----------------------------------------+
+| memSizeThreshold(default --> 2048) | memPortThreshold(default --> 128) | memSizeThresholdHard(default --> 50000) |
++====================================+===================================+=========================================+
+|                2048                |                128                |                  50000                  |
++------------------------------------+-----------------------------------+-----------------------------------------+
+
+
+      Memory-User-Settings      
++----------------------+-------+
+|       settings       | value |
++======================+=======+
+|   memSizeThreshold   | 2048  |
+|   memPortThreshold   |  128  |
+| memSizeThresholdHard | 50000 |
++----------------------+-------+
+
+
+                                                      Memory-Names (From Front end - Unified compile)                                                      
++------------------------------------------------------------------+----------------------+---------------------------+-----------------------------------+
+| zmem_name                                                        | module_name          | module_elab_name          | variable                          |
+|                                                                  |                      |                           | name                              |
++==================================================================+======================+===========================+===================================+
+| alb_mss_fpga_sram_0000_ZMEM_mem_r                                | alb_mss_fpga_sram    | alb_mss_fpga_sram_0000    | mem_r                             |
+| fpga_sram_0002_0000_ZMEM_mem_r                                   | fpga_sram            | fpga_sram_0002_0000       | mem_r                             |
+| fpga_sram_0002_ZMEM_mem_r                                        | fpga_sram            | fpga_sram_0002            | mem_r                             |
+| fpga_sram_0001_ZMEM_mem_r                                        | fpga_sram            | fpga_sram_0001            | mem_r                             |
+| alb_mss_mem_lat_0000_ZMEM_i_bdel_mem                             | alb_mss_mem_lat      | alb_mss_mem_lat_0000      | i_bdel_mem                        |
+| alb_mss_mem_lat_0000_ZMEM_i_rdel_mem                             | alb_mss_mem_lat      | alb_mss_mem_lat_0000      | i_rdel_mem                        |
+| fpga_sram_0000_ZMEM_mem_r                                        | fpga_sram            | fpga_sram_0000            | mem_r                             |
+| alb_mss_mem_ibp_excl_0000_ZMEM_no_pass_PROC_tagged_blk_excl_addr | alb_mss_mem_ibp_excl | alb_mss_mem_ibp_excl_0000 | no_pass_PROC_tagged_blk_excl_addr |
++------------------------------------------------------------------+----------------------+---------------------------+-----------------------------------+
+
+
+                                                        Memory-Names (From Front end - Unified compile)                                                         
++--------------------------------------------------------+-------+-----------+----------+-------------------------------------------------------+-------+------+
+| zmem_name                                              | width | depth     | inferred | inferred_reason                                       | reset | init |
+|                                                        |       |           | type     |                                                       | type  | type |
++========================================================+=======+===========+==========+=======================================================+=======+======+
+| alb_mss_fpga_sram_0000_ZMEM_mem_r                      | 128   | 268435456 | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| fpga_sram_0002_0000_ZMEM_mem_r                         | 40    | 131072    | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| fpga_sram_0002_ZMEM_mem_r                              | 40    | 131072    | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| fpga_sram_0001_ZMEM_mem_r                              | 80    | 2048      | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| alb_mss_mem_lat_0000_ZMEM_i_bdel_mem                   | 2     | 1024      | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| alb_mss_mem_lat_0000_ZMEM_i_rdel_mem                   | 131   | 1024      | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| fpga_sram_0000_ZMEM_mem_r                              | 56    | 256       | ZMEM     | Array size is greater than memSizeThreshold           | None  | No   |
+| alb_mss_mem_ibp_excl_0000_ZMEM_no_pass_PROC_tagged_bl… | 29    | 128       | REG      | it has too many ports. Total: 256 (R:128, W:128)      |       |      |
+|                                                        |       |           |          | PortThresholdLimit:                                   |       |      |
+|                                                        |       |           |          | 128                                                   |       |      |
++--------------------------------------------------------+-------+-----------+----------+-------------------------------------------------------+-------+------+
+
+
+                             zTopBuild Post-split design statistics                             
++--------+----+---------+------+---------+------+--------+-------+------+--------+-----+-------+
+| Core   | IO |     REG | REG% |     LUT | LUT% |   LUT6 | LUT6% | BRAM | RAMLUT | DSP | MUXCY |
++========+====+=========+======+=========+======+========+=======+======+========+=====+=======+
+| Part_0 |  0 | 260,927 |   0% | 284,207 |   0% | 70,176 |    0% |   83 |      0 |   0 |    18 |
++--------+----+---------+------+---------+------+--------+-------+------+--------+-----+-------+
+| Sum    |  0 | 260,927 |      | 284,207 |      | 70,176 |       |   83 |      0 |   0 |    18 |
+|        |    |         |      |         |      |        |       |      |        |     |       |
+| Mean   |  0 | 260,927 |   0% | 284,207 |   0% | 70,176 |    0% |   83 |      0 |   0 |    18 |
+| Max    |  0 | 260,927 |   0% | 284,207 |   0% | 70,176 |    0% |   83 |      0 |   0 |    18 |
++--------+----+---------+------+---------+------+--------+-------+------+--------+-----+-------+
+
+The mapping HTML is created in: /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zAudit_Mapping.html
+zTime_Verdi_db not found. Run zAudit diagnostic for details
+
+
+                                                                  LEVEL-1 FPGA METRICS                                                                   
++-----------+------+-----+------+---------+--------+--------------+---------+---------+-------+----------+--------------+------------+--------+---------+
+|      FPGA | LUTS | FFS | LUT6 | CONTROL |   QIWC | FPGA_COMPILE |  PLACER |  ROUTER | IOCUT |   WINNER | PARFF_TARGET | COMPLEXITY | BINARY |   MERGE |
+|           |  (%) | (%) |  (%) |    SETS |        |         TIME |    TIME |    TIME |       |          |              |      SCORE |  SCORE |    TIME |
++===========+======+=====+======+=========+========+==============+=========+=========+=======+==========+==============+============+========+=========+
+| U0_M0_F01 |  15% |  5% |  16% |   35555 | 116852 |  02h:18m:56s | 36m:00s | 45m:00s |    40 | Original |           NA |          4 |      0 | 00m:00s |
+| U0_M0_F00 |   4% |  1% |   5% |    6069 |      8 |      41m:56s | 12m:00s | 09m:00s |    40 | Original |           NA |          0 |      0 | 00m:00s |
++-----------+------+-----+------+---------+--------+--------------+---------+---------+-------+----------+--------------+------------+--------+---------+
+
+The fpga HTML is created in: /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zAudit_FPGA.html
+bottleneck: zTime_Verdi_db not found. Run zAudit diagnostic for details
+
+>> DIAGNOSTIC REPORT <<
+
+================================================================================
+zAudit
+
+ISSUE:
+  zebu.work/tools/zTime_Verdi_db not found, some timing information cannot be displayed
+RECOMMENDATION:
+  Add UTF commands:
+ -  timing_analysis -advanced_command {set zcui_ztime_dump_verdi_db true}
+ -  timing_analysis -advanced_command {set zcui_ztime_enable_rtl true}
+ -  global_setenv ZEBU_SERIALIZED_ZFPGATIMING_BACK_ANNOTATION 1
+
+
+================================================================================
+zCoreBuild
+
+ISSUE:
+  WARNING: KBD2309W
+  - current architecture is ZS5, EP1 delay model will be used before a specific delay model is available for this architecture
+
+
+================================================================================
+Vivado
+
+ISSUE:
+  Route 35-3
+  FPGAs: U0_M0_F00 U0_M0_F01
+RECOMMENDATION:
+  ROUTER ==> Router is having difficulty in routing, although there is no single match for the complexity predictor. It is possible that timing congestion could
+be high
+
+
+================================================================================
+Timing Performance
+
+ISSUE:
+  Driver Clock is limited by Routing Data Path with MCP=1 for mem U0_M0_F1.F01_ts_clkbus_in[5]
+RECOMMENDATION:
+  Try using compile objective performance.
+ -  compile -objective performance
+
+ISSUE:
+  Driver Clock is limited by Routing Data Path.
+  - Please check the compilation logs.
+
+
+
+                                                                         zTop_WARNINGS                                                                          
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+| MSG-Type | MSG-ID   | Message/Recommendations                                                                                                                |
++==========+==========+========================================================================================================================================+
+| WARNING  | TGT0145W | no binary identifier defined for module ID ZS5_VU19P_12C                                                                               |
+| WARNING  | LST0478W | The leaf instance uniquification ratio is less then 4.00                                                                               |
+| WARNING  | LST0479W | The hierarchical instance per module uniquification ratio is less then 4.00                                                            |
+| WARNING  | ZTB1062W | Signal zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.zebu_disable controls instance name                          |
+|          |          | zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor. To avoid possible critical log path, signal name        |
+|          |          | zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.zebu_disable should be in module                                    |
+|          |          | zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.xtor_amba_slave_axi3_svs.                                |
+| WARNING  | ZTB1062W | Signal zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable controls instance name                                             |
+|          |          | zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i. To avoid possible critical log path, signal name                        |
+|          |          | zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.zebu_disable should be in module                                                       |
+|          |          | zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.xtor_amba_master_axi3_svs.                                               |
+| WARNING  | ZTB1062W | Signal zebu_top.zebu_disable controls instance name zebu_top.i_t32Jtag_driver. To avoid possible critical log path, signal name        |
+|          |          | zebu_top.zebu_disable should be in module zebu_top.i_t32Jtag_driver.xtor_t32Jtag_svs.                                                  |
+| WARNING  | ZTB1122W | Clock accuracy of 0 is not supported. It will be set to 24.                                                                            |
+| WARNING  | ZTB0530W | Object not found within context : zebu_top.core_chip_dut.i_ext_personality_mode                                                        |
+| WARNING  | ZTB0532W | Command 'zforce -mode dynamic -rtlname { {zebu_top.core_chip_dut.i_ext_personality_mode} } -access all  -type global -object_not_found |
+|          |          | warning' is not matching any edif element in design. This command will be ignored.                                                     |
+| WARNING  | ZTB0530W | Object not found within context : zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode                                              |
+| WARNING  | ZTB0532W | Command 'zforce -mode dynamic -rtlname { {zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode} } -access all  -type global         |
+|          |          | -object_not_found warning' is not matching any edif element in design. This command will be ignored.                                   |
+| WARNING  | PLU0610W | Attribute 'IS_NET_DRIVER' is found in module 'ZXLSYS' from library 'work' but not in the gold macro 'ZXLSYS' in library                |
+|          |          | 'lib_zxlsys_macros'. When replacing with gold macro 'ZXLSYS', this attribute will be ignored.                                          |
+| WARNING  | PLU0610W | Attribute 'IS_NET_DRIVER' is found in module 'ZXLSYS' from library 'work' but not in the gold macro 'ZXLSYS' in library                |
+|          |          | 'lib_zxlsys_macros'. When replacing with gold macro 'ZXLSYS', this attribute will be ignored.                                          |
+| WARNING  | PLU0610W | Attribute 'IS_NET_DRIVER' is found in module 'ZXLSYS' from library 'work' but not in the gold macro 'ZXLSYS' in library                |
+|          |          | 'lib_zxlsys_macros'. When replacing with gold macro 'ZXLSYS', this attribute will be ignored.                                          |
+| WARNING  | PLU0610W | Attribute 'IS_NET_DRIVER' is found in module 'ZXLSYS' from library 'work' but not in the gold macro 'ZXLSYS' in library                |
+|          |          | 'lib_zxlsys_macros'. When replacing with gold macro 'ZXLSYS', this attribute will be ignored.                                          |
+| WARNING  | TAM0018W | No Netlist available, disabling command generators for commands based on it                                                            |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core as indivisible as parent instance                                        |
+|          |          | zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.                                                       |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core as indivisible as parent instance                                         |
+|          |          | zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.                                                        |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core as indivisible as parent instance                                          |
+|          |          | zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.                                                         |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance           |
+|          |          | zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.                                                       |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance            |
+|          |          | zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.                                                        |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine as indivisible as parent instance             |
+|          |          | zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.                                                         |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_uart_sclk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as     |
+|          |          | parent instance zebu_top.zebuclk_uart_sclk.clockdelayport_core is already marked as indivisible.                                       |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_jtag_clk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as      |
+|          |          | parent instance zebu_top.zebuclk_jtag_clk.clockdelayport_core is already marked as indivisible.                                        |
+| WARNING  | BUP0022W | Could not mark zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine.clockdelayport_config as indivisible as       |
+|          |          | parent instance zebu_top.zebuclk_ref_clk.clockdelayport_core is already marked as indivisible.                                         |
+| WARNING  | TAM0072W | General Firmware FPGA cost : bram = 31, dsp_mult = 2, nbdsp48 = 2, FW cost = [],   is considered via reducing the target capacity,     |
+|          |          | rather than increasing the design cost                                                                                                 |
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
+                                                                         zCore_WARNINGS                                                                         
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+| MSG-Type | MSG-ID   | Message/Recommendations                                                                                                                |
++==========+==========+========================================================================================================================================+
+| WARNING  | TGT0145W | no binary identifier defined for module ID ZS5_VU19P_12C                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_3' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageOutPort_3' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_3', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_6' from library 'LIB_ZEBU_MODEL' but not in the gold macro                   |
+|          |          | 'zceiMessageInPort_6' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_6', this attribute will be       |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_4096' from library 'LIB_ZEBU_MODEL' but not in the gold macro               |
+|          |          | 'zceiMessageOutPort_4096' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_4096', this attribute will  |
+|          |          | be ignored.                                                                                                                            |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_128' from library 'LIB_ZEBU_MODEL' but not in the gold macro                |
+|          |          | 'zceiMessageOutPort_128' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_128', this attribute will be |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_2' from library 'LIB_ZEBU_MODEL' but not in the gold macro                   |
+|          |          | 'zceiMessageInPort_2' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_2', this attribute will be       |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_2' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageOutPort_2' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_2', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_1' from library 'LIB_ZEBU_MODEL' but not in the gold macro                   |
+|          |          | 'zceiMessageInPort_1' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_1', this attribute will be       |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_33' from library 'LIB_ZEBU_MODEL' but not in the gold macro                 |
+|          |          | 'zceiMessageOutPort_33' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_33', this attribute will be   |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_8' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageOutPort_8' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_8', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_64' from library 'LIB_ZEBU_MODEL' but not in the gold macro                 |
+|          |          | 'zceiMessageOutPort_64' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_64', this attribute will be   |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_35' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageInPort_35' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_35', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_1' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageOutPort_1' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_1', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_32' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageInPort_32' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_32', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_160' from library 'LIB_ZEBU_MODEL' but not in the gold macro                 |
+|          |          | 'zceiMessageInPort_160' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_160', this attribute will be   |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_64' from library 'LIB_ZEBU_MODEL' but not in the gold macro                  |
+|          |          | 'zceiMessageInPort_64' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_64', this attribute will be     |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageInPort_128' from library 'LIB_ZEBU_MODEL' but not in the gold macro                 |
+|          |          | 'zceiMessageInPort_128' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageInPort_128', this attribute will be   |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_32' from library 'LIB_ZEBU_MODEL' but not in the gold macro                 |
+|          |          | 'zceiMessageOutPort_32' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_32', this attribute will be   |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_640' from library 'LIB_ZEBU_MODEL' but not in the gold macro                |
+|          |          | 'zceiMessageOutPort_640' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_640', this attribute will be |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | PLU0610W | Attribute 'ZEBU_BB' is found in module 'zceiMessageOutPort_544' from library 'LIB_ZEBU_MODEL' but not in the gold macro                |
+|          |          | 'zceiMessageOutPort_544' in library 'lib_zcei_macros'. When replacing with gold macro 'zceiMessageOutPort_544', this attribute will be |
+|          |          | ignored.                                                                                                                               |
+| WARNING  | CLU0081W | Multiple occurence of the same command, using  cluster set max_fill_bram=60                                                            |
+| WARNING  | KBD2213W | General Firmware FPGA cost : bram = 31, dsp_mult = 2, nbdsp48 = 2, FW cost = [],   is considered via reducing the target capacity,     |
+|          |          | rather than increasing the design cost                                                                                                 |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98169_O_144134_144134'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98170_O_144135_144135'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98171_O_144136_144136'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98172_O_144137_144137'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98173_O_144138_144138'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98174_O_144139_144139'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98175_O_144140_144140'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98176_O_144141_144141'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98177_O_144142_144142'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98178_O_144143_144143'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98179_O_144144_144144'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98180_O_144145_144145'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98181_O_144146_144146'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98182_O_144147_144147'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98183_O_144148_144148'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98184_O_144149_144149'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98185_O_144150_144150'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98222_O_155205_155205'                                                              |
+| WARNING  | PRO1053F | zview instance has no DB attributes 'probe_unnamed_98223_O_155206_155206'                                                              |
+| WARNING  | CLK0388W | Failed to parse Core Interface                                                                                                         |
+| WARNING  | CLK0388W | Failed to parse Core Interface                                                                                                         |
+| WARNING  | CLK0388W | Failed to parse Core Interface                                                                                                         |
+| WARNING  | CLK0389W | At least one instance was found with attribute 'ZEBU_RLC_STOP_RETRO', it can lead to inconsistency between RLC results and timing      |
+|          |          | analysis.                                                                                                                              |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_ckgltch_edge_zebu_top_2' wire in 'zebu_top' module.                                                     |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.zebu_ckgltch_edge_zebu_top_2' wire in 'zClockCone_UNIT0.MOD0.F0' module.                            |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_clkglitch_q_16053814003727257898' wire in 'zebu_top' module.                                            |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.zebu_clkglitch_q_16053814003727257898' wire in 'zClockCone_UNIT0.MOD0.F0' module.                   |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.zebu_ckgltch_edge_zebu_top_2' wire in 'zClockCone_UNIT0.MOD0.F1' module.                            |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'unnamed_sys_fm_3378_POS' wire in 'xtor_t32Jtag_svs' module.                                                  |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.i_t32Jtag_driver.unnamed_sys_fm_3378_POS' wire in 'zClockCone_UNIT0.MOD0.F1' module.                |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_ckgltch_edge_xtor_t32Jtag_svs' wire in 'xtor_t32Jtag_svs' module.                                       |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.w_7' wire in 'zClockCone_UNIT0.MOD0.F1' module.                                                     |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_ckgltch_edge_xtor_t32Jtag_svs_0' wire in 'xtor_t32Jtag_svs' module.                                     |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.zebu_ckgltch_edge_zebu_top_1' wire in 'zClockCone_UNIT0.MOD0.F1' module.                            |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_clkglitch_q_15408633059707243683' wire in 'xtor_t32Jtag_svs' module.                                    |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.zebu_clkglitch_zebu_clkglitch_15408633059707243683_9375459621774114814' wire in                     |
+|          |          | 'zClockCone_UNIT0.MOD0.F1' module.                                                                                                     |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'unnamed_sys_fm_3397_Q' wire in 'io_pad_ring' module.                                                         |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.core_chip_dut.iio_pad_ring.unnamed_sys_fm_3397_Q' wire in 'zClockCone_UNIT0.MOD0.F1' module.        |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_clkglitch_q_18081443332601995450' wire in 'io_pad_ring' module.                                         |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.core_chip_dut.zebu_clkglitch_zebu_clkglitch_18081443332601995450_5666120003148096427' wire in       |
+|          |          | 'zClockCone_UNIT0.MOD0.F1' module.                                                                                                     |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_ckgltch_edge_alb_mss_mem_clkgate' wire in 'alb_mss_mem_clkgate' module.                                 |
+| WARNING  | PRO1142W | Cannot add NullEquiID on 'zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.zebu_ckgltch_edge_alb_mss_mem_0' wire in                       |
+|          |          | 'zClockCone_UNIT0.MOD0.F1' module.                                                                                                     |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | CLU0730W | Cannot find path zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932, stuck at                                               |
+|          |          | zebu_filter_data_or_zctrl_Creset_1477361921529022932, instance may have been optimized, ignoring defmapping info to UNIT0.MOD0.F0      |
+| WARNING  | KBD2300W | Found 0 driverClock wires and 0 zdelay wires                                                                                           |
+| WARNING  | KBD2299W | Failed to find a candidate post-instrumentation clock wire for ZMEM BB port S, instance with path :                                    |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r.zebu_bb_zmem_clk_rw0clk           |
+| WARNING  | KBD2299W | Failed to find a candidate post-instrumentation clock wire for ZMEM BB port IN_SYNC_2, instance with path :                            |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r.zebu_bb_zmem_tm_alb_mss_fpga_sra… |
+| WARNING  | ZEM0002W | 12 Memories collected does not match 0 collected by MemlinkDB                                                                          |
+| WARNING  | OPTDB01  | ztop_fm_xform is not registered option                                                                                                 |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21801.sqnod2985.zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21801.sqnod2985.zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21800.sqnod2985.zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21800.sqnod2985.zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818.sqnod845601.zebu_bb_zmem_tm_zz_Encry… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818.sqnod845601.zebu_bb_zmem_tm_zz_Encry… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod6249.zebu_bb_zmem_tm_zz_E… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod6249.zebu_bb_zmem_tm_zz_E… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1445.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1445.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1444.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1444.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1443.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1443.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1442.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1442.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1441.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1441.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2250W | UNSUPPORTED SYNC INST:                                                                                                                 |
+|          |          | U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1440.sqnod256809.zebu_bb_… |
+|          |          | CLK: IN_SYNC_1                                                                                                                         |
+| WARNING  | KBD2309W | current architecture is ZS5, EP1 delay model will be used before a specific delay model is available for this architecture             |
+| WARNING  | KBD2092W | Using ZFILTER_ENABLE_PATH on 'timing' command might increase the longest filter path                                                   |
+| WARNING  | KBD2093W | Using ZFILTER_ASYNC_SET_RESET_PATH on 'timing' command might increase the longest filter path                                          |
+| WARNING  | KBD2160W | Using ZFILTER_FETCH_FEEDBACK on 'timing' command might increase the longest filter path                                                |
+| WARNING  | KBD2092W | Using ZFILTER_ENABLE_PATH on 'timing' command might increase the longest filter path                                                   |
+| WARNING  | KBD2093W | Using ZFILTER_ASYNC_SET_RESET_PATH on 'timing' command might increase the longest filter path                                          |
+| WARNING  | KBD2160W | Using ZFILTER_FETCH_FEEDBACK on 'timing' command might increase the longest filter path                                                |
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
+                 cable-info                  
++-----------------------------------+-------+
+|             settings              | value |
++===================================+=======+
+| MGT_DIRECT_QSFP_CABLE_DELAY_IN_NS |  35   |
+|    MGT_QSFP_CABLE_DELAY_IN_NS     |  35   |
++-----------------------------------+-------+
+
+
+                                                                         zPar_WARNINGS                                                                          
++----------+-----------+---------------------------------------------------------------------------------------------------------------------------------------+
+| MSG-Type | MSG-ID    | Message/Recommendations                                                                                                               |
++==========+===========+=======================================================================================================================================+
+| WARNING  | KPR1518W  | This command will be deprecated in the next major release after ZEBU20.03.                                                            |
+| WARNING  | KPR1897W  | The medium routing effort command is renamed by default.                                                                              |
+| WARNING  | KPR1571W  | Environment variable "ZEBU_NO_LOCAL_RTB_ROUTING" will be deprecated in the next major release after ZEBU20.03.                        |
+| WARNING  | KPR1572W  | Environment variable "ZEBU_NO_LOCAL_RTB_ROUTING" will be deprecated in the next major release after ZEBU20.03.                        |
+| WARNING  | KTM0560W  | zTime_clock_domain.cds not found                                                                                                      |
+| WARNING  | KTM0769W  | Timing analysis command 'set_advanced_asynchronous_set_reset_analysis' is deprecated, use optionsDB variable                          |
+|          |           | timing_advanced_async_set_reset_analysis instead.                                                                                     |
+| WARNING  | ZTCL0307W | ZMetrics : Id 'Delay before ZAP' is already used                                                                                      |
+| WARNING  | ZTCL0307W | ZMetrics : Id 'Delay after TDFDR' is already used                                                                                     |
++----------+-----------+---------------------------------------------------------------------------------------------------------------------------------------+
+
+
+                                                                         zTime_WARNINGS                                                                         
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+| MSG-Type | MSG-ID   | Message/Recommendations                                                                                                                |
++==========+==========+========================================================================================================================================+
+| WARNING  | KTM0560W | zTime_clock_domain.cds not found                                                                                                       |
+| WARNING  | KTM0769W | Timing analysis command 'set_advanced_asynchronous_set_reset_analysis' is deprecated, use optionsDB variable                           |
+|          |          | timing_advanced_async_set_reset_analysis instead.                                                                                      |
+| WARNING  | KTM0856W | drive_out_filter_paths is deprecated in fetch mode plus zCoreTiming flow                                                               |
+| WARNING  | KTM0857W | dump_csv_memory_path_report is deprecated in zCoreTiming flow                                                                          |
++----------+----------+----------------------------------------------------------------------------------------------------------------------------------------+
+
+
+                                                                 SW_FPGA_WARNINGS                                                                  
++-----------+-------------------------------------------------------------------------------------------------------------------------------------+
+| FPGA      | warning Message/Recommendation                                                                                                      |
++===========+=====================================================================================================================================+
+| U0_M0_F01 | 'LoadFactor at constraints is more than 1.0. This could impact FPGA compile time. Relaunch FPGA compile on lightly loaded host'     |
+| U0_M0_F01 | 'Review ENV: VIVADO_ENABLE_MULTITHREADING   fpga compilation setting used: 6  Consider unsetenv VIVADO_ENABLE_MULTITHREADING'       |
+| U0_M0_F01 | 'LoadFactor at linked_analysis is more than 1.0. This could impact FPGA compile time. Relaunch FPGA compile on lightly loaded host' |
+| U0_M0_F01 | 'Max LoadFactor is more than 1.0. This could impact FPGA compile time. Relaunch FPGA compile on lightly loaded host'                |
+| U0_M0_F00 | 'Review ENV: VIVADO_ENABLE_MULTITHREADING   fpga compilation setting used: 6  Consider unsetenv VIVADO_ENABLE_MULTITHREADING'       |
++-----------+-------------------------------------------------------------------------------------------------------------------------------------+
+
+
+                 cable-info                  
++-----------------------------------+-------+
+|             settings              | value |
++===================================+=======+
+| MGT_DIRECT_QSFP_CABLE_DELAY_IN_NS |  35   |
+|    MGT_QSFP_CABLE_DELAY_IN_NS     |  35   |
++-----------------------------------+-------+
+
+================================================================================
+User Clock which were not consumed
+
+None
+
+================================================================================
+User Clock Information
+
++----+-------+--------+------+------+------------+-------+
+|    |       |        |      | file | sequential | clock |
+| id | clock | period | type | info |      count | root  |
++====+=======+========+======+======+============+=======+
++----+-------+--------+------+------+------------+-------+
+
+================================================================================
+User Clock With Async Relationship
+
+None
+
+================================================================================
+Synchronous or Asynchronous Clock Overlap
+
+None
+
+================================================================================
+MCP Sequential Table
+
+None
+
+
+              Modules with large logic depth              
++-----------------------------------------+-------+------+
+| Name                                    | Depth | LUT  |
++=========================================+=======+======+
+| arcv_imsic_clint                        | 56    | 2039 |
+| rl_per_ibp2ahb                          | 40    | 378  |
+| rl_ibp2ahb                              | 36    | 695  |
+| rl_branch                               | 35    | 166  |
+| zz_Encrypt_5                            | 32    | 784  |
+| rl_dmp                                  | 31    | 1039 |
+| alb_mss_fab_axi2ibp_0000                | 26    | 342  |
+| rl_ifu_icache                           | 24    | 804  |
+| mss_bus_switch_ibpw2ibpn_0000           | 23    | 2073 |
+| rl_triggers                             | 22    | 1969 |
+| arcv_dm                                 | 21    | 428  |
+| rl_ifu_iccm                             | 21    | 698  |
+| rl_adder_0000                           | 19    | 93   |
+| arcv_timer                              | 19    | 389  |
+| alb_mss_mem_lat_0000                    | 19    | 3563 |
+| rl_alu_data_path                        | 19    | 399  |
+| alb_mss_fab_axi2ibp_0001                | 19    | 333  |
+| rl_mpy                                  | 18    | 565  |
+| zz_Encrypt_1                            | 17    | 343  |
+| rl_pmp                                  | 17    | 2134 |
+| zz_Encrypt_12                           | 17    | 343  |
+| alb_mss_mem_ibp_excl_0000               | 17    | 3161 |
+| xtor_amba_slave_axi3_svs                | 17    | 1116 |
+| zz_Encrypt_9                            | 16    | 5212 |
+| zz_Encrypt_7                            | 16    | 2622 |
+| zz_Encrypt_8                            | 16    | 468  |
+| mss_bus_switch_ibp_split_0000           | 15    | 264  |
+| rl_dmp_load_aligner                     | 15    | 307  |
+| zz_Encrypt_2                            | 15    | 531  |
+| rl_dmp_dccm_ecc_decoder                 | 15    | 167  |
+| ic_data_ecc_decoder                     | 15    | 182  |
+| iccm_ecc_decoder                        | 15    | 167  |
+| rl_hpm                                  | 15    | 2012 |
+| mss_bus_switch_ibp_split_0000_0000      | 15    | 2185 |
+| mss_bus_switch_ibpw2ibpn_0001           | 14    | 1452 |
+| err_inj_ctrl_0000                       | 14    | 272  |
+| xtor_amba_master_axi3_svs               | 14    | 2015 |
+| rl_csr                                  | 13    | 2381 |
+| zz_Encrypt_6                            | 13    | 693  |
+| rl_decoder                              | 13    | 512  |
+| rl_dmp_amo                              | 12    | 180  |
+| alb_mss_fab_single2sparse_0000          | 12    | 143  |
+| alb_mss_perfctrl                        | 12    | 6079 |
+| mss_bus_switch_ibpn2ibpw_0001           | 11    | 270  |
+| dw_dbp                                  | 11    | 404  |
+| mss_bus_switch_slv_ibp_buffer_0000      | 11    | 64   |
+| mss_bus_switch_mst_ibp_buffer_0000      | 11    | 64   |
+| alb_mss_fab_ibp_buffer_0000_0001        | 11    | 64   |
+| mss_bus_switch_mst_ibp_buffer_0000_0001 | 11    | 64   |
+| mss_bus_switch_slv_ibp_buffer_0000_0000 | 11    | 63   |
+| rl_sfty_mnt_err_aggr                    | 11    | 70   |
+| apb_master_ap0                          | 11    | 169  |
+| dwt_debug_port                          | 11    | 740  |
+| rl_ahb2ibp_0000                         | 11    | 141  |
+| alb_mss_fab_ibp_buffer_0000_0002        | 11    | 63   |
+| mss_bus_switch_mst_ibp_buffer_0000_0000 | 11    | 65   |
+| mss_bus_switch_ibp_compr_0000_0000      | 10    | 490  |
+| ls_sfty_mnt_diag_ctrl                   | 10    | 97   |
+| arcv_watchdog_ctrl                      | 10    | 379  |
+| rl_dmp_dccm_ibp_wrapper                 | 10    | 233  |
+| rl_uop_seq                              | 10    | 116  |
+| ic_tag_ecc_decoder                      | 10    | 75   |
+| rl_dmp_lsq_fifo                         | 10    | 440  |
+| xtor_t32Jtag_svs                        | 10    | 864  |
+| alb_mss_mem_ibp_cwbind_0000             | 10    | 54   |
+| mss_bus_switch_ibpw2ibpn_0002           | 10    | 739  |
+| clockDelayPort_0000                     | 10    | 130  |
+| rl_mmio_ahb2ibp                         | 10    | 138  |
+| alb_mss_fab_ibp2axi                     | 10    | 48   |
+| rl_ibp2mmio                             | 10    | 587  |
+| mss_bus_switch_ibp_compr_0000_0001      | 10    | 778  |
+| rl_ifu_id_ctrl                          | 10    | 19   |
+| mss_bus_switch_ibp_compr_0000           | 10    | 346  |
+| alb_mss_fab_ibp2apb                     | 10    | 76   |
+| mss_bus_switch_ibpn2ibpw_0000           | 10    | 143  |
+| alb_mss_fab_ibp2apb_0000                | 10    | 76   |
+| zebu_top                                | 9     | 31   |
+| rl_complete                             | 9     | 200  |
+| rl_debug                                | 9     | 180  |
+| alb_mss_fab_ahbl2ibp_0000               | 9     | 231  |
+| rl_dmp_cwb                              | 9     | 390  |
+| zebu_time_capture                       | 9     | 65   |
+| rl_ifu_icache_rf                        | 9     | 351  |
+| mss_bus_switch_ibp2single_0000          | 9     | 171  |
+| mss_bus_switch_ibp2single_0000_0000     | 9     | 171  |
+| rl_trap                                 | 9     | 244  |
+| mss_bus_switch_ibp2single_0000_0001     | 9     | 171  |
+| rl_halt_mgr                             | 9     | 60   |
+| cpu_top_safety_controller               | 9     | 126  |
+| alb_mss_clkctrl_ratio_calc              | 9     | 77   |
+| alb_mss_fab_ibp_buffer_0000_0004        | 9     | 68   |
+| alb_mss_fab_ibp_buffer_0000_0009        | 9     | 70   |
+| alb_mss_fab_ibp_buffer_0000_0007        | 9     | 67   |
+| alb_mss_fab_ibp_buffer_0000_0005        | 9     | 70   |
+| alb_mss_fab_ibp_buffer_0000_0003        | 9     | 68   |
+| alb_mss_fab_ibp_buffer_0000_000A        | 9     | 70   |
+| alb_mss_fab_ibp_buffer_0000_0008        | 9     | 67   |
+| alb_mss_fab_ibp_buffer_0000_0006        | 9     | 70   |
+| alb_mss_bus_switch                      | 9     | 87   |
+| rl_alu                                  | 8     | 28   |
++-----------------------------------------+-------+------+
+
+
+ Distribution of max 
+     comb depth      
++--------+----------+
+| Depth  | #Modules |
++========+==========+
+| 0-10   | 417      |
+| 11-20  | 44       |
+| 21-30  | 6        |
+| 31-40  | 5        |
+| 41-50  | 0        |
+| 51-60  | 1        |
+| 61-70  | 0        |
+| 71-80  | 0        |
+| 81-90  | 0        |
+| 91-100 | 0        |
+| 100+   | 0        |
++--------+----------+
+
+command exit code is '0'

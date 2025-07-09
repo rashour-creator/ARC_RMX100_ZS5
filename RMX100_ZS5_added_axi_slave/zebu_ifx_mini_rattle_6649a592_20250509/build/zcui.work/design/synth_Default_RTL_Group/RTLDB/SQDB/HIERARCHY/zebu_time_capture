@@ -1,0 +1,23 @@
+zebu_time_capture
+z_sample_clock_uncond_6 -> z_sample_clock_uncond_6 -> zebu_bb_sample_clk_uncond_1_1
+z_sample_clock_uncond_5 -> z_sample_clock_uncond_5 -> zebu_bb_sample_clk_uncond_24_1
+z_sample_clock_uncond_4 -> z_sample_clock_uncond_4 -> zebu_bb_sample_clk_uncond_sample_64_1
+z_sample_clock_uncond_3 -> z_sample_clock_uncond_3 -> zebu_bb_sample_clk_uncond_1_1
+z_sample_clock_uncond_2 -> z_sample_clock_uncond_2 -> zebu_bb_sample_clk_uncond_1_1
+z_sample_clock_uncond_1 -> z_sample_clock_uncond_1 -> zebu_bb_sample_clk_uncond_64_1
+z_sample_clock_uncond_0 -> z_sample_clock_uncond_0 -> zebu_bb_sample_clk_uncond_sample_2_1
+z_sample_clock_uncond -> z_sample_clock_uncond -> zebu_bb_sample_clk_uncond_sample_2_1
+z_protect_time -> z_protect_time -> zebu_bb_ts_cur_time
+rtl_clock_dpi_clock_control -> rtl_clock_dpi_clock_control -> rtlClockControl
+rtl_clock_syn_clock_control -> rtl_clock_syn_clock_control -> rtlClockControl
+zemi_status_out_port -> zemi_status_out_port -> zceiMessageOutPort_3
+zemi_control_in_port -> zemi_control_in_port -> zceiMessageInPort_6
+zebu_sendtime_out_port -> zebu_sendtime_out_port -> zceiMessageOutPort_4096
+zebu_control_out_port -> zebu_control_out_port -> zceiMessageOutPort_128
+zebu_control_in_port -> zebu_control_in_port -> zceiMessageInPort_2
+z_dc -> z_dc -> zebu_reqsig_clock_driverclock
+rtl_clock_b2b_clock_control -> rtl_clock_b2b_clock_control -> rtlClockControl
+zebu_sendtime_portbuffer -> zebu_sendtime_portbuffer -> zemi3OutPortBuffer_169_4096_24
+z_protect_add_zview_0 -> z_protect_add_zview_0 -> zebu_bb_add_zview
+z_protect_add_zview -> z_protect_add_zview -> zebu_bb_add_zview
+zebu_bb_gdelay -> zebu_bb_gdelay -> zebu_bb_gdelay

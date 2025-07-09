@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="zFs">
+<modname>fpga_sram_0000</modname>
+<memstats>
+ <singlemem>
+  <name>fpga_sram_0000.mem_r</name>
+  <width>56</width>
+  <depth>256</depth>
+  <r>1</r>
+  <w>1</w>
+ </singlemem>
+</memstats>
+<interface>
+ <ports>
+  <input>6</input>
+  <output>1</output>
+ </ports>
+ <bits>
+  <input>123</input>
+  <output>56</output>
+ </bits>
+</interface>
+<stats>
+ <lut size="3">8</lut>
+ <lut size="4">8</lut>
+ <state>8</state>
+ <ff>8</ff>
+ <carry4>2</carry4>
+</stats>
+</ZeBuUiDoc>

@@ -1,0 +1,94 @@
+# SYSTEM memory regions indicate where external memory might be located.
+#   The TCF has no specific knowledge of whether SYSTEM regions contain 
+#   external memory or not.
+# CCMWRAP memory regions indicate unusable portions of the address space
+#   due to CCM memory wrapping into upper addresses beyond its size
+
+MEMORY {
+    ICCM0   : ORIGIN = 0x00000000, LENGTH = DEFINED(_ICCMSIZE) ? _ICCMSIZE : 0x00080000
+#   CCMWRAP0: ORIGIN = 0x00080000, LENGTH = 0x00080000
+#   SYSTEM0 : ORIGIN = 0x00100000, LENGTH = 0x7ff00000
+    DCCM    : ORIGIN = 0x80000000, LENGTH = DEFINED(_DCCMSIZE) ? _DCCMSIZE : 0x00100000
+#   CCMWRAP1: ORIGIN = 0x80100000, LENGTH = 0x00000000
+#   SYSTEM1 : ORIGIN = 0x80100000, LENGTH = 0x3ff00000
+#   MSS_CLK : ORIGIN = 0xc0000000, LENGTH = 0x00001000
+#   SYSTEM2 : ORIGIN = 0xc0001000, LENGTH = 0x00001000
+#   MSS_PERF: ORIGIN = 0xc0002000, LENGTH = 0x00002000
+#   SYSTEM3 : ORIGIN = 0xc0004000, LENGTH = 0x1fffc000
+    MMIO    : ORIGIN = 0xe0000000, LENGTH = 0x00100000
+#   SYSTEM4 : ORIGIN = 0xe0100000, LENGTH = 0x1ff00000
+    }
+SECTIONS {
+    GROUP BLOCK(4) : {
+        .vectors? (TEXT): {}
+        .text : { *(SORT(.text .text.* .text$*))} 
+        .init : {
+             *(SORT( .init .init.* .init$*))
+        } = 0x00010001
+        .fini : {
+             *(SORT( .fini .fini.* .fini$* ))
+        } = 0x00010001
+        * (TEXT): {}
+        .rodata : {
+            *(SORT(.rodata .rodata.* .rodata$* ))
+        }
+        .eh_frame : {
+            *(.eh_frame .eh_frame.* .eh_frame$*)
+        }
+    	* (LIT): {}
+    } > ICCM0
+
+    GROUP SIZE(SIZEOF(DCCM)) : {
+        .ctors : {
+            * ( .ctors .ctors.* ctors$* )
+        }
+        .dtors : {
+            *(SORT( .dtors .dtors.* dtors$* ))
+        }
+	.preinit_array :
+	{
+	    PROVIDE_HIDDEN (__preinit_array_start = .);
+	    KEEP (*(.preinit_array*))
+	    PROVIDE_HIDDEN (__preinit_array_end = .);
+	}
+	.init_array :
+	{
+	    PROVIDE_HIDDEN (__init_array_start = .);
+	    KEEP (*(SORT(.init_array.*)))
+	    KEEP (*(.init_array*))
+	    PROVIDE_HIDDEN (__init_array_end = .);
+	}
+	.fini_array :
+	{
+	    PROVIDE_HIDDEN (__fini_array_start = .);
+	    KEEP (*(SORT(.fini_array.*)))
+	    KEEP (*(.fini_array*))
+	    PROVIDE_HIDDEN (__fini_array_end = .);
+	}
+        .tdata : { }
+        .tbss : { }
+	/* __global_pointer$ computed by linker */
+        .sdata? : {
+            *(.sdata .sdata$* .sdata.* )
+        }
+        .sbss? : {
+            *(.sbss .sbss$* .sbss.* )
+        }
+        .rodata_in_data : { }
+        * (DATA): {}
+        .bss : { *(.bss .bss.* COMMON)}
+        * (BSS): {}
+        .stack ALIGN(16) : {
+             _fstack = .;
+             . = . + ( DEFINED ( _STACKSIZE ) ? _STACKSIZE : 65536);
+             _estack = .;
+        }
+        _end = . ;
+        .heap ALIGN(8) : {
+             _fheap = .;
+             . = . + ( DEFINED ( _HEAPSIZE ) ? _HEAPSIZE : ADDR(DCCM)+SIZEOF(DCCM)-ADDR(.heap));
+             _eheap = .;
+        }
+    } > DCCM
+}
+

@@ -1,0 +1,22 @@
+`define ALB_MSS_CLKCTRL_ARCV2MSS             1
+`define ALB_MSS_CLKCTRL_ENDIAN               none
+`define ALB_MSS_CLKCTRL_NUM_MST              0
+`define ALB_MSS_CLKCTRL_NUM_SLV              1
+`define ALB_MSS_CLKCTRL_CLK_NAME             mss_clk
+`define ALB_MSS_CLKCTRL_CLKEN
+`define ALB_MSS_CLKCTRL_SLV0_PREF            mss_clkctrl_
+`define ALB_MSS_CLKCTRL_SLV0_CLK_NAME        mss_clk
+`define ALB_MSS_CLKCTRL_SLV0_CLK_EN
+`define ALB_MSS_CLKCTRL_SLV0_PROT            apb
+`define ALB_MSS_CLKCTRL_SLV0_DATA_WIDTH      32
+`define ALB_MSS_CLKCTRL_SLV0_ADDR_WIDTH      -1
+`define ALB_MSS_CLKCTRL_SLV0_REG_W           1
+`define ALB_MSS_CLKCTRL_SLV0_NUM_REG         1
+`define ALB_MSS_CLKCTRL_SLV0_REG0_BASE_ADDR  786432
+`define ALB_MSS_CLKCTRL_SLV0_REG0_APER_WIDTH 12
+`define ALB_MSS_CLKCTRL_SLV0_SUPPORT_RATIO    0
+`define ALB_MSS_CLKCTRL_BYPASS_MODE          0
+`define ALB_MSS_ENABLE_LLM_INIT             0
+`define ALB_MSS_CLKCTRL_MSS_CLK_NUM          0
+`define ALB_MSS_PERFCTRL_TIE_SIGNAL_CONTROL    0
+`define ALB_MSS_PERFCTRL_SIGNAL_MONITOR_NUM    1

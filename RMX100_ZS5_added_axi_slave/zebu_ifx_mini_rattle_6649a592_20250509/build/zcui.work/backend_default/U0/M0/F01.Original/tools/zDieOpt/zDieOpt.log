@@ -1,0 +1,411 @@
+#   step decisionMaking : Starting
+#   step INIT : Starting
+#   step dieBuildDB : Logical FPGA: U0_M0_F1 ; Physical FPGA: U0/M0/F01
+#   step FWC : Configuring for Virtex 8, fast waveform capture gen2
+#   step QIWC : Configuring for Virtex 8
+#   step dieBuildDB : Target Product: zs5
+#   step INIT : Done in    elapsed:0.80 s   user:0.62 s   system:0.17 s      %cpu:98.53      load:13.68       fm:229598 m    vm:17726 m       vm:+0 m    um:17109 m       um:+0 m
+#   step dieBuildDB : Reading toe file: /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/partitioningModel/zs5_xcvup_12c_19_v2_toe.xml
+#   step DIE_BUILD : Generate zdo Option
+#   step ZDO DM Build : Starting
+#   step ZDO_CONSTRAINT_MGR PARSE : Starting
+#   step ZDO_DEVICE : Fpgalet Report:
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : |             part_SLR3             |
+#   step ZDO_DEVICE : |  BBox:[   0, 915] - ( 705,1220)   |
+#   step ZDO_DEVICE : |        shell flpins:     0        |
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : +- N    0/   0 -- S    0/   0 -- V     0 -+
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : |             part_SLR2             |
+#   step ZDO_DEVICE : |  BBox:[   0, 610] - ( 705, 915)   |
+#   step ZDO_DEVICE : |        shell flpins:     0        |
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : +- N    0/   0 -- S    0/   0 -- V     0 -+
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : |             part_SLR1             |
+#   step ZDO_DEVICE : |  BBox:[   0, 305] - ( 705, 610)   |
+#   step ZDO_DEVICE : |        shell flpins:     0        |
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : +- N    0/   0 -- S    0/   0 -- V     0 -+
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : |             part_SLR0             |
+#   step ZDO_DEVICE : |  BBox:[   0,   0] - ( 705, 305)   |
+#   step ZDO_DEVICE : |        shell flpins:     0        |
+#   step ZDO_DEVICE : |                                   |
+#   step ZDO_DEVICE : (Direction[N|S|E|W] #NormalFlPins / #BypassFlPins)
+#   step ZDO_CONSTRAINT_MGR : Product type = zs5, virtex type = V8
+#   step ZDO_CONSTRAINT_MGR : Setup resource types with productType zs5
+#   step ZDO_TCLMGR : Parsing tcl file tools/zDieOpt/script.tcl
+#   step ZDO_CONSTRAINT_MGR : Collect [BASE/Total] = [507/792] defparts and transform into 421023 primitives
+#   step ZDO_CONSTRAINT_MGR : Collect 0 user defgroups with 0 primitives
+#   step ZDO_CONSTRAINT_MGR : Collect [target/balance/fillrate] = [0/0/0] defpart_resource constraints.
+#   step ZDO_CONSTRAINT_MGR : Collect 0 shell offset commands.
+#   step ZDO_CONSTRAINT_MGR : Collect 0 resource weight commands.
+#   step ZDO_CONSTRAINT_MGR : Collect 0 pin weight commands.
+#   step ZDO_CONSTRAINT_MGR : Collect 0 user-defined indivisible modules.
+#   step ZDO_CONSTRAINT_MGR : Parse dap mode : default
+#   step ZDO_CONSTRAINT_MGR : Collect 0 primitive modules with user-defined resource.
+#   step ZDO_CONSTRAINT_MGR : Parse socket budget: [from/to/fromTo] = [5/35/0]
+#   step ZDO_CONSTRAINT_MGR : Collect 40 delay requests: [from/to/fromTo] = [5/35/0]
+#   step ZDO_CONSTRAINT_MGR : Collect 21 indivisible memory defGroups.
+#   step ZDO_CONSTRAINT_MGR : Collect 1328 QiwcFwc defGroups.
+#   step ZDO_CONSTRAINT_MGR : Collect 440 indivisible defGroups.
+#   step ZDO_CONSTRAINT_MGR : Collect 37271 filters with [zClockcone/clockLev] = [620/36651]
+#   step ZDO_CONSTRAINT_MGR : Collect 0 dlcone with [zcb_dlcone] = [0]
+#   step ZDO_CONSTRAINT_MGR : Collect 3656 shape defGroups with [muxf/carry4/rom128x1LDCE/muxcy/xorcy] = [3656/0/0/0/0]
+#   step ZDO_CONSTRAINT_MGR : Collect 0 TS clock bus defGroups.
+#   step ZDO_CONSTRAINT_MGR : Collect driver clock period = 184209 ps
+#   step ZDO_CONSTRAINT_MGR : Set SLR cut threshold = 19584
+#   step ZDO_CONSTRAINT_MGR PARSE : Done in      elapsed:11 s     user:11 s   system:0.27 s      %cpu:99.22      load:11.31       fm:228495 m    vm:17726 m       vm:+0 m    um:17120 m       um:+9 m
+#   step znlToZdoAdaptor convert : Starting
+#   step ZNLZDOAdaptor : Build 507 raw vertices and 15250 ports for shell
+#   step ZNLZDOAdaptor : Totally build 1022325 raw vertices, 5080699 raw ports(40 socket ports)
+#   step ZNLZDOAdaptor : Build 965850 raw edges (2811 edges connecting to shell) and skip 15756 constant edges, 1424 edges without driver, 0 edges with multiple drivers, 97203 edges without reader
+#   step ZDO_RES_EST : Estimate Resource for BlackBox - 0 estimated
+#   step ZDO_RES_EST : Estimate Resource for ZCEI - 143 estimated
+#   step ZDO_RES_EST : Cost per QiWC bit
+#   step ZDO_RES_EST : 
+---------------------
+|LUT |LUT6|RAM |REG |
+---------------------
+|0.33|0.33|0.00|0.07|
+---------------------
+
+#   step ZDO_RES_EST : RAM:0.00020539
+#   step ZDO_RES_EST : DPI Frequency:0 Sampling Frequency:50000 MaxDPIBitPerIP:384
+#   step ZDO_RES_EST : Total FWC Cost
+#   step ZDO_RES_EST : 
+-------------------------------------------------------------------------
+|LUT        |RAM        |REG        |RAMLUT     |FWC_IP_NUM |FWC_IP_BITS|
+-------------------------------------------------------------------------
+|3377.00    |2.00       |3421.00    |96.00      |3.00       |833.00     |
+-------------------------------------------------------------------------
+
+#   step ZDO_RES_EST : Cost per FWC bit
+#   step ZDO_RES_EST : 
+-----------------------------
+|LUT   |RAM   |REG   |RAMLUT|
+-----------------------------
+|4.05  |0.00  |4.11  |0.12  |
+-----------------------------
+
+#   step ZDO_RES_EST : 0 dpi bits, 0 dpi instances
+#   step ZDO_RES_EST : value set name: FULL_DUT_DUMP_PORTS|VCC|FWC - bit count 833 - instance count 833
+#   step ZNLZDOAdaptor : Set lvds locations on 40 zdo raw vertices
+#   step ZNLZDOAdaptor : Collect 11683 fast clk registers with 6 fast clocks
+#   step ZNLZDOAdaptor : Collect 37271 vertices with ClockCone
+#   step ZNLZDOAdaptor : Collect muxability types from edges and ports
+#   step ZNLZDOAdaptor : Collect 9218 timing arcs for 39 memory instances
+#   step ZNLZDOAdaptor : Collect 5 timing arcs for 5 primitive instances
+#   step ZNLZDOAdaptor : Collect 32212 timing arcs for 507 shell instances.
+#   step ZNLZDOAdaptor : Collect 41435 timing arcs totally
+#   step ZNLZDOAdaptor : Collect 40/40 valid timing constraints from soft constraints
+#   step ZNLZDOAdaptor : Transform 40 delay requests into 0 timing constraints of driverClockPeriod 184209
+#   step ZNLZDOAdaptor : Collect 40 timing constraints
+#   step ZNLZDOAdaptor : Collect 421023/421023 valid single defpart constraints
+#   step ZNLZDOAdaptor : Collect 0/0 valid multi defpart constraints
+#   step ZNLZDOAdaptor : Collect 421023 defpart constraints
+#   step ZNLZDOAdaptor : Collect 507/507 valid defpartBase constraints
+#   step ZNLZDOAdaptor : Collect 21/21 valid IndivisibleMem groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 440/440 valid IndivisibleMod groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 1/1 valid ClockCone groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 0/0 valid DataCone groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 3656/3656 valid Shape groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 0/0 valid TsClockBus groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 0/0 valid User groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 1328/1328 valid QiwcFwc groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 0/0 valid Fwc groups (0 invalid group / 0 invalid instances / 0 empty group)
+#   step ZNLZDOAdaptor : Collect 0/0 valid anchors (0 invalid anchor / 0 invalid instances)
+#   step ZNLZDOAdaptor : Collect 0/0 valid localization constraints
+#   step ZNLZDOAdaptor : Collect 0/0 reconstructable macros
+#   step znlToZdoAdaptor convert : Done in      elapsed:77 s     user:77 s      system:1 s     %cpu:101.81       load:8.89       fm:224416 m    vm:18703 m     vm:+977 m    um:18072 m     um:+952 m
+#   step ZDODM : Bulid netlist flat graph: 1022325 vertices, 965850 edges, 5080699 ports
+#   step ZDODM_process_configs : Starting
+#   step ZDODM : Hardgroup reduces from :4117 to 1389
+#   step ZDODM : Solve 1312 defgroups containing defpart and set 850 vertices as defpart/multi-defpart
+#   step ZDODM_process_configs : Done in    elapsed:0.45 s   user:0.44 s    system:0.1 s     %cpu:100.17       load:8.89       fm:221679 m    vm:18731 m      vm:+28 m    um:18097 m      um:+23 m
+#   step RSRC_CONSTRAINT : Processed defpart_resource constraints [valid/total] = [0/0]
+#   step RSRC_CONSTRAINT :  Output current resource constraint table: 
+# +---------+--------+--------+-----+----+--------+-----+-------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+-----------+-----+
+# |    Parts|     LUT|    LUT6|  RAM|URAM|     REG|  DSP| RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|     ZFORCE|ZVIEW|
+# +---------+--------+--------+-----+----+--------+-----+-------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+-----------+-----+
+# |part_SLR0|1021650 |1021500 | 485 | 64 |2043279 | 816 |129000 |      186 |     71424 |     235929 |  2147483647 |            1 |   2147483647 |             1 | 2147483647 |              150 |               150 | 2147483647 |     1 |2147483647 |   1 |
+# |part_SLR1|1021650 |1021500 | 452 | 64 |2043279 | 804 |129000 |      186 |     71424 |     235929 |  2147483647 |            1 |   2147483647 |             1 | 2147483647 |              150 |               150 | 2147483647 |     1 |2147483647 |   1 |
+# |part_SLR2|1021650 |1021500 | 485 | 64 |2043279 | 816 |129000 |      186 |     71424 |     235929 |  2147483647 |            1 |   2147483647 |             1 | 2147483647 |              150 |               150 | 2147483647 |     1 |2147483647 |   1 |
+# |part_SLR3|1021650 |1021500 | 485 | 64 |2043279 | 816 |129000 |      186 |     71424 |     235929 |  2147483647 |            1 |   2147483647 |             1 | 2147483647 |              150 |               150 | 2147483647 |     1 |2147483647 |   1 |
+# +---------+--------+--------+-----+----+--------+-----+-------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+-----------+-----+
+# |      SUM|4086600 |4086000 |1907 |256 |8173116 |3252 |516000 |      744 |    285696 |     943716 |          -4 |            4 |           -4 |             4 |         -4 |              600 |               600 |         -4 |     4 |        -4 |   4 |
+# +---------+--------+--------+-----+----+--------+-----+-------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+-----------+-----+
+#   step ZDODM : Collect 0 combinational loops 0 ports in loops
+#   step ZDO DM Build : Done in      elapsed:94 s    user:101 s      system:2 s     %cpu:111.32       load:9.46       fm:219692 m    vm:18750 m    vm:+1024 m    um:18118 m    um:+1009 m
+#   step ZDOFLOWMGR : Run direct
+
+Outline of Decision Making
+--------------------------
+1. Partitioning
+2. Routing
+3. PDM
+
+#   step BUILD_TIMER : Starting
+#   step ZDODM : Build timing graph: 3326130 timing nodes, 3992172 timing arcs (34228 virtual arcs)
+#   step ZDODM : Adjust 0 over constrained from/to timing constraints, number of constraints after adjustment: 40
+#   step TimingConstraintHandler : 
+# +-------------------+-----+-----+-----+
+# |             Delay | S2F | F2S | S2S |
+# +-------------------+-----+-----+-----+
+# |       [0 - 20000) |   2 |   0 |   0 |
+# |   [20000 - 30000) |   2 |   0 |   0 |
+# |   [30000 - 80000) |   0 |   1 |   0 |
+# |  [80000 - 100000) |   1 |   1 |   0 |
+# | [100000 - 200000) |   0 |  33 |   0 |
+# |             Total |   5 |  35 |   0 |
+# +-------------------+-----+-----+-----+
+#   step TimingConstraintHandler : Collect 40 sockets and 40 constraints with [S2F/F2S/S2S] = [5/35/0]
+#   step TimingConstraintHandler : Starting
+#   step TimingConstraintHandler :  Timing Constaint Report: 
+# +-----------------------------------------------+-------+------------------+
+# |                                          Type | Count | Total gap(in ps) |
+# +-----------------------------------------------+-------+------------------+
+# |                                       Invalid |     0 |     0.000000e+00 |
+# | Overconstrained with constraint delay >= 50ns |     0 |     0.000000e+00 |
+# |  Overconstrained with constraint delay < 50ns |     0 |     0.000000e+00 |
+# |                         Overconstrained total |     0 |     0.000000e+00 |
+# +-----------------------------------------------+-------+------------------+
+#   step TimingConstraintHandler : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:9.74       fm:211198 m    vm:19170 m       vm:+0 m    um:18557 m       um:+0 m
+#   step TimingConstraintHandler : Calculate 40 ports initial arr/req time with 2 tag(s)
+#   step ZDO_TIMDM : collect 0 loop breaking arcs
+#   step BUILD_TIMER : Done in      elapsed:12 s     user:12 s   system:0.26 s      %cpu:99.44      load:10.08       fm:210796 m    vm:19253 m     vm:+503 m    um:18641 m     um:+523 m
+#   step ZDOFLOWMGR : Timing Report - Before Partitioning
+#   step ZDOFLOWMGR : [ Min slack / Top 1% min slack / Total slack / Driver clock period ] = [ 11598 / 124051 / 1.242190e+15 / 184209 ]
+#   step ZDODM : Dumping timing constraint cones into file tools/zDieOpt/Before Partitioning.constraintCone.log
+
+##################################################
+## Partitioning                                 ##
+##################################################
+
+#   step run_partitioning : Starting
+#   step ZDORDPAdaptor : Collect 1022325 nodes
+#   step ZDORDPAdaptor : Collect 930680 nets and skip 33425 1-pin nets
+#   step BUILDRDPDM : Starting
+#   step RDP_DM : Build Nodes: [Fix/Clock/Data/Total] = [40/37271/0/1022325]
+#   step RDP_DM : Build Nets: Total [Net/Pin/Undefined pin] = [930680/3969364/0]
+#   step BUILDRDPDM : Done in       elapsed:2 s      user:2 s   system:0.25 s      %cpu:99.39       load:9.77       fm:223488 m    vm:20580 m     vm:+523 m    um:19965 m     um:+518 m
+#   step RDP_OPTION_MGR : Report option table in DAP
+#   step RDP_OPTION_MGR : 
+# +------------------+-------+------------------------------------------------+
+# |           Option | Value |                                    Description |
+# +------------------+-------+------------------------------------------------+
+# |    adjustUBFactor|   True|                         Adjust unbalance factor|
+# | combLoopSoftGroup|   True|Add soft group constraint on combinational loops|
+# |        fixDefpart|   True|       Fix defpart at the center of each fpgalet|
+# |  setUBFactorValue|  0.010|              Define the UBFactor in partitionDM|
+# |       smallDesign|   True|         Simplify the flow for very small design|
+# |typeSpecificSpread|   True|          Spread specific resource to its column|
+# +------------------+-------+------------------------------------------------+
+#   step RDP_DM : Set partition for defpart nodes - Invalid/shell/normal defpart/multi defpart/total = [0/507/421366/0/421873]
+#   step RDP_DM : 421366 defparts - Fix defpart at the center of partition
+#   step RDP_DM : Process zMem soft constraints - 21 groups with 128509 pseudo-nets are created
+#   step RDP_DM : Process combLoop soft constraints - 0 groups with 0 pseudo-nets are created
+#   step RDP_DM : 77 groups are created
+#   step RDP_DM : Create 0 anchor constraints
+#   step RDP_DM : Sparsify Matrix - [pseudo/high degree/skip nets] = [128509/533/1406]
+#   step RDP_DM : set estimate qiwc bit and fwc bit resources
+#   step RDP_DM : Fix defpart nodes in partition center
+#   step RDP_DM : Defpart fixed in center [Part0/Part1/Part2/Part3] = [44/421198/84/0]
+#   step INITQPDM : Starting
+#   step INITQPDM : Done in       elapsed:5 s      user:4 s   system:0.65 s      %cpu:99.59      load:11.15       fm:220232 m    vm:21973 m    vm:+1339 m    um:21329 m    um:+1322 m
+#   step RDP_DM : Setting QP Blockages - Num Set : 3
+#   step RDP_DM : Process Skip Nodes - Num of skip nodes: 72
+#   step RDP_DM : Set cut threshold = 19584
+#   step RDP_DM : Report cut size table from defpart/fixed nodes
++-------------+-----------------------+-------------+----------------+-----------+
+| Boundary Id |      fpgalet - fpgalet| PDMable Cut | NonPDMable Cut | Total Cut |
++-------------+-----------------------+-------------+----------------+-----------+
+|           0 | part_SLR0 - part_SLR1 |           0 |              0 |         0 |
+|           1 | part_SLR1 - part_SLR2 |           0 |              0 |         0 |
+|           2 | part_SLR2 - part_SLR3 |           0 |              0 |         0 |
++-------------+-----------------------+-------------+----------------+-----------+
+
+
+#   step RDP_PARTDM : build 1021818 normal nodes, 0 group nodes, 8 legal order, 1 fwc value set
+#   step RDP_PARTDM : Build Complete
+#   step RDP : Starting
+#   step RDP Pre-Processing : Starting
+#   step RDP : Pre-Processing using pin balance mode
+#   step RDP_CONGMGR : Init inflat nodes
+#   step RDP_CONGMGR : Total area: 18762694.594209	Total pins: 2373046	Avg pin area: 7.906587
+
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP_DM : Report cut size table
++-------------+-----------------------+-------------+----------------+-----------+
+| Boundary Id |      fpgalet - fpgalet| PDMable Cut | NonPDMable Cut | Total Cut |
++-------------+-----------------------+-------------+----------------+-----------+
+|           0 | part_SLR0 - part_SLR1 |       28124 |           7178 |     35302 |
+|           1 | part_SLR1 - part_SLR2 |       57133 |            163 |     57296 |
+|           2 | part_SLR2 - part_SLR3 |       48294 |            394 |     48688 |
++-------------+-----------------------+-------------+----------------+-----------+
+
+
+#   step RDP_DM : 
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|           LUT|         LUT6|   RAM| URAM|           REG|  DSP|      RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|171700/1021650|31577/1021500|90/485|64/64|102059/2043279|0/816|   64/129000|     2/186|  723/71424|32772/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|235473/1021650|13639/1021500|34/452|34/64|254107/2043279|2/804|29787/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             5/150|              5/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2|109765/1021650|43181/1021500|16/485| 0/64| 85328/2043279|0/816|    0/129000|     1/186|  105/71424|75879/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3| 48783/1021650| 4186/1021500| 2/485| 0/64| 75776/2043279|0/816|    0/129000|     1/186|    5/71424| 8201/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        566013|        92583|   141|   98|        517449|    2|       29883|         3|        833|      116852|            0|             0|             0|              0|           0|                 5|                  5|           0|      0|     0|    0|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP_PARTDM : Defpart Resource Usage
+#   step RDP_DM : 
+# +---------+--------------+-------------+------+----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|           LUT|         LUT6|   RAM|URAM|           REG|  DSP|      RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+--------------+-------------+------+----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|    26/1021650|    3/1021500| 0/485|0/64|    14/2043279|0/816|    0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|217623/1021650|13639/1021500|34/452|0/64|234761/2043279|2/804|29787/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             5/150|              5/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2|    43/1021650|    6/1021500| 0/485|0/64|    33/2043279|0/816|    0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3|     0/1021650|    0/1021500| 0/485|0/64|     0/2043279|0/816|    0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+--------------+-------------+------+----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        217692|        13648|    34|   0|        234808|    2|       29787|         0|          0|           0|            0|             0|             0|              0|           0|                 5|                  5|           0|      0|     0|    0|
+# +---------+--------------+-------------+------+----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP : Prepare Type Spreading DB : 3
+#   step RDP Pre-Processing : Done in       elapsed:8 s    user:147 s      system:1 s    %cpu:1867.68      load:13.15       fm:216086 m    vm:22600 m     vm:+604 m    um:21879 m     um:+519 m
+#   step RDP : Processing ...
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 0
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 1
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 2
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 3
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 4
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 5
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 6
+#   step RDP_DM : 1 types of resources overflow in some partitions
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 7
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 8
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 9
+#   step RDP_PARTDM : build 936764 normal nodes, 77 group nodes, 17 legal order, 1 fwc value set
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 10
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 11
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Total Cut: 34562 (DUT:34562 FW:0), adjust filter psu-net weight to 0
+#   step RDP : Complete Iteration 12
+#   step RDP_DM : Report cut size table
++-------------+-----------------------+-------------+----------------+-----------+
+| Boundary Id |      fpgalet - fpgalet| PDMable Cut | NonPDMable Cut | Total Cut |
++-------------+-----------------------+-------------+----------------+-----------+
+|           0 | part_SLR0 - part_SLR1 |       12243 |             10 |     12253 |
+|           1 | part_SLR1 - part_SLR2 |       34421 |            141 |     34562 |
+|           2 | part_SLR2 - part_SLR3 |         758 |              8 |       766 |
++-------------+-----------------------+-------------+----------------+-----------+
+
+
+#   step RDP_DM : 
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|           LUT|         LUT6|   RAM| URAM|           REG|  DSP|      RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|157088/1021650|30398/1021500| 9/485|64/64| 99311/2043279|0/816|   96/129000|     3/186|  825/71424|33069/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|250234/1021650|14119/1021500|34/452|34/64|263440/2043279|2/804|29787/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             5/150|              5/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2|106667/1021650|27566/1021500|90/485| 0/64|108224/2043279|0/816|    0/129000|     1/186|    8/71424|41544/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3| 52022/1021650|20500/1021500| 9/485| 0/64| 46466/2043279|0/816|    0/129000|     0/186|    0/71424|42239/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        566013|        92583|   141|   98|        517449|    2|       29883|         3|        833|      116852|            0|             0|             0|              0|           0|                 5|                  5|           0|      0|     0|    0|
+# +---------+--------------+-------------+------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP : Processing Stage 2 ...
+### warning in RDP_PARTMGR [RDP0024W] : Part1 are preplaced too many defpart and defgoup nodes, which breaks the balance condition
+#   step RDP : Complete Iteration 0 in Stage 2 - Max Cut: 35067 - Gap: 80022300.00
+#   step RDP : Complete Iteration 1 in Stage 2 - Max Cut: 16274 - Gap: 302.61
+#   step RDP : Complete Iteration 2 in Stage 2 - Max Cut: 7150 - Gap: 69.22
+#   step RDP : Complete Iteration 3 in Stage 2 - Max Cut: 3127 - Gap: 12.47
+#   step RDP_DM : 
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|           LUT|         LUT6|    RAM| URAM|           REG|  DSP|      RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|151322/1021650|30173/1021500|  9/485|64/64| 92204/2043279|0/816|   96/129000|     3/186|  789/71424|32730/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|306139/1021650|18673/1021500|105/452|34/64|336496/2043279|2/804|29787/129000|     1/186|   36/71424| 7130/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             5/150|              5/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2| 56622/1021650|23256/1021500| 18/485| 0/64| 42248/2043279|0/816|    0/129000|     1/186|    8/71424|34759/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3| 51921/1021650|20481/1021500|  9/485| 0/64| 46458/2043279|0/816|    0/129000|     0/186|    0/71424|42233/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        566013|        92583|    141|   98|        517449|    2|       29883|         3|        833|      116852|            0|             0|             0|              0|           0|                 5|                  5|           0|      0|     0|    0|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP : Post-Processing ...
+#   step RDP_PARTDM : build 936764 normal nodes, 77 group nodes, 17 legal order, 1 fwc value set
+#   step RDP : Partition Cost Metric
++---------+---------------+----------------+------------------+
+| Fpgalet | Pin Cost / (%)| Area Cost / (%)| Target Offset (%)|
++---------+---------------+----------------+------------------+
+|part_SLR0| 808424 / 20.37| 8594809 / 22.10|             20.30|
+|part_SLR1|2191296 / 55.21|21126507 / 54.32|             57.00|
+|part_SLR2| 501905 / 12.64| 4754605 / 12.23|             10.92|
+|part_SLR3| 467739 / 11.78| 4413817 / 11.35|             11.78|
++---------+---------------+----------------+------------------+
+|    Total|  3969364 / 100|  38889737 / 100|              100 |
++---------+---------------+----------------+------------------+
+
+
+#   step RDP_DM : Sanity check.....
+#   step RDP : Done in     elapsed:130 s   user:1617 s     system:51 s    %cpu:1284.07      load:13.27       fm:218758 m    vm:23209 m    vm:+1213 m    um:22489 m    um:+1129 m
+#   step RDP_DM : Report cut size table
++-------------+-----------------------+-------------+----------------+-----------+
+| Boundary Id |      fpgalet - fpgalet| PDMable Cut | NonPDMable Cut | Total Cut |
++-------------+-----------------------+-------------+----------------+-----------+
+|           0 | part_SLR0 - part_SLR1 |        1228 |             10 |      1238 |
+|           1 | part_SLR1 - part_SLR2 |        3048 |             79 |      3127 |
+|           2 | part_SLR2 - part_SLR3 |         747 |              8 |       755 |
++-------------+-----------------------+-------------+----------------+-----------+
+
+
+#   step RDP_DM : 
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|           LUT|         LUT6|    RAM| URAM|           REG|  DSP|      RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|151322/1021650|30173/1021500|  9/485|64/64| 92203/2043279|0/816|   96/129000|     3/186|  789/71424|32729/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|306140/1021650|18674/1021500|105/452|34/64|336499/2043279|2/804|29787/129000|     1/186|   36/71424| 7133/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             5/150|              5/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2| 56622/1021650|23256/1021500| 18/485| 0/64| 42246/2043279|0/816|    0/129000|     1/186|    8/71424|34760/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3| 51920/1021650|20480/1021500|  9/485| 0/64| 46458/2043279|0/816|    0/129000|     0/186|    0/71424|42230/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        566013|        92583|    141|   98|        517449|    2|       29883|         3|        833|      116852|            0|             0|             0|              0|           0|                 5|                  5|           0|      0|     0|    0|
+# +---------+--------------+-------------+-------+-----+--------------+-----+------------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP_DM : Report resource usage from QIWC_IP_BITS
+#   step RDP_DM : 
+# +---------+-------------+-------------+-----+----+------------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|          LUT|         LUT6|  RAM|URAM|         REG|  DSP|  RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+-------------+-------------+-----+----+------------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|10801/1021650|10801/1021500|7/485|0/64|2291/2043279|0/816|0/129000|     0/186|    0/71424|32729/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1| 2354/1021650| 2354/1021500|1/452|0/64| 499/2043279|0/804|0/129000|     0/186|    0/71424| 7133/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2|11471/1021650|11471/1021500|7/485|0/64|2433/2043279|0/816|0/129000|     0/186|    0/71424|34760/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3|13936/1021650|13936/1021500|9/485|0/64|2956/2043279|0/816|0/129000|     0/186|    0/71424|42230/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+-------------+-------------+-----+----+------------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        38562|        38562|   24|   0|        8180|    0|       0|         0|          0|      116852|            0|             0|             0|              0|           0|                 0|                  0|           0|      0|     0|    0|
+# +---------+-------------+-------------+-----+----+------------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step RDP_DM : Report resource usage from FWC_IP_NUM
+#   step RDP_DM : 
+# +---------+---------+---------+-----+----+---------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |  Fpgalet|      LUT|     LUT6|  RAM|URAM|      REG|  DSP|  RAMLUT|FWC_IP_NUM|FWC_IP_BITS|QIWC_IP_BITS|READ_PORT_IPS|READ_PORT_BITS|WRITE_PORT_IPS|WRITE_PORT_BITS|ZC_TRACE_BIT|ZCEI_MESSAGE_INPUT|ZCEI_MESSAGE_OUTPUT|FW_RESOURCES|ZPRD_BB|ZFORCE|ZVIEW|
+# +---------+---------+---------+-----+----+---------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |part_SLR0|0/1021650|0/1021500|0/485|0/64|0/2043279|0/816|0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR1|0/1021650|0/1021500|0/452|0/64|0/2043279|0/804|0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR2|0/1021650|0/1021500|0/485|0/64|0/2043279|0/816|0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# |part_SLR3|0/1021650|0/1021500|0/485|0/64|0/2043279|0/816|0/129000|     0/186|    0/71424|    0/235929|          0/0|           0/1|           0/0|            0/1|         0/0|             0/150|              0/150|         0/0|    0/1|   0/0|  0/1|
+# +---------+---------+---------+-----+----+---------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+# |      SUM|        0|        0|    0|   0|        0|    0|       0|         0|          0|           0|            0|             0|             0|              0|           0|                 0|                  0|           0|      0|     0|    0|
+# +---------+---------+---------+-----+----+---------+-----+--------+----------+-----------+------------+-------------+--------------+--------------+---------------+------------+------------------+-------------------+------------+-------+------+-----+
+#   step run_partitioning : Done in     elapsed:148 s   user:1633 s     system:53 s    %cpu:1140.79      load:12.77       fm:218672 m    vm:23209 m    vm:+3286 m    um:22486 m    um:+3174 m
+#   step decisionMaking : Done in     elapsed:275 s   user:1771 s     system:58 s     %cpu:665.18      load:12.07       fm:218771 m    vm:23209 m    vm:+5483 m    um:22486 m    um:+5377 m
+#   step dieBuildDB : doSplitNetlist:off ; doPblockConstraints:off ; doReplication:off ; doMDTMXinsertion:off ; doClockOpt:off ; doDataOpt:off ; doAnnotateLoc:off
+#   step netlistModification : Starting
+#   step netlistModification : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:12.07       fm:218774 m    vm:23209 m       vm:+0 m    um:22486 m       um:+0 m
+#   step postProcess : Starting
+#   step postProcess : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00      load:12.07       fm:218774 m    vm:23209 m       vm:+0 m    um:22486 m       um:+0 m

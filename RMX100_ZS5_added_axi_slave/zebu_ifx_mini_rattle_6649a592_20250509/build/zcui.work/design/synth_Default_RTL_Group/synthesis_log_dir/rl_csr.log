@@ -1,0 +1,36 @@
+#   step REPORT : Synthesizing module : rl_csr
+#   step REPORT : [39.349] Optimizing module : rl_csr
+#   step REPORT : [39.350] Instance count of module rl_csr is 2
+#   step REPORT : [6.1691] Total net count: 8080
+#   step REPORT : [6.1690] There are 13 levels of combinational cells
+#   step REPORT : [6.1689] There are 32 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 554
+#   step REPORT : [6.1695] 3-input LUTs: 327
+#   step REPORT : [6.1695] 4-input LUTs: 224
+#   step REPORT : [6.1695] 5-input LUTs: 504
+#   step REPORT : [6.1695] 6-input LUTs: 772
+#   step REPORT : [6.1696] Total LUT area: 2381
+#   step REPORT : [6.1697] State    : 982
+#   step REPORT : [6.1697]   (FF)   : 982
+#   step REPORT : [6.1697] CARRY    : 18
+#   step REPORT : [6.1697] MUXFn    : 1
+#   step REPORT : [6.1697] +CSA LUTs: 2123
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_csr' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 982 |                4502 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                1970 |                   3 |                   0 |                   0 |                   0 || rl_csr
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_csr' to 'edif/rl_csr/rl_csr.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_csr/rl_csr.edf.gz'
+#   step SERIALIZE : #bytes in: 299288, #bytes out: 121801, compression ratio: 2.457188
+#   step REPORT : [87.28] Resource usage for rl_csr: 0.620s 0.0M

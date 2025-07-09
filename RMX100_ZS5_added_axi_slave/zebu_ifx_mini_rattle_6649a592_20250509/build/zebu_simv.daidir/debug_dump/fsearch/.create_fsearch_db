@@ -1,0 +1,9 @@
+#!/bin/sh -h 
+PYTHONHOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/etc/search/pyh
+export PYTHONHOME
+PYTHONPATH=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib/pylib27
+export PYTHONPATH
+LD_LIBRARY_PATH=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib:/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib/pylib27
+export LD_LIBRARY_PATH
+/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/bin/vcsfind_create_index.exe  -z  "/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zebu_simv.daidir/debug_dump/fsearch/./idents_fd3rOX.xml.gz" -o "/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zebu_simv.daidir/debug_dump/fsearch/fsearch.db_tmp"
+\mv "/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zebu_simv.daidir/debug_dump/fsearch/fsearch.db_tmp" "/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zebu_simv.daidir/debug_dump/fsearch/fsearch.db"

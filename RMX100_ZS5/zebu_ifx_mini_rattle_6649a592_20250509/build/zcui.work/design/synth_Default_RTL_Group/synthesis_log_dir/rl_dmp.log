@@ -1,0 +1,35 @@
+#   step REPORT : Synthesizing module : rl_dmp
+#   step REPORT : [39.349] Optimizing module : rl_dmp
+#   step REPORT : [39.350] Instance count of module rl_dmp is 2
+#   step REPORT : [6.1691] Total net count: 4693
+#   step REPORT : [6.1690] There are 31 levels of combinational cells
+#   step REPORT : [6.1689] There are 6 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 86
+#   step REPORT : [6.1695] 3-input LUTs: 425
+#   step REPORT : [6.1695] 4-input LUTs: 81
+#   step REPORT : [6.1695] 5-input LUTs: 232
+#   step REPORT : [6.1695] 6-input LUTs: 215
+#   step REPORT : [6.1696] Total LUT area: 1039
+#   step REPORT : [6.1697] State    : 226
+#   step REPORT : [6.1697]   (FF)   : 226
+#   step REPORT : [6.1697] CARRY    : 18
+#   step REPORT : [6.1697] +CSA LUTs: 599
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_dmp' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 226 |                1638 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                1498 |                   9 |                   0 |                   0 |                   0 || rl_dmp
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_dmp' to 'edif/rl_dmp/rl_dmp.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_dmp/rl_dmp.edf.gz'
+#   step SERIALIZE : #bytes in: 173441, #bytes out: 65323, compression ratio: 2.655129
+#   step REPORT : [87.28] Resource usage for rl_dmp: 0.648s 0.0M

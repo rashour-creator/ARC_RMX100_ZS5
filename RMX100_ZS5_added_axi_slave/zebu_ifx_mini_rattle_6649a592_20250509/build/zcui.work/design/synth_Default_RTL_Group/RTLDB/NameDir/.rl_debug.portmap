@@ -1,0 +1,28 @@
+Module rl_debug{
+}
+
+EdfPortBounds mss_bus_switch_rrobin{
+3 0 grt_vector
+3 0 req_vector
+}
+EdfPortBounds mss_bus_switch_fifo_0001{
+3 0 i_data
+64 0 i_occp
+3 0 o_data
+64 0 o_occp
+}
+NonAliasNets rl_debug{
+dbg_ibp_cmd_read_r    f   808
+dbg_addr_r[0]    f   769
+dbg_addr_r[1]    f   768
+dbg_addr_r[2]    f   767
+dbg_addr_r[3]    f   766
+dbg_addr_r[4]    f   765
+dbg_addr_r[5]    f   764
+dbg_addr_r[6]    f   763
+dbg_addr_r[7]    f   762
+dbg_addr_r[8]    f   761
+dbg_addr_r[9]    f   760
+dbg_addr_r[10]    f   759
+dbg_addr_r[11]    f   758
+}

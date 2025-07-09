@@ -1,0 +1,27 @@
+cpu_top_safety_controller
+u_shadow_rl_cpu_top -> u_shadow_rl_cpu_top -> rl_cpu_top
+u_main_rl_cpu_top -> u_main_rl_cpu_top -> rl_cpu_top
+u_clkgate_shadow_gate_clk -> u_clkgate_shadow_gate_clk -> clkgate
+u_error_register -> u_error_register -> ls_error_register_0000
+u_compare_agg_sfty_0 -> u_compare_agg_sfty_0 -> ls_compare_unit_0004
+u_compare_agg_lsc -> u_compare_agg_lsc -> ls_compare_unit_000A
+u_compare_esrams_ic_data_mem_wem -> u_compare_esrams_ic_data_mem_wem -> ls_compare_unit_000D
+u_compare_esrams_ic_data_mem_din -> u_compare_esrams_ic_data_mem_din -> ls_compare_unit_000D
+u_compare_esrams_ic_tag_mem_wem -> u_compare_esrams_ic_tag_mem_wem -> ls_compare_unit_000C
+u_compare_esrams_ic_tag_mem_din -> u_compare_esrams_ic_tag_mem_din -> ls_compare_unit_000C
+u_compare_esrams_iccm0_din -> u_compare_esrams_iccm0_din -> ls_compare_unit_000B
+u_compare_esrams_dccm_din_odd -> u_compare_esrams_dccm_din_odd -> ls_compare_unit_000B
+u_compare_esrams_dccm_din_even -> u_compare_esrams_dccm_din_even -> ls_compare_unit_000B
+u_compare_agg_esrams_4 -> u_compare_agg_esrams_4 -> ls_compare_unit_000A
+u_compare_agg_esrams_3 -> u_compare_agg_esrams_3 -> ls_compare_unit_000A
+u_compare_agg_esrams_2 -> u_compare_agg_esrams_2 -> ls_compare_unit_000A
+u_compare_agg_esrams_1 -> u_compare_agg_esrams_1 -> ls_compare_unit_0005
+u_compare_agg_esrams_0 -> u_compare_agg_esrams_0 -> ls_compare_unit_0009
+u_compare_dbu_per_ahb_haddr -> u_compare_dbu_per_ahb_haddr -> ls_compare_unit_0002
+u_compare_agg_dbu_1 -> u_compare_agg_dbu_1 -> ls_compare_unit_0005
+u_compare_agg_dbu_0 -> u_compare_agg_dbu_0 -> ls_compare_unit_0004
+u_compare_ahb_haddr -> u_compare_ahb_haddr -> ls_compare_unit_0002
+u_compare_agg_ahb_1 -> u_compare_agg_ahb_1 -> ls_compare_unit_0001
+u_compare_agg_ahb_0 -> u_compare_agg_ahb_0 -> ls_compare_unit_0000
+u_err_inj_ctrl -> u_err_inj_ctrl -> err_inj_ctrl_0000
+u_rl_cpu_synch_wrap -> u_rl_cpu_synch_wrap -> rl_cpu_synch_wrap

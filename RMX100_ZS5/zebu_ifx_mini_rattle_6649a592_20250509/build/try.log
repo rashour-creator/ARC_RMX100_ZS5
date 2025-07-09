@@ -1,0 +1,382 @@
+Info: Running with extra MDB arguments: --postconnect "command source init_mem.cmd"
+Info: Running command: 
+	 PSET 1 = hello.out
+
+                                    ZeBu (R)
+                                      zRci
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRci --zebu-work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_xtor_lldb.tcl 
+
+# start time is Sun Jun  1 12:15:50 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:39:00
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.18 0.07 0.02 1/280 77641
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118382 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 623 MB VmPeak: 623 MB
+# Disk Space Total: 5000 GB Available: 495 GB Used: 4505 GB
+#            Free inodes: 11442740
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+>>> Info: running pset 1 = hello.out 
+-- ZeBu : [1;34mzRci: [2;32mWARNING : Testbench was compiled using a different zRci revision. Consider recompiling your testbench (Got revision 5503268, expected 5383188)[0m
+-- ZeBu : [1;34mzRci: [0mNo database was set. zRci will use `emulation_data_20250601_121550`
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_06_01-12_15_51.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_06_01-12_15_51.log -> zRci.vgzeburt492.0.log
+
+                                    ZeBu (R)
+                                    libZebu
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# Build Date : May  7 2024 - 22:15:15
+
+# start time is Sun Jun  1 12:15:51 2025
+
+
+
+#   step DB LOAD : Loading tree
+#   step HUB : Loading main database in load on demand mode
+#   step DB LOAD : Loading database from path '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step DB LOAD : Opening light tree file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' to enable load on-demand
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' in read mode
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/coords.zrdb' in read mode
+#   step DB LOAD : Loading DB stamp from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb' in read mode
+#   step DB LOAD : Version stamp is 2021.3.0
+#   step DB LOAD : The database was generated on : Tue May 13 19:26:21 2025
+#   step DB LOAD : Stored database CRC is : bb3b657b
+#   step DB LOAD : Deserializing database : start
+#   step DB LOAD : Database version is 2021.3.0
+#   step DB LOAD : Auxillary databases splitted in 8 wrappers
+#   step DICTIONARY : Opening dictionary
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/names.zrdb' in read mode
+#   step DICTIONARY : Opened. 538008 unique names, in 9 chunks of 65536 entries, stored in 1 directories
+#   step DB LOAD : Skipped coordinates loading
+#   step MEMS : Opening memories database file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb' in read mode
+#   step MEMS : Memories database opened
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 30 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 30 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step DB LOAD : Deserializing tree : start
+#   step DICTIONARY : Loading chunk #0
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/0.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+-- ZeBu : zRci : Evaluating the file "/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #0 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #8
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/8.zrdb' in read mode
+#   step DICTIONARY : Reading 13720 entries
+#   step DICTIONARY : Read 13720 entries
+#   step DICTIONARY : Chunk #8 loaded. Added 13720 names.
+#   step DICTIONARY : Loading chunk #7
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/7.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+-- ZeBu : zRci : Launching the server, waiting for the connection (max delay 5 minutes).
+
+interrupted. Closing server session.
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #7 loaded. Added 65536 names.
+#   step DB LOAD : Deserializing tree : finished in 0 seconds
+#   step DB LOAD : Deserializing database : finished in 0 seconds
+#   step DB LOAD : Loading ZebuDB from '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/ZebuDB.zdb'
+#   step DB LOAD : ZebuDB loaded in 0 seconds
+#   step EQUI DB : Loading EquiDB from path '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step EQUI DB : Opening equi db files
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/0_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/1_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/2_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/3_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/4_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/5_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/6_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/7_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI DB : Equi db files opened
+#   step POWER DOMAIN DB : Loading power domain database from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb'
+#   step POWER DOMAIN DB : Database file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb' not found - power domain db not available
+#   step PROPERTY DB : Loading property database from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb' in read mode
+#   step PropertyDB : Deserializing...
+#   step PropertyDB : Deserialized in 0 seconds
+#   step FWC : Loading FWC value sets table
+#   step NameTable : Loading table from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb' in read mode
+#   step NameTable : Deserializing '3' names
+#   step FWC : Loaded FWC value sets table
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+WARNING : OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_06_01-12_15_52.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_06_01-12_15_52.log -> zServer.vgzeburt492.0.log
+
+                                    ZeBu (R)
+                                    zServer
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/orion/zServer -design /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures -zebu.work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default 
+
+# start time is Sun Jun  1 12:15:52 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:38:29
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.18 0.07 0.02 1/280 77687
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118534 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 380 MB VmPeak: 380 MB
+# Disk Space Total: 5000 GB Available: 495 GB Used: 4505 GB
+#            Free inodes: 11442735
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+                                    ZeBu (R)
+                                libHWAccess 64b
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# "libHWAccess 64b" 
+
+# start time is Sun Jun  1 12:15:52 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:38:24
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.18 0.07 0.02 1/280 77688
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118534 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 380 MB VmPeak: 380 MB
+# Disk Space Total: 5000 GB Available: 495 GB Used: 4505 GB
+#            Free inodes: 11442735
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_06_01-12_15_52.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_06_01-12_15_52.log -> zLicenseManager.vgzeburt492.0.log
+OptionsDB Info : DB ./options.db not available, loading the default values ..
+OptionsDB Warning : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info : Default value(false) overwritten with true for ztdb_rb_api
+
+                                    ZeBu (R)
+                                zLicenseManager
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zLicenseManager 77661 15 6 
+
+# start time is Sun Jun  1 12:15:52 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:00
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 0.18 0.07 0.02 1/281 77730
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118531 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 33 MB VmPeak: 33 MB
+# Disk Space Total: 5000 GB Available: 495 GB Used: 4505 GB
+#            Free inodes: 11442735
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+-- ZeBu : zServer : Evaluating the file "/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+-- ZeBu : zServer : Remapping requested by user :
+-- ZeBu : zServer :    U0.M0.S0 -> U0.M0.S2
+-- ZeBu : zServer : Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/profiler.vgzeburt492.rashour.2025_06_01-12_15_54.77661.log -> profiler.vgzeburt492.0.log
+-- ZeBu : zServer : The PCIe connection through board 0 is free.
+
+
+-- ZeBu : zServer : Compression in background of "zebu_*.log" log files older than 15 day(s) in "/zebu" directory using "gzip -f".
+-- ZeBu : zServer : Launching command: find /zebu -name "zebu_*.log" -mtime +15 | xargs --no-run-if-empty gzip -f > /zebu/.compress.log 2>&1 &
+-- ZeBu : zServer :  ..
+-- ZeBu : zServer : 2 bitstreams data have been transfered into Bitstream Cache, all threads statistics : real time = 2 s, user time = 2 s, system time = 0 s
+
+-- ZeBu : zServer : Design loaded successfully.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+-- ZeBu : zServer : ERROR : LUI1113E : Server is disconnected from the client which launched it (pid 77639).
+
+
+-- ZeBu : zServer : End of run :
+-- ZeBu : zServer : zebu_top.zebuclk_ref_clk.clock edge counter 0.
+-- ZeBu : zServer : zebu_top.zebuclk_jtag_clk.clock edge counter 0.
+-- ZeBu : zServer : zebu_top.zebuclk_uart_sclk.clock edge counter 0.
+-- ZeBu : zServer : Unit 0 masterClk cycle counter : 0 (0x00000000)
+-- ZeBu : zServer : Unit 0 driverClk cycle counter : 0 (0x00000000)
+-- ZeBu : zServer : Unit 0 driverClkDut cycle counter : 0 (0x00000000)
+-- ZeBu : zServer : Unit 0 tickClk edge counter : 0 (0x00000000)
+-- ZeBu : zServer : Unit 0 globalTime counter : 0 (0x00000000)
+
+
+
+
+-- ZeBu : zServer : ERROR : KO. See logs for details: /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_06_01-12_15_52.log .

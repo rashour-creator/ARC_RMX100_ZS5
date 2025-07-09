@@ -1,0 +1,387 @@
+
+                                    ZeBu (R)
+                                   zSimzilla
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zSimzilla --zebu-work . --generate-graphs 
+
+# start time is Wed May 14 18:59:29 2025
+
+
+
+
+# Build Date : May  7 2024 - 22:15:15
+# ---------------------------System Context--------------------------- 
+# Cpu        20 x bogomips - 4800.11 Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+#            Load: 3.10 3.97 4.86 5/923 807228
+#            Hostname: vgzeburtdc257   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 257566 MB Free: 208240 MB
+#            Swap space: 1023 MB Free Swap space: 0 MB
+#            VmSize: 525 MB VmPeak: 525 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11741251
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step SMZ : Update options by set_app_vars
+#   step SMZ : Number of threads 10 is updated from set_app_vars
+#   step SMZ : Update options by env
+#   step SIMZILLA : --threads: using 10 threads (maximum is 20).
+#   step ENV.VAR : LM_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : SNPSLMD_LICENSE_FILE=26585@us01genlic:26585@us01snpslmd1
+#   step ENV.VAR : VCS_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : VERDI_HOME=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VERDI/VERDI2021.09/ZEBU/08052024/INSTALL/VERDI/verdi/S-2021.09-SP2-10
+#   step ENV.VAR : ZEBU_ACTIVATE_EMU_QUEUE=TRUE
+#   step ENV.VAR : ZEBU_DEBUG_DYN_GRAPH_LOADING=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_AUTO_ZXF=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_DFS=1
+#   step ENV.VAR : ZEBU_DEBUG_USE_SIMZILLA=1
+#   step ENV.VAR : ZEBU_DRIVER_PATH=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/drivers
+#   step ENV.VAR : ZEBU_ENABLE_DDR_DMA=true
+#   step ENV.VAR : ZEBU_ENABLE_NEW_ZTDB_RB=1
+#   step ENV.VAR : ZEBU_IP_ROOT=/global/apps/zebu_vs_2023.03-SP1/
+#   step ENV.VAR : ZEBU_ROOT=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64
+#   step ENV.VAR : ZEBU_SA_ROOT=/remote/vginterfaces1/zebu_sa/ZebuSaRoot_Q-2020.03
+#   step ENV.VAR : ZEBU_SERIALIZED_ZFPGATIMING_BACK_ANNOTATION=1
+#   step ENV.VAR : ZEBU_SIMZILLA_VIRTUAL_SLICING=1
+#   step ENV.VAR : ZEBU_SYSTEM_DIR=/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/ZSE/zs5_4s.zs_0170
+#   step ENV.VAR : ZEBU_XIL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/ise/ISE_DS
+#   step ENV.VAR : ZEBU_XIL_VIVADO=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_FRACTAL=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_fractal/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P2=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p2/
+#   step ENV.VAR : ZEBU_XIL_VIVADO_P4=/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/vivado_p4/
+#   step SMZ : Disable virtual slicing during graph generation
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step === Load RTX ( N R E P) : Starting
+#   step SIMZILLA : Loading NameDb (RHINODB) from '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib/libNameDB.so'...
+#   step === Load RTX ( N R E P) : Done in    elapsed:0.20 s    user:0.5 s    system:0.2 s      %cpu:34.65       load:3.10       fm:208155 m      vm:896 m      vm:+65 m      um:392 m      um:+50 m
+#   step SMZ : Disable alias optimization.
+#   step SMZ : 
+#   step === Load equi netlist : Starting
+#   step SMZ : reading netlist ./tools/zDB/zTopBuild_equi.edf.gz
+#   step ZNF PARSER : reading netlist from ZNF file './tools/zDB/zTopBuild_equi.edf.gz'
+#   step === Load equi netlist : Done in       elapsed:1 s      user:1 s   system:0.12 s      %cpu:99.29       load:3.25       fm:207838 m     vm:1186 m     vm:+290 m      um:677 m     um:+285 m
+#   step LINK : Starting
+#   step SMZ : linkMacros = 2
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/zSimzilla/edifs/extra_cells.edf.txt'
+#   step SMZ : function addelt has 2 representent(s)
+#   step SMZ : 	 module fs_macros.addelt: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_addelt: 0 up-insts
+#   step SMZ : function addelt3 has 2 representent(s)
+#   step SMZ : 	 module fs_macros.addelt3: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_addelt3: 0 up-insts
+#   step SMZ : function addelt3_so has 2 representent(s)
+#   step SMZ : 	 module fs_macros.addelt3_so: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_addelt3_so: 0 up-insts
+#   step SMZ : function addelt_co has 2 representent(s)
+#   step SMZ : 	 module fs_macros.addelt_co: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_addelt_co: 0 up-insts
+#   step SMZ : function addelt_so has 2 representent(s)
+#   step SMZ : 	 module fs_macros.addelt_so: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_addelt_so: 0 up-insts
+#   step SMZ : function carry4 has 1 representent(s)
+#   step SMZ : 	 module xcve.carry4: 1 up-insts, is blackbox
+#   step SMZ : function carry8 has 1 representent(s)
+#   step SMZ : 	 module xcve.carry8: 2075 up-insts, is blackbox
+#   step SMZ : function encmux16_v5 has 2 representent(s)
+#   step SMZ : 	 module fs_macros.encmux16_v5: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_encmux16_v5: 0 up-insts
+#   step SMZ : function encmux2 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.encmux2: 0 up-insts
+#   step SMZ : function encmux22 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.encmux22: 0 up-insts
+#   step SMZ : function encmux32_v8 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.encmux32_v8: 0 up-insts
+#   step SMZ : function encmux3_v5 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.encmux3_v5: 0 up-insts
+#   step SMZ : function encmux4_v5 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.encmux4_v5: 0 up-insts
+#   step SMZ : function encmux8_v5 has 2 representent(s)
+#   step SMZ : 	 module fs_macros.encmux8_v5: 272 up-insts
+#   step SMZ : 	 module fs_macros.nf_encmux8_v5: 0 up-insts
+#   step SMZ : function lesselt has 2 representent(s)
+#   step SMZ : 	 module fs_macros.lesselt: 0 up-insts
+#   step SMZ : 	 module fs_macros.nf_lesselt: 0 up-insts
+#   step SMZ : function mult18x18 has 1 representent(s)
+#   step SMZ : 	 module xcve.mult18x18: 0 up-insts, is blackbox
+#   step SMZ : function mult18x18s has 1 representent(s)
+#   step SMZ : 	 module xcve.mult18x18s: 0 up-insts, is blackbox
+#   step SMZ : function mult18x18sio has 1 representent(s)
+#   step SMZ : 	 module xcve.mult18x18sio: 0 up-insts, is blackbox
+#   step SMZ : function mult25x18 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.mult25x18: 0 up-insts
+#   step SMZ : function mult27x18 has 1 representent(s)
+#   step SMZ : 	 module fs_macros.mult27x18: 0 up-insts
+#   step SMZ : replaced module (old -> new, #up-insts): xcve.carry4 -> simzilla_extra_cells.CARRY4, 1
+#   step SMZ : replaced module (old -> new, #up-insts): xcve.carry8 -> simzilla_extra_cells.CARRY8, 2075
+#   step LINK : Done in     elapsed:0.8 s    user:0.7 s      system:0 s      %cpu:88.61       load:3.25       fm:207825 m     vm:1197 m      vm:+11 m      um:689 m      um:+12 m
+#   step === GraphBuilder : Starting
+#   step Build WB : Starting
+#   step Build WB : Done in     elapsed:0.3 s    user:0.5 s    system:0.1 s     %cpu:218.18       load:3.25       fm:207815 m     vm:1246 m      vm:+49 m      um:700 m      um:+11 m
+#   step Build HW : Starting
+#   step SMZ : #hierWires: 773761
+#   step SMZ : #equis:     773732
+#   step Build HW : Done in     elapsed:0.5 s   user:0.33 s    system:0.2 s     %cpu:642.20       load:3.25       fm:207773 m     vm:1288 m      vm:+42 m      um:740 m      um:+40 m
+#   step report unknown models : Starting
+#   step SMZ : #unknown behavior driver modules: 68
+#   step SMZ : Module zceiMessageInPort_160: 1 occurences
+#   step SMZ : Module zebu_force_inject_undriven: 1 occurences
+#   step SMZ : Module zceiMessageInPort_2960: 8 occurences
+#   step SMZ : Module zz_Encrypt_8_ZMEM_0 (memory): 2 occurences
+#   step SMZ : Module zz_Encrypt_2_ZMEM_0 (memory): 1 occurences
+#   step SMZ : Module zebu_bb_mcp_fake_edge_detector: 164 occurences
+#   step SMZ : Module alb_mss_fpga_sram_0000_ZMEM_mem_r (memory): 1 occurences
+#   step SMZ : Module zceiMessageOutPort_128: 2 occurences
+#   step SMZ : Module zceiMessageInPort_180: 1 occurences
+#   step SMZ : Module zceiMessageOutPort_1: 22 occurences
+#   step SMZ : Module zceiMessageOutPort_2: 1 occurences
+#   step SMZ : Module zebu_clockGen: 1 occurences
+#   step SMZ : Module rtlClockControl: 13 occurences
+#   step SMZ : Module zceiMessageOutPort_4096: 1 occurences
+#   step SMZ : Module zceiMessageOutPort_192: 1 occurences
+#   step SMZ : Module zebu_bb_edge_detector: 156 occurences
+#   step SMZ : Module zceiMessageOutPort_33: 1 occurences
+#   step SMZ : Module zebu_bb_ts_rtl_clock: 3 occurences
+#   step SMZ : Module zceiMessageInPort_64: 3 occurences
+#   step SMZ : Module alb_mss_mem_lat_0000_ZMEM_i_bdel_mem (memory): 1 occurences
+#   step SMZ : Module zz_Encrypt_6_ZMEM_0 (memory): 1 occurences
+#   step SMZ : Module zceiMessageInPort_2: 1 occurences
+#   step SMZ : Module zebu_bb_front_ed_clk_edge_P_1_U_1: 156 occurences
+#   step SMZ : Module zceiMessageOutPort_122: 1 occurences
+#   step SMZ : Module zceiMessageOutPort_8: 1 occurences
+#   step SMZ : Module zebu_bb_dpi_mcp_fake_edge_detector_2: 15 occurences
+#   step SMZ : Module rtlClockControl: 3 occurences
+#   step SMZ : Module fpga_sram_0000_ZMEM_mem_r (memory): 1 occurences
+#   step SMZ : Module CARRY8: 3239 occurences
+#   step SMZ : Module zebu_bb_pclkdut_en_zpl_box: 9 occurences
+#   step SMZ : Module zebu_bb_mem_sco: 12 occurences
+#   step SMZ : Module zebu_bb_wb_reg: 4 occurences
+#   step SMZ : Module ts_runman2_24: 9 occurences
+#   step SMZ : Module zceiMessageOutPort_640: 1 occurences
+#   step SMZ : Module zebu_bb_revert_en_zpl_box: 9 occurences
+#   step SMZ : Module zebu_bb_fm_revert_mode_zpl_box: 9 occurences
+#   step SMZ : Module zebu_bb_async_reset_cond: 21 occurences
+#   step SMZ : Module fpga_sram_0002_0000_ZMEM_mem_r (memory): 2 occurences
+#   step SMZ : Module zceiMessageInPort_35: 1 occurences
+#   step SMZ : Module zebu_bb_ts_rtl_clock_no_tol: 9 occurences
+#   step SMZ : Module zceiMessageInPort_150: 2 occurences
+#   step SMZ : Module zceiMessageOutPort_64: 3 occurences
+#   step SMZ : Module zebu_bb_reset_zpl_box: 9 occurences
+#   step SMZ : Module zceiTrigger: 1 occurences
+#   step SMZ : Module zceiMessageInPort_32: 10 occurences
+#   step SMZ : Module zebu_bb_gdelay: 1 occurences
+#   step SMZ : Module zceiMessageOutPort_544: 1 occurences
+#   step SMZ : Module alb_mss_mem_lat_0000_ZMEM_i_rdel_mem (memory): 1 occurences
+#   step SMZ : Module zz_Encrypt_7_ZMEM_0 (memory): 8 occurences
+#   step SMZ : Module zebu_bb_pclk_free_zpl_box: 2 occurences
+#   step SMZ : Module zebu_bb_pclk_en_zpl_box: 9 occurences
+#   step SMZ : Module zebu_reqsig_clock_driverclock: 22 occurences
+#   step SMZ : Module fpga_sram_0002_ZMEM_mem_r (memory): 1 occurences
+#   step SMZ : Module zceiMessageInPort_6: 4 occurences
+#   step SMZ : Module zz_Encrypt_5_ZMEM_0 (memory): 1 occurences
+#   step SMZ : Module zceiMessageOutPort_32: 18 occurences
+#   step SMZ : Module zz_Encrypt_9_ZMEM_0 (memory): 1 occurences
+#   step SMZ : Module zceiClockControl: 18 occurences
+#   step SMZ : Module zebu_bb_clock_counter_reset_zpl_box: 9 occurences
+#   step SMZ : Module zceiMessageInPort_1: 49 occurences
+#   step SMZ : Module zebu_bb_ts_cur_time: 1 occurences
+#   step SMZ : Module zceiMessageOutPort_480: 1 occurences
+#   step SMZ : Module zebu_bb_pclk_ready_in_zpl_box: 9 occurences
+#   step SMZ : Module zceiMessageOutPort_3: 4 occurences
+#   step SMZ : Module zceiMessageOutPort_65: 2 occurences
+#   step SMZ : Module zceiMessageInPort_2516: 1 occurences
+#   step SMZ : Module zceiMessageInPort_128: 3 occurences
+#   step SMZ : Module fpga_sram_0001_ZMEM_mem_r (memory): 1 occurences
+#   step SMZ : #unknown behavior driver instances: 4080
+#   step report unknown models : Done in    elapsed:0.12 s   user:0.12 s      system:0 s     %cpu:104.80       load:3.25       fm:207770 m     vm:1288 m       vm:+0 m      um:740 m       um:+0 m
+#   step resize cells : Starting
+#   step resize cells : Done in     elapsed:0.2 s    user:0.1 s    system:0.1 s      %cpu:83.33       load:3.25       fm:207722 m     vm:2056 m     vm:+768 m      um:788 m      um:+48 m
+#   step Build indexer for equiID : Starting
+#   step SMZ : #EquiID (#unfolded wire on equi netlist): 773732 (1102491)
+#   step Build indexer for equiID : Done in     elapsed:0.5 s   user:0.31 s    system:0.1 s     %cpu:695.65       load:3.25       fm:207705 m     vm:2824 m     vm:+768 m      um:805 m      um:+17 m
+#   step Set EquiID of cells : Starting
+#   step Set EquiID of cells : Done in    elapsed:0.20 s      user:2 s      system:0 s     %cpu:982.89       load:3.25       fm:207699 m     vm:3080 m     vm:+256 m      um:809 m       um:+4 m
+#   step SMZ : EquiID done with 0 errors
+#   step populate cells : Starting
+#   step SMZ : ##################################simplified LUT: 238059
+#   step SMZ : #LUT3: avg.#products/#ops (nodes): 34982 / 2.12947 / 3.04142 (4.64159)
+#   step SMZ : #LUT4: avg.#products/#ops (nodes): 53078 / 2.6864 / 4.90224 (6.4354)
+#   step SMZ : #LUT5: avg.#products/#ops (nodes): 50445 / 3.31006 / 7.3099 (10.2255)
+#   step SMZ : #LUT6: avg.#products/#ops (nodes): 99554 / 3.53415 / 7.78227 (12.1081)
+#   step SMZ : ############################# NOT SIMPLIFIED LUT: 10419
+#   step SMZ : #LUT5: avg.#products/#ops (nodes): 1778 / 15.5872 / 76.9359 (9.52418)
+#   step SMZ : #LUT6: avg.#products/#ops (nodes): 8641 / 21.2315 / 126.389 (15.7792)
+#   step SMZ : #LUT5: avg.#products/#ops for min: 1778 / 7.59674 / 24.1822
+#   step SMZ : #LUT6: avg.#products/#ops for min: 8641 / 8.08251 / 34.7209
+#   step SMZ : #Latch2Combi: 0
+#   step SMZ : #FF2Combi: 0
+#   step populate cells : Done in    elapsed:0.69 s      user:6 s    system:0.3 s     %cpu:943.21       load:3.25       fm:207595 m     vm:3171 m      vm:+91 m      um:904 m      um:+95 m
+#   step Test fanins : Starting
+#   step SMZ : DEBUG testFanins 'After populateCells' tested (#NSP cells, #macros)= (541519, 0), detected 0 error(s)
+#   step Test fanins : Done in     elapsed:0.3 s   user:0.31 s      system:0 s     %cpu:953.85       load:3.25       fm:207594 m     vm:3171 m       vm:+0 m      um:904 m       um:+0 m
+#   step Populating MacroCells : Starting
+#   step Populating MacroCells : Done in     elapsed:0.2 s    user:0.7 s    system:0.1 s     %cpu:444.44       load:3.25       fm:207572 m     vm:5227 m    vm:+2056 m      um:927 m      um:+23 m
+#   step Substituting MacroCells : Starting
+#   step SMZ : Total 3576 macro cells are substituted
+#   step Substituting MacroCells : Done in       elapsed:0 s    user:0.4 s      system:0 s     %cpu:444.44       load:3.25       fm:207567 m     vm:5483 m     vm:+256 m      um:931 m       um:+4 m
+#   step Optimize with MuDB : Starting
+#   step Optimize with MuDB : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207567 m     vm:5483 m       vm:+0 m      um:931 m       um:+0 m
+#   step Create rtl2Equi : Starting
+#   step SMZ : rtl2Equi uses mmap iterator
+#   step Create rtl2Equi : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207567 m     vm:5491 m       vm:+8 m      um:931 m       um:+0 m
+#   step build cell-to-equi map : Starting
+#   step build cell-to-equi map : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:105.26       load:3.25       fm:207563 m     vm:5491 m       vm:+0 m      um:935 m       um:+4 m
+#   step SCC computation : Starting
+#   step SMZ : #SCCs: 0
+#   step SCC computation : Done in     elapsed:0.8 s   user:0.77 s    system:0.6 s     %cpu:965.12       load:3.25       fm:207309 m     vm:5491 m       vm:+0 m     um:1188 m     um:+251 m
+#   step Compute level of cells for combinational graph : Starting
+#   step Compute level of cells for combinational graph : Done in    elapsed:0.13 s   user:0.13 s      system:0 s     %cpu:105.26       load:3.25       fm:207307 m     vm:5491 m       vm:+0 m     um:1188 m       um:+0 m
+#   step Remove dead logic : Starting
+#   step 	mark poc : Starting
+#   step SMZ : Marked 429562 pocs.
+#   step 	mark poc : Done in     elapsed:0.8 s   user:0.14 s      system:0 s     %cpu:169.70       load:3.25       fm:207299 m     vm:5491 m       vm:+0 m     um:1194 m       um:+6 m
+#   step 	trace TFI : Starting
+#   step 	trace TFI : Done in     elapsed:0.1 s    user:0.6 s      system:0 s    %cpu:1000.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m
+#   step 	check SCC : Starting
+#   step 	check SCC : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m
+#   step 	mark dead cells : Starting
+#   step SMZ : number of const cells detected dead    = 2016
+#   step SMZ : number of non-const cells detected dead= 173584
+#   step 	mark dead cells : Done in       elapsed:0 s    user:0.4 s      system:0 s     %cpu:727.27       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m
+#   step 	update equi2Cid : Starting
+#   step SMZ : #eids= 139553 mapped to dead cells
+#   step 	update equi2Cid : Done in     elapsed:0.2 s   user:0.15 s      system:0 s     %cpu:937.50       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m
+#   step 	remove dead macros : Starting
+#   step 	remove dead macros : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+0 m
+#   step Remove dead logic : Done in    elapsed:0.11 s   user:0.40 s      system:0 s     %cpu:361.99       load:3.25       fm:207298 m     vm:5491 m       vm:+0 m     um:1194 m       um:+6 m
+#   step Reordering cells : Starting
+#   step Sort cells by level : Starting
+#   step SMZ : #cells= 823042 (before reordering)
+#   step Sort cells by level : Done in     elapsed:0.5 s   user:0.29 s      system:0 s     %cpu:644.44       load:3.25       fm:207295 m     vm:5491 m       vm:+0 m     um:1196 m       um:+0 m
+#   step Reorder cells : Starting
+#   step Reorder cells : Done in     elapsed:0.1 s    user:0.5 s      system:0 s     %cpu:476.19       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+5 m
+#   step SMZ : #cells= 643174 after removing 179868 redundant const cell(s)
+#   step check level consistency : Starting
+#   step check level consistency : Done in       elapsed:0 s    user:0.4 s      system:0 s     %cpu:888.89       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m
+#   step Reordering cells : Done in     elapsed:0.9 s   user:0.52 s    system:0.1 s     %cpu:609.20       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+9 m
+#   step insert MID to SCC : Starting
+#   step insert MID to SCC : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m
+#   step SIMZILLA : Load Rtl2Poc interface from /slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib/libNameDB.so...
+#   step 	create rtl2Poc : Starting
+#   step 	create rtl2Poc : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.25       fm:207287 m     vm:5491 m       vm:+0 m     um:1203 m       um:+0 m
+#   step SMZ : encryption is enabled in zebu compile.
+#   step SMZ : bus idcode is disabled in RhinoDb
+#   step SMZ : stitch-mode fsdb is disabled in RhinoDb
+#   step SMZ : addition of the zemi3 signals in waveform headers is disabled
+#   step build cid2Pocs : Starting
+#   step SMZ : #RtlIDs in rtl2equi   = 79367
+#   step SMZ : #EquiIDs in rtl2equi  = 773732
+#   step SMZ : #EquiIDs in transactor= 0
+#   step SMZ : #EquiIDs in graph     = 773732
+#   step 	non-zxf flow enables RhinoDb full range of rtlIDs : Starting
+#   step 	non-zxf flow enables RhinoDb full range of rtlIDs : Done in    elapsed:0.31 s    user:0.3 s    system:0.2 s      %cpu:15.92       load:3.25       fm:207279 m     vm:5491 m       vm:+0 m     um:1205 m       um:+2 m
+#   step 	finalize ranges : Starting
+#   step 	finalize ranges : Done in    elapsed:0.10 s   user:0.10 s    system:0.1 s     %cpu:112.82       load:3.25       fm:207258 m     vm:6003 m     vm:+512 m     um:1225 m      um:+20 m
+#   step SMZ : #rtlRanges= 6 #rtlIDs= 78645 (min= 2 max= 48490 average= 13107 per rtlRange)
+#   step SMZ : maxIdCode 417213 #Regular 409028 #Inverted 8179 #NotFound 0 #Const0 37064 #Const1 1772 #ConstX 0 #Optimized 0 #Memory 8 #Internal 0 #Bus 0
+#   step SMZ : #rtlIDs= 78645 assigned idcode  (99.09% of total= 79367)
+#   step SMZ : memory of (entries, cid2i, busID2IdCode): (6661 k, 2572 k, 0 k)
+#   step 	write full header : Starting
+#   step SMZ : write header at './simu/rhino.zwdp'
+#   step 	write full header : Done in       elapsed:4 s      user:3 s    system:0.4 s      %cpu:88.36       load:3.23       fm:207201 m     vm:6003 m       vm:+0 m     um:1226 m       um:+1 m
+#   step 	save cid2Pocs : Starting
+#   step SMZ : save cid2Pocs at './simu/graph.smz/cid2Pocs'
+#   step 	save cid2Pocs : Done in     elapsed:0.3 s    user:0.1 s      system:0 s      %cpu:35.09       load:3.23       fm:207200 m     vm:6003 m       vm:+0 m     um:1227 m       um:+1 m
+#   step build cid2Pocs : Done in       elapsed:4 s      user:3 s    system:0.7 s      %cpu:83.45       load:3.23       fm:207200 m     vm:6003 m     vm:+512 m     um:1227 m      um:+24 m
+#   step 	destroy rtl2Poc : Starting
+#   step 	destroy rtl2Poc : Done in       elapsed:0 s    user:0.1 s      system:0 s    %cpu:2000.00       load:3.23       fm:207200 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step Populate cid2HasPoc : Starting
+#   step SMZ : cid2HasPoc size= 643174, #cids has poc= 426001
+#   step Populate cid2HasPoc : Done in     elapsed:0.3 s   user:0.33 s      system:0 s     %cpu:942.86       load:3.23       fm:207201 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step Test SCCs : Starting
+#   step SMZ : Test SCCs: #SCCs (tested, has error)= (0, 0)
+#   step Test SCCs : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step SMZ : #watched     : 0
+#   step SMZ : #watched (by cid2Pocs): 416373
+#   step SMZ : #EquiID         : 773732
+#   step SMZ : #HierWires      : 773732
+#   step SMZ : #cells          : 643174
+#   step SMZ : #macro cells    : 0
+#   step SMZ : linkMacros mode : 2
+#   step SMZ : #buses          : 0
+#   step SMZ : #levels: 278
+#   step SMZ : list level/# cells: [0/135834 1/87955 2/20124 3/12913 4/12029 5/8547 6/6347 7/6588 8/9294 9/6011 10/5581 11/5625 12/4943 13/6432 14/9077 15/7025 16/5833 17/5513 18/5253 19/8054 20/7492 21/9824 22/7727 23/6980 24/8285 25/7982 26/10272 27/6490 28/10529 29/10733 30/9733 31/9586 32/8733 33/7648 34/7242 35/3098 36/3152 37/1946 38/1542 39/2095 40/2162 41/1245 42/946 43/347 44/329 45/492 46/1461 47/934 48/886 49/544 50/502 51/477 52/589 53/358 54/256 55/165 56/203 57/208 58/96 59/164 60/203 61/199 62/322 63/255 64
+#   step SMZ : /316 65/479 66/309 67/411 68/570 69/262 70/229 71/234 72/210 73/207 74/143 75/118 76/83 77/83 78/315 79/972 80/3876 81/3621 82/1024 83/1045 84/917 85/866 86/1592 87/1846 88/2010 89/1683 90/1407 91/728 92/741 93/457 94/367 95/498 96/620 97/610 98/587 99/556 100/347 101/216 102/197 103/221 104/192 105/204 106/217 107/214 108/207 109/225 110/247 111/258 112/238 113/251 114/234 115/223 116/195 117/188 118/640 119/633 120/627 121/624 122/545 123/653 124/318 125/157 126/177 127/185 128/207 129/372 130/214 131/186
+#   step SMZ :  132/230 133/203 134/177 135/156 136/109 137/47 138/47 139/42 140/30 141/22 142/16 143/24 144/23 145/12 146/27 147/49 148/63 149/56 150/54 151/59 152/33 153/196 154/258 155/254 156/276 157/311 158/1370 159/1393 160/1018 161/978 162/3507 163/3822 164/2310 165/1232 166/1197 167/1023 168/3700 169/3195 170/1136 171/2262 172/1790 173/370 174/3521 175/641 176/274 177/361 178/195 179/3737 180/1167 181/453 182/308 183/1429 184/1773 185/659 186/281 187/232 188/703 189/751 190/283 191/392 192/651 193/605 194/420 195/
+#   step SMZ : 1384 196/1040 197/238 198/1047 199/420 200/377 201/371 202/488 203/346 204/737 205/600 206/213 207/2169 208/215 209/389 210/1230 211/143 212/129 213/172 214/651 215/2980 216/217 217/392 218/554 219/542 220/725 221/352 222/501 223/487 224/419 225/621 226/536 227/1499 228/684 229/538 230/500 231/338 232/461 233/423 234/249 235/247 236/230 237/344 238/200 239/596 240/102 241/67 242/64 243/41 244/60 245/71 246/63 247/57 248/49 249/101 250/48 251/54 252/38 253/37 254/35 255/32 256/28 257/32 258/31 259/32 260/28 
+#   step SMZ : 261/32 262/30 263/28 264/17 265/12 266/6 267/6 268/5 269/6 270/6 271/6 272/5 273/6 274/6 275/6 276/4 277/2 ]
+#   step SMZ : avg. #cells/level: 2313.58
+#   step SMZ : list level/#mcells: []
+#   step SMZ : cell distribution (exclusive):
+#   step SMZ : #cells (#with coord), avg.#inputs  READ : 4949 (0), 0
+#   step SMZ : #cells (#with coord), avg.#inputs  CST  : 4 (0), 0
+#   step SMZ : #cells (#with coord), avg.#inputs  XOR  : 8558 (0), 2.72237
+#   step SMZ : #cells (#with coord), avg.#inputs  ISOP : 488471 (0), 3.17731, #AND/OR=249650
+#   step SMZ : #cells (#with coord), avg.#inputs  LUT  : 10311 (0), 5.82941
+#   step SMZ : #cells (#with coord), avg.#inputs  LATCH: 806 (0), 2
+#   step SMZ : #cells (#with coord), avg.#inputs  FF   : 130075 (0), 3.38084
+#   step SMZ : #cells (#with coord), avg.#inputs  LB   : 0 (0), 0
+#   step SMZ : #cells (#with coord), avg.#inputs  PORT : 0 (0), 0
+#   step SMZ : #cells (#with coord), avg.#inputs  EDGE_DETECTOR: 0 (0), 0
+#   step SMZ : #cells (#with coord), avg.#inputs  ONE_POS_SHIFTER: 0 (0), 0
+#   step SMZ : #LUT1 w/o coord / avg.% of 1's: 0 / 0
+#   step SMZ : #LUT2 w/o coord / avg.% of 1's: 0 / 0
+#   step SMZ : #LUT3 w/o coord / avg.% of 1's: 0 / 0
+#   step SMZ : #LUT4 w/o coord / avg.% of 1's: 0 / 0
+#   step SMZ : #LUT5 w/o coord / avg.% of 1's: 1759 / 0.48696
+#   step SMZ : #LUT6 w/o coord / avg.% of 1's: 8552 / 0.330391
+#   step SMZ : SCC size/#LBs distribution: []
+#   step SMZ : #PrimarySeq/#PI (0/0) 
+#   step SMZ : #PrimarySeq/#Seqs (0/130881) = 0%
+#   step SMZ : #FF On Composite Clock: 0
+#   step SMZ : #LUTs driven by randomizer: 0
+#   step === Write graph : Starting
+#   step 	(1. save cid2Pocs) : Starting
+#   step SMZ : skip saving cid2Pocs because './simu/graph.smz/cid2Pocs' already exists
+#   step 	(1. save cid2Pocs) : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step 	(1b. save cid2HasPoc) : Starting
+#   step 	(1b. save cid2HasPoc) : Done in       elapsed:0 s    user:0.1 s      system:0 s     %cpu:153.85       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step 	(2. save eid2HasPoc) : Starting
+#   step 	(2. save eid2HasPoc) : Done in     elapsed:0.1 s    user:0.1 s      system:0 s     %cpu:200.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step 	(2. save equi2cid) : Starting
+#   step 	(2. save equi2cid) : Done in     elapsed:0.1 s    user:0.1 s    system:0.1 s     %cpu:108.11       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step 	(3. save graph) : Starting
+#   step 	(3. save graph) : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.23       fm:207202 m     vm:6003 m       vm:+0 m     um:1227 m       um:+0 m
+#   step 	(4. serialize cells) : Starting
+#   step SMZ : saving 643174 cell(s) to keyed file by 10 partition(s) w. 10 thread(s)
+#   step 	(4. serialize cells) : Done in     elapsed:0.5 s   user:0.19 s      system:0 s     %cpu:348.62       load:3.23       fm:207199 m     vm:6003 m       vm:+0 m     um:1228 m       um:+1 m
+#   step === Write graph : Done in     elapsed:0.9 s   user:0.22 s    system:0.1 s     %cpu:261.36       load:3.23       fm:207199 m     vm:6003 m       vm:+0 m     um:1228 m       um:+1 m
+#   step === GraphBuilder : Done in       elapsed:6 s     user:15 s   system:0.26 s     %cpu:256.74       load:3.23       fm:207199 m     vm:5995 m    vm:+4798 m     um:1221 m     um:+532 m
+#   step SMZ : Created Archive File ./tools/zCui/zSimzilla_archive.xcui
+#   step SMZ : END OF SIMZILLA JOB
+
+#   exec summary :    0 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m9s, user 0m17.814s, sys 0m0.579s
+#   exec summary : Total memory: 6130400 kB - RSS memory: 1251884 kB - Data memory: 5581748 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 18:59:38 2025

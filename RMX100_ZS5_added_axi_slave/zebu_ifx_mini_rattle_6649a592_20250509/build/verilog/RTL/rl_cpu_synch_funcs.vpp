@@ -1,0 +1,234 @@
+`include "defines.v"
+`include "ifu_defines.v"
+`include "dmp_defines.v"
+`include "clint_defines.v"
+`define dly_define `define
+`let IN = "input "
+`let OUT = "output"
+
+`func exported_synch_signals signals
+    `// Exported synch signals to the synch wrap.
+    `// E.g. input rnmi_a,
+    `component_synch_signals_with_prefix(`signals,"")
+`endfunc
+
+`func component_synch_signals_with_prefix signals prefix
+    `fori dir rev range name: `signals()
+  `dir `range `prefix`name,
+    `endfor
+`endfunc
+
+`func connect_synch_wires signals
+    `// Connect temp wires of a component to its client
+    `// E.g. .rnmi_a  (rnmi_a),
+    `fori dir rev range name: `signals()
+  .`name	(`name),
+    `endfor
+`endfunc
+
+`func declare_synch_r_wires signals
+    `fori dir rev range name: `signals()
+  wire	`name;
+    `endfor
+`endfunc
+
+`func rl_reset_ctrl_int_synch_signals yield 
+`//For reset ctrl synchronous signals need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+        `if(`SOFT_RESET_OPTION) //{
+    `yield(`OUT,`IN,"","soft_reset_req_synch_r")
+    `yield(`OUT,`IN,"","soft_reset_prepare_synch_r")
+        `endif //}
+    `yield(`OUT,`IN,"","ndmreset_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_hartreset_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_hartreset2_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_havereset_ack_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_halt_on_reset_synch_r")
+  `if ((`HAS_ICACHE == 1) || (`HAS_DCACHE == 1)) // {
+    `yield(`OUT,`IN,"","rst_init_disable_synch_r")
+  `endif //}
+    `yield(`OUT,`IN,"","rst_cpu_req_synch_r")
+  `if (`POWER_DOMAINS == 1) // {
+	`yield(`OUT,`IN,"","pu_rst_synch_r")
+  `endif //}
+    `yield(`OUT,`IN,"","rst_synch_r")
+`endfunc
+
+`func rl_reset_ctrl_ext_synch_signals yield 
+`//For reset ctrl signals need to connect to external top
+        `if(`SOFT_RESET_OPTION) //{
+    `yield(`IN,`OUT,"","soft_reset_req_a")
+    `yield(`IN,`OUT,"","soft_reset_prepare_a")
+        `endif //}
+    `yield(`IN,`OUT,"","ndmreset_a")
+    `yield(`IN,`OUT,"","dm2arc_hartreset_a")
+    `yield(`IN,`OUT,"","dm2arc_hartreset2_a")
+    `yield(`IN,`OUT,"","dm2arc_havereset_ack_a")
+    `yield(`IN,`OUT,"","dm2arc_halt_on_reset_a")
+  `if ((`HAS_ICACHE == 1) || (`HAS_DCACHE == 1)) // {
+    `yield(`IN,`OUT,"","rst_init_disable_a")
+  `endif //}
+    `yield(`IN,`OUT,"","rst_cpu_req_a")
+  `if (`POWER_DOMAINS == 1) // {
+	`yield(`IN,`OUT,"","pu_rst_a")
+  `endif //}
+    `yield(`IN,`OUT,"","rst_a")
+    `yield(`IN,`OUT,"","test_mode")
+`if (`LOGIC_BIST == 1)
+    `yield(`IN,`OUT,"","LBIST_EN")
+`endif
+`endfunc
+
+`func rl_reset_ctrl_synch_signals yield 
+     `rl_reset_ctrl_int_synch_signals(`yield)
+     `rl_reset_ctrl_ext_synch_signals(`yield)
+`endfunc
+
+`func rl_timer_int_synch_signals yield 
+`//For timer synchronous signals need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+    `yield(`OUT,`IN,"","tm_clk_enable_sync")
+`endfunc
+
+`func rl_timer_ext_synch_signals yield 
+`//For timer signals need to connect to external top
+    `yield(`IN,`OUT,"","ref_clk")
+`endfunc
+
+`func rl_timer_synch_signals yield 
+     `rl_timer_int_synch_signals(`yield)
+     `rl_timer_ext_synch_signals(`yield)
+`endfunc
+
+`if (`HAS_WDT == 1) // {
+  `if (`WATCHDOG_CLK == 1) //{
+`func rl_wdt_int_synch_signals yield 
+`//For wdt synchronous signals need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+    `yield(`IN,`OUT,"","wdt_feedback_bit")
+    `if(`POWER_DOMAINS == 1)//{
+    `yield(`IN,`OUT,"","wdt_check_disable")
+    `endif //}
+    `yield(`OUT,`IN,"","wdt_clk_enable_sync")
+`endfunc
+
+`func rl_wdt_ext_synch_signals yield 
+`//For wdt signals need to connect to external top
+    `yield(`IN,`OUT,"","wdt_clk")
+    `yield(`OUT,`IN,"","wdt_reset_wdt_clk0")
+`endfunc
+
+`func rl_wdt_pmode_synch_signals yield 
+`//For pmode signal that used to disable wdt clock check, which already exported to external top
+    `yield(`IN,`OUT,"","pmode")
+`endfunc
+
+`func rl_wdt_synch_signals yield
+     `rl_wdt_int_synch_signals(`yield)
+     `rl_wdt_ext_synch_signals(`yield)
+`endfunc
+  `endif //}
+`endif //}
+
+`func rl_misc_int_synch_signals yield 
+`//For misc synchronous signals need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+`if(`POWER_DOMAINS == 1)//{
+    `yield(`OUT,`IN,"","tgt_bus_pd_ack_synch_r")
+	`yield(`OUT,`IN,"","pd1_pd_ack_synch_r")
+	`yield(`OUT,`IN,"","pd2_pd_ack_synch_r")
+	`yield(`OUT,`IN,"","pu_ack_synch_r")
+	`yield(`OUT,`IN,"","pm1_event_synch_r")
+	`yield(`OUT,`IN,"","pu_event_synch_r")
+`endif //}
+`if (`HAS_CLINT == 1) && (`SMALL_INTERRUPT == 1)
+`for (`i = 1; `i < `RTIA_IMSIC_M_FILE_SIZE; `i++ )
+`if (`i <= `SFTY_IRQ_DUAL)
+    `yield(`OUT,`IN,"","dr_irq`i::_synch_r")
+`else
+    `yield(`OUT,`IN,"","irq`i::_synch_r")
+`endif
+`endfor
+`endif
+    `yield(`OUT,`IN,"","dm2arc_halt_req_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_run_req_synch_r")
+    `yield(`OUT,`IN,"","dm2arc_relaxedpriv_synch_r")
+    `if(`HAS_SAFETY) //{
+    `yield(`OUT,`IN,"","safety_iso_enb_synch_r")
+    `endif //}
+    `yield(`OUT,`IN,"","rnmi_synch_r")
+`endfunc
+
+`func rl_misc_ext_synch_signals yield 
+`//For misc asynch signals need to connect to external top
+`if(`POWER_DOMAINS == 1)//{
+    `yield(`IN,`OUT,"","tgt_bus_pd_ack_a")
+	`yield(`IN,`OUT,"","pd1_pd_ack_a")
+	`yield(`IN,`OUT,"","pd2_pd_ack_a")
+	`yield(`IN,`OUT,"","pu_ack_a")
+	`yield(`IN,`OUT,"","pm1_event_a")
+	`yield(`IN,`OUT,"","pu_event_a")
+`endif //}
+`if (`HAS_CLINT == 1) && (`SMALL_INTERRUPT == 1)
+`for (`i = 1; `i < `RTIA_IMSIC_M_FILE_SIZE; `i++ )
+`if (`i <= `SFTY_IRQ_DUAL)
+    `yield(`IN,`OUT,"[1:0]","dr_irq`i::_a")
+`else
+    `yield(`IN,`OUT,"","irq`i::_a")
+`endif
+`endfor
+`endif
+    `yield(`IN,`OUT,"","dm2arc_halt_req_a")
+    `yield(`IN,`OUT,"","dm2arc_run_req_a")
+    `yield(`IN,`OUT,"","dm2arc_relaxedpriv_a")
+    `if(`HAS_SAFETY) //{
+    `yield(`IN,`OUT,"","safety_iso_enb_a")
+    `endif //}
+    `yield(`IN,`OUT,"","rnmi_a")
+`endfunc
+
+`func rl_misc_synch_signals yield
+     `rl_misc_int_synch_signals(`yield)
+     `rl_misc_ext_synch_signals(`yield)
+`endfunc
+
+    `if(`HAS_SAFETY) //{
+`func rl_err_int_signals yield 
+`//For error signal need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+    `yield(`OUT,`IN,"","cpu_synch_top_parity_error_r")
+`endfunc
+    `endif //}
+
+`func rl_cpu_int_synch_signals yield
+`//For signals need to connect to internally between rl_cpu_synch_wrap and cpu_top in safety controller for Safety config
+    `if(`HAS_SAFETY) //{
+     `rl_err_int_signals(`yield)
+    `endif //}
+     `rl_reset_ctrl_int_synch_signals(`yield)
+     `rl_timer_int_synch_signals(`yield)
+`if (`HAS_WDT == 1) // {
+  `if (`WATCHDOG_CLK == 1) //{
+     `rl_wdt_int_synch_signals(`yield)
+  `endif //}
+`endif //}
+     `rl_misc_int_synch_signals(`yield)
+`endfunc
+
+`func rl_cpu_timer_wdt_ext_synch_signals yield
+`//For signals need to connect to external top
+     `rl_timer_ext_synch_signals(`yield)
+`if (`HAS_WDT == 1) // {
+  `if (`WATCHDOG_CLK == 1) //{
+     `rl_wdt_ext_synch_signals(`yield)
+  `endif //}
+`endif //}
+`endfunc
+
+`func rl_cpu_other_ext_synch_signals yield
+`//For signals need to connect to external top, In safety controller, script will replace cpu_top *_synch_r by *_a. Don't need to explicitly call out these external signals in safety controller port
+     `rl_reset_ctrl_ext_synch_signals(`yield)
+     `rl_misc_ext_synch_signals(`yield)
+
+`endfunc
+
+`func rl_cpu_synch_signals yield
+     `rl_cpu_int_synch_signals(`yield)
+     `rl_cpu_timer_wdt_ext_synch_signals(`yield)
+     `rl_cpu_other_ext_synch_signals(`yield)
+`endfunc

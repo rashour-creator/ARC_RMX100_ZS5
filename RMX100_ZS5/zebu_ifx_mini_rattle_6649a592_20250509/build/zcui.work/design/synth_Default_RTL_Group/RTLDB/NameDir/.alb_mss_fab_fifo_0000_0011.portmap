@@ -1,0 +1,64 @@
+Module alb_mss_fab_fifo_0000_0011{
+}
+
+EdfPortBounds mss_bus_switch_fifo_0001_0004{
+9 0 i_data
+64 0 i_occp
+9 0 o_data
+64 0 o_occp
+}
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds zceiMessageOutPort{
+31 0 message
+}
+EdfPortBounds rl_parity_gen_0000_0001{
+4 0 din
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds zceiMessageOutPort_1{
+0 0 message
+}
+EdfPortBounds rl_parity_gen_0000_0003{
+3 0 din
+}
+EdfPortBounds zceiMessageOutPort_65{
+64 0 message
+}
+EdfPortBounds zceiMessageInPort{
+31 0 message
+}
+EdfPortBounds rl_parity_gen_0000_0000{
+8 0 din
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds zceiMessageInPort_1{
+0 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_4_1{
+3 0 signal
+3 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds rl_parity_gen_0000_0002{
+6 0 din
+}
+NonAliasNets alb_mss_fab_fifo_0000_0011{
+}

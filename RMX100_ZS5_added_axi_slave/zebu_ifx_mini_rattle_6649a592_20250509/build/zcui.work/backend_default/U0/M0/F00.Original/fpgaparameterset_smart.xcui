@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<ZeBuUiDoc creator="zCuiFpgaParameterSet" type="xcui" version="1.0">
+   <sets>
+      <set label="param1">
+         <script>$ZEBU_ROOT/etc/scripts/fpga_monitoring_common_stage1.sh</script>
+         <launch label="L0_Routability_Resynthesis">
+            <parameter name="ZEBU_ENABLE_YANTRA">1</parameter>
+            <parameter name="ZEBU_NA_ENABLE">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L0_Routability_Resynthesis</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L1_NO_PDM">
+            <parameter name="ZEBU_PDM_DONT_USE">1</parameter>
+            <parameter name="ZEBU_SKIP_ZNETGEN">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L1_NO_PDM</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L2_Vivado_Performance_ExploreSLLs">
+            <parameter name="ZEBU_MDTMX_FORCE_PDM">1</parameter>
+            <parameter name="VIVADO_OPT_DESIGN_OPTIONS">-directive Default</parameter>
+            <parameter name="VIVADO_PLACE_DESIGN_OPTIONS">-directive SSI_ExtraTimingOpt</parameter>
+            <parameter name="VIVADO_ROUTE_DESIGN_OPTIONS">-directive NoTimingRelaxation</parameter>
+            <parameter name="VIVADO_ENABLE_PEAK_MEM_WA">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L2_Vivado_Performance_ExploreSLLs</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L3_Vivado_Congestion_CompressSLRs">
+            <parameter name="ZEBU_MDTMX_FORCE_PDM">1</parameter>
+            <parameter name="VIVADO_OPT_DESIGN_OPTIONS">-directive Default</parameter>
+            <parameter name="VIVADO_PLACE_DESIGN_OPTIONS">-directive SSI_HighUtilSLRs</parameter>
+            <parameter name="VIVADO_ROUTE_DESIGN_OPTIONS">-directive Default</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L3_Vivado_Congestion_CompressSLRs</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L4_NO_LUT6_PDM">
+            <parameter name="ZEBU_ZNETGEN_SLR_EXTRA_CMDS">replace_lut6_cells</parameter>
+            <parameter name="ZEBU_MDTMX_FORCE_PDM">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L4_NO_LUT6_PDM</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L5_VivadoDirective_SSI_NoTimingRelax_NoEMulation_noLocalRoute">
+            <parameter name="VIVADO_SOCKET_MGT_PBLOCK_WIDTH">3</parameter>
+            <parameter name="VIVADO_PLACE_DESIGN_OPTIONS">-directive SSI_ExtraTimingOpt</parameter>
+            <parameter name="VIVADO_ROUTE_DESIGN_OPTIONS">-directive NoTimingRelaxation</parameter>
+            <parameter name="VIVADO_ENABLE_PEAK_MEM_WA">1</parameter>
+            <parameter name="VIVADO_DISABLE_EMULATION_MODE">1</parameter>
+            <parameter name="VIVADO_DISABLE_LOCAL_NET_ROUTING">1</parameter>
+            <parameter name="ZEBU_PDM_DONT_USE">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L5_VivadoDirective_SSI_NoTimingRelax_NoEMulation_noLocalRoute</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L6_VivadoDirective_ExtraNet_DelayCost">
+            <parameter name="ZEBU_KEEP_PROPERTY_SOFT_HLUTNM">1</parameter>
+            <parameter name="VIVADO_PLACE_DESIGN_OPTIONS">-directive ExtraNetDelay_high</parameter>
+            <parameter name="VIVADO_ROUTE_DESIGN_OPTIONS">-directive HigherDelayCost</parameter>
+            <parameter name="ZEBU_PDM_DONT_USE">1</parameter>
+            <parameter name="ZEBU_DISABLE_INTER_DIE_TDM_COMPILE">1</parameter>
+            <parameter name="VIVADO_PROHIBIT_LAGUNA_REGISTERS">1</parameter>
+            <parameter name="ZEBU_SKIP_ZNETGEN">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L6_VivadoDirective_ExtraNet_DelayCost</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+         <launch label="L7_zNetgen_ExtraCmds_lut6_AreaExplore">
+            <parameter name="ZEBU_ZNETGEN_FPGA_EXTRA_CMDS">replace_lut6_cells</parameter>
+            <parameter name="VIVADO_OPT_DESIGN_OPTIONS">-hier_fanout_limit 512 -retarget -propconst -sweep -muxf_remap -bufg_opt</parameter>
+            <parameter name="ZEBU_PDM_DONT_USE">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L7_zNetgen_ExtraCmds_lut6_AreaExplore</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM1">8</parameter>
+         </launch>
+      </set>
+      <set label="param2">
+         <script>$ZEBU_ROOT/etc/scripts/fpga_monitoring_common_stage2.sh</script>
+         <launch label="L8_MDTMX_RDP">
+            <parameter name="ZEBU_MDTMX_USE">1</parameter>
+            <parameter name="ZEBU_MDTMX_TOOL">rdp</parameter>
+            <parameter name="ZEBU_DISABLE_ALL_FPGA_HC">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L8_MDTMX_RDP</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM2">4</parameter>
+         </launch>
+         <launch label="L9_MDTMX_RDP_NoSLRPBLOCK">
+            <parameter name="ZEBU_MDTMX_USE">1</parameter>
+            <parameter name="ZEBU_MDTMX_TOOL">rdp</parameter>
+            <parameter name="VIVADO_DISABLE_LOAD_PBLOCK_SLR">1</parameter>
+            <parameter name="ZEBU_DISABLE_ALL_FPGA_HC">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L9_MDTMX_RDP_NoSLRPBLOCK</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM2">4</parameter>
+         </launch>
+         <launch label="L10_MDTMX_ZBP">
+            <parameter name="ZEBU_MDTMX_USE">1</parameter>
+            <parameter name="ZEBU_MDTMX_TOOL">zBlockPartitioning</parameter>
+            <parameter name="ZEBU_DISABLE_ALL_FPGA_HC">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L10_MDTMX_ZBP</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM2">4</parameter>
+         </launch>
+         <launch label="L11_MDTMX_ZBP_QiWC">
+            <parameter name="ZEBU_MDTMX_USE">1</parameter>
+            <parameter name="ZEBU_MDTMX_TOOL">zBlockPartitioning</parameter>
+            <parameter name="ZEBU_MTDMX_EXTSCRIPT">zBP_DAP_legalized_qiwc.tcl</parameter>
+            <parameter name="ZEBU_DISABLE_ALL_FPGA_HC">1</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_FILE_NAME">fpga_parff_strategies.xcui</parameter>
+            <parameter name="ZEBU_PARFF_XCUI_TARGET_NAME">L11_MDTMX_ZBP_QiWC</parameter>
+            <parameter name="ZEBU_PARFF_NB_PARAM2">4</parameter>
+         </launch>
+      </set>
+   </sets>
+   <retry_script>$ZEBU_ROOT/etc/ise/zCpuLoad</retry_script>
+   <max_depth_of_retry>1</max_depth_of_retry>
+   <max_depth_of_relaunch>2</max_depth_of_relaunch>
+   <polling_time>1</polling_time>
+</ZeBuUiDoc>

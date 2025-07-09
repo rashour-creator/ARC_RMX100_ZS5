@@ -1,0 +1,38 @@
+1747150707 06:38:27 PM Start_target=Original
+1747150707 06:38:27 PM   |- start zNetgen
+1747151060 06:44:20 PM     |=> zNetgen: 5 mins
+1747151060 06:44:20 PM   |- end zNetgen
+1747151064 06:44:24 PM   |- start FPGA compile
+1747151064 06:44:24 PM Start Vivado
+1747151199 06:46:39 PM     |=> initialisation_linked: 3 mins
+1747151212 06:46:52 PM   |- start phase: netlist_analys_preproc
+1747151214 06:46:54 PM     |=> netlist_analys_preproc: 1 mins
+1747151215 06:46:55 PM   |- start phase: read_constraints
+1747151307 06:48:27 PM     |=> read_constraints: 2 mins
+1747151309 06:48:29 PM   |- start phase: opt_design
+1747151556 06:52:36 PM     |=> opt_design: 5 mins
+1747151556 06:52:36 PM   |- start phase: post_opt_netlist_analys_preproc
+1747151559 06:52:39 PM     |=> post_opt_processing: 1 mins
+1747151560 06:52:40 PM   |- start phase: place_design
+1747152268 07:04:28 PM   |- start phase: post_place_phys
+1747152299 07:04:59 PM     |=> place_design: 13 mins
+1747152302 07:05:02 PM   |- start phase: route_design
+1747153021 07:17:01 PM   |- start phase: post_route_physopt
+1747153055 07:17:35 PM     |=> route_design: 13 mins
+1747153071 07:17:51 PM   |- start phase: report_timing
+1747153084 07:18:04 PM     |=> report_timing: 1 mins
+1747153087 07:18:07 PM   |- start phase: write_bitstream
+1747153241 07:20:41 PM     |=> write_bitstream: 3 mins
+1747153244 07:20:44 PM   |- start phase: zTime_analyse
+1747153313 07:21:53 PM     |=> extra_timing: 2 mins
+1747153316 07:21:56 PM   |- start phase: location_building
+1747153330 07:22:10 PM     |=> location_building: 1 mins
+1747153333 07:22:13 PM   |- start phase: write_exclude_placement_file
+1747153333 07:22:13 PM     |=> write_exclude_placement_file: 1 mins
+1747153334 07:22:14 PM     => vivado_ok: 37 mins
+1747153334 07:22:14 PM vivado: 37 mins
+1747153375 07:22:55 PM zrdb: 0 mins
+1747153381 07:23:01 PM zdb: 0 mins
+Fpga_Total: 45 min  (Winner:Original)
+
+FPGA_TOTAL_EXCL_GRID_DELAY: 44.9333 mins

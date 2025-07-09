@@ -1,0 +1,170 @@
+################################################################################
+# Fanout Report for memory: fpga_sram_0002_0000_ZMEM_mem_r
+################################################################################
+
+
+#  GENERAL STATISTICS:  ########################################################
+# Number of Wires driving pure clock fanout:                                   3
+# Number of Wires driving pure data  fanout:                                6278
+# Number of Wires driving both clock and data fanout:                          0
+# Number of Wires without any load:                                            2
+
+###########################################################  FANOUT HISTOGRAM:  
+# Number of wires whose fanout is in [     1,       1] :                 5990
+# Number of wires whose fanout is in [     2,       3] :                   73
+# Number of wires whose fanout is in [     4,       7] :                    4
+# Number of wires whose fanout is in [     8,      15] :                    6
+# Number of wires whose fanout is in [    16,      31] :                    2
+# Number of wires whose fanout is in [    32,      63] :                   71
+# Number of wires whose fanout is in [    64,     127] :                    1
+# Number of wires whose fanout is in [   128,     255] :                    0
+# Number of wires whose fanout is in [   256,     511] :                    0
+# Number of wires whose fanout is in [   512,    1023] :                    0
+# Number of wires whose fanout is in [  1024,    2047] :                   64
+# Number of wires whose fanout is in [  2048,    4095] :                    0
+# Number of wires whose fanout is in [  4096,    8191] :                    0
+# Number of wires whose fanout is in [  8192,   16383] :                    0
+# Number of wires whose fanout is in [ 16384,   32767] :                    0
+# Number of wires whose fanout is in [ 32768,   65535] :                   67
+# Number of wires whose fanout is in [ 65536,  131071] :                    0
+# Number of wires whose fanout is in [131072,  262143] :                    0
+# Number of wires whose fanout is in [262144,  524287] :                    1
+# Number of wires whose fanout is in [524288, 1048575] :                    0
+
+##########################################################  FANOUT TOP SCORES:  
+# Displaying all the wires whose fanout is greater than 128.
+# 3398880  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.fpga_sram_0002_0000_ZMEM_mem_r_base_add_gnd  #
+# 1716962  #  fpga_sram_0002_0000_ZMEM_mem_r.fpga_sram_0002_0000_ZMEM_mem_r_add_gnd                   #
+#  315360  #  fpga_sram_0002_0000_ZMEM_mem_r.we0Multiplex_out                                         #
+#   35104  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.wire_sysFreq                                 #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out0                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out1                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out2                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out3                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out4                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out5                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out6                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out7                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out8                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out9                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out10                                     #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr0Multiplex_out11                                     #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out0                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out1                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out2                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out3                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out4                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out5                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out6                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out7                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out8                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out9                                      #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out10                                     #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.addr1Multiplex_out11                                     #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out0                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out1                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out2                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out3                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out4                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out5                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out6                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out7                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out8                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out9                                        #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out10                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out11                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out12                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out13                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out14                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out15                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out16                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out17                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out18                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out19                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out20                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out21                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out22                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out23                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out24                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out25                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out26                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out27                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out28                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out29                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out30                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out31                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out32                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out33                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out34                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out35                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out36                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out37                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out38                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.di0Multiplex_out39                                       #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.rw_sel0Multiplex_out                                     #
+#   35040  #  fpga_sram_0002_0000_ZMEM_mem_r.rw_sel1Multiplex_out                                     #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[0]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[1]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[2]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[3]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[4]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[5]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[6]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[7]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[8]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[9]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[10]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[11]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[12]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[13]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[14]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[15]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[16]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[17]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[18]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[19]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[20]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[21]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[22]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[23]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[24]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[25]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[26]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[27]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[28]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[29]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[30]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr0_decoder_o[31]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[0]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[1]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[2]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[3]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[4]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[5]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[6]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[7]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[8]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[9]                           #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[10]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[11]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[12]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[13]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[14]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[15]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[16]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[17]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[18]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[19]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[20]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[21]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[22]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[23]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[24]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[25]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[26]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[27]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[28]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[29]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[30]                          #
+#    1096  #  fpga_sram_0002_0000_ZMEM_mem_r.memory_base.addr1_decoder_o[31]                          #
+

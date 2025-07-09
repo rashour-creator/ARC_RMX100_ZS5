@@ -1,0 +1,20 @@
+//
+//
+// Describes the access rights and foreign code required for ARC's user tasks
+// and functions.  These tasks/functions include the HMSL interpreter, RASCAL
+// accelerated RAM models and RASCAL Pipemon (C based pipeline log)..
+//
+// This information is required by the Synopsys VCS simulator.
+//
+$jk_sram     misc=jk_sram_init     acc+=r:%TASK  acc+=r,callback:jtag_model
+$ssramwd     misc=ssramwd_init     acc+=r:%TASK
+$ssram       misc=ssram_init       acc+=r:%TASK
+$ssram_banked  misc=ssram_banked_init       acc+=r:%TASK
+$rascal      misc=rascal_init      acc+=r:%TASK
+$rascal2hif  misc=rascal2hif_init  acc+=r:%TASK
+$rascal2bvci misc=rascal2bvci_init acc+=r:%TASK
+$rascal2bvci_mcpu misc=rascal2bvci_mcpu_init acc+=r:%TASK
+$pipemon_700 misc=pipemon_700_init acc+=r:%TASK
+$pipemon_600 misc=pipemon_600_init acc+=r:%TASK
+$pipemon_arcv2 misc=pipemon_6000_init acc+=r:%TASK
+$rascal_backdoor_ram misc=rascal_backdoor_ram_init acc+=r:%TASK

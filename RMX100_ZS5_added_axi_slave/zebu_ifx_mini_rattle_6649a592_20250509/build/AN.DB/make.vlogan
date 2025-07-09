@@ -1,0 +1,1437 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -kdb -kdb -l zcui_comp.log +incdir+/global/apps/syn_2020.09-SP5-1/dw/sim_ver -full64 -sverilog +v2k -timescale=1ns/10ps -skip_translate_body +define+SYNTHESIS +define+FPGA_INFER_MEMORIES +define+NO_2CYC_CHECKER +define+NO_3CYC_CHECKER +incdir+/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog +incdir+/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL -assert svaext -full64
+
+all :		_VCSgd_C24cX_1.db \
+	_VCSgd_H55Ebb_1.db \
+	_VCSgd_ihMC9d_1.db \
+	_VCSgd_iFsdG_1.db \
+	_VCSgd_5tiQR_1.db \
+	_VCSgd_GIZWZb_1.db \
+	_VCSgd_uTySLc_1.db \
+	_VCSgd_ILAJ2b_1.db \
+	_VCSgd_JH5Aqe_1.db \
+	_VCSgd_VlV6lb_1.db \
+	_VCSgd_Op38ic_1.db \
+	_VCSgd_MgXBId_1.db \
+	_VCSgd_KbVrLe_1.db \
+	_VCSgd_msWGyc_1.db \
+	_VCSgd_hd4rdb_1.db \
+	_VCSgd_jTzKSd_1.db \
+	_VCSgd_hgb5L_1.db \
+	_VCSgd_tzBwm_1.db \
+	_VCSgd_5hSwp_1.db \
+	_VCSgd_4bGJuc_1.db \
+	_VCSgd_6IjkXc_1.db \
+	_VCSgd_SaatHc_1.db \
+	_VCSgd_tsLtQc_1.db \
+	_VCSgd_bfRNPb_1.db \
+	_VCSgd_ztrJje_1.db \
+	_VCSgd_KcFa0d_1.db \
+	_VCSgd_ud2mbc_1.db \
+	_VCSgd_HfMPS_1.db \
+	_VCSgd_dMiPGd_1.db \
+	_VCSgd_PMSQld_1.db \
+	_VCSgd_G71O2c_1.db \
+	_VCSgd_dzRVfd_1.db \
+	_VCSgd_3HZOM_1.db \
+	_VCSgd_G1Xrkc_1.db \
+	_VCSgd_qy8BXb_1.db \
+	_VCSgd_Apnnnc_1.db \
+	_VCSgd_HkETs_1.db \
+	_VCSgd_yw5oRc_1.db \
+	_VCSgd_UaZAVc_1.db \
+	_VCSgd_Lw9gdc_1.db \
+	_VCSgd_3rKCZ_1.db \
+	_VCSgd_AZwnIb_1.db \
+	_VCSgd_WIxtRc_1.db \
+	_VCSgd_9ZtBkd_1.db \
+	_VCSgd_5xDxHe_1.db \
+	_VCSgd_mauNPb_1.db \
+	_VCSgd_5gIi6b_1.db \
+	_VCSgd_qOHckd_1.db \
+	_VCSgd_3hVpvc_1.db \
+	_VCSgd_FQTsB_1.db \
+	_VCSgd_msotNb_1.db \
+	_VCSgd_QtzNfb_1.db \
+	_VCSgd_u1FCCc_1.db \
+	_VCSgd_OXRsPe_1.db \
+	_VCSgd_3VGvnc_1.db \
+	_VCSgd_gHZtgc_1.db \
+	_VCSgd_J32h6b_1.db \
+	_VCSgd_widaU_1.db \
+	_VCSgd_6L67E_1.db \
+	_VCSgd_HbQtDc_1.db \
+	_VCSgd_VV4l5_1.db \
+	_VCSgd_ifrf3b_1.db \
+	_VCSgd_roSODd_1.db \
+	_VCSgd_BR8Kj_1.db \
+	_VCSgd_Tv1rQe_1.db \
+	_VCSgd_XwcqCe_1.db \
+	_VCSgd_DZMSTb_1.db \
+	_VCSgd_C6iJm_1.db \
+	_VCSgd_cFuikb_1.db \
+	_VCSgd_NUQyre_1.db \
+	_VCSgd_avDDne_1.db \
+	_VCSgd_6jqbDd_1.db \
+	_VCSgd_euIZYd_1.db \
+	_VCSgd_nKPaMb_1.db \
+	_VCSgd_0NEQZd_1.db \
+	_VCSgd_GceAed_1.db \
+	_VCSgd_ESVsle_1.db \
+	_VCSgd_3KAhTc_1.db \
+	_VCSgd_Of86Be_1.db \
+	_VCSgd_JFUpk_1.db \
+	_VCSgd_Fx9Stb_1.db \
+	_VCSgd_hiLymd_1.db \
+	_VCSgd_zvZ4Jc_1.db \
+	_VCSgd_suCRo_1.db \
+	_VCSgd_Xq6mTd_1.db \
+	_VCSgd_dXROGc_1.db \
+	_VCSgd_HOL0me_1.db \
+	_VCSgd_mg5O7b_1.db \
+	_VCSgd_yZ0dId_1.db \
+	_VCSgd_Lkxe0c_1.db \
+	_VCSgd_0PPvrb_1.db \
+	_VCSgd_qjIdtb_1.db \
+	_VCSgd_iXex_1.db \
+	_VCSgd_1VSKAd_1.db \
+	_VCSgd_VNdI1d_1.db \
+	_VCSgd_ZL4kM_1.db \
+	_VCSgd_YKQJ7b_1.db \
+	_VCSgd_Kjnb7c_1.db \
+	_VCSgd_fGKKB_1.db \
+	_VCSgd_Abro9c_1.db \
+	_VCSgd_1dTase_1.db \
+	_VCSgd_iHLiEb_1.db \
+	_VCSgd_sLocmd_1.db \
+	_VCSgd_Qubg2c_1.db \
+	_VCSgd_EyluQd_1.db \
+	_VCSgd_aP444d_1.db \
+	_VCSgd_0GpMtb_1.db \
+	_VCSgd_HGArcc_1.db \
+	_VCSgd_0X0wkb_1.db \
+	_VCSgd_LNpaib_1.db \
+	_VCSgd_FI2vw_1.db \
+	_VCSgd_WOEScc_1.db \
+	_VCSgd_WdyyGc_1.db \
+	_VCSgd_xL5Xu_1.db \
+	_VCSgd_J0Z7Ub_1.db \
+	_VCSgd_FSCYzc_1.db \
+	_VCSgd_YWmKie_1.db \
+	_VCSgd_xDISzb_1.db \
+	_VCSgd_Vsm5ec_1.db \
+	_VCSgd_bAAWGc_1.db \
+	_VCSgd_WRQ2me_1.db \
+	_VCSgd_484Mec_1.db \
+	_VCSgd_Fs8ji_1.db \
+	_VCSgd_CvNDmd_1.db \
+	_VCSgd_8OHr6b_1.db \
+	_VCSgd_47ep1_1.db \
+	_VCSgd_MkI0oc_1.db \
+	_VCSgd_XcYX5b_1.db \
+	_VCSgd_rZ063b_1.db \
+	_VCSgd_hO4Zzb_1.db \
+	_VCSgd_pAPwk_1.db \
+	_VCSgd_OW0ECb_1.db \
+	_VCSgd_vHHfTd_1.db \
+	_VCSgd_eKoKf_1.db \
+	_VCSgd_CFzFBd_1.db \
+	_VCSgd_lDVfeb_1.db \
+	_VCSgd_eRgJcd_1.db \
+	_VCSgd_7Kdxgd_1.db \
+	_VCSgd_7Idq7d_1.db \
+	_VCSgd_waPn9b_1.db \
+	_VCSgd_EiNh9c_1.db \
+	_VCSgd_N7LsOe_1.db \
+	_VCSgd_MUFwwd_1.db \
+	_VCSgd_xFcLW_1.db \
+	_VCSgd_3Lvcxd_1.db \
+	_VCSgd_enuYFb_1.db \
+	_VCSgd_rvMbT_1.db \
+	_VCSgd_lk1aRc_1.db \
+	_VCSgd_0nFMcc_1.db \
+	_VCSgd_FZqhkc_1.db \
+	_VCSgd_5xkwYb_1.db \
+	_VCSgd_qLci5d_1.db \
+	_VCSgd_nz0U1d_1.db \
+	_VCSgd_18F0c_1.db \
+	_VCSgd_BW8Bfc_1.db \
+	_VCSgd_yHNNdc_1.db \
+	_VCSgd_KseP7c_1.db \
+	_VCSgd_WXqjlc_1.db \
+	_VCSgd_8neYe_1.db \
+	_VCSgd_jaL5Gb_1.db \
+	_VCSgd_1zhMmb_1.db \
+	_VCSgd_Z9UtCe_1.db \
+	_VCSgd_epbZ4c_1.db \
+	_VCSgd_9ywJGd_1.db \
+	_VCSgd_cYx9E_1.db \
+	_VCSgd_Wuusdb_1.db \
+	_VCSgd_bOUyvb_1.db \
+	_VCSgd_Ho1dc_1.db \
+	_VCSgd_UxWAnd_1.db \
+	_VCSgd_6qnQbc_1.db \
+	_VCSgd_x4FF_1.db \
+	_VCSgd_wjNUY_1.db \
+	_VCSgd_TuGyMb_1.db \
+	_VCSgd_Vqwqfb_1.db \
+	_VCSgd_SHBRvc_1.db \
+	_VCSgd_R1Wh4b_1.db \
+	_VCSgd_cQlHk_1.db \
+	_VCSgd_X2spfe_1.db \
+	_VCSgd_RiP6h_1.db \
+	_VCSgd_kISNBd_1.db \
+	_VCSgd_OHWrSc_1.db \
+	_VCSgd_mqjN5c_1.db \
+	_VCSgd_5ryWMb_1.db \
+	_VCSgd_4rjQqb_1.db \
+	_VCSgd_qEostd_1.db \
+	_VCSgd_1of0Ld_1.db \
+	_VCSgd_SUtOG_1.db \
+	_VCSgd_Cwlyt_1.db \
+	_VCSgd_KyXnhc_1.db \
+	_VCSgd_sOZqWb_1.db \
+	_VCSgd_HqelLb_1.db \
+	_VCSgd_zu4V7b_1.db \
+	_VCSgd_WlwQpc_1.db \
+	_VCSgd_G4DfHd_1.db \
+	_VCSgd_kMjR2_1.db \
+	_VCSgd_k8DeOd_1.db \
+	_VCSgd_wb6AFc_1.db \
+	_VCSgd_h7Zi6c_1.db \
+	_VCSgd_MFc3h_1.db \
+	_VCSgd_sH4rAe_1.db \
+	_VCSgd_Po54Wc_1.db \
+	_VCSgd_o9CuJb_1.db \
+	_VCSgd_XEK7C_1.db \
+	_VCSgd_CpWAXb_1.db \
+	_VCSgd_jTyxnb_1.db \
+	_VCSgd_wauALd_1.db \
+	_VCSgd_FOkduc_1.db \
+	_VCSgd_FqRCEb_1.db \
+	_VCSgd_QNJXwb_1.db \
+	_VCSgd_4sqtQc_1.db \
+	_VCSgd_Hvi4Bd_1.db \
+	_VCSgd_VMGQ1b_1.db \
+	_VCSgd_thMpjd_1.db \
+	_VCSgd_tXgddb_1.db \
+	_VCSgd_i4qhwd_1.db \
+	_VCSgd_EayfR_1.db \
+	_VCSgd_hEHnGd_1.db \
+	_VCSgd_Lt6Mlb_1.db \
+	_VCSgd_500t2_1.db \
+	_VCSgd_BTZMIe_1.db \
+	_VCSgd_JngWyd_1.db \
+	_VCSgd_Ht1qE_1.db \
+	_VCSgd_23anKb_1.db \
+	_VCSgd_O7KB4b_1.db \
+	_VCSgd_gvm76_1.db \
+	_VCSgd_TdLFUd_1.db \
+	_VCSgd_5jrEDb_1.db \
+	_VCSgd_cqQbke_1.db \
+	_VCSgd_OlMuLe_1.db \
+	_VCSgd_FDiCvd_1.db \
+	_VCSgd_8Y7LHd_1.db \
+	_VCSgd_MkN0Bc_1.db \
+	_VCSgd_88DI_1.db \
+	_VCSgd_QQJCA_1.db \
+	_VCSgd_o6weed_1.db \
+	_VCSgd_1q4Cse_1.db \
+	_VCSgd_U0stzd_1.db \
+	_VCSgd_rDgw0b_1.db \
+	_VCSgd_TCxHee_1.db \
+	_VCSgd_8CCRK_1.db \
+	_VCSgd_Gx4tre_1.db \
+	_VCSgd_fGg4Ge_1.db \
+	_VCSgd_a02BEd_1.db \
+	_VCSgd_6aYNfb_1.db \
+	_VCSgd_HBHzwd_1.db \
+	_VCSgd_zshZob_1.db \
+	_VCSgd_zlNcdd_1.db \
+	_VCSgd_3dqktd_1.db \
+	_VCSgd_z1uXXc_1.db \
+	_VCSgd_iy5fy_1.db \
+	_VCSgd_mnOIqe_1.db \
+	_VCSgd_R8TOab_1.db \
+	_VCSgd_HXzLb_1.db \
+	_VCSgd_cuxIxc_1.db \
+	_VCSgd_oGLM3c_1.db \
+	_VCSgd_blvKje_1.db \
+	_VCSgd_WL1lj_1.db \
+	_VCSgd_GqukNe_1.db \
+	_VCSgd_AFKLA_1.db \
+	_VCSgd_kwV0ad_1.db \
+	_VCSgd_fh4Zr_1.db \
+	_VCSgd_q4sEke_1.db \
+	_VCSgd_J8m0nc_1.db \
+	_VCSgd_yQNNMb_1.db \
+	_VCSgd_0WtZn_1.db \
+	_VCSgd_W6hDsd_1.db \
+	_VCSgd_lMtTle_1.db \
+	_VCSgd_u3ugWc_1.db \
+	_VCSgd_FXKj0b_1.db \
+	_VCSgd_rFLuHb_1.db \
+	_VCSgd_FQpLje_1.db \
+	_VCSgd_m9Xw8b_1.db \
+	_VCSgd_Zi2zjc_1.db \
+	_VCSgd_AawsN_1.db \
+	_VCSgd_RCrdnc_1.db \
+	_VCSgd_FUGXEb_1.db \
+	_VCSgd_Lmvj8d_1.db \
+	_VCSgd_zj86hd_1.db \
+	_VCSgd_1QHEmc_1.db \
+	_VCSgd_7sStLc_1.db \
+	_VCSgd_mVYtWc_1.db \
+	_VCSgd_iZTHIb_1.db \
+	_VCSgd_UNtKre_1.db \
+	_VCSgd_N53g8b_1.db \
+	_VCSgd_MWTvwd_1.db \
+	_VCSgd_GsZtUd_1.db \
+
+
+
+_VCSgd_C24cX_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rv_debug.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rv_debug.sv
+
+
+_VCSgd_H55Ebb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/jtag_fsm.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/jtag_fsm.sv
+
+
+_VCSgd_ihMC9d_1.db :	/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v 
+		${VLOGAN}  ${VLOGAN_OPT} /global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_t32Jtag_svs.v
+
+
+_VCSgd_iFsdG_1.db :	/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_amba_master_axi3_svs.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_amba_master_axi3_svs.sv
+
+
+_VCSgd_5tiQR_1.db :	/global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_amba_slave_axi3_svs.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /global/apps/zebu_vs_2023.03-SP1//vlog/vcs/xtor_amba_slave_axi3_svs.sv
+
+
+_VCSgd_GIZWZb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/arcv_dm_top_stubs.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/arcv_dm_top_stubs.v
+
+
+_VCSgd_uTySLc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab.v
+
+
+_VCSgd_ILAJ2b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_lat.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_lat.v
+
+
+_VCSgd_JH5Aqe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bus_lat.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bus_lat.v
+
+
+_VCSgd_VlV6lb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp_rrobin.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp_rrobin.v
+
+
+_VCSgd_Op38ic_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_slv_axi_buffer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_slv_axi_buffer.v
+
+
+_VCSgd_MgXBId_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_axi2ibp.v
+
+
+_VCSgd_KbVrLe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ahbl2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ahbl2ibp.v
+
+
+_VCSgd_msWGyc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi_rg.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi_rg.v
+
+
+_VCSgd_hd4rdb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2axi.v
+
+
+_VCSgd_jTzKSd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_mst_axi_buffer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_mst_axi_buffer.v
+
+
+_VCSgd_hgb5L_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl_sel.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl_sel.v
+
+
+_VCSgd_tzBwm_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2ahbl.v
+
+
+_VCSgd_5hSwp_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2ahbl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2ahbl.v
+
+
+_VCSgd_4bGJuc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2sparse.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_single2sparse.v
+
+
+_VCSgd_6IjkXc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2apb.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2apb.v
+
+
+_VCSgd_SaatHc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2single.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2single.v
+
+
+_VCSgd_tsLtQc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_fifo.v
+
+
+_VCSgd_bfRNPb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bypbuf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_bypbuf.v
+
+
+_VCSgd_ztrJje_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2pack.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp2pack.v
+
+
+_VCSgd_KcFa0d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_pack2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_pack2ibp.v
+
+
+_VCSgd_ud2mbc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_buffer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fab_ibp_buffer.v
+
+
+_VCSgd_HfMPS_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch.v
+
+
+_VCSgd_dMiPGd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_default_slv.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_default_slv.v
+
+
+_VCSgd_PMSQld_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2pack.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2pack.v
+
+
+_VCSgd_G71O2c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_pack2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_pack2ibp.v
+
+
+_VCSgd_dzRVfd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpx2ibpy.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpx2ibpy.v
+
+
+_VCSgd_3HZOM_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2single.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2single.v
+
+
+_VCSgd_G1Xrkc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2ibps.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp2ibps.v
+
+
+_VCSgd_qy8BXb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpw2ibpn.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpw2ibpn.v
+
+
+_VCSgd_Apnnnc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpn2ibpw.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibpn2ibpw.v
+
+
+_VCSgd_HkETs_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_fifo.v
+
+
+_VCSgd_yw5oRc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_bypbuf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_bypbuf.v
+
+
+_VCSgd_UaZAVc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_cwbind.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_cwbind.v
+
+
+_VCSgd_Lw9gdc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_split.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_split.v
+
+
+_VCSgd_3rKCZ_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_slv_ibp_buffer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_slv_ibp_buffer.v
+
+
+_VCSgd_AZwnIb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_rrobin.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_rrobin.v
+
+
+_VCSgd_WIxtRc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_mst_ibp_buffer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_mst_ibp_buffer.v
+
+
+_VCSgd_9ZtBkd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_compr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_compr.v
+
+
+_VCSgd_5xDxHe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw32_slv.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw32_slv.v
+
+
+_VCSgd_mauNPb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw512_slv.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_dw512_slv.v
+
+
+_VCSgd_5gIi6b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw64_mst.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw64_mst.v
+
+
+_VCSgd_qOHckd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw32_mst.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw32_mst.v
+
+
+_VCSgd_3hVpvc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw128_mst.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_bus_switch_ibp_dw128_mst.v
+
+
+_VCSgd_FQTsB_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl.v
+
+
+_VCSgd_msotNb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_ext_stub.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_ext_stub.v
+
+
+_VCSgd_QtzNfb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_ratio_calc.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_clkctrl_ratio_calc.v
+
+
+_VCSgd_u1FCCc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dw_dbp_stubs.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dw_dbp_stubs.v
+
+
+_VCSgd_OXRsPe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_dummy_slave.v
+
+
+_VCSgd_3VGvnc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/axi_dummy_slave.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/axi_dummy_slave.v
+
+
+_VCSgd_gHZtgc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/ahb_dummy_slave.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/ahb_dummy_slave.v
+
+
+_VCSgd_J32h6b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/bvci_dummy_slave.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/bvci_dummy_slave.v
+
+
+_VCSgd_widaU_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/apb_dummy_slave.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/apb_dummy_slave.v
+
+
+_VCSgd_6L67E_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2space_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2space_if.sv
+
+
+_VCSgd_HbQtDc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2jtag.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal2jtag.sv
+
+
+_VCSgd_VV4l5_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dm_via_jtag.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/dm_via_jtag.sv
+
+
+_VCSgd_ifrf3b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/space2dm_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/space2dm_if.sv
+
+
+_VCSgd_roSODd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal.v
+
+
+_VCSgd_BR8Kj_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_perfctrl.v
+
+
+_VCSgd_Tv1rQe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem.v
+
+
+_VCSgd_XwcqCe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_buf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_buf.v
+
+
+_VCSgd_DZMSTb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_bypbuf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_bypbuf.v
+
+
+_VCSgd_C6iJm_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_fifo.v
+
+
+_VCSgd_cFuikb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_lat.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_lat.v
+
+
+_VCSgd_NUQyre_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_lat.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_lat.v
+
+
+_VCSgd_avDDne_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ctrl.v
+
+
+_VCSgd_6jqbDd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_clkgate.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_clkgate.v
+
+
+_VCSgd_euIZYd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_model.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_model.v
+
+
+_VCSgd_nKPaMb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fpga_sram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_fpga_sram.v
+
+
+_VCSgd_0NEQZd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_excl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_excl.v
+
+
+_VCSgd_GceAed_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2pack.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2pack.v
+
+
+_VCSgd_ESVsle_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_split.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_split.v
+
+
+_VCSgd_3KAhTc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_pack2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_pack2ibp.v
+
+
+_VCSgd_Of86Be_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2single.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp2single.v
+
+
+_VCSgd_JFUpk_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_bypbuf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_bypbuf.v
+
+
+_VCSgd_Fx9Stb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_cwbind.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/alb_mss_mem_ibp_cwbind.v
+
+
+_VCSgd_hiLymd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_axi_xtor.v
+
+
+_VCSgd_zvZ4Jc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal_pipemon.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/rascal_pipemon.v
+
+
+_VCSgd_suCRo_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/clock_and_reset.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/clock_and_reset.v
+
+
+_VCSgd_Xq6mTd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/core_sys.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/core_sys.v
+
+
+_VCSgd_dXROGc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/io_pad_ring.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/io_pad_ring.v
+
+
+_VCSgd_HOL0me_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/core_chip.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/core_chip.v
+
+
+_VCSgd_mg5O7b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/board.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/board.v
+
+
+_VCSgd_yZ0dId_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_fetcher.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_fetcher.sv
+
+
+_VCSgd_Lkxe0c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_id_ctrl.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_id_ctrl.sv
+
+
+_VCSgd_0PPvrb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm.sv
+
+
+_VCSgd_qjIdtb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm_csr.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_iccm_csr.sv
+
+
+_VCSgd_iXex_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_encoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_encoder.v
+
+
+_VCSgd_1VSKAd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_decoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm_ecc_decoder.v
+
+
+_VCSgd_VNdI1d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_align.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_align.sv
+
+
+_VCSgd_ZL4kM_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache.sv
+
+
+_VCSgd_YKQJ7b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_rf.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_rf.sv
+
+
+_VCSgd_Kjnb7c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_ctl.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu_icache_ctl.sv
+
+
+_VCSgd_fGKKB_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_encoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_encoder.v
+
+
+_VCSgd_Abro9c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_decoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ecc_decoder.v
+
+
+_VCSgd_1dTase_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_encoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_encoder.v
+
+
+_VCSgd_iHLiEb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_decoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ecc_decoder.v
+
+
+_VCSgd_sLocmd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ifu.sv
+
+
+_VCSgd_Qubg2c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_clock_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_clock_ctrl.v
+
+
+_VCSgd_EyluQd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_wrap.v
+
+
+_VCSgd_aP444d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl.v
+
+
+_VCSgd_0GpMtb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_handshake.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_handshake.v
+
+
+_VCSgd_HGArcc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_fsm.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/reset_fsm.v
+
+
+_VCSgd_0X0wkb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cdc_synch_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cdc_synch_wrap.v
+
+
+_VCSgd_LNpaib_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_synch.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_reset_ctrl_synch.v
+
+
+_VCSgd_FI2vw_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_misc_synch.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_misc_synch.v
+
+
+_VCSgd_WOEScc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_synch_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_synch_wrap.v
+
+
+_VCSgd_WdyyGc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wdt_synch.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wdt_synch.sv
+
+
+_VCSgd_xL5Xu_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer_synch.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer_synch.sv
+
+
+_VCSgd_J0Z7Ub_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp_target_wrapper.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp_target_wrapper.v
+
+
+_VCSgd_FSCYzc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ecc_cnt.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ecc_cnt.v
+
+
+_VCSgd_YWmKie_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ras_top.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ras_top.v
+
+
+_VCSgd_xDISzb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_adder.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_adder.sv
+
+
+_VCSgd_Vsm5ec_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu_data_path.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu_data_path.sv
+
+
+_VCSgd_bAAWGc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_alu.sv
+
+
+_VCSgd_WRQ2me_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_iesb.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_iesb.v
+
+
+_VCSgd_484Mec_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bypass.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bypass.v
+
+
+_VCSgd_Fs8ji_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_result_bus.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_result_bus.v
+
+
+_VCSgd_CvNDmd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pipe_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pipe_ctrl.v
+
+
+_VCSgd_8OHr6b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_complete.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_complete.v
+
+
+_VCSgd_47ep1_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dispatch.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dispatch.v
+
+
+_VCSgd_MkI0oc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_uop_seq.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_uop_seq.sv
+
+
+_VCSgd_XcYX5b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mpy.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mpy.sv
+
+
+_VCSgd_rZ063b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_byte_unit.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_byte_unit.v
+
+
+_VCSgd_hO4Zzb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan.v
+
+
+_VCSgd_pAPwk_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_32b.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_32b.v
+
+
+_VCSgd_OW0ECb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_16b.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_16b.v
+
+
+_VCSgd_vHHfTd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_8b.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_8b.v
+
+
+_VCSgd_eKoKf_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_4b.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_bitscan_4b.v
+
+
+_VCSgd_CFzFBd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_branch.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_branch.v
+
+
+_VCSgd_lDVfeb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_csr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_csr.v
+
+
+_VCSgd_eRgJcd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_trap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_trap.v
+
+
+_VCSgd_7Kdxgd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_special.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_special.v
+
+
+_VCSgd_7Idq7d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_exu.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_exu.v
+
+
+_VCSgd_waPn9b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_decoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_decoder.v
+
+
+_VCSgd_EiNh9c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_predecoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_predecoder.v
+
+
+_VCSgd_N7LsOe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_halt_mgr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_halt_mgr.v
+
+
+_VCSgd_MUFwwd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_debug.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_debug.v
+
+
+_VCSgd_xFcLW_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_regfile.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_regfile.sv
+
+
+_VCSgd_3Lvcxd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_maskgen.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_maskgen.v
+
+
+_VCSgd_enuYFb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_logic_unit.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_logic_unit.v
+
+
+_VCSgd_rvMbT_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_shifter.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_shifter.sv
+
+
+_VCSgd_lk1aRc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_ffs_33.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_ffs_33.v
+
+
+_VCSgd_0nFMcc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_shift_34.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_shift_34.v
+
+
+_VCSgd_FZqhkc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_radix4_counter.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_fd_radix4_counter.v
+
+
+_VCSgd_5xkwYb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_32x4.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_32x4.v
+
+
+_VCSgd_qLci5d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp302.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp302.v
+
+
+_VCSgd_nz0U1d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp402.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp402.v
+
+
+_VCSgd_18F0c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp612.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp612.v
+
+
+_VCSgd_BW8Bfc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp522.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp522.v
+
+
+_VCSgd_yHNNdc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp622.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp622.v
+
+
+_VCSgd_KseP7c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp432.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp432.v
+
+
+_VCSgd_WXqjlc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp222.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp222.v
+
+
+_VCSgd_8neYe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp312.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_wtree_comp312.v
+
+
+_VCSgd_jaL5Gb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp.v
+
+
+_VCSgd_1zhMmb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_epmp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_epmp.v
+
+
+_VCSgd_Z9UtCe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp_hit.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pmp_hit.v
+
+
+_VCSgd_epbZ4c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers.v
+
+
+_VCSgd_9ywJGd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers_iso.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_triggers_iso.v
+
+
+_VCSgd_cYx9E_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma.v
+
+
+_VCSgd_Wuusdb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma_hit.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_pma_hit.v
+
+
+_VCSgd_bOUyvb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp.v
+
+
+_VCSgd_Ho1dc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_amo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_amo.v
+
+
+_VCSgd_UxWAnd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_load_aligner.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_load_aligner.v
+
+
+_VCSgd_6qnQbc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_store_aligner.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_store_aligner.v
+
+
+_VCSgd_x4FF_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_csr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_csr.v
+
+
+_VCSgd_wjNUY_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm.sv
+
+
+_VCSgd_TuGyMb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_ecc_store_aligner.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_ecc_store_aligner.v
+
+
+_VCSgd_Vqwqfb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_encoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_encoder.v
+
+
+_VCSgd_SHBRvc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_decoder.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ecc_decoder.v
+
+
+_VCSgd_R1Wh4b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ibp_wrapper.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_dccm_ibp_wrapper.v
+
+
+_VCSgd_cQlHk_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_cwb.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_cwb.sv
+
+
+_VCSgd_X2spfe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_soft_reset_aux.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_soft_reset_aux.v
+
+
+_VCSgd_RiP6h_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq.v
+
+
+_VCSgd_kISNBd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_fifo.v
+
+
+_VCSgd_OHWrSc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_cmd_port.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_dmp_lsq_cmd_port.v
+
+
+_VCSgd_mqjN5c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_simple_fifo.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_simple_fifo.v
+
+
+_VCSgd_5ryWMb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2ahb.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2ahb.v
+
+
+_VCSgd_4rjQqb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_per_ibp2ahb.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_per_ibp2ahb.v
+
+
+_VCSgd_qEostd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ahb2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ahb2ibp.v
+
+
+_VCSgd_1of0Ld_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mmio_ahb2ibp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_mmio_ahb2ibp.v
+
+
+_VCSgd_SUtOG_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_gen.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_gen.v
+
+
+_VCSgd_Cwlyt_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_chk.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_parity_chk.v
+
+
+_VCSgd_KyXnhc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2mmio.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_ibp2mmio.v
+
+
+_VCSgd_sOZqWb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_core.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_core.v
+
+
+_VCSgd_HqelLb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_top.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_cpu_top.v
+
+
+_VCSgd_zu4V7b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_imsic_clint.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_imsic_clint.v
+
+
+_VCSgd_WlwQpc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb.v
+
+
+_VCSgd_G4DfHd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb_4to1.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iprio_arb_4to1.v
+
+
+_VCSgd_kMjR2_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_hpm.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_hpm.v
+
+
+_VCSgd_k8DeOd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_timer.v
+
+
+_VCSgd_wb6AFc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog.v
+
+
+_VCSgd_h7Zi6c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_csr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_csr.v
+
+
+_VCSgd_MFc3h_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_watchdog_ctrl.v
+
+
+_VCSgd_sH4rAe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wd_parity.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_wd_parity.v
+
+
+_VCSgd_Po54Wc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_csr.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_csr.v
+
+
+_VCSgd_o9CuJb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_ibp_ini_e2e_wrap.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_ibp_ini_e2e_wrap.sv
+
+
+_VCSgd_XEK7C_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_dmsi_down_tgt_e2e_wrap.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sfty_dmsi_down_tgt_e2e_wrap.sv
+
+
+_VCSgd_CpWAXb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm00_maj.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm00_maj.v
+
+
+_VCSgd_jTyxnb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_gen.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_gen.v
+
+
+_VCSgd_wauALd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_gen.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_gen.v
+
+
+_VCSgd_FOkduc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_cac.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_cac.v
+
+
+_VCSgd_FqRCEb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_shdw_cac.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_shdw_cac.v
+
+
+_VCSgd_QNJXwb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_cac_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_cac_wrap.v
+
+
+_VCSgd_4sqtQc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_chk.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_chk.v
+
+
+_VCSgd_Hvi4Bd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_chk_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_chk_wrap.v
+
+
+_VCSgd_VMGQ1b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sr_err_aggr.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/sr_err_aggr.sv
+
+
+_VCSgd_thMpjd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_comparator.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_comparator.sv
+
+
+_VCSgd_tXgddb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec.v
+
+
+_VCSgd_i4qhwd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_dec_wrap.v
+
+
+_VCSgd_EayfR_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_dec_wrap.v
+
+
+_VCSgd_hEHnGd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_enc.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_enc.v
+
+
+_VCSgd_Lt6Mlb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec.v
+
+
+_VCSgd_500t2_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_dec_wrap.v
+
+
+_VCSgd_BTZMIe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_dec_wrap.v
+
+
+_VCSgd_JngWyd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_enc.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_enc.v
+
+
+_VCSgd_Ht1qE_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_di_cac_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_ecc32_1stg_qual_di_cac_wrap.v
+
+
+_VCSgd_23anKb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_di_chk_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/e2e_edc32_1stg_qual_di_chk_wrap.v
+
+
+_VCSgd_O7KB4b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_di_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_di_dec_wrap.v
+
+
+_VCSgd_gvm76_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_di_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/even_pty_qual_di_dec_wrap.v
+
+
+_VCSgd_TdLFUd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_di_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_di_dec_wrap.v
+
+
+_VCSgd_5jrEDb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_di_dec_wrap.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/odd_pty_qual_di_dec_wrap.v
+
+
+_VCSgd_cqQbke_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_srams.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_srams.sv
+
+
+_VCSgd_OlMuLe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clkgate.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/clkgate.v
+
+
+_VCSgd_FDiCvd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ram_core.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ram_core.v
+
+
+_VCSgd_8Y7LHd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpga_sram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/fpga_sram.v
+
+
+_VCSgd_MkN0Bc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm0_ram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/iccm0_ram.v
+
+
+_VCSgd_88DI_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dccm_ram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dccm_ram.v
+
+
+_VCSgd_QQJCA_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_tag_ram.v
+
+
+_VCSgd_o6weed_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ram.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ic_data_ram.v
+
+
+_VCSgd_1q4Cse_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21_atv.v
+
+
+_VCSgd_U0stzd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm21.v
+
+
+_VCSgd_rDgw0b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99.v
+
+
+_VCSgd_TCxHee_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rtl_pipemon.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rtl_pipemon.v
+
+
+_VCSgd_8CCRK_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm.sv
+
+
+_VCSgd_Gx4tre_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cdc_sync.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cdc_sync.v
+
+
+_VCSgd_fGg4Ge_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_clock_gate.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_clock_gate.v
+
+
+_VCSgd_a02BEd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cgm.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_cgm.v
+
+
+_VCSgd_6aYNfb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_hmst.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_hmst.sv
+
+
+_VCSgd_HBHzwd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ibp_if.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ibp_if.sv
+
+
+_VCSgd_zshZob_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_tx.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_tx.v
+
+
+_VCSgd_zlNcdd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_rx.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_src_sync_rx.v
+
+
+_VCSgd_3dqktd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ssync_clkgate.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dm_ssync_clkgate.sv
+
+
+_VCSgd_z1uXXc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_top.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/arcv_dm_top.v
+
+
+_VCSgd_iy5fy_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/bvci_to_axi.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/bvci_to_axi.v
+
+
+_VCSgd_mnOIqe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_buf_gate.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_buf_gate.v
+
+
+_VCSgd_R8TOab_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/apb_master_ap0.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/apb_master_ap0.v
+
+
+_VCSgd_HXzLb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp.v
+
+
+_VCSgd_cuxIxc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/jtag_buf.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/jtag_buf.v
+
+
+_VCSgd_oGLM3c_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_jtag_port.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_jtag_port.v
+
+
+_VCSgd_blvKje_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_debug_port.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_debug_port.v
+
+
+_VCSgd_WL1lj_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_tap_controller.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_tap_controller.v
+
+
+_VCSgd_GqukNe_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_sys_clk_sync.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_sys_clk_sync.v
+
+
+_VCSgd_AFKLA_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_cdc_sync.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dw_dbp_cdc_sync.v
+
+
+_VCSgd_kwV0ad_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_reset_ctrl.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/dwt_reset_ctrl.v
+
+
+_VCSgd_fh4Zr_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_input_delay.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_input_delay.sv
+
+
+_VCSgd_q4sEke_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_compare_unit.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_compare_unit.v
+
+
+_VCSgd_J8m0nc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_multi_bit_comparator.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_multi_bit_comparator.sv
+
+
+_VCSgd_yQNNMb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_reset_sync.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_reset_sync.v
+
+
+_VCSgd_0WtZn_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_sync.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_cdc_sync.v
+
+
+_VCSgd_W6hDsd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_syncP.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/multi_bit_syncP.v
+
+
+_VCSgd_lMtTle_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/single_bit_syncP.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/single_bit_syncP.v
+
+
+_VCSgd_u3ugWc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_error_register.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_error_register.v
+
+
+_VCSgd_FXKj0b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/simple_parity.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/simple_parity.v
+
+
+_VCSgd_rFLuHb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_register.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_register.v
+
+
+_VCSgd_FQpLje_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_boot_counter.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_boot_counter.v
+
+
+_VCSgd_m9Xw8b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_3.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_3.v
+
+
+_VCSgd_Zi2zjc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_4.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_4.v
+
+
+_VCSgd_AawsN_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_n.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm99_n.v
+
+
+_VCSgd_RCrdnc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm23_atv.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm23_atv.v
+
+
+_VCSgd_FUGXEb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm95.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/DWbb_bcm95.v
+
+
+_VCSgd_Lmvj8d_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_top_safety_controller.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_top_safety_controller.sv
+
+
+_VCSgd_zj86hd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/err_inj_ctrl.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/err_inj_ctrl.sv
+
+
+_VCSgd_1QHEmc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_sfty_mnt_diag_ctrl.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/ls_sfty_mnt_diag_ctrl.sv
+
+
+_VCSgd_7sStLc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/safety_iso_sync.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/safety_iso_sync.sv
+
+
+_VCSgd_mVYtWc_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_safety_monitor.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/cpu_safety_monitor.sv
+
+
+_VCSgd_iZTHIb_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_reg_agent.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_reg_agent.sv
+
+
+_VCSgd_UNtKre_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_err_aggr.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_mnt_err_aggr.sv
+
+
+_VCSgd_N53g8b_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_ibp_tgt_e2e_wrap.sv 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/rl_sfty_ibp_tgt_e2e_wrap.sv
+
+
+_VCSgd_MWTvwd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/archipelago.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/RTL/archipelago.v
+
+
+_VCSgd_GsZtUd_1.db :	/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_top.v 
+		${VLOGAN}  ${VLOGAN_OPT} /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/verilog/zebu_top.v
+
+

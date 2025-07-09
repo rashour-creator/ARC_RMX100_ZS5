@@ -1,0 +1,16 @@
+`define ARCV_DM_MAKE_SYS             0
+`define ARCV_DM_ABC_IBP_IF_SRCSYNC   0
+`define ARCV_DM_ARCV2MSS 1
+`define ARCV_DM_NUM_SLV  0
+`define ARCV_DM_ADDR_WIDTH 32
+`define ARCV_DM_NUM_MST  0
+`define ARCV_DM_TIE_SIGNALS_0_NAME  dbg_apb_presetn_early
+`define ARCV_DM_TIE_SIGNALS_0_RANGE 
+`define ARCV_DM_TIE_SIGNALS_0_VALUE 1
+`define ARCV_DM_TIE_SIGNALS_1_NAME  dbg_unlock
+`define ARCV_DM_TIE_SIGNALS_1_RANGE [1:0]
+`define ARCV_DM_TIE_SIGNALS_1_VALUE 2'b01
+`define ARCV_DM_TIE_SIGNALS 2
+`define ARCV_DM_STUB_SIGNALS_0_NAME  safety_isol_change
+`define ARCV_DM_STUB_SIGNALS_0_RANGE [1:0]
+`define ARCV_DM_STUB_SIGNALS 1

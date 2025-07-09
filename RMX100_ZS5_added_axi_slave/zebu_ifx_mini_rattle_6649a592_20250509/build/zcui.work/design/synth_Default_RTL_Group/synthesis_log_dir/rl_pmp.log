@@ -1,0 +1,36 @@
+#   step REPORT : Synthesizing module : rl_pmp
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : rl_pmp
+#   step REPORT : [39.350] Instance count of module rl_pmp is 2
+#   step REPORT : [6.1691] Total net count: 6285
+#   step REPORT : [6.1690] There are 17 levels of combinational cells
+#   step REPORT : [6.1689] There are 34 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 118
+#   step REPORT : [6.1695] 3-input LUTs: 474
+#   step REPORT : [6.1695] 4-input LUTs: 114
+#   step REPORT : [6.1695] 5-input LUTs: 150
+#   step REPORT : [6.1695] 6-input LUTs: 1278
+#   step REPORT : [6.1696] Total LUT area: 2134
+#   step REPORT : [6.1697] State    : 640
+#   step REPORT : [6.1697]   (FF)   : 640
+#   step REPORT : [6.1697] CARRY    : 48
+#   step REPORT : [6.1697] +CSA LUTs: 2086
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'rl_pmp' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 640 |                4220 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 208 |                  32 |                   0 |                   0 |                   0 || rl_pmp
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'rl_pmp' to 'edif/rl_pmp/rl_pmp.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/rl_pmp/rl_pmp.edf.gz'
+#   step SERIALIZE : #bytes in: 250772, #bytes out: 108744, compression ratio: 2.306077
+#   step REPORT : [87.28] Resource usage for rl_pmp: 0.666s 112.2M

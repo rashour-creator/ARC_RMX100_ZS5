@@ -1,0 +1,443 @@
+var config = {
+  "name": "System",
+  "type": "com.arc.hardware.System.1_0",
+  "path": "System",
+  "options": {
+    "OPTION_SimulatorName": "vcs",
+    "sim64": false,
+    "export_srams_to": "archipelago",
+    "copy_prefix": ""
+  },
+  "kids": [
+    {
+      "name": "ARCRV CCT",
+      "type": "cct.RV.1_0",
+      "path": "System.ARCRV CCT",
+      "options": {
+        "no_hostlink": false
+      }
+    },
+    {
+      "name": "ARCV_DM",
+      "type": "com.arc.hardware.ARC_Soc_Trace.ARCV_DM.1_0",
+      "path": "System.ARCV_DM",
+      "shortname": "arcv_dm",
+      "options": {
+        "dm_dbg_secure": "unlock_only",
+        "dm_system_bus_access": false,
+        "dm_dbg_apb_async": false,
+        "dm_dbg_apb_freq": "100",
+        "dm_abc_ibp_if_srcsync": false
+      },
+      "options_to_int": {
+        "dm_dbg_secure": 2
+      }
+    },
+    {
+      "name": "BusFabric",
+      "type": "com.arc.hardware.ARCv2MSS.BusFabric.1_0",
+      "path": "System.BusFabric",
+      "shortname": "alb_mss_fab",
+      "options": {
+        "alb_mss_fab_def_div2ref": 1,
+        "alb_mss_fab_lat": 0,
+        "alb_mss_fab_lat_rd": 0,
+        "alb_mss_fab_lat_wr": 0,
+        "alb_mss_fab_cdc_fifo_en": false,
+        "alb_mss_fab_def_lat": 0,
+        "alb_mss_fab_def_lat_rd": 0,
+        "alb_mss_fab_def_lat_wr": 0,
+        "alb_mss_fab_def_wr_bw": 0,
+        "alb_mss_fab_def_rd_bw": 0,
+        "alb_mss_ccm_base": 262144
+      }
+    },
+    {
+      "name": "CPUisle",
+      "type": "com.arc.hardware.EM.CPU_isle.1_0",
+      "path": "System.CPUisle",
+      "options": {
+        "unique_name": "",
+        "ArcNum": 0,
+        "instances": 1,
+        "CPUFloorplan": "User",
+        "userCPUFloorplanPath": "",
+        "pinLocationConstraintsFile": ""
+      },
+      "type_prefix": "",
+      "define_prefix": "",
+      "instances": [
+        {
+          "signal_prefix": "",
+          "clk_prefix": "",
+          "type_prefix": "",
+          "define_prefix": ""
+        }
+      ],
+      "kids": [
+        {
+          "name": "ARCv5EM",
+          "type": "com.arc.hardware.EM.ARCv5EM.1_0",
+          "path": "System.CPUisle.ARCv5EM",
+          "options": {
+            "rnmi_vec_ext": true,
+            "rnmi_int_vec": "0",
+            "mmio_base_ext": true,
+            "mmio_base": "3584",
+            "dmi_burst_option": false,
+            "mem_bus_option": "AHB5",
+            "mem_bus_num": 1,
+            "per0_bus_option": "AHB5",
+            "nvm_bus_option": "AHB5",
+            "bus_ecc_parity_option": "Odd",
+            "rmx_isa_profile": "default_profile",
+            "rv_zicsr_option": true,
+            "rv_c_bit_manip_icond_option": true,
+            "rv_a_option": true,
+            "rv_m_option": true,
+            "rv_zfinx_option": false,
+            "rv_zdinx_option": false,
+            "rvv_option": false,
+            "rv_udsp_option": false,
+            "rv_s_option": false,
+            "rv_wg_option": true,
+            "wid_mode": "Dynamic",
+            "wid_num": 32,
+            "wid_fixed": "0",
+            "mpy_option": "10c",
+            "ld_st_queue": 2,
+            "ld_st_unaligned": true,
+            "dmp_mem_banks": 2,
+            "advanced_fusion": false,
+            "secded_option": "all_01",
+            "sbe_addr_depth": 1,
+            "halt_on_reset": true,
+            "soft_reset_option": true,
+            "reset_pc_ext": true,
+            "reset_pc": 0,
+            "logic_bist": true,
+            "power_domains": false,
+            "pdm_has_fg": false,
+            "clock_gating": true,
+            "bpu_bc_entries": 512,
+            "bpu_pt_entries": 8192,
+            "bpu_rs_entries": 4,
+            "backdoor_ccm": false
+          },
+          "options_to_int": {
+            "mem_bus_option": 0,
+            "per0_bus_option": 0,
+            "nvm_bus_option": 0,
+            "bus_ecc_parity_option": 1,
+            "rmx_isa_profile": 1,
+            "wid_mode": 1,
+            "mpy_option": 3,
+            "secded_option": 1
+          },
+          "kids": [
+            {
+              "name": "Core Local Interrupt Controller",
+              "type": "com.arc.hardware.EM.Core_Local_Interrupt_Controller.1_0",
+              "path": "System.CPUisle.ARCv5EM.Core Local Interrupt Controller",
+              "options": {
+                "small_interrupt": false,
+                "sfty_irq_dual": 0,
+                "rtia_stsp": true,
+                "rtia_snvi": true,
+                "rtia_smrnmi": true,
+                "rtia_hart_major_prio": true,
+                "rtia_hart_major_prio_width": 6,
+                "rtia_sswi": false,
+                "rtia_delivery": "DMSI",
+                "rtia_imsic_m_mode_file": true,
+                "rtia_imsic_m_file_size": 64
+              },
+              "options_to_int": {
+                "rtia_delivery": 0
+              }
+            },
+            {
+              "name": "Core Private Peripheral0",
+              "type": "com.arc.hardware.EM.Core_Private_Peripheral0.1_0",
+              "path": "System.CPUisle.ARCv5EM.Core Private Peripheral0",
+              "options": {
+                "per0_base": 3840,
+                "per0_size": 1
+              }
+            },
+            {
+              "name": "DCCM",
+              "type": "com.arc.hardware.EM.DCCM.1_0",
+              "path": "System.CPUisle.ARCv5EM.DCCM",
+              "options": {
+                "dccm_size": 1048576,
+                "dccm_base": 2048,
+                "dccm_dmi": true,
+                "dccm_ecc_option": "SECDED_ADDR",
+                "dccm_ecc_init": false
+              },
+              "options_to_int": {
+                "dccm_ecc_option": 2
+              }
+            },
+            {
+              "name": "Debug Interface",
+              "type": "com.arc.hardware.EM.Debug_Interface.1_0",
+              "path": "System.CPUisle.ARCv5EM.Debug Interface",
+              "options": {
+                "num_triggers_t6": 4
+              }
+            },
+            {
+              "name": "Hadrware Performance Monitor",
+              "type": "com.arc.hardware.EM.Hardware_Performance_Monitor.1_0",
+              "path": "System.CPUisle.ARCv5EM.Hadrware Performance Monitor",
+              "options": {
+                "hpm_counters": 8,
+                "hpm_overflow_interrupt": true,
+                "hpm_counter_width": 64
+              }
+            },
+            {
+              "name": "ICCM0",
+              "type": "com.arc.hardware.EM.ICCM0.1_0",
+              "path": "System.CPUisle.ARCv5EM.ICCM0",
+              "options": {
+                "iccm0_size": 524288,
+                "iccm0_base": 0,
+                "iccm0_dmi": true,
+                "iccm0_ecc_option": "SECDED_ADDR",
+                "iccm0_ecc_init": false
+              },
+              "options_to_int": {
+                "iccm0_ecc_option": 3
+              }
+            },
+            {
+              "name": "Instruction Cache",
+              "type": "com.arc.hardware.EM.Instruction_Cache.1_0",
+              "path": "System.CPUisle.ARCv5EM.Instruction Cache",
+              "options": {
+                "ic_size": 16384,
+                "ic_ways": 2,
+                "ic_bsize": 32,
+                "ic_disable_on_reset": false,
+                "ic_ecc_option": "SECDED_ADDR"
+              },
+              "options_to_int": {
+                "ic_ecc_option": 3
+              }
+            },
+            {
+              "name": "PMA",
+              "type": "com.arc.hardware.EM.PMA.1_0",
+              "path": "System.CPUisle.ARCv5EM.PMA",
+              "options": {
+                "pma_entries": 6
+              }
+            },
+            {
+              "name": "PMP",
+              "type": "com.arc.hardware.EM.PMP.1_0",
+              "path": "System.CPUisle.ARCv5EM.PMP",
+              "options": {
+                "pmp_entries": 16,
+                "pmp_granularity": 32
+              }
+            },
+            {
+              "name": "Watchdog Timer",
+              "type": "com.arc.hardware.EM.Watchdog_Timer.1_0",
+              "path": "System.CPUisle.ARCv5EM.Watchdog Timer",
+              "options": {
+                "watchdog_clk": true,
+                "watchdog_clk_freq": 20,
+                "watchdog_num": 1,
+                "watchdog_size": 32
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "ClkCtrl",
+      "type": "com.arc.hardware.ARCv2MSS.ClkCtrl.1_0",
+      "path": "System.ClkCtrl",
+      "shortname": "alb_mss_clkctrl",
+      "options": {
+        "alb_mss_clkctrl_base_addr": 786432,
+        "alb_mss_clkctrl_bypass_mode": false
+      }
+    },
+    {
+      "name": "DW_DBP",
+      "type": "com.arc.hardware.DW_DBP.1_0",
+      "path": "System.DW_DBP",
+      "shortname": "dw_dbp",
+      "options": {
+        "jtag_interface": true,
+        "dbp_jtag_ap": true,
+        "num_apb_ap": 1,
+        "dbp_apb_ap_async": false,
+        "num_axi_ap": 1,
+        "num_apb_client0": 1,
+        "num_apb_client1": 1,
+        "num_apb_client2": 1,
+        "num_apb_client3": 1,
+        "num_apb_client4": 1,
+        "num_apb_client5": 1,
+        "num_apb_client6": 1,
+        "num_apb_client7": 1
+      }
+    },
+    {
+      "name": "Implementation",
+      "type": "com.arc.hardware.implementation.1_0",
+      "path": "System.Implementation",
+      "options": {
+        "ClockSpeed": 20,
+        "DDR2_clk_Ratio": "3x",
+        "ClockSkew": 0.20000000298023224,
+        "HoldMargin": 0.05000000074505806,
+        "Floorplan": "User",
+        "JTAGFrequency": 10,
+        "execution_trace_level": "stats",
+        "unique_clk": true,
+        "generate_ipxact": true,
+        "ipxact_include_aux_regs": true,
+        "ipxact_relative_path_names": true,
+        "generate_dita_files": false,
+        "optional_encryption": false,
+        "ignore_encrypt_license": false,
+        "ignore_clear_license": false
+      }
+    },
+    {
+      "name": "Profiler",
+      "type": "com.arc.hardware.ARCv2MSS.Profiler.1_0",
+      "path": "System.Profiler",
+      "shortname": "alb_mss_perfctrl",
+      "options": {
+        "alb_mss_perfctrl_base_addr": 786434,
+        "alb_mss_perfctrl_tie_signal_control": false,
+        "alb_mss_perfctrl_signal_monitor_num": 1
+      }
+    },
+    {
+      "name": "SRAMCtrl",
+      "type": "com.arc.hardware.ARCv2MSS.SRAMCtrl.1_0",
+      "path": "System.SRAMCtrl",
+      "shortname": "alb_mss_mem",
+      "options": {
+        "alb_mss_mem_region_num": 1,
+        "alb_mss_mem0_base_addr": "0",
+        "alb_mss_mem0_size": "2GB",
+        "alb_mss_mem0_attr": "Read-Write",
+        "alb_mss_mem0_secure": "Non-Secure",
+        "alb_mss_mem0_lat": 1024,
+        "alb_mss_mem0_def_lat": 0,
+        "alb_mss_mem0_lat_rd": 0,
+        "alb_mss_mem0_def_lat_rd": 0,
+        "alb_mss_mem0_lat_wr": 0,
+        "alb_mss_mem0_def_lat_wr": 0,
+        "alb_mss_mem1_base_addr": "1048576",
+        "alb_mss_mem1_size": "1MB",
+        "alb_mss_mem1_attr": "Read-Write",
+        "alb_mss_mem1_secure": "Non-Secure",
+        "alb_mss_mem1_lat": 0,
+        "alb_mss_mem1_def_lat": 0,
+        "alb_mss_mem1_lat_rd": 0,
+        "alb_mss_mem1_def_lat_rd": 0,
+        "alb_mss_mem1_lat_wr": 0,
+        "alb_mss_mem1_def_lat_wr": 0,
+        "alb_mss_mem2_base_addr": "1048576",
+        "alb_mss_mem2_size": "1MB",
+        "alb_mss_mem2_attr": "Read-Write",
+        "alb_mss_mem2_secure": "Non-Secure",
+        "alb_mss_mem2_lat": 0,
+        "alb_mss_mem2_def_lat": 0,
+        "alb_mss_mem2_lat_rd": 0,
+        "alb_mss_mem2_def_lat_rd": 0,
+        "alb_mss_mem2_lat_wr": 0,
+        "alb_mss_mem2_def_lat_wr": 0,
+        "alb_mss_mem3_base_addr": "1048576",
+        "alb_mss_mem3_size": "1MB",
+        "alb_mss_mem3_attr": "Read-Write",
+        "alb_mss_mem3_secure": "Non-Secure",
+        "alb_mss_mem3_lat": 0,
+        "alb_mss_mem3_def_lat": 0,
+        "alb_mss_mem3_lat_rd": 0,
+        "alb_mss_mem3_def_lat_rd": 0,
+        "alb_mss_mem3_lat_wr": 0,
+        "alb_mss_mem3_def_lat_wr": 0,
+        "alb_mss_mem_is_default_slave": true,
+        "alb_mss_mem_default_space": 32,
+        "alb_mss_mem_data_width": 128
+      },
+      "options_to_int": {
+        "alb_mss_mem0_size": 19,
+        "alb_mss_mem0_attr": 2,
+        "alb_mss_mem0_secure": 0,
+        "alb_mss_mem1_size": 8,
+        "alb_mss_mem1_attr": 2,
+        "alb_mss_mem1_secure": 0,
+        "alb_mss_mem2_size": 8,
+        "alb_mss_mem2_attr": 2,
+        "alb_mss_mem2_secure": 0,
+        "alb_mss_mem3_size": 8,
+        "alb_mss_mem3_attr": 2,
+        "alb_mss_mem3_secure": 0
+      }
+    },
+    {
+      "name": "Safety Manager",
+      "type": "com.arc.hardware.RV.Safety_Manager.1_0",
+      "path": "System.Safety Manager",
+      "shortname": "rv_safety",
+      "options": {
+        "cpu_safety": 0,
+        "safety_delay": 0,
+        "hw_error_injection": true,
+        "reg_comparands": false
+      }
+    },
+    {
+      "name": "Tool Configuration",
+      "type": "cgen.1_0",
+      "path": "System.Tool Configuration",
+      "options": {
+        "mwdt_version": "default",
+        "code_base_addr": "0xffffffff",
+        "data_base_addr": "0xffffffff",
+        "ucdata_base_addr": "0xffffffff",
+        "ucdata_mem_size": "0",
+        "underscores_in_numbers": false,
+        "lcf_ccm_fill": true,
+        "tcf_rebrand_name": ""
+      }
+    },
+    {
+      "name": "ZEBU_AXI_XTOR",
+      "type": "com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_AXI_XTOR.1_0",
+      "path": "System.ZEBU_AXI_XTOR",
+      "shortname": "zebu_axi_xtor",
+      "options": {
+        "zebu_has_axi_xtor_gpio": false
+      }
+    },
+    {
+      "name": "ZEBU_BOX",
+      "type": "com.arc.hardware.ARCv2_ZEBU_RDF.ZEBU_BOX.1_0",
+      "path": "System.ZEBU_BOX",
+      "shortname": "zebu_box",
+      "options": {
+        "zebu_version": "ZS5",
+        "architecture_file_path": ""
+      },
+      "options_to_int": {
+        "zebu_version": 2
+      }
+    }
+  ]
+}

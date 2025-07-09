@@ -1,0 +1,78 @@
+Module alb_mss_fab_ibp2single_0000{
+}
+Module alb_mss_fab_fifo_0004{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0004{
+0 0 i_data
+5 0 i_occp
+0 0 o_data
+5 0 o_occp
+}
+EdfPortBounds zceiMessageOutPort_4096{
+4095 0 message
+}
+EdfPortBounds zemi3OutPortBuffer_169_4096_24{
+23 0 message0
+4095 0 msg_out
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_2_1{
+1 0 signal
+1 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_64_1{
+63 0 signal
+}
+EdfPortBounds zceiMessageOutPort_128{
+127 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_gdelay{
+23 0 out
+}
+EdfPortBounds zceiMessageOutPort_3{
+2 0 message
+}
+EdfPortBounds zceiMessageInPort_2{
+1 0 message
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_24_1{
+23 0 signal
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+EdfPortBounds zebu_bb_ts_cur_time{
+63 0 ts_time
+}
+EdfPortBounds zceiMessageInPort_6{
+5 0 message
+}
+NonAliasNets alb_mss_fab_ibp2single_0000{
+sdb_ibp_cmd_addr_r[32]    f   552
+sdb_ibp_cmd_addr_r[31]    f   553
+sdb_ibp_cmd_addr_r[30]    f   554
+sdb_ibp_cmd_addr_r[29]    f   555
+sdb_ibp_cmd_addr_r[28]    f   556
+sdb_ibp_cmd_addr_r[27]    f   557
+sdb_ibp_cmd_addr_r[26]    f   558
+sdb_ibp_cmd_addr_r[25]    f   559
+sdb_ibp_cmd_addr_r[24]    f   560
+sdb_ibp_cmd_addr_r[23]    f   561
+sdb_ibp_cmd_addr_r[22]    f   562
+sdb_ibp_cmd_addr_r[21]    f   563
+sdb_ibp_cmd_addr_r[20]    f   564
+sdb_ibp_cmd_addr_r[19]    f   565
+sdb_ibp_cmd_addr_r[18]    f   566
+sdb_ibp_cmd_addr_r[17]    f   567
+sdb_ibp_cmd_addr_r[16]    f   568
+sdb_ibp_cmd_addr_r[15]    f   569
+sdb_ibp_cmd_addr_r[14]    f   570
+sdb_ibp_cmd_addr_r[11]    f   573
+sdb_ibp_cmd_addr_r[13]    f   571
+sdb_ibp_cmd_addr_r[12]    f   572
+sdb_ibp_cmd_valid_r    f   603
+}

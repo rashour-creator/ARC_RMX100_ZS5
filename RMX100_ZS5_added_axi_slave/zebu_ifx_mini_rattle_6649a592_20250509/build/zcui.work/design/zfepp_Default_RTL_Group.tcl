@@ -1,0 +1,3 @@
+set CSA 0
+set NB_RETRY 120
+set RETRY_DELAY 1000

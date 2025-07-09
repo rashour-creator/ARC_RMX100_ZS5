@@ -1,0 +1,21 @@
+//----------------------------------------------------------------------------
+//
+// Copyright (C) 2010-2023 Synopsys, Inc. All rights reserved.
+//
+/// SYNOPSYS CONFIDENTIAL - This is an unpublished, proprietary 
+// work of Synopsys, Inc., and is fully protected under copyright and 
+// trade secret laws. You may not view, use, disclose, copy, or distribute 
+// this file or any information contained herein except pursuant to a 
+// valid written license from Synopsys, Inc.
+//
+// The entire notice above must be reproduced on all authorized copies.
+//
+
+add_file -xilinx ../fpga/ic_data_ram_fpga.ngc
+add_file -xilinx ../fpga/ic_tag_ram_fpga.ngc
+add_file -verilog -lib user ../fpga/ic_data_ram_fpga.v
+add_file -verilog -lib user ../fpga/ic_tag_ram_fpga.v
+add_file -xilinx ../fpga/iccm_ram_fpga.ngc
+add_file -verilog -lib user ../fpga/iccm_ram_fpga.v
+add_file -xilinx ../fpga/dccm_ram_fpga.ngc
+add_file -verilog -lib user ../fpga/dccm_ram_fpga.v

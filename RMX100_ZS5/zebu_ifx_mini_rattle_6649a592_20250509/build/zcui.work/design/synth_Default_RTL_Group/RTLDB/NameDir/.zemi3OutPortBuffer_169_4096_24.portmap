@@ -1,0 +1,79 @@
+Module zemi3OutPortBuffer_169_4096_24{
+}
+Module rtlClockControl{
+}
+Module zebu_reqsig_clock_driverclock{
+}
+
+EdfPortBounds mss_bus_switch_ibpx2ibpy_0001{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_mst_ibp_buffer_0000{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+34 0 i_ibp_rd_chnl
+36 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds rl_bitscan_32b{
+30 0 din
+4 0 dout
+}
+EdfPortBounds mss_bus_switch_ibp_compr_0000{
+235 0 i_bus_ibp_cmd_chnl
+3 0 i_bus_ibp_cmd_chnl_accept
+3 0 i_bus_ibp_cmd_chnl_user
+3 0 i_bus_ibp_cmd_chnl_valid
+3 0 i_bus_ibp_lockable
+139 0 i_bus_ibp_rd_chnl
+3 0 i_bus_ibp_rd_chnl_accept
+3 0 i_bus_ibp_rd_chnl_valid
+15 0 i_bus_ibp_uniq_id
+147 0 i_bus_ibp_wd_chnl
+3 0 i_bus_ibp_wd_chnl_accept
+3 0 i_bus_ibp_wd_chnl_valid
+11 0 i_bus_ibp_wrsp_chnl
+3 0 i_bus_ibp_wrsp_chnl_accept
+3 0 i_bus_ibp_wrsp_chnl_valid
+58 0 o_ibp_cmd_chnl
+3 0 o_ibp_cmd_chnl_id
+0 0 o_ibp_cmd_chnl_user
+34 0 o_ibp_rd_chnl
+36 0 o_ibp_wd_chnl
+3 0 o_ibp_wd_chnl_id
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds mss_bus_switch_ibp2ibps{
+58 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+0 0 i_ibp_cmd_chnl_user
+514 0 i_ibp_rd_chnl
+576 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+58 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+0 0 o_ibp_cmd_chnl_user
+514 0 o_ibp_rd_chnl
+576 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+NonAliasNets zemi3OutPortBuffer_169_4096_24{
+}

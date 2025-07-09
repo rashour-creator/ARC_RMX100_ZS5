@@ -1,0 +1,58 @@
+Nb_FPGA,Module,REG%,REG,LUT%,LUT,RAMLUT%,RAMLUT,LUT6%,LUT6,MUXCY%,MUXCY,BRAM%,BRAM,URAM%,URAM,DSP%,DSP,IOs,Path
+1,fx_top,100%,550105,100%,625971,100%,40661,100%,113033,100%,18,100%,213,100%,98,100%,2,2312,fx_top
+1,set_top__design_73,93%,509528,87%,539737,74%,29947,51%,57542,100%,18,70%,147,100%,98,100%,2,1077304,fx_top.design
+1,U0_M0_F1,91%,499147,85%,531511,74%,29883,50%,55449,100%,18,56%,119,100%,98,100%,2,121145,fx_top.design.U0_M0_F1
+1,U0_M0_F1_core,90%,493543,85%,527601,74%,29787,48%,54160,100%,18,56%,119,100%,98,100%,2,124553,fx_top.design.U0_M0_F1.U0_M0_F1_core
+1,core_sys,71%,388781,66%,408726,69%,27847,37%,40903,100%,18,52%,109,100%,98, 0%,0,216669,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys
+1,core_chip,71%,388783,66%,408726,69%,27847,37%,40903,100%,18,52%,109,100%,98, 0%,0,216671,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut
+1,xtor_amba_slave_axi3_svs,23%,121982,17%,101037,50%,20232, 1%,966,56%,10,25%,53, 0%,0, 0%,0,85349,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor
+1,axi_dummy_slave,23%,121984,17%,101037,50%,20232, 1%,966,56%,10,25%,53, 0%,0, 0%,0,85348,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave
+1,alb_mss_dummy_slave,23%,121984,17%,101037,50%,20232, 1%,966,56%,10,25%,53, 0%,0, 0%,0,85348,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave
+1,archipelago,19%,100455,17%,101818, 0%,0, 2%,1749,28%,5, 1%,1,100%,98, 0%,0,35419,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago
+1,rl_srams,15%,82441,16%,94146, 0%,0, 2%,1440,28%,5, 1%,1,100%,98, 0%,0,1060,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams
+1,zz_Encrypt_5,16%,84182,14%,81609,45%,17952, 1%,461,50%,9,24%,49, 0%,0, 0%,0,73270,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755
+1,wc_ip_top_withqiwc_32_zpt_wrapper_0, 8%,40577,14%,86234,27%,10714,50%,55491, 0%,0,31%,66, 0%,0, 0%,0,1064178,fx_top.wc_ip_top.wrapper
+1,wc_ip_top, 8%,40577,14%,86234,27%,10714,50%,55491, 0%,0,31%,66, 0%,0, 0%,0,1063986,fx_top.wc_ip_top
+1,zcahsrash, 2%,7541, 4%,19929, 0%,0, 4%,4380, 0%,0, 5%,10, 0%,0,100%,2,16631,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash
+1,rash_zpt_wrapper_0, 1%,4768, 2%,8463, 0%,0, 1%,8, 0%,0, 1%,2, 0%,0,100%,2,1586,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash.zins_rash.wrapper
+1,rash, 1%,4768, 2%,8463, 0%,0, 1%,8, 0%,0, 1%,2, 0%,0,100%,2,1426,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash.zins_rash
+1,rash_downstream_sib_8b7a7be2, 1%,1405, 1%,1236, 0%,0, 1%,1, 0%,0, 1%,2, 0%,0,100%,2,681,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash.zins_rash.wrapper.rash_downstream_sib_0
+1,rash_downstream_sib_decoder_e800465e, 1%,553, 1%,10, 0%,0, 0%,0, 0%,0, 1%,2, 0%,0,100%,2,588,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash.zins_rash.wrapper.rash_downstream_sib_0.rash_downstream_sib_decoder_0
+1,rash_downstream_sib_decoder_div_40c...(1)*, 1%,5, 0%,0, 0%,0, 0%,0, 0%,0, 1%,1, 0%,0,100%,2,31,fx_top.design.U0_M0_F1.U0_M0_F1_core.zcahsrash.zins_rash.wrapper.rash_downstream_sib_0.rash_downstream_sib_decoder_0.rash_downstream_sib_decoder_div_0
+1,qiwc_ip_cluster, 4%,18144, 9%,50548, 4%,1456,40%,45018, 0%,0,20%,41, 0%,0, 0%,0,1050224,fx_top.wc_ip_top.wrapper.qiwc_ip_cluster
+1,zebu_axi_xtor,11%,56324, 7%,39844,12%,4800, 1%,1118,17%,3,12%,24, 0%,0, 0%,0,26568,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor
+1,xtor_amba_master_axi3_svs,11%,56322, 7%,39844,12%,4800, 1%,1118,17%,3,12%,24, 0%,0, 0%,0,26569,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i
+1,reserved_scope_fpga_sram_0002_ZMEM_...(2)*, 5%,26746, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,220,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.mem_r
+1,reserved_scope_fpga_sram_0002_0000_...(3)*, 5%,26746, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,220,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.mem_r
+1,reserved_scope_fpga_sram_0002_0000_...(4)*, 5%,26746, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,220,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.mem_r
+1,iccm0_ram, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even
+1,fpga_sram_0002_0000_0, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram
+1,fpga_sram_0002_0000, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram
+1,fpga_sram_0002, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram
+1,dccm_ram_0, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even
+1,dccm_ram, 5%,26763, 5%,30693, 0%,0, 1%,480, 6%,1, 0%,0,33%,32, 0%,0,238,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd
+1,reserved_scope_fpga_sram_0002_ZMEM_...(5)*, 5%,26560, 5%,30568, 0%,0, 1%,480, 0%,0, 0%,0,33%,32, 0%,0,199,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.mem_r.memory_base
+1,reserved_scope_fpga_sram_0002_0000_...(6)*, 5%,26560, 5%,30568, 0%,0, 1%,480, 0%,0, 0%,0,33%,32, 0%,0,199,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.mem_r.memory_base
+1,reserved_scope_fpga_sram_0002_0000_...(7)*, 5%,26560, 5%,30568, 0%,0, 1%,480, 0%,0, 0%,0,33%,32, 0%,0,199,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.mem_r.memory_base
+1,fwc_ip_hs_cluster, 3%,15896, 5%,29802,23%,9249, 7%,7425, 0%,0, 0%,0, 0%,0, 0%,0,12493,fx_top.wc_ip_top.wrapper.fwc_ip_hs_cluster_32[0]
+1,prdbox_wrapper,13%,67846,13%,80007, 2%,536, 8%,8404, 0%,0, 0%,0, 0%,0, 0%,0,89220,fx_top.design.U0_M0_F1.U0_M0_F1_core.prdbox_wrapper
+1,alb_mss_mem, 6%,28571, 4%,19364, 7%,2815, 1%,683, 0%,0,15%,31, 0%,0, 0%,0,9250,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem
+1,zrm_1d_268435456x128_mask00000001, 5%,24277, 3%,18751, 7%,2815, 1%,647, 0%,0,13%,26, 0%,0, 0%,0,1062,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r.i_ZRM
+1,reserved_scope_alb_mss_fpga_sram_00...(8)*, 5%,24279, 3%,18751, 7%,2815, 1%,647, 0%,0,13%,26, 0%,0, 0%,0,1170,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r
+1,alb_mss_mem_model, 5%,24611, 3%,18756, 7%,2815, 1%,647, 0%,0,13%,26, 0%,0, 0%,0,1116,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst
+1,alb_mss_fpga_sram_0000, 5%,24611, 3%,18756, 7%,2815, 1%,647, 0%,0,13%,26, 0%,0, 0%,0,1115,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram
+1,zz_Encrypt_6, 2%,10004, 3%,14458, 5%,1908, 1%,10, 6%,1, 9%,18, 0%,0, 0%,0,9140,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802
+1,zz_Encrypt_9, 2%,9964, 3%,13773, 5%,1908, 1%,9, 6%,1, 9%,18, 0%,0, 0%,0,9126,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818
+1,f01_ddr4_ctrl_128x1024_0, 3%,16134, 2%,12480, 5%,1785, 1%,390, 0%,0,13%,26, 0%,0, 0%,0,5289,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r.i_ZRM.ctrl
+1,ddr4_ctrl_sodimm_1024x27_VU19P_with...(9)*, 3%,16134, 2%,12480, 5%,1785, 1%,390, 0%,0,13%,26, 0%,0, 0%,0,5480,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r.i_ZRM.ctrl.wrapper
+1,fx_macro_zs5_12c_f01_zero_DEVICE_8P...(10)*, 2%,9911, 2%,7421, 1%,64, 2%,1683, 0%,0,14%,28, 0%,0, 0%,0,2254,fx_top.design.zkprctrl.wrapper
+1,f01_fx_macro_bitslice, 2%,9911, 2%,7421, 1%,64, 2%,1683, 0%,0,14%,28, 0%,0, 0%,0,1616,fx_top.design.zkprctrl
+1,zz_Encrypt_7_6, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1438
+1,zz_Encrypt_7_5, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1439
+1,zz_Encrypt_7_4, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1440
+1,zz_Encrypt_7_3, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1441
+1,zz_Encrypt_7_2, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1442
+1,zz_Encrypt_7_1, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1443
+1,zz_Encrypt_7_0, 2%,10506, 2%,10067, 6%,2244, 1%,10, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1444
+1,zz_Encrypt_7, 2%,10506, 2%,10093, 6%,2244, 1%,11, 6%,1, 3%,6, 0%,0, 0%,0,9591,fx_top.design.U0_M0_F1.U0_M0_F1_core.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1445
+1,wc_ctrl_l2_48d96854, 2%,6537, 1%,5847, 1%,9, 3%,3016, 0%,0,12%,25, 0%,0, 0%,0,5495,fx_top.wc_ip_top.wrapper.wc_ctrl_l2

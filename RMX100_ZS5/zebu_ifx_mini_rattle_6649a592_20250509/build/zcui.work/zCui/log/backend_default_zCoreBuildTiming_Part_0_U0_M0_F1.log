@@ -1,0 +1,334 @@
+
+                                    ZeBu (R)
+                                     zTiNa
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zTiNa -zebuwork ../.. timing_analysis.tcl 
+
+# start time is Tue May 13 18:36:27 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:24
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4499.99 AMD EPYC 9754 128-Core Processor
+#            Load: 3.50 5.30 6.80 6/795 4053821
+#            Hostname: zebutrain-4761-004   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 202127 MB
+#            Swap space: 53247 MB Free Swap space: 51534 MB
+#            VmSize: 219 MB VmPeak: 219 MB
+# Disk Space Total: 5000 GB Available: 554 GB Used: 4446 GB
+#            Free inodes: 11763136
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step OPTIONSDB : Started reading options db ../../options.db
+#   step OPTIONSDB : Default value() overwritten with post_routing_basic for zopt
+#   step OPTIONSDB : Completed reading options db ../../options.db
+### warning in OPTIONSDB [OPTDB01] : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+#   step OPTIONSDB : Default value(false) overwritten with true for ztdb_rb_api
+#   step ZTiNa : # of threads: 32
+#   step ZTINA SESSION : zebuwork path set to '../..'
+#   step ZTINA CMD : tina::netlist_timing_analysis -fpga U0_M0_F1.edf.gz -timing_model /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel/ -clock_handling fetch -target zs5 -options CLOCK_CONE_CLR_PRE=1,CLOCK_CONE_LATCH=0,CLOCK_CONE_ENABLE=1,CLOCK_CONE_FEEDBACK=1,FILTER_ON_CLR_PRE=1,MCP_FEEDBACK=0,LD2FD_SAFE_TIMING=0,MODEL_FILTER_DATA=1 -clock_dependencies ../../tools/zTime/ -save U0_M0_F1 -tdfdr -ml_feature_setting ml_feature.tcl -delay_model machine_learning -gnetwork -gates_number_analysis -scc estimated
+#   step OPT : TRISTATE_PATH ZFILTER_ASYNC_SET_RESET_PATH ZFILTER_FETCH_FEEDBACK 
+#   step Loading netlist : Starting
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step TIMING ANALYSIS : considering U0_M0_F1 as DUT top
+#   step Loading netlist : Done in       elapsed:2 s      user:2 s   system:0.19 s     %cpu:100.87       load:3.86       fm:199559 m     vm:1196 m     vm:+681 m      um:820 m     um:+691 m
+#   step NETLIST ANALYSIS OPTIONS : instance name ''
+#   step NETLIST ANALYSIS OPTIONS : timing model db path is '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel/'
+#   step NETLIST ANALYSIS OPTIONS : clock dependencies file path is '../../tools/zTime/'
+#   step NETLIST ANALYSIS OPTIONS : machine learning setting file path is 'ml_feature.tcl'
+#   step NETLIST ANALYSIS OPTIONS : hardware platform is 'zs5'
+#   step NETLIST ANALYSIS OPTIONS : clock handling is 'fetch mode'
+#   step NETLIST ANALYSIS OPTIONS : delay computation algorithm is '4'
+#   step NETLIST ANALYSIS OPTIONS : Async set/reset pin of instrumented registers in clock cone are taken into account
+#   step NETLIST ANALYSIS OPTIONS : Instrumented latches in clock cone are ignored
+#   step NETLIST ANALYSIS OPTIONS : Enable pin of instrumented registers in clock cone are taken into account
+#   step NETLIST ANALYSIS OPTIONS : Feedback pin of instrumented registers in clock cone are taken into account
+#   step NETLIST ANALYSIS OPTIONS : Input of filter protecting clear and preset pin of register are taken into account
+#   step NETLIST ANALYSIS OPTIONS : Clock domain of feedback pin of instrumented registers in clock cone are not propagated
+#   step NETLIST ANALYSIS OPTIONS : Ignoring scc size limit is 'off'
+#   step NETLIST ANALYSIS OPTIONS : Zrm performance mode is 'off'
+#   step NETLIST ANALYSIS OPTIONS : Taking into account Gnetwork is 'on'
+#   step NETLIST ANALYSIS OPTIONS : Forcing non resolved clock domain on driver clock 'off'
+#   step NETLIST ANALYSIS OPTIONS : Forcing all clock domain to be driver clock 'off'
+#   step NETLIST ANALYSIS OPTIONS : Ignoring false path 'off'
+#   step NETLIST ANALYSIS OPTIONS : Computing gate numbers 'on'
+#   step NETLIST ANALYSIS OPTIONS : Automatically optimize vs memory latency 'off'
+#   step NETLIST ANALYSIS OPTIONS : Trigger paths to be taken into account only for a second zTime evaluation 'off'
+#   step NETLIST ANALYSIS OPTIONS : Ignore -light_details and -no_details switches 'off'
+#   step NETLIST ANALYSIS OPTIONS : Light details generation to reduce memory 'off'
+#   step NETLIST ANALYSIS OPTIONS : Zero details generation to reduce memory 'off'
+#   step NETLIST ANALYSIS OPTIONS : TDFDR support for Zgates connected on composite clock is 'off'
+#   step NETLIST ANALYSIS OPTIONS : Collect the clear and preset of clock domains 'on'
+#   step NETLIST ANALYSIS OPTIONS : Take into account ZEBU_FALSE_PATH marking 'on'
+#   step NETLIST ANALYSIS OPTIONS : Generate fpga io false path for zTime 'on'
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DUMP_SVG_MODEL is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DUMP_SYMPLIFY_NET is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_NODE is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_EDGE is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_FALSE_TAG is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_EQUI_DOMAIN is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_NODE_CLOCK_REF is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_CD is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_NODE_CD is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_DOMAIN is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_TOPO is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_DELAY is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_END_POINT is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_HYPER_ARC is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_GRAPH_INPUTS is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_MISSING_INSTANCE is off
+#   step NETLIST ANALYSIS DEBUG OPTIONS : DISPLAY_MEMORY_FOOTPRINT is off
+#   step TIMING ANALYSIS : Loading clock dependency graph from file source ../../tools/zTime//clock_dependencies.zti
+#   step SOURCE : Source gzipped file '../../tools/zTime//clock_dependencies.zti' ...
+#   step timing analysis initialisation : Starting
+#   step MLDM : fdFillRate: 0.021976, lutFillRate: 0.062821, platform: EP1, hdistOpt: true, debugLevel: 0 
+#   step MLDM : S2S socket delay: 4000, F2S socket delay: 3000, S2F socket delay: 2000 , clock skew: 15000, bufg_clock_skew: 3400
+#   step MLDM : populateMLFeatures(), productType:EP1
+#   step MLDM : enableMLDM(), line:11456, productType:2
+#   step MLDM : path model /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/mlmodelgen/1.0/models_zanaconda/path_fanout.mdl
+#   step TIMING MODEL DB : using fw library lib_zs5_xcvup_12c_19_v1
+#   step TIMING MODEL DB : timing model for (and2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (and2b1) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (and3) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (buf) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (bufgce) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (carry8) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorBoth) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorNeg) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorPclkDutBoth) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorPclkDutNeg) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorPclkDutPos) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (edgeDetectorPos) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fd) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fd_1) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdce) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fde) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdpe) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdr) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdre) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdrs) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (fdse) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockBothFetch) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockBothFgs) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockNegFetch) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockNegFgs) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockPosFetch) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterClockPosFgs) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterDataFetch) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (filterDataFgs) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (gnd) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (inv) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ldce) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lde) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut1) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut3) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut4) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut5) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (lut6) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (muxcy_l) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (muxf7) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (nand2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (nor2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (or2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (or3) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ram32x1d) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (srl16e) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_clockgen_fmdc2_24) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_concentrator_gen2_stoptime_bidir_lmin_opt_out2_24_0) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_concentrator_stoptime_bidir_lmin_opt_out2_24) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_min2_24) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_min2_24_zpt_wrapper_0) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (ts_tolerance_24) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (vcc) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (xor2) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (xorcy) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (zdelay) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (zebu_bb_wb_reg) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (zebu_clockGen) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step TIMING MODEL DB : timing model for (zview) added in the DB (/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/timingModel//DB)
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_fpga_sram_0002_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_fpga_sram_0002_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_fpga_sram_0001_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_fpga_sram_0001_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_fpga_sram_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_fpga_sram_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_zz_Encrypt_6_ZMEM_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_zz_Encrypt_6_ZMEM_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_zz_Encrypt_1_ZMEM_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_zz_Encrypt_1_ZMEM_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_zz_Encrypt_1_ZMEM_0_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_zz_Encrypt_1_ZMEM_0_0'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_alb_mss_fpga_sram_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_alb_mss_fpga_sram_0000_ZMEM_mem_r'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem'
+#   step MEM-FULL-TIMING-MODEL-DB : Collecting timing information of memory 'reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'
+#   step MEM-FULL-TIMING-MODEL-DB : Transfering from full DB 'reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem'
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[23].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[23].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[22].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[22].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[21].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[21].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[20].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[20].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[19].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[19].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[18].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[18].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[17].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[17].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[16].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[16].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[15].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[15].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[14].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[14].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[13].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[13].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[12].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[12].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[11].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[11].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[10].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[10].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[9].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[9].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[8].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[8].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[7].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[7].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[6].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[6].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[5].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[5].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[4].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[4].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[3].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[3].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[2].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[2].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[1].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[1].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_min[0].
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_min[0].
+#   step TIMING MODEL : Removing timing arc zplts_iwa_ts_time_rdy, ts_l_rdy.
+#   step TIMING MODEL : Removing timing arc zpl_iwa_ts_time_rdy, ts_l_rdy.
+#   step TIMING ANALYSIS : 5636 instances linked to 24 timing models
+#   step timing analysis initialisation : Done in       elapsed:1 s      user:2 s   system:0.32 s     %cpu:177.74       load:3.86       fm:198112 m     vm:1704 m     vm:+507 m     um:1257 m     um:+436 m
+#   step TIMING ANALYSIS : starting timing analysis of fpga U0_M0_F1
+#   step timing analysis build nodes and arcs : Starting
+#   step TIMING ANALYSIS : 746683 timer nodes created
+#   step apply false path : Starting
+#   step apply false path : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.86       fm:197606 m     vm:1704 m       vm:+0 m     um:1280 m       um:+0 m
+#   step MLDM BADPRIM : ts_min2_24_9827692e
+#   step MLDM BADPRIM : ts_min2_24_43e3d712
+#   step MLDM BADPRIM : ts_min2_24_7754993c
+#   step MLDM BADPRIM : ts_min2_24_a5bc957
+#   step MLDM BADPRIM : ts_min2_24_565b7c9d
+#   step MLDM BADPRIM : ts_min2_24_8d99c24d
+#   step MLDM BADPRIM : reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem
+#   step MLDM BADPRIM : ts_tolerance_24
+#   step MLDM BADPRIM : ts_min2_24_605ac841
+#   step MLDM BADPRIM : ts_min2_24_bb9e767d
+#   step MLDM BADPRIM : ts_min2_24_8f293853
+#   step MLDM BADPRIM : ts_min2_24_ae26ddf2
+#   step MLDM BADPRIM : ts_min2_24_baaa5659
+#   step MLDM BADPRIM : ts_min2_24_f2266838
+#   step MLDM BADPRIM : ts_min2_24_75e46322
+#   step MLDM BADPRIM : ts_min2_24_ab8dfa35
+#   step MLDM BADPRIM : ts_clockgen_fmdc2_24
+#   step MLDM BADPRIM : ts_concentrator_stoptime_bidir_lmin_opt_out2_24
+#   step MLDM BADPRIM : reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0000_ZMEM_mem_r
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0001_ZMEM_mem_r
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0002_ZMEM_mem_r
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r
+#   step MLDM BADPRIM : reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0
+#   step MLDM BADPRIM : ts_min2_24
+#   step TIMING ANALYSIS : 1404500 arcs created with delay and false path flag
+#   step timing analysis build nodes and arcs : Done in       elapsed:1 s      user:5 s     system:11 s     %cpu:862.99       load:3.86       fm:198542 m     vm:1831 m     vm:+127 m     um:1311 m      um:+54 m
+#   step clock domains resolution : Starting
+#   step composite info cache : Starting
+#   step composite info cache : Done in    elapsed:0.72 s   user:0.59 s   system:0.16 s     %cpu:104.12       load:3.86       fm:198551 m     vm:1838 m       vm:+7 m     um:1320 m       um:+9 m
+#   step EQUI COMPOSITE : 5508 composites for 5508 ports
+#   step TIMING ANALYSIS : 434711 clock references to resolve
+#   step direct clock resolution : Starting
+#   step direct clock resolution : Done in    elapsed:0.30 s   user:0.57 s   system:0.12 s     %cpu:227.39       load:7.16       fm:198318 m     vm:2033 m     vm:+179 m     um:1514 m     um:+178 m
+#   step TIMING ANALYSIS : 11721 clock reference remaining
+#   step clock propagation : Starting
+#   step TIMING ANALYSIS : clock backward from 4731 clock pins
+#   step clock propagation : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:7.16       fm:198228 m     vm:2100 m       vm:+1 m     um:1581 m       um:+1 m
+#   step clock resolution after clock backward : Starting
+#   step clock resolution after clock backward : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:7.16       fm:198224 m     vm:2105 m       vm:+5 m     um:1586 m       um:+5 m
+#   step TIMING ANALYSIS : clock domain not resolved for clock pin U0_M0_F1.zdummy.C
+#   step TIMING ANALYSIS : 434709/434711 clock references resolved
+#   step TIMING ANALYSIS : 85 different clock domain(s) identified
+#   step TIMING ANALYSIS : 125 domains
+#   step clock domains resolution : Done in       elapsed:1 s      user:1 s   system:0.35 s     %cpu:126.81       load:7.16       fm:198188 m     vm:2114 m     vm:+283 m     um:1594 m     um:+283 m
+#   step topological order : Starting
+#   step topological order : Done in    elapsed:0.47 s   user:0.43 s    system:0.3 s      %cpu:98.26       load:7.16       fm:198074 m     vm:2131 m      vm:+17 m     um:1613 m      um:+19 m
+#   step delay propagation : Starting
+#   step delay propagation : Done in    elapsed:0.74 s      user:1 s      system:3 s     %cpu:718.62       load:7.16       fm:197650 m     vm:2131 m       vm:+0 m     um:1616 m       um:+3 m
+#   step build forward backward domains : Starting
+#   step build forward backward domains : Done in    elapsed:0.33 s      user:1 s      system:6 s    %cpu:2399.22       load:7.16       fm:197370 m     vm:2131 m       vm:+0 m     um:1616 m       um:+0 m
+#   step get output nodes : Starting
+#   step TIMING ANALYSIS : 310569 output nodes
+#   step get output nodes : Done in     elapsed:0.1 s    user:0.1 s      system:0 s      %cpu:91.43       load:7.16       fm:197369 m     vm:2131 m       vm:+0 m     um:1616 m       um:+0 m
+#   step get worst end points : Starting
+#   step ADVANCED_MCP : MCP advanced method: 1
+#   step TIMING ANALYSIS : 680 worst end point
+#   step get worst end points : Done in    elapsed:0.39 s      user:3 s   system:0.85 s    %cpu:1172.05       load:7.16       fm:197438 m     vm:2131 m       vm:+0 m     um:1616 m       um:+0 m
+#   step get hyper arcs : Starting
+#   step get hyper arcs : Done in     elapsed:0.4 s   user:0.15 s   system:0.23 s     %cpu:921.21       load:7.16       fm:197436 m     vm:2131 m       vm:+0 m     um:1617 m       um:+1 m
+#   step TIMING ANALYSIS : 680 hyper arcs
+#   step gatesNumberAnalysis : Starting
+#   step gatesNumberAnalysis : Done in       elapsed:0 s    user:0.3 s      system:0 s    %cpu:1600.00       load:7.16       fm:197436 m     vm:2131 m       vm:+0 m     um:1617 m       um:+0 m
+#   step generate zTime commands : Starting
+#   step generate zTime commands : Done in    elapsed:0.11 s   user:0.11 s    system:0.1 s     %cpu:105.79       load:7.16       fm:197434 m     vm:2131 m       vm:+0 m     um:1617 m       um:+0 m
+#   step TIMING MODEL : Missing timing model for module pclk_dut_mcp_bb
+#   step TIMING MODEL : Missing timing model for module ZXLSYS
+#   step TIMING MODEL : Missing timing model for module zebu_xtor_mcp_clk_bb
+#   step add filter domains : Starting
+#   step TDFDR : 0 ports of candidate(s) identified
+#   step add filter domains : Done in    elapsed:0.27 s   user:0.25 s    system:0.2 s     %cpu:100.35       load:7.16       fm:197325 m     vm:2131 m       vm:+0 m     um:1617 m       um:+0 m
+#   step TIMING ANALYSIS : saving U0_M0_F1.db
+#   step SAVE : saving 78 nodes, 682 edges, 670 details
+#   step SAVE ZTI COMMANDS : Saved 2 kB
+
+#   exec summary :    1 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m10s, user 0m19.231s, sys 0m23.358s
+#   exec summary : Total memory: 2183004 kB - RSS memory: 1656376 kB - Data memory: 1766080 kB
+#   exec summary : Successful execution
+
+# end time is Tue May 13 18:36:37 2025
+Bundle script command exit code is '0'

@@ -1,0 +1,68 @@
+grid_cmd -queue DEFAULT_QUEUE -njobs 1 -local
+grid_cmd -queue Zebu -njobs 0 -local
+grid_cmd -queue ZebuIse -njobs 20 -local
+grid_cmd -queue ZebuSynthesis -njobs 7 -local
+clocks -localize_clock_tree FPGA
+fpga -inter_die_tdm f -inter_die_tdm_params strategy=PDM_DIRECT
+timing_analysis -use_hdl_names f -delay_min_zfilter_skew 40000 -advanced_async_set_reset_analysis f -pre_fpga CONSTANTS_BASE_DELAY_MODEL
+utf__evaluate_default_generated_commands
+zpar -effort medium
+eco -reserve_qiwc 2048 -reserve_fwc 1152 -reserve_force 32 -reserve_monitor 0 -enable false
+coverage -auto_bin_max 64
+synthesis -use_vfs false
+memories -zrm_latency_encoding ONEHOT
+# open source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/utf/default_commands.utf'
+# open source file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/target_capabilities.utf'
+# close source file '/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/target_capabilities.utf'
+nfs_settings -max_retries 120 -delay 1000 -access_level 5
+fpga -parff true -parff_multi_stage true
+synthesis -wls_option -checkSumForAllScm
+timing_analysis -post_fpga BACK_ANNOTATED
+ztopbuild -advanced_command {enable advanced_incremental_mode}
+optimization -auto_inline_limit 50
+compile -hydra t
+debug -waveform_reconstruction_params {CSA=false, SIMZILLA=true, SIMZILLA_DISTRIBUTED_BUILD=false, SWAVE=false}
+debug -waveform_reconstruction false
+design -convert_strength true
+set_perf_flow -patch 2021.09
+set_perf_flow -patch_list {2020.03-LCA 2020.03-SP1-1-LCA 2021.09 2021.09-LCA}
+set_perf_flow flow1
+# close source file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/utf/default_commands.utf'
+architecture_file -filename /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl
+vcs_exec_command ./zcui_vcs_cmd.csh
+set_hwtop -module zebu_top
+zforce -sync_enable -rtlname zebu_top.rst_a
+zforce -sync_enable -rtlname zebu_top.core_chip_dut.i_ext_personality_mode -object_not_found warning
+zforce -sync_enable -rtlname zebu_top.core_chip_dut.icore_sys.i_ext_personality_mode -object_not_found warning
+probe_signals -rtlname zebu_top.rst_a
+xtors -add_xtor_path /global/apps/zebu_vs_2023.03-SP1//drivers
+xtors -use_zebu_ip_root t
+fpga -inter_die_tdm true -inter_die_tdm_params strategy=PDM_DIRECT
+zpar -advanced_command {System dapEngine rdp}
+clock_delay -module zebu_top -debug true -auto_tolerance true
+run_manager -number_of_instances 3
+fpga -parff_multi_stage true
+synthesis_preferences -enable_wls true
+cluster_constraint -set_max_fill {lut = 30}
+reg_init -default_value 0
+optimization -keep_registers
+optimization -auto_inline_limit 30
+optimization -number_of_threads 8
+timing_analysis -post_fpga BACK_ANNOTATED
+timing_analysis -advanced_command {set_performance_report true}
+ztopbuild -advanced_command {set_fast_waveform_capture -relocate yes}
+ztopbuild -advanced_command {dump_stats -logic_optimization}
+ztopbuild -advanced_command {enable zrm_performance_mode}
+memory_preferences -manage_dual_port_bram_access true
+compile -objective PERFORMANCE
+grid_cmd -queue Zebu -submit {bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]"      -R "rusage[mem=50G]"  -M 50G } -delete {kill -9 %p} -njobs 100
+grid_cmd -queue ZebuHeavy -submit {bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 4 -R "rusage[mem=100G]" -M 100G} -delete {kill -9 %p} -njobs 25
+grid_cmd -queue ZebuSuperHeavy -submit {bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 8 -R "rusage[mem=150G]" -M 150G} -delete {kill -9 %p} -njobs 10
+grid_cmd -queue ZebuIse -submit {bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]" -n 4 -R "rusage[mem=100G]" -M 100G} -delete {kill -9 %p} -njobs 50
+grid_cmd -queue ZebuSynthesis -submit {bsub -app bnormal -I -R "select[os_version=CS7.0]" -R "span[hosts=1]"      -R "rusage[mem=50G]"  -M 50G } -delete {kill -9 %p} -njobs 100
+grid_cmd -submit {bsub -Is -app comp_zebucae -Jd zebu_compile} -njobs 100
+dpi_synthesis -enable all
+system_tasks -enable -task {$display}
+debug -all true
+debug -enable_offline_debug true
+environment -generate_wrapper CPP

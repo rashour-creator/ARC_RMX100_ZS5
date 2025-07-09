@@ -1,0 +1,3 @@
+mdb -sc_arg=-on=exit_on_error -sc_mode=batch -sc_arg=-arctest
+lldbac  -sc_mode=batch -sc_arg='platform connect board.json' -o 'process launch -s' 
+

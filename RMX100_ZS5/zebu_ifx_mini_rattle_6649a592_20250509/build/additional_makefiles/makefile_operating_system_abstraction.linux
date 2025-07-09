@@ -1,0 +1,43 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+# Crude abstraction of typical operating system commands. LINUX
+# implementation.
+#
+
+# Journalling, logging, user reassurance
+MESSAGE=/bin/echo
+MESSAGE_BLANK_LINE=$(MESSAGE) ""
+SHOW_FILE=more
+DOLLAR = '$$'
+
+# Character stream input/output
+WRITE=/bin/echo
+T_PIECE=/usr/bin/tee
+NULL_DEVICE=/dev/null
+
+# File handling
+COPY_FILE=/bin/cp
+MOVE_FILE=/bin/mv
+REMOVE_FILE=/bin/rm -f
+REMOVE_DIR=/bin/rm -fr
+ECHO_FILE=/bin/cat
+
+# Directory management
+NAVIGATE_TO_DIRECTORY=cd
+CREATE_DIRECTORY=/bin/mkdir -p
+
+# Global Regular Expression, Print matches (i.e. search for patterns (specified
+# as Regular Expressions) that occur in the specified text files).
+GREP=/bin/grep
+
+# If the previous command succeeds execute the command(s) following this.
+THEN_CHAIN=&&
+
+#############################################################################

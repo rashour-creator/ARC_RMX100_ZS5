@@ -1,0 +1,342 @@
+Module cpu_top_safety_controller{
+P zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core_VCSXMR_u_main_rl_cpu_top->zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core_VCSXMR_u_main_rl_cpu_top
+}
+Module rl_cpu_synch_wrap{
+}
+Module err_inj_ctrl_0000{
+}
+Module ls_compare_unit_0000{
+}
+Module ls_compare_unit_0001{
+}
+Module ls_compare_unit_0002{
+}
+Module ls_compare_unit_0004{
+}
+Module ls_compare_unit_0005{
+}
+Module ls_compare_unit_0009{
+}
+Module ls_compare_unit_000A{
+}
+Module ls_compare_unit_000B{
+}
+Module ls_compare_unit_000C{
+}
+Module ls_compare_unit_000D{
+}
+Module ls_error_register_0000{
+}
+Module clkgate{
+}
+Module rl_cpu_top{
+}
+
+EdfPortBounds rl_parity_gen_0002{
+0 0 din
+}
+EdfPortBounds alb_mss_fab_ibp2single_0000_0001{
+12 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+31 0 i_ibp_rd_data
+31 0 i_ibp_wr_data
+3 0 i_ibp_wr_mask
+12 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+31 0 o_ibp_rd_data
+31 0 o_ibp_wr_data
+3 0 o_ibp_wr_mask
+}
+EdfPortBounds rl_cpu_top{
+31 0 ahb_haddr
+3 0 ahb_haddrchk
+7 0 ahb_hauser
+0 0 ahb_hauserchk
+2 0 ahb_hburst
+3 0 ahb_hmaster
+6 0 ahb_hprot
+31 0 ahb_hrdata
+3 0 ahb_hrdatachk
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+3 0 ahb_hwdatachk
+3 0 ahb_hwstrb
+7 0 arcnum
+31 0 dbg_ibp_cmd_addr
+3 0 dbg_ibp_cmd_space
+31 0 dbg_ibp_rd_data
+31 0 dbg_ibp_wr_data
+3 0 dbg_ibp_wr_mask
+31 0 dbu_per_ahb_haddr
+3 0 dbu_per_ahb_haddrchk
+7 0 dbu_per_ahb_hauser
+0 0 dbu_per_ahb_hauserchk
+2 0 dbu_per_ahb_hburst
+3 0 dbu_per_ahb_hmaster
+6 0 dbu_per_ahb_hprot
+31 0 dbu_per_ahb_hrdata
+3 0 dbu_per_ahb_hrdatachk
+2 0 dbu_per_ahb_hsize
+1 0 dbu_per_ahb_htrans
+31 0 dbu_per_ahb_hwdata
+3 0 dbu_per_ahb_hwdatachk
+3 0 dbu_per_ahb_hwstrb
+31 0 dccm_ahb_haddr
+3 0 dccm_ahb_haddrchk
+2 0 dccm_ahb_hburst
+3 0 dccm_ahb_hmaster
+6 0 dccm_ahb_hprot
+31 0 dccm_ahb_hrdata
+3 0 dccm_ahb_hrdatachk
+0 0 dccm_ahb_hsel
+2 0 dccm_ahb_hsize
+1 0 dccm_ahb_htrans
+31 0 dccm_ahb_hwdata
+3 0 dccm_ahb_hwdatachk
+3 0 dccm_ahb_hwstrb
+1 0 dccm_even_gclk_cnt
+1 0 dccm_odd_gclk_cnt
+0 0 dmsi_context
+5 0 dmsi_data_edc
+5 0 dmsi_eiid
+1 0 dr_bus_fatal_err
+1 0 dr_lsc_stl_ctrl_aux_r
+1 0 dr_safety_comparator_enabled
+1 0 dr_safety_iso_err
+1 0 dr_secure_trig_iso_err
+1 0 dr_sfty_aux_parity_err_r
+1 0 dr_sfty_eic
+19 3 esrams_dccm_addr_even
+19 3 esrams_dccm_addr_odd
+39 0 esrams_dccm_din_even
+39 0 esrams_dccm_din_odd
+39 0 esrams_dccm_dout_even
+39 0 esrams_dccm_dout_odd
+4 0 esrams_dccm_wem_even
+4 0 esrams_dccm_wem_odd
+12 2 esrams_ic_data_mem_addr
+79 0 esrams_ic_data_mem_din
+79 0 esrams_ic_data_mem_dout
+79 0 esrams_ic_data_mem_wem
+12 5 esrams_ic_tag_mem_addr
+55 0 esrams_ic_tag_mem_din
+55 0 esrams_ic_tag_mem_dout
+55 0 esrams_ic_tag_mem_wem
+18 2 esrams_iccm0_addr
+39 0 esrams_iccm0_din
+39 0 esrams_iccm0_dout
+4 0 esrams_iccm0_wem
+15 0 ext_trig_in
+1 0 ext_trig_output_accept
+1 0 ext_trig_output_valid
+1 0 gclk_cnt
+1 0 ic_data_mem_gclk_cnt
+1 0 ic_tag_mem_gclk_cnt
+1 0 iccm0_gclk_cnt
+31 0 iccm_ahb_haddr
+3 0 iccm_ahb_haddrchk
+2 0 iccm_ahb_hburst
+3 0 iccm_ahb_hmaster
+6 0 iccm_ahb_hprot
+31 0 iccm_ahb_hrdata
+3 0 iccm_ahb_hrdatachk
+0 0 iccm_ahb_hsel
+2 0 iccm_ahb_hsize
+1 0 iccm_ahb_htrans
+31 0 iccm_ahb_hwdata
+3 0 iccm_ahb_hwdatachk
+3 0 iccm_ahb_hwstrb
+15 0 lsc_diag_aux_r
+13 0 lsc_err_stat_aux
+31 0 mmio_ahb_haddr
+3 0 mmio_ahb_haddrchk
+2 0 mmio_ahb_hburst
+3 0 mmio_ahb_hmaster
+6 0 mmio_ahb_hprot
+31 0 mmio_ahb_hrdata
+3 0 mmio_ahb_hrdatachk
+2 0 mmio_ahb_hsize
+1 0 mmio_ahb_htrans
+31 0 mmio_ahb_hwdata
+3 0 mmio_ahb_hwdatachk
+3 0 mmio_ahb_hwstrb
+11 0 mmio_base_in
+21 0 reset_pc_in
+1 0 safety_comparator_enable
+7 0 sfty_ibp_mmio_cmd_addr
+5 0 sfty_ibp_mmio_cmd_atomic
+3 0 sfty_ibp_mmio_cmd_cache
+3 0 sfty_ibp_mmio_cmd_ctrl_pty
+2 0 sfty_ibp_mmio_cmd_data_size
+1 0 sfty_ibp_mmio_cmd_prot
+31 0 sfty_ibp_mmio_rd_data
+3 0 sfty_ibp_mmio_rd_data_pty
+31 0 sfty_ibp_mmio_wr_data
+3 0 sfty_ibp_mmio_wr_mask
+2 0 sys_sleep_mode_r
+4 0 wid_rlwid
+63 0 wid_rwiddeleg
+30 0 zport_w_rl_exu_vcs_xmr_4126269938_ar_pc_r_VCSXMR_u_rl_exu_VCSXMR_u_rl_core
+}
+EdfPortBounds ls_error_register_0000{
+1 0 diag_mode
+1 0 ls_ctrl_enable
+1 0 mismatch_r
+}
+EdfPortBounds ls_compare_unit_000B{
+1 0 error_bits
+1 0 error_injection_valid
+39 0 main_interface
+1 0 safety_diag_inject_sc
+39 0 shadow_interface
+}
+EdfPortBounds err_inj_ctrl_0000{
+1 0 dr_mask_pty_err
+1 0 dr_sfty_diag_inj_end
+1 0 dr_sfty_diag_mode_sc
+67 0 error_mask_sc
+67 0 valid_mask_sc
+}
+EdfPortBounds ls_compare_unit_0002{
+1 0 error_bits
+1 0 error_injection_valid
+31 0 main_interface
+1 0 safety_diag_inject_sc
+31 0 shadow_interface
+}
+EdfPortBounds ls_compare_unit_000C{
+1 0 error_bits
+1 0 error_injection_valid
+55 0 main_interface
+1 0 safety_diag_inject_sc
+55 0 shadow_interface
+}
+EdfPortBounds rl_parity_chk_0002_0000{
+8 0 din
+}
+EdfPortBounds rl_parity_chk_0002{
+7 0 din
+}
+EdfPortBounds ls_compare_unit_0001{
+1 0 error_bits
+1 0 error_injection_valid
+26 0 main_interface
+1 0 safety_diag_inject_sc
+26 0 shadow_interface
+}
+EdfPortBounds ls_compare_unit_0009{
+1 0 error_bits
+1 0 error_injection_valid
+24 0 main_interface
+1 0 safety_diag_inject_sc
+24 0 shadow_interface
+}
+EdfPortBounds ls_compare_unit_0000{
+1 0 error_bits
+1 0 error_injection_valid
+28 0 main_interface
+1 0 safety_diag_inject_sc
+28 0 shadow_interface
+}
+EdfPortBounds rl_parity_chk_0001{
+1 0 din
+}
+EdfPortBounds alb_mss_fab_ibp2single_0000_0000{
+11 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+31 0 i_ibp_rd_data
+31 0 i_ibp_wr_data
+3 0 i_ibp_wr_mask
+11 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+31 0 o_ibp_rd_data
+31 0 o_ibp_wr_data
+3 0 o_ibp_wr_mask
+}
+EdfPortBounds rl_parity_gen_0001{
+1 0 din
+}
+EdfPortBounds rl_parity_chk_0002_0001{
+4 0 din
+}
+EdfPortBounds mss_bus_switch_fifo_0001_0002{
+3 0 i_data
+64 0 i_occp
+3 0 o_data
+64 0 o_occp
+}
+EdfPortBounds mss_bus_switch_fifo_0001{
+2 0 i_data
+64 0 i_occp
+2 0 o_data
+64 0 o_occp
+}
+EdfPortBounds ls_compare_unit_000A{
+1 0 error_bits
+1 0 error_injection_valid
+16 0 main_interface
+1 0 safety_diag_inject_sc
+16 0 shadow_interface
+}
+EdfPortBounds rl_parity_chk_0002_0003{
+6 0 din
+}
+EdfPortBounds ls_compare_unit_0004{
+1 0 error_bits
+1 0 error_injection_valid
+30 0 main_interface
+1 0 safety_diag_inject_sc
+30 0 shadow_interface
+}
+EdfPortBounds ls_compare_unit_000D{
+1 0 error_bits
+1 0 error_injection_valid
+79 0 main_interface
+1 0 safety_diag_inject_sc
+79 0 shadow_interface
+}
+EdfPortBounds rl_parity_gen_0000{
+7 0 din
+}
+EdfPortBounds rl_parity_chk_0002_0002{
+3 0 din
+}
+EdfPortBounds rl_parity_chk_0000{
+0 0 din
+}
+EdfPortBounds ls_compare_unit_0005{
+1 0 error_bits
+1 0 error_injection_valid
+18 0 main_interface
+1 0 safety_diag_inject_sc
+18 0 shadow_interface
+}
+EdfPortBounds mss_bus_switch_rrobin{
+3 0 grt_vector
+3 0 req_vector
+}
+NonAliasNets cpu_top_safety_controller{
+}

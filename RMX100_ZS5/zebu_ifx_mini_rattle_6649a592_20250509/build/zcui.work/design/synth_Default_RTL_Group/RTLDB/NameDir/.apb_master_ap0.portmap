@@ -1,0 +1,33 @@
+Module apb_master_ap0{
+}
+
+EdfPortBounds zceiMessageOutPort{
+31 0 message
+}
+EdfPortBounds zceiMessageOutPort_1{
+0 0 message
+}
+EdfPortBounds zceiMessageOutPort_65{
+64 0 message
+}
+EdfPortBounds zceiMessageInPort{
+31 0 message
+}
+EdfPortBounds zceiMessageInPort_1{
+0 0 message
+}
+EdfPortBounds zebu_bb_add_zview{
+63 0 in
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_4_1{
+3 0 signal
+3 0 signal_sample
+}
+EdfPortBounds zebu_bb_sample_clk_uncond_sample_64_1{
+63 0 signal
+63 0 signal_sample
+}
+NonAliasNets apb_master_ap0{
+rspval_r    f   642
+rerr_r    f   640
+}

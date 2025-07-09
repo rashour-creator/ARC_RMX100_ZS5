@@ -1,0 +1,764 @@
+Info: Running command: 
+	 PSET 1 = new_hello.out --postconnect "command source init_mem.cmd"
+
+                                    ZeBu (R)
+                                      zRci
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRci --zebu-work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/zrci_xtor_lldb.tcl 
+
+# start time is Thu May 29 14:57:37 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:39:00
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 3.96 2.85 1.45 1/284 3561693
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118306 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 623 MB VmPeak: 623 MB
+# Disk Space Total: 5000 GB Available: 498 GB Used: 4502 GB
+#            Free inodes: 11454560
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+>>> Info: running pset 1 = new_hello.out --postconnect {command source init_mem.cmd}
+-- ZeBu : [1;34mzRci: [2;32mWARNING : Testbench was compiled using a different zRci revision. Consider recompiling your testbench (Got revision 5503268, expected 5383188)[0m
+-- ZeBu : [1;34mzRci: [0mNo database was set. zRci will use `emulation_data_20250529_145737`
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/zebu.work/options.db
+OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_05_29-14_57_38.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zRci.vgzeburt492.rashour.2025_05_29-14_57_38.log -> zRci.vgzeburt492.0.log
+
+                                    ZeBu (R)
+                                    libZebu
+
+           Version S-2021.09-2-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# Build Date : May  7 2024 - 22:15:15
+
+# start time is Thu May 29 14:57:38 2025
+
+
+
+#   step DB LOAD : Loading tree
+#   step HUB : Loading main database in load on demand mode
+#   step DB LOAD : Loading database from path '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step DB LOAD : Opening light tree file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' to enable load on-demand
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stree.zrdb' in read mode
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/coords.zrdb' in read mode
+#   step DB LOAD : Loading DB stamp from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/stamp.zrdb' in read mode
+#   step DB LOAD : Version stamp is 2021.3.0
+#   step DB LOAD : The database was generated on : Tue May 13 19:26:21 2025
+#   step DB LOAD : Stored database CRC is : bb3b657b
+#   step DB LOAD : Deserializing database : start
+#   step DB LOAD : Database version is 2021.3.0
+#   step DB LOAD : Auxillary databases splitted in 8 wrappers
+#   step DICTIONARY : Opening dictionary
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/names.zrdb' in read mode
+#   step DICTIONARY : Opened. 538008 unique names, in 9 chunks of 65536 entries, stored in 1 directories
+#   step DB LOAD : Skipped coordinates loading
+#   step MEMS : Opening memories database file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/mems.zrdb' in read mode
+#   step MEMS : Memories database opened
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 30 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 30 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 98 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 1 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step DB LOAD : Deserializing tree : start
+#   step DICTIONARY : Loading chunk #0
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/0.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+-- ZeBu : zRci : Evaluating the file "/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+-- ZeBu : zRci : Launching the server, waiting for the connection (max delay 5 minutes).
+
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #0 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #8
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/8.zrdb' in read mode
+#   step DICTIONARY : Reading 13720 entries
+#   step DICTIONARY : Read 13720 entries
+#   step DICTIONARY : Chunk #8 loaded. Added 13720 names.
+#   step DICTIONARY : Loading chunk #7
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/7.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+OptionsDB Info: Started reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+OptionsDB Info: Default value() overwritten with post_routing_basic for zopt
+OptionsDB Info: Completed reading options db /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/options.db
+WARNING : OptionsDB Warning: Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info: Default value(false) overwritten with true for ztdb_rb_api
+#   step INFO : RTLDB version is Build S-2021.09-2-TZ-20240507_Full64 May  7 2024 (5383188)
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #7 loaded. Added 65536 names.
+#   step DB LOAD : Deserializing tree : finished in 0 seconds
+#   step DB LOAD : Deserializing database : finished in 0 seconds
+#   step DB LOAD : Loading ZebuDB from '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/ZebuDB.zdb'
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_05_29-14_57_38.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zServer.vgzeburt492.rashour.2025_05_29-14_57_38.log -> zServer.vgzeburt492.0.log
+#   step DB LOAD : ZebuDB loaded in 0 seconds
+#   step EQUI DB : Loading EquiDB from path '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb'
+#   step EQUI DB : Opening equi db files
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/0_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/1_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/2_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/3_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/4_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/5_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/6_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/7_equis.zrdb'
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI DB : Equi db files opened
+#   step POWER DOMAIN DB : Loading power domain database from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb'
+#   step POWER DOMAIN DB : Database file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/power.zrdb' not found - power domain db not available
+#   step PROPERTY DB : Loading property database from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/properties.zrdb' in read mode
+#   step PropertyDB : Deserializing...
+#   step PropertyDB : Deserialized in 0 seconds
+#   step FWC : Loading FWC value sets table
+#   step NameTable : Loading table from file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb'
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/fwc_value_sets.zrdb' in read mode
+
+                                    ZeBu (R)
+                                    zServer
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/orion/zServer -design /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures -zebu.work /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default 
+
+# start time is Thu May 29 14:57:38 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:38:29
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 3.80 2.84 1.45 2/290 3561707
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118186 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 380 MB VmPeak: 380 MB
+# Disk Space Total: 5000 GB Available: 498 GB Used: 4502 GB
+#            Free inodes: 11454554
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step NameTable : Deserializing '3' names
+#   step FWC : Loaded FWC value sets table
+
+                                    ZeBu (R)
+                                libHWAccess 64b
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# "libHWAccess 64b" 
+
+# start time is Thu May 29 14:57:38 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:38:24
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 3.80 2.84 1.45 1/290 3561708
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118188 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 380 MB VmPeak: 380 MB
+# Disk Space Total: 5000 GB Available: 498 GB Used: 4502 GB
+#            Free inodes: 11454554
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+The log file is : "/remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_05_29-14_57_38.log".
+Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/zLicenseManager.vgzeburt492.rashour.2025_05_29-14_57_38.log -> zLicenseManager.vgzeburt492.0.log
+OptionsDB Info : DB ./options.db not available, loading the default values ..
+OptionsDB Warning : Use of the environment variable 'ZEBU_ENABLE_NEW_ZTDB_RB' will be deprecated in a future release, please use 'set_app_var public::ztdb_rb_api 1' in your utf/tcl file.
+OptionsDB Info : Default value(false) overwritten with true for ztdb_rb_api
+
+                                    ZeBu (R)
+                                zLicenseManager
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/bin/zLicenseManager 3561702 15 6 
+
+# start time is Thu May 29 14:57:38 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:00
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 3.80 2.84 1.45 1/291 3561759
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118187 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 33 MB VmPeak: 33 MB
+# Disk Space Total: 5000 GB Available: 498 GB Used: 4502 GB
+#            Free inodes: 11454554
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+-- ZeBu : zServer : Evaluating the file "/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_runtime/designFeatures" to get the design's features.
+
+-- ZeBu : zServer : Remapping requested by user :
+-- ZeBu : zServer :    U0.M0.S0 -> U0.M0.S1
+-- ZeBu : zServer : Creating symbolic link /remote/vginterfaces1/zebu_system_dir/CONFIG.TD/vgzeburt492/logs/run/profiler.vgzeburt492.rashour.2025_05_29-14_57_40.3561702.log -> profiler.vgzeburt492.0.log
+-- ZeBu : zServer : The PCIe connection through board 0 is free.
+
+-- ZeBu : zRci : Waiting for the server pid 3561702 to register the design.
+
+-- ZeBu : zServer :  
+-- ZeBu : zServer : Design loaded successfully.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+-- ZeBu : zRci : Parallel loading of the databases finished.
+#   step DICTIONARY : Loading chunk #1
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/1.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #1 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #2
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/2.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #2 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #3
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/3.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #3 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #4
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/4.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #4 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #5
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/5.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #5 loaded. Added 65536 names.
+#   step DICTIONARY : Loading chunk #6
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/dictionary/0/6.zrdb' in read mode
+#   step DICTIONARY : Reading 65536 entries
+#   step DICTIONARY : Read 65536 entries
+#   step DICTIONARY : Chunk #6 loaded. Added 65536 names.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+-- ZeBu : zRci : Setting up driver for managing cycle to time conversions.
+-- ZeBu : zRci : Memory Opt Abstraction Manager: Mapping file (/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/memoryOptAbstractionInfo.lst) not found
+-- ZeBu : [1;34mzRci: [2;32mWARNING : app_var load_rb_selection_file_immediate was not set so selection was not loaded during initialization. It will be load upon enabling a readback dump.[0m
+-- ZeBu : zRci : Registering of user's close callback (0) : ea110
+### warning in LOAD XTOR [ZXTOR0193W] : No xtor file specified. Default will be '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/xtor_dpi.lst'
+-- ZeBu : [1;34mzRci: [2;32mWARNING : Invalid default_clock detected. Setting it automatically to `both tickClk`.[0m
+### warning in XTOR LOADING [ZXTOR0199W] : All transactor libraries already exist. ZEMI3 runtime will not build them again. 
+		Note that transactor libraries should be built using the same environment as the emulator hosts.
+		This can happen automatically with ZEMI3Manager::open() if user did not build them explicitly.
+		Please delete them and try again if you see spurious runtime failures.
+
+
+                                    ZeBu (R)
+                                libZebuZEMI3.so
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# libZebuZEMI3.so 
+
+# start time is Thu May 29 14:57:48 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:39:00
+# ---------------------------System Context--------------------------- 
+# Cpu        4 x bogomips - 5616.00 Intel(R) Xeon(R) E-2314 CPU @ 2.80GHz
+#            Load: 3.96 2.85 1.45 1/284 3561693
+#            Hostname: vgzeburt492   OS: Linux 4.18.0-553.el8_10.x86_64
+# Memory     Total: 128294 MB Free: 118098 MB
+#            Swap space: 258047 MB Free Swap space: 258028 MB
+#            VmSize: 1552 MB VmPeak: 1552 MB
+# Disk Space Total: 5000 GB Available: 498 GB Used: 4502 GB
+#            Free inodes: 11454552
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_0.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_0.zrdb' index (#1810 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_1.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_1.zrdb' index (#1784 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_2.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_2.zrdb' index (#1724 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_3.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_3.zrdb' index (#1790 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_4.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_4.zrdb' index (#1781 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_5.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_5.zrdb' index (#1722 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_6.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_6.zrdb' index (#1731 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step FILE : Opening file '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_7.zrdb' in read mode
+#   step DATABASE : Reading DB '/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/zrdb/signals_7.zrdb' index (#1751 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__clkTick_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__clkTick_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__unlockSw_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__unlockSw_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__rst_deassert_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__rst_deassert_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__rst_assert_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__rst_assert_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__BuildSerialNumber_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__BuildSerialNumber_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__wrDataFifo_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__wrDataFifo_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__wrAddrFifo_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__wrAddrFifo_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__rdAddrFifo_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__rdAddrFifo_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__read_resp_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__nostream_read_resp_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__nostream_read_resp_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__write_resp_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__nostream_write_resp_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__nostream_write_resp_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_tx_wait_counter_0' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_rx_wait_counter_0' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_tx_wait_counter_1' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_rx_wait_counter_1' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_tx_wait_counter_2' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_rx_wait_counter_2' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_tx_wait_counter_3' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_error__notifier_rx_wait_counter_3' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__getconfig_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.ZEBU_VS_AMBA_MASTER_dpi__getResetStatus_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__waitResetComplete_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__runClk_sw_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__resetDetectEnable_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__getClkCount_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__setUnlockSwPeriod_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i.ZEBU_VS_SNPS_UDPI__setTickPeriod_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__output_reset_message_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0017W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__output_reset_message_rx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__get_config_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__send_and_receive_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__runUntilReset_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.ZEBU_SNPS_JTAG_PROTOCOL_DPI__runClk_sw_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__get_cycles_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__get_signals_tx_wait_counter' cannot be found in ZeBu.
+### warning in GET SIGNAL [ZXTOR0016W] : signal 'zebu_top.i_t32Jtag_driver.zebu_jtag_xtor__is_reset_active_tx_wait_counter' cannot be found in ZeBu.
+-- ZeBu : zRci : ClockLoop: Connecting clock loop tasks generic xtor
+-- ZeBu : zRci : ClockLoop: There was no clock loop mapping file (/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/clkLoopMap.lst)
+-- ZeBu : zRci : Memory Opt Abstraction: Mapping file (/remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/backend_default/memoryOptAbstractionInfo.lst) not found
+-- ZeBu : zRci : 85 xTor ports have been connected (37 HW -> SW, 48 SW -> HW).
+
+-- ZeBu : zServer : The design has been compiled without any delay insertion.
+-- ZeBu : zServer : The driverClk frequency is 5.555 MHz due to "zTime" constraints.
+-- ZeBu : zServer : zClockSkew is not used.
+-- ZeBu : zServer : zClockFilter is not used.
+-- ZeBu : zRci : The board is initialized,    elapsed:0.13 s      user:0 s      system:0 s       %cpu:0.00       load:3.37 pid(3561691), vmem(1583 m)   pid(3561691), vmem(1583 m) 
+#TB : Register JTAG Transactor...0x6bcb010
+#TB : Register AXI Transactor...0x6bcb010
+register done
+ 1 instance found for xtor_jtag_t32_svs Transactor
+ |__  xtor_jtag_t32_svs -> [xtor_t32Jtag_svs] zebu_top.i_t32Jtag_driver
+INFO    : zebu_top.i_t32Jtag_driver [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_t32Jtag_svs" detected.
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+INFO    : PATH [xtor_jtag_t32_svs]  Transactor Version : UnknownVersion
+INFO    : PATH [xtor_jtag_t32_svs]  Setting dbg lvl    : 00000001
+DEBUG   : PATH [xtor_jtag_t32_svs] JTAG probe selected.
+Connecting to ZeBu (S-2021.09-2-TZ-20240507_Full64) licensing server...
+-- ZeBu : zRci : Connecting to License Manager localhost at 127.0.0.1.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+
+________________________________________________________________
+            Copyright (c) 2005-2023, Synopsys, Inc.
+                 TRACE32 JTAG Transactor Server
+             Version: S.2023.03-SP1 for linux64 bit
+                   date : Tue 21 11 2023 - 03:51:45
+
+
+DEBUG1  : PATH [xtor_jtag_t32_svs] Creating JTAG TAP probe started.
+ 1 instance found for xtor_jtagtap_svs Transactor
+ |__  xtor_jtagtap_svs -> [xtor_t32Jtag_svs] zebu_top.i_t32Jtag_driver
+INFO    : zebu_top.i_t32Jtag_driver [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_t32Jtag_svs" detected.
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtagtap_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+DEBUG   : zebu_top.i_t32Jtag_driver [jtag_tap] XTOR_JTAG_TAP_SVS :: log created ... 
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Transactor Version : UnknownVersion
+INFO    : zebu_top.i_t32Jtag_driver [jtag_tap]  Setting dbg lvl    : 00000001
+DEBUG1  : PATH [xtor_jtag_t32_svs] Creating JTAG TAP probe done.
+ 1 instance found for xtor_amba_master_svs Transactor
+ |__  xtor_amba_master_svs -> [xtor_amba_master_axi3_svs] zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [SNPS/XTOR/HDLDRVR/FOUND ] RTL driver "xtor_amba_master_axi3_svs" detected.
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] Setting watchdog 'COMMONWDG' timeout to 10000 ms
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getPlatformTimeStampUnit() :: platform is ZeBu-Server5
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getPlatformTimeStampUnit() :: RTL Clock mode
+INFO    : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [xtor_amba_master_svs] getTimeUnit() :: m_precision_value is: 1 and m_time_unit is: ps
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] AMBA_MASTER_MODE   = AXI3
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] DATA_WIDTH         = 512 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ADDR_WIDTH         = 32 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ID_W_WIDTH         = 4 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] ID_R_WIDTH         = 4 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] INTERLEAVE_DEPTH   = 1 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_REQ_WIDTH     = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_DATA_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] USER_RESP_WIDTH    = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] LOOP_W_WIDTH       = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] LOOP_R_WIDTH       = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] SID_WIDTH          = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] SSID_WIDTH         = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] IS_HAPS            = 0 
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.wr_data_schd.gen_wdata_fifo[0].swtohw_W
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] Received configuration :: AMBA_MASTER_MODE = AXI3  , DATA_WIDTH = 512, ADDR_WIDTH = 32, ID_WIDTH = 4, BLEN_WIDTH = 4, USER_WIDTH = 0, SNOOP_ADDR_WIDTH = 0, SNOOP_DATA_WIDTH = 0 , IS_HAPS = 0 
+Connecting to ZeBu (S-2021.09-2-TZ-20240507_Full64) licensing server...
+-- ZeBu : zRci : Connecting to License Manager localhost at 127.0.0.1.
+
+#   step : Checking for license ... WAITING#   step : Checking for license ... OK     
+
+________________________________________________________________
+            Copyright (c) 2005-2023, Synopsys, Inc.
+                      xtor_amba_master_svs
+             Version: S.2023.03-SP1 for linux64 bit
+                   date : Tue 21 11 2023 - 03:30:48
+
+
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.reset_and_clock_i
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.swtohw_AW
+DEBUG   : zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i [amba_master] zebu_vs_udpi_swtohw_buffer :: value of path is zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.swtohw_AR
+Found - Drivers [(null)][?driverName?] ...
+getxtor done
+xtorinit done
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs]  Transactor Version : 
+INFO    : zebu_top.i_t32Jtag_driver [xtor_jtag_t32_svs]  Setting dbg lvl    : 00000000
+[RDMA] Opening a remote DMA server at port 20013
+[RDMA] Failed to open the DMA server socket: Failed to bind socket: return code -1
+-- ZeBu : [1;34mzRci: [0mInitialization successful!
+run-lldbac --disable-ext-check -c "connect=jtag-zebu-svs jtag_device=localhost:20010 jtag_cpuclk_tck_ratio=5"  -p " new_hello.out --postconnect {command source init_mem.cmd}" -o "c" --batch 2>@1
+>>> Info: applying reset
+>>> Info: force_sig begin:
+>>> Info: force_sig end
+>>> wait_for: start_cycle=0, timeout=-1, args=20
+DEBUG1  : PATH [xtor_jtag_t32_svs] startServer() entered.
+DEBUG1  : PATH [xtor_jtag_t32_svs] Caling initBFM for JTAG probe.
+>>> Info: force_sig begin:
+>>> Info: force_sig end
+DEBUG   : zebu_top.i_t32Jtag_driver [jtag_tap] XTOR_JTAG_TAP_SVS :: Hardware Reset Change detect
+DEBUG   : zebu_top.i_t32Jtag_driver [jtag_tap] XTOR_JTAG_TAP_SVS :: Hardware moving out of reset state.
+VJTAG [DEBUG] : HW reset change detected!
+DEBUG1  : PATH [xtor_jtag_t32_svs] Caling initBFM for JTAG probe done.
+DEBUG1  : PATH [xtor_jtag_t32_svs] Spawning threads started.
+DEBUG1  : PATH [xtor_jtag_t32_svs] Spawning threads done.
+server started 
+[xtor_jtag_t32_svs] :startServer :: JTAG thread spawned  
+>>> Info: mdb launched successfully, PID is 3561775
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+mdb: (lldbac) platform connect '[{"connect": "jtag-zebu-svs", "jtag_device": "localhost:20010", "jtag_cpuclk_tck_ratio": "5", "name": "core0"}]'
+mdb:   Platform: board
+mdb:     Triple: arc-unknown-unknown
+mdb:   Hostname: (null)
+mdb:  Connected: yes
+mdb: (lldbac) launch-with-properties '[{"program": "new_hello.out", "args": ["--postconnect", "{command", "source", "init_mem.cmd}"], "core": "core0"}]'
+mdb: 
+mdb: ________________________________________________________________
+mdb:             Copyright (c) 2005-2023, Synopsys, Inc.
+mdb:                         Jtag transactor
+mdb:              Version: S.2023.03-SP1 for linux64 bit
+mdb:                    date : Tue 21 11 2023 - 03:40:44
+mdb: 
+mdb: 
+mdb: 
+mdb: [INFO ZEBU_JTAG_DLL] value of ZEBU_JTAG_PORT variable is: 20010
+mdb: [INFO ZEBU_JTAG_DLL] ZEBU_SOCKET_PORT : Remote socket set to user value : 20010
+mdb: [INFO ZEBU_JTAG_DLL] Value of ZEBU_JTAG_IP is : localhost
+mdb: [INFO ZEBU_JTAG_DLL] Successful connection to server (localhost@20010)
+mdb: 
+mdb: [JTAG] INFO: Initial CPUCLK / TCK ratio: 4
+mdb: 
+mdb: ________________________________________________________________
+mdb:             Copyright (c) 2005-2023, Synopsys, Inc.
+mdb:                         Jtag transactor
+mdb:              Version: S.2023.03-SP1 for linux64 bit
+mdb:                    date : Tue 21 11 2023 - 03:40:44
+mdb: 
+mdb: 
+mdb: 
+mdb: [INFO ZEBU_JTAG_DLL] value of ZEBU_JTAG_PORT variable is: 20010
+mdb: [INFO ZEBU_JTAG_DLL] ZEBU_SOCKET_PORT : Remote socket set to user value : 20010
+mdb: [INFO ZEBU_JTAG_DLL] Value of ZEBU_JTAG_IP is : localhost
+mdb: [INFO ZEBU_JTAG_DLL] Successful connection to server (localhost@20010)
+mdb: 
+mdb: [JTAG] INFO: New CPUCLK / TCK ratio: 5
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port
+VJTAG [ERROR] : JTAGXTOR - bind: Address already in use
+	Maybe another JTAG transactor daemon is already running or didn't die properly...  Retrying the port

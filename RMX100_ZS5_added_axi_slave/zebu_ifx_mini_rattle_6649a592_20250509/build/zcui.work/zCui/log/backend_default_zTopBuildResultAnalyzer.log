@@ -1,0 +1,51 @@
+zTopBuild run timestamp written (1747238319)
+Task added: Save Clustering Results (backend_default_zBuildClusteringSaver)
+Analyzing zTopBuildResult
+    Reading 'backend_default/zTopBuild.xcui' targets
+    Xcui file backend_default/zTopBuild.xcui is read
+        'DiskSpaceChecker' target found
+            FPGA count: 12
+        'zCoreBuild' target found
+            Core: Part_0
+            Task added: Build zCore Part_0 (backend_default_zCoreBuild_Part_0)
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zCoreBuild_Part_0: backend_default/work.Part_0/zebu_top.hash
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zCoreBuild_Part_0: backend_default/work.Part_0/../zPar_target_conf.tcl
+            Task added: Analyze zCore Building Results Part_0 (backend_default_zCoreBuildAnalyzer_Part_0)
+        'pBuild' target found
+            WARNING: Unexpected target type: pBuild
+        'zPar' target found
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zPar: backend_default/edif/zebu_top.edf.gz
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zPar: backend_default/zPar_target_conf.tcl
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zPar: backend_default/zPar_cmds.tcl
+        'zTime' target found
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/tools/zTime/zTime_hierarchy.edf.gz
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/HydraDB/eid2names.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/HydraDB/eid2label.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/HydraDB/eid2master.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/HydraDB/beEid2hierPath.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/hierview.edf.gz
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/tools/zTime/zTopBuild_timing.zti
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTime: backend_default/tools/zTime/clock_dependencies.zti
+        'zTime_fpga' target found
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/tools/zTime/zTime_hierarchy.edf.gz
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/HydraDB/eid2names.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/HydraDB/eid2label.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/HydraDB/eid2master.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/HydraDB/beEid2hierPath.bin
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/hierview.edf.gz
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/tools/zTime/zTopBuild_timing.zti
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zTimeFpga: backend_default/tools/zTime/clock_dependencies.zti
+        'zCoreBuild_zRDB' target found
+        'zRDB' target found
+            Number Of Dependencies zTopBuild -> zRDB : 4
+        'zDB_final' target found
+            Add dependency backend_default_zTopBuildResultAnalyzer to backend_default_zDB_Global_Controller: backend_default/tools/zDB/zTopBuild.tcl
+        'hydra' target found
+        'SVA' target found
+            SVA output -> Final Checker : no file
+        'zRDB' target found
+            WARNING: Unable to read tag 'script' from xcui
+    Building Simu flow
+        Task added: Convert Netlist (backend_default_zRtlToEqui)
+        Task added: Build Equipotentials (backend_default_Zrdb_Equi)
+        Task added: Simulate Graphs (backend_default_zSimzilla)

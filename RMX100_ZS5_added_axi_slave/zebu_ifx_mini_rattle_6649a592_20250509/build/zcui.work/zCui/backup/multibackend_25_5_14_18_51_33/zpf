@@ -1,0 +1,245 @@
+ZCUI {UNIFIED_COMPILE} {1.0}
+#==========================================================================
+## Global
+#==========================================================================
+ZCUI_set ZcuiWorkingDirectory {/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work}
+ZCUI_set VcsCommand {/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui_vcs_cmd.csh}
+ZCUI_set utfFileName {/remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/scripts/zebu_scripts/project_zs5.utf}
+#==========================================================================
+## Design sources
+#==========================================================================
+#--------------------------------------------------------------------------
+## Back-End default : Architecture
+ZCUI_set ArchitectureFile {/remote/sdgzebu_system_dir/CONFIG/ZSE/zs5_4s.zs_0170/config/zse_configuration.tcl}
+#--------------------------------------------------------------------------
+## Back-End default : Timing Options
+ZCUI_set ZTimeInputCommandFilename {utf_generatefiles/zTime_config.tcl}
+#--------------------------------------------------------------------------
+## Back-End default : Mapping
+ZCUI_set ClusterMode FullAuto
+ZCUI_set AutoCoreDefinition f
+ZCUI_set TopReuseExistingMapping f
+ZCUI_set CorePartitioningMode Dop
+ZCUI_set DopCoreAdaptativeFR t
+ZCUI_set CoreReuseExistingMapping f
+#--------------------------------------------------------------------------
+## Back-End default : Clock Constraints
+ZCUI_set GlobalSkewOffset t
+ZCUI_set ClockPathLocalization FPGALevel
+ZCUI_set FilterGlitches On
+ZCUI_set ClockCounterFlag f
+#--------------------------------------------------------------------------
+## Back-End default : Other Constraints
+ZCUI_set ZTopBuildNetlistFinalizationFileName {utf_generatefiles/zTopBuild_netlist_config.tcl}
+ZCUI_set ZTopBuildCommandFilename {utf_generatefiles/zTopBuild_config.tcl}
+ZCUI_set ZParCommandFilename {utf_generatefiles/zPar_config.tcl}
+ZCUI_set ZparIncrementalMode f
+ZCUI_set ZparRoutingEffortMode Medium
+ZCUI_set EnablePDM {Direct}
+ZCUI_set UseFpgaLocalDiskCompilation f
+ZCUI_set UseFpgaMultiLaunch t
+ZCUI_set UseParffMultiStage t
+ZCUI_set UseSDFTimingAnalysis t
+#--------------------------------------------------------------------------
+## Back-End default : ISE Parameters
+ZCUI_set ISEFirstPARPolicy Original
+ZCUI_set ISEFilePolicy Compress
+ZCUI_set ISEDebugPolicy Disabled
+ZCUI_set PercentageOfFpgaCompilation 100
+ZCUI_set FpgaComplexityPredictor t
+ZCUI_set NumberOfFpgaPerBundle 8
+ZCUI_set FpgaUserComplexityThreshold -2
+#--------------------------------------------------------------------------
+## Back-End default : Debug
+ZCUI_set GlobalBramRWFlag f
+ZCUI_set TopDebugFlag t
+ZCUI_set DisableOfflineDebugFlag f
+#--------------------------------------------------------------------------
+## Back-End default : Additional Commands
+ZCUI_add diskSpaceConstants {zTop} 0.000000 {backend_default}
+ZCUI_add diskSpaceConstants {zCore} 0.000000 {backend_default}
+ZCUI_add diskSpaceConstants {ppFpga} 0.000000 {backend_default}
+#--------------------------------------------------------------------------
+## Back-End default : Environnement
+ZCUI_set GeneratorType CPP
+ZCUI_add -driver_path {/global/apps/zebu_vs_2023.03-SP1//drivers}
+ZCUI_set UseZebuIpRoot t
+#==========================================================================
+## Task Association
+#==========================================================================
+ZCUI_add -taskAssociation {Archive_Frontend_Files} {Zebu}
+ZCUI_add -taskAssociation {Archive_Symbolic_Links_of_Frontend_Files} {Zebu}
+ZCUI_add -taskAssociation {Archived_Debug_Files_Compressor} {Zebu}
+ZCUI_add -taskAssociation {Archived_Files_for_RunTime_Compressor} {Zebu}
+ZCUI_add -taskAssociation {Archived_Frontend_Files_Compressor} {Zebu}
+ZCUI_add -taskAssociation {Archived_Intermediate_Files_Compressor} {Zebu}
+ZCUI_add -taskAssociation {BE_Version_Checker} {ZebuLocal}
+ZCUI_add -taskAssociation {BuildzTiNa} {Zebu}
+ZCUI_add -taskAssociation {CTMCheckFpgaLets} {ZebuIse}
+ZCUI_add -taskAssociation {CompileFpgaLet} {ZebuIse}
+ZCUI_add -taskAssociation {DARTAnalyzer} {Zebu}
+ZCUI_add -taskAssociation {Debug_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {DivMod} {Zebu}
+ZCUI_add -taskAssociation {Eco_Comparator} {Zebu}
+ZCUI_add -taskAssociation {Eco_Comparator_Commands} {Zebu}
+ZCUI_add -taskAssociation {Eco_FpgaLetMerge} {ZebuHeavy}
+ZCUI_add -taskAssociation {Eco_Ise_Par} {ZebuHeavy}
+ZCUI_add -taskAssociation {Eco_Merge_DB} {Zebu}
+ZCUI_add -taskAssociation {Eco_Run} {ZebuHeavy}
+ZCUI_add -taskAssociation {Eco_Shell} {Zebu}
+ZCUI_add -taskAssociation {Eco_Timing} {ZebuHeavy}
+ZCUI_add -taskAssociation {Eco_zDBPostProcMerge} {ZebuHeavy}
+ZCUI_add -taskAssociation {Eco_zDBPostProcUpdate} {ZebuHeavy}
+ZCUI_add -taskAssociation {FE_Version_Checker} {ZebuLocal}
+ZCUI_add -taskAssociation {FpSynthesis} {Zebu}
+ZCUI_add -taskAssociation {FpgaInputAnalyzer} {Zebu}
+ZCUI_add -taskAssociation {FpgaMultiBinPredictor} {ZebuLocal}
+ZCUI_add -taskAssociation {FpgaPackage} {Zebu}
+ZCUI_add -taskAssociation {FpgaPostProc} {Zebu}
+ZCUI_add -taskAssociation {FpgaPredictor} {ZebuHeavy}
+ZCUI_add -taskAssociation {FpgaResultAnalyzer} {Zebu}
+ZCUI_add -taskAssociation {FractalMerge} {ZebuIse}
+ZCUI_add -taskAssociation {Fs_Macro} {Zebu}
+ZCUI_add -taskAssociation {Generate_Power_Profile_DB} {Zebu}
+ZCUI_add -taskAssociation {Intermediate_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {Intermediate_Profiling_Results_Analyzer} {ZebuLocal}
+ZCUI_add -taskAssociation {IseClean} {ZebuLocal}
+ZCUI_add -taskAssociation {IseFinish} {ZebuLocal}
+ZCUI_add -taskAssociation {IsePar} {ZebuIse}
+ZCUI_add -taskAssociation {IseRelaunchedComplexPar} {ZebuIse}
+ZCUI_add -taskAssociation {IseRelaunchedPar} {ZebuIse}
+ZCUI_add -taskAssociation {IseRelaunchedParLevel2} {ZebuIse}
+ZCUI_add -taskAssociation {Memory} {Zebu}
+ZCUI_add -taskAssociation {MonitorFpgaLet} {ZebuIse}
+ZCUI_add -taskAssociation {Netlist_Builder} {ZebuHeavy}
+ZCUI_add -taskAssociation {OptionsDbProc} {ZebuLocal}
+ZCUI_add -taskAssociation {PDM_DAP} {ZebuIse}
+ZCUI_add -taskAssociation {PDM_Timing} {Zebu}
+ZCUI_add -taskAssociation {PartitionViewerCleanUp} {Zebu}
+ZCUI_add -taskAssociation {PartitionViewerFPGA} {Zebu}
+ZCUI_add -taskAssociation {PartitionViewerHTML} {Zebu}
+ZCUI_add -taskAssociation {PartitionViewerMerge} {ZebuHeavy}
+ZCUI_add -taskAssociation {PartitionViewerPrepareRunDir} {Zebu}
+ZCUI_add -taskAssociation {PostProcessFpgaLets} {ZebuIse}
+ZCUI_add -taskAssociation {PreemptZNetgen} {ZebuIse}
+ZCUI_add -taskAssociation {PrepareFpgaLets} {ZebuIse}
+ZCUI_add -taskAssociation {PreparepTimeFpga} {Zebu}
+ZCUI_add -taskAssociation {Profiling_Results_Analyzer} {ZebuLocal}
+ZCUI_add -taskAssociation {Project_Source_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {RTB_Front_End} {ZebuHeavy}
+ZCUI_add -taskAssociation {RTL_DB_Indexer} {Zebu}
+ZCUI_add -taskAssociation {RTL_DB_Link} {Zebu}
+ZCUI_add -taskAssociation {RTL_DB_RunTime} {Zebu}
+ZCUI_add -taskAssociation {RhinoFsdb_Builder} {Zebu}
+ZCUI_add -taskAssociation {RunTime_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {SemGatePostProcessing} {Zebu}
+ZCUI_add -taskAssociation {SemGateRTL} {Zebu}
+ZCUI_add -taskAssociation {SemGateUtfTran} {Zebu}
+ZCUI_add -taskAssociation {SemGateZNetgen} {ZebuIse}
+ZCUI_add -taskAssociation {Swave_codegen} {Zebu}
+ZCUI_add -taskAssociation {Swave_compile} {Zebu}
+ZCUI_add -taskAssociation {Symbolic_Links_of_Debug_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {Symbolic_Links_of_Files_for_RunTime_Archiver} {Zebu}
+ZCUI_add -taskAssociation {Target_Config} {Zebu}
+ZCUI_add -taskAssociation {Timing_Wrapper} {Zebu}
+ZCUI_add -taskAssociation {Timing_Wrapper_Post_Fpga} {Zebu}
+ZCUI_add -taskAssociation {UTFtran_Analyzer} {Zebu}
+ZCUI_add -taskAssociation {UTFtran_Extractor} {Zebu}
+ZCUI_add -taskAssociation {VCS_Task_Analyzer} {Zebu}
+ZCUI_add -taskAssociation {VCS_Task_Builder} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {VERDI_Version_Checker} {ZebuLocal}
+ZCUI_add -taskAssociation {Vcs_Link} {Zebu}
+ZCUI_add -taskAssociation {Vcs_Version_Checker} {ZebuLocal}
+ZCUI_add -taskAssociation {Verdi_Compilation} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {Verdi_Files_Archiver} {Zebu}
+ZCUI_add -taskAssociation {VivadoWorker} {ZebuLocal}
+ZCUI_add -taskAssociation {ZeBu_Emulation_SW} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {ZebuComplexFpga} {ZebuIse}
+ZCUI_add -taskAssociation {Zrdb_Equi} {ZebuHeavy}
+ZCUI_add -taskAssociation {_Synthesis} {ZebuSynthesis}
+ZCUI_add -taskAssociation {_SynthesisAlt} {ZebuSynthesis}
+ZCUI_add -taskAssociation {pBuild_compile} {Zebu}
+ZCUI_add -taskAssociation {pBuild_config} {Zebu}
+ZCUI_add -taskAssociation {pFpgaTiming} {ZebuHeavy}
+ZCUI_add -taskAssociation {preparezTimeFpga} {Zebu}
+ZCUI_add -taskAssociation {zAuditReport} {ZebuLocal}
+ZCUI_add -taskAssociation {zCoreBuild} {ZebuHeavy}
+ZCUI_add -taskAssociation {zCoreBuildTiming} {ZebuIse}
+ZCUI_add -taskAssociation {zCoreBuildTimingDebug} {ZebuIse}
+ZCUI_add -taskAssociation {zDB_Global} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zDbPostProc} {ZebuHeavy}
+ZCUI_add -taskAssociation {zDveTool} {Zebu}
+ZCUI_add -taskAssociation {zFW} {ZebuHeavy}
+ZCUI_add -taskAssociation {zFpgaTiming} {ZebuIse}
+ZCUI_add -taskAssociation {zGraphGenerator} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zOpt} {ZebuIse}
+ZCUI_add -taskAssociation {zPRD_Run} {Zebu}
+ZCUI_add -taskAssociation {zPar} {ZebuHeavy}
+ZCUI_add -taskAssociation {zPertagram} {Zebu}
+ZCUI_add -taskAssociation {zRtlToEqui} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zSimuFsdbHeader} {Zebu}
+ZCUI_add -taskAssociation {zSimzilla} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zSimzillaBitParallelSeq} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zSimzillaWorker} {ZebuLocal}
+ZCUI_add -taskAssociation {zTiNa_post_pBuild} {Zebu}
+ZCUI_add -taskAssociation {zTime} {Zebu}
+ZCUI_add -taskAssociation {zTimeFpga} {Zebu}
+ZCUI_add -taskAssociation {zTimePlaceFpga} {Zebu}
+ZCUI_add -taskAssociation {zTopBuild} {ZebuSuperHeavy}
+ZCUI_add -taskAssociation {zTrackApp} {ZebuHeavy}
+ZCUI_add -taskAssociation {zTrack_Server} {Zebu}
+ZCUI_set zTopBuildClusteringCommandSpecific f
+ZCUI_set zTopCoreClusteringCommandSpecific f
+#==========================================================================
+## Job Scheduler
+#==========================================================================
+ZCUI_add -jobQueue {DEFAULT_QUEUE} {bsub -Is -app comp_zebucae -Jd zebu_compile} {} {100}
+ZCUI_add -jobQueue {Zebu} {bsub -Is -app comp_zebucae -Jd zebu_compile} {kill -9 %p} {100}
+ZCUI_add -jobQueue {ZebuHeavy} {bsub -Is -app comp_zebucae -Jd zebu_compile} {kill -9 %p} {100}
+ZCUI_add -jobQueue {ZebuIse} {bsub -Is -app comp_zebucae -Jd zebu_compile} {kill -9 %p} {100}
+ZCUI_add -jobQueue {ZebuLocal} {} {} {0}
+ZCUI_add -jobQueue {ZebuSuperHeavy} {bsub -Is -app comp_zebucae -Jd zebu_compile} {kill -9 %p} {100}
+ZCUI_add -jobQueue {ZebuSynthesis} {bsub -Is -app comp_zebucae -Jd zebu_compile} {kill -9 %p} {100}
+#==========================================================================
+## Profiled Compilation
+#==========================================================================
+ZCUI_set ProfiledCompilation t
+#==========================================================================
+## Compiler Options
+#==========================================================================
+ZCUI_add -staticRtlBundleMethod Size 23
+ZCUI_set diskSpaceCheck f
+ZCUI_set diskSpaceEmailNotification f
+ZCUI_set diskSpaceLogNotification f
+ZCUI_set diskSpaceWarningBoxNotification f
+ZCUI_set diskSpaceEmailNotificationBatch f
+ZCUI_set diskSpaceLogNotificationBatch f
+ZCUI_set diskSpaceZebuConstants f
+ZCUI_set diskSpaceDesignConstants f
+ZCUI_add diskSpaceConstantsUC {Elab} 0.000000
+ZCUI_add diskSpaceConstantsUC {SynthSize} 0.000000
+ZCUI_set DiskAccesOptimizerMethod 5
+ZCUI_set MaximumNumberOfExistPRetry 120
+ZCUI_set ExistPRetryDelay 1000
+ZCUI_set MemoryUserFile {utf_generatefiles/zMem_config.tcl}
+#==========================================================================
+## Compiler Options
+#==========================================================================
+ZCUI_add -sourcePathConverter Relative
+ZCUI_add -zebuPathConverter Relative
+ZCUI_set RemoveWhiteSpace f
+#==========================================================================
+## Extra Scripts
+#==========================================================================
+#==========================================================================
+## Grid Engine
+#==========================================================================
+ZCUI_set UseOfflineDebugFlag f
+ZCUI_set DisableOutputProbesFlag f
+ZCUI_set UseCSAFlag f
+ZCUI_set MemoryIOAccessibilityFlag t
+ZCUI_set EnableBRAMFlag t
+ZCUI_set TopLevelIOAccessibilityFlag t
+ZCUI_set UseExpertDebuggingModeFlag f
+ZCUI_set NoOptimizationFlag f
+ZCUI_set ZMemLatencyFlag f

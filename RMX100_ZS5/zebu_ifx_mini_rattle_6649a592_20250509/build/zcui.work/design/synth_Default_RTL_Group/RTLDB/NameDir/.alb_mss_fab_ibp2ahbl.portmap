@@ -1,0 +1,156 @@
+Module alb_mss_fab_ibp2ahbl{
+}
+Module alb_mss_fab_bypbuf_0000_0000{
+}
+Module alb_mss_fab_bypbuf_0000_0001{
+}
+Module alb_mss_fab_ibp2single_0000{
+}
+Module alb_mss_fab_single2sparse_0000{
+}
+Module alb_mss_fab_single2ahbl{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0002{
+59 0 i_data
+16 0 i_occp
+59 0 o_data
+16 0 o_occp
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000_0000{
+49 0 i_data
+49 0 o_data
+}
+EdfPortBounds alb_mss_mem_fifo_0000_0001{
+53 0 i_data
+1 0 i_occp
+53 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_mem_fifo_0003{
+1 0 i_data
+2 0 i_occp
+1 0 o_data
+2 0 o_occp
+}
+EdfPortBounds rl_bitscan_16b{
+14 0 din
+3 0 dout
+}
+EdfPortBounds alb_mss_fab_ibp2single_0000{
+32 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+31 0 i_ibp_rd_data
+31 0 i_ibp_wr_data
+3 0 i_ibp_wr_mask
+32 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+31 0 o_ibp_rd_data
+31 0 o_ibp_wr_data
+3 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_single2ahbl{
+32 0 ahb_haddr
+2 0 ahb_hburst
+3 0 ahb_hprot
+31 0 ahb_hrdata
+2 0 ahb_hsize
+1 0 ahb_htrans
+31 0 ahb_hwdata
+32 0 ibp_cmd_addr
+3 0 ibp_cmd_burst_size
+2 0 ibp_cmd_burst_type
+3 0 ibp_cmd_cache
+2 0 ibp_cmd_data_size
+1 0 ibp_cmd_prot
+31 0 ibp_rd_data
+31 0 ibp_wr_data
+}
+EdfPortBounds alb_mss_mem_fifo_0000{
+59 0 i_data
+1 0 i_occp
+59 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_fab_single2sparse_0000{
+32 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+2 0 i_ibp_cmd_burst_type
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+31 0 i_ibp_rd_data
+31 0 i_ibp_wr_data
+3 0 i_ibp_wr_mask
+32 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+31 0 o_ibp_rd_data
+31 0 o_ibp_wr_data
+}
+EdfPortBounds alb_mss_mem_bypbuf_0000_0004{
+127 0 i_data
+127 0 o_data
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000_0001{
+36 0 i_data
+36 0 o_data
+}
+EdfPortBounds ls_multi_bit_comparator_0005{
+127 0 LSBv
+127 0 MSBv
+}
+EdfPortBounds mss_bus_switch_ibp2single_0000_0000{
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+127 0 i_ibp_rd_data
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+127 0 o_ibp_rd_data
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+EdfPortBounds simple_parity{
+0 0 din
+0 0 dout
+}
+EdfPortBounds simple_parity_0000{
+1 0 din
+1 0 dout
+}
+EdfPortBounds alb_mss_fab_fifo_0003{
+49 0 i_data
+1 0 i_occp
+49 0 o_data
+1 0 o_occp
+}
+NonAliasNets alb_mss_fab_ibp2ahbl{
+cmd_wait_wd_cnt_r[3]    f   797
+}

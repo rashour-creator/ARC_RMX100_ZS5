@@ -1,0 +1,62 @@
+#!/bin/csh -ef
+# Usage: zebu_cct <cct_cmd_file> [<more_cct_cmd_file>]
+# For all CCTs use: zebu_cct `find <tests_dir> -name "*.cmd" [| grep -v -f <skip_tests_file>]`
+
+# Global controls
+setenv GUI 0
+setenv BDL 0
+
+# Analyze binaries to run
+setenv CMD_PATHS "$*"
+setenv CCT_PATHS ""
+set    CCT_NAMES = ()
+echo "Running following CCTs:"
+foreach cmd ($CMD_PATHS)
+  if (! -e $cmd) then
+    echo "Error: $cmd not found"
+    exit 1
+  endif
+  set bins = `find ${cmd:h} -name "${cmd:t:r}*out" | grep -P "${cmd:t:r}(_.*)?\.out" | sort`
+  if ($#bins == 0) then
+      echo "Error: ${cmd:r}*.out not found"
+      continue
+  endif
+  echo " - $bins (mdb cmd: $cmd)"
+  setenv CCT_PATHS "$CCT_PATHS {$cmd $bins}"
+  set    CCT_NAMES = ( $CCT_NAMES $cmd:t:r )
+end
+
+# Execute in ZeBu
+zRci --zebu-work zcui.work/zebu.work scripts/zebu_runtime/zrci_cct_mdb.tcl | tee zRun.log
+if ($status != 0) then
+  echo "zRci returned with errors"
+  exit 1
+endif
+mkdir -p logs ; mv *${HOST}* logs/
+
+# Analyze results
+sleep 5
+if ($GUI != 1) then
+  set pass = 0
+  set fail = 0
+  echo "\n`date`\n----------------------------" | tee -a zebu_cct.log
+  echo "Analyzing CCT results:" | tee -a zebu_cct.log
+  foreach cct ($CCT_NAMES)
+    set flg_name = ${cct}.flg
+    if ( ! -e $flg_name ) then
+      echo " - $cct -> Failed ($flg_name not found)" | tee -a zebu_cct.log
+      @ fail += 1
+      continue
+    endif
+    set test_res = `grep gp $flg_name | sed -e 's/.*\([0-9a-f]\) $/\1/g'`
+    if ($test_res == 1) then
+      echo " - $cct -> Passed" | tee -a zebu_cct.log
+      @ pass += 1
+    else
+      echo " - $cct -> Failed (return code $test_res)" | tee -a zebu_cct.log
+      @ fail += 1
+    endif
+    rm $flg_name
+  end
+  echo "Summary: $pass CCTs passed, $fail failed" | tee -a zebu_cct.log
+endif

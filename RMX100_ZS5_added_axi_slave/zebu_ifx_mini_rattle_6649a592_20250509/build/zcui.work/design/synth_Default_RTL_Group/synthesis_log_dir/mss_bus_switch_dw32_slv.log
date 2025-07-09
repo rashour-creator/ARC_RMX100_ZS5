@@ -1,0 +1,36 @@
+#   step REPORT : Synthesizing module : mss_bus_switch_dw32_slv
+#   step REPORT : Synthesizing module : mss_bus_switch_ibp2pack
+#   step REPORT : Synthesizing module : mss_bus_switch_ibpx2ibpy_0000
+#   step REPORT : Synthesizing module : mss_bus_switch_ibp_cwbind_0000
+### warning in ZFAST : Out of 71 pin types only 69 have names
+#   step REPORT : [39.349] Optimizing module : mss_bus_switch_dw32_slv
+#   step REPORT : [39.350] Instance count of module mss_bus_switch_dw32_slv is 3
+#   step REPORT : [6.1691] Total net count: 6116
+#   step REPORT : [6.1690] There are 6 levels of combinational cells
+#   step REPORT : [6.1689] There are 0 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 49
+#   step REPORT : [6.1695] 3-input LUTs: 2
+#   step REPORT : [6.1695] 4-input LUTs: 4
+#   step REPORT : [6.1695] 5-input LUTs: 4
+#   step REPORT : [6.1695] 6-input LUTs: 7
+#   step REPORT : [6.1696] Total LUT area: 66
+#   step REPORT : [6.1697] +CSA LUTs: 52
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'mss_bus_switch_dw32_slv' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                   0 |                 118 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                1432 |                  12 |                   0 |                   0 |                   0 || mss_bus_switch_dw32_slv
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'mss_bus_switch_dw32_slv' to 'edif/mss_bus_switch_dw32_slv/mss_bus_switch_dw32_slv.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/mss_bus_switch_dw32_slv/mss_bus_switch_dw32_slv.edf.gz'
+#   step SERIALIZE : #bytes in: 360202, #bytes out: 61282, compression ratio: 5.877778
+#   step REPORT : [87.28] Resource usage for mss_bus_switch_dw32_slv: 0.256s 0.0M

@@ -1,0 +1,12 @@
+
+VLOGAN	= vlogan
+VLOGAN_OPT	= -kdb -kdb -full64 -work dw02 -full64
+
+all :		_VCSgd_RifKAe_1.db \
+
+
+
+_VCSgd_RifKAe_1.db :	/global/apps/syn_2020.09-SP5-1/dw/fpga_ip/fv/dw_foundation/dw_verilog.v.e 
+		${VLOGAN}  ${VLOGAN_OPT} /global/apps/syn_2020.09-SP5-1/dw/fpga_ip/fv/dw_foundation/dw_verilog.v.e
+
+

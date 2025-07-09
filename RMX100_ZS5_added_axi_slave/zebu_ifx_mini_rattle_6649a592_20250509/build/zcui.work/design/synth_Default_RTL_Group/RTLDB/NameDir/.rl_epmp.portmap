@@ -1,0 +1,169 @@
+Module rl_epmp{
+}
+Module rl_pmp{
+}
+
+EdfPortBounds alb_mss_mem_ibp_buf{
+31 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+5 0 i_ibp_cmd_id
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_region
+3 0 i_ibp_cmd_user
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+31 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+5 0 o_ibp_cmd_id
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_region
+3 0 o_ibp_cmd_user
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_fifo_0002{
+59 0 i_data
+16 0 i_occp
+59 0 o_data
+16 0 o_occp
+}
+EdfPortBounds rl_pmp{
+31 0 csr_rdata
+11 0 csr_sel_addr
+1 0 csr_sel_ctl
+11 0 csr_waddr
+31 0 csr_wdata
+31 0 dmp_addr
+31 0 dmp_addr1
+3 0 dpmp_perm
+31 2 ifu_addr0
+3 0 ipmp_perm0
+1 0 priv_level_r
+}
+EdfPortBounds alb_mss_mem_ibp_lat{
+9 0 cfg_lat_r
+9 0 cfg_lat_w
+31 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+3 0 i_ibp_cmd_user
+127 0 i_ibp_rd_data
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+31 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+3 0 o_ibp_cmd_user
+127 0 o_ibp_rd_data
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_mem_ibp_cwbind_0000{
+48 0 i_ibp_cmd_chnl
+3 0 i_ibp_cmd_chnl_user
+130 0 i_ibp_rd_chnl
+144 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+48 0 o_ibp_cmd_chnl
+3 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_mem_ibp2single_0000{
+31 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+3 0 i_ibp_cmd_user
+127 0 i_ibp_rd_data
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+31 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+3 0 o_ibp_cmd_user
+127 0 o_ibp_rd_data
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_mem_ibp_bypbuf_0000{
+48 0 i_ibp_cmd_chnl
+0 0 i_ibp_cmd_chnl_rgon
+3 0 i_ibp_cmd_chnl_user
+130 0 i_ibp_rd_chnl
+144 0 i_ibp_wd_chnl
+2 0 i_ibp_wrsp_chnl
+48 0 o_ibp_cmd_chnl
+0 0 o_ibp_cmd_chnl_rgon
+3 0 o_ibp_cmd_chnl_user
+130 0 o_ibp_rd_chnl
+144 0 o_ibp_wd_chnl
+2 0 o_ibp_wrsp_chnl
+}
+EdfPortBounds alb_mss_mem_ibp_excl_0000{
+31 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+5 0 i_ibp_cmd_id
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_region
+3 0 i_ibp_cmd_user
+127 0 i_ibp_rd_data
+127 0 i_ibp_wr_data
+15 0 i_ibp_wr_mask
+31 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_region
+3 0 o_ibp_cmd_user
+127 0 o_ibp_rd_data
+127 0 o_ibp_wr_data
+15 0 o_ibp_wr_mask
+}
+EdfPortBounds rl_alu_data_path{
+5 0 alu_x1_comparison
+31 0 alu_x1_result
+31 0 db_wdata
+48 0 x1_alu_ctl
+31 0 x1_src0_data
+31 0 x1_src1_data
+31 1 x1_src2_data
+}
+EdfPortBounds alb_mss_mem_ctrl{
+31 0 cmd_addr
+3 0 cmd_burst_size
+2 0 cmd_data_size
+31 4 mem_addr
+15 0 mem_bwe
+127 0 mem_rdata
+127 0 mem_wdata
+127 0 rd_data
+127 0 wr_data
+15 0 wr_mask
+}
+EdfPortBounds alb_mss_mem_model{
+31 4 mem_addr
+15 0 mem_bwe
+127 0 mem_rdata
+127 0 mem_wdata
+}
+NonAliasNets rl_epmp{
+}

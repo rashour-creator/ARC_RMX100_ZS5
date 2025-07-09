@@ -1,0 +1,624 @@
+Job <85187311> is submitted to queue <comp>.
+<<Waiting for dispatch ...>>
+<<Starting on odcphy-vg-1178.internal.synopsys.com>>
+
+                                    ZeBu (R)
+                                      zRDB
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRDB -merge -script zDB_final_zcui.tcl 
+
+# start time is Wed May 14 21:25:40 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:25
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4177.92 AMD EPYC 7281 16-Core Processor
+#            Load: 7.08 7.40 7.31 7/883 1411083
+#            Hostname: odcphy-vg-1178   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 257578 MB Free: 216638 MB
+#            Swap space: 262143 MB Free Swap space: 262124 MB
+#            VmSize: 358 MB VmPeak: 358 MB
+# Disk Space Total: 5000 GB Available: 552 GB Used: 4448 GB
+#            Free inodes: 11740244
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step ZRDB : libZebuRDB version 2021.3.0 RW
+#   step ZRDB : Will generate selection of all support registers
+#   step ZRDB : Anticipated mode activated, using file 'zDB_Controller.cui' for communication with zCui
+#   step ZRDB : add annotation file tools/zDB/zTopBuild_equi.inf for merging
+#   step ZRDB : add annotation file work.Part_0/zCoreBuild_equi.inf for merging
+#   step ZRDB : Using '.' as zebu.work directory for database merge
+#   step ZRDB : add Fpga U0/M0/F00 for merging
+#   step ZRDB : add Fpga U0/M0/F01 for merging
+#   step ZRDB : add zdb file 'ZebuDB.rtb.zdb' for merging
+#   step ZRDB : add zdb file 'zParDB.zdb' for merging
+#   step ZRDB : add zdb file 'work.Part_0/zCoreBuildDB.zdb' for merging
+#   step ZRDB : add property db file 'tools/zTopBuild/zTopBuild_propertyDB.gz' for merging
+#   step ZRDB : DB merging: 
+#   step CSA : CSA was not detected
+#   step HUB : Loading 'nofpga' database in full load mode
+#   step DB LOAD : Loading database from path './nofpga/zrdb'
+#   step DB LOAD : Opening full tree file './nofpga/zrdb/tree.zrdb' to speed up load process
+#   step FILE : Opening file './nofpga/zrdb/tree.zrdb' in read mode
+#   step FILE : Opening file './nofpga/zrdb/coords.zrdb' in read mode
+#   step DB LOAD : Loading DB stamp from file './nofpga/zrdb/stamp.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/stamp.zrdb' in read mode
+#   step DB LOAD : Version stamp is 2021.3.0
+#   step DB LOAD : The database was generated on : Wed May 14 18:59:07 2025
+#   step DB LOAD : Stored database CRC is : ffffffff
+#   step DB LOAD : Deserializing database : start
+#   step DB LOAD : Database version is 2021.3.0
+#   step DB LOAD : Auxillary databases splitted in 1 wrappers
+#   step DICTIONARY : Opening dictionary
+#   step FILE : Opening file './nofpga/zrdb/dictionary/names.zrdb' in read mode
+#   step DICTIONARY : Opened. 328815 unique names, in 11 chunks of 32768 entries, stored in 1 directories
+#   step COORDS : Loading coordinates database (full)
+#   step COORDS : Reading coordinates database header
+#   step COORDS : Coordinates database contains 0 entries
+#   step COORDS : Reading coordinates database header (cont'd)
+#   step COORDS : Read coordinates database header complete (0 seconds)
+#   step COORDS : Reading register coordinates
+#   step COORDS : Finished reading 0 register coordinates in 0 seconds
+#   step COORDS : Loaded coordinates database in 0 seconds (full)
+#   step MEMS : Opening memories database file './nofpga/zrdb/mems.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/mems.zrdb' in read mode
+#   step MEMS : Memories database opened
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading size
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Index
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step MEMS : Loading Table
+#   step MEMS : deserialize table
+#   step MEMS : Finished reading 0 entries in 0 seconds
+#   step DB LOAD : Deserializing tree : start
+#   step DICTIONARY : Loading chunk #0
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/0.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #0 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #10
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/10.zrdb' in read mode
+#   step DICTIONARY : Reading 1135 entries
+#   step DICTIONARY : Read 1135 entries
+#   step DICTIONARY : Chunk #10 loaded. Added 1135 names.
+#   step DB LOAD : Deserializing tree : finished in 0 seconds
+#   step DB LOAD : Deserializing database : finished in 0 seconds
+#   step DICTIONARY : Loading all 11 chunks
+#   step DICTIONARY : Loading chunk #1
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/1.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #1 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #2
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/2.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #2 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #3
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/3.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #3 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #4
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/4.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #4 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #5
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/5.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #5 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #6
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/6.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #6 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #7
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/7.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #7 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #8
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/8.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #8 loaded. Added 32768 names.
+#   step DICTIONARY : Loading chunk #9
+#   step FILE : Opening file './nofpga/zrdb/dictionary/0/9.zrdb' in read mode
+#   step DICTIONARY : Reading 32768 entries
+#   step DICTIONARY : Read 32768 entries
+#   step DICTIONARY : Chunk #9 loaded. Added 32768 names.
+#   step DICTIONARY : All chunks loaded
+#   step EQUI DB : Loading EquiDB from path './nofpga/zrdb'
+#   step EQUI DB : Opening equi db files
+#   step EQUI TABLE : Opening './nofpga/zrdb/0_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/0_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/0_equis.zrdb' index (#234 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/1_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/1_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/1_equis.zrdb' index (#257 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/2_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/2_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/2_equis.zrdb' index (#223 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/3_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/3_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/3_equis.zrdb' index (#251 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/4_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/4_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/4_equis.zrdb' index (#248 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/5_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/5_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/5_equis.zrdb' index (#240 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/6_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/6_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/6_equis.zrdb' index (#232 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI TABLE : Opening './nofpga/zrdb/7_equis.zrdb'
+#   step FILE : Opening file './nofpga/zrdb/7_equis.zrdb' in read mode
+#   step DATABASE : Reading DB './nofpga/zrdb/7_equis.zrdb' index (#235 entries)
+#   step DATABASE : Read index OK : 0 seconds.
+#   step EQUI TABLE : Opened in 0 seconds
+#   step EQUI DB : Equi db files opened
+#   step EQUI DB : Finishing load
+#   step DATABASE : Referencing nodes (top instances)
+#   step DATABASE : 5 nodes referenced in 0 seconds. Total of 5 referenced nodes.
+#   step DATABASE : Referencing nodes (progressive) - 5 nodes already referenced
+#   step DATABASE : Referencing nodes (full)
+#   step DATABASE : 349 nodes referenced in 0 seconds. Total of 1999 referenced nodes.
+#   step DB : Database './nofpga/zrdb/4_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/6_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/3_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/5_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/2_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/7_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/0_equis.zrdb' closed
+#   step DB : Database './nofpga/zrdb/1_equis.zrdb' closed
+#   step EQUI DB : Load completed in 0 seconds
+#   step FILE : Opening file './nofpga/zrdb/stamp.zrdb' in read mode
+#   step FILE : Opening file './zrdb/initial_stamp.zrdb' in write mode
+#   step Merge : Reading file 'ZebuDB.rtb.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step Merge : Reading file 'zParDB.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step Merge : Reading file 'work.Part_0/zCoreBuildDB.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step MERGE : Starting task 'ImportConstants'
+#   step AnoDB : Anotation file 'tools/zDB/zTopBuild_equi.inf' successfully opened
+#   step ALIASES : Merging new hierarchy pathes
+#   step ALIASES : Merging equipotentials using backend aliases in same hierarchy
+#   step ALIASES : Merging equipotentials using backend aliases in different hierarchy
+#   step AnoDB : 0 signals anotated, 0 memories added, 0 removed ZceiMessagePorts added.
+#   step Annotation DB : Closing file 'tools/zDB/zTopBuild_equi.inf'
+#   step AnoDB : Anotation file 'work.Part_0/zCoreBuild_equi.inf' successfully opened
+#   step ALIASES : Merging new hierarchy pathes
+#   step ALIASES : Merging equipotentials using backend aliases in same hierarchy
+#   step ALIASES : Merging equipotentials using backend aliases in different hierarchy
+#   step AnoDB : 0 signals anotated, 0 memories added, 0 removed ZceiMessagePorts added.
+#   step Annotation DB : Closing file 'work.Part_0/zCoreBuild_equi.inf'
+#   step MERGE : Completed task 'ImportConstants' in 0 seconds
+#   exec summary : Total memory: 1284132 kB - RSS memory: 428904 kB - Data memory: 864228 kB
+#   step POWER : No power domain needs to be copied
+#   step MERGE : Starting task 'EquiConsolidation'
+#   step MERGE : Completed task 'EquiConsolidation' in 0 seconds
+#   exec summary : Total memory: 1284132 kB - RSS memory: 428904 kB - Data memory: 864228 kB
+#   step FILE : Opening file 'zDB_Controller.cui' in read mode
+#   step FPGA : Merging 'U0/M0/F00' - start
+#   step FPGA : Trying SAC format.
+#   step Merge : Merging 'U0/M0/F00'
+#   step FPGA : Merged using SAC format.
+#   step Merge : Reading file 'U0/M0/F00/zrdb/ZebuDB.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step Merge : Reading file 'U0/M0/F00/ZebuDB.rtb.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step CompositeImporter : Looking for composite DB file in FPGA 'U0/M0/F00'
+#   step CompositeImporter : Looking for composite DB file 'composites.zrdb' in directory './U0/M0/F00/zrdb'
+#   step FILE : Opening file './U0/M0/F00/zrdb/composites.zrdb' in read mode
+#   step CompositeImporter : Starting coordinates importation
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '1' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '11953' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '11954' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '12352' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '12453' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '12454' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Signal '12852' under ref '0x0' was not added to database 
+### warning in CompositeImporter [RDB0320W] : Could not find any node matching ref '0x0'
+### warning in CompositeImporter [RDB0320W] : Reached max count for message, next warning of this id won't be displayed.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_ckgltch_edge_zebu_top_2' under node 'zebu_top' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_16053814003727257898' under node 'zebu_top' - signal is added with the zebu system attribute.
+#   step CompositeImporter : Coordinates imported successfully in 0 seconds. 1229 entries, 2 unknown signals.
+#   step FWC : Loading from file 'U0/M0/F00/zrdb/fwc_local_table.zrdb'
+#   step FILE : Opening file 'U0/M0/F00/zrdb/fwc_local_table.zrdb' in read mode
+#   step DICTIONARY : Deserializing dictionary
+#   step DICTIONARY : Deserialized dictionary in 0 seconds, 52 different names
+#   step FWC : Deserializing...
+#   step FWC : Table contains 2 ValueSets.
+#   step FWC : Deserializing value set 'FULL_DUT_DUMP'
+#   step FWC : Deserializing...
+#   step FWC : Deserialized 103 hierarchical references, 201 signal names and 201 coordinates in 0 seconds
+#   step FWC : Deserializing value set 'FULL_DUT_DUMP_PORTS'
+#   step FWC : Deserializing...
+#   step FWC : Deserialized 6 hierarchical references, 10 signal names and 10 coordinates in 0 seconds
+#   step FWC : All ValueSets deserialized in 0 seconds
+#   step FWC : Loaded in 0 seconds'
+#   step Fwc : Importing FWC coordinates for ValueSet : 'FULL_DUT_DUMP'
+#   step Fwc : Importing FWC coordinates for ValueSet : 'FULL_DUT_DUMP_PORTS'
+#   step FPGA : Consolidation of 341409 modified equis
+#   step FPGA : Consolidation completed in 0 seconds.
+#   step FPGA : Merging 'U0/M0/F00' - done in 1 sec
+#   step FPGA : Merging 'U0/M0/F01' - start
+#   step FPGA : Trying SAC format.
+#   step Merge : Merging 'U0/M0/F01'
+#   step FPGA : Merged using SAC format.
+#   step Merge : Reading file 'U0/M0/F01/zrdb/ZebuDB.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step Merge : Reading file 'U0/M0/F01/ZebuDB.rtb.zdb'
+#   step BANK : Merging memory banks
+#   step BANK : Merged memory banks
+#   step CompositeImporter : Looking for composite DB file in FPGA 'U0/M0/F01'
+#   step CompositeImporter : Looking for composite DB file 'composites.zrdb' in directory './U0/M0/F01/zrdb'
+#   step FILE : Opening file './U0/M0/F01/zrdb/composites.zrdb' in read mode
+#   step CompositeImporter : Starting coordinates importation
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21685_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_reset_ctrl_wrap.u_rl_reset_ctrl.u_reset_fsm' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21689_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_reset_ctrl_wrap.u_rl_reset_ctrl.u_reset_fsm' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21969_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_rl_cpu_synch_wrap.u_rl_reset_ctrl_synch.u_rst_cdc_sync.u_core_cdc_sync.GEN_TMR_NE_0_U_CDC1.GEN_FST2_U_SAMPLE_META_2_0_' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21929_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.iarcv_dm_top.u_rst_cdc_s_sync_r_s.u_sync_wrp.GEN_TMR_EQ_0_U_SYNC.GEN_FST2_U_SAMPLE_META_2_0_' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_12327585182948067451' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.iarcv_dm_top.u_rst_cdc_s_sync_r_s.u_sync_wrp.GEN_TMR_EQ_0_U_SYNC.GEN_FST2_U_SAMPLE_META_2_0_' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21423_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_reset_ctrl_wrap.u_rl_reset_ctrl.u_reset_fsm' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21427_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_reset_ctrl_wrap.u_rl_reset_ctrl.u_reset_fsm' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_14410898934716065934' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_rl_cpu_synch_wrap.u_rl_reset_ctrl_synch.u_rst_cdc_sync.u_core_cdc_sync' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_21937_Q' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.idw_dbp.u_dwt_reset_ctrl.u_rtt_rst_cdc_sync_r.u_sync_wrp.GEN_TMR_EQ_0_U_SYNC.GEN_FST2_U_SAMPLE_META_2_0_' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_13907731230492966324' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.idw_dbp.u_dwt_reset_ctrl.u_rtt_rst_cdc_sync_r.u_sync_wrp.GEN_TMR_EQ_0_U_SYNC.GEN_FST2_U_SAMPLE_META_2_0_' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'unnamed_sys_fm_3397_Q' under node 'zebu_top.core_chip_dut.iio_pad_ring' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_18081443332601995450' under node 'zebu_top.core_chip_dut.iio_pad_ring' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Could not find signal 'zebu_clkglitch_q_6021678185341027643' under node 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_rl_cpu_synch_wrap.u_rl_wdt_synch.u_wdt_rst_cdc_sync.u_core_cdc_sync' - signal is added with the zebu system attribute.
+### warning in CompositeImporter [RDB0321W] : Reached max count for message, next warning of this id won't be displayed.
+#   step CompositeImporter : Coordinates imported successfully in 0 seconds. 1666 entries, 40 unknown signals.
+#   step FWC : Loading from file 'U0/M0/F01/zrdb/fwc_local_table.zrdb'
+#   step FILE : Opening file 'U0/M0/F01/zrdb/fwc_local_table.zrdb' in read mode
+#   step DICTIONARY : Deserializing dictionary
+#   step DICTIONARY : Deserialized dictionary in 0 seconds, 147161 different names
+#   step FWC : Deserializing...
+#   step FWC : Table contains 2 ValueSets.
+#   step FWC : Deserializing value set 'FULL_DUT_DUMP'
+#   step FWC : Deserializing...
+#   step FWC : Deserialized 4412 hierarchical references, 628179 signal names and 628179 coordinates in 1 seconds
+#   step FWC : Deserializing value set 'FULL_DUT_DUMP_PORTS'
+#   step FWC : Deserializing...
+#   step FWC : Deserialized 231 hierarchical references, 9131 signal names and 9131 coordinates in 0 seconds
+#   step FWC : All ValueSets deserialized in 1 seconds
+#   step FWC : Loaded in 1 seconds'
+#   step Fwc : Importing FWC coordinates for ValueSet : 'FULL_DUT_DUMP'
+#   step Fwc : Importing FWC coordinates for ValueSet : 'FULL_DUT_DUMP_PORTS'
+#   step FPGA : Consolidation of 2268542 modified equis
+#   step FPGA : Consolidation completed in 0 seconds.
+#   step FPGA : Merging 'U0/M0/F01' - done in 8 sec
+#   step FPGA : Merged all FPGAs : total time 9 sec, work time : 9 sec, wait time : 0 sec
+#   step MERGE : Starting task 'MergeZebuDb'
+#   step Merge : Merging zdb into zrdb
+#   step DEBUG : Adding dynamic trigger 'zebu_top.trigger_pc' with FPGA 'U0/M0/F00'.
+#   step Merge : Done merging zdb - Time : 0 seconds
+#   step MERGE : Completed task 'MergeZebuDb' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933500 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'ImportProperties'
+#   step Properties : Importing properties from 'tools/zTopBuild/zTopBuild_propertyDB.gz' to database
+#   step Property DB : reading property DB from file 'tools/zTopBuild/zTopBuild_propertyDB.gz'
+#   step Properties : Importing properties from 'U0/M0/F00/zNetgen_property.db' to database
+#   step Property DB : reading property DB from file 'U0/M0/F00/zNetgen_property.db'
+#   step Properties : Importing properties from 'U0/M0/F01/zNetgen_property.db' to database
+#   step Property DB : reading property DB from file 'U0/M0/F01/zNetgen_property.db'
+#   step PROPERTY DB : Saving property database to file './zrdb/properties.zrdb'
+#   step FILE : Opening file './zrdb/properties.zrdb' in write mode
+#   step PropertyDB : Serializing...
+#   step PropertyDB : Serialized in 0 seconds
+#   step MERGE : Completed task 'ImportProperties' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933512 kB - Data memory: 1232612 kB
+#   step MERGE : Running merge flow, threading is on
+#   step MERGE : Starting task 'ZebuPowerOnReplication'
+#   step POWER DOMAIN DB : Loading power domain database from file './zrdb/power.zrdb'
+#   step POWER DOMAIN DB : Database file './zrdb/power.zrdb' not found - power domain db not available
+#   step PWDB : No power domain information found
+#   step MERGE : Completed task 'ZebuPowerOnReplication' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933512 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'CoordConsolidation'
+#   step COORDS : Updating writability
+#   step COORDS : Updated writability in 0 seconds
+#   step MERGE : Completed task 'CoordConsolidation' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'FlagSignalsAndVectors'
+#   step MERGE : Completed task 'FlagSignalsAndVectors' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'FlagNodes'
+#   step MERGE : Completed task 'FlagNodes' in 1 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'BackslashMemDb'
+#   step DB : Backslash mem db names
+#   step DB : Backslash mem db names : done
+#   step MERGE : Completed task 'BackslashMemDb' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'ComputeAndSaveCRC'
+#   step DB SAVE : Saving stamp in file './zrdb/stamp.zrdb'
+#   step FILE : Opening file './zrdb/stamp.zrdb' in write mode
+#   step DB SAVE : Stamp saved
+#   step FILE : Opening file './zrdb/zrdb.xref' in write mode
+#   step MERGE : Completed task 'ComputeAndSaveCRC' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'CopyPowerDomainStatusCoordinates'
+#   step PWDB : No power domain database found.
+#   step MERGE : Completed task 'CopyPowerDomainStatusCoordinates' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'SaveMemories'
+#   step DB SAVE : Saving memories to file './zrdb/mems.zrdb'
+#   step MEMS : Saving memories to file './zrdb/mems.zrdb'
+#   step MEMS : Serializing memories table : start
+#   step FILE : Opening file './zrdb/mems.zrdb' in write mode
+#   step MEMS : Updating indexes
+#   step MEMS : Serializing memories table : finished in 0 seconds
+#   step MEMS : Memories saved
+#   step MERGE : Completed task 'SaveMemories' in 0 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 933660 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'IndexNames'
+#   step DICTIONARY : Indexing database names
+#   step DICTIONARY : Adjusted to 65536 names per chunk
+#   step MERGE : Completed task 'IndexNames' in 1 seconds
+#   exec summary : Total memory: 1652516 kB - RSS memory: 947500 kB - Data memory: 1232612 kB
+#   step MERGE : Starting task 'ExportToMuDb'
+#   step HydraBuilder : Starting
+#   step MUDB : Annotating MuDb from Hydra and ZrDb (Hydra flow).
+#   step Open Equi Indexes : Starting
+#   step Open Equi Indexes : Done in     elapsed:0.9 s    user:0.1 s    system:0.1 s      %cpu:23.53       load:7.79       fm:215964 m     vm:1625 m      vm:+12 m      um:925 m       um:+0 m
+#   step Convert Equi Table : Starting
+#   step Convert Equi Table : Done in    elapsed:0.15 s    user:0.2 s    system:0.1 s      %cpu:20.51       load:7.79       fm:215956 m     vm:1625 m       vm:+0 m      um:925 m       um:+0 m
+#   step Run Svas : Starting
+#   step Run Svas : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:7.79       fm:215963 m     vm:1632 m       vm:+0 m      um:925 m       um:+0 m
+#   step Collect Memories : Starting
+#   step Collect Memories : Done in     elapsed:0.2 s      user:0 s      system:0 s       %cpu:0.00       load:7.79       fm:215950 m     vm:1642 m       vm:+2 m      um:932 m       um:+0 m
+### warning in XTORS [RDB0592W] : Transactor 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher' has been removed from MuDb (empty list of ports).
+### warning in XTORS [RDB0592W] : Transactor 'zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher' has been removed from MuDb (empty list of ports).
+#   step Collect Zrdb Infos : Starting
+#   step Collect Zrdb Infos : Done in    elapsed:0.77 s      user:2 s     system:12 s    %cpu:1938.01       load:7.79       fm:215906 m     vm:1642 m       vm:+0 m      um:951 m      um:+18 m
+#   step Collect Fpga Data : Starting
+#   step Collect Fpga Data : Done in    elapsed:0.12 s    user:0.5 s    system:0.2 s      %cpu:55.58       load:7.79       fm:215867 m     vm:2177 m     vm:+535 m      um:987 m      um:+36 m
+#   step Write Coord Table : Starting
+#   step Check Force Equis consistency : Starting
+#   step MUDB : Total Force Equis -  4, Injectible Equis - 0, Invalid Force Equis - 0, Optimized Force Equis - 0
+#   step Check Force Equis consistency : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:7.79       fm:215889 m     vm:2191 m       vm:+0 m      um:999 m       um:+0 m
+#   step Write Coord Table : Done in    elapsed:0.26 s   user:0.26 s    system:0.4 s     %cpu:115.94       load:7.79       fm:215888 m     vm:2189 m      vm:+12 m      um:996 m       um:+9 m
+#   step Update Zrdb : Starting
+#   step Update Zrdb : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:7.79       fm:215888 m     vm:2189 m       vm:+0 m      um:996 m       um:+0 m
+#   step Save Equis : Starting
+#   step Save Equis : Done in     elapsed:0.5 s   user:0.15 s    system:0.2 s     %cpu:360.26       load:7.79       fm:215881 m     vm:2438 m     vm:+249 m      um:995 m       um:-1 m
+#   step HydraBuilder : Done in       elapsed:1 s      user:3 s     system:12 s     %cpu:906.14       load:7.79       fm:215881 m     vm:2426 m     vm:+813 m      um:983 m      um:+58 m
+#   step Generate Selection : Starting
+#   step Generate Selection : Done in    elapsed:0.39 s   user:0.26 s      system:0 s      %cpu:66.77       load:7.79       fm:215874 m     vm:2426 m       vm:+0 m      um:983 m       um:+0 m
+#   step MERGE : Completed task 'ExportToMuDb' in 2 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'BuildExtendedPowerDomainDB'
+#   step PWDB : No power domain database to update
+#   step MERGE : Completed task 'BuildExtendedPowerDomainDB' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SaveNames'
+#   step DB SAVE : Saving names to path './zrdb'
+#   step DICTIONARY : Saving 928379 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/names.zrdb' in write mode
+#   step FILE : Opening file './zrdb/dictionary/0/0.zrdb' in write mode
+#   step DICTIONARY : Chunk 0 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/1.zrdb' in write mode
+#   step DICTIONARY : Chunk 1 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/2.zrdb' in write mode
+#   step DICTIONARY : Chunk 2 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/3.zrdb' in write mode
+#   step DICTIONARY : Chunk 3 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/4.zrdb' in write mode
+#   step DICTIONARY : Chunk 4 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/5.zrdb' in write mode
+#   step DICTIONARY : Chunk 5 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/6.zrdb' in write mode
+#   step DICTIONARY : Chunk 6 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/7.zrdb' in write mode
+#   step DICTIONARY : Chunk 7 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/8.zrdb' in write mode
+#   step DICTIONARY : Chunk 8 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/9.zrdb' in write mode
+#   step DICTIONARY : Chunk 9 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/10.zrdb' in write mode
+#   step DICTIONARY : Chunk 10 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/11.zrdb' in write mode
+#   step DICTIONARY : Chunk 11 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/12.zrdb' in write mode
+#   step DICTIONARY : Chunk 12 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/13.zrdb' in write mode
+#   step DICTIONARY : Chunk 13 contains 65536 dictionary entries
+#   step FILE : Opening file './zrdb/dictionary/0/14.zrdb' in write mode
+#   step DICTIONARY : Chunk 14 contains 10875 dictionary entries
+#   step DICTIONARY : Saved 928379 dictionary entries in 2 seconds
+#   step MERGE : Completed task 'SaveNames' in 2 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SaveXCui'
+#   step DB SAVE : Saving xcui for runtime archive
+#   step FILE : Opening file './tools/zCui/zRDB_archive.xcui' in write mode
+#   step MERGE : Completed task 'SaveXCui' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SaveCoords'
+#   step DB SAVE : Saving coordinates to file './zrdb/coords.zrdb'
+#   step COORDS : Saving coordinates to file './zrdb/coords.zrdb'
+#   step FILE : Opening file './zrdb/coords.zrdb' in write mode
+#   step COORDS : Serializing coordinates table : start
+#   step COORDS : Serializing coordinates table : finished in 0 seconds
+#   step COORDS : Coordinates saved
+#   step MERGE : Completed task 'SaveCoords' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SetSaveTreeParameters'
+#   step MERGE : Completed task 'SetSaveTreeParameters' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1007584 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SaveTreeLight'
+#   step DATABASE : Saving database to path './zrdb'
+#   step DB LOAD : Loading names
+#   step DB LOAD : Names loaded in 1 seconds
+#   step DB SAVE : Signals split overs 8 files
+#   step ZTREEDB : Initializing signals database in './zrdb' directory.
+#   step FILE : Opening file './zrdb/signals_0.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_1.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_2.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_3.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_4.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_5.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_6.zrdb' in write mode
+#   step FILE : Opening file './zrdb/signals_7.zrdb' in write mode
+#   step ZTREEDB : Serializing tree in file ./zrdb/stree.zrdb.
+#   step FILE : Opening file './zrdb/stree.zrdb' in write mode
+#   step TREE : Serializing database
+#   step TREE : Serializing Chips ...
+#   step TREE : Serializing tree : start
+#   step TREE : Serializing tree : done in 2 seconds
+#   step TREE : Serializing database : done in 2 seconds
+#   step DATABASE : Closing auxillary databases
+#   step DB : Writing index for './zrdb/signals_0.zrdb' (5529 entries)
+#   step DB : Wrote index for './zrdb/signals_0.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_0.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_1.zrdb' (5530 entries)
+#   step DB : Wrote index for './zrdb/signals_1.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_1.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_2.zrdb' (5356 entries)
+#   step DB : Wrote index for './zrdb/signals_2.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_2.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_3.zrdb' (5440 entries)
+#   step DB : Wrote index for './zrdb/signals_3.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_3.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_4.zrdb' (5508 entries)
+#   step DB : Wrote index for './zrdb/signals_4.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_4.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_5.zrdb' (5626 entries)
+#   step DB : Wrote index for './zrdb/signals_5.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_5.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_6.zrdb' (5378 entries)
+#   step DB : Wrote index for './zrdb/signals_6.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_6.zrdb' closed
+#   step DB : Writing index for './zrdb/signals_7.zrdb' (5376 entries)
+#   step DB : Wrote index for './zrdb/signals_7.zrdb' in 0 seconds
+#   step DB : Database './zrdb/signals_7.zrdb' closed
+#   step DATABASE : Closing tree
+#   step DATABASE : Whole database saved in 3 seconds
+#   step FWC : Saving FWC value sets table
+#   step NameTable : Saving table to file './zrdb/fwc_value_sets.zrdb'
+#   step FILE : Opening file './zrdb/fwc_value_sets.zrdb' in write mode
+#   step NameTable : Serializing '3' names
+#   step FWC : Saved FWC value sets table
+#   step MERGE : Completed task 'SaveTreeLight' in 3 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1011700 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'CleanZebuDb'
+#   step MERGE : Completed task 'CleanZebuDb' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1011700 kB - Data memory: 2064860 kB
+#   step MERGE : Starting task 'SaveZebuDb'
+#   step DB : Saving ZebuDB in file './zrdb/ZebuDB.zdb'
+#   step DB : Save ZebuDB : done in 0 seconds
+#   step MERGE : Completed task 'SaveZebuDb' in 0 seconds
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1011708 kB - Data memory: 2064860 kB
+#   step DB : Closed ZebuDB
+#   step MERGE : Completed post merge tasks in 10 seconds
+#   step MERGE : Completed merge flow tasks in 22 seconds
+#   step MERGE : Total time waiting for data : 0 seconds
+#   step MERGE : Contribution to overall compil time : 49 seconds
+
+#   step zlog : Ran into 5346 messages with id 'RDB0320W', yet only 16 were displayed in the log as per user request.
+#   step zlog : Ran into 42 messages with id 'RDB0321W', yet only 16 were displayed in the log as per user request.
+#   exec summary : 5390 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m49s, user 0m24.723s, sys 0m13.814s
+#   exec summary : Total memory: 2484764 kB - RSS memory: 1012556 kB - Data memory: 2064860 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 21:26:02 2025
+
+#   step zlog : Ran into 5346 messages with id 'RDB0320W', yet only 16 were displayed in the log as per user request.
+#   step zlog : Ran into 42 messages with id 'RDB0321W', yet only 16 were displayed in the log as per user request.
+#   exec summary : 5390 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m22s, user 0m24.723s, sys 0m13.820s
+#   exec summary : Total memory: 2394564 kB - RSS memory: 1013540 kB - Data memory: 1974748 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 21:26:02 2025
+command exit code is '0'

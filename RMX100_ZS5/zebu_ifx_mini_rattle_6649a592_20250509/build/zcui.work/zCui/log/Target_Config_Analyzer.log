@@ -1,0 +1,67 @@
+Virtex type: 8
+Reading default backend FPGA parameter file
+    /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/thirdparty/python3/bin/python /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc//scripts/generate_parff_xcui.py -m /slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc//scripts/master.xcui -d ZS5 -t MS -p direct -o /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/fpga_parff_strategies.xcui finishd OK
+    Reading file /remote/sdgedt/tools/reem/ZebuS5_oiginal/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/fpga_parff_strategies.xcui
+Backend default backend:
+    Not a Multi Die Target
+    FPGA filling rates:
+        Safe Mode
+            Register Filling Rates = 15
+            LUT Filling Rates = 40
+            RAMLUT Filling Rates = 25
+            BRAM Filling Rates = 50
+            URAM Filling Rates = 30
+            DSP Filling Rates = 40
+            SDT Filling Rates = 80
+            QiWC Filling Rates = 50
+        Medium Mode
+            Register Filling Rates = 22
+            LUT Filling Rates = 50
+            RAMLUT Filling Rates = 25
+            BRAM Filling Rates = 60
+            URAM Filling Rates = 40
+            DSP Filling Rates = 60
+            SDT Filling Rates = 80
+            QiWC Filling Rates = 60
+        Aggressive Mode
+            Register Filling Rates = 30
+            LUT Filling Rates = 55
+            RAMLUT Filling Rates = 30
+            BRAM Filling Rates = 90
+            URAM Filling Rates = 60
+            DSP Filling Rates = 90
+            SDT Filling Rates = 80
+            QiWC Filling Rates = 70
+Max number of block
+    BRAM = 540
+    URAM = 80
+    RAMLUT = 34480
+Disk Space Constants
+    Average size of a design / Fpga = 302.00
+    Average size of synthesis = 1.04
+    Average size of backend directory / Fpga = 229.00
+    Average size of zCore / Fpga = 164.00
+    Size of a Fpga = 156.70
+    Size of an elaboration = 400.00
+    Size of a Verdi database = 517.00
+Vcs configuration file written: vcs_splitter/vcs_splitter_config_file
+additional Zmem command file written
+Task added: Build System (backend_default_zTopBuild)
+Task added: Analyze System Building Results (backend_default_zTopBuildResultAnalyzer)
+Task added: Pre PAR Script Builder (backend_default_PreParScriptBuilder)
+Task added: Post ZCore Compilation Join (backend_default_PostZCoreCompilationJoin)
+Task added: Place and Route System (backend_default_zPar)
+Task added: Analyze zPar result (backend_default_Design_FPGA_Dispatch)
+Task added: Post FPGA Compilation Join (backend_default_PostFpgaCompilationJoin)
+Task added: FPGA PaRs Analyzer (backend_default_FpgaResultAnalyzer)
+Task added: Create Timing DB (backend_default_zTime)
+Task added: backend_default_Post_zTime_tools (backend_default_Post_zTime_tools)
+Task added: Global DB Controller (backend_default_zDB_Global_Controller)
+Task added: Prepare for zDB_Global Controller (backend_default_internalTaskForZdbGlobalCtrlr)
+Task added: Create Script (DB PP) (backend_default_Build_ZDBPostProc_Script)
+Task added: Create Timing DB (post FPGA) (backend_default_zTimeFpga)
+Task added: Prepare Timing DB (post FPGA) (backend_default_preparezTimeFpga)
+Task added: zAudit Report (backend_default_zAuditReport)
+Task added: Run zPRD (backend_default_zPRD_Run)
+Target Configuration Results Analyzed
+Task executed in 2s

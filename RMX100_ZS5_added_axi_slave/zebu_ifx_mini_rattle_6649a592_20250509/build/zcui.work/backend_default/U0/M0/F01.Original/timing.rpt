@@ -1,0 +1,84 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1_AR76726 (lin64) Build 4044071 Fri Nov  3 11:45:33 MDT 2023
+| Date              : Wed May 14 21:07:52 2025
+| Host              : odcphy-vg-1079 running 64-bit AlmaLinux release 8.4 (Electric Cheetah)
+| Command           : report_timing -delay_type min_max -input_pins -file timing.rpt
+| Design            : fx_top
+| Device            : xcvu19p-fsva3824
+| Speed File        : -1  PRODUCTION 1.31 12-02-2020
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.001ns  (arrival time - required time)
+  Source:                 design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_rdyfromport_r_reg[51]/C
+                            (rising edge-triggered cell FDRE clocked by CLK_pclk  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Destination:            design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/RAMC_D1/I
+                            (rising edge-triggered cell RAMD32 clocked by CLK_pclk_free  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Path Group:             CLK_pclk_free
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (CLK_pclk_free rise@0.000ns - CLK_pclk rise@0.000ns)
+  Data Path Delay:        0.733ns  (logic 0.098ns (13.379%)  route 0.635ns (86.621%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.669ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    6.831ns
+    Source Clock Delay      (SCD):    5.866ns
+    Clock Pessimism Removal (CPR):    0.296ns
+  Clock Net Delay (Source):      2.967ns (routing 1.207ns, distribution 1.760ns)
+  Clock Net Delay (Destination): 3.374ns (routing 1.343ns, distribution 2.031ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_pclk rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y338        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=198, routed)         2.466     2.466    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_FFF_SLICEL_C_Q)
+                                                      0.069     2.535 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_bufgi_reg/Q
+                         net (fo=1, routed)           0.340     2.875    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_bufgi
+    BUFGCE_X1Y226                                                     r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk/I
+    BUFGCE_X1Y226        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     2.899 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk/O
+    X4Y10 (CLOCK_ROOT)   net (fo=29099, routed)       2.967     5.866    design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/pclk
+    SLICE_X314Y452       FDRE                                         r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_rdyfromport_r_reg[51]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X314Y452       FDRE (Prop_AFF_SLICEL_C_Q)
+                                                      0.070     5.936 r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_rdyfromport_r_reg[51]/Q
+                         net (fo=3, routed)           0.313     6.249    design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_rdyfromport_r[51]
+    SLICE_X313Y452                                                    r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_mess_out[51]_INST_0/I0
+    SLICE_X313Y452       LUT3 (Prop_H6LUT_SLICEL_I0_O)
+                                                      0.028     6.277 r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/prd_box_capture/capture_mess_out[51]_INST_0/O
+                         net (fo=1, routed)           0.322     6.599    design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/DIC1
+    SLICE_X305Y444       RAMD32                                       r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/RAMC_D1/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_pclk_free rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y338        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=198, routed)         2.773     2.773    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.096     2.869 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/Q
+                         net (fo=1, routed)           0.560     3.429    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi
+    BUFGCE_X1Y223                                                     r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/I
+    BUFGCE_X1Y223        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     3.457 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/O
+    X4Y10 (CLOCK_ROOT)   net (fo=6151, routed)        3.374     6.831    design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/WCLK
+    SLICE_X305Y444       RAMD32                                       r  design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/RAMC_D1/CLK
+                         clock pessimism             -0.296     6.535    
+    SLICE_X305Y444       RAMD32 (Hold_C6LUT_SLICEM_CLK_I)
+                                                      0.063     6.598    design/U0_M0_F1/U0_M0_F1_core/prdbox_wrapper/prdBox_U0_M0_F1/zmsg_out_capture_mess_out_port/wrapper/port_snd_message/port_snd256[0]_port_snd32[5]_data_inst_port_snd32_data/port_snd32_slice[1]/RAM32M16_0/RAMC_D1
+  -------------------------------------------------------------------
+                         required time                         -6.598    
+                         arrival time                           6.599    
+  -------------------------------------------------------------------
+                         slack                                  0.001    
+
+
+
+

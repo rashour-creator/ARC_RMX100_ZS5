@@ -1,0 +1,35 @@
+Module rl_dmp_amo{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0000_0000{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0009{
+0 0 i_data
+4 0 i_occp
+0 0 o_data
+4 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0001{
+35 0 i_data
+0 0 i_occp
+35 0 o_data
+0 0 o_occp
+}
+EdfPortBounds rl_predecoder{
+31 0 inst
+9 0 pd_fu
+4 0 pd_rf_src0
+4 0 pd_rf_src1
+}
+EdfPortBounds alb_mss_fab_fifo_0000{
+53 0 i_data
+0 0 i_occp
+53 0 o_data
+0 0 o_occp
+}
+NonAliasNets rl_dmp_amo{
+}

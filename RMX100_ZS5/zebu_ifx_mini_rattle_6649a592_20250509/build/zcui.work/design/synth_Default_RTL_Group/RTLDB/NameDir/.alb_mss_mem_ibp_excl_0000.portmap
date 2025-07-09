@@ -1,0 +1,19 @@
+Module alb_mss_mem_ibp_excl_0000{
+}
+Module alb_mss_mem_fifo_0001{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0003_0000{
+36 0 i_data
+1 0 i_occp
+36 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_mem_fifo_0001{
+0 0 i_data
+64 0 i_occp
+0 0 o_data
+64 0 o_occp
+}
+NonAliasNets alb_mss_mem_ibp_excl_0000{
+}

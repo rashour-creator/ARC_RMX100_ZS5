@@ -1,0 +1,16 @@
+$ClockNumber   = 2;
+
+$ClockAccuracy = 24;
+
+
+$masterClk.Frequency = 50000 ;  # in kHz
+$driverClk.Frequency = 10000 ;  # in kHz
+$xClk.Frequency = 1000000 ;  # in kHz
+$wcSamplingClk.Frequency = 50000;  # in kHz
+
+
+$zrmTransactionalMode = 0x2 ;
+
+$ccosimDualedge = "no" ;      
+
+$multiSystemConfiguration = 0;

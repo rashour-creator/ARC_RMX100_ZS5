@@ -1,0 +1,78 @@
+#   step REPORT : Synthesizing module : zebu_time_capture
+#   step REPORT : [39.349] Optimizing module : zebu_time_capture
+#   step REPORT : [39.350] Instance count of module zebu_time_capture is 1
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net AutoFlushCount__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net AutoFlushCount__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net N_0
+### warning in ZFAST : (INTERNAL) no module information for net N_10
+### warning in ZFAST : (INTERNAL) no module information for net N_12
+### warning in ZFAST : (INTERNAL) no module information for net N_14
+### warning in ZFAST : (INTERNAL) no module information for net N_2
+### warning in ZFAST : (INTERNAL) no module information for net N_4
+### warning in ZFAST : (INTERNAL) no module information for net N_6
+### warning in ZFAST : (INTERNAL) no module information for net N_8
+### warning in ZFAST : (INTERNAL) no module information for net composite_cycle__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_1__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_3__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_4__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net_4__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_tx_wait_counter__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zebu_control_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_sendtime_arg_gd_i___MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_sendtime_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_sendtime_readyForClock__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zebu_sendtime_tx_wait_counter__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__#1_0__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__#1_0__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__#2__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemiControl__#2__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemi_control_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemi_control_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zemi_status_hw_tx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zemi_status_hw_tx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock_0__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_2
+#   step REPORT : [6.1691] Total net count: 5536
+#   step REPORT : [6.1690] There are 9 levels of combinational cells
+#   step REPORT : [6.1689] There are 15 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 27
+#   step REPORT : [6.1695] 3-input LUTs: 7
+#   step REPORT : [6.1695] 4-input LUTs: 8
+#   step REPORT : [6.1695] 5-input LUTs: 11
+#   step REPORT : [6.1695] 6-input LUTs: 12
+#   step REPORT : [6.1696] Total LUT area: 65
+#   step REPORT : [6.1697] State    : 809
+#   step REPORT : [6.1697]   (FF)   : 650
+#   step REPORT : [6.1697]   (Latch): 159
+#   step REPORT : [6.1697]  V6 macro: 2
+#   step REPORT : [6.1697] CARRY    : 26
+#   step REPORT : [6.1697] +CSA LUTs: 11
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.003 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (0 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zebu_time_capture' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 810 |                  76 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                   1 |                  22 |                   0 |                   0 |                   0 || zebu_time_capture
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zebu_time_capture' to 'edif/zebu_time_capture/zebu_time_capture.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zebu_time_capture/zebu_time_capture.edf.gz'
+#   step SERIALIZE : #bytes in: 237419, #bytes out: 47560, compression ratio: 4.991989
+#   step REPORT : [87.28] Resource usage for zebu_time_capture: 0.588s 112.2M

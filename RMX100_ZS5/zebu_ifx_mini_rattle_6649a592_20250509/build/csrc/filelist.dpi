@@ -1,0 +1,6 @@
+DPI_STUB_OBJS_OBJ0=./../zebu_simv.daidir/vc_hdrs.o
+DPI_STUB_OBJS_SRC0=./../zebu_simv.daidir/vc_hdrs.c
+DPI_STUB_OBJS += $(DPI_STUB_OBJS_OBJ0)
+$(DPI_STUB_OBJS_OBJ0): $(DPI_STUB_OBJS_SRC0)
+	@$(CC) -I/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/include  -pipe -fPIC    -I/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/include  -fPIC -c -o $(DPI_STUB_OBJS_OBJ0) $(DPI_STUB_OBJS_SRC0)
+	@strip -g $(DPI_STUB_OBJS_OBJ0)

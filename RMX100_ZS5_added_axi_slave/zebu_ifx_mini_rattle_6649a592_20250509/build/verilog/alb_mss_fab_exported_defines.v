@@ -1,0 +1,19 @@
+`define ALB_MSS_CCM_BASE 262144
+`define ALB_MSS_FAB_ARCV2MSS   1
+`define ALB_MSS_FAB_ENDIAN     none
+`define ALB_MSS_FAB_NUM_MST    0
+`define ALB_MSS_FAB_NUM_SLV    0
+`define ALB_MSS_FAB_CLK_NAME   mss_clk
+`define ALB_MSS_FAB_CLKEN
+`define ALB_MSS_FAB_DEF_LAT_W    0 
+`define ALB_MSS_FAB_DEF_LAT_R    0 
+`define ALB_MSS_FAB_DEF_WR_BW    0
+`define ALB_MSS_FAB_DEF_RD_BW    0
+`define ALB_MSS_FAB_LAT        0
+`define ALB_MSS_FAB_PERF_TRANSPARENT   0
+`define ALB_MSS_FAB_NEW_SWITCH     1
+`define ALB_MSS_FAB_MSS_CLK_NUM           1
+`define ALB_MSS_FAB_MSS_CLK0_NAME         mss_clk
+`define ALB_MSS_FAB_MSS_CLK0_DEF_DIV2REF  1
+`define ALB_MSS_FAB_USER_SIGNAL_WIDTH     4
+`define ALB_MSS_FAB_CDC_FIFO_EN     0

@@ -1,0 +1,27 @@
+Reading 'backend_default/tools/zPar/zpar.xcui' targets
+Xcui file backend_default/tools/zPar/zpar.xcui is read
+    'designFpga' target found
+        Fpga design: U0_M0_F0
+        Complexity score is: 0
+        Task added: Controller (backend_default_U0_M0_F00_PaR_Controller)
+        Task added: FPGA post Process (backend_default_U0_M0_F00_FpgaPostProc)
+    'zFpgaTiming' target found
+        Task added: Create Timing DB (SDF Mode) (backend_default_U0_M0_F00_zFpgaTiming)
+        Task added: Post zFpgaTiming Join (backend_default_PostZFpgaTimingJoin)
+    'designFpga' target found
+        Fpga design: U0_M0_F1
+        Complexity score is: 4
+        Task added: Controller (backend_default_U0_M0_F01_PaR_Controller)
+        Task added: FPGA post Process (backend_default_U0_M0_F01_FpgaPostProc)
+    'zFpgaTiming' target found
+        Task added: Create Timing DB (SDF Mode) (backend_default_U0_M0_F01_zFpgaTiming)
+    'target' target found
+    'target' target found
+        Add dependency backend_default_Design_FPGA_Dispatch to backend_default_zTime: backend_default/tools/zTime/zPar_timing.zti
+        Add dependency backend_default_Design_FPGA_Dispatch to backend_default_zTime: backend_default/tools/zTime/async_filter_data_relocation_routed.zti
+    'target' target found
+        Add dependency backend_default_Design_FPGA_Dispatch to backend_default_zTimeFpga: backend_default/tools/zTime/zPar_timing.zti
+        Add dependency backend_default_Design_FPGA_Dispatch to backend_default_zTimeFpga: backend_default/tools/zTime/async_filter_data_relocation_routed.zti
+        Add dependency backend_default_Design_FPGA_Dispatch to backend_default_zTimeFpga: backend_default/tools/zTime/zParFPGAs_timing.zti
+    Not running zNetgen preempt
+    Design FPGA P&R dispatched

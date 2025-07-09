@@ -1,0 +1,10 @@
+#!/usr/bin/env csh
+
+set prefix = ""
+if ( $?REMOTE_ZEBU_HOST ) then
+    set prefix = "ssh $REMOTE_ZEBU_HOST"
+endif
+
+echo " > Killing ZeBu jobs:"
+$prefix ps -U $USER -f | awk '{printf "%s %s\n", $2, $8 }' | grep -e "mdb" -e "zRun" -e "zRci" -e "zServer" -e "cld" -e "TB" -e "ZTDB_tSlicer" -e "GenericXtor" -e "zEcho"
+$prefix ps -U $USER -f | awk '{printf "%s %s\n", $2, $8 }' | grep -e "mdb" -e "zRun" -e "zRci" -e "zServer" -e "cld" -e "TB" -e "ZTDB_tSlicer" -e "GenericXtor" -e "zEcho" | cut -d ' ' -f1 | xargs $prefix kill -9 >& /dev/null

@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html&nbsp;charset=ISO-8859-1" />
+    <style>
+    body { background-color: #fff; color: #333; }
+    body, p, ol, ul, td, tr, th  {
+      font-family: verdana, arial, helvetica, sans-serif;
+      font-size:   13px;
+      line-height: 18px;
+    }
+    ul, li, button, p {
+      list-style-type:none;
+      text-align: left;
+      margin: 0px;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      font-size: 11px;
+    }
+    table {
+      border-collapse: separate;
+      border-spacing: 2px;
+    }
+    table  tr{
+      background-color: #f0f0f0; 
+    }
+    table  th{
+     if(_analysis->getPostFpga()){   
+       background-color: #90EE90; 
+      }
+     else{
+        background-color: #48d1cc; 
+      }
+    }
+    table td {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      vertical-align: top;
+    }
+    table td.middle {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      vertical-align: top;
+      word-spacing: 10px;
+    }
+    table  tr.odd{
+      background-color:  #add8e6;  
+    }
+    table  tr {
+      background-color: #f0f0f0;
+    }
+    table  tr:hover {
+      background-color: #bffefe;
+    }
+    .collapsible {
+      background-color:  #add8e6;
+      cursor: pointer;
+      border: none;
+      -moz-user-select: text;
+    }
+    .active, .collapsible:hover {
+      background-color: #48d1cc;
+    }
+    .content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    </style>
+    <title align="center">zTime Report: Critical paths</title>
+          </head>
+          <body>
+          <div id="title" class="title">
+            <p><h1>zTime Report: Critical paths</h1></p>
+          <p><h2>Date: Tue May 13 19:27:51 2025
+</h2></p></div>
+          <p><h3>Version: S-2021.09-2-TZ-20240507_Full64</h3></p></div>
+          <div id="content" class="content">
+          </div>
+          <table class=tablesorter><tbody>
+<thead>
+<tr>
+<th width=60px title="Required time - Delay">Slack</th>
+<th width=130px title="Maximal arrival time possible on the path">Required Time</th>
+<th width=60px title="Timing path length">Delay</th>
+<th width=40px title="Total number of FPGAs on the path">Total Fpga</th>
+<th width=40px title="Number of logic FPGAs on the path">Logic Fpga</th>
+<th class="ports" width=100px title="First FPGA port name">From</th>
+<th class="ports" width=100px title="Last FPGA port name">To</th>
+</thead>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p0">0 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>166 ns</td>
+<td>3</td>
+<td>3</td>
+<td>U0_M0_F1.F01_ts_clkbus_out[6]</td>
+<td>U0_M0_F1.F01_ts_clkbus_in[5]</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p1">1 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>166 ns</td>
+<td>3</td>
+<td>3</td>
+<td>U0_M0_F1.zcbsplt_4615901352719420397</td>
+<td>U0_M0_F1.F01_ts_clkbus_in[8]</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p2">9 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>157 ns</td>
+<td>2</td>
+<td>2</td>
+<td>U0_M0_F1.zcbsplt_4615901352719420397</td>
+<td>U0_M0_F0.zcbsplt_4615901352719420397</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p3">16 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>150 ns</td>
+<td>2</td>
+<td>2</td>
+<td>U0_M0_F1.F01_ts_clkbus_out[6]</td>
+<td>U0_M0_F0.F01_ts_clkbus_in[6]</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p4">40 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>126 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p5">64 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>102 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p6">64 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>102 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p7">65 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>101 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p8">65 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>101 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p9">66 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>100 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p10">67 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>100 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F01/design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockge...</td>
+<td>U0/M0/F01/design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/ico...</td>
+</tr>
+<tr>
+<td><a href="ztime_out_paths_fpga.html#p11">137 ns</a></td>
+<td>166 ns<br/> ( 1 driver clock )</td>
+<td>29 ns</td>
+<td>1</td>
+<td>1</td>
+<td>U0/M0/F00/design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u...</td>
+<td>U0/M0/F00/design/U0_M0_F0/U0_M0_F0_core/ts_runman_0/ts_ru...</td>
+</tr>
+</table><script>
+      function replaceButtonText(textA, textB, id){
+        if (document.getElementById)  {
+          var button=document.getElementById(id);
+          if (button){
+            if (button.innerHTML==textA){
+              button.innerHTML=textB;
+            }
+            else { 
+              button.innerHTML=textA;
+            }
+          }
+        }
+    }
+      var coll = document.getElementsByClassName("collapsible");
+      var i;
+      
+      for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.maxHeight){
+            content.style.maxHeight = null;
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+          }
+          var parentDiv = this.closest("div");
+          parentDiv.style.maxHeight = (parentDiv.scrollHeight + content.scrollHeight) + "px";
+        });
+      }
+    </script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js'></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.30.5/css/theme.blue.min.css"></link>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.30.5/js/jquery.tablesorter.min.js"></script>
+    <script>
+    $(".tablesorter").tablesorter({
+    theme: "blue",
+    headers:{
+      '.clock-domains, .ports, .details' :{
+        sorter: false
+      }
+    },
+    widgets: ['zebra']
+    });
+    </script>
+  </body>
+  </html>
+  

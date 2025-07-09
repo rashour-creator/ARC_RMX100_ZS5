@@ -1,0 +1,206 @@
+Module alb_mss_fab_ibp_buffer_0000_0003{
+}
+Module alb_mss_fab_fifo_0000_000A{
+}
+Module alb_mss_fab_fifo_0000_0003{
+}
+Module alb_mss_fab_fifo_0000_0004{
+}
+Module alb_mss_fab_fifo_0000_0005{
+}
+
+EdfPortBounds alb_mss_fab_fifo_0000_000B{
+40 0 i_data
+0 0 i_occp
+40 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0015{
+130 0 i_data
+0 0 i_occp
+130 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_bypbuf_0000_0002{
+58 0 i_data
+58 0 o_data
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0004{
+34 0 i_data
+0 0 i_occp
+34 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0002{
+60 0 i_data
+0 0 i_occp
+60 0 o_data
+0 0 o_occp
+}
+EdfPortBounds mss_bus_switch_ibp2single_0000{
+41 0 i_ibp_cmd_addr
+3 0 i_ibp_cmd_burst_size
+3 0 i_ibp_cmd_cache
+2 0 i_ibp_cmd_data_size
+1 0 i_ibp_cmd_prot
+0 0 i_ibp_cmd_rgon
+0 0 i_ibp_cmd_user
+511 0 i_ibp_rd_data
+511 0 i_ibp_wr_data
+63 0 i_ibp_wr_mask
+41 0 o_ibp_cmd_addr
+3 0 o_ibp_cmd_burst_size
+2 0 o_ibp_cmd_burst_type
+3 0 o_ibp_cmd_cache
+2 0 o_ibp_cmd_data_size
+1 0 o_ibp_cmd_prot
+0 0 o_ibp_cmd_rgon
+0 0 o_ibp_cmd_user
+511 0 o_ibp_rd_data
+511 0 o_ibp_wr_data
+63 0 o_ibp_wr_mask
+}
+EdfPortBounds alb_mss_fab_mst_axi_buffer{
+24 0 i_axi_araddr
+1 0 i_axi_arburst
+3 0 i_axi_arcache
+15 0 i_axi_arid
+3 0 i_axi_arlen
+1 0 i_axi_arlock
+2 0 i_axi_arprot
+0 0 i_axi_arregion
+2 0 i_axi_arsize
+0 0 i_axi_aruser
+24 0 i_axi_awaddr
+1 0 i_axi_awburst
+3 0 i_axi_awcache
+15 0 i_axi_awid
+3 0 i_axi_awlen
+1 0 i_axi_awlock
+2 0 i_axi_awprot
+0 0 i_axi_awregion
+2 0 i_axi_awsize
+0 0 i_axi_awuser
+15 0 i_axi_bid
+1 0 i_axi_bresp
+63 0 i_axi_rdata
+15 0 i_axi_rid
+1 0 i_axi_rresp
+63 0 i_axi_wdata
+15 0 i_axi_wid
+7 0 i_axi_wstrb
+24 0 o_axi_araddr
+1 0 o_axi_arburst
+3 0 o_axi_arcache
+15 0 o_axi_arid
+3 0 o_axi_arlen
+1 0 o_axi_arlock
+2 0 o_axi_arprot
+0 0 o_axi_arregion
+2 0 o_axi_arsize
+0 0 o_axi_aruser
+24 0 o_axi_awaddr
+1 0 o_axi_awburst
+3 0 o_axi_awcache
+15 0 o_axi_awid
+3 0 o_axi_awlen
+1 0 o_axi_awlock
+2 0 o_axi_awprot
+0 0 o_axi_awregion
+2 0 o_axi_awsize
+0 0 o_axi_awuser
+15 0 o_axi_bid
+1 0 o_axi_bresp
+63 0 o_axi_rdata
+15 0 o_axi_rid
+1 0 o_axi_rresp
+63 0 o_axi_wdata
+15 0 o_axi_wid
+7 0 o_axi_wstrb
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0012{
+41 0 i_data
+0 0 i_occp
+41 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_000C{
+52 0 i_data
+0 0 i_occp
+52 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0005_0000{
+35 0 i_data
+1 0 i_occp
+35 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0009{
+2 0 i_data
+0 0 i_occp
+2 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_000D{
+72 0 i_data
+0 0 i_occp
+72 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0005{
+49 0 i_data
+1 0 i_occp
+49 0 o_data
+1 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0014{
+144 0 i_data
+0 0 i_occp
+144 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_000A{
+40 0 i_data
+0 0 i_occp
+40 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0004_0000{
+1 0 i_data
+5 0 i_occp
+1 0 o_data
+5 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0005{
+2 0 i_data
+0 0 i_occp
+2 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_000E{
+66 0 i_data
+0 0 i_occp
+66 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0003{
+36 0 i_data
+0 0 i_occp
+36 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0007{
+36 0 i_data
+0 0 i_occp
+36 0 o_data
+0 0 o_occp
+}
+EdfPortBounds alb_mss_fab_fifo_0000_0008{
+34 0 i_data
+0 0 i_occp
+34 0 o_data
+0 0 o_occp
+}
+NonAliasNets alb_mss_fab_ibp_buffer_0000_0003{
+}

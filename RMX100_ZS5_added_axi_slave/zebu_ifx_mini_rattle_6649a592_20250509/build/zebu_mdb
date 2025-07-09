@@ -1,0 +1,148 @@
+#!/bin/csh -f
+
+# Default setup
+set GUI   = 0
+set BDL   = 0
+set PWR   = 0
+set WAVES = 0
+set START = ""
+set LOAD  = ""
+set STORE = ""
+set ZTDB  = ""
+set SKIP  = 0
+set XARGS = ""
+set CMD = ""
+
+# Internal variables
+set top_dir   = `readlink -f $0`
+set top_dir   = $top_dir:h
+set ssh_flags = "-Xt"
+set zwork     = "$top_dir/zcui.work/zebu.work"
+set do_tcl    = "$top_dir/scripts/zebu_runtime/zrci_xtor_lldb.tcl"
+
+# Parse arguments
+while ($#argv)
+    if ("$argv[1]" == "-h" || "$argv[1]" == "--help") then
+        echo '                                                                                  \
+# Usage: zebu_mdb [options] "<executable> [executable_arguments]"                               \
+# Options:                                                                                      \
+#   -g | --gui          : enable mdb GUI                                                        \
+#   -b | --bdl          : enable XMEM backdoor load for faster emulation (external memory only) \
+#   -p | --power        : enable ZTDB dump between power triggers (if supported by application) \
+#   -w | --waves        : enable wave dump of the whole application (reduced speed)             \
+#   -c | --cores <num>  : set number of cores where to run the executable (default 1)           \
+#   -s | --start <path> : provide startup script for mdb in batch mode (default none)           \
+#   -l | --load  <path> : provide list of additional files to backdoor load (default none)      \
+#   -s | --store  <path>: provide list of address to backdoor dump at end (default none)        \
+#   -z | --ztdb  <path> : provide path to dump ZTDB for waves/power (default ./fwc.ztdb/)       \
+#   -x | --xargs "args" : additional arguments for MDB (default "")                             \
+        '
+        exit 0
+    else if ("$argv[1]" == "-g" || "$argv[1]" == "--gui") then
+        set GUI = 1
+        set ssh_flags = "-Xt"
+        echo "Info: Running with GUI"
+    else if ("$argv[1]" == "-b" || "$argv[1]" == "--bdl") then
+        set BDL = 1
+        echo "Info: Running with backdoor load of XMEM"
+    else if ("$argv[1]" == "-p" || "$argv[1]" == "--power") then
+        set PWR = 1
+        echo "Info: Running with power window dump"
+        #shift; setenv START_PC $argv[1]
+        #shift; setenv STOP_PC $argv[1]
+        #echo "Running with power ZTDB dump from PC = 0x$START_PC to PC = 0x$STOP_PC"
+    else if ("$argv[1]" == "--skip") then
+        shift; set SKIP = $argv[1]
+        echo "Info: Skipping first $SKIP power windows"
+    else if ("$argv[1]" == "-w" || "$argv[1]" == "--waves") then
+        set WAVES = 1
+        echo "Info: Running with full wave dump"
+    else if ("$argv[1]" == "-s" || "$argv[1]" == "--start") then
+        shift; set START = $argv[1]
+        echo "Info: Running custom mdb startup script: $START"
+    else if ("$argv[1]" == "-l" || "$argv[1]" == "--load") then
+        shift; set LOAD = $argv[1]
+        echo "Info: Backdoor loading files from: $LOAD"
+    else if ("$argv[1]" == "-z" || "$argv[1]" == "--ztdb") then
+        shift; set ZTDB = $argv[1]
+        echo "Info: Dumping ZTDB to: $ZTDB"
+    else if ("$argv[1]" == "-x" || "$argv[1]" == "--xargs") then
+        shift; set XARGS = "$argv[1]"
+        echo "Info: Running with extra MDB arguments: $XARGS"
+    else if ("$argv[1]" == "-lldb" || "$argv[1]" == "--LLDB") then
+        shift; set do_tcl    = "$top_dir/scripts/zebu_runtime/zrci_xtor_lldb.tcl"
+        echo "Info: Running with extra MDB arguments: $XARGS"
+    else if ("$argv[1]" == "-c" || "$argv[1]" == "--cores") then
+	if ( "$CMD" != "" ) set CMD = "$CMD ;"
+        shift; set CMD = "$CMD PSET $argv[1] ="
+    else
+	if ("$CMD" == "") set CMD = "PSET 1 ="
+        set CMD = "$CMD $argv[1]"
+    endif
+    shift
+end
+
+# Basic checks
+#if ($GUI == 1 && $WAVES == 1) then
+#  echo "Error: GUI and wave dumping should not be used together for performance reasons"
+#  exit 1
+#endif
+if ($PWR == 1 && $WAVES == 1) then
+  echo "Error: Wave dumping for power and full application cam not be done simultaneouly"
+  exit 1
+endif
+if ($GUI == 1 && $START != "") then
+  echo "Warning: MDB startup script will not be used in GUI mode"
+endif
+if ($ZTDB != "" && $PWR == 0 && $WAVES == 0) then
+  echo "Warning: ZTDB path only used in combination with wave dumping"
+endif
+if ($?REMOTE_ZEBU_HOST && ! $?REMOTE_ZEBU_SETUP) then
+  echo "Error: when working with remote host, please set env REMOTE_ZEBU_SETUP"
+  exit 1
+endif
+
+# Print commands per set
+printf "Info: Running command: \n\t "
+echo $CMD | sed 's/;/\n\t/g'
+
+# Create zRci script
+echo "#\!/bin/bash -i \
+  set -e              \
+  cd $PWD             \
+  export GUI=$GUI     \
+  export BDL=$BDL     \
+  export PWR=$PWR     \
+  export SKIP=$SKIP   \
+  export WAVES=$WAVES \
+  export CMD='$CMD'   "                >! $PWD/zRci.cmd
+if ($START != "") \
+    echo "  export START=$START"       >> $PWD/zRci.cmd
+if ($LOAD != "") \
+    echo "  export LOAD=$LOAD"         >> $PWD/zRci.cmd
+if ($STORE != "") \
+    echo "  export STORE=$STORE"       >> $PWD/zRci.cmd
+if ($ZTDB != "") \
+    echo "  export ZTDB=$ZTDB"         >> $PWD/zRci.cmd
+if ("$XARGS" != "") \
+    echo "  export XARGS='$XARGS'"     >> $PWD/zRci.cmd
+if ($?REMOTE_ZEBU_HOST) then
+    echo "  source $REMOTE_ZEBU_SETUP" >> $PWD/zRci.cmd
+endif
+echo "  zRci --zebu-work $zwork $do_tcl |& tee zRun.log" >> $PWD/zRci.cmd
+chmod u+x $PWD/zRci.cmd
+
+# Execute zRci script
+if ($?REMOTE_ZEBU_HOST) then
+  echo "Info: Running in remote host: ${REMOTE_ZEBU_HOST}"
+  ssh $ssh_flags $REMOTE_ZEBU_HOST $PWD/zRci.cmd
+  set retval = $status
+else
+  $PWD/zRci.cmd
+  set retval = $status
+endif
+
+# Cleanup
+mkdir -p zRci_logs
+mv TB.*.log zServer.*.log profiler*.log designFeatures*.help zRci.*.log emulation_data* zrci_command.log zRci_logs
+exit $retval

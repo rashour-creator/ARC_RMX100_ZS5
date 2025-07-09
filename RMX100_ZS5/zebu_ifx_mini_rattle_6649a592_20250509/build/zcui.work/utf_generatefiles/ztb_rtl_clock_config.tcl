@@ -1,0 +1,4 @@
+rtl_clock_mode -enable -debug -auto_tolerance -max_ginc_size 24 -replicate_fpga
+enable group_clock_delay_mode
+enable group_clock_delay_with_time_distrib_mode
+enable clock_delay_stop_rlc

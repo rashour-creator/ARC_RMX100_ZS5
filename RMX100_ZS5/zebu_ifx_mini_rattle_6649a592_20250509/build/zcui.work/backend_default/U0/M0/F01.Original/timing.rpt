@@ -1,0 +1,84 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1_AR76726 (lin64) Build 4044071 Fri Nov  3 11:45:33 MDT 2023
+| Date              : Tue May 13 19:17:50 2025
+| Host              : us01zebu-4587-002 running 64-bit AlmaLinux release 8.4 (Electric Cheetah)
+| Command           : report_timing -delay_type min_max -input_pins -file timing.rpt
+| Design            : fx_top
+| Device            : xcvu19p-fsva3824
+| Speed File        : -1  PRODUCTION 1.31 12-02-2020
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.009ns  (arrival time - required time)
+  Source:                 design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fm_cset_rewrite_fifo_dep_gt_1_wptr_vec_r[40]/C
+                            (rising edge-triggered cell FDRE clocked by CLK_pclk_dut  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Destination:            design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fifo_dep_gt_1_rf_r[40][1]/D
+                            (rising edge-triggered cell FDRE clocked by CLK_pclk_dut  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Path Group:             CLK_pclk_dut
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (CLK_pclk_dut rise@0.000ns - CLK_pclk_dut rise@0.000ns)
+  Data Path Delay:        0.339ns  (logic 0.098ns (28.938%)  route 0.241ns (71.062%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.276ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    8.229ns
+    Source Clock Delay      (SCD):    7.212ns
+    Clock Pessimism Removal (CPR):    0.741ns
+  Clock Net Delay (Source):      3.757ns (routing 1.803ns, distribution 1.954ns)
+  Clock Net Delay (Destination): 4.221ns (routing 1.982ns, distribution 2.239ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_pclk_dut rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y353        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=197, routed)         2.974     2.974    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.070     3.044 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/Q
+                         net (fo=1, routed)           0.387     3.431    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi
+    BUFGCE_X1Y217                                                     r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_dut/I
+    BUFGCE_X1Y217        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     3.455 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_dut/O
+    X4Y6 (CLOCK_ROOT)    net (fo=106066, routed)      3.757     7.212    design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/zebu_absBufInv_C_6751226291058871508
+    SLICE_X37Y476        FDRE                                         r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fm_cset_rewrite_fifo_dep_gt_1_wptr_vec_r[40]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X37Y476        FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.070     7.282 r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fm_cset_rewrite_fifo_dep_gt_1_wptr_vec_r[40]/Q
+                         net (fo=5, routed)           0.213     7.495    design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/fifo_dep_gt_1_wptr_vec_r[40]_U0M0F1_
+    SLICE_X33Y480                                                     r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/zfast_dxdrtlysr2sw1/I3
+    SLICE_X33Y480        LUT4 (Prop_H6LUT_SLICEL_I3_O)
+                                                      0.028     7.523 r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/zfast_dxdrtlysr2sw1/O
+                         net (fo=1, routed)           0.028     7.551    design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/zfast_dxdrtlysr2sw1
+    SLICE_X33Y480        FDRE                                         r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fifo_dep_gt_1_rf_r[40][1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_pclk_dut rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y353        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=197, routed)         3.326     3.326    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_HFF_SLICEL_C_Q)
+                                                      0.096     3.422 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi_reg/Q
+                         net (fo=1, routed)           0.558     3.980    design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_dut_bufgi
+    BUFGCE_X1Y217                                                     r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_dut/I
+    BUFGCE_X1Y217        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     4.008 r  design/U0_M0_F1/F01_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_dut/O
+    X4Y6 (CLOCK_ROOT)    net (fo=106066, routed)      4.221     8.229    design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/zebu_absBufInv_C_13769930781389650479
+    SLICE_X33Y480        FDRE                                         r  design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fifo_dep_gt_1_rf_r[40][1]/C
+                         clock pessimism             -0.741     7.488    
+    SLICE_X33Y480        FDRE (Hold_HFF_SLICEL_C_D)
+                                                      0.053     7.541    design/U0_M0_F1/U0_M0_F1_core/core_chip_dut/icore_sys/ialb_mss_fab/u_switch_inst/u_mss_bs_slv_0/u_mid_ibp_splitter/split_num_gt_1_gen_wd_splt_info_fifo/fifo_dep_gt_1_rf_r[40][1]
+  -------------------------------------------------------------------
+                         required time                         -7.541    
+                         arrival time                           7.551    
+  -------------------------------------------------------------------
+                         slack                                  0.009    
+
+
+
+

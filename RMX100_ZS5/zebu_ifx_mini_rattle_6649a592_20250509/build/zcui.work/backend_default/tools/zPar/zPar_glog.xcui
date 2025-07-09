@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="glog">
+    <author>zPar</author>
+    <date>Tue May 13 18:37:40 2025</date>
+    <views>
+        <view name="Warnings/Errors">
+            <h1>Place and route system</h1>
+                <h2>Warning</h2>
+                <p>[OPTDB01] Use of the environment variable &#39;ZEBU_ENABLE_NEW_ZTDB_RB&#39; will be deprecated in a future release, please use &#39;set_app_var public::ztdb_rb_api 1&#39; in your utf/tcl file.</p>
+                <p>[KPR1518W] This command will be deprecated in the next major release after ZEBU20.03.</p>
+                <p>[KPR1897W] The medium routing effort command is renamed by default.</p>
+                <p>[KPR1571W] Environment variable &#34;ZEBU_NO_LOCAL_RTB_ROUTING&#34; will be deprecated in the next major release after ZEBU20.03.</p>
+                <p>[KPR1572W] Environment variable &#34;ZEBU_NO_LOCAL_RTB_ROUTING&#34; will be deprecated in the next major release after ZEBU20.03.</p>
+                <p>[KTM0560W] zTime_clock_domain.cds not found</p>
+                <p>[KTM0769W] Timing analysis command &#39;set_advanced_asynchronous_set_reset_analysis&#39; is deprecated, use optionsDB variable timing_advanced_async_set_reset_analysis instead.</p>
+                <p>[ZTCL0307W] ZMetrics : Id &#39;Delay before ZAP&#39; is already used</p>
+                <p>[ZTCL0307W] ZMetrics : Id &#39;Delay after TDFDR&#39; is already used</p>
+        </view>
+        <view name="Performance" order="-1000">
+            <h1>Place and Route System</h1>
+                <h2>Resource utilization and IO cut after routing</h2>
+                <p> Design matrix after routing (U0_M0)</p>
+                <p>+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+</p>
+                <p>|       |    F00|    F01|    F02|    F03|    F04|    F05|    F06|    F07|    F08|    F09|    F10|    F11|</p>
+                <p>+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+</p>
+                <p>|    F00|      -|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F01|     40|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F02|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F03|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F04|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F05|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    F06|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|      .|</p>
+                <p>|    F07|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|      .|</p>
+                <p>|    F08|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|      .|</p>
+                <p>|    F09|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|      .|</p>
+                <p>|    F10|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|      .|</p>
+                <p>|    F11|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|      -|</p>
+                <p>|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>|    Sum|     40|     40|      .|      .|      .|      .|      .|      .|      .|      .|      .|      .|</p>
+                <p>+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+-------+</p>
+                <p></p>
+                <p> Maximum xDR per component:</p>
+                <p> +------------+-----+-----+-----+-----+-----+</p>
+                <p> |            |   0 |   1 |   2 |   3 |   4 |</p>
+                <p> +------------+-----+-----+-----+-----+-----+</p>
+                <p> |U0_M0       |   1 |   1 |   - |   - |   - |</p>
+                <p> |LVDS        |   1 |   1 |   - |   - |   - |</p>
+                <p> |MGT         |   0 |   0 |   - |   - |   - |</p>
+                <p> +------------+-----+-----+-----+-----+-----+</p>
+                <p> Max LVDS Xdr: 1 | Max MGT Xdr: 0</p>
+                <p></p>
+        </view>
+        <view name="Optimization">
+            <h1>Route System</h1>
+            <p>+--------------+-------+</p>
+            <p>|       Process|   Mode|</p>
+            <p>+--------------+-------+</p>
+            <p>|Routing effort|default|</p>
+            <p>+--------------+-------+</p>
+            <p></p>
+        </view>
+    </views>
+</ZeBuUiDoc>

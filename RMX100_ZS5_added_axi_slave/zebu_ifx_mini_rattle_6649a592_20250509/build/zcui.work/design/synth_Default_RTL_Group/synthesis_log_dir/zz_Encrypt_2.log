@@ -1,0 +1,44 @@
+#   step REPORT : Synthesizing module : zz_Encrypt_2
+#   step REPORT : [39.349] Optimizing module : zz_Encrypt_2
+#   step REPORT : [39.350] Instance count of module zz_Encrypt_2 is 1
+### warning in ZFAST : (INTERNAL) no module information for net eVe_init_clk
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_exportActive__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net ZEBU_VS_SNPS_UDPI__fromSwtoHwData_hw_rx_ready__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net imp_state_net__MD_2
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_1
+### warning in ZFAST : (INTERNAL) no module information for net zevent_readyForClock__MD_2
+#   step REPORT : [6.1691] Total net count: 1834
+#   step REPORT : [6.1690] There are 15 levels of combinational cells
+#   step REPORT : [6.1689] There are 10 distinct nets driving control pins
+#   step REPORT : [6.1695] 2-input LUTs: 58
+#   step REPORT : [6.1695] 3-input LUTs: 137
+#   step REPORT : [6.1695] 4-input LUTs: 25
+#   step REPORT : [6.1695] 5-input LUTs: 69
+#   step REPORT : [6.1695] 6-input LUTs: 242
+#   step REPORT : [6.1696] Total LUT area: 531
+#   step REPORT : [6.1697] State    : 483
+#   step REPORT : [6.1697]   (FF)   : 483
+#   step REPORT : [6.1697] CARRY    : 16
+#   step REPORT : [6.1697] +CSA LUTs: 15
+#   step REPORT : [6.1884] Renaming SVA module instances in the netlist
+#   step REPORT : [6.1882] Renaming special verilog names in the netlist
+#   step REPORT : [6.1882] Special names renaming stats:
+#   step REPORT : [6.1882] Total time                 : 0.000 seconds
+#   step REPORT : [6.1882] Total wires renamed        : 0
+#   step REPORT : [6.1882] Total instances renamed    : 0
+#   step REPORT : [6.1883] Renaming wires like ports
+#   step REPORT : [6.1883] Renamed wires like ports (127 ports)
+#   step REPORT : [6.1885] Emitting RTLDB information for the netlist
+#   step REPORT : Converting netlist 'zz_Encrypt_2' to znl format
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 reg |                 lut |                bram |                uram |             memsize |              m18x18 |                bufg |                buft |               nbI/O |                nbBB |                nbZV |                nbME |               dsp48 || name
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step STATS :  |                 483 |                 546 |                   0 |                   0 |                   0 |                   0 |                   0 |                   0 |                 127 |                  21 |                   0 |                   0 |                   0 || zz_Encrypt_2
+#   step STATS :  ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+#   step REPORT : Writing netlist 'zz_Encrypt_2' to 'edif/zz_Encrypt_2/zz_Encrypt_2.edf.gz'
+#   step SERIALIZE : writing netlist 'zmerge' into znl file 'edif/zz_Encrypt_2/zz_Encrypt_2.edf.gz'
+#   step SERIALIZE : #bytes in: 58508, #bytes out: 23258, compression ratio: 2.515608
+#   step REPORT : [87.28] Resource usage for zz_Encrypt_2: 0.175s 0.0M

@@ -1,0 +1,47 @@
+#############################################################################
+# *SYNOPSYS CONFIDENTIAL*
+# 
+# This is an unpublished, proprietary work of Synopsys, Inc., and is fully 
+# protected under copyright and trade secret laws.  You may not view, use, 
+# disclose, copy, or distribute this file or any information contained herein 
+# except pursuant to a valid written license from Synopsys.
+#############################################################################
+# 
+# Crude abstraction of typical operating system commands.
+# Windows NT (win32) implementation.
+#
+
+# Journalling, logging, user reassurance
+MESSAGE=arc_echo
+MESSAGE_BLANK_LINE=$(MESSAGE) ""
+SHOW_FILE=notepad
+DOLLAR = $$
+
+# Character stream input/output
+WRITE=arc_echo
+T_PIECE=arc_tee
+NULL_DEVICE=nul
+
+# File handling
+COPY_FILE=arc_winify_args 1- copy
+MOVE_FILE=arc_winify_args 1- move
+REMOVE_FILE=arc_winify_args 2- del /F
+REMOVE_DIR=arc_winify_args 3- rmdir /S /Q
+ECHO_FILE=arc_winify_args 1- type
+
+# Directory management
+NAVIGATE_TO_DIRECTORY=arc_winify_args 1 cd
+CREATE_DIRECTORY=arc_winify_args 1- mkdir
+
+# Global Regular Expression, Print matches (i.e. search for patterns (specified
+# as Regular Expressions) that occur in the specified text files).
+GREP=arc_grep
+
+# If the previous command succeeds execute the command(s) following this.
+# This is a bit of a hack: it only works in certain situations.
+# It will work if the preceding command is launched via `arc_winify_args'.
+# Otherwise, the && and the following program and its arguments will be passed
+# as-is to the preceding command as arguments.
+THEN_CHAIN="&&"
+
+#############################################################################

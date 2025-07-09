@@ -1,0 +1,218 @@
+elapsed(s)        user(s)           system(s)         vm(m)             vm+(m)            um(m)             um+(m)              stage name
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       563 m   vm:        +0 m   um:       137 m   um:        +0 m     Start doParsingAndDR
+elapsed: 0.11 s   user:    0.01 s   system:  0.01 s   vm:       563 m   vm:        +0 m   um:       139 m   um:        +2 m     After Parsing Complete
+elapsed: 0.49 s   user:    0.32 s   system:  0.02 s   vm:       605 m   vm:       +42 m   um:       187 m   um:       +48 m     start ElData::doXmrResolution
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       187 m   um:        +0 m     end ElData::doXmrResolution
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       187 m   um:        +0 m     start ElData::determineInstanceGroups
+elapsed:    0 s   user:    0.01 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       187 m   um:        +0 m     end ElData::determineInstanceGroups
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       187 m   um:        +0 m     start commitSplitsAndTypesToVir
+elapsed: 0.05 s   user:    0.05 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       192 m   um:        +5 m     before doLpDirectivesAndXmrResolution
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       192 m   um:        +0 m     after doLpDirectivesAndXmrResolution
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       192 m   um:        +0 m     end commitSplitsAndTypesToVir
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       192 m   um:        +0 m     start ElData::commitToVir
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       605 m   vm:        +0 m   um:       192 m   um:        +0 m     end ElData::commitToVir
+elapsed: 0.26 s   user:     0.2 s   system:  0.01 s   vm:       606 m   vm:        +1 m   um:       195 m   um:        +3 m     Before PreCheckXform
+elapsed: 0.04 s   user:    0.03 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       195 m   um:        +0 m     After PreCheckXform
+elapsed:    0 s   user:    0.01 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       195 m   um:        +0 m     Before NewCheckPass
+elapsed: 0.45 s   user:    0.44 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +1 m     After NewCheckPass
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Start doCheckPass
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before checking modules
+elapsed: 0.07 s   user:    0.07 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     After checking modules
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before checkDPITaskFuncDeclarations
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before checkForcedPorts
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     End doCheckPass
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before doMultiDriverChecks
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     End doPostCheckPassStuff
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before doPostCheckPassStuff
+elapsed: 0.06 s   user:    0.05 s   system:     0 s   vm:       607 m   vm:        +1 m   um:       197 m   um:        +1 m     End doPostCheckPassStuff
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     Before PostCheckXform
+elapsed: 0.02 s   user:    0.03 s   system:     0 s   vm:       606 m   vm:        +0 m   um:       196 m   um:        +0 m     After PostCheckXform
+elapsed: 0.24 s   user:    0.11 s   system:  0.02 s   vm:       615 m   vm:        +9 m   um:       200 m   um:        +4 m     Ufe:Start of Ufe Flow
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       619 m   vm:        +4 m   um:       201 m   um:        +1 m     Ufe:After CheckIncrTest
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After translateBBParams
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorSynHierPragma
+elapsed: 0.02 s   user:    0.02 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorSynRamStyleAttr
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorSynKeepPreserveAttr
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorSynNoprunePragma
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorZebuAttr
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       201 m   um:        +0 m     Ufe:After honorZebuPortBlastingAttr
+elapsed: 0.07 s   user:    0.03 s   system:     0 s   vm:       619 m   vm:        +0 m   um:       202 m   um:        +1 m     Ufe:After evalEmulationConfigFile
+elapsed: 0.46 s   user:    0.03 s   system:  0.01 s   vm:       690 m   vm:       +71 m   um:       211 m   um:        +9 m     Ufe:After checkAndSetOctanePerformance
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       211 m   um:        +0 m     Ufe:After VcsTransformForZemi
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +1 m     Ufe:After MakeModuleNamesEdifCompatible
+elapsed: 0.01 s   user:    0.01 s   system:  0.01 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After resolve
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After performDynamicReadMemTransform
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After doInoutPortsCoercion
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After doCaseTransformation
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After performSFinishTransform
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After markSpecialCellsAsBB
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After VcsTransformForHDLCosimTC
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After processMacros
+elapsed: 0.04 s   user:    0.03 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After checkDesign
+elapsed:    0 s   user:    0.01 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After processPostResolve
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       212 m   um:        +0 m     Ufe:After buildSynthGroups
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       213 m   um:        +1 m     Ufe:After preProcessXtor
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       213 m   um:        +0 m     Ufe:After convertZceiClockToRtlClock
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       213 m   um:        +0 m     Ufe:After processingPowerProfile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       690 m   vm:        +0 m   um:       213 m   um:        +0 m     Ufe:After DumpFusaCommandForZTB
+elapsed: 0.37 s   user:    0.28 s   system:  0.01 s   vm:       752 m   vm:       +62 m   um:       269 m   um:       +56 m     Ufe:After generateEsxFile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       752 m   vm:        +0 m   um:       269 m   um:        +0 m     Ufe:After writeIdentXMLForZebu
+elapsed: 0.29 s   user:    0.27 s   system:     0 s   vm:       755 m   vm:        +3 m   um:       269 m   um:        +0 m     Ufe:After DumpFsdb
+elapsed: 0.01 s   user:    0.01 s   system:  0.01 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +1 m     Ufe:After probeManager
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After convertTasksAndFunctions
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After handleZemi3ClockingBlocks
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After xformQueues
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After performDPIFilterCmd
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After InterfaceTransformer
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After UfeNativeForceProcessing
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After replaceUpwardXmrs
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After uniqifyDesignForIBAPreProc
+elapsed: 0.02 s   user:    0.02 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After VcsAdjustDelaysForHWModules
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After processZceiClockControlsForOrionFlow
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After createCompositeClockFlow
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After checkCCosimCClock
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After generateRtlClockXrefFileForBE
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After dumpSCOConfigForZTB
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After ztuneRewritesBeforeExtraction
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After performForceReleaseTransform
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After extractXMRs
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After preProcessReadmem
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After preProcessTiming
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After VcsTransformNettypeForZeBu
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After VcsTransformUrandomForZebu
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After performSvaFilterForXtorMod
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After uniqifyDesignForIBA
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After performSvaFilterCmd
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After inferDesignElements
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After setDefaultCClockForZemi3Xtors
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After VcsTransformZS4UC2DPI
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       755 m   vm:        +0 m   um:       270 m   um:        +0 m     Ufe:After VcsTransformDutDPIToZemi3
+elapsed: 0.73 s   user:    0.11 s   system:  0.04 s   vm:       760 m   vm:        +5 m   um:       276 m   um:        +6 m     Ufe:After convertZemi3XtorsToZcei
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After compileZemi3xtor
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After dumpZemi3IncludesFile
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After dumpZemi3DpiXtorFiles
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After dumpXtorInfoNoDveFile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After dumpSimzFiles
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After dumpDpiInDutFiles
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After processPlusargsInInitial
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After VcsTransformRtlClock
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After eliminateUnusedZebuBuiltIns
+elapsed: 0.03 s   user:    0.03 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After handleAssertionsInZebu
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       760 m   vm:        +0 m   um:       276 m   um:        +0 m     Ufe:After rewriteSequenceEndedClk
+elapsed: 0.06 s   user:    0.03 s   system:     0 s   vm:       765 m   vm:        +5 m   um:       278 m   um:        +2 m     Ufe:After handleZebuCoverage
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After performSvaSeqFilterCmd
+elapsed: 0.04 s   user:    0.04 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After dumpDpiLog
+elapsed: 0.04 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After collectNoDveFlowArchiveFiles
+elapsed: 0.05 s   user:    0.05 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After VcsTransformDesignDpiAndIsm
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After processXtors
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After processZebuParameter
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After cleanupXtorsInNoDveFlow
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After dumpNoDveConfigForZTB
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After XformStateMachine
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       278 m   um:        +0 m     Ufe:After dumpSdcDB
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +1 m     Ufe:After processPostXform
+elapsed:    0 s   user:    0.01 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After propDveInstPorts
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After processVSXtors
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After createDVEModule
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After dumpDVEFile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After dumpDveBEFiles
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       765 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After dumpCdxHWTopPortMapFile
+elapsed: 0.01 s   user:       0 s   system:  0.01 s   vm:       766 m   vm:        +1 m   um:       279 m   um:        +0 m     Ufe:After dumpNoDveFlowFiles
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After populateXtorNameToClkPortNameMap
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After cleanAfterDVEDump
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After processDveElemInNoDveFlow
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After rewriteXmrForUfeFlow
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After performForceReleaseTransform
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After transformInterfacesToModules
+elapsed: 0.03 s   user:    0.03 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After VcsTransformDesignDpiAndIsm
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After processInitialBlocks
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After convertStrength
+elapsed:    0 s   user:    0.01 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After dumpDVEFileAsVlogModule
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After processV2Encryption
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After probeManager
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After clearHWTopDefParams
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       279 m   um:        +0 m     Ufe:After dumpZebuSrcFiles
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +1 m     Ufe:After dumpGlobalHcsrc
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After dumpSimonOption
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After checkZebuZmemFile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After dumpUpfHcsrc
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After dumpDotInstallFile
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After UfeScemiToZceiConvertor
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After dumpZcuiScript
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After dumpResolvedModulesForBEUtfConfig
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After UnitTestVhdlAPI
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       766 m   vm:        +0 m   um:       280 m   um:        +0 m     Ufe:After .dumpEsxFile
+elapsed: 0.07 s   user:    0.03 s   system:     0 s   vm:       767 m   vm:        +1 m   um:       282 m   um:        +2 m     Ufe:After semanticCheckBlackBoxes
+elapsed: 0.04 s   user:    0.01 s   system:     0 s   vm:       781 m   vm:       +14 m   um:       288 m   um:        +6 m     Ufe:After dumpVcsArchive
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     Ufe:After zTrackDumpBBox
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     Ufe:End of Ufe Flow
+elapsed: 0.02 s   user:       0 s   system:  0.01 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     Start doUptoVir2VcsNoSepCleanup
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After checkParallelFlag
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After splitRandomModule
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After checkZemi4RTEnabled
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After Mark SVA package
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After requestVhdlDeclDump
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After cleanBomInfo
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       781 m   vm:        +0 m   um:       288 m   um:        +0 m     After markAllForDowngrade
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After new rewriteDPILight
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After checkForIllegalHdlXmrUsage
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After fgpProcessDesignForXmr
+elapsed: 0.43 s   user:    0.41 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After doAdjustPass
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     Before doRadCompileInit
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After doRadCompileInit
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After checkUndefinedInterfaces
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After applyPortScalInfoOfConfigFile
+elapsed: 0.02 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     Before CreateCTagsInfo
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After CreateCTagsInfo
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After dumpSkeletonIfAssertDve
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After mxsaif
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After dumpPortsTester
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After checkDisableNusym
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After ssimInstrument
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After callSviEntryPoint
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After rewriteSampledValueFunctions
+elapsed: 0.01 s   user:    0.01 s   system:     0 s   vm:       780 m   vm:        +0 m   um:       288 m   um:        +0 m     After rewriteForStructDefWithMemberInitializers
+elapsed: 0.22 s   user:    0.03 s   system:     0 s   vm:       856 m   vm:       +76 m   um:       303 m   um:       +15 m     Before invoking Simon
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       303 m   um:        +0 m     Simon Driver Start
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       305 m   um:        +2 m     Start of doBatchModeProcessing: 
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       305 m   um:        +0 m     before extractModelFullHierGeneric: 
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       306 m   um:        +1 m     before populateEntireWorkListUpfront: 
+elapsed: 0.04 s   user:    0.04 s   system:  0.01 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +1 m     after populateEntireWorkListUpfront : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +0 m     Before interface const extraction : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +0 m     After interface const extraction :
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +0 m     Before check sum computation : 
+elapsed: 0.11 s   user:    0.11 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +0 m     After check sum computation : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       856 m   vm:        +0 m   um:       307 m   um:        +0 m     Before simon first parallel
+elapsed: 3.48 s   user:    0.36 s   system:  0.03 s   vm:       883 m   vm:       +27 m   um:       333 m   um:       +26 m     after SCM read: 
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     After simon first parallel
+    NOTE: For details refer <vcs_simon_first_parallel_report.log>
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     after extractModelFullHierGeneric: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     after full hierarchical circuits generation: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     before linking the circuits: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     Before starting link
+elapsed: 0.03 s   user:    0.02 s   system:  0.01 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     After full link done
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       333 m   um:        +0 m     after linking the circuits: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       334 m   um:        +1 m     before dumpSimonCircuitForIncComp : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       334 m   um:        +0 m     after dumpSimonCircuitForIncComp : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       334 m   um:        +0 m     before nativeXmrXform: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       334 m   um:        +0 m     before processing zconnect: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +1 m     after processing zconnect, before check sum calculation: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +0 m     after check sum calculation, before make clone and ports : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +0 m     after make clone and ports, before make connection: : 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +0 m     after make connection: 
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +0 m     after nativeXmrXform: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       883 m   vm:        +0 m   um:       335 m   um:        +0 m     before design level optimizations: 
+elapsed: 0.27 s   user:    0.27 s   system:     0 s   vm:       885 m   vm:        +2 m   um:       336 m   um:        +1 m     after design level optimizations: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       885 m   vm:        +0 m   um:       336 m   um:        +0 m     before unified compile post-processing: 
+elapsed: 0.02 s   user:    0.01 s   system:     0 s   vm:       885 m   vm:        +0 m   um:       336 m   um:        +0 m     Before simon second parallel
+elapsed:  1.6 s   user:    0.01 s   system:  0.03 s   vm:       885 m   vm:        +0 m   um:       336 m   um:        +0 m     After simon second parallel
+    NOTE: For details refer <vcs_simon_second_parallel_report.log>
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       885 m   vm:        +0 m   um:       336 m   um:        +0 m     after circuit post-processing: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       885 m   vm:        +0 m   um:       336 m   um:        +0 m     before zebuDriver update: 
+elapsed: 1.37 s   user:    0.15 s   system:  0.12 s   vm:       886 m   vm:        +1 m   um:       338 m   um:        +2 m     after unified compile post-processing: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     before final design processing: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     after Verilog generation: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     after final design processing: 
+elapsed: 0.02 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     End of doBatchModeProcessing: 
+elapsed:    0 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     after driver destructor: 
+elapsed: 0.01 s   user:       0 s   system:     0 s   vm:       886 m   vm:        +0 m   um:       338 m   um:        +0 m     After invoking Simon

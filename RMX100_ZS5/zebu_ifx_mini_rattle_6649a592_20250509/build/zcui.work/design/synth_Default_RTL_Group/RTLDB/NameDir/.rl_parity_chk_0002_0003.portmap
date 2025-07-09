@@ -1,0 +1,20 @@
+Module rl_parity_chk_0002_0003{
+}
+
+EdfPortBounds safety_iso_sync{
+1 0 safety_iso_enb
+1 0 safety_isol_change
+}
+EdfPortBounds arcv_dm{
+1 0 dbg_unlock_i
+31 0 hmst_cmd_addr_o
+3 0 hmst_cmd_space_o
+31 0 hmst_rd_data_i
+31 0 hmst_wr_data_o
+3 0 hmst_wr_mask_o
+31 2 paddr_dm
+31 0 prdata_dm
+31 0 pwdata_dm
+}
+NonAliasNets rl_parity_chk_0002_0003{
+}
