@@ -1,0 +1,1 @@
+../F00.src/design.mk

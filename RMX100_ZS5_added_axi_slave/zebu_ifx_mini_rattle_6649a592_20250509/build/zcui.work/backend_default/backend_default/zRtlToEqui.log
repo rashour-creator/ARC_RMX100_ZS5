@@ -1,0 +1,82 @@
+
+                                    ZeBu (R)
+                                   zRtlToEqui
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zRtlToEqui --zebu-work . 
+
+# start time is Wed May 14 18:59:04 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:31:12
+# ---------------------------System Context--------------------------- 
+# Cpu        30 x bogomips - 5000.00 INTEL(R) XEON(R) GOLD 6548Y+
+#            Load: 3.91 5.90 5.84 7/850 923567
+#            Hostname: us01zebu-4587-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 987467 MB Free: 897304 MB
+#            Swap space: 104447 MB Free Swap space: 102414 MB
+#            VmSize: 141 MB VmPeak: 141 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11741378
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step RTE : --threads: using 10 threads (maximum is 30).
+#   step RTE : Loading NameDb (RHINODB) from '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/VCS/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/VCS/vcs/S-2021.09-2-TZ-20240507_Full64/linux64/lib/libNameDB.so'...
+#   step Compute indexes : Starting
+#   step RTE : signals = 79367, vectors = 1058200, power domains = 0.
+#   step Compute indexes : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.91       fm:896696 m      vm:274 m       vm:+0 m      um:137 m       um:+0 m
+#   step Load equi netlist : Starting
+#   step EDIF LOADER : reading EDIF file '/slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/libXilinx.edif.gz'
+#   step ZNF PARSER : reading netlist from ZNF file './tools/zDB/zTopBuild_equi.edf.gz'
+#   step Load equi netlist : Done in    elapsed:0.86 s   user:0.72 s    system:0.8 s      %cpu:93.57       load:3.91       fm:895817 m      vm:807 m     vm:+533 m      um:449 m     um:+312 m
+#   step Build whiteboard : Starting
+#   step Build whiteboard : Done in     elapsed:0.4 s    user:0.6 s    system:0.1 s     %cpu:198.11       load:3.91       fm:895812 m      vm:855 m      vm:+48 m      um:459 m      um:+10 m
+#   step Build indexer : Starting
+#   step RTE : 773732 equis, 1102491 unfolded wires.
+#   step Build indexer : Done in     elapsed:0.3 s   user:0.14 s      system:0 s     %cpu:415.84       load:3.91       fm:895775 m     vm:1623 m     vm:+768 m      um:478 m      um:+19 m
+#   step Build MuDb : Starting
+#   step Build MuDb : Done in       elapsed:0 s      user:0 s      system:0 s       %cpu:0.00       load:3.91       fm:895759 m     vm:1623 m       vm:+0 m      um:478 m       um:+0 m
+#   step Browse netlist : Starting
+#   step RTE : Build EquiIndexToZrdbRep started at Wed May 14 18:59:06 2025.
+#   step Browse netlist : Done in     elapsed:0.1 s    user:0.4 s    system:0.1 s     %cpu:625.00       load:3.91       fm:895749 m     vm:1629 m       vm:+6 m      um:482 m       um:+4 m
+#   step Build RTL to equi mapping : Starting
+#   step Creating resolvers : Starting
+#   step Creating resolvers : Done in     elapsed:0.1 s      user:0 s      system:0 s       %cpu:0.00       load:3.91       fm:895743 m     vm:1629 m       vm:+0 m      um:485 m       um:+1 m
+#   step RTE : 8 resolvers created.
+#   step Running resolvers : Starting
+#   step RTE : Build EquiIndexToZrdbRep ended at Wed May 14 18:59:06 2025.
+#   step Running resolvers : Done in       elapsed:3 s      user:3 s   system:0.99 s     %cpu:129.23       load:7.76       fm:897496 m     vm:1740 m      vm:+91 m      um:596 m     um:+105 m
+#   step Serialize data : Starting
+#   step RTE : signals = 79367, vectors = 1035165.
+#   step Serialize data : Done in     elapsed:0.5 s    user:0.2 s    system:0.1 s      %cpu:59.60       load:7.76       fm:897466 m     vm:1743 m       vm:+4 m      um:600 m       um:+4 m
+#   step Build RTL to equi mapping : Done in       elapsed:3 s      user:3 s      system:1 s     %cpu:125.51       load:7.76       fm:897460 m     vm:1734 m     vm:+105 m      um:591 m     um:+107 m
+#   step Property DB : reading property DB from file './tools/zTopBuild/zTopBuild_propertyDB.gz'
+
+#   exec summary :    0 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : wall clock 0m6s, user 0m4.859s, sys 0m1.153s
+#   exec summary : Total memory: 1774864 kB - RSS memory: 605804 kB - Data memory: 1399716 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 18:59:10 2025

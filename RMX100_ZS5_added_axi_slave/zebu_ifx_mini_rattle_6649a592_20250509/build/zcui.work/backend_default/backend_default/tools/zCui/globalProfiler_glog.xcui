@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="glog">
+ <author>zCui</author>
+ <date></date>
+ <views>
+  <view name="Compile profile" order="0">
+<h1>Compilation Summary</h1>
+<p>Last session wall clock times:</p>
+<p>    FE     : 5min 30s</p>
+<p>    BE     : 2h 30min 55s</p>
+<p>    Total  : 2h 36min 25s</p>
+<p></p>
+<p>All sessions cumulative compile times:</p>
+<p>    without delay  : 2h 28min 04s</p>
+<p>    with delay*    : 2h 34min 47s</p>
+<p></p>
+<p>*including slot and grid delays, difference with total wall clock time could be NFS wait or internal flow handling delays
+</p>
+<p>Overview of the critical path of the compilation</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,compilation_summary_from_critical_path,DPHHHDS)Compilation Summary (from Compile time with delay (slot and grid))^TABLE-</p>
+<p>Columns:</p>
+<p> - Phase                 : compilation phase</p>
+<p> - (%)                   : percentage of contribution to the overall compile time</p>
+<p> - Slot delay            : time waiting for a slot on the grid</p>
+<p> - Grid delay            : time between the task is spawned and the task is launched</p>
+<p> - Elapsed time          : contribution to the overall compile time</p>
+<p> - Total # of jobs fired : number of jobs with same phase fired</p>
+<p> - Max memory consumption: job in the phase with max memory taken</p>
+<h1>Compile time with delay (slot and grid)</h1>
+<p>Critical path of the compilation with all waiting times</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,critical_path,DPHHHHHD)Compile time with delay (slot and grid)^TABLE-</p>
+<p>Columns:</p>
+<p> - Task        : task label</p>
+<p> - (%)         : percentage of contribution to the overall compile time</p>
+<p> - Slot delay  : time waiting for a slot on the grid</p>
+<p> - Grid delay  : time between the task is spawned and the task is launched</p>
+<p> - Elapsed time: contribution to the overall compile time</p>
+<p> - Spawn Time  : time spawning on the grid, taking the spawn time of the first task as reference</p>
+<p> - Finish Time : time finishing, taking the spawn time of the first task as reference</p>
+<p> - Host        : host where the task was launched (only for tasks external to zCui)</p>
+<p>Compile time with delay (slot and grid)</p>
+<p>^PIECHART(tools/zCui/globalProfilerTable.xml,exec_time_piechart)Compile time with delay (slot and grid)^PIECHART-</p>
+<h1>Compile time without delay</h1>
+<p>Critical path of the compilation with an ideal compute grid</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,ideal_critical_path,DPHD)Compile time without delay^TABLE-</p>
+<p>Columns:</p>
+<p> - Task        : task label</p>
+<p> - (%)         : percentage of contribution to the overall compile time</p>
+<p> - Elapsed time: contribution to the overall compile time</p>
+<p> - Host        : host where the task was launched (only for tasks external to zCui)</p>
+<p>Compile time without delay</p>
+<p>^PIECHART(tools/zCui/globalProfilerTable.xml,exec_time_piechart_ideal)Compile time without delay^PIECHART-</p>
+<h1>Compilation times per component</h1>
+<p>Compilation information grouped by start &amp; stop components</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,component_stats,DHHDDDD)Component statistics^TABLE-</p>
+<p>Columns:</p>
+<p> - Component      : Start &amp; stop component</p>
+<p> - Wall Clock     : Elasped time between the first start and last finish</p>
+<p> - Total Exec time: Total execution time</p>
+<p> - From           : First task in the component</p>
+<p> - To             : Last task in the component</p>
+<p> - Task count     : Number of tasks</p>
+<p> - Skipped tasks  : Number of tasks not launched (using incrementality or start &amp; stop)</p>
+<h1>Compilation Details per Task Class</h1>
+<p>Number of jobs par task class</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,Compilation_details_per_task_class,DD)Compilation Details per Task Class^TABLE-</p>
+<p>Columns:</p>
+<p> - Task class: Task class name</p>
+<h1>Main Compilation Stages</h1>
+<h2>Front End Stages</h2>
+<p>Compilation time of frontend main stages</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,festages,DHH)Front End Stages^TABLE-</p>
+<p>Columns:</p>
+<p> - Task          : task label</p>
+<p> - Elapsed time  : the time for the task being spawned and released</p>
+<p> - Execution time: the time for the task being executed</p>
+<h2>Synthesis Waiting for slot distribution</h2>
+<p>Distribution of synthesis wait for slot time, can be used to optimize the 'njobs' parameters in UTF</p>
+<p>^HISTOGRAM(tools/zCui/globalProfilerTable.xml,synthesis_distribution,DD)Synthesis Waiting for slot distribution^HISTOGRAM-</p>
+<p>Columns:</p>
+<p> - Interval : Waiting slot delay</p>
+<p> - Job Count: Number of jobs</p>
+<h2>Top 10 Synthesis Bundles</h2>
+<p>Highest contributor synthesis bundles</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,top_ten_synth,DDD)Top 10 Synthesis Bundles^TABLE-</p>
+<p>Back End Stages Timing for backend_default</p>
+<h2>Back-end Stages</h2>
+<p>Compilation time of backend main stages</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,back_end_stages,DHH)Back-end Stages^TABLE-</p>
+<p>Columns:</p>
+<p> - Task          : task label</p>
+<p> - Elapsed time  : the time for the task being spawned and released</p>
+<p> - Execution time: the time for the task being executed</p>
+<h2>Top 5 zCore</h2>
+<p>Highest contributor synthesis zCores</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,top_five_zcore,DDD)Top 5 zCore^TABLE-</p>
+<h2>Top 10 FPGAs</h2>
+<p>Highest contributor synthesis FPGAs</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,top_ten_fpga,DDD)Top 10 FPGAs^TABLE-</p>
+<h1>FPGA important times</h1>
+<p>Summary of FPGA compilation</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,Fpga_time_table,DHHHHDDD)FPGA important times^TABLE-</p>
+<p>Columns:</p>
+<p> - FPGA                  : FPGA name</p>
+<p> - Compile time          : Total compile time (wall clock)</p>
+<p> - PARFF-1 Time          : Delay before triggering PARFF first stage</p>
+<p> - PARFF-2 Time          : Delay before triggering PARFF second stage</p>
+<p> - Grid delay impact     : Time spent waiting for grid</p>
+<p> - Nb of PARFF-1 launched: Number of strategies in PARFF first stage</p>
+<p> - Nb of PARFF-2 launched: Number of strategies in PARFF second stage</p>
+<p> - Final winner          : Name of the successful PARFF strategy</p>
+<h1>FPGA Winner Details</h1>
+<p>Duration per compilation step for each FPGA</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,fpga_compilation,DDDDDDDDDDDDDDDD)Durations^TABLE-</p>
+<p>Annex :</p>
+<p>VIVADO_NE* : VIVADO_NETLIST_ANALYSIS_PREPROCESSING</p>
+<p>VIVADO_RE* : VIVADO_READ_CONSTRAINTS</p>
+<p>VIVADO_OP* : VIVADO_OPT_DESIGN</p>
+<p>VIVADO_PO* : VIVADO_POST_OPT_NETLIST_ANALYS_PROCESSING</p>
+<p>VIVADO_PL* : VIVADO_PLACE_DESIGN</p>
+<p>VIVADO_PO* : VIVADO_POST_PLACE_PHYS_OPT_DESIGN</p>
+<p>VIVADO_RO* : VIVADO_ROUTE_DESIGN</p>
+<p>VIVADO_PO* : VIVADO_POST_ROUTE_PHYS_OPT_DESIGN</p>
+<p>VIVADO_TI* : VIVADO_TIMING</p>
+<p>VIVADO_DR* : VIVADO_DRC_BITSTREAM_CHECK</p>
+<p>WRITE_BIT* : WRITE_BITSTREAM</p>
+<p>VIVADO_ZT* : VIVADO_ZTIME_ANALYSE_ROUTE</p>
+<p>VIVADO_LO* : VIVADO_LOCATION_BUILDING</p>
+<p>VIVADO_WR* : VIVADO_WRITE</p>
+<h1>Hosts</h1>
+<p>Information about grid hosts used to run remote tasks, based on '/proc/cpuinfo' and 'lsb_release'</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,machine_names,DDSSDDDDDDDDD)Hosts^TABLE-</p>
+<h1>Memory usage</h1>
+<p>Memory usage of tasks with the highest 'Maximum resident set size'</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,memory_usage,DSSDD)Memory usage^TABLE-</p>
+<p>Columns:</p>
+<p> - Task                     : task label</p>
+<p> - Maximum RSS              : Maximum Resident Set Size</p>
+<p> - Available memory at start: Available memory on host when the job starts</p>
+<p> - Task                     : Task Label</p>
+<p> - Job queue                : Job queue name</p>
+<h1>Job queue memory analysis</h1>
+<p>Memory information grouped by job queues</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,memory_report,DSSDD)Job queue memory analysis^TABLE-</p>
+<p>Columns:</p>
+<p> - Job queue            : Job queue name</p>
+<p> - Maximum RSS (max)    : Maximum value of Resident Set Size peak</p>
+<p> - Maximum RSS (average): Average value of Resident Set Size peak</p>
+<p> - Slots (usage / limit): Max slots used in parallel / Available slots limit</p>
+<h1>Grid Delay</h1>
+<p>Remote tasks grid delays</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,grid_delay,DH)Grid delay^TABLE-</p>
+<p>Columns:</p>
+<p> - Task: Task label</p>
+<h1>Grid Delay Per Job Queue</h1>
+<p>Maximum and average grid delay per job queue</p>
+<p>^TABLE(tools/zCui/globalProfilerTable.xml,max_avg_grid_delay_per_job_queue,DHH)Grid delay per job queue^TABLE-</p>
+<p>Columns:</p>
+<p> - Job queue     : Job queue name</p>
+<p> - Wait (max)    : Maximum grid delay</p>
+<p> - Wait (average): Average grid delay</p>
+<h1>Memory usage over time</h1>
+<p>^EMBED(tools/zCui/mem_usage_over_time.svg)mem usage graph^EMBED-</p>
+  </view>
+ </views>
+</ZeBuUiDoc>

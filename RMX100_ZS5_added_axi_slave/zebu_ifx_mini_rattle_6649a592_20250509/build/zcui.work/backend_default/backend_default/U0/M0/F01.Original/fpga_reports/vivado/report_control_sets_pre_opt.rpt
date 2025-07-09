@@ -1,0 +1,67 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.1_AR76726 (lin64) Build 4044071 Fri Nov  3 11:45:33 MDT 2023
+| Date         : Wed May 14 19:26:14 2025
+| Host         : odcphy-vg-1079 running 64-bit AlmaLinux release 8.4 (Electric Cheetah)
+| Command      : report_control_sets -file ./fpga_reports/vivado/report_control_sets_pre_opt.rpt
+| Design       : fx_top
+| Device       : xcvu19p
+-------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+
+1. Summary
+----------
+
++---------------------------------------------------+-------+
+|                       Status                      | Count |
++---------------------------------------------------+-------+
+| Total control sets                                | 38096 |
+|    Minimum number of control sets                 | 38088 |
+|    Addition due to synthesis replication          |     8 |
+|    Addition due to physical synthesis replication |     0 |
++---------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets | 38096 |
+| >= 0 to < 4        | 29502 |
+| >= 4 to < 6        |   872 |
+| >= 6 to < 8        |   295 |
+| >= 8 to < 10       |   432 |
+| >= 10 to < 12      |   270 |
+| >= 12 to < 14      |   572 |
+| >= 14 to < 16      |    30 |
+| >= 16              |  6123 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |          141635 |            0 |
+| No           | No                    | Yes                    |            2225 |            0 |
+| No           | Yes                   | No                     |            8271 |            0 |
+| Yes          | No                    | No                     |          227566 |            0 |
+| Yes          | No                    | Yes                    |            7329 |            0 |
+| Yes          | Yes                   | No                     |          119793 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+

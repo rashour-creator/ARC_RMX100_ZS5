@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="zTopBuild_AC">
+
+<targets>
+
+<target type="zTopBuild">
+  <script typeCrc="crcFile" desc="zTopDefmap">zTopBuild_AC_defcoremap.tcl</script>
+  <script typeCrc="crcFile" desc="none">zTopBuild_AC_defmapfpga.tcl</script>
+</target>
+
+<target type="zCoreBuild">
+  <label>Part_0</label>
+  <repository>work.Part_0/</repository>
+  <script typeCrc="crcFile" desc="zCoreDefmap">zCoreBuild_AC_defmapping.tcl</script>
+  <script typeCrc="crcFile" desc="zCoreDefmapincr">zCoreBuild_AC_incremental_defmapping.tcl</script>
+  <script typeCrc="crcFile" desc="zCoreInterco">zCoreBuild_AC_interco.txt</script>
+</target>
+
+</targets>
+
+</ZeBuUiDoc>

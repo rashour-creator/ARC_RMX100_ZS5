@@ -1,0 +1,80 @@
+Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2022.1_AR76726 (lin64) Build 4044071 Fri Nov  3 11:45:33 MDT 2023
+| Date              : Wed May 14 19:37:56 2025
+| Host              : odcphy-vg-1079 running 64-bit AlmaLinux release 8.4 (Electric Cheetah)
+| Command           : report_timing -delay_type min_max -input_pins -file timing.rpt
+| Design            : fx_top
+| Device            : xcvu19p-fsva3824
+| Speed File        : -1  PRODUCTION 1.31 12-02-2020
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             0.010ns  (arrival time - required time)
+  Source:                 design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zebu_sendtime_portbuffer/msg_array[155][20]/C
+                            (rising edge-triggered cell FDRE clocked by CLK_pclk_free  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Destination:            design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/RAMA/I
+                            (rising edge-triggered cell RAMD32 clocked by CLK_pclk_free  {rise@0.000ns fall@80.000ns period=100.000ns})
+  Path Group:             CLK_pclk_free
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (CLK_pclk_free rise@0.000ns - CLK_pclk_free rise@0.000ns)
+  Data Path Delay:        0.222ns  (logic 0.071ns (31.982%)  route 0.151ns (68.018%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.133ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    8.342ns
+    Source Clock Delay      (SCD):    7.319ns
+    Clock Pessimism Removal (CPR):    0.889ns
+  Clock Net Delay (Source):      3.343ns (routing 1.571ns, distribution 1.772ns)
+  Clock Net Delay (Destination): 3.760ns (routing 1.731ns, distribution 2.029ns)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock CLK_pclk_free rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y338        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=196, routed)         3.488     3.488    design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.070     3.558 r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/Q
+                         net (fo=1, routed)           0.394     3.952    design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi
+    BUFGCE_X1Y223                                                     r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/I
+    BUFGCE_X1Y223        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.024     3.976 r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/O
+    X5Y6 (CLOCK_ROOT)    net (fo=37159, routed)       3.343     7.319    design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zebu_sendtime_portbuffer/uclock
+    SLICE_X165Y525       FDRE                                         r  design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zebu_sendtime_portbuffer/msg_array[155][20]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X165Y525       FDRE (Prop_HFF2_SLICEL_C_Q)
+                                                      0.071     7.390 r  design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zebu_sendtime_portbuffer/msg_array[155][20]/Q
+                         net (fo=1, routed)           0.151     7.541    design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/DIA0
+    SLICE_X168Y526       RAMD32                                       r  design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/RAMA/I
+  -------------------------------------------------------------------    -------------------
+
+                         (clock CLK_pclk_free rise edge)
+                                                      0.000     0.000 r  
+    BUFGCE_X1Y338        BUFGCE                       0.000     0.000 r  design/zkprctrl/wrapper/sysclk_dut_zs5_clkbus/u_xst_wrapper_0/bufgce_sys_mclk/O
+                         net (fo=196, routed)         3.898     3.898    design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/sys_mclk
+    SLR Crossing[2->1]   
+    SLICE_X349Y567                                                    r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/C
+    SLICE_X349Y567       FDRE (Prop_EFF_SLICEL_C_Q)
+                                                      0.096     3.994 r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi_reg/Q
+                         net (fo=1, routed)           0.560     4.554    design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/pclk_free_bufgi
+    BUFGCE_X1Y223                                                     r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/I
+    BUFGCE_X1Y223        BUFGCE (Prop_BUFCE_BUFGCE_I_O)
+                                                      0.028     4.582 r  design/U0_M0_F0/F00_ClockGen/wrapper/ts_clockgen_pclkgen/bufg_pclk_free/O
+    X5Y6 (CLOCK_ROOT)    net (fo=37159, routed)       3.760     8.342    design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/WCLK
+    SLICE_X168Y526       RAMD32                                       r  design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/RAMA/CLK
+                         clock pessimism             -0.889     7.453    
+    SLICE_X168Y526       RAMD32 (Hold_A5LUT_SLICEM_CLK_I)
+                                                      0.079     7.532    design/U0_M0_F0/U0_M0_F0_core/zebu_time_capture/zmsg_out_zebu_sendtime_out_port/wrapper/port_snd_message/port_snd256[15]_port_snd32[0]_data_inst_port_snd32_data/port_snd32_slice[2]/RAM32M16_0/RAMA
+  -------------------------------------------------------------------
+                         required time                         -7.532    
+                         arrival time                           7.541    
+  -------------------------------------------------------------------
+                         slack                                  0.010    
+
+
+
+

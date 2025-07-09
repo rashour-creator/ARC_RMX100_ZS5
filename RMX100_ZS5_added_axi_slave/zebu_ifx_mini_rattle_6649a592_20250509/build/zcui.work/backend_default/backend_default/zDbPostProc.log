@@ -1,0 +1,71 @@
+
+                                    ZeBu (R)
+                                  zDbPostProc
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zDbPostProc zDBPostProc.tcl -p . -nosel 
+
+# start time is Wed May 14 21:26:27 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:37
+# ---------------------------System Context--------------------------- 
+# Cpu        32 x bogomips - 4500.00 AMD EPYC 9754 128-Core Processor
+#            Load: 3.45 4.66 6.07 6/738 2986086
+#            Hostname: zebutrain-4763-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 261706 MB Free: 195568 MB
+#            Swap space: 53247 MB Free Swap space: 51576 MB
+#            VmSize: 178 MB VmPeak: 178 MB
+# Disk Space Total: 5000 GB Available: 552 GB Used: 4448 GB
+#            Free inodes: 11740151
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+#   step ZRDB : libZebuRDB version 2021.3.0 RW
+### warning in ZRDB [ZDB1456W] : Hydra detected. Please use zRtxBrowser or zExportSupport instead of zDbPostProc and zSelectProbes.
+#   step open DB : Loading database files
+#   step open DB : Loaded ...
+#   step DB : Selection load skipped
+wrapper -cpp
+#   step Wrappers : Generating wrappers
+### warning in WRAPPERS GENERATION [ZBD0202W] : Drivers not selected in this compilation
+#   step C++ GENERATION : generating 'TOP_zebu_top.cc' & 'TOP_zebu_top.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_Zebu_Transactional_Interface.cc' & 'TOP_Zebu_Transactional_Interface.hh' for internal state capture
+### warning in valid name [ZDB0414W] : 'Zebu_Transactional_Interface_zceiClock[0]' will be renamed in 'Zebu_Transactional_Interface_zceiClock_0_'
+#   step C++ GENERATION : generating 'TOP_Zebu_Transactional_Interface_zceiClock_0_.cc' & 'TOP_Zebu_Transactional_Interface_zceiClock_0_.hh' for internal state capture
+### warning in valid name [ZDB0414W] : 'Zebu_Transactional_Interface_zceiClock[1]' will be renamed in 'Zebu_Transactional_Interface_zceiClock_1_'
+#   step C++ GENERATION : generating 'TOP_Zebu_Transactional_Interface_zceiClock_1_.cc' & 'TOP_Zebu_Transactional_Interface_zceiClock_1_.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_zebu_rtl_clock_debug.cc' & 'TOP_zebu_rtl_clock_debug.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_rtl_current_time_instance.cc' & 'TOP_rtl_current_time_instance.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_RtlClockToleranceRT.cc' & 'TOP_RtlClockToleranceRT.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_LICENSE.cc' & 'TOP_LICENSE.hh' for internal state capture
+#   step C++ GENERATION : generating 'TOP_zebu_force_inject.cc' & 'TOP_zebu_force_inject.hh' for internal state capture
+#   step Wrappers : Done generating wrappers
+
+#   exec summary :    4 warnings,    0 syntax errors,    0 fatal errors,    0 internal errors
+#   exec summary : user 0m2.443s, sys 0m0.153s
+#   exec summary : Total memory: 869828 kB - RSS memory: 477808 kB - Data memory: 419108 kB
+#   exec summary : Successful execution
+
+# end time is Wed May 14 21:26:30 2025

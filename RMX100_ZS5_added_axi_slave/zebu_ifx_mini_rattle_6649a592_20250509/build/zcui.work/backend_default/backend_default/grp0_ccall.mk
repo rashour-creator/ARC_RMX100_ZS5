@@ -1,0 +1,1 @@
+../design/synth_Default_RTL_Group/grp0_ccall.mk

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.1" creator="zPar">
+<targets>
+   <designFpga>
+      <label>U0_M0_F0</label>
+      <sort>Unit0:Module0:Fpga00</sort>
+      <core>Part_0</core>
+      <directory>U0/M0/F00</directory>
+      <name>zrdb/ZebuDB.zdb</name>
+      <netlist_changes minor="f">No stats from previous compilation</netlist_changes>
+      <netlist_complexity rank="0"></netlist_complexity>
+      <dependencies>
+         <dependency type="netlist">wrapper.edf.gz</dependency>
+         <dependency>design_zpar.zdc</dependency>
+         <dependency>zxl_base.zdb</dependency>
+         <dependency>design.tcl</dependency>
+         <dependency>design.mk</dependency>
+         <dependency type="netlist">fpga.edf.gz</dependency>
+         <dependency>zNetgen_incremental.tcl</dependency>
+         <dependency>vivado_soft_constraints_zpar.tcl</dependency>
+         <dependency>filter_data_relocation_fpga_requests.tcl</dependency>
+      </dependencies>
+   </designFpga>
+   <zFpgaTiming>
+      <label>U0_M0_F0</label>
+      <directory>U0/M0/F00</directory>
+         <input typeCrc="crcFile">zFpga_timing_paths.tcl</input>
+   </zFpgaTiming>
+   <designFpga>
+      <label>U0_M0_F1</label>
+      <sort>Unit0:Module0:Fpga01</sort>
+      <core>Part_0</core>
+      <directory>U0/M0/F01</directory>
+      <name>zrdb/ZebuDB.zdb</name>
+      <netlist_changes minor="f">No stats from previous compilation</netlist_changes>
+      <netlist_complexity rank="0"></netlist_complexity>
+      <dependencies>
+         <dependency type="netlist">wrapper.edf.gz</dependency>
+         <dependency>design_zpar.zdc</dependency>
+         <dependency>zxl_base.zdb</dependency>
+         <dependency>design.tcl</dependency>
+         <dependency>design.mk</dependency>
+         <dependency type="netlist">fpga.edf.gz</dependency>
+         <dependency>zNetgen_incremental.tcl</dependency>
+         <dependency>vivado_soft_constraints_zpar.tcl</dependency>
+         <dependency>filter_data_relocation_fpga_requests.tcl</dependency>
+      </dependencies>
+   </designFpga>
+   <zFpgaTiming>
+      <label>U0_M0_F1</label>
+      <directory>U0/M0/F01</directory>
+         <input typeCrc="crcFile">zFpga_timing_paths.tcl</input>
+   </zFpgaTiming>
+   <target type="zDB_final">
+      <input typeCrc="crcFile">zParDB.zdb</input>
+      <input typeCrc="crcFile">zrdb_merge.tcl</input>
+      <input typeCrc="crcFile">tools/zDB/zPar_if.tcl</input>
+      <input typeCrc="crcFile">U0/M0/F00/zNetgen_property.db</input>
+      <input typeCrc="crcFile">U0/M0/F00/zrdb/ZebuDB.zdb</input>
+      <input typeCrc="crcFile">U0/M0/F00/zrdb/stamp.zrdb</input>
+      <input typeCrc="crcFile">U0/M0/F01/zNetgen_property.db</input>
+      <input typeCrc="crcFile">U0/M0/F01/zrdb/ZebuDB.zdb</input>
+      <input typeCrc="crcFile">U0/M0/F01/zrdb/stamp.zrdb</input>
+   </target>
+   <target type="zTime">
+      <input typeCrc="crcFile">tools/zTime/zPar_timing.zti</input>
+      <input typeCrc="crcFile">tools/zTime/async_filter_data_relocation_routed.zti</input>
+   </target>
+   <target type="zTime_fpga">
+      <input typeCrc="crcFile">tools/zTime/zPar_timing.zti</input>
+      <input typeCrc="crcFile">tools/zTime/async_filter_data_relocation_routed.zti</input>
+      <input typeCrc="crcFile">U0/M0/F00/zFpgaTiming.zti</input>
+      <input typeCrc="crcFile">U0/M0/F01/zFpgaTiming.zti</input>
+      <input typeCrc="crcFile">tools/zTime/zParFPGAs_timing.zti</input>
+   </target>
+</targets>
+</ZeBuUiDoc>

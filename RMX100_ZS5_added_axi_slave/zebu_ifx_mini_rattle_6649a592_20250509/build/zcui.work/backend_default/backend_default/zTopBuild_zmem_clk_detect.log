@@ -1,0 +1,281 @@
+Found zmem module alb_mss_fpga_sram_0000_ZMEM_mem_r
+Iterating over its ports
+  Processing memory port rw0
+  Creating blackbox on clock port rw0clk
+  Creating blackbox on di portVector rw0di
+  Creating blackbox on do portVector rw0do
+  Creating blackbox on addr portVector rw0addr
+  Creating blackbox on we port rw0we
+  Creating blackbox on re port rw0re
+  Creating blackbox on fbie portVector rw0bie
+  Instrumenting port rw0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector rw0di with attribute : ZMEM_INSTR_CLOCK_NAME = rw0clk
+  Instrumenting portVector rw0do with attribute : ZMEM_INSTR_CLOCK_NAME = rw0clk
+  Instrumenting portVector rw0addr with attribute : ZMEM_INSTR_CLOCK_NAME = rw0clk
+  Instrumenting port rw0we with attribute : ZMEM_INSTR_CLOCK_NAME = rw0clk
+  Instrumenting port rw0re with attribute : ZMEM_INSTR_CLOCK_NAME = rw0clk
+Pass on all memories for full memory timing model...
+Found zmem module alb_mss_fpga_sram_0000_ZMEM_mem_r
+Iterating over its ports
+Found zmem module alb_mss_mem_lat_0000_ZMEM_i_bdel_mem
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+Pass on all memories for full memory timing model...
+Found zmem module alb_mss_mem_lat_0000_ZMEM_i_bdel_mem
+Iterating over its ports
+Found zmem module alb_mss_mem_lat_0000_ZMEM_i_rdel_mem
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+Pass on all memories for full memory timing model...
+Found zmem module alb_mss_mem_lat_0000_ZMEM_i_rdel_mem
+Iterating over its ports
+Found zmem module fpga_sram_0000_ZMEM_mem_r
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Creating blackbox on bie portVector w0bie
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0bie with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+Pass on all memories for full memory timing model...
+Found zmem module fpga_sram_0000_ZMEM_mem_r
+Iterating over its ports
+Found zmem module fpga_sram_0001_ZMEM_mem_r
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Creating blackbox on bie portVector w0bie
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0bie with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+Pass on all memories for full memory timing model...
+Found zmem module fpga_sram_0001_ZMEM_mem_r
+Iterating over its ports
+Found zmem module fpga_sram_0002_0000_ZMEM_mem_r
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+  Processing memory port r2
+  Creating blackbox on do portVector r2do
+  Creating blackbox on addr portVector r2addr
+  Instrumenting portVector r2do with attribute : PATH_BACKWARD = r2addr
+  Instrumenting portVector r2addr with attribute : PATH_FORWARD = r2do
+Pass on all memories for full memory timing model...
+Found zmem module fpga_sram_0002_0000_ZMEM_mem_r
+Iterating over its ports
+Found zmem module fpga_sram_0002_ZMEM_mem_r
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting portVector r1do with attribute : PATH_BACKWARD = r1addr
+  Instrumenting portVector r1addr with attribute : PATH_FORWARD = r1do
+  Processing memory port r2
+  Creating blackbox on do portVector r2do
+  Creating blackbox on addr portVector r2addr
+  Instrumenting portVector r2do with attribute : PATH_BACKWARD = r2addr
+  Instrumenting portVector r2addr with attribute : PATH_FORWARD = r2do
+Pass on all memories for full memory timing model...
+Found zmem module fpga_sram_0002_ZMEM_mem_r
+Iterating over its ports
+Found zmem module zz_Encrypt_5_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on clock port w0clk
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_5_ZMEM_0
+Iterating over its ports
+Found zmem module zz_Encrypt_6_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port w0clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Processing memory port r1
+  Creating blackbox on clock port w0clk
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Instrumenting port w0clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = w0clk
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_6_ZMEM_0
+Iterating over its ports
+Found zmem module zz_Encrypt_2_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port xtor_fm_mcp_mem_clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Processing memory port r1
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk_0
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Creating blackbox on ce port r1re
+  Instrumenting port xtor_fm_mcp_mem_clk_0 with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting port r1re with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_2_ZMEM_0
+Iterating over its ports
+Found zmem module zz_Encrypt_7_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port xtor_fm_mcp_mem_clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Processing memory port r1
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk_0
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Creating blackbox on ce port r1re
+  Instrumenting port xtor_fm_mcp_mem_clk_0 with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting port r1re with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_7_ZMEM_0
+Iterating over its ports
+Found zmem module zz_Encrypt_8_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk_0
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port xtor_fm_mcp_mem_clk_0 with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Processing memory port r1
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Creating blackbox on ce port r1re
+  Instrumenting port xtor_fm_mcp_mem_clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting port r1re with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_8_ZMEM_0
+Iterating over its ports
+Found zmem module zz_Encrypt_9_ZMEM_0
+Iterating over its ports
+  Processing memory port w0
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk
+  Creating blackbox on di portVector w0di
+  Creating blackbox on addr portVector w0addr
+  Creating blackbox on we port w0we
+  Instrumenting port xtor_fm_mcp_mem_clk with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector w0di with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting portVector w0addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Instrumenting port w0we with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk
+  Processing memory port r1
+  Creating blackbox on clock port xtor_fm_mcp_mem_clk_0
+  Creating blackbox on do portVector r1do
+  Creating blackbox on addr portVector r1addr
+  Creating blackbox on ce port r1re
+  Instrumenting port xtor_fm_mcp_mem_clk_0 with attribute : ZMEM_INSTR_CD_POSEDGE = 1
+  Instrumenting portVector r1do with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting portVector r1addr with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+  Instrumenting port r1re with attribute : ZMEM_INSTR_CLOCK_NAME = xtor_fm_mcp_mem_clk_0
+Pass on all memories for full memory timing model...
+Found zmem module zz_Encrypt_9_ZMEM_0
+Iterating over its ports

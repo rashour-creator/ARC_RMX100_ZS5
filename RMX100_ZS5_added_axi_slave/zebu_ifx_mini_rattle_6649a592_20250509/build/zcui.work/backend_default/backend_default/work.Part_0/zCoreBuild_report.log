@@ -1,0 +1,1703 @@
+
+
+
+
+
+
+
+                                    ZeBu (R)
+                                   zCoreBuild
+
+            Version S-2021.09-T-20240508 for linux64 - May 08, 2024 
+
+                    Copyright (c) 2002 - 2024 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+# zCoreBuild zCoreBuild_ztb.tcl 
+
+# start time is Wed May 14 18:59:05 2025
+
+
+
+
+# Build Date : May  7 2024 - 21:34:48
+# ---------------------------System Context--------------------------- 
+# Cpu        30 x bogomips - 5000.00 INTEL(R) XEON(R) GOLD 6548Y+
+#            Load: 3.91 5.90 5.84 12/843 923714
+#            Hostname: us01zebu-4587-002   OS: Linux 4.18.0-425.3.1.el8.x86_64
+# Memory     Total: 987467 MB Free: 896188 MB
+#            Swap space: 104447 MB Free Swap space: 102414 MB
+#            VmSize: 286 MB VmPeak: 286 MB
+# Disk Space Total: 5000 GB Available: 553 GB Used: 4447 GB
+#            Free inodes: 11741367
+# Stack                                Soft Limit           Hard Limit  
+#            Max stack size            unlimited            unlimited            bytes     
+# -------------------------------------------------------------------- 
+
+
+
+
+
+Table of content:
+-----------------
+
+
+ 1.Loading
+    1.1.Macro processing
+ 2.Pre-clustering report
+    2.1.Summary pre clustering
+    2.2.Multiple instantiation
+    2.2.1.Multi-instantiation cost (ordered with various criteria) *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_2_2_1_Multi_inst.log
+    2.2.2.Modules with unusual properties (ordered with various criteria) *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_2_2_2_Modules_wi.log
+    2.3.Synchronous elements with asynchronous set/reset
+    2.4.Disconnected module ports
+    2.5.Disconnected instance ports
+    2.6.Wires with no load
+    2.7.Wires with no source
+    2.8.Wires with no connection
+    2.9.Blackbox modules
+    2.10.Blackbox instances
+    2.11.Module size
+    2.12.Netlist map stat
+        2.12.1.Muxcy cost evaluation
+        2.12.2.Instances affected user define cost (NPL cost)
+    2.13.Technology mapping
+    2.14.Accessibility on DUT combinatorial signals required by user.
+    2.15.Partitioner constraints
+ 3.Post-clustering report
+    3.1.Post split interconnection matrix
+        3.1.1.Splitted netlist interco
+        3.1.2.Generated netlist interco
+    3.2.Partitioner basic resource estimations
+    3.3.Summary post-clustering *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_3_3_Summary_po.log
+    3.4.FPGA resource usage
+        3.4.1.Netlist map stat
+        3.4.2.Netlist map stat
+ 4.Splitting report
+    4.1.Defmapping input
+    4.2.Defmaps list
+    4.3.Debug instances relocation
+    4.4.Post split gates & constants localizing
+ 5.Memory processing
+    5.1.External Memories processing
+        5.1.1.ZRM instances in the design
+        5.1.2.ZRM mapping in the design
+        5.1.3.ZRM mapped on DRAM ports infos
+        5.1.4.Buffer insertion on input ports
+    5.2.ZMEM Memories processing
+        5.2.1.ZMEM instances in the design
+    5.2.2.ZMem resource utilization *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_5_2_2_ZMem_resou.log
+ 6.Clock and BUFG handling
+    6.1.Remove all design BUFG(s)
+    6.2.Clock report
+    6.3.Clock nets and not clock nets defined by user
+    6.4.Clock ports defined by user
+    6.5.Primary clocks from 'zceiClockPort' in .DVE file
+    6.6.Zebu clock ressources (low skew nets from FK to a design FPGA)
+    6.7.Local FPGA BUFG handling following Xilinx resources
+        6.7.1.BUFG analysis for FPGA 'UNIT0.MOD0.F0'
+        6.7.2.BUFG analysis for FPGA 'UNIT0.MOD0.F1'
+    6.8.Unspecified register output
+    6.9.Unspecified clock inputs
+    6.10.Filter_glitches dependency loops
+    6.11.Asynchronous clock domains and delay values
+    6.12.Impact on modules due to Synchronous Filter Glitches
+ 7.Retiming in the clock tree
+ 8.Checks on user original netlist.
+    8.1.Monitors sanity check
+    8.2.Combinational loop manipulation
+ 9.Fixes on user original netlist.
+ 10.Default initialization of synchronous elements
+ 11.remove loadless logic
+ 12.Tristate handling
+    12.1.Tristate manipulation
+        12.1.1.Adjusted top level ports connected to manipulated tristates (embedded TB)
+    12.2.Tristate resolution
+ 13.Asynchronous paths optimization processing
+    13.1.Inter-fpga laces optimization
+ 14.Direct ICE processing
+ 15.Propagating UCF constraints
+    15.1.Collecting constraints (pre-split)
+    15.2.Propagating constraints (post-split)
+ 16.Post processing summary
+ 17.Execution time *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_17_Execution_.log
+ 18.Xtor instance path report
+ 19.BlackBox instance path report *** read ./zCoreBuild_report_log_large_sections.dir/_SEC_19_BlackBox_i.log
+
+
+======================================================================================================
+
+
+
+
+
+ 1.Loading
+ =========
+
+
+    1.1.Macro processing
+    --------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 2.Pre-clustering report
+ =======================
+
+
+    2.1.Summary pre clustering
+    --------------------------
+
+
+Net list information:
+          +--------------------------------+-----------------------------+
+          |Modules                         |                         2538|
+          |Blackbox module(s)              |                           90|
+          |Blackbox Memory(ies)            |                            0|
+          |Asynchronous ZMEM Memory(ies)   |                            0|
+          |Synchronous ZMEM Memory(ies)    |                           13|
+          |Blackbox ZView(s)               |                            1|
+          |fast waveform capture ip box(es)|                            1|
+          |qiwc ip box(es)                 |                            1|
+          |zc_trace box(es)                |                            0|
+          |zforce box(es)                  |                            0|
+          |static force box(es)            |                            0|
+          |t_zview box(es)                 |                            0|
+          |Disconnected module port(s)     |[in=0 out=0 inout=0]        0|
+          |Disconnected instance port(s)   |[in=0 out=0 inout=0]        0|
+          |Disconnected wire(s)            |                            0|
+          |Loadless wire(s)                |                            0|
+          |Sourceless wire(s)              |                            0|
+          |Uninitialized register(s)       |                            0|
+          |Initialized register(s)         |                       156285|
+          +--------------------------------+-----------------------------+
+
+
+
+Primitive count from the top module zebu_top
+          +---------------------------+----------------------+---------+---------+
+          |Primitive                  |                Number|Equiv LUT|Equiv REG|
+          +---------------------------+----------------------+---------+---------+
+          |buf                        |                   536|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary Buffers            |                   536|         |         |
+          =---------------------------+----------------------+---------+---------=
+          |fd                         |                 18267|         |    18267|
+          |fd_1                       |                  3118|         |     3118|
+          |fdc                        |                 12588|         |    12588|
+          |fdc_1                      |                     6|         |        6|
+          |fdce                       |                 54455|         |    54455|
+          |fde                        |                 63597|         |    63597|
+          |fdp                        |                   368|         |      368|
+          |fdp_1                      |                     1|         |        1|
+          |fdpe                       |                   701|         |      701|
+          |fdr                        |                     8|         |        8|
+          |fdre                       |                  2968|         |     2968|
+          |fdrs                       |                    62|         |       62|
+          |fdse                       |                   116|         |      116|
+          +---------------------------+----------------------+---------+---------+
+          |Summary Flip-Flops         |                156255|         |   156255|
+          =---------------------------+----------------------+---------+---------=
+          |gnd                        |                    69|         |         |
+          |lut1                       |                   653|         |         |
+          |lut2                       |                 39484|    39484|         |
+          |lut3                       |                 26251|    26251|         |
+          |lut4                       |                 35892|    35892|         |
+          |lut5                       |                 36108|    36108|         |
+          |lut6                       |                 68205|    68205|         |
+          |vcc                        |                   113|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary General            |206775 (= 205940 LUTs)|   205940|         |
+          =---------------------------+----------------------+---------+---------=
+          |ld_1                       |                    26|         |       26|
+          |ldc                        |                     4|         |        4|
+          +---------------------------+----------------------+---------+---------+
+          |Summary Latches            |                    30|         |       30|
+          =---------------------------+----------------------+---------+---------=
+          |and2                       |                 11133|    11133|         |
+          |and2b1                     |                   180|      180|         |
+          |and3                       |                    12|       12|         |
+          |inv                        |                  1310|         |         |
+          |or2                        |                   231|      231|         |
+          |xor2                       |                    31|       31|         |
+          |xorcy                      |                    18|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary Logic Primitives   |  12915 (= 11587 LUTs)|    11587|         |
+          =---------------------------+----------------------+---------+---------=
+          |ramb36e1                   |                    83|         |         |
+          |uram288_base               |                    98|    51450|    55762|
+          +---------------------------+----------------------+---------+---------+
+          |Summary Memory Elements    |    181 (= 51450 LUTs)|    51450|    55762|
+          =---------------------------+----------------------+---------+---------=
+          |muxcy_l                    |                    18|         |         |
+          |muxf7                      |                   335|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary Multiplexers       |                   353|         |         |
+          =---------------------------+----------------------+---------+---------=
+          |USER_COSTzebu_bb_wb_reg    |                     4|         |        4|
+          |carry8                     |                  2981|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary                    |                  2985|         |        4|
+          =---------------------------+----------------------+---------+---------=
+          |KEEP_ZVIEW                 |                  3546|         |     3546|
+          |ZEBU_EDGE_MODULE_1_OUTPUT  |                    24|       24|       24|
+          |ZEBU_FILTER_MODULE_1_OUTPUT|                 29805|         |    29805|
+          |ZFWC_QIWC                  |                116860|         |         |
+          |ZXLSYS                     |                    38|         |         |
+          |zfwc_hs_1                  |                   834|         |         |
+          |zview                      |                 47637|         |         |
+          +---------------------------+----------------------+---------+---------+
+          |Summary ZEBU Special Cells |                198744|       24|    33375|
+          +---------------------------+----------------------+---------+---------+
+
+
+
+Design content summary, Luts, BRams, URAM, Flip-Flops, Latches, Multiplexers, Multipliers, other logic:
+          +----------------------------------+------+
+          |Logic LUTs                        |206593|
+          |RAMLUTs                           |     0|
+          |Logic LUTs + RAMLUTs              |206593|
+          |Logic LUTs + RAMLUTs + other logic|269654|
+          |BRAMs                             |    83|
+          |URAMs                             |    98|
+          |Flip-Flops                        |156255|
+          |Latches                           |    30|
+          |Flip-Flops + Latches + other logic|245456|
+          |Multiplexers                      |   353|
+          |MULT18/DSP                        |     0|
+          |Other logic                       |215362|
+          |Lut equiv other logic             | 63061|
+          |Reg equiv Other logic             | 89171|
+          +----------------------------------+------+
+
+
+
+    2.2.Multiple instantiation
+    --------------------------
+
+
+    2.2.1.Multi-instantiation cost (ordered with various criteria)
+
+    
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_2_2_1_Multi_inst.log ***
+
+
+    2.2.2.Modules with unusual properties (ordered with various criteria)
+
+    
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_2_2_2_Modules_wi.log ***
+
+
+    2.3.Synchronous elements with asynchronous set/reset
+    ----------------------------------------------------
+
+
+
+Flip-flop analysis is disabled, use 'enable flip_flop_glitch' to enable it.
+
+
+    2.4.Disconnected module ports
+    -----------------------------
+
+
+(X) xilinx, (D) design module, (B) blackbox, (T) top design (M) zmem memory (R) zrm memory
+(I): input port, (O): output port, (IO): inout port(IV): input port vector, (OV): output port vector, (IOV): inout port vector
+
+
+
+Connectivity analysis is disabled, add 'enable connectivity_analysis' in the tcl script if you need it.
+
+
+    2.5.Disconnected instance ports
+    -------------------------------
+
+
+(X) xilinx, (D) design module, (B) blackbox, (T) top design (M) zmem memory (R) zrm memory
+(I): input port, (O): output port, (IO): inout port(IV): input port vector, (OV): output port vector, (IOV): inout port vector
+
+
+
+Connectivity analysis is disabled, add 'enable connectivity_analysis' in the tcl script if you need it.
+
+
+    2.6.Wires with no load
+    ----------------------
+
+
+Connectivity analysis is disabled, add 'enable connectivity_analysis' in the tcl script if you need it.
+
+
+    2.7.Wires with no source
+    ------------------------
+
+
+Connectivity analysis is disabled, add 'enable connectivity_analysis' in the tcl script if you need it.
+
+
+    2.8.Wires with no connection
+    ----------------------------
+
+
+Connectivity analysis is disabled, add 'enable connectivity_analysis' in the tcl script if you need it.
+
+
+    2.9.Blackbox modules
+    --------------------
+
+BLACKBOX MODULE: zebu_clockGen
+ZVIEW MODULE    : zview
+BLACKBOX MODULE: ZebuClockDetectFront
+BLACKBOX MODULE: ZebuClockDetectFrontPclk
+BLACKBOX MODULE: ZebuClockFilterClockGenerator
+BLACKBOX MODULE: ZebuClockFilterData
+BLACKBOX MODULE: zebu_bb_pclk_dut
+BLACKBOX MODULE: rtlClockControl
+BLACKBOX MODULE: zebu_bb_clock_counter_reset_zpl_box
+BLACKBOX MODULE: zebu_bb_fm_revert_mode_zpl_box
+BLACKBOX MODULE: zebu_bb_gdelay
+BLACKBOX MODULE: zebu_bb_pclk_en_zpl_box
+BLACKBOX MODULE: zebu_bb_pclk_free_zpl_box
+BLACKBOX MODULE: zebu_bb_pclk_ready_in_zpl_box
+BLACKBOX MODULE: zebu_bb_pclk_ready_out_zpl_box
+BLACKBOX MODULE: zebu_bb_pclkdut_en_zpl_box
+BLACKBOX MODULE: zebu_bb_reset_zpl_box
+BLACKBOX MODULE: zebu_bb_revert_en_zpl_box
+BLACKBOX MODULE: zebu_bb_stop_driver_clock_2
+BLACKBOX MODULE: zebu_bb_ts_cur_time
+BLACKBOX MODULE: zebu_bb_ts_rtl_clock_no_tol
+BLACKBOX MODULE: rtlClockControl
+BLACKBOX MODULE: zebu_bb_ts_rtl_clock
+BLACKBOX MODULE: ts_runman2_24
+BLACKBOX MODULE: zceiClockControl
+BLACKBOX MODULE: zceiMessageInPort_1
+BLACKBOX MODULE: zceiMessageInPort_128
+BLACKBOX MODULE: zceiMessageInPort_150
+BLACKBOX MODULE: zceiMessageInPort_160
+BLACKBOX MODULE: zceiMessageInPort_180
+BLACKBOX MODULE: zceiMessageInPort_2
+BLACKBOX MODULE: zceiMessageInPort_2516
+BLACKBOX MODULE: zceiMessageInPort_2960
+BLACKBOX MODULE: zceiMessageInPort_32
+BLACKBOX MODULE: zceiMessageInPort_35
+BLACKBOX MODULE: zceiMessageInPort_6
+BLACKBOX MODULE: zceiMessageInPort_64
+BLACKBOX MODULE: zceiMessageOutPort_1
+BLACKBOX MODULE: zceiMessageOutPort_122
+BLACKBOX MODULE: zceiMessageOutPort_128
+BLACKBOX MODULE: zceiMessageOutPort_192
+BLACKBOX MODULE: zceiMessageOutPort_2
+BLACKBOX MODULE: zceiMessageOutPort_3
+BLACKBOX MODULE: zceiMessageOutPort_32
+BLACKBOX MODULE: zceiMessageOutPort_33
+BLACKBOX MODULE: zceiMessageOutPort_4096
+BLACKBOX MODULE: zceiMessageOutPort_480
+BLACKBOX MODULE: zceiMessageOutPort_544
+BLACKBOX MODULE: zceiMessageOutPort_64
+BLACKBOX MODULE: zceiMessageOutPort_640
+BLACKBOX MODULE: zceiMessageOutPort_65
+BLACKBOX MODULE: zceiMessageOutPort_8
+BLACKBOX MODULE: zceiTrigger
+BLACKBOX MODULE: ZXLSYS
+BLACKBOX MODULE: zrm_1d_268435456x128_mask00000001
+BLACKBOX MODULE: zebu_reqsig_clock_driverclock
+BLACKBOX MODULE: zebu_bb_zmem_addr
+BLACKBOX MODULE: zebu_bb_zmem_bie
+BLACKBOX MODULE: zebu_bb_zmem_ce
+BLACKBOX MODULE: zebu_bb_zmem_clk
+BLACKBOX MODULE: zebu_bb_zmem_di
+BLACKBOX MODULE: zebu_bb_zmem_do
+BLACKBOX MODULE: zebu_bb_zmem_fbie
+BLACKBOX MODULE: zebu_bb_zmem_re
+BLACKBOX MODULE: zebu_bb_zmem_tm_alb_mss_fpga_sram_0000_ZMEM_mem_r_rw0
+BLACKBOX MODULE: zebu_bb_zmem_tm_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0000_ZMEM_mem_r_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0000_ZMEM_mem_r_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0001_ZMEM_mem_r_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0001_ZMEM_mem_r_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_0000_ZMEM_mem_r_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_0000_ZMEM_mem_r_r2
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_0000_ZMEM_mem_r_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_ZMEM_mem_r_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_ZMEM_mem_r_r2
+BLACKBOX MODULE: zebu_bb_zmem_tm_fpga_sram_0002_ZMEM_mem_r_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_2_ZMEM_0_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_2_ZMEM_0_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_5_ZMEM_0_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_5_ZMEM_0_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_7_ZMEM_0_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_7_ZMEM_0_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_8_ZMEM_0_w0
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_9_ZMEM_0_r1
+BLACKBOX MODULE: zebu_bb_zmem_tm_zz_Encrypt_9_ZMEM_0_w0
+BLACKBOX MODULE: zebu_bb_zmem_we
+ZFWC MODULE    : zfwc_hs_1
+ZQIWC MODULE    : zfwc_qiwc_1
+BLACKBOX MODULE: zebu_bb_wb_reg
+
+    2.10.Blackbox instances
+    -----------------------
+
+
+Found 202312 blackbox instance(s) :
+	 36981 blackbox(es)
+	 0 memory(ies)
+	 47637 zview(s)
+	 834 fast waveform capture ip(s)
+	 0 fast waveform captures marks
+	 116860 qiwc ip instances
+	 0 zc_trace instances
+	 0 zforce instances
+	 0 static_force instances
+	 0 t_zview instances
+
+    2.11.Module size
+    ----------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    2.12.Netlist map stat
+    ---------------------
+
+
+    2.12.1.Muxcy cost evaluation
+
+HIER_MUXCY_STAT_zebu_top --                  inv [key=                minv] -- 18
+==> EQUIV_MUXCY_COST_zebu_top TOP  zebu_topMUXCY COST_NO_WEIGHTING_HIER(
+#        reg = 0, lut = 18, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0) COST_WEIGHTING_HIER(
+#        reg = 0, lut = 18, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0) ZVIEW_DRV(0) ZVIEW_DRV_HIER(0) 
+DRIVER_COST_MUXCY_COST_zebu_top COST_DRIVERS_TOPzebu_top COST_HIER(
+#        reg = 0, lut = 0, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0) COST_PONDER_HIER(
+#        reg = 0, lut = 0, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0)  ZVIEW_DRV(0) ZVIEW_DRV_HIER(0) 
+==> EQUIV_BURNED_RESOURCE_COST_zebu_top TOPzebu_topBURNED COST_HIER(
+#        reg = 0, lut = 0, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0) COST_LOCAL(
+#        reg = 0, lut = 0, ramlut = 0, lut6 = 0, muxcy = 0
+#        bram = 0uram = 0, mult18x18 = 0, dsp_mult = 0, dsp48 = 0, ave_lut_reg = 0, qiwc = 0)
+
+    2.12.2.Instances affected user define cost (NPL cost)
+
+NPL COST BEGIN
+NPL COST END
+
+    2.13.Technology mapping
+    -----------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    2.14.Accessibility on DUT combinatorial signals required by user.
+    -----------------------------------------------------------------
+
+
+          +-------------+--------------+---------------------+
+          |STATIC PROBES|DYNAMIC PROBES|FAST WAVEFORM CAPTURE|
+          +-------------+--------------+---------------------+
+          |            0|             0|               117694|
+          +-------------+--------------+---------------------+
+
+
+
+SUMMARY FOR FAST WAVEFORM CAPTURE:
+  clock name            : clock can be selected at runtime
+  fifo size             :  low
+
+    2.15.Partitioner constraints
+    ----------------------------
+
+
+          +---------+---------------------------+---------------------+
+          |FPGA ID  |place                      |resource             |
+          +---------+---------------------------+---------------------+
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZCEI_CLOCKCONTROL    |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZCEI_CLOCKPORT       |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_INPUT   |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZCEI_MESSAGE_OUTPUT  |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZEBU_BB_DELAY        |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZEBU_BB_GDELAY       |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZEBU_BB_GTIME        |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |RTL_CLOCKCONTROL     |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |HDLCOSIM_BB          |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |SW_CTRL_BB           |
+          |U0_M0_F0 |PLACE_TERM                 |TRIGGER_BB_OUTPUT    |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |CLK_MAN_BB           |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |SAMPLE_MAN           |
+          |U0_M0_F0 |PLACE_TERM                 |ZCEI_TRIGGER_BB      |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |FWC_HS_IP            |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |FWC_QIWC_IP          |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |WRITE_PORT           |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |READ_PORT            |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |SRAM_TRACE           |
+          |U0_M0_F1 |PLACE_U0_Mx_F01_F04_F07_F10|SMART_ZICE           |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |MONITOR              |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZPRD                 |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZEBU_BB_TS_TOLERANCE |
+          |U0_M0_F0 |PLACE_Ux_Mx_F0             |ZEBU_RTL_CLOCK_MASTER|
+          |U0_M0_F0 |PLACE_TERM                 |TS_RUNMAN            |
+          |U0_M0_F0 |PLACE_TERM                 |CALLBACK_MGR_XTOR    |
+          |U0_M0_F0 |PLACE_TERM                 |RTL_CLOCK_BB_OWNER   |
+          |U0_M0_F0 |PLACE_TERM                 |ZEBU_DUMMY_DRIVER    |
+          |U0_M0_F0 |PLACE_TERM                 |C_COSIM              |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |ZEBU_NO_TOL_DELAY_BB |
+          |U0_M0_F0 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F1 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F2 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F3 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F4 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F5 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F6 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F7 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F8 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F9 |PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F10|PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          |U0_M0_F11|PLACE_NO_CONSTRAINT        |STOP_CLOCK           |
+          +---------+---------------------------+---------------------+
+
+
+
+
+ 3.Post-clustering report
+ ========================
+
+
+    3.1.Post split interconnection matrix
+    -------------------------------------
+
+
+    3.1.1.Splitted netlist interco
+
+
+Inter fpga interconnection matrix after splitting.
+
+Data interco   |fpga_0    |fpga_1    |IF_2      |
+               |IF        |U0_M0_F0  |U0_M0_F1  |
+-------------- |--------- |--------- |--------- |
+IF             |          |0         |0         |
+U0_M0_F0       |0         |          |35        |
+U0_M0_F1       |0         |35        |          |
+-------------- |--------- |--------- |--------- |
+SUM CUT        |0         |35        |35        |
+-------------- |--------- |--------- |--------- |
+
+
+ FPGA fan-out
+
+
+FPGAs fan-out
+          +--------+------------------+------------------+-------+
+          |FPGA    |inter mezz fan-out|intra mezz fan-out|fan-out|
+          +--------+------------------+------------------+-------+
+          |U0_M0_F1|                 0|                34|     34|
+          |U0_M0_F0|                 0|                 1|      1|
+          +--------+------------------+------------------+-------+
+
+
+
+    3.1.2.Generated netlist interco
+
+
+Inter fpga interconnection matrix after splitting.
+
+Data interco   |fpga_0    |fpga_1    |IF_2      |
+               |IF        |U0_M0_F0  |U0_M0_F1  |
+-------------- |--------- |--------- |--------- |
+IF             |          |0         |0         |
+U0_M0_F0       |0         |          |40        |
+U0_M0_F1       |0         |40        |          |
+-------------- |--------- |--------- |--------- |
+SUM CUT        |0         |40        |40        |
+-------------- |--------- |--------- |--------- |
+
+
+ FPGA fan-out
+
+
+FPGAs fan-out
+          +--------+------------------+------------------+-------+
+          |FPGA    |inter mezz fan-out|intra mezz fan-out|fan-out|
+          +--------+------------------+------------------+-------+
+          |U0_M0_F1|                 0|                35|     35|
+          |U0_M0_F0|                 0|                 5|      5|
+          +--------+------------------+------------------+-------+
+
+
+
+    3.2.Partitioner basic resource estimations
+    ------------------------------------------
+
+Resources for U0_M0_F1:
+  REG=    301983  LUT=    358887  RAMLUT=         3  BRAM= 136  DSP_MULT=33272
+Resources for U0_M0_F0:
+  REG=     45250  LUT=     45928  RAMLUT=         1  DSP_MULT=13000
+
+    3.3.Summary post-clustering
+    ---------------------------
+
+    
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_3_3_Summary_po.log ***
+
+
+    3.4.FPGA resource usage
+    -----------------------
+
+
+Checking FPGA resource usage
+
+Checking FPGA: 'UNIT0.MOD0.F0'
+                BRAM     2 / 2158
+                URAM     0 / 320
+     MULT18x18/DSP48     0 / 3840
+                 REG 25887 / 8171520
+                 LUT 27025 / 4085760
+
+              RAMLUT   128 / 644800
+
+Checking FPGA: 'UNIT0.MOD0.F1'
+                BRAM   107 / 2158
+                URAM    98 / 320
+     MULT18x18/DSP48     0 / 3840
+                 REG 317578 / 8171520
+                 LUT 398832 / 4085760
+
+              RAMLUT   195 / 644800
+
+
+    3.4.1.Netlist map stat
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    3.4.2.Netlist map stat
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 4.Splitting report
+ ==================
+
+
+    4.1.Defmapping input
+    --------------------
+
+Checking/collecting 0 defmappings
+Checking/collecting 0 system defmappings
+Checking/collecting 0 defmappings
+Checking/collecting 0 system defmappings
+Checking/collecting 0 defmappings
+Checking/collecting 0 system defmappings
+Checking/collecting 0 defmappings
+Checking/collecting 0 system defmappings
+Checking/collecting 0 defmappings
+Checking/collecting 0 system defmappings
+
+    4.2.Defmaps list
+    ----------------
+
+PRE_SPLIT_DEFMAPPINGS_BEGIN
+DEFMAPPING {zebu_top} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zClockCone_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zebu_dummy_fetch_reg_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zebuclk_jtag_clk.clockdelayport_core.clockdelayport_state_machine.zebu_filter_data_clock_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine.zebu_edgeDetector_clock_0_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine.zebu_edgeDetector_clock_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.zebuclk_ref_clk.clockdelayport_core.clockdelayport_state_machine.zebu_filter_clock_UNIT0\.MOD0\.F1} [UNIT0.MOD0.F1]  [U0M0F01]
+DEFMAPPING {zebu_top.sqnod_core0_pc[10]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[11]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[12]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[13]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[14]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[15]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[16]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[17]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[18]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[19]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[1]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[20]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[21]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[22]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[23]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[24]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[25]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[26]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[27]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[28]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[29]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[2]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[30]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[31]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[3]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[4]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[5]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[6]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[7]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[8]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.sqnod_core0_pc[9]} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.trigger_pc} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_0} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_1} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_2} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_3} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_4} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_5} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_6} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_7} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.ts_runman_8} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zClockCone_UNIT0\.MOD0\.F0} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_clockGen} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_dummy_fetch_reg_UNIT0\.MOD0\.F0} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_filter_data_or_zctrl_Creset_1477361921529022932} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_filter_data_zctrl_Creset_1477361921529022932_UNIT0\.MOD0\.F0} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_orion_tickClk_inst} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebu_time_capture} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebuclk_jtag_clk} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebuclk_ref_clk} [UNIT0.MOD0.F0]  [U0M0F00]
+DEFMAPPING {zebu_top.zebuclk_uart_sclk} [UNIT0.MOD0.F0]  [U0M0F00]
+PRE_SPLIT_DEFMAPPINGS_END
+
+    4.3.Debug instances relocation
+    ------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    4.4.Post split gates & constants localizing
+    -------------------------------------------
+
+
+2 constant cells have been localized.
+
+
+ 5.Memory processing
+ ===================
+
+
+    5.1.External Memories processing
+    --------------------------------
+
+
+    5.1.1.ZRM instances in the design
+
+
+Zrm list
+          +--------------------------------------------------------------------------------------+------------------------------------------------+-----+---------+--------+---------------+
+          |PATH                                                                                  |MODULE                                          |WIDTH|    DEPTH|NB PORTS|SSRAM PORTS REQ|
+          +--------------------------------------------------------------------------------------+------------------------------------------------+-----+---------+--------+---------------+
+          |zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r|reserved_scope_alb_mss_fpga_sram_0000_ZMEM_mem_r|  128|268435456|       1|              4|
+          +--------------------------------------------------------------------------------------+------------------------------------------------+-----+---------+--------+---------------+
+
+
+
+1 ZRM instance(s) found in the design
+
+    5.1.2.ZRM mapping in the design
+
+
+Zrm mapping
+          +-------------+--------------------------------------------------------------------------------------+------------------+--------------------+---------+---------+
+          |MAPPING      |PATH                                                                                  |PORTS USED IN BANK|  DEPTH USED IN BANK|BANK TYPE|  BANK ID|
+          +-------------+--------------------------------------------------------------------------------------+------------------+--------------------+---------+---------+
+          |UNIT0.MOD0.F1|zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r|             1 / 8|33554432 / 134217728|DRAM     |x01000008|
+          +-------------+--------------------------------------------------------------------------------------+------------------+--------------------+---------+---------+
+
+
+
+Available space in banks
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |BANK          |WIDTH|PORTS AVAILABLE|      DEPTH AVAILABLE|BANK TYPE|  BANK ID|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F11|  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000058|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F10| 1024|          8 / 8|134217728 / 134217728|DRAM     |x01000050|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F9 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000048|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F8 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000040|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F7 | 1024|          8 / 8|134217728 / 134217728|DRAM     |x01000038|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F6 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000030|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F5 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000028|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F4 | 1024|          8 / 8|134217728 / 134217728|DRAM     |x01000020|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F3 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000018|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F2 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000010|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F1 | 1024|          7 / 8|100663296 / 134217728|DRAM     |x01000008|
+          +--------------+-----+---------------+---------------------+---------+---------+
+          |UNIT0.MOD0.F0 |  256|          8 / 8|  67108864 / 67108864|DRAM     |x01000000|
+          +--------------+-----+---------------+---------------------+---------+---------+
+
+
+
+    5.1.3.ZRM mapped on DRAM ports infos
+
+
+Infos about ZRM ports mapped on DRAM banks
+          +--------------------------------------------------------------------------------------+----+----------------------+----------+--------+
+          |MEMORY                                                                                |PORT|            CLOCK TYPE|CLOCK NAME|INVERTED|
+          +--------------------------------------------------------------------------------------+----+----------------------+----------+--------+
+          |zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_mem_inst.u_alb_mss_mem_ram.mem_r|   A|DERIVED Forced derived|          |     YES|
+          +--------------------------------------------------------------------------------------+----+----------------------+----------+--------+
+
+
+
+    5.1.4.Buffer insertion on input ports
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    5.2.ZMEM Memories processing
+    ----------------------------
+
+
+    5.2.1.ZMEM instances in the design
+
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12754.sqnod6249 MODULE=reserved_scope_zz_Encrypt_2_ZMEM_0
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1465 MODULE=reserved_scope_zz_Encrypt_5_ZMEM_0
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1438.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_6
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1439.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_5
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1440.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_4
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1441.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_3
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1442.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_2
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1443.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_1
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1444.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0_0
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor.sqnod12755.sqnod1445.sqnod256809 MODULE=reserved_scope_zz_Encrypt_7_ZMEM_0
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_rdel_mem MODULE=reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_rdel_mem
+PATH=zebu_top.core_chip_dut.icore_sys.ialb_mss_mem.u_rgon0_lat_inst.u_mem_bus_lat.i_bdel_mem MODULE=reserved_scope_alb_mss_mem_lat_0000_ZMEM_i_bdel_mem
+PATH=zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21800.sqnod2985 MODULE=reserved_scope_zz_Encrypt_8_ZMEM_0_0
+PATH=zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21801.sqnod2985 MODULE=reserved_scope_zz_Encrypt_8_ZMEM_0
+PATH=zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i.sqnod21802.sqnod1818.sqnod845601 MODULE=reserved_scope_zz_Encrypt_9_ZMEM_0
+PATH=zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_tag_ram.u_ic_tag_ram.mem_r MODULE=reserved_scope_fpga_sram_0000_ZMEM_mem_r
+PATH=zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_ic_data_ram.u_ic_data_ram.mem_r MODULE=reserved_scope_fpga_sram_0001_ZMEM_mem_r
+PATH=zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_iccm0_even.u_iccm0_sram.mem_r MODULE=reserved_scope_fpga_sram_0002_ZMEM_mem_r
+PATH=zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_even.u_DCCM_sram.mem_r MODULE=reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0
+PATH=zebu_top.core_chip_dut.icore_sys.iarchipelago.iesrams_rl_srams.u_dccm_odd.u_DCCM_sram.mem_r MODULE=reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r
+
+20 ZMEM instance(s) found in the design
+
+    5.2.2.ZMem resource utilization
+
+    
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_5_2_2_ZMem_resou.log ***
+
+
+
+ 6.Clock and BUFG handling
+ =========================
+
+
+    6.1.Remove all design BUFG(s)
+    -----------------------------
+
+    0 BUFG(s) removed
+
+    6.2.Clock report
+    ----------------
+
+# zCoreBuild clock report is disabled -- to enable it, use: 'enable log_clock_report'
+
+    6.3.Clock nets and not clock nets defined by user
+    -------------------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.4.Clock ports defined by user
+    -------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.5.Primary clocks from 'zceiClockPort' in .DVE file
+    ----------------------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.6.Zebu clock ressources (low skew nets from FK to a design FPGA)
+    ------------------------------------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.7.Local FPGA BUFG handling following Xilinx resources
+    -------------------------------------------------------
+
+
+    6.7.1.BUFG analysis for FPGA 'UNIT0.MOD0.F0'
+
+    0 BUFG used for clock 'zebu_top.zebu_time_capture.zebu_sendtime_portbuffer.uclock' (fanout 4090 < fanout min 6000)
+    0 BUFG used for clock 'zebu_top.zebu_time_capture.uclock' (fanout 477 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F0.zrtlclkdup_85659103527999069' (fanout 390 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F0.U0_M0_F0_core.zlc_zebu_top_140' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F0.U0_M0_F0_core.zlc_zebu_top_141' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F0.U0_M0_F0_core.zlc_zebu_top_149' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F0.U0_M0_F0_core.zlc_zebu_top_260' (fanout 1 < fanout min 6000)
+
+    6.7.2.BUFG analysis for FPGA 'UNIT0.MOD0.F1'
+
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_198' (fanout 5258 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_213' (fanout 5226 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_181' (fanout 2164 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_217' (fanout 1557 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_215' (fanout 1326 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_193' (fanout 1001 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_208' (fanout 1001 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zebu_fgs_p_posReady_0_2_zebu_fgs_p_C' (fanout 869 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_166' (fanout 528 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.zrtlclkdup_14792976088952604435' (fanout 390 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_248' (fanout 186 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_183' (fanout 162 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_191' (fanout 162 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_206' (fanout 162 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_195' (fanout 155 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_210' (fanout 155 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_250' (fanout 132 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_244' (fanout 78 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_246' (fanout 78 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_252' (fanout 78 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_173' (fanout 29 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_179' (fanout 12 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_167' (fanout 7 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_176' (fanout 7 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_197' (fanout 5 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_212' (fanout 5 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_214' (fanout 4 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_216' (fanout 4 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zebu_ckfgs_p_clkoutPos_2_zebu_ckfgs_p_G' (fanout 3 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_180' (fanout 3 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_234' (fanout 2 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_236' (fanout 2 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_238' (fanout 2 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_240' (fanout 2 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_zebu_top_242' (fanout 2 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_w_clockout_zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.zebu_ckgltch_filter_p_G_2_zebu_ckgltch_filter_p_clkoutPos' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zlc_w_clockout_zebu_top.core_chip_dut.icore_sys.zebu_ckgltch_filter_p_G_2_zebu_ckgltch_filter_p_clkoutPos' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zebuclk_jtag_clk_UNIT0_MOD0_F1_dup.zebu_ckgltch_filter_w_G_2_clkoutNeg' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zebuclk_ref_clk_UNIT0_MOD0_F1_dup.zebu_ckgltch_filter_w_G_2_clkoutNeg' (fanout 1 < fanout min 6000)
+    0 BUFG used for clock 'U0_M0_F1.U0_M0_F1_core.zebuclk_uart_sclk_UNIT0_MOD0_F1_dup.zebu_ckgltch_filter_w_G_2_clkoutNeg' (fanout 1 < fanout min 6000)
+
+    6.8.Unspecified register output
+    -------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.9.Unspecified clock inputs
+    ----------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.10.Filter_glitches dependency loops
+    -------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.11.Asynchronous clock domains and delay values
+    ------------------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    6.12.Impact on modules due to Synchronous Filter Glitches
+    ---------------------------------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 7.Retiming in the clock tree
+ ============================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 8.Checks on user original netlist.
+ ==================================
+
+
+    8.1.Monitors sanity check
+    -------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+    8.2.Combinational loop manipulation
+    -----------------------------------
+
+Combinationnal loop manipulation is not enabled.
+
+
+ 9.Fixes on user original netlist.
+ =================================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 10.Default initialization of synchronous elements
+ =================================================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 11.remove loadless logic
+ ========================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 12.Tristate handling
+ ====================
+
+
+    12.1.Tristate manipulation
+    --------------------------
+
+
+    12.1.1.Adjusted top level ports connected to manipulated tristates (embedded TB)
+
+
+Converting inout top ports into output ports when ports are connected to an manipulated tristate.
+This algorithm is only valid when using an embedded testbench.
+Use the command 'disable synth_tb_force_inout_to_out' to not change the direction of these ports.
+tristates won't be manipulated on those ones.
+
+
+Use 'disable synth_tb_force_inout_to_out' to remove this feature (HDL cosim).
+
+
+    12.2.Tristate resolution
+    ------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 13.Asynchronous paths optimization processing
+ =============================================
+
+
+    13.1.Inter-fpga laces optimization
+    ----------------------------------
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 14.Direct ICE processing
+ ========================
+
+
+
+                 *** EMPTY SECTION *** 
+
+
+
+
+ 15.Propagating UCF constraints
+ ==============================
+
+
+    15.1.Collecting constraints (pre-split)
+    ---------------------------------------
+
+
+18 pre-split constrained modules (post uniquify)
+
+MODULE=          reserved_scope_fpga_sram_0000_ZMEM_mem_r		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=          reserved_scope_fpga_sram_0001_ZMEM_mem_r		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=     reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=   reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=          reserved_scope_fpga_sram_0002_ZMEM_mem_r		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=                reserved_scope_zz_Encrypt_2_ZMEM_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=                reserved_scope_zz_Encrypt_5_ZMEM_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=                reserved_scope_zz_Encrypt_7_ZMEM_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_1		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_2		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_3		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_4		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_5		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_6		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=                reserved_scope_zz_Encrypt_8_ZMEM_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=              reserved_scope_zz_Encrypt_8_ZMEM_0_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+MODULE=                reserved_scope_zz_Encrypt_9_ZMEM_0		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+
+    15.2.Propagating constraints (post-split)
+    -----------------------------------------
+
+
+Collecting constraints on FPGA U0_M0_F0
+
+Collected 0 constraints on FPGA U0_M0_F0
+
+
+Collecting constraints on FPGA U0_M0_F1
+MODULE=     reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=   reserved_scope_fpga_sram_0002_0000_ZMEM_mem_r_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=          reserved_scope_fpga_sram_0002_ZMEM_mem_r		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=          reserved_scope_fpga_sram_0001_ZMEM_mem_r		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=          reserved_scope_fpga_sram_0000_ZMEM_mem_r		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=                reserved_scope_zz_Encrypt_9_ZMEM_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=                reserved_scope_zz_Encrypt_8_ZMEM_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_8_ZMEM_0_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=                reserved_scope_zz_Encrypt_7_ZMEM_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_1		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_2		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_3		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_4		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_5		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=              reserved_scope_zz_Encrypt_7_ZMEM_0_6		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=                reserved_scope_zz_Encrypt_5_ZMEM_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+MODULE=                reserved_scope_zz_Encrypt_2_ZMEM_0		CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+Collected 1 constraints on FPGA U0_M0_F1
+
+
+1 collected constraints
+
+
+1 post-split constrained modules (uniquified netlists)
+
+FPGA=                                          U0_M0_F1		 CONSTRAINT=#xdc_addconst delay
+set_max_delay -datapath_only -from \[get_pins -hierarchical {*zMem_multiport_FROM_clk_100\*/Q}] -to \[get_cells -hierarchical {*zMem_multiport_TO_clk_100\*}] 20.0
+
+
+
+ 16.Post processing summary
+ ==========================
+
+All defmapping path(s) found.
+Generated Netlist, REG statistics
+Generated Netlist, REG statistics
+
+          +-------------+----------------+----------+
+          |FPGA         |             REG|(*)MUXF7,8|
+          +-------------+----------------+----------+
+          |UNIT0.MOD0.F0|  25887 /8171520|        20|
+          |UNIT0.MOD0.F1| 317578 /8171520|       826|
+          +-------------+----------------+----------+
+          |SUM          |343465 /16343040|       846|
+          +-------------+----------------+----------+
+
+
+# REG        : REG count in generated netlists / FPGA capacity. 
+
+# (*)MUXF7,8 : MUXF7 and MUXF8 count in generated netlists. A cost of 1 register is associated to each MUXF7 or MUXF8, 
+#              this additionnal cost is not included in the REG column. 
+
+Generated Netlist, LUT statistics
+Generated Netlist, LUT statistics
+
+          +-------------+---------------+-------------------------------+-----------------+------------+
+          |FPGA         |            LUT|                      (**)MUXCY|LUT w/o weighting|      RAMLUT|
+          +-------------+---------------+-------------------------------+-----------------+------------+
+          |UNIT0.MOD0.F0| 27025 /4085760|   0/lut(0)/lut_no_weighting(0)|            24592| 128 /644800|
+          |UNIT0.MOD0.F1|398832 /4085760|18/lut(18)/lut_no_weighting(18)|           356504| 195 /644800|
+          +-------------+---------------+-------------------------------+-----------------+------------+
+          |SUM          |425857 /8171520|18/lut(18)/lut_no_weighting(18)|           381096|323 /1289600|
+          +-------------+---------------+-------------------------------+-----------------+------------+
+
+
+# LUT               : LUT count in generated netlists, including RAMLUTs / FPGA capacity. 
+
+# (**)MUXCY         : MUXCY count in generated netlists. Depending on connectivity, a cost of 1 LUT (modulo lut 
+#                     weighting) is associated to MUXCY, this additionnal cost is not included in the LUT column. 
+
+# LUT w/o weighting : LUT count in generated netlists if LUT weighting was not applied (include RAMLUTs) / FPGA 
+#                     capacity. 
+
+# RAMLUT            : RAMLUT count in generated netlists / FPGA capacity. 
+
+Generated Netlist, resource mapping summary
+Generated Netlist, resource mapping summary
+
+          +-------------+----------------+----------+---------------+---------------+-------------------------------+------------+---------+-------+-------+------------+------+
+          |FPGA         |             REG|(*)MUXF7,8|            LUT|           LUT6|                      (**)MUXCY|      RAMLUT|     BRAM|   URAM|    DSP|CONTROLS SET|STATUS|
+          +-------------+----------------+----------+---------------+---------------+-------------------------------+------------+---------+-------+-------+------------+------+
+          |UNIT0.MOD0.F0|  25887 /8171520|        20| 27025 /4085760|  4565 /4085760|   0/lut(0)/lut_no_weighting(0)| 128 /644800|  2 /2158| 0 /320|0 /3840|        1160|    OK|
+          |UNIT0.MOD0.F1| 317578 /8171520|       826|398832 /4085760|117654 /4085760|18/lut(18)/lut_no_weighting(18)| 195 /644800|107 /2158|98 /320|0 /3840|        4276|    OK|
+          +-------------+----------------+----------+---------------+---------------+-------------------------------+------------+---------+-------+-------+------------+------+
+          |SUM          |343465 /16343040|       846|425857 /8171520|122219 /8171520|18/lut(18)/lut_no_weighting(18)|323 /1289600|109 /4316|98 /640|0 /7680|        5436|    --|
+          +-------------+----------------+----------+---------------+---------------+-------------------------------+------------+---------+-------+-------+------------+------+
+
+
+# REG          : REG count in generated netlists / FPGA capacity. 
+
+# (*)MUXF7,8   : MUXF7 and MUXF8 count in generated netlists. A cost of 1 register is associated to each MUXF7 or MUXF8, this additionnal cost is not 
+#                included in the REG column. 
+
+# LUT          : LUT count in generated netlists, including RAMLUTs / FPGA capacity. 
+
+# LUT6         : LUT6 count in generated netlists. 
+
+# (**)MUXCY    : MUXCY count in generated netlists. Depending on connectivity, a cost of 1 LUT (modulo lut weighting) is associated to MUXCY, this 
+#                additionnal cost is not included in the LUT column. 
+
+# RAMLUT       : RAMLUT count in generated netlists / FPGA capacity. 
+
+# BRAM         : Block RAM count in generated netlists / FPGA capacity. 
+
+# URAM         : Block URAM count in generated netlists / FPGA capacity. 
+
+# DSP          : DSP count in generated netlists / FPGA capacity. 
+
+# CONTROLS SET : Controls set estimation 
+
+# STATUS       : FPGAs capacity status. Include design logics, zDelay, FWC, QiWC. 
+
+FPGA IO
+Statistics on FPGA IOs
+FPGA IO
+Statistics on FPGA IOs
+
+          +-------------+---+-------+--------+-------+------+
+          |FPGA         |CUT|Logical|Estimate|Deviat.|STATUS|
+          +-------------+---+-------+--------+-------+------+
+          |UNIT0.MOD0.F0| 40|     40|      46| 15.00%|    OK|
+          |UNIT0.MOD0.F1| 40|     40|      46| 15.00%|    OK|
+          +-------------+---+-------+--------+-------+------+
+          |SUM          | 80|     80|      92| 15.00%|    --|
+          +-------------+---+-------+--------+-------+------+
+
+
+# CUT      : Number of ports at the interface of the FPGA. 
+
+# Logical  : FPGA cut found in generated netlists. 
+
+# Estimate : FPGA cut (partitioner estimates). 
+
+# Deviat.  : Error between cut estimates and actual FPGA cuts. 
+
+# STATUS   : FPGA cut status. 
+
+Max error FPGA CUT estimate: 15.000000.
+
+Average CUT is 53.333332
+
+
+ 17.Execution time
+ =================
+
+ 
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_17_Execution_.log ***
+
+
+
+ 18.Xtor instance path report
+ ============================
+
+FPGA = UNIT0.MOD0.F1, Instance Path = zebu_top.core_chip_dut.icore_sys.ialb_mss_dummy_slave.i2_axi_slave.slave_xtor 
+FPGA = UNIT0.MOD0.F1, Instance Path = zebu_top.core_chip_dut.icore_sys.izebu_axi_xtor.master_node_i 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.zebu_time_capture 
+FPGA = UNIT0.MOD0.F1, Instance Path = zebu_top.i_t32Jtag_driver 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.zebuclk_uart_sclk 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.zebuclk_jtag_clk 
+FPGA = UNIT0.MOD0.F1, Instance Path = zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_main_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher 
+FPGA = UNIT0.MOD0.F1, Instance Path = zebu_top.core_chip_dut.icore_sys.iarchipelago.icpu_top_safety_controller.u_shadow_rl_cpu_top.u_rl_core.u_rl_ifu.u_rl_ifu_fetcher 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.zebuclk_ref_clk 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_0 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_1 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_2 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_3 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_4 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_5 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_6 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_7 
+FPGA = UNIT0.MOD0.F0, Instance Path = zebu_top.ts_runman_8 
+
+
+ 19.BlackBox instance path report
+ ================================
+
+ 
+	read *** ./zCoreBuild_report_log_large_sections.dir/_SEC_19_BlackBox_i.log ***
+

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="zParBE_archive">
+    <targets>
+        <target type="file" value=".//slowfs/us01dwslow023/fpga/lianghao/zebu_install/ZEBU/VCS2021.09.2.ZEBU.B4/07052024/INSTALL/ZEBU/zebu/S-2021.09-2-TZ-20240507_Full64/etc/sys/ZS5/edifs/zs5_vup_12c_19_v2.edf.gz">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./edif/zebu_top.edf.gz">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./rtl_clock_*_repl_Part_0.xref" fnmatch="true">
+            <menu>RunTime/zPar</menu>
+        </target>
+        <target type="file" value="./tools/zPar/[^.]*" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="directory" value="./tools/zPar/debug_netlists">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="directory" value="./tools/zPar/zPar_db">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./work.Part_0/edif/U[0-9]_M[0-9].edf.gz" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./work.Part_0/edif/zebu_top.edf.gz" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./work.Part_0/zPar*" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./zPar*" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="directory" value="./zPar_stats" fnmatch="true">
+            <menu>Debug/zPar</menu>
+        </target>
+        <target type="file" value="./ztb_tg_remapped.edf.gz">
+            <menu>Debug/zPar</menu>
+        </target>
+    </targets>
+</ZeBuUiDoc>

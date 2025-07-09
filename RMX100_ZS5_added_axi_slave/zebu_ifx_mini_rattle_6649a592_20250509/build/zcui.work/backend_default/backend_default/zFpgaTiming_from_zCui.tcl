@@ -1,0 +1,3 @@
+data_path_analysis mcp
+source /remote/sdgedt/tools/reem/ZebuS5_newslave/zebu_ifx_mini_rattle_6649a592_20250509/build/zcui.work/utf_generatefiles/zFpgaTiming_config.tcl
+set_platform 4

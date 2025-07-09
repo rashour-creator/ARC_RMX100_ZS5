@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ZeBuUiDoc type="xcui" version="1.0" creator="zCoreBuild">
+
+<targets>
+
+<target type="zPar">
+  <output typeCrc="dateFile">./edif/zebu_top.edf.gz</output>
+  <output typeCrc="dateFile">./edif/U0_M0.edf.gz</output>
+  <output typeCrc="crcFile">./zPar_core_conf.tcl</output>
+  <output typeCrc="crcFile">./zPar_cmds.tcl</output>
+</target>
+
+<target type="zTime">
+  <output typeCrc="crcFile">./tools/zTime/zCoreBuild_timing.zti</output>
+</target>
+
+<target type="zTime_fpga">
+  <output typeCrc="crcFile">./tools/zTime/zCoreBuild_timing.zti</output>
+</target>
+
+<target type="zDB_final">
+  <output typeCrc="crcFile">./zCoreBuildDB.zdb</output>
+</target>
+
+<target type="incremental_modified_fpgas">
+  <output typeCrc="crcFile">./edif/U0_M0_F0.edf.gz</output>
+  <output typeCrc="crcFile">./edif/U0_M0_F1.edf.gz</output>
+</target>
+</targets>
+
+<tasks>
+  <task type="zCoreBuildTiming">
+    <var name="FPGA_NAME" value="U0_M0_F0"/>
+  </task>
+  <task type="SemGateZNetgen">
+    <var name="FPGA_NAME" value="U0_M0_F0"/>
+  </task>
+  <task type="zCoreBuildTiming">
+    <var name="FPGA_NAME" value="U0_M0_F1"/>
+  </task>
+  <task type="SemGateZNetgen">
+    <var name="FPGA_NAME" value="U0_M0_F1"/>
+  </task>
+</tasks>
+
+</ZeBuUiDoc>
